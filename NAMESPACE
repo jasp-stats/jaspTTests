@@ -1,0 +1,6 @@
+export(TTestIndependentSamples)
+export(TTestPairedSamples)
+export(TTestOneSample)
+export(TTestBayesianIndependentSamples)
+export(TTestBayesianPairedSamples)
+export(TTestBayesianOneSample)
