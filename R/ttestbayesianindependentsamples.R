@@ -168,7 +168,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
       }
 
       ttestResults[["BF10post"]][var] <- bf.raw
-      BF <- .recodeBFtype(bfOld     = bf.raw,
+      BF <- JASP:::.recodeBFtype(bfOld     = bf.raw,
                           newBFtype = options[["bayesFactorType"]],
                           oldBFtype = "BF10"
       )
@@ -186,6 +186,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
     # ttestTable$addRows(row, rowNames = var)
   }
 
+  ttestResults[["hypothesis"]] <- derivedOptions[["hypothesis"]]
   ttestResults[["ttestRows"]] <- ttestRows
   return(ttestResults)
 

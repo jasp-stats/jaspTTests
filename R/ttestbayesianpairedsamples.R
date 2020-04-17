@@ -116,13 +116,14 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
           
           # If the samples can be reused, don't call the Gibbs sampler again, but recalculate the
           # Bayes factor with new settings and take the samples from state.
-          if (!is.null(ttestRows[["delta"]][[var]]) && !is.na(ttestRows[["delta"]][[var]])) {
+          if (!is.null(ttestResults[["delta"]][[var]]) && !is.na(ttestResults[["delta"]][[var]])) {
             
             bf.raw <- try(.computeBayesFactorWilcoxon(
-              deltaSamples         = ttestRows[["delta"]][[var]],
+              deltaSamples         = ttestResults[["delta"]][[var]],
               cauchyPriorParameter = options[["priorWidth"]],
               oneSided             = oneSided
             ))
+            rHat <- ttestResults[["rHat"]][[var]]
             
           } else {
             
@@ -142,12 +143,14 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
             } else {
               
               ttestResults[["delta"]][[var]]  <- r[["deltaSamples"]]
-              bf.raw <- .computeBayesFactorWilcoxon(
-              deltaSamples         = r[["deltaSamples"]],
-              cauchyPriorParameter = options[["priorWidth"]],
-              oneSided             = oneSided)
+              ttestResults[["rHat"]][[var]]  <- r[["rHat"]]
               
-              ttestRows[var, "rHat"] <- r[["rHat"]]
+              bf.raw <- .computeBayesFactorWilcoxon(
+                deltaSamples         = r[["deltaSamples"]],
+                cauchyPriorParameter = options[["priorWidth"]],
+                oneSided             = oneSided)
+              
+              rHat <- r[["rHat"]]
               
             }
           }
@@ -157,6 +160,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
           ttestResults[["n1"]][var]       <- length(x)
           wValue <- unname(wilcox.test(y, x, paired = TRUE)[["statistic"]])
           error <- wValue
+          ttestRows[var, "rHat"] <- rHat
           
         }
         
@@ -173,6 +177,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
         }
         ttestRows[var, "BF"]    <- BF
         ttestRows[var, "error"] <- error
+        
       }
     }
     ttestTable$setData(ttestRows)

@@ -84,7 +84,7 @@
       }
     }
     ttestContainer$dependOn(c(
-      "effectSizeStandardized", "groupingVariable", #"hypothesis",
+      "effectSizeStandardized", "groupingVariable", 
       "informativeCauchyLocation", "informativeCauchyScale", "informativeNormalMean",
       "informativeNormalStd", "informativeStandardizedEffectSize",
       "informativeTDf", "informativeTLocation", "informativeTScale",
