@@ -80,6 +80,22 @@ Form
 
 	BayesFactorType { }
 
+		RadioButtonGroup
+	{
+		name: "testStatistic"
+		id: testStatistic
+		title: qsTr("Tests")
+		RadioButton
+		{
+			id: student
+			value: "Student";	label: qsTr("Student"); checked: true }
+		RadioButton
+		{
+			value: "Wilcoxon";	label: qsTr("Wilcoxon signed-rank"); id: testWilcoxon
+			IntegerField { name: "wilcoxonSamplesNumber"; label: qsTr("No. samples"); defaultValue: 1000; min: 100; max: 10000; fieldWidth: 60 }
+		}
+	}
+	
 	Group
 	{
 		title: qsTr("Additional Statistics")
