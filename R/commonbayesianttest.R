@@ -84,7 +84,7 @@
       }
     }
     ttestContainer$dependOn(c(
-      "effectSizeStandardized", "groupingVariable", "hypothesis",
+      "effectSizeStandardized", "groupingVariable", #"hypothesis",
       "informativeCauchyLocation", "informativeCauchyScale", "informativeNormalMean",
       "informativeNormalStd", "informativeStandardizedEffectSize",
       "informativeTDf", "informativeTLocation", "informativeTScale",
@@ -97,19 +97,21 @@
   }
 
   # check if we actually need to compute things
-  if (!is.null(ttestContainer[["ttestTable"]]) && !derivedOptions[["anyNewVariables"]]) {
-    obj <- ttestContainer[["stateTTestResults"]]$object
-    obj[["derivedOptions"]] <- derivedOptions
-    return(obj)
+  ttestState <- ttestContainer[["stateTTestResults"]]$object
+  if (!is.null(ttestContainer[["ttestTable"]]) && !derivedOptions[["anyNewVariables"]] &&
+      ttestState[["hypothesis"]] == "hypothesis") {
+    ttestState[["derivedOptions"]] <- derivedOptions
+    return(ttestState)
   }
 
-  ttestState <- ttestContainer[["stateTTestResults"]]$object
   # recompute the analysis / table
   ttestResults <- switch(analysis,
     "independent" = .ttestBISTTest(ttestContainer, dataset, options, derivedOptions, errors, ttestState),
     "one-sample"  = .ttestBOSTTest(ttestContainer, dataset, options, derivedOptions, errors, ttestState),
     "paired"      = .ttestBPSTTest(ttestContainer, dataset, options, derivedOptions, errors, ttestState)
   )
+
+  ttestResults[["hypothesis"]] <- options[["hypothesis"]]
 
   tmp <- createJaspState(ttestResults)
   ttestContainer[["stateTTestResults"]] <- tmp
@@ -398,7 +400,8 @@
       plottingError   = vector("list", nvar),
       errorFootnotes  = vector("list", nvar),
       footnotes       = vector("list", nvar),
-      delta           = vector("list", nvar)
+      delta           = vector("list", nvar),
+      hypothesis      = options[["hypothesis"]]
     )
 
   }
