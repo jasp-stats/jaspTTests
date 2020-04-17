@@ -51,12 +51,14 @@ Form
 
 		CheckBox
 		{
+			enabled: student.checked
 			name: "plotBayesFactorRobustness";	label: qsTr("Bayes factor robustness check")
 			CheckBox { name: "plotBayesFactorRobustnessAdditionalInfo";	label: qsTr("Additional info"); checked: true }
 		}
 
 		CheckBox
 		{
+			enabled: student.checked
 			name: "plotSequentialAnalysis";		label: qsTr("Sequential analysis")
 			CheckBox { name: "plotSequentialAnalysisRobustness";		label: qsTr("Robustness check") }
 		}

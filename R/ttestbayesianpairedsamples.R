@@ -38,7 +38,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
   if (!derivedOptions[["ready"]])
     return(ttestResults)
 
-  alreadyComputed <- !is.na(ttestRows[, "BF"])
+  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["hypothesis"]]
   .ttestBayesianSetFootnotesMainTable(ttestTable, ttestResults, dependents[alreadyComputed])
   .ttestBayesianInitBayesFactorPackageOptions()
 
@@ -182,7 +182,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
     }
     ttestTable$setData(ttestRows)
   }
-
+  
   ttestResults[["ttestRows"]] <- ttestRows
 
   return(ttestResults)
@@ -242,7 +242,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
 
 
 # Wilcoxon functions ----
-.signRankGibbsSampler <- function(xVals, yVals, nSamples = 1e3, cauchyPriorParameter = 1/sqrt(2),
+.signRankGibbsSampler <- function(xVals, yVals = NULL, nSamples = 1e3, cauchyPriorParameter = 1/sqrt(2), testValue = 0,
                                  nBurnin = 1, nGibbsIterations = 10, nChains = 5){
   
   n <- length(xVals)

@@ -186,7 +186,6 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
     # ttestTable$addRows(row, rowNames = var)
   }
 
-  ttestResults[["hypothesis"]] <- derivedOptions[["hypothesis"]]
   ttestResults[["ttestRows"]] <- ttestRows
   return(ttestResults)
 
