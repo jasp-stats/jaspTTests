@@ -4,10 +4,9 @@ r: 3.6.1
 cache: packages
 
 before_install: 
-  - "git clone --branch=MacOS-Original https://github.com/jasp-stats/jasp-required-files.git ~/pkgs"
-  - "git clone --branch=stable https://github.com/jasp-stats/jasp-desktop.git ~/jasp-desktop"
-  - ls
-  - cd JASP-Tests/R/tests/
+  - "git clone --depth 1 --branch=MacOS-Original https://github.com/jasp-stats/jasp-required-files.git ~/pkgs"
+  - "git clone --depth 1 --branch=stable https://github.com/jasp-stats/jasp-desktop.git ~/jasp-desktop"
+  - cd tests
 install:
   - R < install.R --no-save
 script:
