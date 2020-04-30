@@ -1,4 +1,18 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
-language: R
+os: osx
+language: r
+r: 3.6.1
 cache: packages
+
+before_install: 
+  - "git clone --branch=MacOS-Original https://github.com/jasp-stats/jasp-required-files.git ~/pkgs"
+  - "git clone --branch=stable https://github.com/jasp-stats/jasp-desktop.git ~/jasp-desktop"
+  - ls
+  - cd JASP-Tests/R/tests/
+install:
+  - R < install.R --no-save
+script:
+  - R < testthat.R --no-save
+env:
+  global:
+    - R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
+    - VDIFFR_RUN_TESTS=true
