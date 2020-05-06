@@ -452,10 +452,10 @@
 
     # ensure that BF type is correct (e.g., BF01 to BF10/ log(BF01))
     ttestRows[["BF"]] <-
-      .recodeBFtype(bfOld     = ttestRows[["BF"]],
-                    newBFtype = options[["bayesFactorType"]],
-                    oldBFtype = ttestState[["bayesFactorType"]]
-      )
+      JASP:::.recodeBFtype(bfOld     = ttestRows[["BF"]],
+                           newBFtype = options[["bayesFactorType"]],
+                           oldBFtype = ttestState[["bayesFactorType"]]
+                           )
   }
   return(ttestRows)
 }
@@ -1790,7 +1790,7 @@
     # informative prior
     xlim <- vector("numeric", 2)
 
-    if(options[["effectSize"]] == "standardized"){
+    if(options[["effectSizeStandardized"]] == "default"){
       
       ci99PlusMedian <- .ciPlusMedian_t(t = t, n1 = n1, n2 = n2, independentSamples = ! paired && !is.null(n2),
                                         prior.location = 0,
