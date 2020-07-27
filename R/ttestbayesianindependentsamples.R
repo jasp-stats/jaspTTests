@@ -47,7 +47,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   	return(ttestResults)
 
   # we can do the analysis
-  alreadyComputed <- !is.na(ttestRows[, "BF"])
+  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["hypothesis"]]
   .ttestBayesianSetFootnotesMainTable(ttestTable, ttestResults, dependents[alreadyComputed])
 
   nvar <- length(dependents)
@@ -125,10 +125,10 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
         # If the samples can be reused, don't call the Gibbs sampler again, but recalculate the
         # Bayes factor with new settings and take the samples from state.
-        if (!is.null(ttestRows[["delta"]][[var]]) && !is.na(ttestRows[["delta"]][[var]])) {
+        if (!is.null(ttestResults[["delta"]][[var]]) && !is.na(ttestResults[["delta"]][[var]])) {
 
-          bf.raw <- try(.ttestBISComputeBayesFactorWilcoxon(
-            deltaSamples         = ttestRows[["delta"]][[var]],
+          bf.raw <- try(.computeBayesFactorWilcoxon(
+            deltaSamples         = ttestResults[["delta"]][[var]],
             cauchyPriorParameter = options[["priorWidth"]],
             oneSided             = oneSided
           ))
@@ -226,7 +226,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
   if (derivedOptions[["wilcoxTest"]]) {
     jaspTable$addColumnInfo(name = "error", type = "number", title = "W")
-    jaspTable$addColumnInfo(name = "rHat", type = "number", title = "R<sup>2</sup>")
+    jaspTable$addColumnInfo(name = "rHat", type = "number", title = "Rhat")
     jaspTable$addFootnote(gettextf("Result based on data augmentation algorithm with 5 chains of %.0f iterations.", options[["wilcoxonSamplesNumber"]]))
   } else {
     if (options[["hypothesis"]] == "groupsNotEqual") {
@@ -288,9 +288,10 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
       }
 
-      xVals <- currentVals[1:n1]
-      yVals <- currentVals[(n1+1):(n1+n2)]
-
+      decorStepResult <- .decorrelateStepTwoSample(currentVals[1:n1], currentVals[(n1+1):(n1+n2)], oldDeltaProp, sigmaProp = 0.5)
+      xVals <- decorStepResult[[1]]
+      yVals <- decorStepResult[[2]]
+      
       gibbsResult <- .sampleGibbsTwoSampleWilcoxon(x = xVals, y = yVals, nIter = nGibbsIterations,
                                                    rscale = cauchyPriorParameter)
 
@@ -375,4 +376,27 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   bf <- if (isFALSE(oneSided)) priorDensZeroPoint / densZeroPoint else (priorDensZeroPoint / corFactorPrior) / (densZeroPoint / corFactorPosterior)
 
   return(bf)
+}
+
+
+.decorrelateStepTwoSample <- function(x, y, muProp, sigmaProp = 0.5) {
+  # decorrelate step described in Morey, R. D., Rouder, J. N., and Speckman, P. L. (2008). 
+  # A statistical model for dis-criminating between subliminal and near-liminal performance.
+  # and
+  # van Doorn, J., Ly, A., Marsman, M., & Wagenmakers, E. J. (2020). 
+  # Bayesian rank-based hypothesis testing for the rank sum test, the signed rank test, and Spearman's ρ.  
+  thisZ <- rnorm(1, 0, sigmaProp)
+  
+  newX <- x + thisZ
+  newY <- y + thisZ
+  
+  denom <- sum(dnorm(x, (muProp-thisZ) * -0.5, log = TRUE)) + sum(dnorm(y, (muProp-thisZ) * 0.5, log = TRUE))
+  num <- sum(dnorm(newX, muProp * -0.5, log = TRUE)) + sum(dnorm(newY, muProp * 0.5, log = TRUE))
+  
+  if(runif(1) < exp(num - denom) ) {
+    return(list(x = newX, y = newY, accept = TRUE))
+  } else {
+    return(list(x = x, y = y, accept = FALSE))
+  }
+  
 }
