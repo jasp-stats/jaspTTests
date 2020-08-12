@@ -168,7 +168,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
       }
 
       ttestResults[["BF10post"]][var] <- bf.raw
-      BF <- JASP:::.recodeBFtype(bfOld     = bf.raw,
+      BF <- jaspBase:::.recodeBFtype(bfOld     = bf.raw,
                           newBFtype = options[["bayesFactorType"]],
                           oldBFtype = "BF10"
       )

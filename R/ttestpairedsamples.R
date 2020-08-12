@@ -451,7 +451,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     base_breaks_x(summaryStat$groupingVariable) + 
     ggplot2::scale_x_discrete(labels = c(pair[[1]], pair[[2]]))
   
-  p <- JASPgraphs::themeJasp(p)
+  p <- jaspGraphs::themeJasp(p)
   
   return(p)
 }

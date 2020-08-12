@@ -2297,7 +2297,7 @@
 			.base_breaks_y2(summaryStat, NULL) +
 			.base_breaks_x(summaryStat$groupingVariable)
 
-	p <- JASPgraphs::themeJasp(p)
+	p <- jaspGraphs::themeJasp(p)
 
 	return(p)
 }
@@ -2321,7 +2321,7 @@
     ggplot2::xlab(NULL) +
     .base_breaks_y2(summaryStat, testValueOpt)
 
-    p <- JASPgraphs::themeJasp(p) + ggplot2::theme(axis.text.x = ggplot2::element_blank(), axis.ticks.x = ggplot2::element_blank())
+    p <- jaspGraphs::themeJasp(p) + ggplot2::theme(axis.text.x = ggplot2::element_blank(), axis.ticks.x = ggplot2::element_blank())
 
   return(p)
 }

@@ -451,7 +451,7 @@
 
     # ensure that BF type is correct (e.g., BF01 to BF10/ log(BF01))
     ttestRows[["BF"]] <-
-      JASP:::.recodeBFtype(bfOld     = ttestRows[["BF"]],
+      jaspBase:::.recodeBFtype(bfOld     = ttestRows[["BF"]],
                     newBFtype = options[["bayesFactorType"]],
                     oldBFtype = ttestState[["bayesFactorType"]]
       )
@@ -1147,12 +1147,12 @@
 
   pd <- ggplot2::position_dodge(.2)
 
-  p <-  JASPgraphs::themeJasp(ggplot2::ggplot(summaryStat, mapping = mapping) +
+  p <-  jaspGraphs::themeJasp(ggplot2::ggplot(summaryStat, mapping = mapping) +
       ggplot2::geom_errorbar(ggplot2::aes(ymin=ciLower, ymax=ciUpper), colour="black", width=.2, position=pd) +
       ggplot2::geom_line(position=pd, size = .7) +
       ggplot2::geom_point(position=pd, size=4) +
       xlab + ylab) + 
-      JASPgraphs::themeJaspRaw() +
+      jaspGraphs::themeJaspRaw() +
       .base_breaks_y2(summaryStat, testValueOpt) +
       .base_breaks_x(summaryStat$groupingVariable)
 
@@ -1314,8 +1314,8 @@
       x = c(maxBFrVal, r, 1, sqrt(2)),
       y = log(c(maxBF10, BF10user, BF10w, BF10ultra)),
       g = label1,
-      label1 = JASPgraphs::parseThis(label1),
-      label2 = JASPgraphs::parseThis(label2),
+      label1 = jaspGraphs::parseThis(label1),
+      label2 = jaspGraphs::parseThis(label2),
       stringsAsFactors = FALSE
     )
   } else {
@@ -1328,7 +1328,7 @@
     "equal"
   )
 
-  plot <- JASPgraphs::PlotRobustnessSequential(
+  plot <- jaspGraphs::PlotRobustnessSequential(
     dfLines      = dfLines,
     dfPoints     = dfPoints,
     pointLegend  = additionalInformation,
@@ -1771,7 +1771,7 @@
   }
   dfLines$y <- log(dfLines$y)
   
-  plot <- JASPgraphs::PlotRobustnessSequential(
+  plot <- jaspGraphs::PlotRobustnessSequential(
     dfLines         = dfLines,
     xName           = gettext("n"),
     BF              = BF,
@@ -2098,7 +2098,7 @@
     "equal"
   )
 
-  plot <- JASPgraphs::PlotPriorAndPosterior(
+  plot <- jaspGraphs::PlotPriorAndPosterior(
     dfLines    = dfLines,
     dfPoints   = dfPoints,
     BF         = BF,

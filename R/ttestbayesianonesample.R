@@ -157,7 +157,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
       }
       
       ttestResults[["BF10post"]][var] <- bf.raw
-      BF <- JASP:::.recodeBFtype(bfOld     = bf.raw,
+      BF <- jaspBase:::.recodeBFtype(bfOld     = bf.raw,
                           newBFtype = bf.type,
                           oldBFtype = "BF10")
 

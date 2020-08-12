@@ -415,7 +415,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     ggplot2::geom_point(position = pd, size = 4)  + 
     ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") + 
     ggplot2::ylab(NULL) + ggplot2::xlab(NULL) + base_breaks_y(summaryStat, options) 
-  p <- JASPgraphs::themeJasp(p) + 
+  p <- jaspGraphs::themeJasp(p) + 
     ggplot2::theme(axis.text.x = ggplot2::element_blank(), 
                    axis.ticks.x = ggplot2::element_blank())
   

@@ -614,7 +614,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     ggplot2::xlab(options$groupingVariable) +
     base_breaks_y(summaryStat) + base_breaks_x(summaryStat$groupingVariable)
   
-  p <- JASPgraphs::themeJasp(p)
+  p <- jaspGraphs::themeJasp(p)
   
   return(p)
 }
