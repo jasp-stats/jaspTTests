@@ -3,7 +3,7 @@ import JASP.Module 	1.0
 
 Description
 {
-	name		: "TTests"
+	name		: "jaspTTests"
 	title		: qsTr("T-Tests")
 	description	: qsTr("This module offers the standard Frequentist and Bayesian T-Tests analyses.")
 	version		: "0.13"
