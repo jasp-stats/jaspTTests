@@ -51,16 +51,19 @@ Form {
 		{
 			name: "plotPriorAndPosterior";		label: qsTr("Prior and posterior")
 			CheckBox { name: "plotPriorAndPosteriorAdditionalInfo";		label: qsTr("Additional info"); checked: true }
+			CIField  { name: "priorAndPosteriorPlotsCredibleInterval";	label: qsTr("Credible interval") }
 		}
 
 		CheckBox
 		{
+			enabled: student.checked && priors.defaultPriorsChecked
 			name: "plotBayesFactorRobustness";	label: qsTr("Bayes factor robustness check")
 			CheckBox { name: "plotBayesFactorRobustnessAdditionalInfo";	label: qsTr("Additional info"); checked: true }
 		}
 
 		CheckBox
 		{
+			enabled: student.checked && priors.defaultPriorsChecked
 			name: "plotSequentialAnalysis";		label: qsTr("Sequential analysis")
 			CheckBox { name: "plotSequentialAnalysisRobustness";		label: qsTr("Robustness check") }
 		}
@@ -73,6 +76,22 @@ Form {
 	}
 
 	BayesFactorType { }
+	
+	RadioButtonGroup
+	{
+		name: "testStatistic"
+		id: testStatistic
+		title: qsTr("Tests")
+		RadioButton
+		{
+			id: student
+			value: "Student";	label: qsTr("Student"); checked: true }
+		RadioButton
+		{
+			value: "Wilcoxon";	label: qsTr("Wilcoxon signed-rank"); id: testWilcoxon
+			IntegerField { name: "wilcoxonSamplesNumber"; label: qsTr("No. samples"); defaultValue: 1000; min: 100; max: 10000; fieldWidth: 60 }
+		}
+	}
 
 	Group
 	{
@@ -88,6 +107,6 @@ Form {
 		RadioButton { value: "excludeListwise";				label: qsTr("Exclude cases listwise")							}
 	}
 
-	SubjectivePriors { }
+	SubjectivePriors { id: priors }
 
 }
