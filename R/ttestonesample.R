@@ -321,7 +321,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   result[[testStat]] <- stat
   
   if (options$VovkSellkeMPR)
-    result[["VovkSellkeMPR"]] <- .VovkSellkeMPR(p)
+    result[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
   
   return(result)
 }
