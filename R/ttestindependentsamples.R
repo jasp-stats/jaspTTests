@@ -378,7 +378,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   row[[testStat]] <- stat
   
   if (options$VovkSellkeMPR)
-    row[["VovkSellkeMPR"]] <- .VovkSellkeMPR(p)
+    row[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
   
   return(list(row = row, leveneViolated = leveneViolated))
 }

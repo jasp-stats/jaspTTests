@@ -166,7 +166,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
         
         
         ttestResults[["BF10post"]][var] <- bf.raw
-        BF <- JASP:::.recodeBFtype(bfOld     = bf.raw,
+        BF <- .recodeBFtype(bfOld     = bf.raw,
                             newBFtype = bf.type,
                             oldBFtype = "BF10")
 
