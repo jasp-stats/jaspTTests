@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: bugs.r-project.org\n"
 "POT-Creation-Date: 2020-08-14 13:52\n"
-"PO-Revision-Date: 2020-09-09 13:58+0000\n"
+"PO-Revision-Date: 2020-09-09 14:08+0000\n"
 "Last-Translator: JASP Stats <F.A.M.Meerhoff@uva.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
 "jaspttestmodule-r/nl/>\n"
@@ -24,7 +24,7 @@ msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-val
 msgstr "baba"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "tata"
 
 msgid "Variables %s and %s are the same!"
 msgstr ""
