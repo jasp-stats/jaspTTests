@@ -1,24 +1,11 @@
 Package: jaspTTests
 Type: Package
 Title: T-Tests Module for JASP
-Version: 0.11.0
-Date: 2019-08-31
+Version: 0.13.0
+Date: 2020-09-18
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
 Description: This module offers the standard Frequentist and Bayesian T-Tests analyses.
 License: GPL (>= 2)
-Encoding: UTF-8
-Imports:
-  BayesFactor,
-  BSDA,
-  car,
-  ggplot2,
-  jaspBase,
-  jaspGraphs,
-  logspline,
-  plotrix,
-  plyr
-Remotes:
-  jasp-stats/jaspBase,
-  jasp-stats/jaspGraphs
+Imports: gghalves
