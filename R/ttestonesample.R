@@ -403,9 +403,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                            groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
   
   ci <- options$descriptivesPlotsConfidenceInterval
-  summaryStat <- .summarySE(dataSubset, measurevar = "dependent",
-                            groupvars = "groupingVariable",
-                            conf.interval = ci, na.rm = TRUE, .drop = FALSE)
+  summaryStat <- jaspAnova::summarySE(dataSubset, measurevar = "dependent",
+                                      groupvars = "groupingVariable",
+                                      conf.interval = ci, na.rm = TRUE, .drop = FALSE)
   testValue <- data.frame(testValue = options$testValue)
   pd <- ggplot2::position_dodge(0.2)
   p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) + 

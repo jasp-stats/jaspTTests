@@ -594,10 +594,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   
   dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
   ci <- options$descriptivesPlotsConfidenceInterval
-  summaryStat <- .summarySE(as.data.frame(dataset), 
-                            measurevar = .v(variable),
-                            groupvars = .v(groups), 
-                            conf.interval = ci, na.rm = TRUE, .drop = FALSE)
+  summaryStat <- jaspAnova::summarySE(as.data.frame(dataset),
+                                      measurevar = .v(variable),
+                                      groupvars = .v(groups),
+                                      conf.interval = ci, na.rm = TRUE, .drop = FALSE)
   
   colnames(summaryStat)[which(colnames(summaryStat) == .v(variable))] <- "dependent"
   colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
