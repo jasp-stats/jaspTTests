@@ -435,9 +435,9 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                      groupingVariable = c(rep(paste("1.", pair[[1]], sep = ""), length(c1)),
                                           rep(paste("2.", pair[[2]], sep = ""), length(c2))))
   
-  summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
-                                  idvar = "id", conf.interval = options$descriptivesPlotsConfidenceInterval,
-                                  na.rm = TRUE, .drop = FALSE)
+  summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
+                                 idvar = "id", conf.interval = options$descriptivesPlotsConfidenceInterval,
+                                 na.rm = TRUE, .drop = FALSE)
   
   pd <- ggplot2::position_dodge(0.2)
   
