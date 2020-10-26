@@ -28,8 +28,9 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestIndependentNormalTable(jaspResults, dataset, options, ready, type)
   .ttestIndependentEqVarTable( jaspResults, dataset, options, ready, type)
   # Descriptives
-  .ttestIndependentDescriptivesTable(jaspResults, dataset, options, ready)
-  .ttestIndependentDescriptivesPlot( jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesTable(        jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -615,6 +616,112 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     base_breaks_y(summaryStat) + base_breaks_x(summaryStat$groupingVariable)
   
   p <- jaspGraphs::themeJasp(p)
+  
+  return(p)
+}
+
+.ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud-like Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$position <- 6
+  for(variable in options$variables) {
+    if(!is.null(subcontainer[[variable]]))
+      next
+    descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesPlotRainCloud
+    if(ready){
+      p <- try(.ttestIndependentDescriptivesRainCloudPlotFill(dataset, options, variable))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
+}
+
+.ttestIndependentDescriptivesRainCloudPlotFill <- function(dataset = NULL, options, variable) {
+  # Adapted under the MIT license from:
+  # van Langen, J. (2020). Open-visualizations in R and Python. 
+  # https://github.com/jorvlan/open-visualizations
+  #
+  # Permission is hereby granted, free of charge, to any person obtaining a copy
+  # of this software and associated documentation files (the "Software"), to deal
+  # in the Software without restriction, including without limitation the rights
+  # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  # copies of the Software, and to permit persons to whom the Software is
+  # furnished to do so, subject to the following conditions:
+  #   
+  # The above copyright notice and this permission notice shall be included in all
+  # copies or substantial portions of the Software.
+  
+  groups <- options$groupingVariable
+  
+  errors <- .hasErrors(dataset, 
+                       message = 'short', 
+                       type = c('observations', 'variance', 'infinity'),
+                       all.target = variable,
+                       observations.amount = '< 2',
+                       observations.grouping = groups)
+  
+  if(!identical(errors, FALSE))
+    stop(errors$message)
+  
+  dataset    <- na.omit(dataset[, c(.v(groups), .v(variable))])
+  n          <- nrow(dataset)
+  groupNames <- sort(unique(dataset[, .v(groups)]))
+  grp        <- dataset[,.v(groups)]
+  x          <- as.numeric(grp == groupNames[2])
+  xj         <- jitter(x, amount = 0.1)
+  y          <- dataset[,.v(variable)]
+  plotDf     <- data.frame(x = x, xj = xj, y = y, grp = grp)
+  yDens      <- density(plotDf$y)
+  yDensPos   <- yDens$x
+  yRange     <- quantile(yDensPos, probs = c(0.05, 0.95))
+  yBreaks    <- pretty(yDensPos)
+  
+  p <- ggplot2::ggplot(plotDf, mapping = ggplot2::aes(y = y)) +
+    
+    ggplot2::geom_point(data = plotDf[plotDf$grp == groupNames[1],], mapping = ggplot2::aes(x = xj),
+                        position = ggplot2::position_dodge(width = 1),
+                        color = "dodgerblue", size = 3, alpha = 0.5) +
+    
+    ggplot2::geom_point(data = plotDf[plotDf$grp == groupNames[2],], mapping = ggplot2::aes(x = xj),
+                        position = ggplot2::position_dodge(width = 0.1),
+                        color = "darkorange", size = 3, alpha = 0.5) +
+    
+    gghalves::geom_half_boxplot(data = plotDf[plotDf$grp == groupNames[1],],
+                                mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 1.3), 
+                                side = "r", outlier.shape = NA, center = TRUE, errorbar.draw = TRUE, 
+                                width = 0.2, size = 1, fill = "dodgerblue", alpha = 0.5) +
+    
+    gghalves::geom_half_boxplot(data = plotDf[plotDf$grp == groupNames[2],],
+                                mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 0.5), 
+                                side = "r", outlier.shape = NA, center = TRUE, errorbar.draw = TRUE, 
+                                width = 0.2, size = 1, fill = "darkorange", alpha = 0.5) +
+    
+    gghalves::geom_half_violin(data = plotDf[plotDf$grp == groupNames[1],],
+                               mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 1.7), 
+                               side = "r", fill = 'dodgerblue', alpha = .5, trim = FALSE) +
+    
+    gghalves::geom_half_violin(data = plotDf[plotDf$grp == groupNames[2],],
+                               mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 0.7), 
+                               side = "r", fill = 'darkorange', alpha = .5, trim = FALSE)
+  
+  p <- p + 
+    ggplot2::scale_y_continuous(name = variable, limits = range(yBreaks), breaks = yBreaks) +
+    ggplot2::scale_x_continuous(name = groups, breaks = c(0, 1), labels = groupNames) + 
+    ggplot2::theme(axis.title.x = ggplot2::element_text(hjust = 0.7/(1.6+max(yDens$y)))) +
+    ggplot2::geom_segment(data = data.frame(x = -Inf, xend = -Inf, y = min(yBreaks), yend = max(yBreaks)), 
+                          mapping = ggplot2::aes(x = x, xend = xend, y = y, yend = yend), 
+                          inherit.aes = FALSE)
+  
+  p <- jaspGraphs::themeJasp(p) 
   
   return(p)
 }

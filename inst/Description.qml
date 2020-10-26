@@ -13,6 +13,11 @@ Description
 	license		: "GPL (>= 2)"
 	icon		: "analysis-classical-ttest.svg"
 
+	Package
+    {
+    	name	: "gghalves"
+    }
+
 	GroupTitle
 	{
 		title:	qsTr("Classical")

@@ -125,11 +125,12 @@
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlots) return()
+  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsRainCloud) return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
     container$dependOn(c("descriptives", "descriptivesPlots", 
-                         "descriptivesPlotsConfidenceInterval", "missingValues",
+                         "descriptivesPlotsConfidenceInterval",
+                         "descriptivesPlotsRainCloud", "missingValues",
                          "variables", "pairs", "groupingVariable"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container

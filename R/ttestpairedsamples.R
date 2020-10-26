@@ -27,8 +27,9 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$pairs))
-  .ttestDescriptivesTable(     jaspResults, dataset, options, ready, vars)
-  .ttestPairedDescriptivesPlot(jaspResults, dataset, options, ready)
+  .ttestDescriptivesTable(              jaspResults, dataset, options, ready, vars)
+  .ttestPairedDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -452,6 +453,111 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     ggplot2::scale_x_discrete(labels = c(pair[[1]], pair[[2]]))
   
   p <- jaspGraphs::themeJasp(p)
+  
+  return(p)
+}
+
+.ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud-like Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$position <- 6
+  for(pair in options$pairs) {
+    title <- paste(pair, collapse = " - ")
+    if(!is.null(subcontainer[[title]]))
+      next
+    descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesPlotRainCloud
+    if(ready){
+      p <- try(.ttestPairedDescriptivesRainCloudPlotFill(dataset, options, pair))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  } 
+  return()
+}
+
+.ttestPairedDescriptivesRainCloudPlotFill <- function(dataset = NULL, options, pair) {
+  # Adapted under the MIT license from:
+  # van Langen, J. (2020). Open-visualizations in R and Python. 
+  # https://github.com/jorvlan/open-visualizations
+  #
+  # Permission is hereby granted, free of charge, to any person obtaining a copy
+  # of this software and associated documentation files (the "Software"), to deal
+  # in the Software without restriction, including without limitation the rights
+  # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  # copies of the Software, and to permit persons to whom the Software is
+  # furnished to do so, subject to the following conditions:
+  #   
+  # The above copyright notice and this permission notice shall be included in all
+  # copies or substantial portions of the Software.
+  
+  errors <- .hasErrors(dataset, 
+                       message = 'short', 
+                       type = c('variance', 'infinity'),
+                       all.target = pair)
+  
+  if(!identical(errors, FALSE))
+    stop(errors$message)
+  
+  c1         <- dataset[[ .v(pair[[1]]) ]]
+  c2         <- dataset[[ .v(pair[[2]]) ]]
+  pairNames  <- c(pair[[1]], pair[[2]])
+  id         <- as.factor(rep(1:length(c1), 2))
+  grp        <- rep(pairNames, c(length(c1), length(c2)))
+  x          <- as.numeric(grp == pairNames[2])
+  xj         <- jitter(x, amount = 0.1)
+  y          <- c(c1, c2)
+  plotDf     <- data.frame(x = x, xj = xj, y = y, grp = grp, id = id)
+  yDens      <- density(plotDf$y)
+  yDensPos   <- yDens$x
+  yRange     <- quantile(yDensPos, probs = c(0.05, 0.95))
+  yBreaks    <- pretty(yRange)
+  
+  p <- ggplot2::ggplot(plotDf, mapping = ggplot2::aes(y = y)) +
+    
+    ggplot2::geom_point(data = plotDf[plotDf$grp == pairNames[1],], mapping = ggplot2::aes(x = xj),
+                        position = ggplot2::position_dodge(width = 1),
+                        color = "dodgerblue", size = 3, alpha = 0.5) +
+    
+    ggplot2::geom_point(data = plotDf[plotDf$grp == pairNames[2],], mapping = ggplot2::aes(x = xj),
+                        position = ggplot2::position_dodge(width = 0.1),
+                        color = "darkorange", size = 3, alpha = 0.5) +
+    
+    ggplot2::geom_line(mapping = ggplot2::aes(x = xj, group = id), color = 'gray') +
+    
+    gghalves::geom_half_boxplot(data = plotDf[plotDf$grp == pairNames[1],],
+                                mapping = ggplot2::aes(x = , y = y), position = ggplot2::position_nudge(x = 1.3), 
+                                side = "r", outlier.shape = NA, center = TRUE, errorbar.draw = TRUE, 
+                                width = 0.2, size = 1, fill = "dodgerblue", alpha = 0.5) +
+    
+    gghalves::geom_half_boxplot(data = plotDf[plotDf$grp == pairNames[2],],
+                                mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 0.5), 
+                                side = "r", outlier.shape = NA, center = TRUE, errorbar.draw = TRUE, 
+                                width = 0.2, size = 1, fill = "darkorange", alpha = 0.5) +
+    
+    gghalves::geom_half_violin(data = plotDf[plotDf$grp == pairNames[1],],
+                               mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 1.7), 
+                               side = "r", fill = 'dodgerblue', alpha = .5, trim = FALSE) +
+    
+    gghalves::geom_half_violin(data = plotDf[plotDf$grp == pairNames[2],],
+                               mapping = ggplot2::aes(x = x, y = y), position = ggplot2::position_nudge(x = 0.7), 
+                               side = "r", fill = 'darkorange', alpha = .5, trim = FALSE)
+  
+  p <- p + 
+    ggplot2::scale_y_continuous(name = "", limits = range(yBreaks), breaks = yBreaks) +
+    ggplot2::scale_x_continuous(name = "", breaks = c(0, 1), labels = pairNames) + 
+    ggplot2::geom_segment(data = data.frame(x = -Inf, xend = -Inf, y = min(yBreaks), yend = max(yBreaks)), 
+                          mapping = ggplot2::aes(x = x, xend = xend, y = y, yend = yend), 
+                          inherit.aes = FALSE)
+  
+  p <- jaspGraphs::themeJasp(p) 
   
   return(p)
 }
