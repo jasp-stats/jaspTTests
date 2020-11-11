@@ -1,0 +1,588 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "T-Tests"
+msgstr "T-Tests"
+
+msgctxt "Description|"
+msgid ""
+"This module offers the standard Frequentist and Bayesian T-Tests analyses."
+msgstr ""
+"Dieses Modul bietet die Standardanalysen frequenstischer und Bayesscher T-"
+"Tests."
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr "Klassisch"
+
+msgctxt "Description|"
+msgid "Independent Samples T-Test"
+msgstr "T-Test für unabhängige Stichproben"
+
+msgctxt "Description|"
+msgid "Paired Samples T-Test"
+msgstr "T-Test für abhängige Stichproben"
+
+msgctxt "Description|"
+msgid "One Sample T-Test"
+msgstr "T-Test für eine Stichprobe"
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr "Bayesianisch"
+
+msgctxt "Description|"
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Bayesscher T-Test für unabhängige Stichproben"
+
+msgctxt "Description|"
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Bayesscher T-Test für abhängige Stichproben"
+
+msgctxt "Description|"
+msgid "Bayesian One Sample T-Test"
+msgstr "Bayesscher T-Test für eine Stichprobe"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Dependent Variables"
+msgstr "Abhängige Variablen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Grouping Variable"
+msgstr "Gruppen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr "Gruppe 1 ≠ Gruppe 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr "Gruppe 1 > Gruppe 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr "Gruppe 1 < Gruppe 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Plots"
+msgstr "Abbildungen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Prior and posterior"
+msgstr "Prior und Posterior"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional info"
+msgstr "Weitere Infos"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Credible interval"
+msgstr "Kredibilitätsintervall"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Bayes factor robustness check"
+msgstr "Bayesfaktor Robustheitsprüfung"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Sequential analysis"
+msgstr "Sequentielle Analyse"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Robustness check"
+msgstr "Robustheitsprüfung"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "No. samples"
+msgstr "Stichprobenumfang"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Variables"
+msgstr "Variablen"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Test value:"
+msgstr "Testwert:"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Plots"
+msgstr "Abbildungen"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Prior and posterior"
+msgstr "Prior und Posterior"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional info"
+msgstr "Weitere Infos"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Credible interval"
+msgstr "Kredibilitätsintervall"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Bayes factor robustness check"
+msgstr "Bayesfaktor Robustheitsprüfung"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Sequential analysis"
+msgstr "Sequentielle Analyse"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Robustness check"
+msgstr "Robustheitsprüfung"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Testwert"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "> Test value"
+msgstr "> Testwert"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "< Test value"
+msgstr "< Testwert"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon-Vorzeichen-Rang"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "No. samples"
+msgstr "Stichprobenumfang"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable pairs"
+msgstr "Variablenpaare"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr "Messung 1 ≠ Messung 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr "Messung 1 > Messung 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr "Messung 1 < Messung 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Plots"
+msgstr "Abbildungen"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Prior and posterior"
+msgstr "Prior und Posterior"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional info"
+msgstr "Weitere Infos"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Credible interval"
+msgstr "Kredibilitätsintervall"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Bayes factor robustness check"
+msgstr "Bayesfaktor-Robustheitsprüfung"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Sequential analysis"
+msgstr "Sequentielle Analyse"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Robustness check"
+msgstr "Robustheitsprüfung"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon-Vorzeichen-Rang"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "No. samples"
+msgstr "Stichprobenumfang"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Variables"
+msgstr "Variablen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Grouping Variable"
+msgstr "Gruppen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Welch"
+msgstr "Welch"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Location parameter"
+msgstr "Lageparameter"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Confidence interval"
+msgstr "Konfidenzintervall"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Effect Size"
+msgstr "Effektgröße"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Cohen's d"
+msgstr "Cohens d"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Glass' delta"
+msgstr "Glass delta"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Hedges' g"
+msgstr "Hedges g"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives plots"
+msgstr "Deskriptive Abbildungen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke-Maximum-p-Quotient"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr "Gruppe 1 ≠ Gruppe 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr "Gruppe 1 > Gruppe 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr "Gruppe 1 < Gruppe 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Assumption Checks"
+msgstr "Annahmeprüfungen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Normality"
+msgstr "Normalverteilung"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Equality of variances"
+msgstr "Varianzgleichheit"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"
+
+msgctxt "TTestOneSample|"
+msgid "Variables"
+msgstr "Variablen"
+
+msgctxt "TTestOneSample|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon-Vorzeichen-Rang-Test"
+
+msgctxt "TTestOneSample|"
+msgid "Z Test"
+msgstr "Z-Test"
+
+msgctxt "TTestOneSample|"
+msgid "Test value:"
+msgstr "Testwert:"
+
+msgctxt "TTestOneSample|"
+msgid "Std. deviation:"
+msgstr "Std.-Abweichung:"
+
+msgctxt "TTestOneSample|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestOneSample|"
+msgid "Location parameter"
+msgstr "Lageparameter"
+
+msgctxt "TTestOneSample|"
+msgid "Confidence interval"
+msgstr "Konfidenzintervall"
+
+msgctxt "TTestOneSample|"
+msgid "Effect Size"
+msgstr "Effektgröße"
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives plots"
+msgstr "Deskriptive Abbildungen"
+
+msgctxt "TTestOneSample|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke-Maximum-p-Quotient"
+
+msgctxt "TTestOneSample|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Testwert"
+
+msgctxt "TTestOneSample|"
+msgid "> Test value"
+msgstr "> Testwert"
+
+msgctxt "TTestOneSample|"
+msgid "< Test value"
+msgstr "< Testwert"
+
+msgctxt "TTestOneSample|"
+msgid "Assumption checks"
+msgstr "Annahmeprüfungen"
+
+msgctxt "TTestOneSample|"
+msgid "Normality"
+msgstr "Normalverteilung"
+
+msgctxt "TTestOneSample|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable pairs"
+msgstr "Variablenpaare"
+
+msgctxt "TTestPairedSamples|"
+msgid "Tests"
+msgstr "Tests"
+
+msgctxt "TTestPairedSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon-Vorzeichen-Rang"
+
+msgctxt "TTestPairedSamples|"
+msgid "Additional Statistics"
+msgstr "Weitere Statistiken"
+
+msgctxt "TTestPairedSamples|"
+msgid "Location parameter"
+msgstr "Lageparameter"
+
+msgctxt "TTestPairedSamples|"
+msgid "Confidence interval"
+msgstr "Konfidenzintervall"
+
+msgctxt "TTestPairedSamples|"
+msgid "Effect Size"
+msgstr "Effektgröße"
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives"
+msgstr "Deskriptive Statistik"
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives plots"
+msgstr "Deskriptive Abbildungen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke-Maximum-p-Quotient"
+
+msgctxt "TTestPairedSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt.-Hypothese"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr "Messung 1 ≠ Messung 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr "Messung 1 > Messung 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr "Messung 1 < Messung 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Assumption Checks"
+msgstr "Annahmeprüfungen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normality"
+msgstr "Normalverteilung"
+
+msgctxt "TTestPairedSamples|"
+msgid "Missing Values"
+msgstr "Fehlende Werte"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Fälle pro abhängige Variable ausschließen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr "Fälle listenweise ausschließen"

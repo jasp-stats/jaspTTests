@@ -1,0 +1,588 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "T-Tests"
+msgstr "T-Toetsen"
+
+msgctxt "Description|"
+msgid ""
+"This module offers the standard Frequentist and Bayesian T-Tests analyses."
+msgstr ""
+"Deze module biedt de standaard Frequenstische en Bayesiaanse T-Toets "
+"analyses."
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr "Klassiek"
+
+msgctxt "Description|"
+msgid "Independent Samples T-Test"
+msgstr "T-Toets voor Onafhankelijke Steekproeven"
+
+msgctxt "Description|"
+msgid "Paired Samples T-Test"
+msgstr "Gepaarde T-Toets"
+
+msgctxt "Description|"
+msgid "One Sample T-Test"
+msgstr "T-Toets voor Eén Gemiddelde"
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr "Bayesiaans"
+
+msgctxt "Description|"
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Bayesiaanse T-Toets voor Onafhankelijke Steekproeven"
+
+msgctxt "Description|"
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Bayesiaanse Gepaarde T-Toets"
+
+msgctxt "Description|"
+msgid "Bayesian One Sample T-Test"
+msgstr "Bayesiaanse T-Toets voor Eén Gemiddelde"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Dependent Variables"
+msgstr "Afhankelijke variabelen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Grouping Variable"
+msgstr "Groepen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr "Groep 1 ≠ groep 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr "Groep 1 > groep 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr "Groep 1 < groep 2"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Prior and posterior"
+msgstr "Prior en posterior"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional info"
+msgstr "Aanvullende info"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Bayes factor robustness check"
+msgstr "Bayes factor robuustheidsevaluatie"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Sequential analysis"
+msgstr "Sequentiële analyse"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Robustness check"
+msgstr "Robuustheidsevaluatie"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Variables"
+msgstr "Variabelen"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Test value:"
+msgstr "Toetswaarde:"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Prior and posterior"
+msgstr "Prior en posterior"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional info"
+msgstr "Aanvullende info"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Bayes factor robustness check"
+msgstr "Bayes factor robuustheidsevaluatie"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Sequential analysis"
+msgstr "Sequentiële analyse"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Robustness check"
+msgstr "Robuustheidsevaluatie"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Toetswaarde"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "> Test value"
+msgstr "> Toetswaarde"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "< Test value"
+msgstr "< Toetswaarde"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon rangtekentoets"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable pairs"
+msgstr "Variabele paren"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr "Maat 1 ≠ maat 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr "Maat 1 > maat 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr "Maat 1 < maat 2"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Prior and posterior"
+msgstr "Prior en posterior"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional info"
+msgstr "Aanvullende info"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Bayes factor robustness check"
+msgstr "Bayes factor robuustheidsevaluatie"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Sequential analysis"
+msgstr "Sequentiële analyse"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Robustness check"
+msgstr "Robuustheidsevaluatie"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon rangtekentoets"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Variables"
+msgstr "Variabelen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Grouping Variable"
+msgstr "Groepen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Welch"
+msgstr "Welch"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Location parameter"
+msgstr "Locatieparameter"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Effect Size"
+msgstr "Effectgrootte"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Cohen's d"
+msgstr "Cohen's d"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Glass' delta"
+msgstr "Glass' delta"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Hedges' g"
+msgstr "Hedges' g"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives plots"
+msgstr "Beschrijvende diagrammen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr "Groep 1 ≠ groep 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr "Groep 1 > groep 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr "Groep 1 < groep 2"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Assumption Checks"
+msgstr "Verificatie van aannames"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Normality"
+msgstr "Normaliteit"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Equality of variances"
+msgstr "Gelijkheid van varianties"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "TTestOneSample|"
+msgid "Variables"
+msgstr "Variabelen"
+
+msgctxt "TTestOneSample|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon rangtekentoets"
+
+msgctxt "TTestOneSample|"
+msgid "Z Test"
+msgstr "Z-toets"
+
+msgctxt "TTestOneSample|"
+msgid "Test value:"
+msgstr "Toetswaarde:"
+
+msgctxt "TTestOneSample|"
+msgid "Std. deviation:"
+msgstr "Std. afwijking:"
+
+msgctxt "TTestOneSample|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestOneSample|"
+msgid "Location parameter"
+msgstr "Locatieparameter"
+
+msgctxt "TTestOneSample|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "TTestOneSample|"
+msgid "Effect Size"
+msgstr "Effectgrootte"
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives plots"
+msgstr "Beschrijvende diagrammen"
+
+msgctxt "TTestOneSample|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "TTestOneSample|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Toetswaarde"
+
+msgctxt "TTestOneSample|"
+msgid "> Test value"
+msgstr "> Toetswaarde"
+
+msgctxt "TTestOneSample|"
+msgid "< Test value"
+msgstr "< Toetswaarde"
+
+msgctxt "TTestOneSample|"
+msgid "Assumption checks"
+msgstr "Verificatie van aannames"
+
+msgctxt "TTestOneSample|"
+msgid "Normality"
+msgstr "Normaliteit"
+
+msgctxt "TTestOneSample|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable pairs"
+msgstr "Variabele paren"
+
+msgctxt "TTestPairedSamples|"
+msgid "Tests"
+msgstr "Toetsen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon rangtekentoets"
+
+msgctxt "TTestPairedSamples|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "TTestPairedSamples|"
+msgid "Location parameter"
+msgstr "Locatieparameter"
+
+msgctxt "TTestPairedSamples|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "TTestPairedSamples|"
+msgid "Effect Size"
+msgstr "Effectgrootte"
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives plots"
+msgstr "Beschrijvende diagrammen"
+
+msgctxt "TTestPairedSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "TTestPairedSamples|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr "Maat 1 ≠ maat 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr "Maat 1 > maat 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr "Maat 1 < maat 2"
+
+msgctxt "TTestPairedSamples|"
+msgid "Assumption Checks"
+msgstr "Verificatie van aannames"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normality"
+msgstr "Normaliteit"
+
+msgctxt "TTestPairedSamples|"
+msgid "Missing Values"
+msgstr "Ontbrekende waarden"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr "Sluit waarnemingen uit per afhankelijke variable"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr "Sluit waarnemingen uit per rij"
