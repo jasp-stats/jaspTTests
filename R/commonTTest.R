@@ -536,10 +536,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   }
 
   p <- p +
-    ggplot2::scale_y_continuous(name = gettext(ifelse(dependency != "none", "", yLabel)), 
+    ggplot2::scale_y_continuous(name = if(dependency == "none") yLabel else ""), 
                                 limits = range(yBreaks),
                                 breaks = yBreaks) +
-    ggplot2::scale_x_continuous(name = gettext(ifelse(dependency != "none", "", groups)), 
+    ggplot2::scale_x_continuous(name = if(dependency == "none") groups else ""), 
                                 breaks = unique(x),
                                 labels = gettext(xLabels)) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +
