@@ -460,16 +460,17 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   # The above copyright notice and this permission notice shall be included in all
   # copies or substantial portions of the Software.
 
+  dependency <- match.arg(dependency)
+
   n <- nrow(dataset)
   if (dependency == "paired") {
-    y   <- unlist(dataset)
-    grp <- rep(as.vector(variable), c(n,n))
+    y   <- unlist(dataset[, .v(variable)])
+    grp <- rep(variable, c(n,n))
   } else {
     y   <- dataset[,.v(variable)]
     grp <- dataset[,.v(groups)]
   }
   x  <- as.numeric(as.factor(grp)) - 1
-  set.seed(12312414)
   xj <- jitter(x, amount = 0.1)
   if (horiz) {
     xb <- x
@@ -478,8 +479,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     xb <- x*0.4 + max(xj) + 0.4
   }
 
-  pointDf <- data.frame(x = xj, y = y, grp = grp)
-  boxDf   <- data.frame(x = xb, y = y, grp = grp)
+  pointBoxDf <- data.frame(xj = xj, xb = xb, y = y, grp = grp)
 
   dens    <- tapply(y, as.factor(grp), density)
   xDens   <- unlist(lapply(dens, function(x) x[["x"]]))
@@ -494,7 +494,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   densDf <- data.frame(x = xDens, y = yDensNpos, grp = as.factor(grpDens))
 
-  levels(boxDf$grp) <- levels(densDf$grp)
+  levels(pointBoxDf$grp) <- levels(densDf$grp)
 
   xMin    <- min(c(x, xj, xb, yDensNpos))
   xMax    <- max(c(x, xj, xb, yDensNpos))
@@ -504,16 +504,16 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   p <- ggplot2::ggplot() +
 
-    ggplot2::geom_point(data = pointDf, mapping = ggplot2::aes(x = x, y = y, color = grp),
+    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
                         size = 3, alpha = 0.5) +
 
     ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp),
                           color = "black", alpha = 0.5) +
 
-    ggplot2::stat_boxplot(data = boxDf, mapping = ggplot2::aes(x = x, y = y, group = grp),
+    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
                           geom = "errorbar", outlier.shape = NA, width = 0.1, size = 1) +
 
-    ggplot2::geom_boxplot(data = boxDf, mapping = ggplot2::aes(x = x, y = y, fill = grp),
+    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
                           outlier.shape = NA, width = 0.2, size = 1)
 
   if (dependency != "none") {
@@ -526,9 +526,9 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
         id[idx] <- 1:length(idx)
       }
     }
-    idDf <- data.frame(x = xj, y = y, id = id)
+    pointBoxDf$id <- id
     p <- p +
-      ggplot2::geom_line(data  = idDf, mapping = ggplot2::aes(x = x, y = y, group = id), color = 'gray')
+      ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
   }
 
   if (horiz) {
@@ -536,10 +536,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   }
 
   p <- p +
-    ggplot2::scale_y_continuous(name = if(dependency == "none") yLabel else ""), 
+    ggplot2::scale_y_continuous(name = if(dependency == "none") yLabel else "",
                                 limits = range(yBreaks),
                                 breaks = yBreaks) +
-    ggplot2::scale_x_continuous(name = if(dependency == "none") groups else ""), 
+    ggplot2::scale_x_continuous(name = if(dependency == "none") groups else "",
                                 breaks = unique(x),
                                 labels = gettext(xLabels)) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +

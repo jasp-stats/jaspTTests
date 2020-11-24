@@ -467,7 +467,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   subcontainer$position <- 6
   for(pair in options$pairs) {
     title <- paste(pair, collapse = " - ")
-    if(!is.null(subcontainer[[title]]))
+    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
       next
     descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
     descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
