@@ -72,6 +72,7 @@ test_that("Raincloud plot matches", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "raincloud", dir="TTestPairedSamples")

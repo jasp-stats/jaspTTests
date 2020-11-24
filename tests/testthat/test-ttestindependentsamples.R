@@ -80,6 +80,7 @@ test_that("Raincloud plot matches (vertical)", {
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestIndependentSamples")
@@ -91,6 +92,7 @@ test_that("Raincloud plot matches (horizontal)", {
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
   options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestIndependentSamples")
