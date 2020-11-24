@@ -2138,7 +2138,7 @@
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, dependency = "none", horiz))
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else
@@ -2152,7 +2152,9 @@
       descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
       subcontainer[[title]] <- descriptivesPlotRainCloud
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, pair, NULL, "", dependency = "paired", horiz = FALSE))
+      groups  <- rep(pair, each = nrow(dataset))
+      subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else

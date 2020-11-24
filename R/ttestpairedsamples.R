@@ -472,8 +472,10 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
     descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloud
+    groups  <- rep(pair, each = nrow(dataset))
+    subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
     if(ready){
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, pair, NULL, "", dependency = "paired", horiz = FALSE))
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else

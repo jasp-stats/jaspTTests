@@ -445,7 +445,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   merge(datac, ndatac)
 }
 
-.descriptivesPlotsRainCloudFill <- function(dataset, variable, groups = NULL, yLabel, dependency = c("none", "paired", "repeated"), horiz) {
+.descriptivesPlotsRainCloudFill <- function(dataset, variable, groups, yLabel, xLabel, addLines, horiz) {
   # Adapted under the MIT license from:
   # van Langen, J. (2020). Open-visualizations in R and Python.
   # https://github.com/jorvlan/open-visualizations
@@ -460,18 +460,11 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   # The above copyright notice and this permission notice shall be included in all
   # copies or substantial portions of the Software.
 
-  dependency <- match.arg(dependency)
-
-  n <- nrow(dataset)
-  if (dependency == "paired") {
-    y   <- unlist(dataset[, .v(variable)])
-    grp <- rep(variable, c(n,n))
-  } else {
-    y   <- dataset[,.v(variable)]
-    grp <- dataset[,.v(groups)]
-  }
-  x  <- as.numeric(as.factor(grp)) - 1
-  xj <- jitter(x, amount = 0.1)
+  n   <- nrow(dataset)
+  y   <- dataset[,.v(variable)]
+  grp <- dataset[,.v(groups)]
+  x   <- as.numeric(as.factor(grp)) - 1
+  xj  <- jitter(x, amount = 0.1)
   if (horiz) {
     xb <- x
     xj <- xj - 0.3
@@ -516,15 +509,11 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
                           outlier.shape = NA, width = 0.2, size = 1)
 
-  if (dependency != "none") {
-    if (dependency == "paired") {
-      id <- rep(1:n, length(variable))
-    } else {
-      id <- numeric(n)
-      for (g in unique(grp)) {
-        idx     <- which(grp == g)
-        id[idx] <- 1:length(idx)
-      }
+  if (addLines) {
+    id <- numeric(n)
+    for (g in unique(grp)) {
+      idx     <- which(grp == g)
+      id[idx] <- 1:length(idx)
     }
     pointBoxDf$id <- id
     p <- p +
@@ -536,10 +525,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   }
 
   p <- p +
-    ggplot2::scale_y_continuous(name = if(dependency == "none") yLabel else "",
+    ggplot2::scale_y_continuous(name = yLabel,
                                 limits = range(yBreaks),
                                 breaks = yBreaks) +
-    ggplot2::scale_x_continuous(name = if(dependency == "none") groups else "",
+    ggplot2::scale_x_continuous(name = xLabel,
                                 breaks = unique(x),
                                 labels = gettext(xLabels)) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +
