@@ -74,10 +74,10 @@ Form {
 			CIField { name: "descriptivesPlotsCredibleInterval";	label: qsTr("Credible interval") }
 		}
 
-        CheckBox
-        {
-            name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
-        }
+		CheckBox
+		{
+			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
+		}
 	}
 
 	BayesFactorType { }
