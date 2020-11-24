@@ -73,6 +73,12 @@ Form {
 			name: "descriptivesPlots";			label: qsTr("Descriptives")
 			CIField { name: "descriptivesPlotsCredibleInterval";	label: qsTr("Credible interval") }
 		}
+
+        CheckBox
+        {
+            name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
+            CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
+        }
 	}
 
 	BayesFactorType { }

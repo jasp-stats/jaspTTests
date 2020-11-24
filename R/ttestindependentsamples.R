@@ -28,8 +28,9 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestIndependentNormalTable(jaspResults, dataset, options, ready, type)
   .ttestIndependentEqVarTable( jaspResults, dataset, options, ready, type)
   # Descriptives
-  .ttestIndependentDescriptivesTable(jaspResults, dataset, options, ready)
-  .ttestIndependentDescriptivesPlot( jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesTable(        jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -617,4 +618,30 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   p <- jaspGraphs::themeJasp(p)
   
   return(p)
+}
+
+.ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$position <- 6
+  horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  for(variable in options$variables) {
+    if(!is.null(subcontainer[[variable]]))
+      next
+    descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesPlotRainCloud
+    if(ready){
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, dependency = "none", horiz))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
 }

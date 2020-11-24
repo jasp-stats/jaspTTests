@@ -27,8 +27,9 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$pairs))
-  .ttestDescriptivesTable(     jaspResults, dataset, options, ready, vars)
-  .ttestPairedDescriptivesPlot(jaspResults, dataset, options, ready)
+  .ttestDescriptivesTable(              jaspResults, dataset, options, ready, vars)
+  .ttestPairedDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -454,6 +455,32 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   p <- jaspGraphs::themeJasp(p)
   
   return(p)
+}
+
+.ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$position <- 6
+  for(pair in options$pairs) {
+    title <- paste(pair, collapse = " - ")
+    if(!is.null(subcontainer[[title]]))
+      next
+    descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesPlotRainCloud
+    if(ready){
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, pair, NULL, "", dependency = "paired", horiz = FALSE))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
 }
 
 .ttestPairedGetHypothesisFootnote <- function(hypothesis, pairs) {

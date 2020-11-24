@@ -77,9 +77,14 @@ Form
 			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotsConfidenceInterval"; label: qsTr("Confidence interval") }
 		}
-		CheckBox { name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio")				}
+        CheckBox
+        {
+            name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
+            CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
+        }
+        CheckBox { name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}
-
+    
 	RadioButtonGroup
 	{
 		name: "hypothesis"
