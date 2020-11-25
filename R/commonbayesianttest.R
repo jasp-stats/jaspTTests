@@ -64,6 +64,9 @@
   # create inferential plots
   .ttestBayesianInferentialPlots(jaspResults, dataset, options, ttestResults, errors)
 
+  # create raincloud plots
+  .ttestBayesianRainCloudPlots(jaspResults, dataset, options, analysis)
+
   return()
 
 }
@@ -2116,6 +2119,50 @@
 
 }
 
+.ttestBayesianRainCloudPlots <- function(jaspResults, dataset, options, analysis) {
+  if (is.null(options$descriptivesPlotsRainCloud))
+    return()
+  if (!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$dependOn(c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
+  subcontainer$position <- 6
+  horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  if (analysis == "independent") {
+    for(variable in options$variables) {
+      if(!is.null(subcontainer[[variable]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      subcontainer[[variable]] <- descriptivesPlotRainCloud
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  } else if (analysis == "paired") {
+    for(pair in options$pairs) {
+      title <- paste(pair, collapse = " - ")
+      if(!is.null(subcontainer[[title]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
+      subcontainer[[title]] <- descriptivesPlotRainCloud
+      groups  <- rep(pair, each = nrow(dataset))
+      subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
+}
 
 # helper functions ----
 .ttestBayesianCheckBFPlot <- function(bf) {

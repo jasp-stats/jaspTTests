@@ -125,11 +125,12 @@
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlots) return()
+  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsRainCloud) return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
     container$dependOn(c("descriptives", "descriptivesPlots", 
-                         "descriptivesPlotsConfidenceInterval", "missingValues",
+                         "descriptivesPlotsConfidenceInterval",
+                         "descriptivesPlotsRainCloud", "missingValues",
                          "variables", "pairs", "groupingVariable"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container
@@ -442,4 +443,99 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   # Combine the un-normed means with the normed results
   merge(datac, ndatac)
+}
+
+.descriptivesPlotsRainCloudFill <- function(dataset, variable, groups, yLabel, xLabel, addLines, horiz) {
+  # Adapted under the MIT license from:
+  # van Langen, J. (2020). Open-visualizations in R and Python.
+  # https://github.com/jorvlan/open-visualizations
+  #
+  # Permission is hereby granted, free of charge, to any person obtaining a copy
+  # of this software and associated documentation files (the "Software"), to deal
+  # in the Software without restriction, including without limitation the rights
+  # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  # copies of the Software, and to permit persons to whom the Software is
+  # furnished to do so, subject to the following conditions:
+  #
+  # The above copyright notice and this permission notice shall be included in all
+  # copies or substantial portions of the Software.
+
+  n   <- nrow(dataset)
+  y   <- dataset[,.v(variable)]
+  grp <- dataset[,.v(groups)]
+  x   <- as.numeric(as.factor(grp)) - 1
+  xj  <- jitter(x, amount = 0.1)
+  if (horiz) {
+    xb <- x
+    xj <- xj - 0.3
+  } else {
+    xb <- x*0.4 + max(xj) + 0.4
+  }
+
+  pointBoxDf <- data.frame(xj = xj, xb = xb, y = y, grp = grp)
+
+  dens    <- tapply(y, as.factor(grp), density)
+  xDens   <- unlist(lapply(dens, function(x) x[["x"]]))
+  yDens   <- unlist(lapply(dens, function(x) x[["y"]]))
+  yDensN  <- (yDens - min(yDens))/(max(yDens) - min(yDens)) * 0.5
+  grpDens <- rep(1:length(dens), each = length(dens[[1]]$x)) - 1
+
+  if (horiz)
+    yDensNpos <- yDensN + grpDens
+  else
+    yDensNpos <- yDensN + max(xb) + 0.4
+
+  densDf <- data.frame(x = xDens, y = yDensNpos, grp = as.factor(grpDens))
+
+  levels(pointBoxDf$grp) <- levels(densDf$grp)
+
+  xMin    <- min(c(x, xj, xb, yDensNpos))
+  xMax    <- max(c(x, xj, xb, yDensNpos))
+  xLimits <- range(pretty(c(xMin, xMax)))
+  yBreaks <- pretty(range(xDens))
+  xLabels <- unique(grp)
+
+  p <- ggplot2::ggplot()
+
+  if (addLines) {
+    id <- numeric(n)
+    for (g in unique(grp)) {
+      idx     <- which(grp == g)
+      id[idx] <- 1:length(idx)
+    }
+    pointBoxDf$id <- id
+    p <- p +
+      ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
+  }
+
+  p <- p + 
+    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
+                        size = 3) +
+
+    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp),
+                          color = "black", alpha = 0.5) +
+
+    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
+                          geom = "errorbar", outlier.shape = NA, width = 0.1, size = 1) +
+
+    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
+                          outlier.shape = NA, width = 0.2, size = 1)
+
+  if (horiz) {
+    p <- p + ggplot2::coord_flip()
+  }
+
+  p <- p +
+    ggplot2::scale_y_continuous(name = yLabel,
+                                limits = range(yBreaks),
+                                breaks = yBreaks) +
+    ggplot2::scale_x_continuous(name = xLabel,
+                                breaks = unique(x),
+                                labels = gettext(xLabels)) +
+    ggplot2::scale_fill_brewer(palette = "Dark2") +
+    ggplot2::scale_color_brewer(palette = "Dark2")
+
+  p <- jaspGraphs::themeJasp(p)
+
+  return(p)
 }

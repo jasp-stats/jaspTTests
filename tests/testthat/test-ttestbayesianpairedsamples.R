@@ -91,6 +91,15 @@ test_that("Inferential plots with additional info match", {
   
 })
 
+test_that("Raincloud plot matches", {
+  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud", dir="TTestBayesianPairedSamples")
+})
 
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")

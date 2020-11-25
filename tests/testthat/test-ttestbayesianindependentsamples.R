@@ -107,6 +107,29 @@ test_that("Inferential plots with additional info match", {
   
 })
 
+test_that("Raincloud plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestBayesianIndependentSamples")
+})
+
+test_that("Raincloud plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesPlotsRainCloud <- TRUE
+  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestBayesianIndependentSamples")
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
 
