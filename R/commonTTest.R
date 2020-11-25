@@ -495,19 +495,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   yBreaks <- pretty(range(xDens))
   xLabels <- unique(grp)
 
-  p <- ggplot2::ggplot() +
-
-    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
-                        size = 3, alpha = 0.5) +
-
-    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp),
-                          color = "black", alpha = 0.5) +
-
-    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
-                          geom = "errorbar", outlier.shape = NA, width = 0.1, size = 1) +
-
-    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
-                          outlier.shape = NA, width = 0.2, size = 1)
+  p <- ggplot2::ggplot()
 
   if (addLines) {
     id <- numeric(n)
@@ -519,6 +507,19 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     p <- p +
       ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
   }
+
+  p <- p + 
+    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
+                        size = 3) +
+
+    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp),
+                          color = "black", alpha = 0.5) +
+
+    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
+                          geom = "errorbar", outlier.shape = NA, width = 0.1, size = 1) +
+
+    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
+                          outlier.shape = NA, width = 0.2, size = 1)
 
   if (horiz) {
     p <- p + ggplot2::coord_flip()
