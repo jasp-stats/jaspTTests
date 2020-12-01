@@ -251,7 +251,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                                            "conf.level" = optionsList[["percentConfidenceMeanDiff"]], 
                                            "conf.int" = FALSE)[["statistic"]]
     
-    df   <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
+    df   <- if (is.null(tempResult[["parameter"]])) "" else as.numeric(tempResult[["parameter"]])
+    
     nd   <- sum(dat != 0)
     maxw <- (nd * (nd + 1)) / 2
     d    <- as.numeric((wilxoconWCentral / maxw) * 2 - 1)
