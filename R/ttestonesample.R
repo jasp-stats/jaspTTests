@@ -27,8 +27,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$variables))
-  .ttestDescriptivesTable(        jaspResults, dataset, options, ready, vars)
-  .ttestOneSampleDescriptivesPlot(jaspResults, dataset, options, ready)
+  .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
+  .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -429,4 +430,32 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                    axis.ticks.x = ggplot2::element_blank())
   
   return(p)
+}
+
+.ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloud)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
+  subcontainer <- container[["plotsRainCloud"]]
+  subcontainer$position <- 6
+  horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  for(variable in options$variables) {
+    if(!is.null(subcontainer[[variable]]))
+      next
+    descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesPlotRainCloud
+    groups  <- rep("1", nrow(dataset))
+    subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
+    if(ready){
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
 }

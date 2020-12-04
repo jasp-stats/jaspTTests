@@ -125,13 +125,13 @@
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsRainCloud) return()
+  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsRainCloud && !options$descriptivesPlotsRainCloudDifference)
+    return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
-    container$dependOn(c("descriptives", "descriptivesPlots", 
-                         "descriptivesPlotsConfidenceInterval",
-                         "descriptivesPlotsRainCloud", "missingValues",
-                         "variables", "pairs", "groupingVariable"))
+    container$dependOn(c("descriptives", "descriptivesPlots", "descriptivesPlotsConfidenceInterval",
+                         "descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudDifference",
+                         "missingValues", "variables", "pairs", "groupingVariable"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container
   }
@@ -445,7 +445,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   merge(datac, ndatac)
 }
 
-.descriptivesPlotsRainCloudFill <- function(dataset, variable, groups, yLabel, xLabel, addLines, horiz) {
+.descriptivesPlotsRainCloudFill <- function(dataset, variable, groups, yLabel, xLabel, addLines, horiz, testValue) {
   # Adapted under the MIT license from:
   # van Langen, J. (2020). Open-visualizations in R and Python.
   # https://github.com/jorvlan/open-visualizations
@@ -492,6 +492,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   xMin    <- min(c(x, xj, xb, yDensNpos))
   xMax    <- max(c(x, xj, xb, yDensNpos))
   xLimits <- range(pretty(c(xMin, xMax)))
+  xBreaks <- unique(x)
   yBreaks <- pretty(range(xDens))
   xLabels <- unique(grp)
 
@@ -525,12 +526,21 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     p <- p + ggplot2::coord_flip()
   }
 
+  if (levels(grp) == 1) {
+    xBreaks <- NULL
+    xLabels <- NULL
+    if (!is.null(testValue))
+      p <- p + ggplot2::geom_hline(data = data.frame(testValue),
+                                   ggplot2::aes(yintercept = testValue),
+                                   linetype = "dashed")
+  }
+
   p <- p +
     ggplot2::scale_y_continuous(name = yLabel,
                                 limits = range(yBreaks),
                                 breaks = yBreaks) +
     ggplot2::scale_x_continuous(name = xLabel,
-                                breaks = unique(x),
+                                breaks = xBreaks,
                                 labels = gettext(xLabels)) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +
     ggplot2::scale_color_brewer(palette = "Dark2")

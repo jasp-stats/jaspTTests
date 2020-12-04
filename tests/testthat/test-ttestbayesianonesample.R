@@ -59,6 +59,27 @@ test_that("Inferential and descriptives plots match", {
   
 })
 
+test_that("Raincloud plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestBayesianOneSample")
+})
+
+test_that("Raincloud plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestBayesianOneSample")
+})
+
 test_that("Inferential plots with additional info match", {
   set.seed(0)
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")

@@ -65,7 +65,8 @@
   .ttestBayesianInferentialPlots(jaspResults, dataset, options, ttestResults, errors)
 
   # create raincloud plots
-  .ttestBayesianRainCloudPlots(jaspResults, dataset, options, analysis)
+  .ttestBayesianRainCloudPlots(          jaspResults, dataset, options, analysis)
+  .ttestBayesianRainCloudDifferencePlots(jaspResults, dataset, options, analysis)
 
   return()
 
@@ -2131,14 +2132,29 @@
   subcontainer$dependOn(c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
   subcontainer$position <- 6
   horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
-  if (analysis == "independent") {
+  if (analysis == "one-sample") {
     for(variable in options$variables) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz))
+      groups  <- rep("1", nrow(dataset))
+      subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  } else if (analysis == "independent") {
+    for(variable in options$variables) {
+      if(!is.null(subcontainer[[variable]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      subcontainer[[variable]] <- descriptivesPlotRainCloud
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else
@@ -2154,12 +2170,43 @@
       subcontainer[[title]] <- descriptivesPlotRainCloud
       groups  <- rep(pair, each = nrow(dataset))
       subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
-      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE))
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else
         descriptivesPlotRainCloud$plotObject <- p
     }
+  }
+  return()
+}
+
+.ttestBayesianRainCloudDifferencePlots <- function(jaspResults, dataset, options, analysis) {
+  if (is.null(options$descriptivesPlotsRainCloudDifference) || analysis != "paired")
+    return()
+  if (!options$descriptivesPlotsRainCloudDifference)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloudDifference"]] <- createJaspContainer(gettext("Raincloud Difference Plots"))
+  subcontainer <- container[["plotsRainCloudDifference"]]
+  subcontainer$dependOn(c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
+  subcontainer$position <- 7
+  horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
+  for(pair in options$pairs) {
+    title <- paste(pair, collapse = " - ")
+    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
+      next
+    descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesPlotRainCloudDifference
+    groups    <- rep("1", nrow(dataset))
+    dependent <- dataset[, .v(pair[[2]])] - dataset[, .v(pair[[1]])]
+    subData   <- data.frame(dependent = dependent, groups = groups)
+    p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = FALSE, horiz, NULL))
+    if(isTryError(p))
+      descriptivesPlotRainCloudDifference$setError(.extractErrorMessage(p))
+    else
+      descriptivesPlotRainCloudDifference$plotObject <- p
   }
   return()
 }
