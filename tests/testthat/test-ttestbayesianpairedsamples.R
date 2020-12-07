@@ -101,6 +101,27 @@ test_that("Raincloud plot matches", {
   jaspTools::expect_equal_plots(testPlot, "raincloud", dir="TTestBayesianPairedSamples")
 })
 
+test_that("Raincloud difference plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesPlotsRainCloudDifference <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-vertical", dir="TTestBayesianPairedSamples")
+})
+
+test_that("Raincloud difference plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesPlotsRainCloudDifference <- TRUE
+  options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-horizontal", dir="TTestBayesianPairedSamples")
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
 

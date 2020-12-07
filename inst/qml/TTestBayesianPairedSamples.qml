@@ -78,6 +78,12 @@ Form {
 		{
 			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
 		}
+		
+		CheckBox
+		{
+			name: "descriptivesPlotsRainCloudDifference"; label: qsTr("Raincloud difference plots")
+			CheckBox { name: "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"; label: qsTr("Horizontal display") }
+		}
 	}
 
 	BayesFactorType { }

@@ -78,6 +78,27 @@ test_that("Raincloud plot matches", {
   jaspTools::expect_equal_plots(testPlot, "raincloud", dir="TTestPairedSamples")
 })
 
+test_that("Raincloud difference plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesPlotsRainCloudDifference <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-vertical", dir="TTestPairedSamples")
+})
+
+test_that("Raincloud difference plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesPlotsRainCloudDifference <- TRUE
+  options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-horizontal", dir="TTestPairedSamples")
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   
