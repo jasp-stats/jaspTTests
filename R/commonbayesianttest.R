@@ -2200,9 +2200,9 @@
     descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
     groups    <- rep("1", nrow(dataset))
-    dependent <- dataset[, .v(pair[[2]])] - dataset[, .v(pair[[1]])]
+    dependent <- dataset[, .v(pair[[1]])] - dataset[, .v(pair[[2]])]
     subData   <- data.frame(dependent = dependent, groups = groups)
-    p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = FALSE, horiz, NULL))
+    p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
     if(isTryError(p))
       descriptivesPlotRainCloudDifference$setError(.extractErrorMessage(p))
     else
