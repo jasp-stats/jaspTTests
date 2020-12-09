@@ -53,8 +53,8 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
 - p: De p-waarde.
 - Steekproefgemiddelde: Gemiddelde van de data punten. Deze kolom heet alleen 'Steekproefgemiddelde' wanneer de toets `Student` is geselecteerd. Wanneer de toets `Wilcoxon rangtekentoets` en/of de Z-toets is geselecteerd, heet deze kolom 'Locatieschatting'.
 - Locatieparameter: Voor de Student's t-toets en de Z toets is de locatieschatting de steekproefgemiddelde; voor de Wilcoxon rangtekentoets toets is de locatieschatting de Hodges-Lehmann schatting. Deze kolom heet alleen 'Locatieschatting' wanneer de `WWilcoxon rangtekentoets` toets en/of de Z-toets is geselecteerd. Deze kolom heet in alle andere gevallen 'Steekproefgemiddelde'.
-- Std. Fout Verschil: De standaardfout van het gemiddelde van de verschilscores.  
-- % BI voor gemiddelde/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddelde verschil/de locatieparameter van de verschilscores. De standaardoptie is 95%.
+- Std. Fout: De standaardfout van het gemiddelde van de scores.  
+- % BI voor gemiddelde/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddelde/de locatieparameter van de scores. De standaardoptie is 95%.
   - Onder: De ondergrens van het betrouwbaarheidsinterval.
   - Boven: De bovengrens van het betrouwbaarheidsinterval.  
 - Effectgrootte: Voor de Student t-toets wordt de effectgrootte gegeven met Cohen's d; voor de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie; voor de Z-toets wordt de effectgrootte gegeven met Cohen's d (gebaseerd op de gegeven standaardafwijking van de populatie).

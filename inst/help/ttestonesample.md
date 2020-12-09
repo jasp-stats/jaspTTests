@@ -29,7 +29,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
 - Normality tests: Shapiro-Wilk test of normality.
 
 #### Additional Statistics
-- Location parameter: Average difference between the data points and the test value. For the Student's t-test and the Z test the location estimate is given by sample mean; for the Wilcoxon signed-rank test, the location estimate is given by the Hodges-Lehmann estimate.
+- Location estimate: Empirical average of the data points. For the Student's t-test and the Z test the location estimate is given by the sample mean; for the Wilcoxon signed-rank test, the location estimate is given by the Hodges-Lehmann estimate.
   - Confidence interval: Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 - Effect Size: For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).
   - Confidence interval: Confidence interval for the effect size.
@@ -53,7 +53,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
 - p: The p-value.
 - Sample Mean: The observed average of the data points. This column is only named 'Sample Mean' when the test `Student` or `Z Test` is selected. When the test `Wilcoxon signed-rank` and/or the Z test is selected, this column is called 'Location Estimate'.
 - Location estimate: For the Student's t-test and the Z test, the location estimate is given by sample mean; for the Wilcoxon signed-rank test, the location estimate is given by the Hodges-Lehmann estimate. This column is only called 'Location estimate' when `Wilcoxon signed-rank` test and/or the Z test is selected, otherwise this column is called 'Sample Mean'.
-- SE Difference: Standard error of the mean of the difference scores.
+- SE: Standard error of the mean of the scores.
 - % CI for Mean/location parameter: The confidence interval for the mean/location parameter of the scores. By default this is set to 95%.
   - Lower: The lower bound of the confidence interval.
   - Upper: The upper bound of the confidence interval.
