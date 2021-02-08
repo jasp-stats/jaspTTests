@@ -526,7 +526,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     p <- p + ggplot2::coord_flip()
   }
 
-  if (levels(grp) == 1) {
+  if (length(levels(grp)) == 1) {
     xBreaks <- NULL
     xLabels <- NULL
     if (!is.null(testValue))
