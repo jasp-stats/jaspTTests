@@ -133,6 +133,24 @@ test_that("Prior and posterior plot custom CI level match", {
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99.9", dir="TTestBayesianOneSample")
 })
 
+test_that("Wilcoxon results match", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- c("contNormal", "contExpon")
+  options$effectSizeStandardized <- "default"
+  options$defaultStandardizedEffectSize <- "cauchy"
+  options$priorWidth <- 0.707
+  options$wilcoxonSamplesNumber <- 2e2
+  options$testValue <- 1
+  options$testStatistic <- "Wilcoxon"
+  options$hypothesis <- "greaterThanTestValue"
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  table <- getTtestTable(results)[["data"]]
+  jaspTools::expect_equal_tables(table, list(0.0515701596827684, 351, 1.18311031918765, 
+                                             "contNormal", 84.3556223082796,
+                                             3339, 1.03895788569111, "contExpon")
+  )
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")
 
