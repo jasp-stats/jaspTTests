@@ -737,9 +737,7 @@
         }
       }
       if (paired) {
-        # TODO: reenable this once https://github.com/jasp-stats/INTERNAL-jasp/issues/656 is fixed
-        # plot$dependOn(optionContainsValue = list(pairs = unname(pairs[var])))
-        plot$dependOn("pairs")
+        plot$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
         plot$dependOn(optionContainsValue = list(variables = var))
       }
@@ -810,9 +808,7 @@
       container <- createJaspContainer(title = var)
       inferentialPlotsCollection[[var]] <- container
       if (ttestResults[["paired"]]) {
-        # TODO: reenable this once https://github.com/jasp-stats/INTERNAL-jasp/issues/656 is fixed
-        container$dependOn("pairs")
-        # container$dependOn(optionContainsValue = list(pairs = unname(pairs[var])))
+        container$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
         container$dependOn(optionContainsValue = list(variables = var))
       }
@@ -2170,9 +2166,7 @@
       if(!is.null(subcontainer[[title]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
-      # TODO: reenable this once https://github.com/jasp-stats/INTERNAL-jasp/issues/656 is fixed
-      # descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
-      descriptivesPlotRainCloud$dependOn("pairs")
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
       subcontainer[[title]] <- descriptivesPlotRainCloud
       groups  <- rep(pair, each = nrow(dataset))
       subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
@@ -2203,9 +2197,7 @@
     if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
       next
     descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
-    # TODO: reenable this once https://github.com/jasp-stats/INTERNAL-jasp/issues/656 is fixed
-    # descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
-    descriptivesPlotRainCloudDifference$dependOn("pairs")
+    descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
     groups    <- rep("1", nrow(dataset))
     dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]

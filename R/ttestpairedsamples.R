@@ -396,9 +396,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     if(!is.null(subcontainer[[title]]))
       next
     descriptivesPlot <- createJaspPlot(title = title, width = 480, height = 320)
-    # TODO: reenable this once https://github.com/jasp-stats/INTERNAL-jasp/issues/656 is fixed
-    # descriptivesPlot$dependOn(optionContainsValue = list(pairs = pair))
-    descriptivesPlot$dependOn("pairs")
+    descriptivesPlot$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlot
     if(ready){
       p <- try(.ttestPairedDescriptivesPlotFill(dataset, options, pair))
@@ -473,12 +471,10 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
       next
     descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
-    # TODO: re-enable this when pairs can have dependencies!
-    # descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
-    descriptivesPlotRainCloud$dependOn("pairs")
+    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloud
     groups  <- rep(pair, each = nrow(dataset))
-    subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+    subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
     if(ready){
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
@@ -504,12 +500,10 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
       next
     descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
-    # TODO: re-enable this when pairs can have dependencies!
-    # descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
-    descriptivesPlotRainCloudDifference$dependOn("pairs")
+    descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
     groups    <- rep("1", nrow(dataset))
-    dependent <- dataset[, .v(pair[[1]])] - dataset[, .v(pair[[2]])]
+    dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
     subData   <- data.frame(dependent = dependent, groups = groups)
     if(ready){
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
