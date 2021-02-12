@@ -135,19 +135,20 @@ test_that("Prior and posterior plot custom CI level match", {
 
 test_that("Wilcoxon results match", {
   set.seed(0)
+  suppressWarnings(RNGkind(sample.kind = "Rounding")) 
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")
   options$variables <- c("contNormal", "contExpon")
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
-  options$wilcoxonSamplesNumber <- 2e2
+  options$wilcoxonSamplesNumber <- 1e1
   options$testValue <- 1
   options$testStatistic <- "Wilcoxon"
   options$hypothesis <- "greaterThanTestValue"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
-  jaspTools::expect_equal_tables(table, list(0.0515701596827684, 351, 1.18311031918765, "contNormal", 84.3556223082796,
-                                             3339, 1.03895788569111, "contExpon")
+  jaspTools::expect_equal_tables(table, list(0.0451492401700035, 351, 1.06493226208061, "contNormal", 42.1408097943746,
+                                             3339, 0.987641807418307, "contExpon")
   )
 })
 
