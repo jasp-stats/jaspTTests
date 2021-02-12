@@ -737,7 +737,7 @@
         }
       }
       if (paired) {
-        plot$dependOn(optionContainsValue = list(pairs = unname(pairs[var])))
+        plot$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
         plot$dependOn(optionContainsValue = list(variables = var))
       }
@@ -808,7 +808,7 @@
       container <- createJaspContainer(title = var)
       inferentialPlotsCollection[[var]] <- container
       if (ttestResults[["paired"]]) {
-        container$dependOn(optionContainsValue = list(pairs = unname(pairs[var])))
+        container$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
         container$dependOn(optionContainsValue = list(variables = var))
       }
@@ -2200,7 +2200,7 @@
     descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
     groups    <- rep("1", nrow(dataset))
-    dependent <- dataset[, .v(pair[[1]])] - dataset[, .v(pair[[2]])]
+    dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
     subData   <- data.frame(dependent = dependent, groups = groups)
     p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
     if(isTryError(p))

@@ -474,7 +474,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloud
     groups  <- rep(pair, each = nrow(dataset))
-    subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+    subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
     if(ready){
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
@@ -503,7 +503,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
     groups    <- rep("1", nrow(dataset))
-    dependent <- dataset[, .v(pair[[1]])] - dataset[, .v(pair[[2]])]
+    dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
     subData   <- data.frame(dependent = dependent, groups = groups)
     if(ready){
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
