@@ -11,20 +11,12 @@ test_that("Main table results match R, SAS and SPSS 1", {
   options$meanDifference <- TRUE
   options$meanDiffConfidenceIntervalCheckbox <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "Pairedsamplettest.csv", options)
-  resultTable <- results[["results"]][["ttest"]]
+  resultTable <- results$results$ttest$data
   
   jaspTools::expect_equal_tables(
     "test"=resultTable,
-    "ref"=list("FALSE", "FALSE", 7, -1.10992653616265, 3.875, 0.108643283879839,
-             2.10812628382918, "-", 1.83812517766321, 8.85992653616265, "Husband",
-             "Wife", 0, "<em>Note.</em>", "Student's t-test.", "ttest", "FALSE",
-             "v1", "Measure 1", "string", "sep", "", "separator", "v2", "Measure 2",
-             "string", "sf:4;dp:3", "t", "t", "number", "df", "df", "integer",
-             "dp:3;p:.001", "p", "p", "pvalue", "sf:4;dp:3", "md", "Mean Difference",
-             "number", "sf:4;dp:3", "sed", "SE Difference", "number", "sf:4;dp:3",
-             "lowerCIlocationParameter", "95% CI for Mean Difference", "Lower",
-             "number", "sf:4;dp:3", "upperCIlocationParameter", "95% CI for Mean Difference",
-             "Upper", "number", "complete", "Paired Samples T-Test"))
+    "ref"=list("FALSE", 7, -1.10992653616265, 3.875, 0.108643283879839, 2.10812628382918,
+               "-", 1.83812517766321, 8.85992653616265, "Husband", "Wife"))
 })
 
 
@@ -36,16 +28,13 @@ test_that("Wilcoxon results match R, SAS and SPSS", {
   options$wilcoxonSignedRank <- TRUE
   
   results <- jaspTools::runAnalysis("TTestPairedSamples", "Wilcoxon.csv", options)
-  resultTable <- results[["results"]][["ttest"]]
+  
+  # Main Table
+  resultTable <- results$results$ttest$data
   
   jaspTools::expect_equal_tables(
     "test"=resultTable,
-    "ref"=list("FALSE", "FALSE", 15, "", 0.220971735391012, "-", "Control", "Treatment.",
-               0, "<em>Note.</em>", "Wilcoxon signed-rank test.", "ttest",
-               "FALSE", "v1", "Measure 1", "string", "sep", "", "separator",
-               "v2", "Measure 2", "string", "sf:4;dp:3", "W", "W", "number",
-               "df", "df", "integer", "dp:3;p:.001", "p", "p", "pvalue", "complete",
-               "Paired Samples T-Test"))
+    "ref"=list("FALSE", 15, "", 0.220971735391012, "-", "Control", "Treatment."))
 })
 
 test_that("Main table results match for one pair * multiple tests", {
