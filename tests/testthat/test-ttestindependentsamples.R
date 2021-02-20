@@ -17,33 +17,25 @@ test_that("Main table results match R, SAS and SPSS 1", {
   options$descriptives <- TRUE
   
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "IndependentSamplettest.csv", options)
-  resultTable <- results[["results"]][["ttest"]]
+  
+  # Main table
+  resultTable <- results$results$ttest$data
   
   jaspTools::expect_equal_tables(
     "test"=resultTable, 
-    "ref"=list("FALSE", "TRUE", 2.02566265728829, 273, 0.00562492844383727, 0.2,
-               0.0437720197601347, 0.0987331228526149, "Student", 0.394375071556162,
-               "Score", "FALSE", 2.0716769761626, 271.761535410372, 0.00993836487745862,
-               0.2, 0.0392389830584111, 0.0965401470891773, "Welch", 0.39006163512254,
-               "Score", "ttest", "FALSE", "TRUE", "v", " ", "string", "test",
-               "Test", "string", "sf:4;dp:3", "Statistic", "Statistic", "number",
-               "sf:4;dp:3", "df", "df", "number", "dp:3;p:.001", "p", "p",
-               "pvalue", "sf:4;dp:3", "md", "Mean Difference", "number", "sf:4;dp:3",
-               "sed", "SE Difference", "number", "sf:4;dp:3", "lowerCIlocationParameter",
-               "95% CI for Mean Difference", "Lower", "number", "sf:4;dp:3",
-               "upperCIlocationParameter", "95% CI for Mean Difference", "Upper",
-               "number", "complete", "Independent Samples T-Test"))
+    "ref"=list("TRUE", 2.02566265728829, 273, 0.00562492844383727, 0.2, 0.0437720197601347,
+               0.0987331228526149, "Student", 0.394375071556162, "Score", "FALSE",
+               2.0716769761626, 271.761535410372, 0.00993836487745862, 0.2,
+               0.0392389830584111, 0.0965401470891773, "Welch", 0.39006163512254,
+               "Score"))
   
-  resultTable <- results[["results"]][["ttestDescriptives"]]
+  # Descriptives
+  resultTable <- results$results$ttestDescriptives$collection$ttestDescriptives_table$data
   
-  jaspTools::expect_equal_tables("test"=resultTable, 
-                                 "ref"=list("FALSE", "TRUE", 125, 1, 1.8, 0.7, 0.0626099033699941, "Score",
-                                            "FALSE", 150, 2, 1.6, 0.9, 0.0734846922834953, "Score", "ttestDescriptives_table",
-                                            "FALSE", "TRUE", "variable", "", "string", "group", "Group",
-                                            "string", "N", "N", "integer", "sf:4;dp:3", "mean", "Mean",
-                                            "number", "sf:4;dp:3", "sd", "SD", "number", "sf:4;dp:3", "se",
-                                            "SE", "number", "complete", "Group Descriptives", "FALSE", "ttestDescriptives",
-                                            "Descriptives"))
+  jaspTools::expect_equal_tables(
+    "test"=resultTable, 
+    "ref"=list("TRUE", 125, 1, 1.8, 0.7, 0.0626099033699941, "Score", "FALSE",
+               150, 2, 1.6, 0.9, 0.0734846922834953, "Score"))
 })
 
 # https://jasp-stats.github.io/jasp-verification-project/t-tests.html#mann-whitney-test
@@ -56,15 +48,13 @@ test_that("Mann-Whitney U table results match R, SAS and SPSS 2", {
   options$mannWhitneyU <- TRUE
   
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "MannWhitney.csv", options)
-  resultTable <- results[["results"]][["ttest"]]
+  
+  # Main table
+  resultTable <- results$results$ttest$data
   
   jaspTools::expect_equal_tables(
     "test"=resultTable, 
-    "ref"=list("FALSE", "FALSE", 5, "", 0.285714285714286, "Score", 0, "<em>Note.</em>",
-               "Mann-Whitney U test.", "ttest", "FALSE", "TRUE", "v", " ",
-               "string", "sf:4;dp:3", "W", "W", "number", "df", "df", "integer",
-               "dp:3;p:.001", "p", "p", "pvalue", "complete", "Independent Samples T-Test")
-  )
+    "ref"=list("FALSE", 5, "", 0.285714285714286, "Score"))
 })
 
 
