@@ -60,18 +60,18 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     ttest$addFootnote(gettext("Student's t-test."))
     testStat                <- "t"
     testStatName            <- gettext("t")
-    nameOfLocationParameter <- gettext("Sample Mean")
+    nameOfLocationParameter <- gettext("Mean Difference")
     nameOfEffectSize        <- gettext("Cohen's d")
   } else if(optionsList$wantsZtest && optionsList$onlyTest){
     ttest$addFootnote(gettext("Z test."))
     testStat                <- "Z"
     testStatName            <- gettext("Z")
-    nameOfLocationParameter <- gettext("Sample Mean")
+    nameOfLocationParameter <- gettext("Mean Difference")
     nameOfEffectSize        <- gettext("Cohen's d")
   } else {
     testStat                <- "Statistic"
     testStatName            <- gettext("Statistic")
-    nameOfLocationParameter <- gettext("Location Estimate")
+    nameOfLocationParameter <- gettext("Location Difference")
     nameOfEffectSize        <- gettext("Effect Size")
   }
   
@@ -104,10 +104,10 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
       tzNote <- wNote <- NULL
       
       if (optionsList$wantsStudents || optionsList$wantsZtest)
-        tzNote <- gettextf("For the %s, location estimate is given by the sample mean <em>d</em>.", testInNote)
+        tzNote <- gettextf("For the %s, location difference estimate is given by the sample mean difference <em>d</em>.", testInNote)
       
       if (optionsList$wantsWilcox)
-        wNote <- gettext("For the Wilcoxon test, location estimate is given by the Hodges-Lehmann estimate.")
+        wNote <- gettext("For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate.")
       
       ttest$addFootnote(paste(tzNote, wNote))
     }
@@ -158,7 +158,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   
   if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
     tMessage <- wMessage <- NULL
-
+    
     if (optionsList$wantsStudents || optionsList$wantsZtest)
       tMessage <- gettextf("For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s.", testInNote, directionFootnote, options$testValue)
     
@@ -245,23 +245,16 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   dat <- na.omit(dataset[[ .v(variable) ]])
   n   <- length(dat)
   if (test == "Wilcoxon") {
-    # Note(Alexander): Effect size estimate of Wilcoxon is based on the centralised statistic
-    tempResult <- stats::wilcox.test(dat, "alternative" = direction, "mu" = options[["testValue"]],
-                                     "conf.level" = optionsList[["percentConfidenceMeanDiff"]], "conf.int" = TRUE)
-    wilxoconWCentral <- stats::wilcox.test(dat, "alternative" = direction, "mu" = 0,
-                                           "conf.level" = optionsList[["percentConfidenceMeanDiff"]], 
-                                           "conf.int" = FALSE)[["statistic"]]
-    
-    df   <- if (is.null(tempResult[["parameter"]])) "" else as.numeric(tempResult[["parameter"]])
-    
+    tempResult <- stats::wilcox.test(dat, alternative = direction, mu = options[["testValue"]],
+                                     conf.level = optionsList[["percentConfidenceMeanDiff"]], conf.int = TRUE)
+    df   <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
     nd   <- sum(dat != 0)
     maxw <- (nd * (nd + 1)) / 2
-    d    <- as.numeric((wilxoconWCentral / maxw) * 2 - 1)
+    d    <- as.numeric((tempResult[["statistic"]] / maxw) * 2 - 1)
     wSE  <- sqrt((nd * (nd + 1) * (2 * nd + 1)) / 6) /2
     mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2)) 
     # zSign <- (ww$statistic - ((n*(n+1))/4))/wSE
     zmbiss <- atanh(d)
-    
     if(direction == "two.sided")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]])/2)*mrSE), 
                                tanh(zmbiss + qnorm((1+optionsList[["percentConfidenceEffSize"]])/2)*mrSE)))
@@ -270,38 +263,30 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
   } else if (test == "Z"){
-    tempResult <- BSDA::z.test(dat, alternative = direction, mu = options[["testValue"]], 
-                               sigma.x = options[["stddev"]], 
-                               conf.level = optionsList[["percentConfidenceMeanDiff"]])
+    tempResult <- .z.test("x"=dat, "alternative" = direction, 
+                          mu = options[["testValue"]], sigma.x = options[["stddev"]], 
+                          conf.level =optionsList[["percentConfidenceMeanDiff"]])
+    
     df <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
-    d  <- mean(dat) / options[["stddev"]]
+    d  <- tempResult[["d"]]
     
-    if(direction == "less")
-      tempResult[["conf.int"]][1] <- -Inf
-    else if(direction == "greater")
-      tempResult[["conf.int"]][2] <- Inf
-    
-    confIntEffSize <- c(0, 0)
-    
-    if(optionsList[["wantsConfidenceEffSize"]])
-      confIntEffSize <- tempResult[["conf.int"]]/options[["stddev"]]
-    
+    confIntEffSize <- tempResult[["confIntEffSize"]]
   } else {
-    tempResult <- stats::t.test(dat, "alternative" = direction, "mu" = options[["testValue"]], 
-                                "conf.level" = optionsList[["percentConfidenceMeanDiff"]])
+    tempResult <- stats::t.test(dat, alternative = direction, mu = options$testValue, 
+                                conf.level = optionsList[["percentConfidenceMeanDiff"]])
     df <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
-    d  <- mean(dat) / sd(dat)
+    d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
     t  <- as.numeric(tempResult[["statistic"]])
     
-    confIntEffSize <- c(0, 0)
+    confIntEffSize <- c(0,0)
     
     if (optionsList[["wantsConfidenceEffSize"]]) {
       
       ciEffSize  <- options[["effSizeConfidenceIntervalPercent"]]
-      alphaLevel <- ifelse("direction" == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
+      alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
       
-      confIntEffSize <- .confidenceLimitsEffectSizes("ncp" = d * sqrt(n), "df" = df, "alpha.lower" = alphaLevel,
-                                                     "alpha.upper" = alphaLevel)[c(1, 3)]
+      confIntEffSize <- .confidenceLimitsEffectSizes(ncp = d * sqrt(n), df = df, alpha.lower = alphaLevel,
+                                                     alpha.upper = alphaLevel)[c(1, 3)]
       confIntEffSize <- unlist(confIntEffSize) / sqrt(n)
       
       if (direction == "greater")
@@ -316,18 +301,26 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   ## same for all tests
   p     <- as.numeric(tempResult[["p.value"]])
   stat  <- as.numeric(tempResult[["statistic"]])
-  m     <- as.numeric(tempResult[["estimate"]]) 
-  ciLow <- as.numeric(tempResult[["conf.int"]][1])
-  ciUp  <- as.numeric(tempResult[["conf.int"]][2])
+  
+  if (test=="Z") {
+    m     <- as.numeric(tempResult[["estimate"]])
+    ciLow <- as.numeric(tempResult[["conf.int"]][1])
+    ciUp  <- as.numeric(tempResult[["conf.int"]][2])
+  } else {
+    m     <- as.numeric(tempResult[["estimate"]] - tempResult[["null.value"]])
+    ciLow <- as.numeric(tempResult[["conf.int"]][1] - tempResult[["null.value"]])
+    ciUp  <- as.numeric(tempResult[["conf.int"]][2] - tempResult[["null.value"]])
+  }
+  
   ciLowEffSize <- as.numeric(confIntEffSize[1])
   ciUpEffSize  <- as.numeric(confIntEffSize[2])
   
   if (suppressWarnings(is.na(t)))  # do not throw warning when test stat is not 't' 
     stop("data are essentially constant")
   
-  result <- list("df" = df, "p" = p, "m" = m, "d" = d, 
-                 "lowerCIlocationParameter" = ciLow, "upperCIlocationParameter" = ciUp, 
-                 "lowerCIeffectSize" = ciLowEffSize, "upperCIeffectSize" = ciUpEffSize)
+  result <- list(df = df, p = p, m = m, d = d, 
+                 lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp, 
+                 lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize)
   result[[testStat]] <- stat
   
   if (options[["VovkSellkeMPR"]])
@@ -337,7 +330,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleNormalFill <- function(table, dataset, options) {
-  variables <- options$variables
+  variables <- options[["variables"]]
   for (variable in variables) {
     row <- list(v = variable)
     
@@ -353,9 +346,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     } else {
       data <- na.omit(dataset[[.v(variable)]])
       
-      r <- stats::shapiro.test(data)
-      row[["W"]] <- as.numeric(r$statistic)
-      row[["p"]] <- r$p.value
+      tempResult <- stats::shapiro.test(data)
+      row[["W"]] <- as.numeric(tempResult[["statistic"]])
+      row[["p"]] <- tempResult[["p.value"]]
     }
     
     table$addRows(row, rowNames = variable)
