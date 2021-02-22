@@ -303,9 +303,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   stat  <- as.numeric(tempResult[["statistic"]])
   
   if (test=="Z") {
-    m     <- as.numeric(tempResult[["estimate"]])
     ciLow <- as.numeric(tempResult[["conf.int"]][1])
     ciUp  <- as.numeric(tempResult[["conf.int"]][2])
+    m     <- as.numeric(tempResult[["estimate"]])
   } else {
     m     <- as.numeric(tempResult[["estimate"]] - tempResult[["null.value"]])
     ciLow <- as.numeric(tempResult[["conf.int"]][1] - tempResult[["null.value"]])

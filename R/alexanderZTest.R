@@ -19,9 +19,8 @@
     dname <- deparse(substitute(x))
     
     method <- "One-sample z-Test"
-    estimate <- xBar
-    names(estimate) <- "mean of x"
-    diffEstimate <- xBar - mu
+    estimate <- xBar - mu
+    names(estimate) <- "mean difference of x"
     d <- (xBar-mu)/sigma.x
     zStat <- sqrt(nX) * d
     sdError <- sigma.x/sqrt(nX)
@@ -41,9 +40,8 @@
       
       yBar <- mean(y)
       method <- "Two-sample z-Test"
-      estimate <- c(xBar, yBar)
-      diffEstimate <- xBar - yBar-mu
-      names(estimate) <- c("mean of x", "mean of y")
+      estimate <- c(xBar, yBar)-mu
+      names(estimate) <- c("mean difference of x", "mean difference of y")
       
       sdError <- sqrt(((sigma.x^2)/nX) + ((sigma.y^2)/nY))
       zStat <- (xBar - yBar - mu)/stderr
