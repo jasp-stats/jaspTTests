@@ -1,4 +1,4 @@
-context("Paired Samples TTest")
+context("Paired Samples TTest -- Verification project")
 
 # does not test
 # - missing values exclusion
