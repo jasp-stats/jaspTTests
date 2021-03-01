@@ -264,15 +264,16 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction, 
-                          mu = options[["testValue"]], sigma.x = options[["stddev"]], 
-                          conf.level =optionsList[["percentConfidenceMeanDiff"]])
+                          "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]], 
+                          "ciValueMeanDiff"=optionsList[["percentConfidenceMeanDiff"]],
+                          "ciValueESMeanDiff"=options[["effSizeConfidenceIntervalPercent"]])
     
-    df <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
+    df <- ""
     d  <- tempResult[["d"]]
     
     confIntEffSize <- tempResult[["confIntEffSize"]]
   } else {
-    tempResult <- stats::t.test(dat, alternative = direction, mu = options$testValue, 
+    tempResult <- stats::t.test(dat, alternative = direction, mu = options[["testValue"]], 
                                 conf.level = optionsList[["percentConfidenceMeanDiff"]])
     df <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
     d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
