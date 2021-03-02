@@ -248,13 +248,14 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     tempResult <- stats::wilcox.test(dat, alternative = direction, mu = options[["testValue"]],
                                      conf.level = optionsList[["percentConfidenceMeanDiff"]], conf.int = TRUE)
     df   <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
-    nd   <- sum(dat != 0)
+    nd   <- sum(dat != options[["testValue"]])
     maxw <- (nd * (nd + 1)) / 2
     d    <- as.numeric((tempResult[["statistic"]] / maxw) * 2 - 1)
     wSE  <- sqrt((nd * (nd + 1) * (2 * nd + 1)) / 6) /2
     mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2)) 
     # zSign <- (ww$statistic - ((n*(n+1))/4))/wSE
     zmbiss <- atanh(d)
+    
     if(direction == "two.sided")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]])/2)*mrSE), 
                                tanh(zmbiss + qnorm((1+optionsList[["percentConfidenceEffSize"]])/2)*mrSE)))
@@ -262,6 +263,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
       confIntEffSize <- sort(c(-Inf, tanh(zmbiss + qnorm(optionsList[["percentConfidenceEffSize"]])*mrSE)))
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
+    
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction, 
                           "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]], 
