@@ -29,7 +29,7 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
 - Normaliteit: Shapiro-Wilk toets voor normaliteit.
 
 #### Aanvullende Statistieken
-- Locatieschatting: Gemiddelde van de data punten. Voor de Student's t-toets en de Z-toets is de locatieschatting de steekproefgemiddelde; voor de Wilcoxon rangtekentoets test is de locatieschatting de Hodges-Lehmann schatting.
+- Locatieverschilschatting: Gemiddelde verschil tussen data punten en de toetswaarde. Voor de Student's t-toets en de Z-toets wordt de locatieverschilschatting gegeven als gemiddeld verschil; voor de Wilcoxon rangtekentoets test wordt de locatieverschilschatting gegeven met de Hodges-Lehmann schatting.
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de locatieparameter. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
 - Effectgrootte: Bij de Student t-toets wordt de effectgrootte gegeven met Cohen's d; bij de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie; voor de Z-toets wordt de effectgrootte gegeven met Cohen's d (gebaseerd op de gegeven standaardafwijking van de populatie).
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de effectgrootte.
@@ -51,10 +51,10 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
 - Statistiek: De teststatistiek. Voor de Student's t-toets is dit de waarde van de t-statistiek. Voor de Wilcoxon rangtekentoets is dit de waarde van de W-statistiek. Voor de Z-toets is dit de waarde van de Z-statistiek.
 - vg: Vrijheidsgraden.
 - p: De p-waarde.
-- Steekproefgemiddelde: Gemiddelde van de data punten. Deze kolom heet alleen 'Steekproefgemiddelde' wanneer de toets `Student` is geselecteerd. Wanneer de toets `Wilcoxon rangtekentoets` en/of de Z-toets is geselecteerd, heet deze kolom 'Locatieschatting'.
-- Locatieparameter: Voor de Student's t-toets en de Z toets is de locatieschatting de steekproefgemiddelde; voor de Wilcoxon rangtekentoets toets is de locatieschatting de Hodges-Lehmann schatting. Deze kolom heet alleen 'Locatieschatting' wanneer de `WWilcoxon rangtekentoets` toets en/of de Z-toets is geselecteerd. Deze kolom heet in alle andere gevallen 'Steekproefgemiddelde'.
-- Std. Fout: De standaardfout van het gemiddelde van de scores.  
-- % BI voor gemiddelde/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddelde/de locatieparameter van de scores. De standaardoptie is 95%.
+- Gemiddelde verschil: Gemiddelde verschil tussen de data punten en de toetswaarde. Deze kolom heet alleen 'Gemiddelde verschil' wanneer de toets `Student` is geselecteerd. Wanneer de toets `Wilcoxon rangtekentoets` en/of de Z-toets is geselecteerd, heet deze kolom 'Locatieparameter'.
+- Locatieverschilschatting: Voor de Student's t-toets en de Z toets, de locatieverschilschatting is gegeven in verschil in gemiddelde; voor de Wilcoxon rangtekentoets toets wordt de locatieverschilschatting gegeven met de Hodges-Lehmann schatting. Deze kolom heet alleen 'locatieverschilschatting' wanneer de `Wilcoxon rangtekentoets` toets en/of de Z-toets geselecteerd is. Deze kolom heet in alle andere gevallen 'Gemiddeld verschil'.
+- Std. Fout Verschil: De standaardfout van het gemiddelde van de verschilscores.  
+- % BI voor gemiddelde verschil/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddelde verschil/de locatieverschilschatting van de verschilscores. De standaardoptie is 95%.
   - Onder: De ondergrens van het betrouwbaarheidsinterval.
   - Boven: De bovengrens van het betrouwbaarheidsinterval.  
 - Effectgrootte: Voor de Student t-toets wordt de effectgrootte gegeven met Cohen's d; voor de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie; voor de Z-toets wordt de effectgrootte gegeven met Cohen's d (gebaseerd op de gegeven standaardafwijking van de populatie).
@@ -87,7 +87,6 @@ Toets voor normaliteit (Shapiro-Wilk)
 ### R-packages
 ---
 - stats
-- BSDA
 
 ### Voorbeeld
 ---

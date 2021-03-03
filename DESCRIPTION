@@ -11,7 +11,6 @@ License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
   BayesFactor,
-  BSDA,
   car,
   ggplot2,
   jaspBase,
