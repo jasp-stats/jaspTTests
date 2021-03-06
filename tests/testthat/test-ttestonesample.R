@@ -35,6 +35,35 @@ test_that("Main table results match for Wilcoxon signed rank", {
 	                         0.0114424559827519, -0.0742951335226289, "contNormal"))
 })
 
+# https://github.com/jasp-stats/jasp-issues/issues/1158
+test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
+  tempTestDat <- data.frame("marieAguirre"=c(0, 1/3, 1/2, 3/7, 1/4, 1/4, 1/2, 0, 0, 1/5, 3/7, 3/4, 1, 1, 3/4, 0, 1, 1))
+  
+  options <- jaspTools::analysisOptions("TTestOneSample")
+  options$testValue <- 0.5
+  options$meanDifference <- TRUE
+  options$effectSize <- TRUE
+  options$mannWhitneyU <- TRUE
+  options$effectSize <- TRUE
+  options$meanDiffConfidenceIntervalCheckbox <- TRUE
+  options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$variables <- "marieAguirre"
+  
+  results <- jaspTools::runAnalysis("TTestOneSample", tempTestDat, options)
+  
+  resultTable <- results[["results"]][["ttest"]][["data"]]
+  
+  jaspTools::expect_equal_tables(
+    "test"=resultTable,
+    "ref"=list("TRUE", -0.385804772181173, -0.0909350568744795, 17, -0.552576696667502,
+               -0.219042855717774, -0.0338624338624338, 0.704426623388777,
+               "Student", 0.373348871605267, 0.151317987992907, "marieAguirre",
+               "FALSE", 61, -0.102941176470588, "", -0.578840649433725, -0.28571825336767,
+               -6.94926732683898e-05, 0.73267192272089, "Wilcoxon", 0.425265962284788,
+               0.166692689375401, "marieAguirre")
+  )
+})
+
 test_that("Main table results match for Z-test", {
   options <- jaspTools::analysisOptions("TTestOneSample")
   options$variables <- "contNormal"
@@ -78,6 +107,27 @@ test_that("Descriptives plot matches", {
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestOneSample")
+})
+
+test_that("Raincloud plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestOneSample")
+})
+
+test_that("Raincloud plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestOneSample")
 })
 
 test_that("Analysis handles errors", {

@@ -636,7 +636,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
     subcontainer[[variable]] <- descriptivesPlotRainCloud
     if(ready){
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz))
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else

@@ -46,7 +46,7 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "meanDifference";			label: qsTr("Location parameter")
+            name: "meanDifference";			label: qsTr("Location estimate")
 			CheckBox
 			{
 				name: "meanDiffConfidenceIntervalCheckbox";	label: qsTr("Confidence interval")
@@ -70,6 +70,11 @@ Form
 		{
 			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval") }
+		}
+		CheckBox
+		{
+			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
+			CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
 		}
 		CheckBox { name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}

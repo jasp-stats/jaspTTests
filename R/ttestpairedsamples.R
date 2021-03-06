@@ -27,9 +27,10 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$pairs))
-  .ttestDescriptivesTable(              jaspResults, dataset, options, ready, vars)
-  .ttestPairedDescriptivesPlot(         jaspResults, dataset, options, ready)
-  .ttestPairedDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
+  .ttestDescriptivesTable(                        jaspResults, dataset, options, ready, vars)
+  .ttestPairedDescriptivesPlot(                   jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesRainCloudPlot(          jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesRainCloudDifferencePlot(jaspResults, dataset, options, ready)
   
   return()
 }
@@ -473,13 +474,43 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloud
     groups  <- rep(pair, each = nrow(dataset))
-    subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+    subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
     if(ready){
-      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE))
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else
         descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
+}
+
+.ttestPairedDescriptivesRainCloudDifferencePlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsRainCloudDifference)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  container[["plotsRainCloudDifference"]] <- createJaspContainer(gettext("Raincloud Difference Plots"))
+  subcontainer <- container[["plotsRainCloudDifference"]]
+  subcontainer$position <- 7
+  horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
+  for(pair in options$pairs) {
+    title <- paste(pair, collapse = " - ")
+    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
+      next
+    descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesPlotRainCloudDifference
+    groups    <- rep("1", nrow(dataset))
+    dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
+    subData   <- data.frame(dependent = dependent, groups = groups)
+    if(ready){
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
+      if(isTryError(p))
+        descriptivesPlotRainCloudDifference$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloudDifference$plotObject <- p
     }
   }
   return()

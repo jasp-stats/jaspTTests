@@ -59,6 +59,27 @@ test_that("Inferential and descriptives plots match", {
   
 })
 
+test_that("Raincloud plot matches (vertical)", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestBayesianOneSample")
+})
+
+test_that("Raincloud plot matches (horizontal)", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsRainCloud <- TRUE
+  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestBayesianOneSample")
+})
+
 test_that("Inferential plots with additional info match", {
   set.seed(0)
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")
@@ -110,6 +131,25 @@ test_that("Prior and posterior plot custom CI level match", {
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99.9", dir="TTestBayesianOneSample")
+})
+
+test_that("Wilcoxon results match", {
+  set.seed(0)
+  suppressWarnings(RNGkind(sample.kind = "Rounding")) 
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- c("contNormal", "contExpon")
+  options$effectSizeStandardized <- "default"
+  options$defaultStandardizedEffectSize <- "cauchy"
+  options$priorWidth <- 0.707
+  options$wilcoxonSamplesNumber <- 1e1
+  options$testValue <- 1
+  options$testStatistic <- "Wilcoxon"
+  options$hypothesis <- "greaterThanTestValue"
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  table <- getTtestTable(results)[["data"]]
+  jaspTools::expect_equal_tables(table, list(0.0451492401700035, 351, 1.06493226208061, "contNormal", 42.1408097943746,
+                                             3339, 0.987641807418307, "contExpon")
+  )
 })
 
 test_that("Analysis handles errors", {

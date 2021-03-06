@@ -67,15 +67,17 @@ Form
 				CIField { name: "effSizeConfidenceIntervalPercent" }
 			}
 		}
-		CheckBox { name: "descriptives";					label: qsTr("Descriptives")											}
+		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
 		CheckBox
 		{
 			name: "descriptivesPlots";						label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval") }
+			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval")						}
 		}
+		CheckBox{ name: "descriptivesPlotsRainCloud";		label: qsTr("Raincloud plots")									}
 		CheckBox
 		{
-			name: "descriptivesPlotsRainCloud";             label: qsTr("Raincloud plots")
+			name: "descriptivesPlotsRainCloudDifference";	label: qsTr("Raincloud difference plots")
+			CheckBox { name: "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"; label: qsTr("Horizontal display")		}
 		}
 		CheckBox { name: "VovkSellkeMPR";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
 	}
