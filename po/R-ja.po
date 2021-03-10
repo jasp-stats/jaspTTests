@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2020-11-11 11:51\n"
 "PO-Revision-Date: 2021-03-12 00:02+0000\n"
-"Last-Translator: Yoshihiko Kunisato <ykunisato@psy.senshu-u.ac.jp>\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ja/>\n"
 "Language: ja\n"
@@ -272,7 +272,7 @@ msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2
 msgstr ""
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
-msgstr ""
+msgstr "Leveneの検定は有意ですから(p <.05)、等分散の仮定が満たされていないことを示しています"
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
