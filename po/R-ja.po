@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2020-11-11 11:51\n"
-"PO-Revision-Date: 2021-02-21 04:50+0000\n"
+"PO-Revision-Date: 2021-03-12 00:02+0000\n"
 "Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ja/>\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 msgid "Assumption Checks"
 msgstr "仮定のチェック"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "記述統計量"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -146,7 +146,7 @@ msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterati
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "エラー %"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>."
 msgstr ""
@@ -203,7 +203,7 @@ msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "コーエン(Cohen)のd"
 
 msgid "Glass' delta"
 msgstr ""
@@ -272,7 +272,7 @@ msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2
 msgstr ""
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
-msgstr ""
+msgstr "Leveneの検定は有意ですから(p <.05)、等分散の仮定が満たされていないことを示しています"
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
