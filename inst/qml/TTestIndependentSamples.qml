@@ -29,7 +29,7 @@ Form
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }		
-		AssignedVariablesList { name: "variables";			title: qsTr("Variables");			suggestedColumns: ["scale"]	}
+		AssignedVariablesList { name: "variables";			title: qsTr("Dependent Variables");			suggestedColumns: ["scale"]	}
 		AssignedVariablesList { name: "groupingVariable";	title: qsTr("Grouping Variable");	suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
 	}
 	
