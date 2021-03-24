@@ -30,7 +30,7 @@ Form {
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable pairs"); suggestedColumns: ["scale"] }
+		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); suggestedColumns: ["scale"] }
 	}
 
 	RadioButtonGroup
