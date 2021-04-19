@@ -6,7 +6,7 @@ Date: 2019-08-31
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
-Description: This module offers the standard Frequentist and Bayesian T-Tests analyses.
+Description: Evaluate the difference between two means
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
