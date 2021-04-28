@@ -5,7 +5,7 @@ Description
 {
 	name		: "jaspTTests"
 	title		: qsTr("T-Tests")
-	description	: qsTr("This module offers the standard Frequentist and Bayesian T-Tests analyses.")
+	description	: qsTr("Evaluate the difference between two means")
 	version		: "0.13"
 	author		: "JASP Team"
 	maintainer	: "JASP Team <info@jasp-stats.org>"
