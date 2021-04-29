@@ -23,7 +23,7 @@
     return(dataset)
   else {
     groups  <- options$groupingVariable
-    if (!is.null(groups) && groups == "") 
+    if (!is.null(groups) && groups == "")
       groups <- NULL
     if(type %in% c("one-sample", "independent"))
       depvars <- unlist(options$variables)
@@ -51,15 +51,15 @@
         return()
       datasetErrorCheck <- data.frame(dataset[[.v(p1)]] - dataset[[.v(p2)]])
       colnames(datasetErrorCheck) <- .v(paste0("Difference between ", p1, " and ", p2))
-      .hasErrors(datasetErrorCheck, 
-                 type = "variance", 
+      .hasErrors(datasetErrorCheck,
+                 type = "variance",
                  exitAnalysisIfErrors = TRUE)
     }
   else if(type == "independent") {
     if (length(options$variables) != 0 && options$groupingVariable != '')
       .hasErrors(dataset,
                  type = 'factorLevels',
-                 factorLevels.target  = options$groupingVariable, 
+                 factorLevels.target  = options$groupingVariable,
                  factorLevels.amount  = '!= 2',
                  exitAnalysisIfErrors = TRUE)
       }
@@ -72,7 +72,7 @@
   optionsList$wantsStudents   <- options$students
   optionsList$wantsDifference <- options$meanDifference
   optionsList$wantsConfidenceMeanDiff <- (options$meanDiffConfidenceIntervalCheckbox && options$meanDifference)
-  
+
   if(type == "paired") {
     optionsList$wantsWilcox <- options$wilcoxonSignedRank
     optionsList$whichTests  <- c("Student", "Wilcoxon")[c(optionsList$wantsStudents, optionsList$wantsWilcox)]
@@ -98,8 +98,8 @@
     optionsList$allTests <- c(optionsList$allTests, optionsList$wantsZtest)
   if(type == "independent")
     optionsList$allTests <- c(optionsList$allTests, optionsList$wantsWelchs)
-  optionsList$onlyTest <- sum(optionsList$allTests) == 1  
-  
+  optionsList$onlyTest <- sum(optionsList$allTests) == 1
+
   return(optionsList)
 }
 
@@ -154,154 +154,154 @@
     return("two.sided")
 }
 
-.confidenceLimitsEffectSizes <- function(ncp, df, conf.level = .95, alpha.lower = NULL, 
+.confidenceLimitsEffectSizes <- function(ncp, df, conf.level = .95, alpha.lower = NULL,
                                          alpha.upper = NULL, t.value, tol = 1e-9, ...) {
   # This function comes from the MBESS package, version 4.6, by Ken Kelley
   # https://cran.r-project.org/web/packages/MBESS/index.html
   # Note this function is new in version 4, replacing what was used in prior versions.
   # Internal functions for the noncentral t distribution; two appraoches.
   ###########
-  
-  
+
+
   # General stop checks.
   if(!is.null(conf.level) && is.null(alpha.lower) && is.null(alpha.upper)) {
     alpha.lower <- (1 - conf.level) / 2
     alpha.upper <- (1 - conf.level) / 2
   }
-  
+
   .conf.limits.nct.M1 <- function(ncp, df, conf.level = NULL, alpha.lower, alpha.upper, tol = 1e-9, ...) {
-    
+
     min.ncp <- min(-150, -5 * ncp)
     max.ncp <- max(150,   5 * ncp)
-    
+
     # Internal function for upper limit.
-    # Note the upper tail is used here, as we seek to find the NCP that has, in its upper tail (alpha.lower, 
+    # Note the upper tail is used here, as we seek to find the NCP that has, in its upper tail (alpha.lower,
     # for the lower limit), the specified value of the observed t/ncp.
     ###########################
-    
+
     .ci.nct.lower <- function(val.of.interest, ...)
       (qt(p = alpha.lower, df = df, ncp = val.of.interest, lower.tail = FALSE, log.p = FALSE) - ncp)^2
     ###########################
-    
+
     # Internal function for lower limit.
-    # Note the lower tail is used here, as we seek to find the NCP that has, in its lower tail (alpha.upper, 
+    # Note the lower tail is used here, as we seek to find the NCP that has, in its lower tail (alpha.upper,
     # for the upper limit), the specified value of the observed t/ncp.
     ###########################
     .ci.nct.upper <- function(val.of.interest, ...)
       (qt(p = alpha.upper, df = df, ncp=val.of.interest, lower.tail = TRUE, log.p = FALSE) - ncp)^2
-    
-    if(alpha.lower != 0) 
+
+    if(alpha.lower != 0)
       Low.Lim <- suppressWarnings(optimize(f = .ci.nct.lower, interval = c(min.ncp, max.ncp),
-                                           alpha.lower = alpha.lower, df = df, ncp = ncp, 
+                                           alpha.lower = alpha.lower, df = df, ncp = ncp,
                                            maximize = FALSE, tol = tol))
-    
+
     if(alpha.upper != 0) {
-      Up.Lim <- suppressWarnings(optimize(f = .ci.nct.upper, interval = c(min.ncp, max.ncp), 
-                                          alpha.upper = alpha.upper, df = df, ncp = ncp, 
+      Up.Lim <- suppressWarnings(optimize(f = .ci.nct.upper, interval = c(min.ncp, max.ncp),
+                                          alpha.upper = alpha.upper, df = df, ncp = ncp,
                                           maximize = FALSE, tol = tol))
     }
-    
-    if(alpha.lower == 0) 
-      Result <- list(Lower.Limit = -Inf, Prob.Less.Lower = 0, Upper.Limit = Up.Lim$minimum, 
+
+    if(alpha.lower == 0)
+      Result <- list(Lower.Limit = -Inf, Prob.Less.Lower = 0, Upper.Limit = Up.Lim$minimum,
                      Prob.Greater.Upper = pt(q = ncp, ncp = Up.Lim$minimum, df = df))
-    if(alpha.upper == 0) 
-      Result <- list(Lower.Limit = Low.Lim$minimum, 
-                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$minimum, df = df, lower.tail = FALSE), 
+    if(alpha.upper == 0)
+      Result <- list(Lower.Limit = Low.Lim$minimum,
+                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$minimum, df = df, lower.tail = FALSE),
                      Upper.Limit = Inf, Prob.Greater.Upper = 0)
-    if(alpha.lower != 0 && alpha.upper != 0) 
-      Result <- list(Lower.Limit = Low.Lim$minimum, 
-                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$minimum, df = df, lower.tail = FALSE), 
-                     Upper.Limit = Up.Lim$minimum, 
+    if(alpha.lower != 0 && alpha.upper != 0)
+      Result <- list(Lower.Limit = Low.Lim$minimum,
+                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$minimum, df = df, lower.tail = FALSE),
+                     Upper.Limit = Up.Lim$minimum,
                      Prob.Greater.Upper = pt(q = ncp, ncp = Up.Lim$minimum, df = df))
-    
+
     return(Result)
   }
   ################################################
   .conf.limits.nct.M2 <- function(ncp, df, conf.level = NULL, alpha.lower, alpha.upper, tol = 1e-9, ...) {
-    
+
     # Internal function for upper limit.
     ###########################
     .ci.nct.lower <- function(val.of.interest, ...)
       (qt(p = alpha.lower, df = df, ncp = val.of.interest, lower.tail = FALSE, log.p = FALSE) - ncp)^2
-    
+
     # Internal function for lower limit.
     ###########################
     .ci.nct.upper <- function(val.of.interest, ...)
       (qt(p = alpha.upper, df = df, ncp = val.of.interest, lower.tail = TRUE, log.p = FALSE) - ncp)^2
-    
+
     Low.Lim <- suppressWarnings(nlm(f = .ci.nct.lower, p = ncp, ...))
     Up.Lim  <- suppressWarnings(nlm(f = .ci.nct.upper, p = ncp, ...))
-    
-    if(alpha.lower == 0) 
-      Result <- list(Lower.Limit = -Inf, Prob.Less.Lower = 0, Upper.Limit = Up.Lim$estimate, 
+
+    if(alpha.lower == 0)
+      Result <- list(Lower.Limit = -Inf, Prob.Less.Lower = 0, Upper.Limit = Up.Lim$estimate,
                      Prob.Greater.Upper = pt(q = ncp, ncp = Up.Lim$estimate, df = df))
-    if(alpha.upper == 0) 
-      Result <- list(Lower.Limit = Low.Lim$estimate, 
-                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$estimate, df = df, lower.tail = FALSE), 
+    if(alpha.upper == 0)
+      Result <- list(Lower.Limit = Low.Lim$estimate,
+                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$estimate, df = df, lower.tail = FALSE),
                      Upper.Limit = Inf, Prob.Greater.Upper = 0)
-    if(alpha.lower != 0 & alpha.upper != 0) 
-      Result <- list(Lower.Limit = Low.Lim$estimate, 
-                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$estimate, df = df, lower.tail = FALSE), 
-                     Upper.Limit = Up.Lim$estimate, 
+    if(alpha.lower != 0 & alpha.upper != 0)
+      Result <- list(Lower.Limit = Low.Lim$estimate,
+                     Prob.Less.Lower = pt(q = ncp, ncp = Low.Lim$estimate, df = df, lower.tail = FALSE),
+                     Upper.Limit = Up.Lim$estimate,
                      Prob.Greater.Upper = pt(q = ncp, ncp = Up.Lim$estimate, df = df))
-    
+
     return(Result)
   }
   # Now, use the each of the two methods.
   Res.M1 <- Res.M2 <- NULL
-  try(Res.M1 <- .conf.limits.nct.M1(ncp = ncp, df = df, conf.level = NULL, 
-                                    alpha.lower = alpha.lower, 
-                                    alpha.upper = alpha.upper, tol = tol), silent = TRUE)
-  if(length(Res.M1) != 4) 
-    Res.M1 <- NULL
-  try(Res.M2 <- .conf.limits.nct.M2(ncp = ncp, df = df, conf.level = NULL, 
+  try(Res.M1 <- .conf.limits.nct.M1(ncp = ncp, df = df, conf.level = NULL,
                                     alpha.lower = alpha.lower,
                                     alpha.upper = alpha.upper, tol = tol), silent = TRUE)
-  if(length(Res.M2) != 4) 
+  if(length(Res.M1) != 4)
+    Res.M1 <- NULL
+  try(Res.M2 <- .conf.limits.nct.M2(ncp = ncp, df = df, conf.level = NULL,
+                                    alpha.lower = alpha.lower,
+                                    alpha.upper = alpha.upper, tol = tol), silent = TRUE)
+  if(length(Res.M2) != 4)
     Res.M2 <- NULL
-  
+
   # Now, set-up the test to find the best method.
   Low.M1        <- Res.M1$Lower.Limit
   Prob.Low.M1   <- Res.M1$Prob.Less.Lower
   Upper.M1      <- Res.M1$Upper.Limit
   Prob.Upper.M1 <- Res.M1$Prob.Greater.Upper
-  
+
   Low.M2        <- Res.M2$Lower.Limit
   Prob.Low.M2   <- Res.M2$Prob.Less.Lower
   Upper.M2      <- Res.M2$Upper.Limit
   Prob.Upper.M2 <- Res.M2$Prob.Greater.Upper
-  
+
   # Choose the best interval limits:
   ##Here low
   Min.for.Best.Low <- min((c(Prob.Low.M1, Prob.Low.M2) - alpha.lower)^2)
-  
+
   if(!is.null(Res.M1))
-    if(Min.for.Best.Low == (Prob.Low.M1 - alpha.lower)^2) 
+    if(Min.for.Best.Low == (Prob.Low.M1 - alpha.lower)^2)
       Best.Low <- 1
   if(!is.null(Res.M2))
-    if(Min.for.Best.Low == (Prob.Low.M2 - alpha.lower)^2) 
+    if(Min.for.Best.Low == (Prob.Low.M2 - alpha.lower)^2)
       Best.Low <- 2
   ##Here high
   Min.for.Best.Up <- min((c(Prob.Upper.M1, Prob.Upper.M2) - alpha.upper)^2)
-  
+
   if(!is.null(Res.M1))
-    if(Min.for.Best.Up == (Prob.Upper.M1 - alpha.upper)^2) 
+    if(Min.for.Best.Up == (Prob.Upper.M1 - alpha.upper)^2)
       Best.Up <- 1
   if(!is.null(Res.M2))
-    if(Min.for.Best.Up == (Prob.Upper.M2 - alpha.upper)^2) 
+    if(Min.for.Best.Up == (Prob.Upper.M2 - alpha.upper)^2)
       Best.Up <- 2
   #####################################
-  
-  if(is.null(Res.M1)) 
+
+  if(is.null(Res.M1))
     Low.M1 <- Prob.Low.M1 <- Upper.M1 <- Prob.Upper.M1 <- NA
-  if(is.null(Res.M2)) 
+  if(is.null(Res.M2))
     Low.M2 <- Prob.Low.M2 <- Upper.M2 <- Prob.Upper.M2 <- NA
-  
-  Result <- list(Lower.Limit        = c(Low.M1, Low.M2)[Best.Low], 
-                 Prob.Less.Lower    = c(Prob.Low.M1, Prob.Low.M2)[Best.Low], 
-                 Upper.Limit        = c(Upper.M1, Upper.M2)[Best.Up], 
+
+  Result <- list(Lower.Limit        = c(Low.M1, Low.M2)[Best.Low],
+                 Prob.Less.Lower    = c(Prob.Low.M1, Prob.Low.M2)[Best.Low],
+                 Upper.Limit        = c(Upper.M1, Upper.M2)[Best.Up],
                  Prob.Greater.Upper = c(Prob.Upper.M1, Prob.Upper.M2)[Best.Up])
-  
+
   return(Result)
 }
 
@@ -419,9 +419,19 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   ndatac <- summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
                       usePooledSE=usePooledSE, dependentName = dependentName, subjectName = subjectName)
 
+  # get distinct observations in a way that works for both character and factor/ ordered data
+  .nDistinctObservations <- function(x) {
+    if (is.character(x))
+      return(dplyr::n_distinct(x))
+    else if (is.factor(x))
+      return(nlevels(x))
+    else
+      stop("nDistinctObservations got an object of type", paste(class(x), collapse = ", "))
+  }
+
   # Apply correction from Morey (2008) to the standard error and confidence interval
   # Get the product of the number of conditions of within-S variables
-  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
+  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
   correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
 
   # Apply the correction factor
@@ -461,8 +471,8 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   # copies or substantial portions of the Software.
 
   n   <- nrow(dataset)
-  y   <- dataset[,.v(variable)]
-  grp <- dataset[,.v(groups)]
+  y   <- dataset[, variable]
+  grp <- factor(dataset[, groups])
   x   <- as.numeric(as.factor(grp)) - 1
   xj  <- jitter(x, amount = 0.1)
   if (horiz) {
@@ -485,7 +495,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   else
     yDensNpos <- yDensN + max(xb) + 0.4
 
-  densDf <- data.frame(x = xDens, y = yDensNpos, grp = as.factor(grpDens))
+  densDf <- data.frame(x = xDens, y = yDensNpos, grp = factor(grpDens))
 
   levels(pointBoxDf$grp) <- levels(densDf$grp)
 
@@ -509,7 +519,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
       ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
   }
 
-  p <- p + 
+  p <- p +
     ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
                         size = 3) +
 
