@@ -422,7 +422,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   # get distinct observations in a way that works for both character and factor/ ordered data
   .nDistinctObservations <- function(x) {
     if (is.character(x))
-      return(dplyr::n_distinct(x))
+      return(length(unique(x)))
     else if (is.factor(x))
       return(nlevels(x))
     else
@@ -452,7 +452,12 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   }
 
   # Combine the un-normed means with the normed results
-  merge(datac, ndatac)
+  df <- merge(datac, ndatac)
+
+  if (!is.null(withinvars) && !is.factor(df[[withinvars]]))
+    df[[withinvars]] <- factor(df[[withinvars]])
+
+  return(df)
 }
 
 .descriptivesPlotsRainCloudFill <- function(dataset, variable, groups, yLabel, xLabel, addLines, horiz, testValue) {
