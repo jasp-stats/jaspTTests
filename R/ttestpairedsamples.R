@@ -430,12 +430,13 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend, yend = yend), inherit.aes = FALSE, size = 1),
          ggplot2::scale_y_continuous(breaks = c(min(b), max(b))))
   }
-  c1 <- dataset[[ .v(pair[[1]]) ]]
-  c2 <- dataset[[ .v(pair[[2]]) ]]
+  c1 <- dataset[[pair[[1]]]]
+  c2 <- dataset[[pair[[2]]]]
   ####
   data <- data.frame(id = rep(1:length(c1), 2), dependent = c(c1, c2),
                      groupingVariable = c(rep(paste("1.", pair[[1]], sep = ""), length(c1)),
-                                          rep(paste("2.", pair[[2]], sep = ""), length(c2))))
+                                          rep(paste("2.", pair[[2]], sep = ""), length(c2))),
+                     stringsAsFactors = TRUE)
 
   summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
                                  idvar = "id", conf.interval = options$descriptivesPlotsConfidenceInterval,
