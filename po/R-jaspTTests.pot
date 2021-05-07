@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2020-11-11 11:51\n"
+"Project-Id-Version: jaspTTests 0.15.0\n"
+"POT-Creation-Date: 2021-05-07 12:59\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,6 +10,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 
+msgid "Paired and two-sample z.test not yet implemented"
+msgstr ""
+
+msgid "not enough x observations"
+msgstr ""
+
+msgid "Not yet implemented"
+msgstr ""
+
+msgid "not enough y observations"
+msgstr ""
+
 msgid "Assumption Checks"
 msgstr ""
 
@@ -17,6 +29,12 @@ msgid "Descriptives"
 msgstr ""
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+msgid "nDistinctObservations got an object of type"
+msgstr ""
+
+msgid ","
 msgstr ""
 
 msgid "Please provide another variable."
@@ -113,6 +131,12 @@ msgid "%s%% CI:"
 msgstr ""
 
 msgid "Effect size"
+msgstr ""
+
+msgid "Raincloud Plots"
+msgstr ""
+
+msgid "Raincloud Difference Plots"
 msgstr ""
 
 msgid "Bayes factor could not be calculated"
@@ -292,16 +316,19 @@ msgstr ""
 msgid "Z"
 msgstr ""
 
+msgid "Location Difference"
+msgstr ""
+
 msgid "Student t-test and Z-test"
 msgstr ""
 
 msgid "Z-test"
 msgstr ""
 
-msgid "For the %s, location parameter is given by mean difference <em>d</em>."
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>."
 msgstr ""
 
-msgid "For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgid "For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
 msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."

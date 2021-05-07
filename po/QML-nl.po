@@ -13,13 +13,6 @@ msgid "T-Tests"
 msgstr "T-Toetsen"
 
 msgctxt "Description|"
-msgid ""
-"This module offers the standard Frequentist and Bayesian T-Tests analyses."
-msgstr ""
-"Deze module biedt de standaard Frequenstische en Bayesiaanse T-Toets "
-"analyses."
-
-msgctxt "Description|"
 msgid "Classical"
 msgstr "Klassiek"
 
@@ -228,10 +221,6 @@ msgid "Exclude cases listwise"
 msgstr "Sluit waarnemingen uit per rij"
 
 msgctxt "TTestBayesianPairedSamples|"
-msgid "Variable pairs"
-msgstr "Variabele paren"
-
-msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
 msgstr "Alt. hypothese"
 
@@ -310,10 +299,6 @@ msgstr "Sluit waarnemingen uit per afhankelijke variable"
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "Sluit waarnemingen uit per rij"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Variables"
-msgstr "Variabelen"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
@@ -448,10 +433,6 @@ msgid "Additional Statistics"
 msgstr "Aanvullende statistieken"
 
 msgctxt "TTestOneSample|"
-msgid "Location parameter"
-msgstr "Locatieparameter"
-
-msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr "Betrouwbaarheidsinterval"
 
@@ -506,10 +487,6 @@ msgstr "Sluit waarnemingen uit per afhankelijke variable"
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
 msgstr "Sluit waarnemingen uit per rij"
-
-msgctxt "TTestPairedSamples|"
-msgid "Variable pairs"
-msgstr "Variabele paren"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
@@ -586,3 +563,80 @@ msgstr "Sluit waarnemingen uit per afhankelijke variable"
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "Sluit waarnemingen uit per rij"
+
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Dependent Variables"
+msgstr "Afhankelijke variabelen"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
+msgstr ""

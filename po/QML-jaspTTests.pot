@@ -10,11 +10,6 @@ msgid "T-Tests"
 msgstr ""
 
 msgctxt "Description|"
-msgid ""
-"This module offers the standard Frequentist and Bayesian T-Tests analyses."
-msgstr ""
-
-msgctxt "Description|"
 msgid "Classical"
 msgstr ""
 
@@ -223,10 +218,6 @@ msgid "Exclude cases listwise"
 msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
-msgid "Variable pairs"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
 msgstr ""
 
@@ -304,10 +295,6 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
-msgid "Variables"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
@@ -443,10 +430,6 @@ msgid "Additional Statistics"
 msgstr ""
 
 msgctxt "TTestOneSample|"
-msgid "Location parameter"
-msgstr ""
-
-msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr ""
 
@@ -500,10 +483,6 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Variable pairs"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
@@ -580,4 +559,80 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Dependent Variables"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
 msgstr ""
