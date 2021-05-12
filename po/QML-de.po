@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-09 11:32+0000\n"
-"Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
+"PO-Revision-Date: 2021-05-13 17:32+0000\n"
+"Last-Translator: Thomas Langkamp <thomas.lassdiesonnerein@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/de/>\n"
 "Language: de\n"
@@ -60,19 +60,19 @@ msgstr "Gruppen"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Gruppe 1 ≠ Gruppe 2"
+msgstr "Gruppe 1 ≠ Gruppe 2 (2seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Gruppe 1 > Gruppe 2"
+msgstr "Gruppe 1 > Gruppe 2 (1seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Gruppe 1 < Gruppe 2"
+msgstr "Gruppe 1 < Gruppe 2 (1seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
@@ -180,7 +180,7 @@ msgstr "Deskriptive Statistik"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -228,7 +228,7 @@ msgstr "Fälle listenweise ausschließen"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -368,19 +368,19 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Gruppe 1 ≠ Gruppe 2"
+msgstr "Gruppe 1 ≠ Gruppe 2 (2seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Gruppe 1 > Gruppe 2"
+msgstr "Gruppe 1 > Gruppe 2 (1seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Gruppe 1 < Gruppe 2"
+msgstr "Gruppe 1 < Gruppe 2 (1seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -460,7 +460,7 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -536,7 +536,7 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
