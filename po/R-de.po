@@ -3,28 +3,29 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2020-11-20 20:29+0000\n"
+"PO-Revision-Date: 2021-05-09 11:33+0000\n"
 "Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttest-r/"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
+"Z.test für abhängige und unabhängige Stichproben noch nicht implementiert"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "nicht genügend x-Beobachtungen"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Noch nicht implementiert"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "nicht genügend y-Beobachtungen"
 
 msgid "Assumption Checks"
 msgstr "Annahmeprüfungen"
@@ -44,10 +45,10 @@ msgstr ""
 "(Sellke, Bayarri, & Berger, 2001)."
 
 msgid "nDistinctObservations got an object of type"
-msgstr ""
+msgstr "nDistinctObservations hat ein Objekt vom Typ"
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "Please provide another variable."
 msgstr "Bitte gib eine andere Variable ein."
@@ -154,11 +155,10 @@ msgid "Effect size"
 msgstr "Effektgröße"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
-#, fuzzy
 msgid "Raincloud Difference Plots"
-msgstr "Mittelwertsdifferenz"
+msgstr "Regenwolken-Differenzplots"
 
 msgid "Bayes factor could not be calculated"
 msgstr "Bayesfaktor konnte nicht berechnet werden"
@@ -387,9 +387,8 @@ msgstr "Z-Test."
 msgid "Z"
 msgstr "Z"
 
-#, fuzzy
 msgid "Location Difference"
-msgstr "Mittelwertsdifferenz"
+msgstr "Lage-Differenz"
 
 msgid "Student t-test and Z-test"
 msgstr "Students t-Test und Z-Test"
@@ -397,21 +396,19 @@ msgstr "Students t-Test und Z-Test"
 msgid "Z-test"
 msgstr "Z-Test"
 
-#, fuzzy
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>."
 msgstr ""
-"Für den %s wird der Lageparameter mit der mittleren Differenz <em>d</em> "
-"angegeben."
+"Für die %s ist die Schätzung der Lagedifferenz durch die "
+"Stichprobenmittelwertdifferenz <em>d</em> gegeben."
 
-#, fuzzy
 msgid ""
 "For the Wilcoxon test, location difference estimate is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"Beim Wilcoxon-Text wird der Lageparameter mit der Hodges-Lehmann-Schätzung "
-"angegeben."
+"Für den Wilcoxon-Test ist die Schätzung der Lagedifferenz durch die Hodges-"
+"Lehmann-Schätzung gegeben."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
