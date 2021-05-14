@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-05-13 17:32+0000\n"
+"Last-Translator: Thomas Langkamp <thomas.lassdiesonnerein@gmx.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 "X-Language: en_US\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -54,19 +60,19 @@ msgstr "Gruppen"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Gruppe 1 ≠ Gruppe 2"
+msgstr "Gruppe 1 ≠ Gruppe 2 (2seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Gruppe 1 > Gruppe 2"
+msgstr "Gruppe 1 > Gruppe 2 (1seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Gruppe 1 < Gruppe 2"
+msgstr "Gruppe 1 < Gruppe 2 (1seitig)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
@@ -174,7 +180,7 @@ msgstr "Deskriptive Statistik"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -222,7 +228,7 @@ msgstr "Fälle listenweise ausschließen"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -362,19 +368,19 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Gruppe 1 ≠ Gruppe 2"
+msgstr "Gruppe 1 ≠ Gruppe 2 (2seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Gruppe 1 > Gruppe 2"
+msgstr "Gruppe 1 > Gruppe 2 (1seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Gruppe 1 < Gruppe 2"
+msgstr "Gruppe 1 < Gruppe 2 (1seitig)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -454,7 +460,7 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -530,7 +536,7 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -566,77 +572,76 @@ msgstr "Fälle listenweise ausschließen"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "Bewerte die Differenz zwischen zwei Mittelwerten"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Variablenpaare"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Regenwolken-Differenzplots"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
 msgstr "Abhängige Variablen"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "Lageschätzung"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Variablenpaare"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Regenwolken-Plots"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Regenwolken-Differenzplots"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Horizontale Anzeige"
