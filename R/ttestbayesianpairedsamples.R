@@ -60,7 +60,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
       if (!isFALSE(errors[[var]])) {
 
         errorMessage <- errors[[var]]$message
-        ttestTable$addFootnote(errorMessage, rowNames = var)
+        ttestTable$addFootnote(errorMessage, rowNames = var, colNames = "BF")
         ttestResults[["status"]][var] <- "error"
         ttestResults[["errorFootnotes"]][[var]] <- errorMessage
         ttestRows[var, c("BF", "error")] <- NaN
@@ -88,7 +88,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
             errorMessage <- .extractErrorMessage(r)
             ttestResults[["status"]][var] <- "error"
             ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-            ttestTable$addFootnote(message = errorMessage, rowNames = var)
+            ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
   
           } else {
   
@@ -138,7 +138,7 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
               errorMessage <- .extractErrorMessage(r)
               ttestResults[["status"]][var] <- "error"
               ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-              ttestTable$addFootnote(message = errorMessage, rowNames = var)
+              ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
               
             } else {
               

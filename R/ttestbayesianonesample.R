@@ -54,7 +54,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
     if (!isFALSE(errors[[var]])) {
 
       errorMessage <- errors[[var]]$message
-      ttestTable$addFootnote(errorMessage, rowNames = var)
+      ttestTable$addFootnote(errorMessage, rowNames = var, colNames = "BF")
       ttestResults[["status"]][var] <- "error"
       ttestResults[["errorFootnotes"]][[var]] <- errorMessage
       ttestRows[var, c("BF", "error")] <- NaN
@@ -78,8 +78,8 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
           errorMessage <- .extractErrorMessage(r)
           ttestResults[["status"]][var] <- "error"
           ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-          ttestTable$addFootnote(message = errorMessage, rowNames = var)
   
+          ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
         } else {
   
           bf.raw <- r[["bf"]]
@@ -130,7 +130,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
             errorMessage <- .extractErrorMessage(r)
             ttestResults[["status"]][var] <- "error"
             ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-            ttestTable$addFootnote(message = errorMessage, rowNames = var)
+            ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
 
           } else {
             
