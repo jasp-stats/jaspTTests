@@ -852,6 +852,11 @@
     )
   }
 
+  # the plots below are only available for the Student's T test. returning early avoids computing
+  # the plots below when e.g., first checking Sequential analysis and then switching to Wilcoxon.
+  if (options[["testStatistic"]] == "Wilcoxon")
+    return()
+
   if (options[["plotBayesFactorRobustness"]] && options[["effectSizeStandardized"]] == "default") {
     .ttestBayesianPlotRobustness(
       collection             = inferentialPlotsCollection,
