@@ -67,7 +67,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
     if (!isFALSE(errors[[var]])) {
 
       errorMessage <- errors[[var]]$message
-      ttestTable$addFootnote(errorMessage, rowNames = var)
+      ttestTable$addFootnote(errorMessage, rowNames = var, colNames = "BF")
       ttestResults[["status"]][var] <- "error"
       ttestResults[["errorFootnotes"]][[var]] <- errorMessage
       ttestRows[var, -1L] <- NaN # everything except the first because the length and names differ for student vs wilcoxon
@@ -98,7 +98,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
           errorMessage <- .extractErrorMessage(r)
 	    		ttestResults[["status"]][[var]] <- "error"
 	    		ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-	    		ttestTable$addFootnote(message = errorMessage, rowNames = var)
+	    		ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
 
         } else {
 
@@ -146,7 +146,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
             errorMessage <- .extractErrorMessage(r)
             ttestResults[["status"]][var] <- "error"
             ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-            ttestTable$addFootnote(message = errorMessage, rowNames = var)
+            ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
             
           } else {
             ttestResults[["delta"]][[var]]  <- r[["deltaSamples"]]

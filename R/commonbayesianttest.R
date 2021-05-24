@@ -470,7 +470,7 @@
   
   for (var in dependents) {
     if (!is.null(ttestResults[["errorFootnotes"]][[var]]))
-      ttestTable$addFootnote(ttestResults[["errorFootnotes"]][[var]], rowNames = var)
+      ttestTable$addFootnote(ttestResults[["errorFootnotes"]][[var]], rowNames = var, colNames = "BF")
     if (!is.null(ttestResults[["footnotes"]][[var]]))
       ttestTable$addFootnote(message = ttestResults[["footnotes"]][[var]], symbol = "", rowNames = var, colNames = "error")
   }
