@@ -472,6 +472,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   # The above copyright notice and this permission notice shall be included in all
   # copies or substantial portions of the Software.
 
+  dataset <- na.omit(dataset) # only applies when cases are excluded per dependent variable
   n   <- nrow(dataset)
   y   <- dataset[, variable]
   grp <- factor(dataset[, groups])
@@ -529,7 +530,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                           color = "black", alpha = 0.5) +
 
     ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
-                          geom = "errorbar", outlier.shape = NA, width = 0.1, size = 1) +
+                          geom = "errorbar", width = 0.1, size = 1) +
 
     ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
                           outlier.shape = NA, width = 0.2, size = 1)
