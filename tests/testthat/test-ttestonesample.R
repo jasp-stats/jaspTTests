@@ -130,6 +130,16 @@ test_that("Raincloud plot matches (horizontal)", {
   jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestOneSample")
 })
 
+test_that("Raincloud plot matches (missing data)", {
+  options <- jaspTools::analysisOptions("TTestOneSample")
+  options$variables <- "debMiss30"
+  options$descriptivesPlotsRainCloud <- TRUE
+  set.seed(12312414)
+  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "raincloud-missing", dir="TTestOneSample")
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestOneSample")
   
