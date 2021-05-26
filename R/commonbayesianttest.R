@@ -82,18 +82,24 @@
     
     # add seed dependency only for Mann-Whitney independent samples t-test (which is named Wilcoxon in options!)
     depends_seed <- NULL
-    if(analysis == "independent"){
-      if(options$testStatistic == "Wilcoxon"){
+    if (analysis == "independent") {
+      if (options$testStatistic == "Wilcoxon") {
         depends_seed <- c("seed", "setSeed")
       }
     }
+
+    # add dependency on variables if cases are deleted listwise, since then changing variables may change the number of deleted cases
+    depends_variables <- NULL
+    if (options[["missingValues"]] == "excludeListwise")
+      depends_variables <- if (analysis != "paired") "variables" else "pairs"
+
     ttestContainer$dependOn(c(
-      "effectSizeStandardized", "groupingVariable", 
+      "effectSizeStandardized", "groupingVariable",
       "informativeCauchyLocation", "informativeCauchyScale", "informativeNormalMean",
       "informativeNormalStd", "informativeStandardizedEffectSize",
       "informativeTDf", "informativeTLocation", "informativeTScale",
       "missingValues", "priorWidth", "testStatistic", "wilcoxonSamplesNumber",
-      "testValue",depends_seed
+      "testValue", depends_seed, depends_variables
     ))
     ttestContainer$position <- 1L
   } else {
