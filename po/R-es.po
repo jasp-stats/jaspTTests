@@ -2,31 +2,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-06-01 15:32+0000\n"
+"Last-Translator: Paulina Elizabeth Robalino <paulina.e.robalino@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "No hay suficientes observaciones de X"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Todavía no se ha aplicado"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "no hay suficientes observaciones y"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Verificación de supuestos"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -50,34 +53,34 @@ msgid "Group"
 msgstr ""
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Media"
 
 msgid "SD"
-msgstr ""
+msgstr "DE"
 
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Upper"
-msgstr ""
+msgstr "Superior"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Gráficos de Inferencia"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Anterior y Posterior"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Comprobación de robustez del factor de Bayes"
 
 msgid "Sequential Analysis"
 msgstr ""
@@ -95,40 +98,40 @@ msgid "Running robustness check %d / %d"
 msgstr ""
 
 msgid "max BF%s"
-msgstr ""
+msgstr "max BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "usuario anterior"
 
 msgid "wide prior"
-msgstr ""
+msgstr "ancho previo"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "ultraancho previo"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s en r==%s"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "Anchura previa de Cauchy"
 
 msgid "Running sequential analysis %d / %d"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "Prior"
-msgstr ""
+msgstr "Anterior"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% CI:"
 
 msgid "Effect size"
 msgstr ""
@@ -161,13 +164,13 @@ msgid "Bayesian Mann-Whitney U Test"
 msgstr ""
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Prueba T bayesiana de muestras independientes"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "error %"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>."
 msgstr ""
@@ -179,7 +182,7 @@ msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr ""
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Prueba T bayesiana de una muestra"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
@@ -191,7 +194,7 @@ msgid "For all tests, the alternative hypothesis specifies that the population m
 msgstr ""
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Prueba T bayesiana de muestras pareadas"
 
 msgid "Independent Samples T-Test"
 msgstr ""
@@ -206,25 +209,25 @@ msgid "Welch's t-test."
 msgstr ""
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
 msgstr ""
 
 msgid "Statistic"
-msgstr ""
+msgstr "Estadística"
 
 msgid "Test"
 msgstr ""
 
 msgid "df"
-msgstr ""
+msgstr "gl"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "d de Cohen"
 
 msgid "Glass' delta"
 msgstr ""
@@ -233,7 +236,7 @@ msgid "Hedges' g"
 msgstr ""
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "Diferencia Promedio"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr ""
