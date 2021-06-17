@@ -106,7 +106,7 @@ test_that("Descriptives plot matches", {
   options$descriptivesPlots <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestOneSample")
+  jaspTools::expect_equal_plots(testPlot, "descriptives")
 })
 
 test_that("Raincloud plot matches (vertical)", {
@@ -116,7 +116,7 @@ test_that("Raincloud plot matches (vertical)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestOneSample")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical")
 })
 
 test_that("Raincloud plot matches (horizontal)", {
@@ -127,7 +127,7 @@ test_that("Raincloud plot matches (horizontal)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestOneSample")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal")
 })
 
 test_that("Raincloud plot matches (missing data)", {
@@ -137,7 +137,7 @@ test_that("Raincloud plot matches (missing data)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-missing", dir="TTestOneSample")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-missing")
 })
 
 test_that("Analysis handles errors", {

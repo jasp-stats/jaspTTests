@@ -43,22 +43,22 @@ test_that("Inferential and descriptives plots match", {
   options$groupingVariable <- "contBinom"
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- FALSE
-  
+
   options$plotBayesFactorRobustness <- TRUE
   options$plotBayesFactorRobustnessAdditionalInfo <- FALSE
-  
+
   options$plotSequentialAnalysis <- TRUE
   options$plotSequentialAnalysisRobustness <- FALSE
-  
+
   options$descriptives <- TRUE
   options$descriptivesPlots <- TRUE
   options$descriptivesPlotsCredibleInterval <- 0.90
-  
+
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestBayesianIndependentSamples")
-  
+  jaspTools::expect_equal_plots(testPlot, "descriptives")
+
   table <- getDescriptivesTable(results)[["data"]]
   jaspTools::expect_equal_tables(table,
     list(58, 0, -0.362903138386961, -0.120135614827586, 1.10575982846952,
@@ -69,14 +69,14 @@ test_that("Inferential and descriptives plots match", {
   )
 
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior", dir="TTestBayesianIndependentSamples")
-  
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior")
+
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check", dir="TTestBayesianIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check")
 
   testPlot <- results[["state"]][["figures"]][[4]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis", dir="TTestBayesianIndependentSamples")
-  
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis")
+
 })
 
 test_that("Inferential plots with additional info match", {
@@ -86,25 +86,25 @@ test_that("Inferential plots with additional info match", {
   options$groupingVariable <- "facGender"
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- TRUE
-  
+
   options$plotBayesFactorRobustness <- TRUE
   options$plotBayesFactorRobustnessAdditionalInfo <- TRUE
-  
+
   options$plotSequentialAnalysis <- TRUE
   options$plotSequentialAnalysisRobustness <- TRUE
 
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional", dir="TTestBayesianIndependentSamples")
-  
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional")
+
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional", dir="TTestBayesianIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional")
 
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional", dir="TTestBayesianIndependentSamples")
-  
-  
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional")
+
+
 })
 
 test_that("Raincloud plot matches (vertical)", {
@@ -115,7 +115,7 @@ test_that("Raincloud plot matches (vertical)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestBayesianIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical")
 })
 
 test_that("Raincloud plot matches (horizontal)", {
@@ -127,7 +127,7 @@ test_that("Raincloud plot matches (horizontal)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestBayesianIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal")
 })
 
 test_that("Analysis handles errors", {
@@ -221,19 +221,19 @@ for (hypo in hypotheses) {
     test_that(sprintf("%s-%s Prior and Posterior plot matches", hypo, bftype), {
       plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotPriorAndPosterior"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-prior-and-posterior", hypo, bftype), dir="TTestBayesianIndependentSamples")
+      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-prior-and-posterior", hypo, bftype))
     })
 
     test_that(sprintf("%s-%s Bayes Factor Robustness Check plot matches", hypo, bftype), {
       plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotRobustness"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-bayes-factor-robustness-check", hypo, bftype), dir="TTestBayesianIndependentSamples")
+      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-bayes-factor-robustness-check", hypo, bftype))
     })
 
     test_that(sprintf("%s-%s Sequential Analysis plot matches", hypo, bftype), {
       plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotSequential"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-sequential-analysis", hypo, bftype), dir="TTestBayesianIndependentSamples")
+      jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-sequential-analysis", hypo, bftype))
     })
 
     test_that(sprintf("%s-%s Bayesian Independent Samples T-Test table results match", hypo, bftype), {

@@ -72,7 +72,7 @@ test_that("Descriptives plot matches", {
   options$descriptivesPlots <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "descriptives")
 })
 
 test_that("Raincloud plot matches (vertical)", {
@@ -83,7 +83,7 @@ test_that("Raincloud plot matches (vertical)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical")
 })
 
 test_that("Raincloud plot matches (horizontal)", {
@@ -95,7 +95,7 @@ test_that("Raincloud plot matches (horizontal)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestIndependentSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal")
 })
 
 test_that("Analysis handles errors", {
