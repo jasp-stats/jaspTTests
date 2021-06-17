@@ -40,7 +40,7 @@ test_that("Inferential and descriptives plots match", {
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "descriptives")
   
   table <- getDescriptivesTable(results)[["data"]]
   jaspTools::expect_equal_tables(table,
@@ -49,13 +49,13 @@ test_that("Inferential and descriptives plots match", {
   )
   
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior")
   
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check")
   
   testPlot <- results[["state"]][["figures"]][[4]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis")
   
 })
 
@@ -66,7 +66,7 @@ test_that("Raincloud plot matches (vertical)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-vertical")
 })
 
 test_that("Raincloud plot matches (horizontal)", {
@@ -77,7 +77,7 @@ test_that("Raincloud plot matches (horizontal)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal")
 })
 
 test_that("Inferential plots with additional info match", {
@@ -96,13 +96,13 @@ test_that("Inferential plots with additional info match", {
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional")
   
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional")
 
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional")
   
 })
 
@@ -116,21 +116,21 @@ test_that("Prior and posterior plot custom CI level match", {
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-80", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-80")
   
   options$priorAndPosteriorPlotsCredibleInterval <- 0.99
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99")
   
   options$priorAndPosteriorPlotsCredibleInterval <- 0.999
   
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99.9", dir="TTestBayesianOneSample")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99.9")
 })
 
 test_that("Wilcoxon results match", {

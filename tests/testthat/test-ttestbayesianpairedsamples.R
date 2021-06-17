@@ -43,7 +43,7 @@ test_that("Inferential and descriptives plots match", {
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "descriptives")
   
   table <- getDescriptivesTable(results)[["data"]]
   jaspTools::expect_equal_tables(table,
@@ -55,13 +55,13 @@ test_that("Inferential and descriptives plots match", {
   )
   
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior")
   
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check")
   
   testPlot <- results[["state"]][["figures"]][[4]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis")
   
 })
 
@@ -81,13 +81,13 @@ test_that("Inferential plots with additional info match", {
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional")
   
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "robustness-check-additional")
 
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional")
   
 })
 
@@ -98,7 +98,7 @@ test_that("Raincloud plot matches", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud")
 })
 
 test_that("Raincloud difference plot matches (vertical)", {
@@ -108,7 +108,7 @@ test_that("Raincloud difference plot matches (vertical)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-vertical", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-vertical")
 })
 
 test_that("Raincloud difference plot matches (horizontal)", {
@@ -119,7 +119,7 @@ test_that("Raincloud difference plot matches (horizontal)", {
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-horizontal", dir="TTestBayesianPairedSamples")
+  jaspTools::expect_equal_plots(testPlot, "raincloud-diff-horizontal")
 })
 
 test_that("Analysis handles errors", {
