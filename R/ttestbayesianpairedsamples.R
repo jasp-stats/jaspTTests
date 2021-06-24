@@ -203,9 +203,9 @@ TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
   if (options[["effectSizeStandardized"]] == "default" && !derivedOptions[["wilcoxTest"]]) {
     citations <- .ttestBayesianCitations[c("MoreyEtal2015", "RouderEtal2009")]
   } else if (derivedOptions[["wilcoxTest"]]) {
-    citations <- .ttestBayesianCitations["vanDoornEtal2018"]
+    citations <- .ttestBayesianCitations["doorn2020bayesian"]
   } else if (options[["effectSizeStandardized"]] == "informative") {
-    citations <- .ttestBayesianCitations["GronauEtal2017"]
+    citations <- .ttestBayesianCitations["gronau2020informed"]
   } 
   
   jaspTable$addCitation(citations)
