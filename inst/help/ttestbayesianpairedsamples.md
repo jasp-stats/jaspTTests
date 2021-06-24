@@ -13,8 +13,8 @@ The paired samples t-test allows you to estimate the effect size  and test the n
 ### Input
 ---
 
-#### Assignment Box 
-- Variables: In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents other difference scores. 
+#### Assignment Box
+- Variables: In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents other difference scores.
 
 #### Hypothesis
 - Measure 1 &ne; Measure 2: Two-sided alternative hypothesis that the population mean of the difference is not equal to 0.
@@ -26,9 +26,9 @@ The paired samples t-test allows you to estimate the effect size  and test the n
 - BF01: Bayes factor to quantify evidence for the null hypothesis relative to the alternative hypothesis.
 - Log(BF10): Natural logarithm of BF10.
 
-#### Tests 
-- Student: Student's t-test. This option is selected by default. 
-- Wilcoxon signed-rank: Wilcoxon signed-rank test. 
+#### Tests
+- Student: Student's t-test. This option is selected by default.
+- Wilcoxon signed-rank: Wilcoxon signed-rank test.
   - No. samples: The number of MCMC samples to use.
 
 #### Additional Statistics
@@ -86,14 +86,14 @@ The paired samples t-test allows you to estimate the effect size  and test the n
 
 
 ### References
---- 
-- Gronau, Q. F., Ly, A., & Wagenmakers, E.-J. (in press). Informed Bayesian t-tests. *The American Statistician*. <a href="https://arxiv.org/abs/1704.02479">https://arxiv.org/abs/1704.02479</a>
-- Jeffreys, H. (1961). *Theory of probability (3rd ed.)*. Oxford, UK: Oxford University Press.
-- Morey, R. D., Rouder, J. N., Pratte, M. S., & Speckman, P. L. (2011). Using MCMC chain outputs to efficiently estimate Bayes factors. *Journal of Mathematical Psychology, 55*, 368-378.
-- Rouder, J. N., Speckman, P. L., Sun, D., Morey, R. D., & Iverson, G. (2009). Bayesian t-tests for accepting and rejecting the null hypothesis. *Psychonomic Bulletin & Review, 16*, 225-237.
-- van Doorn, J, Ly, A, Marsman, M, & Wagenmakers, E.-J. (2020). Bayesian rank-based hypothesis testing for the rank sum test, the signed rank test, and Spearman's rho. *Journal of Applied Statistics*.
+---
+- Gronau, Q. F., Ly, A., & Wagenmakers, E.-J. (2020). Informed Bayesian t-tests. *The American Statistician, 74*, 137-143.
+- Jeffreys, H. (1961).  *Theory of probability (3rd ed.)*. Oxford, UK: Oxford University Press.
+- Morey, R. D., Rouder, J. N., Pratte, M. S., & Speckman, P. L. (2011). Using MCMC chain outputs to efficiently estimate Bayes factors.  *Journal of Mathematical Psychology, 55*, 368-378.
+- Rouder, J. N., Speckman, P. L., Sun, D., Morey, R. D., & Iverson, G. (2009). Bayesian t-tests for accepting and rejecting the null hypothesis.  *Psychonomic Bulletin & Review, 16*, 225-237.
+- van Doorn, J., Ly, A., Marsman, M., & Wagenmakerss, E.-J. (2020). Bayesian rank-based hypothesis testing for the rank sum test, the signed rank test, and Spearman’s ρ. *Journal of Applied Statistics, 47(16)*, 2984-3006.
 
-### R-packages 
+### R-packages
 ---
 - BayesFactor
 - ggplot2
