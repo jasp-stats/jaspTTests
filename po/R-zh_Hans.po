@@ -2,31 +2,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-06-28 08:32+0000\n"
+"Last-Translator: sun wong <shuonwang@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7.1-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
+msgstr "配对和双样本z检验尚未实现"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "没有足够的x观测值"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "尚未实现"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "没有足够的y观测值"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "假设检验"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "描述性"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -35,169 +38,183 @@ msgid "nDistinctObservations got an object of type"
 msgstr ""
 
 msgid ","
-msgstr ""
+msgstr "，"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "请提供其他变量。"
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "变量 %s 和 %s 是相同的！"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "描述性绘图"
 
 msgid "Group"
-msgstr ""
+msgstr "分组"
 
 msgid "N"
-msgstr ""
+msgstr "个案数"
 
 msgid "Mean"
-msgstr ""
+msgstr "平均值"
 
 msgid "SD"
-msgstr ""
+msgstr "标准差"
 
 msgid "SE"
-msgstr ""
+msgstr "标准误"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% 贝叶斯置信区间"
 
 msgid "Lower"
-msgstr ""
+msgstr "上界"
 
 msgid "Upper"
-msgstr ""
+msgstr "下界"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "推断图"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "先验和后验"
 
+#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "贝叶斯因子稳健性检验"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "序贯分析"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
-msgstr ""
+msgstr "暂不支持先验的贝叶斯因子稳健性检查图。"
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
-msgstr ""
+msgstr "暂不支持先验的序贯分析检验图。"
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "应为数字或字母值，但得到了 %s 。"
 
 msgid "Running robustness check %d / %d"
-msgstr ""
+msgstr "正在进行稳健性检查 %d / %d"
 
+#, fuzzy
 msgid "max BF%s"
-msgstr ""
+msgstr "最大 BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "用户先验"
 
+#, fuzzy
 msgid "wide prior"
-msgstr ""
+msgstr "宽先验"
 
+#, fuzzy
 msgid "ultrawide prior"
-msgstr ""
+msgstr "超宽先验"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s at r==%s"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "柯西先验宽度"
 
 msgid "Running sequential analysis %d / %d"
-msgstr ""
+msgstr "正在进行序贯分析 %d / %d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "后验"
 
 msgid "Prior"
-msgstr ""
+msgstr "先验"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% 置信:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "效应量"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "雨云图"
 
+#, fuzzy
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "雨云差异图"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "无法计算贝叶斯因子"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "贝叶斯因子是无限的"
 
+#, fuzzy
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "贝叶斯因子太小"
 
+#, fuzzy
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr ""
+msgstr "无法绘制后验图--可能是在0附近过于集中了。"
 
+#, fuzzy
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
-msgstr ""
+msgstr "t 值很大。使用 Savage-Dickey 近似来计算贝叶斯因子，但无法给出误差估计。"
 
+#, fuzzy
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "对于正态先验，没有误差估计。"
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "贝叶斯 曼惠特尼 U 检验"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "贝叶斯独立样本T检验"
 
+#, fuzzy
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
-msgstr ""
+msgstr "结果基于具有 5 个 %.0f 迭代链的数据增强算法。"
 
 msgid "error %"
-msgstr ""
+msgstr "误差 %"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>."
-msgstr ""
+msgstr "对于所有检验，备择假设指定组<em>%1$s</em>大于<em>%2$s</em>组。"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is less than group <em>%2$s</em>."
-msgstr ""
+msgstr "对于所有检验，备择假设指定组<em>%1$s</em>小于<em>%2$s</em>组。"
 
+#, fuzzy
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "贝叶斯威尔科克森符号秩检验"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "贝叶斯单样本T检验"
 
+#, fuzzy
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定总体均值大于 %s。"
 
+#, fuzzy
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定总体均值小于 %s。"
 
+#, fuzzy
 msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定总体均值与 %s 不同。"
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "贝叶斯配对样本T检验"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "独立样本T检验"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "曼-惠特尼U检验。"
 
 msgid "W"
 msgstr ""
@@ -206,73 +223,79 @@ msgid "Welch's t-test."
 msgstr ""
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "Student's t-test."
 
 msgid "Statistic"
-msgstr ""
+msgstr "统计"
 
 msgid "Test"
-msgstr ""
+msgstr "检验"
 
 msgid "df"
-msgstr ""
+msgstr "df"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen's d"
 
 msgid "Glass' delta"
 msgstr ""
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "Hedges' g"
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "平均差"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "霍奇斯-莱曼估计"
 
+#, fuzzy
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "秩-双序列相关"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "位置参数"
 
 msgid "Effect Size"
-msgstr ""
+msgstr "效应量"
 
+#, fuzzy
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "学生t检验和韦尔奇t检验"
 
+#, fuzzy
 msgid "Student t-test"
-msgstr ""
+msgstr "学生t检验"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "韦尔奇t检验"
 
 msgid "SE Difference"
 msgstr ""
 
+#, fuzzy
 msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
-msgstr ""
+msgstr "对于%s，位置参数是由平均差值给出的。对于Mann-Whitney检验，位置参数由Hodges-Lehmann估计给出。"
 
+#, fuzzy
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "%2$s 的 %1$s%% 置信区间"
 
 msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
-msgstr ""
+msgstr "对于Mann-Whitney检验，效应量由等级双列相关度给出。"
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "对于 %1$s，效应量大小由 %2$s 给出。"
 
+#, fuzzy
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "正态性检验 (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
