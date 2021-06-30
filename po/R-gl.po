@@ -1,0 +1,532 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-05-07 12:59\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Virgin-Header: remove this line if you change anything in the header.\n"
+"X-Language: gl_ES\n"
+"X-Source-Language: C\n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "Paired and two-sample z.test not yet implemented"
+msgstr ""
+
+msgid "not enough x observations"
+msgstr ""
+
+msgid "Not yet implemented"
+msgstr ""
+
+msgid "not enough y observations"
+msgstr ""
+
+msgid "Assumption Checks"
+msgstr "Comprobacións de supostos"
+
+msgid "Descriptives"
+msgstr "Descritivos"
+
+msgid ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
+"the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
+"em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
+"2001)."
+msgstr ""
+
+msgid "nDistinctObservations got an object of type"
+msgstr ""
+
+msgid ","
+msgstr ""
+
+#, fuzzy
+msgid "Please provide another variable."
+msgstr "Excluír casos por variable dependente"
+
+msgid "Variables %s and %s are the same!"
+msgstr ""
+
+msgid "Descriptives Plots"
+msgstr "Gráficas descritivas"
+
+msgid "Group"
+msgstr "Grupo"
+
+msgid "N"
+msgstr "N"
+
+msgid "Mean"
+msgstr "Media"
+
+msgid "SD"
+msgstr ""
+
+#, fuzzy
+msgid "SE"
+msgstr "M.E.S."
+
+#, fuzzy
+msgid "%.0f%% Credible Interval"
+msgstr "Intervalo de credibilidade"
+
+msgid "Lower"
+msgstr "Inferior"
+
+msgid "Upper"
+msgstr "Superior"
+
+msgid "Inferential Plots"
+msgstr "Gráficas inferenciais"
+
+#, fuzzy
+msgid "Prior and Posterior"
+msgstr "Previo e posterior"
+
+#, fuzzy
+msgid "Bayes Factor Robustness Check"
+msgstr "Comprobación da robustez do factor de Bayes"
+
+msgid "Sequential Analysis"
+msgstr "Análise secuencial"
+
+msgid ""
+"Bayes factor robustness check plot currently not supported for informed "
+"prior."
+msgstr ""
+
+msgid ""
+"Sequential analysis robustness check plot currently not supported for "
+"informed prior."
+msgstr ""
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr ""
+
+#, fuzzy
+msgid "Running robustness check %d / %d"
+msgstr "Comprobación da robustez"
+
+msgid "max BF%s"
+msgstr ""
+
+msgid "user prior"
+msgstr ""
+
+#, fuzzy
+msgid "wide prior"
+msgstr "Amosar os previos"
+
+#, fuzzy
+msgid "ultrawide prior"
+msgstr "Representar os previos"
+
+msgid "BF%s"
+msgstr ""
+
+msgid "%s at r==%s"
+msgstr ""
+
+#, fuzzy
+msgid "Cauchy prior width"
+msgstr "Largura previa de beta estendida"
+
+#, fuzzy
+msgid "Running sequential analysis %d / %d"
+msgstr "Análise secuencial"
+
+msgid "n"
+msgstr "n"
+
+#, fuzzy
+msgid "Posterior"
+msgstr "R² posterior"
+
+msgid "Prior"
+msgstr "Previo"
+
+msgid "%s%% CI:"
+msgstr ""
+
+msgid "Effect size"
+msgstr "Magnitude do efecto"
+
+#, fuzzy
+msgid "Raincloud Plots"
+msgstr "Gráficas dos erros"
+
+msgid "Raincloud Difference Plots"
+msgstr ""
+
+#, fuzzy
+msgid "Bayes factor could not be calculated"
+msgstr "Cálculo do factor de Bayes"
+
+#, fuzzy
+msgid "Bayes factor is infinite"
+msgstr "Factores de Bayes"
+
+#, fuzzy
+msgid "The Bayes factor is too small"
+msgstr "Matriz de factores de Bayes"
+
+msgid "Cannot plot the posterior - possibly too concentrated near 0."
+msgstr ""
+
+msgid ""
+"t-value is large. A Savage-Dickey approximation was used to compute the "
+"Bayes factor but no error estimate can be given."
+msgstr ""
+
+msgid "No error estimate is available for normal priors."
+msgstr ""
+
+#, fuzzy
+msgid "Bayesian Mann-Whitney U Test"
+msgstr "Táboas baiesianas de continxencia"
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Proba T baiesiana para mostras independentes"
+
+msgid ""
+"Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+
+#, fuzzy
+msgid "error %"
+msgstr "fallo % >"
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"is greater than group <em>%2$s</em>."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"is less than group <em>%2$s</em>."
+msgstr ""
+
+#, fuzzy
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr "Rango con signo de Wilcoxon"
+
+msgid "Bayesian One Sample T-Test"
+msgstr "Proba T baiesiana dunha mostra"
+
+#, fuzzy
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"is greater than %s."
+msgstr ""
+"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
+"valor a probar."
+
+#, fuzzy
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"is less than %s."
+msgstr ""
+"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
+"valor a probar."
+
+#, fuzzy
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"differs from %s."
+msgstr ""
+"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
+"valor a probar."
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Proba T baiesiana para mostras emparelladas"
+
+msgid "Independent Samples T-Test"
+msgstr "Proba T para mostras independentes"
+
+#, fuzzy
+msgid "Mann-Whitney U test."
+msgstr "Mann-Whitney"
+
+msgid "W"
+msgstr ""
+
+#, fuzzy
+msgid "Welch's t-test."
+msgstr "Proba T de Welch"
+
+msgid "t"
+msgstr "t"
+
+#, fuzzy
+msgid "Student's t-test."
+msgstr "t de Student"
+
+#, fuzzy
+msgid "Statistic"
+msgstr "Estatísticos"
+
+msgid "Test"
+msgstr "Proba"
+
+msgid "df"
+msgstr "gl"
+
+msgid "p"
+msgstr "p"
+
+msgid "Cohen's d"
+msgstr "D de Cohen"
+
+msgid "Glass' delta"
+msgstr "Delta de Glass"
+
+msgid "Hedges' g"
+msgstr "g de Hedges"
+
+#, fuzzy
+msgid "Mean Difference"
+msgstr "Diferenza"
+
+msgid "Hodges-Lehmann Estimate"
+msgstr ""
+
+#, fuzzy
+msgid "Rank-Biserial Correlation"
+msgstr "Correlación parcial"
+
+#, fuzzy
+msgid "Location Parameter"
+msgstr "Parámetro de posición"
+
+msgid "Effect Size"
+msgstr "Magnitude do efecto"
+
+msgid "Student t-test and Welch t-test"
+msgstr ""
+
+#, fuzzy
+msgid "Student t-test"
+msgstr "t de Student"
+
+#, fuzzy
+msgid "Welch t-test"
+msgstr "Proba T de Welch"
+
+#, fuzzy
+msgid "SE Difference"
+msgstr "Diferenza"
+
+msgid ""
+"For the %s, location parameter is given by mean difference. For the Mann-"
+"Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgid "%1$s%% CI for %2$s"
+msgstr ""
+
+msgid ""
+"For the Mann-Whitney test, effect size is given by the rank biserial "
+"correlation."
+msgstr ""
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr ""
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr ""
+
+msgid "Significant results suggest a deviation from normality."
+msgstr ""
+
+#, fuzzy
+msgid "Test of Equality of Variances (Levene's)"
+msgstr "Igualdade de varianzas"
+
+#, fuzzy
+msgid "F"
+msgstr "FB"
+
+#, fuzzy
+msgid "greater"
+msgstr "repetido"
+
+msgid "less"
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
+"than group %3$s."
+msgstr ""
+
+msgid ""
+"Levene's test is significant (p < .05), suggesting a violation of the equal "
+"variance assumption"
+msgstr ""
+
+msgid ""
+"Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+
+msgid "F-statistic could not be calculated"
+msgstr ""
+
+msgid "One Sample T-Test"
+msgstr "Proba T para unha mostra"
+
+#, fuzzy
+msgid "Wilcoxon signed-rank test."
+msgstr "Rango con signo de Wilcoxon"
+
+#, fuzzy
+msgid "V"
+msgstr "CV"
+
+#, fuzzy
+msgid "Z test."
+msgstr "Proba KMO"
+
+msgid "Z"
+msgstr ""
+
+#, fuzzy
+msgid "Location Difference"
+msgstr "Diferenza"
+
+msgid "Student t-test and Z-test"
+msgstr ""
+
+msgid "Z-test"
+msgstr ""
+
+msgid ""
+"For the %s, location difference estimate is given by the sample mean "
+"difference <em>d</em>."
+msgstr ""
+
+msgid ""
+"For the Wilcoxon test, location difference estimate is given by the Hodges-"
+"Lehmann estimate."
+msgstr ""
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr ""
+
+msgid ""
+"For the Wilcoxon test, effect size is given by the matched rank biserial "
+"correlation."
+msgstr ""
+
+msgid ""
+"For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
+"provided population standard deviation)."
+msgstr ""
+
+#, fuzzy
+msgid "greater than"
+msgstr "Maior que: %1"
+
+#, fuzzy
+msgid "less than"
+msgstr "Menor que"
+
+#, fuzzy
+msgid "different from"
+msgstr "diferenza"
+
+msgid ""
+"For the %1$s, the alternative hypothesis specifies that the mean is %2$s "
+"%3$s."
+msgstr ""
+
+msgid ""
+"For the Wilcoxon test, the alternative hypothesis specifies that the median "
+"is %1$s %2$s."
+msgstr ""
+
+msgid "data are essentially constant"
+msgstr ""
+
+msgid "Paired Samples T-Test"
+msgstr "Proba T para mostras emparelladas"
+
+msgid ""
+"For the Student t-test, location parameter is given by mean difference "
+"<em>d</em>. For the Wilcoxon test, effect size is given by the Hodges-"
+"Lehmann estimate."
+msgstr ""
+
+msgid ""
+"For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
+"Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is less "
+"than Measure 2."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is "
+"greater than Measure 2."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that %1s is less than "
+"%2s."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that %1s is greater than "
+"%2s."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is less "
+"than Measure 2. For example, %1s is less than %2s."
+msgstr ""
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is "
+"greater than Measure 2. For example, %1s is greater than %2s."
+msgstr ""
+
+msgid "Evidence for H1"
+msgstr ""
+
+msgid "Evidence for H0"
+msgstr ""
+
+msgid "Evidence for H+"
+msgstr ""
+
+msgid "Evidence for H-"
+msgstr ""
+
+msgid "Evidence for H1:"
+msgstr ""
+
+msgid "Evidence for H+:"
+msgstr ""
+
+msgid "Evidence for H-:"
+msgstr ""
+
+msgid ""
+"could not calculate enough valid Bayes Factors for different values of the "
+"prior"
+msgstr ""
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] ""
+msgstr[1] ""
