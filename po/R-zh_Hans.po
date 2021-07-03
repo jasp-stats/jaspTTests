@@ -7,10 +7,10 @@ msgstr ""
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
-"X-Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Language: zh_Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.7.1-dev\n"
 
@@ -32,7 +32,11 @@ msgstr "假设检验"
 msgid "Descriptives"
 msgstr "描述性"
 
-msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgid ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
+"the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
+"em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
+"2001)."
 msgstr ""
 
 msgid "nDistinctObservations got an object of type"
@@ -87,10 +91,14 @@ msgstr "贝叶斯因子稳健性检验"
 msgid "Sequential Analysis"
 msgstr "序贯分析"
 
-msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgid ""
+"Bayes factor robustness check plot currently not supported for informed "
+"prior."
 msgstr "暂不支持先验的贝叶斯因子稳健性检查图。"
 
-msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgid ""
+"Sequential analysis robustness check plot currently not supported for "
+"informed prior."
 msgstr "暂不支持先验的序贯分析检验图。"
 
 msgid "Expected numeric or character rscale but got %s."
@@ -163,8 +171,11 @@ msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr "无法绘制后验图--可能是在0附近过于集中了。"
 
 #, fuzzy
-msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
-msgstr "t 值很大。使用 Savage-Dickey 近似来计算贝叶斯因子，但无法给出误差估计。"
+msgid ""
+"t-value is large. A Savage-Dickey approximation was used to compute the "
+"Bayes factor but no error estimate can be given."
+msgstr ""
+"t 值很大。使用 Savage-Dickey 近似来计算贝叶斯因子，但无法给出误差估计。"
 
 #, fuzzy
 msgid "No error estimate is available for normal priors."
@@ -177,16 +188,21 @@ msgid "Bayesian Independent Samples T-Test"
 msgstr "贝叶斯独立样本T检验"
 
 #, fuzzy
-msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgid ""
+"Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr "结果基于具有 5 个 %.0f 迭代链的数据增强算法。"
 
 msgid "error %"
 msgstr "误差 %"
 
-msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>."
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"is greater than group <em>%2$s</em>."
 msgstr "对于所有检验，备择假设指定组<em>%1$s</em>大于<em>%2$s</em>组。"
 
-msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is less than group <em>%2$s</em>."
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"is less than group <em>%2$s</em>."
 msgstr "对于所有检验，备择假设指定组<em>%1$s</em>小于<em>%2$s</em>组。"
 
 #, fuzzy
@@ -197,15 +213,21 @@ msgid "Bayesian One Sample T-Test"
 msgstr "贝叶斯单样本T检验"
 
 #, fuzzy
-msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"is greater than %s."
 msgstr "对于所有检验，备择假设指定总体均值大于 %s。"
 
 #, fuzzy
-msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"is less than %s."
 msgstr "对于所有检验，备择假设指定总体均值小于 %s。"
 
 #, fuzzy
-msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that the population mean "
+"differs from %s."
 msgstr "对于所有检验，备择假设指定总体均值与 %s 不同。"
 
 msgid "Bayesian Paired Samples T-Test"
@@ -281,14 +303,20 @@ msgid "SE Difference"
 msgstr ""
 
 #, fuzzy
-msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
-msgstr "对于%s，位置参数是由平均差值给出的。对于Mann-Whitney检验，位置参数由Hodges-Lehmann估计给出。"
+msgid ""
+"For the %s, location parameter is given by mean difference. For the Mann-"
+"Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"对于%s，位置参数是由平均差值给出的。对于Mann-Whitney检验，位置参数由Hodges-"
+"Lehmann估计给出。"
 
 #, fuzzy
 msgid "%1$s%% CI for %2$s"
 msgstr "%2$s 的 %1$s%% 置信区间"
 
-msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgid ""
+"For the Mann-Whitney test, effect size is given by the rank biserial "
+"correlation."
 msgstr "对于Mann-Whitney检验，效应量由等级双列相关度给出。"
 
 msgid "For the %1$s, effect size is given by %2$s."
@@ -313,13 +341,18 @@ msgstr ""
 msgid "less"
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
+"than group %3$s."
 msgstr ""
 
-msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgid ""
+"Levene's test is significant (p < .05), suggesting a violation of the equal "
+"variance assumption"
 msgstr ""
 
-msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgid ""
+"Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
 
 msgid "F-statistic could not be calculated"
@@ -349,19 +382,27 @@ msgstr ""
 msgid "Z-test"
 msgstr ""
 
-msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>."
+msgid ""
+"For the %s, location difference estimate is given by the sample mean "
+"difference <em>d</em>."
 msgstr ""
 
-msgid "For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgid ""
+"For the Wilcoxon test, location difference estimate is given by the Hodges-"
+"Lehmann estimate."
 msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
 
-msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgid ""
+"For the Wilcoxon test, effect size is given by the matched rank biserial "
+"correlation."
 msgstr ""
 
-msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgid ""
+"For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
+"provided population standard deviation)."
 msgstr ""
 
 msgid "greater than"
@@ -373,10 +414,14 @@ msgstr ""
 msgid "different from"
 msgstr ""
 
-msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgid ""
+"For the %1$s, the alternative hypothesis specifies that the mean is %2$s "
+"%3$s."
 msgstr ""
 
-msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgid ""
+"For the Wilcoxon test, the alternative hypothesis specifies that the median "
+"is %1$s %2$s."
 msgstr ""
 
 msgid "data are essentially constant"
@@ -385,28 +430,45 @@ msgstr ""
 msgid "Paired Samples T-Test"
 msgstr ""
 
-msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, effect size is given by the Hodges-Lehmann estimate."
+msgid ""
+"For the Student t-test, location parameter is given by mean difference "
+"<em>d</em>. For the Wilcoxon test, effect size is given by the Hodges-"
+"Lehmann estimate."
 msgstr ""
 
-msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgid ""
+"For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
+"Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is less "
+"than Measure 2."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is "
+"greater than Measure 2."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that %1s is less than %2s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that %1s is less than "
+"%2s."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that %1s is greater than %2s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that %1s is greater than "
+"%2s."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1s is less than %2s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is less "
+"than Measure 2. For example, %1s is less than %2s."
 msgstr ""
 
-msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1s is greater than %2s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that Measure 1 is "
+"greater than Measure 2. For example, %1s is greater than %2s."
 msgstr ""
 
 msgid "Evidence for H1"
@@ -430,7 +492,9 @@ msgstr ""
 msgid "Evidence for H-:"
 msgstr ""
 
-msgid "could not calculate enough valid Bayes Factors for different values of the prior"
+msgid ""
+"could not calculate enough valid Bayes Factors for different values of the "
+"prior"
 msgstr ""
 
 msgid "The following pair is duplicated: %s"

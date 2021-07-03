@@ -3,105 +3,103 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Language: pt\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr "Testes T"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr "Avaliar a diferença entre duas médias"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "Clássico"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "Teste T de Amostras Independentes"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Teste T de amostras pareadas"
+msgstr ""
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Teste T de Uma Amostra"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesiano"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "Teste T de Amostras Independentes Bayesianas"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Teste-t de amostras pareadas bayesianas"
+msgstr ""
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "Teste T Bayesiano de Uma Amostra"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "Variáveis Dependentes"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "Variável de Agrupamento"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Grupo 1 ≠ Grupo 2"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Grupo 1 > Grupo 2"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Grupo 1 < Grupo 2"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr "Anterior e posterior"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr "Informação adicional"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Verificação de robustez do fator Bayes"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr "Análise sequencial"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr "Verificação de robustez"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
@@ -151,45 +149,37 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr "Anterior e posterior"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr "Informação adicional"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr "Verificação de robustez do fator Bayes"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr "Análise sequencial"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr "Verificação de robustez"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
@@ -199,10 +189,9 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -252,10 +241,9 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -269,45 +257,37 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr "Anterior e posterior"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr "Informação adicional"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Verificação de robustez do fator Bayes"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr "Análise sequencial"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr "Verificação de robustez"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
@@ -353,15 +333,13 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "Variáveis Dependentes"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "Variável de Agrupamento"
+msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
@@ -407,10 +385,9 @@ msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
@@ -428,25 +405,21 @@ msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "Grupo 1 ≠ Grupo 2"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "Grupo 1 > Grupo 2"
+msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "Grupo 1 < Grupo 2"
+msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -516,10 +489,9 @@ msgctxt "TTestOneSample|"
 msgid "Effect Size"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
@@ -537,10 +509,9 @@ msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -606,10 +577,9 @@ msgctxt "TTestPairedSamples|"
 msgid "Effect Size"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr "Descritivas"
+msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
@@ -631,10 +601,9 @@ msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alt."
+msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"

@@ -1,26 +1,15 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-06-23 06:32+0000\n"
-"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
-"qml/ja/>\n"
-"Language: ja\n"
-"X-Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1-dev\n"
+"X-Language: ja\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
 msgstr "t検定"
-
-msgctxt "Description|"
-msgid ""
-"This module offers the standard Frequentist and Bayesian T-Tests analyses."
-msgstr ""
 
 msgctxt "Description|"
 msgid "Classical"
@@ -231,10 +220,6 @@ msgid "Exclude cases listwise"
 msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
-msgid "Variable pairs"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
 msgstr ""
 
@@ -312,10 +297,6 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
-msgid "Variables"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
@@ -451,10 +432,6 @@ msgid "Additional Statistics"
 msgstr ""
 
 msgctxt "TTestOneSample|"
-msgid "Location parameter"
-msgstr ""
-
-msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr ""
 
@@ -508,10 +485,6 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Variable pairs"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
@@ -588,4 +561,80 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Dependent Variables"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
 msgstr ""
