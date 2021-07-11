@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2021-06-28 08:32+0000\n"
-"Last-Translator: sun wong <shuonwang@gmail.com>\n"
+"PO-Revision-Date: 2021-07-12 13:33+0000\n"
+"Last-Translator: shun wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Language: zh_Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
+"X-Language: zh_Hans\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr "配对和双样本z检验尚未实现"
@@ -30,7 +30,7 @@ msgid "Assumption Checks"
 msgstr "假设检验"
 
 msgid "Descriptives"
-msgstr "描述性"
+msgstr "描述统计"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -58,10 +58,10 @@ msgid "Group"
 msgstr "分组"
 
 msgid "N"
-msgstr "个案数"
+msgstr "N"
 
 msgid "Mean"
-msgstr "平均值"
+msgstr "均值"
 
 msgid "SD"
 msgstr "标准差"
@@ -73,10 +73,10 @@ msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% 贝叶斯置信区间"
 
 msgid "Lower"
-msgstr "上界"
+msgstr "下限"
 
 msgid "Upper"
-msgstr "下界"
+msgstr "上限"
 
 msgid "Inferential Plots"
 msgstr "推断图"
@@ -84,7 +84,6 @@ msgstr "推断图"
 msgid "Prior and Posterior"
 msgstr "先验和后验"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
 msgstr "贝叶斯因子稳健性检验"
 
@@ -240,10 +239,10 @@ msgid "Mann-Whitney U test."
 msgstr "曼-惠特尼U检验。"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "Welch t检验"
 
 msgid "t"
 msgstr "t"
@@ -258,7 +257,7 @@ msgid "Test"
 msgstr "检验"
 
 msgid "df"
-msgstr "df"
+msgstr "自由度"
 
 msgid "p"
 msgstr "p"
@@ -267,7 +266,7 @@ msgid "Cohen's d"
 msgstr "Cohen's d"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "Glass' delta"
 
 msgid "Hedges' g"
 msgstr "Hedges' g"
@@ -300,7 +299,7 @@ msgid "Welch t-test"
 msgstr "韦尔奇t检验"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "SE 差异"
 
 #, fuzzy
 msgid ""
@@ -327,13 +326,13 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "正态性检验 (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "显着结果表明偏离正态性。"
 
 msgid "Test of Equality of Variances (Levene's)"
-msgstr ""
+msgstr "等方差(齐)性检验(Levene's)"
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "greater"
 msgstr ""
