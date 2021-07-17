@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2021-06-28 08:32+0000\n"
-"Last-Translator: sun wong <shuonwang@gmail.com>\n"
+"PO-Revision-Date: 2021-07-13 21:20+0000\n"
+"Last-Translator: shun wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Language: zh_Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
+"X-Language: zh_Hans\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr "配对和双样本z检验尚未实现"
@@ -30,7 +30,7 @@ msgid "Assumption Checks"
 msgstr "假设检验"
 
 msgid "Descriptives"
-msgstr "描述性"
+msgstr "描述统计"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -58,10 +58,10 @@ msgid "Group"
 msgstr "分组"
 
 msgid "N"
-msgstr "个案数"
+msgstr "N"
 
 msgid "Mean"
-msgstr "平均值"
+msgstr "均值"
 
 msgid "SD"
 msgstr "标准差"
@@ -73,10 +73,10 @@ msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% 贝叶斯置信区间"
 
 msgid "Lower"
-msgstr "上界"
+msgstr "下限"
 
 msgid "Upper"
-msgstr "下界"
+msgstr "上限"
 
 msgid "Inferential Plots"
 msgstr "推断图"
@@ -84,7 +84,6 @@ msgstr "推断图"
 msgid "Prior and Posterior"
 msgstr "先验和后验"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
 msgstr "贝叶斯因子稳健性检验"
 
@@ -107,7 +106,6 @@ msgstr "应为数字或字母值，但得到了 %s 。"
 msgid "Running robustness check %d / %d"
 msgstr "正在进行稳健性检查 %d / %d"
 
-#, fuzzy
 msgid "max BF%s"
 msgstr "最大 BF%s"
 
@@ -152,7 +150,6 @@ msgstr "效应量"
 msgid "Raincloud Plots"
 msgstr "雨云图"
 
-#, fuzzy
 msgid "Raincloud Difference Plots"
 msgstr "雨云差异图"
 
@@ -162,24 +159,19 @@ msgstr "无法计算贝叶斯因子"
 msgid "Bayes factor is infinite"
 msgstr "贝叶斯因子是无限的"
 
-#, fuzzy
 msgid "The Bayes factor is too small"
 msgstr "贝叶斯因子太小"
 
-#, fuzzy
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr "无法绘制后验图--可能是在0附近过于集中了。"
 
-#, fuzzy
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
-msgstr ""
-"t 值很大。使用 Savage-Dickey 近似来计算贝叶斯因子，但无法给出误差估计。"
+msgstr "t 值很大。使用 Savage-Dickey 近似来计算贝叶斯因子，但无法给出误差估计。"
 
-#, fuzzy
 msgid "No error estimate is available for normal priors."
-msgstr "对于正态先验，没有误差估计。"
+msgstr "对于正态先验，没有可用的误差估计。"
 
 msgid "Bayesian Mann-Whitney U Test"
 msgstr "贝叶斯 曼惠特尼 U 检验"
@@ -205,26 +197,22 @@ msgid ""
 "is less than group <em>%2$s</em>."
 msgstr "对于所有检验，备择假设指定组<em>%1$s</em>小于<em>%2$s</em>组。"
 
-#, fuzzy
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr "贝叶斯威尔科克森符号秩检验"
+msgstr "Bayesian Wilcoxon 符号秩检验"
 
 msgid "Bayesian One Sample T-Test"
 msgstr "贝叶斯单样本T检验"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is greater than %s."
 msgstr "对于所有检验，备择假设指定总体均值大于 %s。"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is less than %s."
 msgstr "对于所有检验，备择假设指定总体均值小于 %s。"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "differs from %s."
@@ -240,10 +228,10 @@ msgid "Mann-Whitney U test."
 msgstr "曼-惠特尼U检验。"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "Welch t检验"
 
 msgid "t"
 msgstr "t"
@@ -258,7 +246,7 @@ msgid "Test"
 msgstr "检验"
 
 msgid "df"
-msgstr "df"
+msgstr "自由度"
 
 msgid "p"
 msgstr "p"
@@ -267,7 +255,7 @@ msgid "Cohen's d"
 msgstr "Cohen's d"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "Glass' delta"
 
 msgid "Hedges' g"
 msgstr "Hedges' g"
@@ -300,7 +288,7 @@ msgid "Welch t-test"
 msgstr "韦尔奇t检验"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "SE 差异"
 
 #, fuzzy
 msgid ""
@@ -327,13 +315,13 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "正态性检验 (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "显着结果表明偏离正态性。"
 
 msgid "Test of Equality of Variances (Levene's)"
-msgstr ""
+msgstr "等方差(齐)性检验(Levene's)"
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "greater"
 msgstr ""

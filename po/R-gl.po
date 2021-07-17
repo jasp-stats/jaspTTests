@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2021-07-07 11:34+0000\n"
+"PO-Revision-Date: 2021-07-15 10:42+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/gl/>\n"
@@ -16,25 +16,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 "X-Virgin-Header: remove this line if you change anything in the header.\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
+msgstr "Aínda sen implementar a proba z de parellas e dúas mostras"
 
 msgid "not enough x observations"
 msgstr ""
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Aínda sen implementar"
 
 msgid "not enough y observations"
 msgstr ""
 
 msgid "Assumption Checks"
-msgstr "Comprobacións de supostos"
+msgstr "Comprobacións de Supostos"
 
 msgid "Descriptives"
 msgstr "Descritivos"
@@ -45,6 +45,10 @@ msgid ""
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
+"Máximo Cociente <em>p</em> de Vovk-Sellke: Baseado no valor <em>p</em> "
+"bilateral, a máxima probabilidade posible favorable a H%1$s sobre H%2$s "
+"igual a 1/(-e <em>p</em> log(<em>p</em>)) para <em>p</em> %3$s .37 (Sellke, "
+"Bayarri & Berger, 2001)."
 
 msgid "nDistinctObservations got an object of type"
 msgstr ""
@@ -71,13 +75,13 @@ msgid "Mean"
 msgstr "Media"
 
 msgid "SD"
-msgstr "DS"
+msgstr "EP"
 
 msgid "SE"
-msgstr "DT"
+msgstr "ET"
 
 msgid "%.0f%% Credible Interval"
-msgstr "Intervalo co %.0f%% de credibilidade"
+msgstr "Intervalo co %.0f%% de Credibilidade"
 
 msgid "Lower"
 msgstr "Inferior"
@@ -88,11 +92,9 @@ msgstr "Superior"
 msgid "Inferential Plots"
 msgstr "Gráficas inferenciais"
 
-#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Previo e posterior"
+msgstr "Previo e Posterior"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
 msgstr "Comprobación da robustez do factor de Bayes"
 
@@ -114,33 +116,29 @@ msgstr ""
 msgid "Expected numeric or character rscale but got %s."
 msgstr ""
 
-#, fuzzy
 msgid "Running robustness check %d / %d"
-msgstr "Comprobación da robustez"
+msgstr "Executando a comprobación da robustez %d / %d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "max FB%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "previo do usuario"
 
-#, fuzzy
 msgid "wide prior"
-msgstr "Amosar os previos"
+msgstr "previo do ancho"
 
-#, fuzzy
 msgid "ultrawide prior"
-msgstr "Representar os previos"
+msgstr "previo do ultraancho"
 
 msgid "BF%s"
-msgstr ""
+msgstr "FB%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s en r==%s"
 
-#, fuzzy
 msgid "Cauchy prior width"
-msgstr "Largura previa de beta estendida"
+msgstr "Anchura previa de Cauchy"
 
 #, fuzzy
 msgid "Running sequential analysis %d / %d"
@@ -149,25 +147,23 @@ msgstr "Análise secuencial"
 msgid "n"
 msgstr "n"
 
-#, fuzzy
 msgid "Posterior"
-msgstr "R² posterior"
+msgstr "Posterior"
 
 msgid "Prior"
 msgstr "Previo"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "IC do %s%%:"
 
 msgid "Effect size"
 msgstr "Magnitude do efecto"
 
-#, fuzzy
 msgid "Raincloud Plots"
-msgstr "Gráficas dos erros"
+msgstr "Gráficas de Nube chovendo"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Gráficas de Diferenzas de Nube chovendo"
 
 #, fuzzy
 msgid "Bayes factor could not be calculated"
@@ -177,12 +173,13 @@ msgstr "Cálculo do factor de Bayes"
 msgid "Bayes factor is infinite"
 msgstr "Factores de Bayes"
 
-#, fuzzy
 msgid "The Bayes factor is too small"
-msgstr "Matriz de factores de Bayes"
+msgstr "O factor de Bayes é demasiado pequeno"
 
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
+"Non pode representarse o posterior - posiblemente está demasiado concentrado "
+"preto do 0."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -395,7 +392,7 @@ msgid "Z test."
 msgstr "Proba KMO"
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 #, fuzzy
 msgid "Location Difference"
