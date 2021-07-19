@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-07-19 17:57+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/gl/>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
 "X-Qt-Contexts: true\n"
@@ -30,7 +36,7 @@ msgstr "D de Cohen"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
@@ -222,7 +228,7 @@ msgstr "Delta de Glass"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "Avaliar a diferenza entre dúas medias"
 
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
@@ -295,19 +301,17 @@ msgstr "Gráficas de nube chovendo"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
 msgstr "Probas"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
 msgstr "Student"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
@@ -317,10 +321,9 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
 msgstr "Número de mostras"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -386,7 +389,7 @@ msgstr "Gráficas de nube chovendo"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 #, fuzzy
 msgctxt "TTestBayesianOneSample|"
@@ -398,7 +401,6 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "Probas"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
 msgstr "Student"
@@ -418,10 +420,9 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
 msgstr "Estatísticos adicionais"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
@@ -433,7 +434,7 @@ msgstr "Excluír casos segundo a lista"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Parellas de Variables"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
@@ -475,14 +476,13 @@ msgstr "Gráficas de diferenzas de nube chovendo"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
 msgstr "Probas"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
 msgstr "Student"
@@ -497,10 +497,9 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
 msgstr "Estatísticos adicionais"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
@@ -520,7 +519,6 @@ msgctxt "TTestIndependentSamples|"
 msgid "Tests"
 msgstr "Probas"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
 msgstr "Student"
@@ -561,7 +559,7 @@ msgstr "Gráficas de nube chovendo"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -582,10 +580,9 @@ msgctxt "TTestIndependentSamples|"
 msgid "Normality"
 msgstr "Normalidade"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -605,7 +602,6 @@ msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "Probas"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
 msgstr "Student"
@@ -651,42 +647,35 @@ msgstr "Gráficas de nube chovendo"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Cociente p máximo de Vovk-Sellke"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese alternativa"
+msgstr "Hipótese Alternativa"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Valor a probar"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
 msgstr "> Valor a probar"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
 msgstr "< Valor a probar"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Normality"
 msgstr "Normalidade"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr "Valores ausentes"
+msgstr "Valores Ausentes"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per dependent variable"
@@ -698,9 +687,8 @@ msgstr "Excluír casos segundo a lista"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Parellas de Variables"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
 msgstr "Intervalo de confianza"
@@ -715,4 +703,4 @@ msgstr "Gráficas de diferenzas de nube chovendo"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
