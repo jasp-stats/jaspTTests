@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2021-07-13 21:20+0000\n"
+"PO-Revision-Date: 2021-07-20 19:06+0000\n"
 "Last-Translator: shun wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
@@ -179,7 +179,6 @@ msgstr "贝叶斯 曼惠特尼 U 检验"
 msgid "Bayesian Independent Samples T-Test"
 msgstr "贝叶斯独立样本T检验"
 
-#, fuzzy
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr "结果基于具有 5 个 %.0f 迭代链的数据增强算法。"
@@ -266,7 +265,6 @@ msgstr "平均差"
 msgid "Hodges-Lehmann Estimate"
 msgstr "霍奇斯-莱曼估计"
 
-#, fuzzy
 msgid "Rank-Biserial Correlation"
 msgstr "秩-双序列相关"
 
@@ -276,13 +274,11 @@ msgstr "位置参数"
 msgid "Effect Size"
 msgstr "效应量"
 
-#, fuzzy
 msgid "Student t-test and Welch t-test"
-msgstr "学生t检验和韦尔奇t检验"
+msgstr "Student t 检验和 Welch t检验"
 
-#, fuzzy
 msgid "Student t-test"
-msgstr "学生t检验"
+msgstr "Student t检验"
 
 msgid "Welch t-test"
 msgstr "韦尔奇t检验"
@@ -290,15 +286,11 @@ msgstr "韦尔奇t检验"
 msgid "SE Difference"
 msgstr "SE 差异"
 
-#, fuzzy
 msgid ""
 "For the %s, location parameter is given by mean difference. For the Mann-"
 "Whitney test, location parameter is given by the Hodges-Lehmann estimate."
-msgstr ""
-"对于%s，位置参数是由平均差值给出的。对于Mann-Whitney检验，位置参数由Hodges-"
-"Lehmann估计给出。"
+msgstr "对于%s，位置参数是由平均差值给出的。对于Mann-Whitney检验，位置参数由Hodges-Lehmann估计给出。"
 
-#, fuzzy
 msgid "%1$s%% CI for %2$s"
 msgstr "%2$s 的 %1$s%% 置信区间"
 
@@ -324,20 +316,20 @@ msgid "F"
 msgstr "F"
 
 msgid "greater"
-msgstr ""
+msgstr "更大"
 
 msgid "less"
-msgstr ""
+msgstr "更小"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定组 %1$s 是 %2$s，而不是组 %3$s。"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "
 "variance assumption"
-msgstr ""
+msgstr "Levene 检验显着 (p < .05)，表明违反了等方差假设"
 
 msgid ""
 "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
