@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-22 13:34+0000\n"
+"PO-Revision-Date: 2021-07-22 19:33+0000\n"
 "Last-Translator: Martin Constant <martinc.1994@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/fr/>\n"
@@ -574,7 +574,7 @@ msgstr "Évaluer la différence entre deux moyennes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
@@ -582,7 +582,7 @@ msgstr "Affichage horizontal"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
@@ -594,11 +594,11 @@ msgstr "Paires de variables"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr "Graphiques en nuage de pluie des différences"
+msgstr "Graphiques Raincloud des différences"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
@@ -610,7 +610,7 @@ msgstr "Variables dépendantes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
@@ -622,7 +622,7 @@ msgstr "Estimation d'emplacement"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
@@ -634,11 +634,11 @@ msgstr "Paires de variables"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr "Graphiques en nuages de pluie"
+msgstr "Graphiques Raincloud"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr "Graphiques en nuage de pluie des différences"
+msgstr "Graphiques Raincloud des différences"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
