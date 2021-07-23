@@ -1,645 +1,645 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-19 17:57+0000\n"
-"Last-Translator: shun wang <shuonwang@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"jasp/jaspttests-qml/zh_Hans/>\n"
-"Language: zh_Hans\n"
+"PO-Revision-Date: 2021-07-22 19:33+0000\n"
+"Last-Translator: Martin Constant <martinc.1994@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.7.2-dev\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr "T 检验"
-
-msgctxt "Description|"
-msgid "Evaluate the difference between two means"
-msgstr "评估两个均值之间的差异"
+msgstr "Tests T"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "经典"
+msgstr "Classiques"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "独立样本 T 检验"
+msgstr "Test T pour échantillons indépendants"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "配对样本 T 检验"
+msgstr "Test T pour échantillons appariés"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "单样本T检验"
+msgstr "Test T pour échantillon unique"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "贝叶斯方法"
+msgstr "Bayésiens"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "贝叶斯独立样本T 检验"
+msgstr "Test T bayésien pour échantillons indépendants"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "贝叶斯配对样本T检验"
+msgstr "Test T bayésien pour échantillons appariés"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "贝叶斯单样本T检验"
+msgstr "Test T bayésien pour échantillon unique"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "因变量"
+msgstr "Variables dépendantes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "分组变量"
+msgstr "Variable de regroupement"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "组1 ≠ 组2"
+msgstr "Groupe 1 ≠ Groupe 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "组1 ＞ 组2"
+msgstr "Groupe 1 > Groupe 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "组1 ＜ 组2"
+msgstr "Groupe 1 < Groupe 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr "绘图"
+msgstr "Graphiques"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr "先验和后验"
+msgstr "Antérieur et postérieur"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr "附加信息"
+msgstr "Informations supplémentaires"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr "可信区间"
+msgstr "Intervalle de crédibilité"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr "贝叶斯因子稳健性检验"
+msgstr "Vérification de la robustesse du facteur de Bayes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr "序贯分析"
+msgstr "Analyse séquentielle"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr "稳健性检验"
+msgstr "Contrôle de robustesse"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr "描述统计"
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Descriptifs"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "Mann-Whitney 检验"
+msgstr "Mann-Whitney"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
-msgstr "样本数量"
+msgstr "Nbre d'échantillons"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "Exclure les observations par liste"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr "变量"
+msgstr "Variables"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr "检验值："
+msgstr "Valeur de test :"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr "绘图"
+msgstr "Graphiques"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr "先验和后验"
+msgstr "Antérieur et postérieur"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr "附加信息"
+msgstr "Informations supplémentaires"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr "可信区间"
+msgstr "Intervalle de crédibilité"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr "贝叶斯因子稳健性检验"
+msgstr "Vérification de la robustesse du facteur de Bayes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr "序贯分析"
+msgstr "Analyse séquentielle"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr "稳健性检验"
+msgstr "Contrôle de robustesse"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr "描述统计"
-
-msgctxt "TTestBayesianOneSample|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestBayesianOneSample|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Descriptifs"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr "≠ 检验值"
+msgstr "≠ Valeur de test"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr "＞ 检验值"
+msgstr "> Valeur de test"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr "< 检验值"
+msgstr "< Valeur de test"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon 符号秩检验"
+msgstr "Rangs signés de Wilcoxon"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr "样本数量"
+msgstr "Nbre d'échantillons"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Variable Pairs"
-msgstr "变量对"
+msgstr "Exclure les observations par liste"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr "测量值 1 ≠ 测量值 2"
+msgstr "Mesure 1 ≠ Mesure 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr "测量值 1 ＞ 测量值 2"
+msgstr "Mesure 1 > Mesure 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr "测量值 1 ＜ 测量值 2"
+msgstr "Mesure 1 < Mesure 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr "绘图"
+msgstr "Graphiques"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr "先验和后验"
+msgstr "Antérieur et postérieur"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr "附加信息"
+msgstr "Informations supplémentaires"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr "可信区间"
+msgstr "Intervalle de crédibilité"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr "贝叶斯因子稳健性检验"
+msgstr "Vérification de la robustesse du facteur de Bayes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr "序贯分析"
+msgstr "Analyse séquentielle"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr "稳健性检验"
+msgstr "Contrôle de robustesse"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr "描述统计"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Raincloud difference plots"
-msgstr "雨云差异图"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Descriptifs"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon 符号秩检验"
+msgstr "Rangs signés de Wilcoxon"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr "样本数量"
+msgstr "Nbre d'échantillons"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Dependent Variables"
-msgstr "因变量"
+msgstr "Exclure les observations par liste"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "分组变量"
+msgstr "Variable de regroupement"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr "Welch 检验"
+msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "Mann-Whitney 检验"
+msgstr "Mann-Whitney"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr "位置参数"
+msgstr "Paramètre d'emplacement"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr "置信区间"
+msgstr "Intervalle de confiance"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect Size"
-msgstr "效应量"
+msgstr "Taille d'effet"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr "Cohen's d 检验"
+msgstr "d de Cohen"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr "Glass' delta"
+msgstr "delta de Glass"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr "Hedges' g"
+msgstr "g de Hedges"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr "描述统计"
+msgstr "Descriptifs"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr "描述图"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Graphiques descriptifs"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "组1 ≠ 组2"
+msgstr "Groupe 1 ≠ Groupe 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr "组1 ＞ 组2"
+msgstr "Groupe 1 > Groupe 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr "组1 ＜ 组2"
+msgstr "Groupe 1 < Groupe 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr "假设检验"
+msgstr "Vérifications des présupposés"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
-msgstr "正态性"
+msgstr "Normalité"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
-msgstr "方差齐性"
+msgstr "Égalité des variances"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "Exclure les observations par liste"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr "变量"
+msgstr "Variables"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon 符号秩检验"
+msgstr "Rangs signés de Wilcoxon"
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr "Z检验"
+msgstr "Test Z"
 
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr "检验值："
+msgstr "Valeur de test :"
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr "标准差："
+msgstr "Écart type :"
 
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr "附加统计"
-
-msgctxt "TTestOneSample|"
-msgid "Location estimate"
-msgstr "位置估计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
-msgstr "置信区间"
+msgstr "Intervalle de confiance"
 
 msgctxt "TTestOneSample|"
 msgid "Effect Size"
-msgstr "效应量"
+msgstr "Taille d'effet"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr "描述统计"
+msgstr "Descriptifs"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr "描述图"
-
-msgctxt "TTestOneSample|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestOneSample|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Graphiques descriptifs"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr "≠ 检验值"
+msgstr "≠ Valeur de test"
 
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr "＞ 检验值"
+msgstr "> Valeur de test"
 
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr "＜ 检验值"
+msgstr "< Valeur de test"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr "假设检验"
+msgstr "Vérifications des présupposés"
 
 msgctxt "TTestOneSample|"
 msgid "Normality"
-msgstr "正态性"
+msgstr "Normalité"
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
-
-msgctxt "TTestPairedSamples|"
-msgid "Variable Pairs"
-msgstr "变量配对"
+msgstr "Exclure les observations par liste"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr "检验"
+msgstr "Tests"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr "Student 检验"
+msgstr "Student"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon 符号秩检验"
+msgstr "Rangs signés de Wilcoxon"
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "Statistiques supplémentaires"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr "位置参数"
+msgstr "Paramètre d'emplacement"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr "置信区间"
+msgstr "Intervalle de confiance"
 
 msgctxt "TTestPairedSamples|"
 msgid "Effect Size"
-msgstr "效应量"
+msgstr "Taille d'effet"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr "描述统计"
+msgstr "Descriptifs"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr "描述图"
-
-msgctxt "TTestPairedSamples|"
-msgid "Raincloud plots"
-msgstr "雨云图"
-
-msgctxt "TTestPairedSamples|"
-msgid "Raincloud difference plots"
-msgstr "雨云差异图"
-
-msgctxt "TTestPairedSamples|"
-msgid "Horizontal display"
-msgstr "水平显示"
+msgstr "Graphiques descriptifs"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr "备择假设"
+msgstr "Hypothèse alt."
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr "测量值1 ≠ 测量值2"
+msgstr "Mesure 1 ≠ Mesure 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr "测量值1 ＞ 测量值2"
+msgstr "Mesure 1 > Mesure 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr "测量值1 ＜ 测量值2"
+msgstr "Mesure 1 < Mesure 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr "假设检验"
+msgstr "Vérifications des présupposés"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
-msgstr "正态性"
+msgstr "Normalité"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "Valeurs manquantes"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
+msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "Exclure les observations par liste"
+
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr "Évaluer la différence entre deux moyennes"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr "Paires de variables"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr "Graphiques Raincloud des différences"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Dependent Variables"
+msgstr "Variables dépendantes"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr "Estimation d'emplacement"
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr "Paires de variables"
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr "Graphiques Raincloud"
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr "Graphiques Raincloud des différences"
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
+msgstr "Affichage horizontal"
