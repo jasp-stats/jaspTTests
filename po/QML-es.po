@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-08-09 00:37+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8-dev\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -49,67 +55,67 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Variable de Agrupación"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Grupo 1 ≠ Grupo 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Grupo 1 > Grupo 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Grupo 1 < Grupo 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Gráficos"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Previo y posterior"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Información adicional"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Comprobación de la robustez del factor de Bayes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Análisis secuencial"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Comprobación de robustez"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
@@ -117,23 +123,23 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "Variables"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
@@ -141,59 +147,59 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Gráficos"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Previo y posterior"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "Información adicional"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Comprobación de la robustez del factor de Bayes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Análisis secuencial"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Comprobación de robustez"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Valor de prueba"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Valor de prueba"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Valor de prueba"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -205,75 +211,75 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "Medida 1 ≠ Medida 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "Medida 1 > Medida 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "Medida 1 < Medida 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Gráficos"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Previo y posterior"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Información adicional"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Comprobación de la robustez del factor de Bayes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Análisis secuencial"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Comprobación de robustez"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -285,51 +291,51 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Variable de Agrupación"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr ""
+msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Parámetro de situación"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Intervalo de confianza"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect Size"
@@ -337,79 +343,79 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr ""
+msgstr "D de Cohen"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr ""
+msgstr "Delta de Glass"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr ""
+msgstr "G de Hedges"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Gráficos descriptivos"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Relación p máxima de Vovk-Sellke"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Grupo 1 ≠ Grupo 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Grupo 1 > Grupo 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Grupo 1 < Grupo 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Verificaciones de Supuestos"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "Normalidad"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
-msgstr ""
+msgstr "Igualdad de varianzas"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "Variables"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -429,7 +435,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
@@ -441,11 +447,11 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Gráficos descriptivos"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -453,47 +459,47 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Valor de prueba"
 
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Valor de prueba"
 
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Valor de prueba"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "Verificaciones de supuestos"
 
 msgctxt "TTestOneSample|"
 msgid "Normality"
-msgstr ""
+msgstr "Normalidad"
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Contrastes"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -501,15 +507,15 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estadísticas Adicionales"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Parámetro de situación"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Intervalo de confianza"
 
 msgctxt "TTestPairedSamples|"
 msgid "Effect Size"
@@ -517,55 +523,55 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptivos"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Gráficos descriptivos"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Relación p máxima de Vovk-Sellke"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "Medida 1 ≠ Medida 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "Medida 1 > Medida 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "Medida 1 < Medida 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Verificaciones de Supuestos"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "Normalidad"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Valores Perdidos"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Excluir casos por variable dependiente"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Excluir casos según la lista"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "Evaluar la diferencia entre dos medias"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
