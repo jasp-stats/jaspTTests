@@ -477,6 +477,14 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     groups  <- rep(pair, each = nrow(dataset))
     subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
     if(ready){
+      errors <- .hasErrors(dataset, 
+                       message = 'short', 
+                       type = c('variance', 'infinity'),
+                       all.target = pair)
+      if(!identical(errors, FALSE)) {
+        descriptivesPlotRainCloud$setError(errors$message)
+        next
+      }
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
@@ -507,6 +515,14 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
     subData   <- data.frame(dependent = dependent, groups = groups)
     if(ready){
+      errors <- .hasErrors(dataset, 
+                       message = 'short', 
+                       type = c('variance', 'infinity'),
+                       all.target = pair)
+      if(!identical(errors, FALSE)) {
+        descriptivesPlotRainCloud$setError(errors$message)
+        next
+      }
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloudDifference$setError(.extractErrorMessage(p))

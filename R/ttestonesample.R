@@ -365,7 +365,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   container <- jaspResults[["ttestDescriptives"]]
   container[["plots"]] <- createJaspContainer(gettext("Descriptives Plots"))
   subcontainer <- container[["plots"]]
-  container$position <- 5
+  subcontainer$position <- 5
   for(variable in options$variables) {
     if(!is.null(subcontainer[[variable]]))
       next
@@ -446,6 +446,15 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     groups  <- rep("1", nrow(dataset))
     subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
     if(ready){
+      errors <- .hasErrors(dataset, 
+                       message = 'short', 
+                       type = c('observations', 'variance', 'infinity'),
+                       all.target = variable,
+                       observations.amount = c('< 2'))
+      if(!identical(errors, FALSE)) {
+        descriptivesPlotRainCloud$setError(errors$message)
+        next
+      }
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
