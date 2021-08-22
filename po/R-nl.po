@@ -3,26 +3,29 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2020-01-29 14:35\n"
-"Last-Translator: JASP <info@jasp-stats.org>\n"
-"Language-Team: JASP <info@jasp-stats.org>\n"
+"PO-Revision-Date: 2021-08-25 17:35+0000\n"
+"Last-Translator: D.J. Dekker <dj_dekker@hotmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1\n"
+"Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
+"Z.test voor afhankelijke en gepaarde steekproeven nog niet geïmplementeerd"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "niet genoeg x-observaties"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Nog niet geïmplementeerd"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "niet genoeg y-observaties"
 
 msgid "Assumption Checks"
 msgstr "Verificatie van aannames"
@@ -42,13 +45,13 @@ msgstr ""
 "%3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "nDistinctObservations got an object of type"
-msgstr ""
+msgstr "nDistinctObservations heeft een object van type"
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "Please provide another variable."
-msgstr "Geef a.u.b. een andere variabele."
+msgstr "Geef a.u.b. een andere variable."
 
 msgid "Variables %s and %s are the same!"
 msgstr "Variabelen %s en %s zijn hetzelfde!"
@@ -119,16 +122,16 @@ msgid "user prior"
 msgstr "gebruikersprior"
 
 msgid "wide prior"
-msgstr "Brede prior"
+msgstr "brede prior"
 
 msgid "ultrawide prior"
-msgstr "Zeer brede prior"
+msgstr "zeer brede prior"
 
 msgid "BF%s"
 msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr "%s met r==%s"
+msgstr "%s bij r==%s"
 
 msgid "Cauchy prior width"
 msgstr "Cauchy prior breedte"
@@ -152,11 +155,10 @@ msgid "Effect size"
 msgstr "Effectgrootte"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Raincloud Plots"
 
-#, fuzzy
 msgid "Raincloud Difference Plots"
-msgstr "Gemiddeld Verschil"
+msgstr "Raincloud Difference Plots"
 
 msgid "Bayes factor could not be calculated"
 msgstr "Bayes factor kon niet worden berekend"
@@ -210,7 +212,7 @@ msgstr ""
 "em> kleiner less dan groep <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr "Bayesiaanse Wilcoxon rangtekentoets."
+msgstr "Bayesiaanse Wilcoxon rangtekentoets"
 
 msgid "Bayesian One Sample T-Test"
 msgstr "Bayesiaanse T-Toets voor Eén Gemiddelde"
@@ -270,7 +272,7 @@ msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr "Cohen's d"
+msgstr "Cohens d"
 
 msgid "Glass' delta"
 msgstr "Glass' delta"
@@ -291,7 +293,7 @@ msgid "Location Parameter"
 msgstr "Locatieparameter"
 
 msgid "Effect Size"
-msgstr "Effect grootte"
+msgstr "Effectgrootte"
 
 msgid "Student t-test and Welch t-test"
 msgstr "Student t-toets en Welch t-toets"
@@ -392,20 +394,19 @@ msgstr "Student t-toets en z-toets"
 msgid "Z-test"
 msgstr "z-toets"
 
-#, fuzzy
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>."
 msgstr ""
-"Voor de %s wordt locatieparameter gegeven door gemiddeld verschil <em>d</em>."
+"Schatting van locatieparameter wordt voor %s gegeven door verschil van "
+"steekproevengemiddelde <em>d</em>."
 
-#, fuzzy
 msgid ""
 "For the Wilcoxon test, location difference estimate is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"Voor de Wilcoxontoets wordt de locatieparameter gegeven door de Hodges-"
-"Lehmann schatting."
+"Voor de Wilcoxontoets wordt de schatting van de locatieparameter gegeven "
+"door de Hodges-Lehmannschatting."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
