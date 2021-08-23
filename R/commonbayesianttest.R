@@ -2202,7 +2202,7 @@
       errors <- .hasErrors(dataset, 
                        message = 'short', 
                        type = c('variance', 'infinity'),
-                       all.target = variable)
+                       all.target = pair)
       if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
@@ -2241,7 +2241,7 @@
     errors <- .hasErrors(dataset, 
                        message = 'short', 
                        type = c('variance', 'infinity'),
-                       all.target = variable)
+                       all.target = pair)
     if(!isFALSE(errors)) {
       descriptivesPlotRainCloud$setError(errors$message)
       next
