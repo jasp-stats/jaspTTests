@@ -2155,7 +2155,7 @@
                        type = c('observations', 'variance', 'infinity'),
                        all.target = variable,
                        observations.amount = c('< 2'))
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }
@@ -2181,7 +2181,7 @@
                        all.target = variable,
                        observations.amount = c('< 2'),
                        observations.grouping = groups)
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }
@@ -2203,7 +2203,7 @@
                        message = 'short', 
                        type = c('variance', 'infinity'),
                        all.target = variable)
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }
@@ -2242,7 +2242,7 @@
                        message = 'short', 
                        type = c('variance', 'infinity'),
                        all.target = variable)
-    if(!identical(errors, FALSE)) {
+    if(!isFALSE(errors)) {
       descriptivesPlotRainCloud$setError(errors$message)
       next
     }

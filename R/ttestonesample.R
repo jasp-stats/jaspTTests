@@ -451,7 +451,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                        type = c('observations', 'variance', 'infinity'),
                        all.target = variable,
                        observations.amount = c('< 2'))
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }

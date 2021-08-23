@@ -481,7 +481,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                        message = 'short', 
                        type = c('variance', 'infinity'),
                        all.target = pair)
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }
@@ -519,7 +519,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                        message = 'short', 
                        type = c('variance', 'infinity'),
                        all.target = pair)
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }

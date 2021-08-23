@@ -643,7 +643,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
                        all.target = variable,
                        observations.amount = c('< 2'),
                        observations.grouping = groups)
-      if(!identical(errors, FALSE)) {
+      if(!isFALSE(errors)) {
         descriptivesPlotRainCloud$setError(errors$message)
         next
       }
