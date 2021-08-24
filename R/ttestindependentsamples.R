@@ -629,14 +629,20 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   subcontainer <- container[["plotsRainCloud"]]
   subcontainer$position <- 6
   horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
-  for(variable in options$variables) {
-    if(!is.null(subcontainer[[variable]]))
-      next
-    descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
-    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
-    subcontainer[[variable]] <- descriptivesPlotRainCloud
-    if(ready){
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, options$groupingVariable, variable, options$groupingVariable, addLines = FALSE, horiz, NULL))
+  if(ready){
+    groups <- options$groupingVariable
+    errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "independent")
+    for(variable in options$variables) {
+      if(!is.null(subcontainer[[variable]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      subcontainer[[variable]] <- descriptivesPlotRainCloud
+      if(!isFALSE(errors[[variable]])) {
+        descriptivesPlotRainCloud$setError(errors[[variable]]$message)
+        next
+      }
+      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, groups, variable, groups, addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else

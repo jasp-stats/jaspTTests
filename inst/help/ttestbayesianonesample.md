@@ -59,6 +59,8 @@ Test value specified in the null hypothesis.
   - Robustness check: Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
 - Descriptives plots
   - Credible interval: Default is 95%.
+- Raincloud plots: Displays the individual cases, box plot, and density.
+  - Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 
 #### Missing Values
  - Exclude cases per dependent variable: In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test.
@@ -94,6 +96,7 @@ Test value specified in the null hypothesis.
   - Robustness check: Displays the development of the Bayes factor as a function of the number of data points (n) using the wide and ultrawide prior distribution. The black circle represents the Bayes factor computed with a wide prior distribution; the white circle represents the Bayes factor computed with an ultrawide prior distribution; the gray circle represents the Bayes factor computed with the user-defined prior distribution.
 - Descriptives plots
   - Credible interval: Default is 95%.
+- Raincloud plots: Displays the individual cases (colored dots), box plot, and density of the sample. The y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).
 
 ### References
 ---
@@ -101,6 +104,7 @@ Test value specified in the null hypothesis.
 - Jeffreys, H. (1961).  *Theory of probability (3rd ed.)*. Oxford, UK: Oxford University Press.
 - Morey, R. D., Rouder, J. N., Pratte, M. S., & Speckman, P. L. (2011). Using MCMC chain outputs to efficiently estimate Bayes factors.  *Journal of Mathematical Psychology, 55*, 368-378.
 - Rouder, J. N., Speckman, P. L., Sun, D., Morey, R. D., & Iverson, G. (2009). Bayesian t-tests for accepting and rejecting the null hypothesis.  *Psychonomic Bulletin & Review, 16*, 225-237.
+- Silverman, B. W. (1986). *Density Estimation*. London: Chapman and Hall.
 - van Doorn, J., Ly, A., Marsman, M., & Wagenmakers, E.-J. (2020). Bayesian rank-based hypothesis testing for the rank sum test, the signed rank test, and Spearman’s ρ. *Journal of Applied Statistics, 47(16)*, 2984-3006.
 
 ### R-packages

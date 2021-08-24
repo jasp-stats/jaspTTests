@@ -36,6 +36,8 @@ The one sample t-test allows the user to estimate the effect size and test the n
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.
 - Descriptive plots: Displays the sample mean and the confidence interval.
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+- Raincloud plots: Displays the individual cases, box plot, and density.
+  - Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 - Vovk-Sellke Maximum *p*-Ratio: The bound 1/(-e *p* log(*p*)) is derived from the shape of the *p*-value distribution. Under the null hypothesis (H<sub>0</sub>) it is uniform(0,1), and under the alternative (H<sub>1</sub>) it is decreasing in *p*, e.g., a beta(&#945;, 1) distribution, where 0 < &#945; < 1. The Vovk-Sellke MPR is obtained by choosing the shape &#945; of the distribution under H<sub>1</sub> such that the obtained *p*-value is *maximally diagnostic*. The value is then the ratio of the densities at point *p* under H<sub>0</sub> and H<sub>1</sub>. For example, if the two-sided *p*-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this *p*-value is at most 2.46 times more likely to occur under H<sub>1</sub> than under H<sub>0</sub>.
 
 #### Missing Values
@@ -78,10 +80,14 @@ Test of Normality (Shapiro-Wilk)
 #### Descriptive Plots
 - Displays the sample mean (black bullet), the % confidence interval (whiskers), and the value of the test statistic (dashed line).
 
+##### Raincloud Plots
+- Displays the individual cases (colored dots), box plot, and density of the sample. The y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).
+
 ### References
 -------
 - Moore, D. S., McCabe, G. P., & Craig, B. A. (2012). *Introduction to the practice of statistics (7th ed.)*. New York, NY: W. H. Freeman and Company.
 - Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of *p* values for testing precise null hypotheses. *The American Statistician, 55*(1), 62-71.
+- Silverman, B. W. (1986). *Density Estimation*. London: Chapman and Hall.
 - Whitlock, M. C., & Schluter, D. (2015). *The analysis of biological data (2nd ed.)*. Greenwood Village, Colorado: Roberts and Company Publishers.
 
 ### R-packages

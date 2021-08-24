@@ -467,16 +467,21 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
   subcontainer <- container[["plotsRainCloud"]]
   subcontainer$position <- 6
-  for(pair in options$pairs) {
-    title <- paste(pair, collapse = " - ")
-    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
-      next
-    descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
-    descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
-    subcontainer[[title]] <- descriptivesPlotRainCloud
-    groups  <- rep(pair, each = nrow(dataset))
-    subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
-    if(ready){
+  if(ready){
+    errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
+    for(pair in options$pairs) {
+      title <- paste(pair, collapse = " - ")
+      if(!is.null(subcontainer[[title]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
+      subcontainer[[title]] <- descriptivesPlotRainCloud
+      if(!isFALSE(errors[[title]])) {
+        descriptivesPlotRainCloud$setError(errors[[title]]$message)
+        next
+      }
+      groups  <- rep(pair, each = nrow(dataset))
+      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
@@ -496,17 +501,22 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   subcontainer <- container[["plotsRainCloudDifference"]]
   subcontainer$position <- 7
   horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
-  for(pair in options$pairs) {
-    title <- paste(pair, collapse = " - ")
-    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
-      next
-    descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
-    descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
-    subcontainer[[title]] <- descriptivesPlotRainCloudDifference
-    groups    <- rep("1", nrow(dataset))
-    dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
-    subData   <- data.frame(dependent = dependent, groups = groups)
-    if(ready){
+  if(ready){
+    errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
+    for(pair in options$pairs) {
+      title <- paste(pair, collapse = " - ")
+      if(!is.null(subcontainer[[title]]))
+        next
+      descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
+      descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
+      subcontainer[[title]] <- descriptivesPlotRainCloudDifference
+      if(!isFALSE(errors[[title]])) {
+        descriptivesPlotRainCloudDifference$setError(errors[[title]]$message)
+        next
+      }
+      groups    <- rep("1", nrow(dataset))
+      dependent <- dataset[, pair[[1]]] - dataset[, pair[[2]]]
+      subData   <- data.frame(dependent = dependent, groups = groups)
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", title, "", addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloudDifference$setError(.extractErrorMessage(p))
