@@ -2143,6 +2143,7 @@
   subcontainer$dependOn(c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
   subcontainer$position <- 6
   horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   if (analysis == "one-sample") {
     for(variable in options$variables) {
       if(!is.null(subcontainer[[variable]]))
@@ -2150,13 +2151,8 @@
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
-      errors <- .hasErrors(dataset, 
-                       message = 'short', 
-                       type = c('observations', 'variance', 'infinity'),
-                       all.target = variable,
-                       observations.amount = c('< 2'))
-      if(!isFALSE(errors)) {
-        descriptivesPlotRainCloud$setError(errors$message)
+      if(!isFALSE(errors[[variable]])) {
+        descriptivesPlotRainCloud$setError(errors[[variable]]$message)
         next
       }
       groups  <- rep("1", nrow(dataset))
@@ -2175,14 +2171,8 @@
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
-      errors <- .hasErrors(dataset, 
-                       message = 'short', 
-                       type = c('observations', 'variance', 'infinity'),
-                       all.target = variable,
-                       observations.amount = c('< 2'),
-                       observations.grouping = groups)
-      if(!isFALSE(errors)) {
-        descriptivesPlotRainCloud$setError(errors$message)
+      if(!isFALSE(errors[[variable]])) {
+        descriptivesPlotRainCloud$setError(errors[[variable]]$message)
         next
       }
       p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, groups, variable, groups, addLines = FALSE, horiz, NULL))
@@ -2199,12 +2189,8 @@
       descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
       descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
       subcontainer[[title]] <- descriptivesPlotRainCloud
-      errors <- .hasErrors(dataset, 
-                       message = 'short', 
-                       type = c('variance', 'infinity'),
-                       all.target = pair)
-      if(!isFALSE(errors)) {
-        descriptivesPlotRainCloud$setError(errors$message)
+      if(!isFALSE(errors[[title]])) {
+        descriptivesPlotRainCloud$setError(errors[[title]]$message)
         next
       }
       groups  <- rep(pair, each = nrow(dataset))
@@ -2231,19 +2217,16 @@
   subcontainer$dependOn(c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
   subcontainer$position <- 7
   horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
+  errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   for(pair in options$pairs) {
     title <- paste(pair, collapse = " - ")
-    if(!is.null(subcontainer[[title]]) || any(unlist(pair) == ""))
+    if(!is.null(subcontainer[[title]]))
       next
     descriptivesPlotRainCloudDifference <- createJaspPlot(title = title, width = 480, height = 320)
     descriptivesPlotRainCloudDifference$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotRainCloudDifference
-    errors <- .hasErrors(dataset, 
-                       message = 'short', 
-                       type = c('variance', 'infinity'),
-                       all.target = pair)
-    if(!isFALSE(errors)) {
-      descriptivesPlotRainCloud$setError(errors$message)
+    if(!isFALSE(errors[[title]])) {
+      descriptivesPlotRainCloudDifference$setError(errors[[title]]$message)
       next
     }
     groups    <- rep("1", nrow(dataset))
