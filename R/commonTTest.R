@@ -487,11 +487,24 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   pointBoxDf <- data.frame(xj = xj, xb = xb, y = y, grp = grp)
 
-  dens    <- tapply(y, as.factor(grp), density)
-  xDens   <- unlist(lapply(dens, function(x) x[["x"]]))
-  yDens   <- unlist(lapply(dens, function(x) x[["y"]]))
-  yDensN  <- (yDens - min(yDens))/(max(yDens) - min(yDens)) * 0.5
-  grpDens <- rep(1:length(dens), each = length(dens[[1]]$x)) - 1
+  # no. points to fill in the line from the end points of the density
+  # this line is essentially constant, but it is necessary to add multiple points in case someone
+  # cuts of the end points with plot editing.
+  noAddedPoints <- 2^7 # 128
+  noDensityPoints <- 2^9 # 512, the default for density
+
+  dens    <- tapply(y, as.factor(grp), density, n = noDensityPoints)
+  xDens   <- unlist(lapply(dens, function(x) {
+    xr <- range(x[["x"]])
+    # note: the order (right to left) matters.
+    c(x[["x"]], seq(xr[2L], xr[1L], length.out = noAddedPoints))
+    }), use.names = FALSE)
+  yDens   <- unlist(lapply(dens, function(x) {
+    c(x[["y"]], rep(0, noAddedPoints))
+  }), use.names = FALSE)
+
+  yDensN  <- (yDens - min(yDens)) / (max(yDens) - min(yDens)) * 0.5
+  grpDens <- rep(seq_along(dens), each = noDensityPoints + noAddedPoints) - 1
 
   if (horiz)
     yDensNpos <- yDensN + grpDens
