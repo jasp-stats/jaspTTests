@@ -41,18 +41,18 @@
 
 .dprior_informative <- function(delta, oneSided = FALSE, options) {
   isDefault <- options[["effectSizeStandardized"]] == "default"
-  
+
   if(isDefault) {
     cauchyLocation <- 0
     cauchyScale    <- options[["priorWidth"]]
   } else {
-    cauchyLocation <- options[["informativeCauchyLocation"]] 
+    cauchyLocation <- options[["informativeCauchyLocation"]]
     cauchyScale    <- options[["informativeCauchyScale"]]
   }
-  
+
   if (options[["informativeStandardizedEffectSize"]] == "cauchy" || isDefault) {
     out <- .dtss(delta, mu.delta = cauchyLocation, r = cauchyScale, kappa = 1)
-    
+
     if (oneSided == "right") {
       out <- ifelse(delta < 0, 0, out/integrate(.dtss, 0, Inf,
                                                 mu.delta = cauchyLocation,
@@ -146,7 +146,7 @@
                              prior.location = prior.location, prior.scale = prior.scale, prior.df = prior.df) - q) /
                       .posterior_t(x.cur, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
                                    prior.location = prior.location, prior.scale = prior.scale, prior.df = prior.df)
-    
+
     if(is.infinite(x.new)) # possibly due to dividing by posterior density = 0
       stop("Cannot plot the posterior - possibly too concentrated near 0.")
     i <- i + 1
@@ -163,7 +163,7 @@
 
   postAreaSmaller0 <- .cdf_t(x = 0, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
                              prior.location = prior.location, prior.scale = prior.scale, prior.df = prior.df)
-  
+
   if (oneSided == "right") {
 
     lower <- postAreaSmaller0 + (1 - postAreaSmaller0) * lower
@@ -232,7 +232,7 @@
                                   prior.mean = prior.mean, prior.variance = prior.variance) - q) /
                       .posterior_normal(x.cur, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
                                         prior.mean = prior.mean, prior.variance = prior.variance)
-    
+
     if(is.infinite(x.new)) # possibly due to dividing by posterior density = 0
       stop("Cannot plot the posterior - possibly too concentrated near 0.")
     i <- i + 1
@@ -252,7 +252,7 @@
   postAreaSmaller0 <- .cdf_normal(x = 0, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
                                  prior.mean = prior.mean, prior.variance = prior.variance)
 
-  
+
   if (oneSided == "right") {
 
     lower <- postAreaSmaller0 + (1 - postAreaSmaller0) * lower
@@ -277,16 +277,16 @@
 
 .dposterior_informative <- function(delta, t, n1, n2 = NULL, paired = FALSE, oneSided = FALSE, options) {
   isDefault <- options[["effectSizeStandardized"]] == "default"
-  
+
   if(isDefault) {
     cauchyLocation <- 0
     cauchyScale    <- options[["priorWidth"]]
   } else {
-    cauchyLocation <- options[["informativeCauchyLocation"]] 
+    cauchyLocation <- options[["informativeCauchyLocation"]]
     cauchyScale    <- options[["informativeCauchyScale"]]
   }
-  
-  
+
+
   if (options[["informativeStandardizedEffectSize"]] == "cauchy" || isDefault) {
     out <- .posterior_t(delta, t = t, n1 = n1, n2 = n2, independentSamples = ! paired && !is.null(n2),
                         prior.location = cauchyLocation,
