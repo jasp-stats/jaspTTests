@@ -240,9 +240,9 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   if (!(is.null(g1) || is.null(g2))) {
     message <- NULL
     if (options$hypothesis == "groupOneGreater") {
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>.", g1, g2)
+      message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>.", g1, g2)
     } else if (options$hypothesis == "groupTwoGreater") {
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is less than group <em>%2$s</em>.", g1, g2)
+      message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>.", g1, g2)
     }
     if (!is.null(message))
       jaspTable$addFootnote(message)
