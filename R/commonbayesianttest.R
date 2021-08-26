@@ -1346,6 +1346,8 @@
     "equal"
   )
 
+  if(any(is.infinite(dfLines[["y"]])))
+    stop(gettext("Some Bayes factors were infinite"))
 
   plot <- jaspGraphs::PlotRobustnessSequential(
     dfLines      = dfLines,
