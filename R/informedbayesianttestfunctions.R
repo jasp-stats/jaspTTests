@@ -147,7 +147,7 @@
                       .posterior_t(x.cur, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
                                    prior.location = prior.location, prior.scale = prior.scale, prior.df = prior.df)
 
-    if(is.infinite(x.new)) # possibly due to dividing by posterior density = 0
+    if(!is.finite(x.new)) # possibly due to dividing by posterior density = 0
       stop("Cannot plot the posterior - possibly too concentrated near 0.")
     i <- i + 1
   }
