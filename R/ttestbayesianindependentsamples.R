@@ -112,7 +112,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
             ttestTable$addFootnote(message = message, symbol = "", rowNames = var, colNames = "error")
             ttestResults[["footnotes"]][[var]] <- c(ttestResults[["footnotes"]][[var]], message)
           }
-          if (is.null(error) && options[["effectSizeStandardized"]] == "informative" && 
+          if (is.null(error) && options[["effectSizeStandardized"]] == "informative" &&
               options[["informativeStandardizedEffectSize"]] == "normal") {
             error <- NA_real_
             message <- gettext("No error estimate is available for normal priors.")
@@ -147,7 +147,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
             ttestResults[["status"]][var] <- "error"
             ttestResults[["errorFootnotes"]][[var]] <- errorMessage
             ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
-            
+
           } else {
             ttestResults[["delta"]][[var]]  <- r[["deltaSamples"]]
             bf.raw <- .computeBayesFactorWilcoxon(
@@ -201,7 +201,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   } else {
     gettext("Bayesian Independent Samples T-Test")
   }
-    
+
   if (options[["effectSizeStandardized"]] == "default" && !derivedOptions[["wilcoxTest"]]) {
     citations <- .ttestBayesianCitations[c("MoreyEtal2015", "RouderEtal2009")]
   } else if (derivedOptions[["wilcoxTest"]]) {
@@ -240,9 +240,9 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   if (!(is.null(g1) || is.null(g2))) {
     message <- NULL
     if (options$hypothesis == "groupOneGreater") {
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is greater than group <em>%2$s</em>.", g1, g2)
+      message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>.", g1, g2)
     } else if (options$hypothesis == "groupTwoGreater") {
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> is less than group <em>%2$s</em>.", g1, g2)
+      message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>.", g1, g2)
     }
     if (!is.null(message))
       jaspTable$addFootnote(message)
@@ -287,7 +287,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
         currentVals[i] <- .truncNormSample(currentBounds[["under"]], currentBounds[["upper"]], mu=oldDeltaProp, sd=1)
 
       }
-      
+
       xVals <- currentVals[1:n1]
       yVals <- currentVals[(n1+1):(n1+n2)]
       gibbsResult <- .sampleGibbsTwoSampleWilcoxon(x = xVals, y = yVals, nIter = nGibbsIterations,

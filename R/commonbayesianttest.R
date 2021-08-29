@@ -79,7 +79,7 @@
   if (is.null(jaspResults[["ttestContainer"]])) {
     ttestContainer <- createJaspContainer("")
     jaspResults[["ttestContainer"]] <- ttestContainer
-    
+
     # add seed dependency only for Mann-Whitney independent samples t-test (which is named Wilcoxon in options!)
     depends_seed <- NULL
     if (analysis == "independent") {
@@ -256,7 +256,7 @@
 
   derivedOptions <- list(ttestType = analysis)
   derivedOptions[["wilcoxTest"]] <- options[["testStatistic"]] == "Wilcoxon"
-  
+
   if (analysis == "independent") {
 
     dependents <- unlist(options[["variables"]])
@@ -276,7 +276,7 @@
     dependents <- unlist(options[["variables"]])
     derivedOptions[["variables"]]    <- dependents
     derivedOptions[["ready"]] <- length(dependents) > 0L
-    
+
     derivedOptions[["oneSided"]] <- switch(
       options[["hypothesis"]],
       "greaterThanTestValue" = "right",
@@ -318,15 +318,15 @@
   }
 
   if (derivedOptions[["wilcoxTest"]]) {
-    
+
     # when a user requests robustness/ sequential plots first and then selects wilcoxTest
     # jasp will still provide these as TRUE, but they shouldn't be.
     AtTheEndResetPlotRobustnessSequential <- options[c("plotBayesFactorRobustness", "plotSequentialAnalysis")]
     derivedOptions[["plotBayesFactorRobustness"]] <- FALSE
     derivedOptions[["plotSequentialAnalysis"]] <- FALSE
-    
+
   }
-  
+
   derivedOptions[["nullInterval"]] <- switch(
     as.character(derivedOptions[["oneSided"]]),
     "right" = c(0, Inf),
@@ -419,7 +419,7 @@
     obj[["hypothesis"]] <- options[["hypothesis"]]
 
   }
-  
+
   obj[["BFH1H0"]]          <- !options[["bayesFactorType"]] == "BF01"
   obj[["grouping"]]        <- options[["groupingVariable"]]
   obj[["paired"]]          <- isPaired
@@ -470,10 +470,10 @@
 }
 
 .ttestBayesianSetFootnotesMainTable <- function(ttestTable, ttestResults, dependents) {
-  
+
   for (message in ttestResults[["globalFootnotes"]])
     ttestTable$addFootnote(message = message)
-  
+
   for (var in dependents) {
     if (!is.null(ttestResults[["errorFootnotes"]][[var]]))
       ttestTable$addFootnote(ttestResults[["errorFootnotes"]][[var]], rowNames = var, colNames = "BF")
@@ -538,7 +538,7 @@
     if (is.null(descriptivesContainer[["plots"]])) {
 
       descriptivesPlots <- createJaspContainer(
-        title = gettext("Descriptives Plots"), 
+        title = gettext("Descriptives Plots"),
         dependencies = "descriptivesPlots"
       )
       descriptivesPlots$position <- 2L
@@ -755,14 +755,14 @@
 
 # inferential plots ----
 .ttestBayesianInferentialPlots <- function(jaspResults, dataset, options, ttestResults, errors) {
-  
+
   # for default priors, we can do prior & posterior, robustness, and sequantial plots
   # we cannot do robustness and sequential plots for informed priors, hence do only prior & posterior plot:
   if(options[["effectSizeStandardized"]] == "default")
     opts <- c("plotPriorAndPosterior", "plotBayesFactorRobustness", "plotSequentialAnalysis")
-  else 
+  else
     opts <- c("plotPriorAndPosterior")
-  
+
   if (!any(unlist(options[opts])))
     return()
 
@@ -783,7 +783,7 @@
   } else {
     inferentialPlotsCollection <- jaspResults[["ttestContainer"]][["inferentialPlots"]]
   }
-  
+
   # for the independent samples t-test, some plots cannot be shown for the Wilcoxon test
   if (is.null(options[["testStatistic"]]) || options[["testStatistic"]] == "Student") {
     whichPlotTitles <- which(unlist(options[unlist(opts)]))
@@ -794,7 +794,7 @@
     options[["effectSizeStandardized"]]        <- "default"
     options[["defaultStandardizedEffectSize"]] <- "cauchy"
   }
-  
+
 
   # create all empty plots and containers before filling them in one-by-one, to avoid the screen from flashing
   dependencies <- list(
@@ -804,8 +804,8 @@
   )
 
   plotTitles <- c(
-    gettext("Prior and Posterior"), 
-    gettext("Bayes Factor Robustness Check"), 
+    gettext("Prior and Posterior"),
+    gettext("Bayes Factor Robustness Check"),
     gettext("Sequential Analysis")
   )
   jaspTitles <- c("plotPriorAndPosterior", "plotRobustness", "plotSequential")
@@ -1169,7 +1169,7 @@
       ggplot2::geom_errorbar(ggplot2::aes(ymin=ciLower, ymax=ciUpper), colour="black", width=.2, position=pd) +
       ggplot2::geom_line(position=pd, size = .7) +
       ggplot2::geom_point(position=pd, size=4) +
-      xlab + ylab) + 
+      xlab + ylab) +
       jaspGraphs::themeJaspRaw() +
       .base_breaks_y2(summaryStat, testValueOpt) +
       .base_breaks_x(summaryStat$groupingVariable)
@@ -1291,7 +1291,7 @@
     x = rValues,
     y = log(BF10)
   )
-  
+
   BF10user <- BF10post
   if (BFH1H0) {
     bfType <- "BF10"
@@ -1303,7 +1303,7 @@
     BF10w     <- 1 / BF10w
     BF10ultra <- 1 / BF10ultra
   }
-  
+
   BFsubscript <- .ttestBayesianGetBFnamePlots(BFH1H0, nullInterval, subscriptsOnly = TRUE)
 
   label1 <- c(
@@ -1339,12 +1339,15 @@
   } else {
     dfPoints <- NULL
   }
-  
+
   hypothesis <- switch(oneSided,
     "right" = "greater",
     "left"  = "smaller",
     "equal"
   )
+
+  if(any(is.infinite(dfLines[["y"]])))
+    stop(gettext("Some Bayes factors were infinite"))
 
   plot <- jaspGraphs::PlotRobustnessSequential(
     dfLines      = dfLines,
@@ -1788,7 +1791,7 @@
     bftype <- "BF01"
   }
   dfLines$y <- log(dfLines$y)
-  
+
   plot <- jaspGraphs::PlotRobustnessSequential(
     dfLines         = dfLines,
     xName           = gettext("n"),
@@ -1814,7 +1817,7 @@
     xlim <- vector("numeric", 2)
 
     if(options[["effectSizeStandardized"]] == "default"){
-      
+
       ci99PlusMedian <- .ciPlusMedian_t(t = t, n1 = n1, n2 = n2, independentSamples = ! paired && !is.null(n2),
                                         prior.location = 0,
                                         prior.scale = options[["priorWidth"]],
@@ -1833,7 +1836,7 @@
       CIlow <- ciPlusMedian[["ciLower"]]
       CIhigh <- ciPlusMedian[["ciUpper"]]
       medianPosterior <- ciPlusMedian[["median"]]
-      
+
     }else if (options[["informativeStandardizedEffectSize"]] == "cauchy") {
       ci99PlusMedian <- .ciPlusMedian_t(t = t, n1 = n1, n2 = n2, independentSamples = ! paired && !is.null(n2),
                                         prior.location = options[["informativeCauchyLocation"]],
@@ -2063,7 +2066,7 @@
     # xlim <- c(min(CIlow,range(xticks)[1]), max(range(xticks)[2], CIhigh))
 
   }
-  
+
   if (!wilcoxTest) {
     heightPriorAtZero <- .dprior_informative(0, oneSided = oneSided, options = options)
     heightPosteriorAtZero <- .dposterior_informative(0, t = t, n1 = n1, n2 = n2, paired = paired,
