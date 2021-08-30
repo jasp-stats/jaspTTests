@@ -542,9 +542,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-  subcontainer <- container[["plots"]]
-  subcontainer$position <- 5
+  if (is.null(container[["plots"]])) {
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"))
+    subcontainer$position <- 5
+    container[["plots"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plots"]]
+  }
+
   for(variable in options$variables) {
     if(!is.null(subcontainer[[variable]]))
       next
@@ -625,9 +630,13 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
-  subcontainer <- container[["plotsRainCloud"]]
-  subcontainer$position <- 6
+
+  if (is.null(container[["plotsRainCloud"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer$position <- 6
+  } else {
+    subcontainer <- container[["plotsRainCloud"]]
+  }
   horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
   if(ready){
     groups <- options$groupingVariable

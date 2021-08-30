@@ -388,9 +388,14 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-  subcontainer <- container[["plots"]]
-  subcontainer$position <- 5
+
+  if (is.null(container[["plots"]])) {
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
+    subcontainer$position <- 5
+  } else {
+    subcontainer <- container[["plots"]]
+  }
+
   for(pair in options$pairs) {
     title <- paste(pair, collapse = " - ")
     if(!is.null(subcontainer[[title]]))
@@ -464,9 +469,15 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
-  subcontainer <- container[["plotsRainCloud"]]
-  subcontainer$position <- 6
+
+  if (is.null(container[["plotsRainCloud"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer$position <- 6
+    container[["plotsRainCloud"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsRainCloud"]]
+  }
+
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
     for(pair in options$pairs) {
@@ -497,9 +508,15 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plotsRainCloudDifference"]] <- createJaspContainer(gettext("Raincloud Difference Plots"))
-  subcontainer <- container[["plotsRainCloudDifference"]]
-  subcontainer$position <- 7
+
+  if (is.null(container[["plotsRainCloudDifference"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"), dependencies = c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
+    subcontainer$position <- 7
+    container[["plotsRainCloudDifference"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsRainCloudDifference"]]
+  }
+
   horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")

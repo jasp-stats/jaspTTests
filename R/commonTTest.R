@@ -129,8 +129,8 @@
     return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
-    container$dependOn(c("descriptives", "descriptivesPlots", "descriptivesPlotsConfidenceInterval",
-                         "descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudDifference",
+    container$dependOn(c(#"descriptives", "descriptivesPlots", "descriptivesPlotsConfidenceInterval",
+                         #"descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudDifference",
                          "missingValues", "variables", "pairs", "groupingVariable"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container
