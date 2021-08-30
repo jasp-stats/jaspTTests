@@ -392,6 +392,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   if (is.null(container[["plots"]])) {
     subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
     subcontainer$position <- 5
+    container[["plots"]] <- subcontainer
   } else {
     subcontainer <- container[["plots"]]
   }
