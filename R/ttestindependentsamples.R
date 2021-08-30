@@ -486,7 +486,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if (!options$descriptives || !is.null(container[["table"]]))
     return()
   # Create table
-  ttestDescriptivesTable <- createJaspTable(title = "Group Descriptives")
+  ttestDescriptivesTable <- createJaspTable(title = "Group Descriptives", dependencies = "descriptives")
   ttestDescriptivesTable$showSpecifiedColumnsOnly <- TRUE
   ttestDescriptivesTable$position <- 4
   ttestDescriptivesTable$addColumnInfo(name = "variable", type = "string",  title = "", combine = TRUE)
@@ -543,7 +543,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -632,7 +632,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
     subcontainer$position <- 6
   } else {
     subcontainer <- container[["plotsRainCloud"]]

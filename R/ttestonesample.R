@@ -365,7 +365,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -441,7 +441,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
     subcontainer$position <- 6
     container[["plotsRainCloud"]] <- subcontainer
   } else {

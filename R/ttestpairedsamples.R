@@ -340,7 +340,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   if (!options$descriptives || !is.null(container[["table"]]))
     return()
   # Create table
-  ttestDescriptivesTable <- createJaspTable(title = gettext("Descriptives"))
+  ttestDescriptivesTable <- createJaspTable(title = gettext("Descriptives"), dependencies = "descriptives")
   ttestDescriptivesTable$showSpecifiedColumnsOnly <- TRUE
   ttestDescriptivesTable$position <- 4
   ttestDescriptivesTable$addColumnInfo(name = "v",    type = "string",  title = "")
@@ -471,7 +471,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "descriptivesPlotsRainCloud")
     subcontainer$position <- 6
     container[["plotsRainCloud"]] <- subcontainer
   } else {
