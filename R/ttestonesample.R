@@ -30,26 +30,26 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
-  
+
   return()
 }
 
 .ttestOneSampleMainTable <- function(jaspResults, dataset, options, ready, type) {
-  if (!is.null(jaspResults[["ttest"]])) 
+  if (!is.null(jaspResults[["ttest"]]))
     return()
-  
+
   optionsList <- .ttestOptionsList(options, type)
-  
+
   # Create table
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
   ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "variables",
                    "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
-                   "meanDiffConfidenceIntervalPercent", "hypothesis", 
+                   "meanDiffConfidenceIntervalPercent", "hypothesis",
                    "VovkSellkeMPR", "missingValues", "zTest", "testValue"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
-  
+
   if (optionsList$wantsWilcox && optionsList$onlyTest) {
     ttest$addFootnote(gettext("Wilcoxon signed-rank test."))
     testStat                <- "V"
@@ -74,76 +74,76 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     nameOfLocationParameter <- gettext("Location Difference")
     nameOfEffectSize        <- gettext("Effect Size")
   }
-  
+
   ttest$addColumnInfo(name = "v",     type = "string", title = "", combine = TRUE)
-  
+
   ## if the user wants more than one test, add a column called "Test"
-  if (sum(optionsList$allTests) > 1) 
+  if (sum(optionsList$allTests) > 1)
     ttest$addColumnInfo(name = "test", type = "string", title = gettext("Test"))
-  
+
   ttest$addColumnInfo(name = testStat, type = "number", title = testStatName)
-  
+
   if (optionsList$wantsStudents)
     ttest$addColumnInfo(name = "df", type = "integer", title = gettext("df"))
-  
+
   ttest$addColumnInfo(name = "p", type = "pvalue", title = gettext("p"))
-  
+
   .ttestVovkSellke(ttest, options)
-  
+
   if (optionsList$wantsStudents && optionsList$wantsZtest)
     testInNote <- gettext("Student t-test and Z-test")
   else if (optionsList$wantsStudents)
     testInNote <- gettext("Student t-test")
   else if (optionsList$wantsZtest)
     testInNote <- gettext("Z-test")
-  
+
   if (optionsList$wantsDifference) {
     ttest$addColumnInfo(name = "m", title = nameOfLocationParameter, type = "number")
-    
+
     if (optionsList$wantsStudents || optionsList$wantsZtest || optionsList$wantsWilcox) {
       tzNote <- wNote <- NULL
-      
+
       if (optionsList$wantsStudents || optionsList$wantsZtest)
         tzNote <- gettextf("For the %s, location difference estimate is given by the sample mean difference <em>d</em>.", testInNote)
-      
+
       if (optionsList$wantsWilcox)
         wNote <- gettext("For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate.")
-      
+
       ttest$addFootnote(paste(tzNote, wNote))
     }
   }
-  
+
   if (optionsList$wantsConfidenceMeanDiff) {
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceMeanDiff, nameOfLocationParameter)
     ttest$addColumnInfo(name = "lowerCIlocationParameter", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIlocationParameter", type = "number", title = gettext("Upper"), overtitle = title)
   }
-  
+
   if (optionsList$wantsEffect) {
     ttest$addColumnInfo(name = "d", title = nameOfEffectSize, type = "number")
-    
+
     if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
       tNote <- wNote <- zNote <- NULL
-      
+
       if (optionsList$wantsStudents)
         tNote <- gettext("For the Student t-test, effect size is given by Cohen's <em>d</em>.")
-      
+
       if (optionsList$wantsWilcox)
         wNote <- gettext("For the Wilcoxon test, effect size is given by the matched rank biserial correlation.")
-      
+
       if (optionsList$wantsZtest)
         zNote <- gettext("For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation).")
-      
+
       ttest$addFootnote(paste(tNote, wNote, zNote))
     }
   }
-  
+
   if (optionsList$wantsConfidenceEffSize) {
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceEffSize, nameOfEffectSize)
     ttest$addColumnInfo(name = "lowerCIeffectSize", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
   }
-  
+
   ### check the directionality
   if (options$hypothesis == "greaterThanTestValue") {
     directionFootnote <- gettext("greater than")
@@ -155,22 +155,22 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     directionFootnote <- gettext("different from")
     direction <- "two.sided"
   }
-  
+
   if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
     tMessage <- wMessage <- NULL
-    
+
     if (optionsList$wantsStudents || optionsList$wantsZtest)
       tMessage <- gettextf("For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s.", testInNote, directionFootnote, options$testValue)
-    
+
     if (optionsList$wantsWilcox)
       wMessage <- gettextf("For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s.", directionFootnote, options$testValue)
-    
+
     ttest$addFootnote(paste(tMessage, wMessage))
   }
-  
+
   jaspResults[["ttest"]] <- ttest
-  
-  if (ready) 
+
+  if (ready)
     .ttestOneSampleMainFill(ttest, dataset, options, testStat, optionsList)
 }
 
@@ -178,23 +178,23 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   # Container
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
-  if (!options$normalityTests || !is.null(container[["ttestNormalTable"]])) 
+  if (!options$normalityTests || !is.null(container[["ttestNormalTable"]]))
     return()
   container <- jaspResults[["AssumptionChecks"]]
   # Create table
   ttestNormalTable <- createJaspTable(title = gettext("Test of Normality (Shapiro-Wilk)"))
   ttestNormalTable$showSpecifiedColumnsOnly <- TRUE
   ttestNormalTable$position <- 2
-  
+
   ttestNormalTable$addColumnInfo(name = "v", title = "",  type = "string")
   ttestNormalTable$addColumnInfo(name = "W", title = gettext("W"), type = "number")
   ttestNormalTable$addColumnInfo(name = "p", title = gettext("p"), type = "pvalue")
-  
+
   message <- gettext("Significant results suggest a deviation from normality.")
   ttestNormalTable$addFootnote(message)
-  
+
   container[["ttestNormalTable"]] <- ttestNormalTable
-  
+
   if (ready)
     .ttestOneSampleNormalFill(ttestNormalTable, dataset, options)
 }
@@ -202,41 +202,41 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 .ttestOneSampleMainFill <-function(table, dataset, options, testStat, optionsList) {
   variables <- options$variables
   for (variable in variables) {
-    
-    errors <- .hasErrors(dataset, 
-                         message = 'short', 
+
+    errors <- .hasErrors(dataset,
+                         message = 'short',
                          type = c('observations', 'variance', 'infinity'),
                          all.target = variable,
                          observations.amount = '< 2')
-    
+
     for (test in optionsList$whichTests) {
 
       row     <- list(v = variable, test = test, .isNewGroup = .ttestRowIsNewGroup(test, optionsList$whichTests))
       rowName <- paste(test, variable, sep = "-")
-      
+
       errorMessage <- NULL
       if (identical(errors, FALSE)) {
         rowResults <- try(.ttestOneSampleComputeMainTableRow(variable, dataset, test, testStat, optionsList, options))
-        
+
           if (!isTryError(rowResults))
             row <- c(row, rowResults)
           else
             errorMessage <- .extractErrorMessage(rowResults)
-          
+
       } else {
         errorMessage <- errors$message
       }
-      
+
       if (!is.null(errorMessage)) {
         row[[testStat]] <- NaN
         table$addFootnote(errorMessage, colNames = testStat, rowNames = rowName)
       }
-      
+
       table$addRows(row, rowNames = rowName)
     }
   }
 }
-  
+
 .ttestOneSampleComputeMainTableRow <- function(variable, dataset, test, testStat, optionsList, options) {
   direction <- switch(options[["hypothesis"]],
                       "notEqualToTestValue"  ="two.sided",
@@ -252,59 +252,59 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     maxw <- (nd * (nd + 1)) / 2
     d    <- as.numeric((tempResult[["statistic"]] / maxw) * 2 - 1)
     wSE  <- sqrt((nd * (nd + 1) * (2 * nd + 1)) / 6) /2
-    mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2)) 
+    mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2))
     # zSign <- (ww$statistic - ((n*(n+1))/4))/wSE
     zmbiss <- atanh(d)
-    
+
     if(direction == "two.sided")
-      confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]])/2)*mrSE), 
+      confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]])/2)*mrSE),
                                tanh(zmbiss + qnorm((1+optionsList[["percentConfidenceEffSize"]])/2)*mrSE)))
-    else if (direction == "less") 
+    else if (direction == "less")
       confIntEffSize <- sort(c(-Inf, tanh(zmbiss + qnorm(optionsList[["percentConfidenceEffSize"]])*mrSE)))
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
-    
+
   } else if (test == "Z"){
-    tempResult <- .z.test("x"=dat, "alternative" = direction, 
-                          "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]], 
+    tempResult <- .z.test("x"=dat, "alternative" = direction,
+                          "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]],
                           "ciValueMeanDiff"=optionsList[["percentConfidenceMeanDiff"]],
                           "ciValueESMeanDiff"=options[["effSizeConfidenceIntervalPercent"]])
-    
+
     df <- ""
     d  <- tempResult[["d"]]
-    
+
     confIntEffSize <- tempResult[["confIntEffSize"]]
   } else {
-    tempResult <- stats::t.test(dat, alternative = direction, mu = options[["testValue"]], 
+    tempResult <- stats::t.test(dat, alternative = direction, mu = options[["testValue"]],
                                 conf.level = optionsList[["percentConfidenceMeanDiff"]])
     df <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
     d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
     t  <- as.numeric(tempResult[["statistic"]])
-    
+
     confIntEffSize <- c(0,0)
-    
+
     if (optionsList[["wantsConfidenceEffSize"]]) {
-      
+
       ciEffSize  <- options[["effSizeConfidenceIntervalPercent"]]
       alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
-      
+
       confIntEffSize <- .confidenceLimitsEffectSizes(ncp = d * sqrt(n), df = df, alpha.lower = alphaLevel,
                                                      alpha.upper = alphaLevel)[c(1, 3)]
       confIntEffSize <- unlist(confIntEffSize) / sqrt(n)
-      
+
       if (direction == "greater")
         confIntEffSize[2] <- Inf
       else if (direction == "less")
         confIntEffSize[1] <- -Inf
-      
+
       confIntEffSize <- sort(confIntEffSize)
     }
   }
-  
+
   ## same for all tests
   p     <- as.numeric(tempResult[["p.value"]])
   stat  <- as.numeric(tempResult[["statistic"]])
-  
+
   if (test=="Z") {
     ciLow <- as.numeric(tempResult[["conf.int"]][1])
     ciUp  <- as.numeric(tempResult[["conf.int"]][2])
@@ -314,21 +314,21 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     ciLow <- as.numeric(tempResult[["conf.int"]][1] - tempResult[["null.value"]])
     ciUp  <- as.numeric(tempResult[["conf.int"]][2] - tempResult[["null.value"]])
   }
-  
+
   ciLowEffSize <- as.numeric(confIntEffSize[1])
   ciUpEffSize  <- as.numeric(confIntEffSize[2])
-  
-  if (suppressWarnings(is.na(t)))  # do not throw warning when test stat is not 't' 
+
+  if (suppressWarnings(is.na(t)))  # do not throw warning when test stat is not 't'
     stop("data are essentially constant")
-  
-  result <- list(df = df, p = p, m = m, d = d, 
-                 lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp, 
+
+  result <- list(df = df, p = p, m = m, d = d,
+                 lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
                  lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize)
   result[[testStat]] <- stat
-  
+
   if (options[["VovkSellkeMPR"]])
     result[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
-  
+
   return(result)
 }
 
@@ -336,24 +336,24 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   variables <- options[["variables"]]
   for (variable in variables) {
     row <- list(v = variable)
-    
-    errors <- .hasErrors(dataset, 
-                         message = 'short', 
+
+    errors <- .hasErrors(dataset,
+                         message = 'short',
                          type = c('observations', 'variance', 'infinity'),
                          all.target = variable,
                          observations.amount = c('< 3', '> 5000'))
-    
+
     if (!identical(errors, FALSE)) {
       row[["W"]] <- NaN
       table$addFootnote(errors$message, colNames = "W", rowNames = variable)
     } else {
       data <- na.omit(dataset[[.v(variable)]])
-      
+
       tempResult <- stats::shapiro.test(data)
       row[["W"]] <- as.numeric(tempResult[["statistic"]])
       row[["p"]] <- tempResult[["p.value"]]
     }
-    
+
     table$addRows(row, rowNames = variable)
   }
 }
@@ -384,17 +384,17 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesPlotFill <- function(dataset, options, variable) {
-  errors <- .hasErrors(dataset, 
-                       message = 'short', 
+  errors <- .hasErrors(dataset,
+                       message = 'short',
                        type = c('observations', 'variance', 'infinity'),
                        all.target = variable,
                        observations.amount = c('< 2'))
   if(!identical(errors, FALSE))
     stop(errors$message)
-  
-  
+
+
   base_breaks_y <- function(x, options) {
-    
+
     values <- c(options$testValue, x[, "dependent"] - x[, "ci"],
                 x[, "dependent"] + x[, "ci"])
     ci.pos <- c(min(values), max(values))
@@ -404,27 +404,27 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                                                       yend = yend), inherit.aes = FALSE, size = 1),
          ggplot2::scale_y_continuous(breaks = c(min(b),  options$testValue, max(b))))
   }
-  
+
   dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
                            groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
-  
+
   ci <- options$descriptivesPlotsConfidenceInterval
   summaryStat <- summarySE(dataSubset, measurevar = "dependent",
                            groupvars = "groupingVariable",
                            conf.interval = ci, na.rm = TRUE, .drop = FALSE)
   testValue <- data.frame(testValue = options$testValue)
   pd <- ggplot2::position_dodge(0.2)
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) + 
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper), 
-                           colour = "black", width = 0.2, position = pd) + 
-    ggplot2::geom_line(position = pd, size = 0.7) +#gives geom_path warning+ 
-    ggplot2::geom_point(position = pd, size = 4)  + 
-    ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") + 
-    ggplot2::ylab(NULL) + ggplot2::xlab(NULL) + base_breaks_y(summaryStat, options) 
-  p <- jaspGraphs::themeJasp(p) + 
-    ggplot2::theme(axis.text.x = ggplot2::element_blank(), 
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) +
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper),
+                           colour = "black", width = 0.2, position = pd) +
+    ggplot2::geom_line(position = pd, size = 0.7) +#gives geom_path warning+
+    ggplot2::geom_point(position = pd, size = 4)  +
+    ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") +
+    ggplot2::ylab(NULL) + ggplot2::xlab(NULL) + base_breaks_y(summaryStat, options)
+  p <- jaspGraphs::themeJasp(p) +
+    ggplot2::theme(axis.text.x = ggplot2::element_blank(),
                    axis.ticks.x = ggplot2::element_blank())
-  
+
   return(p)
 }
 
