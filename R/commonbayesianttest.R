@@ -2135,16 +2135,21 @@
 }
 
 .ttestBayesianRainCloudPlots <- function(jaspResults, dataset, options, analysis) {
-  if (is.null(options$descriptivesPlotsRainCloud))
+  if (is.null(options$descriptivesPlotsRainCloud) || !options$descriptivesPlotsRainCloud)
     return()
-  if (!options$descriptivesPlotsRainCloud)
-    return()
+
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plotsRainCloud"]] <- createJaspContainer(gettext("Raincloud Plots"))
-  subcontainer <- container[["plotsRainCloud"]]
-  subcontainer$dependOn(c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
-  subcontainer$position <- 6
+
+  if (is.null(container[["plotsRainCloud"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
+    subcontainer$dependOn(c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
+    subcontainer$position <- 6
+    container[["plotsRainCloud"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsRainCloud"]]
+  }
+
   horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
   errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   if (analysis == "one-sample") {
@@ -2209,16 +2214,21 @@
 }
 
 .ttestBayesianRainCloudDifferencePlots <- function(jaspResults, dataset, options, analysis) {
-  if (is.null(options$descriptivesPlotsRainCloudDifference) || analysis != "paired")
+  if (is.null(options$descriptivesPlotsRainCloudDifference) || analysis != "paired" || !options$descriptivesPlotsRainCloudDifference)
     return()
-  if (!options$descriptivesPlotsRainCloudDifference)
-    return()
+
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  container[["plotsRainCloudDifference"]] <- createJaspContainer(gettext("Raincloud Difference Plots"))
-  subcontainer <- container[["plotsRainCloudDifference"]]
-  subcontainer$dependOn(c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
-  subcontainer$position <- 7
+
+  if (is.null(container[["plotsRainCloudDifference"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"))
+    subcontainer$dependOn(c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
+    subcontainer$position <- 7
+    container[["plotsRainCloudDifference"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsRainCloudDifference"]]
+  }
+
   horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
   errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   for(pair in options$pairs) {
