@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2021-05-07 12:59\n"
-"PO-Revision-Date: 2021-08-25 17:35+0000\n"
+"PO-Revision-Date: 2021-09-02 13:34+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ja/>\n"
@@ -14,16 +14,16 @@ msgstr ""
 "X-Generator: Weblate 4.8.1-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
+msgstr "対応のあるz検定と2標本のz検定はまだ実装されていません"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "十分な観測値xがありません"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "まだ実装されていません"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "十分な観測値yがありません"
 
 msgid "Assumption Checks"
 msgstr "仮定のチェック"
@@ -39,19 +39,19 @@ msgid ""
 msgstr ""
 
 msgid "nDistinctObservations got an object of type"
-msgstr ""
+msgstr "nDistinctObservationsは型のオブジェクトを取得しました"
 
 msgid ","
 msgstr ","
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "別の変数を用意してください."
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "変数 %s と %s は同じです!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "記述統計量プロット"
 
 msgid "Group"
 msgstr "群"
@@ -69,7 +69,7 @@ msgid "SE"
 msgstr "標準誤差"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% 信用区間"
 
 msgid "Lower"
 msgstr "下"
@@ -78,56 +78,56 @@ msgid "Upper"
 msgstr "上"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "推論プロット"
 
 msgid "Prior and Posterior"
 msgstr "事前分布と事後分布"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "ベイズファクターの頑健性チェック"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "逐次解析"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
-msgstr ""
+msgstr "ベイズファクター頑健性チェックのプロットは、現在、情報のある事前分布ではサポートされていません."
 
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
 "informed prior."
-msgstr ""
+msgstr "逐次解析のロバストネスチェックプロットは、現在、情報のある事前分布ではサポートされていません."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "数値または文字の rscale が必要ですが、%s を得ました."
 
 msgid "Running robustness check %d / %d"
-msgstr ""
+msgstr "頑健性チェックを実行しています %d / %d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "最大 BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "ユーザー事前分布"
 
 msgid "wide prior"
-msgstr ""
+msgstr "広い事前分布"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "とても広い事前分布"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s at r==%s"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "コーシー事前分布の幅"
 
 msgid "Running sequential analysis %d / %d"
-msgstr ""
+msgstr "逐次解析を実行しています %d / %d"
 
 msgid "n"
 msgstr "n"
@@ -136,50 +136,50 @@ msgid "Posterior"
 msgstr "事後分布"
 
 msgid "Prior"
-msgstr ""
+msgstr "事前分布"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% CI:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "効果量"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "レインクラウドプロット"
 
-#, fuzzy
 msgid "Raincloud Difference Plots"
-msgstr "平均値差"
+msgstr "レインクラウド差分プロット"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "ベイズファクターが算出できなかった"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "ベイズファクターは無限大です"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "ベイズファクターが小さすぎる"
 
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr ""
+msgstr "事後分布をプロットすることはできません - おそらく0の近くに集中しすぎている."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
-msgstr ""
+msgstr "t値が大きい。ベイズファクターの計算にはSavage-Dickey近似が用いられていますが、この近似は誤差の推定値を与えることはできません."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "通常の事前分布では、誤差の推定はできません."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "ベイジアン マンホイットニーのU検定"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "ベイジアン独立サンプルのt検定"
 
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"データ拡張(data augmentation)アルゴリズムを用いて、%.0fの反復回数(iteration)を5連鎖(chain)繰り返した場合の結果."
 
 msgid "error %"
 msgstr "エラー %"
