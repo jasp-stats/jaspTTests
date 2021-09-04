@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-05-07 12:59\n"
+"POT-Creation-Date: 2021-09-04 02:40\n"
 "PO-Revision-Date: 2021-07-22 19:33+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -133,6 +133,10 @@ msgstr "BF%s"
 msgid "%s at r==%s"
 msgstr "%s mit r==%s"
 
+#, fuzzy
+msgid "Some Bayes factors were infinite"
+msgstr "Bayesfaktor ist unendlich"
+
 msgid "Cauchy prior width"
 msgstr "Breite Cauchy-Prior"
 
@@ -198,16 +202,18 @@ msgstr ""
 msgid "error %"
 msgstr "Fehler %"
 
+#, fuzzy
 msgid ""
-"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
-"is greater than group <em>%2$s</em>."
+"For all tests, the alternative hypothesis specifies that the location of "
+"group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
 "Für alle Tests gibt die Alternativhypothese an, dass Gruppe <em>%1$s</em> "
 "größer ist als Gruppe <em>%2$s</em>."
 
+#, fuzzy
 msgid ""
-"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
-"is less than group <em>%2$s</em>."
+"For all tests, the alternative hypothesis specifies that the location of "
+"group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
 "Für alle Tests gibt die Alternativhypothese an, dass Gruppe <em>%1$s</em> "
 "kleiner ist als Gruppe <em>%2$s</em>."
