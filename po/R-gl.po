@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-04 02:40\n"
+"POT-Creation-Date: 2021-09-11 02:39\n"
 "PO-Revision-Date: 2021-09-07 10:33+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/gl/>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -542,6 +542,10 @@ msgstr "Evidencia para H+:"
 
 msgid "Evidence for H-:"
 msgstr "Evidencia para H-:"
+
+#, fuzzy
+msgid "Evidence for H0:"
+msgstr "Evidencia para H0"
 
 msgid ""
 "could not calculate enough valid Bayes Factors for different values of the "
