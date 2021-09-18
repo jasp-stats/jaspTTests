@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-09-11 02:39\n"
-"PO-Revision-Date: 2021-08-25 17:35+0000\n"
+"PO-Revision-Date: 2021-09-14 08:35+0000\n"
 "Last-Translator: D.J. Dekker <dj_dekker@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "nl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
@@ -133,9 +133,8 @@ msgstr "BF%s"
 msgid "%s at r==%s"
 msgstr "%s bij r==%s"
 
-#, fuzzy
 msgid "Some Bayes factors were infinite"
-msgstr "Bayes-factor is oneindig"
+msgstr "Sommige Bayes factoren waren oneindig"
 
 msgid "Cauchy prior width"
 msgstr "Cauchy prior breedte"
@@ -201,21 +200,19 @@ msgstr ""
 msgid "error %"
 msgstr "fout %"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
-"Voor alle toetsen specificeert de alternatieve hypothese dat groep <em>%1$s</"
-"em> groter is dan groep <em>%2$s</em>."
+"Voor alle toetsen luidt de alternatieve hypothese dat de locatie van groep "
+"<em>%1$s</em> groter is dan de locatie van groep <em>%2$s</em>."
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
-"Voor alle toetsen specificeert de alternatieve hypothese dat groep <em>%1$s</"
-"em> kleiner less dan groep <em>%2$s</em>."
+"Voor alle toetsen luidt de alternatieve hypothese dat de locatie van groep "
+"<em>%1$s</em> kleiner is dan de locatie van groep <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "Bayesiaanse Wilcoxon rangtekentoets"
@@ -390,9 +387,8 @@ msgstr "z-toets."
 msgid "Z"
 msgstr "Z"
 
-#, fuzzy
 msgid "Location Difference"
-msgstr "Gemiddeld Verschil"
+msgstr "Locatieverschil"
 
 msgid "Student t-test and Z-test"
 msgstr "Student t-toets en z-toets"
@@ -542,9 +538,8 @@ msgstr "Bewijs voor H+:"
 msgid "Evidence for H-:"
 msgstr "Bewijs voor H-:"
 
-#, fuzzy
 msgid "Evidence for H0:"
-msgstr "Bewijs voor H0"
+msgstr "Bewijs voor H0:"
 
 msgid ""
 "could not calculate enough valid Bayes Factors for different values of the "
