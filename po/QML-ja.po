@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-22 00:44+0000\n"
-"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
+"PO-Revision-Date: 2021-09-24 01:34+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/ja/>\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr "t検定"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "古典的"
+msgstr "伝統的"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
