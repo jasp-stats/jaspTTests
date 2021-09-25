@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2021-09-11 02:39\n"
+"POT-Creation-Date: 2021-09-25 02:40\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -445,35 +445,6 @@ msgstr ""
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2. For example, %1s is greater than %2s."
-msgstr ""
-
-msgid "Evidence for H1"
-msgstr ""
-
-msgid "Evidence for H0"
-msgstr ""
-
-msgid "Evidence for H+"
-msgstr ""
-
-msgid "Evidence for H-"
-msgstr ""
-
-msgid "Evidence for H1:"
-msgstr ""
-
-msgid "Evidence for H+:"
-msgstr ""
-
-msgid "Evidence for H-:"
-msgstr ""
-
-msgid "Evidence for H0:"
-msgstr ""
-
-msgid ""
-"could not calculate enough valid Bayes Factors for different values of the "
-"prior"
 msgstr ""
 
 msgid "The following pair is duplicated: %s"

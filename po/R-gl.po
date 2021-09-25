@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-11 02:39\n"
+"POT-Creation-Date: 2021-09-25 02:40\n"
 "PO-Revision-Date: 2021-09-11 22:44+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/gl/>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -522,38 +522,38 @@ msgstr ""
 "Para tódalas probas, a hipótese alternativa indica que a Medida 1 é maior "
 "que a Medida 2. Por exemplo, %1s é maior que %2s."
 
-msgid "Evidence for H1"
-msgstr "Evidencia para H1"
-
-msgid "Evidence for H0"
-msgstr "Evidencia para H0"
-
-msgid "Evidence for H+"
-msgstr "Evidencia para H+"
-
-msgid "Evidence for H-"
-msgstr "Evidencia para H-"
-
-msgid "Evidence for H1:"
-msgstr "Evidencia para H1:"
-
-msgid "Evidence for H+:"
-msgstr "Evidencia para H+:"
-
-msgid "Evidence for H-:"
-msgstr "Evidencia para H-:"
-
-msgid "Evidence for H0:"
-msgstr "Evidencia para H0:"
-
-msgid ""
-"could not calculate enough valid Bayes Factors for different values of the "
-"prior"
-msgstr ""
-"non se puideron calcular suficientes Factores de Bayes válidos, para "
-"distintos valores do previo"
-
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "A seguinte parella está duplicada: %s"
 msgstr[1] "As seguintes parellas están duplicadas: %s"
+
+#~ msgid "Evidence for H1"
+#~ msgstr "Evidencia para H1"
+
+#~ msgid "Evidence for H0"
+#~ msgstr "Evidencia para H0"
+
+#~ msgid "Evidence for H+"
+#~ msgstr "Evidencia para H+"
+
+#~ msgid "Evidence for H-"
+#~ msgstr "Evidencia para H-"
+
+#~ msgid "Evidence for H1:"
+#~ msgstr "Evidencia para H1:"
+
+#~ msgid "Evidence for H+:"
+#~ msgstr "Evidencia para H+:"
+
+#~ msgid "Evidence for H-:"
+#~ msgstr "Evidencia para H-:"
+
+#~ msgid "Evidence for H0:"
+#~ msgstr "Evidencia para H0:"
+
+#~ msgid ""
+#~ "could not calculate enough valid Bayes Factors for different values of "
+#~ "the prior"
+#~ msgstr ""
+#~ "non se puideron calcular suficientes Factores de Bayes válidos, para "
+#~ "distintos valores do previo"

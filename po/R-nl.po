@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-09-11 02:39\n"
+"POT-Creation-Date: 2021-09-25 02:40\n"
 "PO-Revision-Date: 2021-09-14 08:35+0000\n"
 "Last-Translator: D.J. Dekker <dj_dekker@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -517,38 +517,38 @@ msgstr ""
 "Voor alle toetsen specificeert de alternatieve hypothese dat Meting 1 groter "
 "is dan Meting 2. Bijvoorbeeld, %1s is groter dan %2s."
 
-msgid "Evidence for H1"
-msgstr "Bewijs voor H1"
-
-msgid "Evidence for H0"
-msgstr "Bewijs voor H0"
-
-msgid "Evidence for H+"
-msgstr "Bewijs voor H+"
-
-msgid "Evidence for H-"
-msgstr "Bewijs voor H-"
-
-msgid "Evidence for H1:"
-msgstr "Bewijs voor H1:"
-
-msgid "Evidence for H+:"
-msgstr "Bewijs voor H+:"
-
-msgid "Evidence for H-:"
-msgstr "Bewijs voor H-:"
-
-msgid "Evidence for H0:"
-msgstr "Bewijs voor H0:"
-
-msgid ""
-"could not calculate enough valid Bayes Factors for different values of the "
-"prior"
-msgstr ""
-"kon niet genoeg geldige Bayes factoren berekenen voor verschillende waarden "
-"van de prior"
-
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "Het volgende paar is gedupliceerd: %s"
 msgstr[1] "De volgende paren zijn gedupliceerd: %s"
+
+#~ msgid "Evidence for H1"
+#~ msgstr "Bewijs voor H1"
+
+#~ msgid "Evidence for H0"
+#~ msgstr "Bewijs voor H0"
+
+#~ msgid "Evidence for H+"
+#~ msgstr "Bewijs voor H+"
+
+#~ msgid "Evidence for H-"
+#~ msgstr "Bewijs voor H-"
+
+#~ msgid "Evidence for H1:"
+#~ msgstr "Bewijs voor H1:"
+
+#~ msgid "Evidence for H+:"
+#~ msgstr "Bewijs voor H+:"
+
+#~ msgid "Evidence for H-:"
+#~ msgstr "Bewijs voor H-:"
+
+#~ msgid "Evidence for H0:"
+#~ msgstr "Bewijs voor H0:"
+
+#~ msgid ""
+#~ "could not calculate enough valid Bayes Factors for different values of "
+#~ "the prior"
+#~ msgstr ""
+#~ "kon niet genoeg geldige Bayes factoren berekenen voor verschillende "
+#~ "waarden van de prior"
