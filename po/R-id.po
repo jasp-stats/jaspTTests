@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-09-25 01:31+0000\n"
+"PO-Revision-Date: 2021-09-29 02:36+0000\n"
 "Last-Translator: Sunu Bagaskara <sunu.bagaskara@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/id/>\n"
@@ -29,7 +29,7 @@ msgid "Assumption Checks"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -45,37 +45,37 @@ msgid ","
 msgstr ""
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Mohon tambahkan variabel lainnya."
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "Variabel %s dan %s sama!"
 
 msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Group"
-msgstr ""
+msgstr "Kelompok"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Rerata"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Bawah"
 
 msgid "Upper"
-msgstr ""
+msgstr "Atas"
 
 msgid "Inferential Plots"
 msgstr ""
@@ -133,7 +133,7 @@ msgid "Running sequential analysis %d / %d"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
 msgstr ""
@@ -145,7 +145,7 @@ msgid "%s%% CI:"
 msgstr ""
 
 msgid "Effect size"
-msgstr ""
+msgstr "Besaran efek"
 
 msgid "Raincloud Plots"
 msgstr ""
@@ -184,7 +184,7 @@ msgid ""
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "galat %"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -233,22 +233,22 @@ msgid "Welch's t-test."
 msgstr ""
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
 msgstr ""
 
 msgid "Statistic"
-msgstr ""
+msgstr "Statistik"
 
 msgid "Test"
 msgstr ""
 
 msgid "df"
-msgstr ""
+msgstr "df"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
 msgstr "d Cohen"
