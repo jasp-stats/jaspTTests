@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-10-11 20:05+0000\n"
+"PO-Revision-Date: 2021-10-14 01:51+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/es/>\n"
@@ -118,7 +118,7 @@ msgid "ultrawide prior"
 msgstr "ultraancho previo"
 
 msgid "BF%s"
-msgstr "BF%s"
+msgstr "FB%s"
 
 msgid "%s at r==%s"
 msgstr "%s en r==%s"
@@ -242,7 +242,7 @@ msgid "Statistic"
 msgstr "Estadístico"
 
 msgid "Test"
-msgstr "Contraste"
+msgstr "Contrastar"
 
 msgid "df"
 msgstr "gl"
@@ -260,16 +260,16 @@ msgid "Hedges' g"
 msgstr "G de Hedges"
 
 msgid "Mean Difference"
-msgstr "Diferencia Promedio"
+msgstr "Diferencia Media"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "Estimación de Hodges-Lehmann"
 
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "Correlación de Rango Biserial"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "Parámetro de Posición"
 
 msgid "Effect Size"
 msgstr "Magnitud del Efecto"
