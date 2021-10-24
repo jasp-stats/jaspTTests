@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-24 10:54+0000\n"
+"PO-Revision-Date: 2021-10-24 13:07+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/es/>\n"
@@ -23,15 +23,15 @@ msgstr "Clásico"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Contraste T para Muestras Independientes"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "Contraste T para Muestras Emparejadas"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Contraste T para Una Muestra"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -39,15 +39,15 @@ msgstr "Bayesiano"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Contraste T bayesiano para Muestras Independientes"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Contraste T bayesiano para Muestras Emparejadas"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Contraste T bayesiano para Una Muestra"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
