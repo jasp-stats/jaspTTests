@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-24 10:54+0000\n"
+"PO-Revision-Date: 2021-10-24 13:07+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/gl/>\n"
@@ -144,7 +144,7 @@ msgstr "Desvío padrón:"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "Proba T baiesiana dunha mostra"
+msgstr "Proba T baiesiana para Unha Mostra"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
@@ -164,15 +164,15 @@ msgstr "Baiesiano"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Proba T Baiesiana para Mostras Emparelladas"
+msgstr "Proba T baiesiana para Mostras Emparelladas"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Proba T para unha mostra"
+msgstr "Proba T para Unha Mostra"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Proba T para mostras emparelladas"
+msgstr "Proba T para Mostras Emparelladas"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
