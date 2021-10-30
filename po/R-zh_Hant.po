@@ -2,31 +2,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-10-30 19:46+0000\n"
+"Last-Translator: Changya Hu <changyahu@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"jasp/jaspttests-r/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "X 觀察值不足"
 
 msgid "Not yet implemented"
 msgstr ""
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "Y 觀察值不足"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "假設檢定"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "描述統計"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -38,37 +41,37 @@ msgid ","
 msgstr ""
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "請提供另一個變項"
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "%s 變項與 %s 變項相同!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "描述統計圖"
 
 msgid "Group"
-msgstr ""
+msgstr "組"
 
 msgid "N"
-msgstr ""
+msgstr "樣本數"
 
 msgid "Mean"
-msgstr ""
+msgstr "平均數"
 
 msgid "SD"
-msgstr ""
+msgstr "標準差"
 
 msgid "SE"
-msgstr ""
+msgstr "標準誤"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "下"
 
 msgid "Upper"
-msgstr ""
+msgstr "上"
 
 msgid "Inferential Plots"
 msgstr ""
@@ -200,7 +203,7 @@ msgid "Independent Samples T-Test"
 msgstr ""
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "Mann-Whitney U檢定"
 
 msgid "W"
 msgstr ""
@@ -212,22 +215,22 @@ msgid "t"
 msgstr ""
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "Student's t-考驗"
 
 msgid "Statistic"
-msgstr ""
+msgstr "統計數"
 
 msgid "Test"
 msgstr ""
 
 msgid "df"
-msgstr ""
+msgstr "自由度"
 
 msgid "p"
-msgstr ""
+msgstr "p值"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen's d 效果量"
 
 msgid "Glass' delta"
 msgstr ""
@@ -236,7 +239,7 @@ msgid "Hedges' g"
 msgstr ""
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "平均數差異量"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr ""
@@ -248,7 +251,7 @@ msgid "Location Parameter"
 msgstr ""
 
 msgid "Effect Size"
-msgstr ""
+msgstr "效果量"
 
 msgid "Student t-test and Welch t-test"
 msgstr ""
@@ -281,7 +284,7 @@ msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
 msgid "Test of Equality of Variances (Levene's)"
-msgstr ""
+msgstr "Levene 的變異數同值性檢定"
 
 msgid "F"
 msgstr ""
@@ -302,7 +305,7 @@ msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "無法計算F值"
 
 msgid "One Sample T-Test"
 msgstr ""
@@ -344,7 +347,7 @@ msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the 
 msgstr ""
 
 msgid "greater than"
-msgstr ""
+msgstr "大於"
 
 msgid "less than"
 msgstr ""
