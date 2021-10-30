@@ -1,32 +1,37 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-30 19:46+0000\n"
+"Last-Translator: Changya Hu <changyahu@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"jasp/jaspttests-qml/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.9-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr ""
+msgstr "T-檢定"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "古典"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "獨立樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "配對樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "單一樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -46,31 +51,31 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "依變項"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "分群變項"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "組1 ≠ 組1"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "組1 > 組2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "組1 < 組2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
@@ -78,7 +83,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "其他資訊"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
@@ -118,7 +123,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -126,11 +131,11 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
@@ -174,7 +179,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
