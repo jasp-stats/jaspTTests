@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-10-30 19:46+0000\n"
+"PO-Revision-Date: 2021-10-31 14:35+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -68,10 +68,10 @@ msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Lower"
-msgstr "下"
+msgstr "下界"
 
 msgid "Upper"
-msgstr "上"
+msgstr "上界"
 
 msgid "Inferential Plots"
 msgstr ""
@@ -128,10 +128,10 @@ msgid "n"
 msgstr ""
 
 msgid "Posterior"
-msgstr ""
+msgstr "事後"
 
 msgid "Prior"
-msgstr ""
+msgstr "事前"
 
 msgid "%s%% CI:"
 msgstr ""
@@ -227,7 +227,7 @@ msgid "df"
 msgstr "自由度"
 
 msgid "p"
-msgstr "p值"
+msgstr "p 值"
 
 msgid "Cohen's d"
 msgstr "Cohen's d 效果量"
