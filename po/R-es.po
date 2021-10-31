@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-10-30 20:58+0000\n"
+"PO-Revision-Date: 2021-10-31 14:35+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/es/>\n"
@@ -97,6 +97,8 @@ msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
 msgstr ""
+"Actualmente no se admite el gráfico de comprobación de la robustez del "
+"factor de Bayes para la previa informada."
 
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
@@ -106,10 +108,10 @@ msgstr ""
 "actualmente no es compatible con la previa informada."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "Se esperaba una escala numérica o de caracteres, pero se obtuvo %s."
 
 msgid "Running robustness check %d / %d"
-msgstr ""
+msgstr "Ejecutando la comprobación de la robustez %d / %d"
 
 msgid "max BF%s"
 msgstr "máx FB%s"
@@ -130,13 +132,13 @@ msgid "%s at r==%s"
 msgstr "%s en r==%s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Algunos factores de Bayes son infinitos"
 
 msgid "Cauchy prior width"
 msgstr "Anchura previa de Cauchy"
 
 msgid "Running sequential analysis %d / %d"
-msgstr ""
+msgstr "Ejecutando el análisis secuencial %d / %d"
 
 msgid "n"
 msgstr "n"
@@ -154,33 +156,37 @@ msgid "Effect size"
 msgstr "Magnitud del efecto"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Gráficos de tipo Nube con lluvia"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Gráficos de Diferencias de tipo Nube con lluvia"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "No se puede calcular el factor de Bayes"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "El factor de Bayes es infinito"
 
 msgid "The Bayes factor is too small"
 msgstr "El factor de Bayes es demasiado pequeño"
 
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
+"No se puede representar el posterior (posiblemente está demasiado "
+"concentrado cerca del 0)."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
 msgstr ""
+"El valor t es grande. Se usó una aproximación de Savage-Dickey para calcular "
+"el factor de Bayes, pero no se puede dar una estimación del error."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "Non está disponible la estimación del error para previas Normales."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Contraste U bayesiano de Mann-Whitney"
 
 msgid "Bayesian Independent Samples T-Test"
 msgstr "Contraste T bayesiano para Muestras Independientes"
@@ -198,14 +204,18 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"Para todos los contrastes, la hipótesis alternativa indica que la posición "
+"del grupo <em>%1$s</em> es mayor que la posición del grupo <em>%2$s</em>."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"Para todos los contrastes, la hipótesis alternativa indica que la posición "
+"del grupo <em>%1$s</em> es menor que la posición del grupo <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Contraste bayesiano de Rangos con Signo de Wilcoxon"
 
 msgid "Bayesian One Sample T-Test"
 msgstr "Contraste T bayesiano para Una Muestra"
@@ -289,41 +299,48 @@ msgid "Effect Size"
 msgstr "Magnitud del Efecto"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "Contraste t de Student y contraste t de Welch"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "Contraste t de Student"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "Contraste t de Welch"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "Diferencia del Error Típico"
 
 msgid ""
 "For the %s, location parameter is given by mean difference. For the Mann-"
 "Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"Para el %s, el parámetro de posición viene dado por la diferencia de medias. "
+"Para el contraste de Mann-Whitney, el parámetro de posición viene dado por "
+"la estimación de Hodges-Lehmann."
 
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "IC del %1$s%% para %2$s"
 
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
 msgstr ""
+"Para el contraste de Mann-Whitney, la magnitud del efecto viene dada por la "
+"correlación biserial de rangos."
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "Para el %1$s, la magnitud del efecto viene dada por %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "Contraste de Normalidad (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
+"Los resultados significativos sugieren una desviación respecto a la "
+"Normalidad."
 
 msgid "Test of Equality of Variances (Levene's)"
-msgstr ""
+msgstr "Contraste de Igualdad de Varianzas (Levene)"
 
 msgid "F"
 msgstr "F"
