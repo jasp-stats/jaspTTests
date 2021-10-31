@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-30 20:58+0000\n"
+"PO-Revision-Date: 2021-10-31 14:35+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/es/>\n"
@@ -143,7 +143,7 @@ msgstr "Variables"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "Probar valor:"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
@@ -203,7 +203,7 @@ msgstr "Student"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Rango con signo de Wilcoxon"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
@@ -283,7 +283,7 @@ msgstr "Student"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Rango con signo de Wilcoxon"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
@@ -419,15 +419,15 @@ msgstr "Student"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Rango con signo de Wilcoxon"
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "Contraste Z"
 
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "Probar valor:"
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
@@ -503,7 +503,7 @@ msgstr "Student"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Rango con signo de Wilcoxon"
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
@@ -575,35 +575,35 @@ msgstr "Evaluar la diferencia entre dos medias"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Pares de Variables"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Gráficos de diferencias tipo nube con lluvia"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
@@ -611,36 +611,36 @@ msgstr "Variables Dependientes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "Estimación de la posición"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Pares de Variables"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Gráficos de tipo nube con lluvia"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Gráficos de diferencias tipo nube con lluvia"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Presentación horizontal"
