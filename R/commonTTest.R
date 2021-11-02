@@ -18,6 +18,13 @@
 #' The plan of this file is to successively abstract functionality
 #' from the individual t-tests into a common interface to reduce clutter
 #'
+
+# This is a temporary fix
+# TODO: remove it when R will solve this problem!
+gettextf <- function(fmt, ..., domain = NULL)  {
+  return(sprintf(gettext(fmt, domain = domain), ...))
+}
+
 .ttestReadData <- function(dataset, options, type) {
   if (!is.null(dataset))
     return(dataset)
