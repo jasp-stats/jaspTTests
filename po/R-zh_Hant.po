@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-10-31 14:35+0000\n"
+"PO-Revision-Date: 2021-11-03 04:34+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -38,7 +38,7 @@ msgid "nDistinctObservations got an object of type"
 msgstr ""
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "Please provide another variable."
 msgstr "請提供另一個變項"
@@ -299,7 +299,7 @@ msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2
 msgstr ""
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
-msgstr ""
+msgstr "Levene 考驗達顯著 (p < .05), 表示變異數相同之假設不成立"
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
