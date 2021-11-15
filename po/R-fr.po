@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-07-26 14:33+0000\n"
-"Last-Translator: Martin Constant <martinc.1994@gmail.com>\n"
+"PO-Revision-Date: 2021-11-16 04:40+0000\n"
+"Last-Translator: Julien Cegarra <julien.cegarra@univ-jfc.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
 "Language: fr\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Weblate 4.9.1-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
@@ -20,13 +20,14 @@ msgid "not enough x observations"
 msgstr ""
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Pas encore implanté"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "Pas assez d'observations de y"
 
+#, fuzzy
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Vérification des conditions"
 
 msgid "Descriptives"
 msgstr ""
@@ -45,25 +46,25 @@ msgid ","
 msgstr ","
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Veuillez fournir une autre variable."
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "Les variables %s et %s sont identiques !"
 
 msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Group"
-msgstr ""
+msgstr "Groupe"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
 msgstr "Moyenne"
 
 msgid "SD"
-msgstr ""
+msgstr "ET"
 
 msgid "SE"
 msgstr ""
@@ -87,7 +88,7 @@ msgid "Bayes Factor Robustness Check"
 msgstr ""
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Analyse séquentielle"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
@@ -106,10 +107,10 @@ msgid "Running robustness check %d / %d"
 msgstr ""
 
 msgid "max BF%s"
-msgstr ""
+msgstr "max BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "utilisateur précédent"
 
 msgid "wide prior"
 msgstr ""
@@ -118,10 +119,10 @@ msgid "ultrawide prior"
 msgstr ""
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s à r==%s"
 
 msgid "Some Bayes factors were infinite"
 msgstr ""
@@ -130,10 +131,10 @@ msgid "Cauchy prior width"
 msgstr ""
 
 msgid "Running sequential analysis %d / %d"
-msgstr ""
+msgstr "Analyse séquentielle en cours %d / %d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
 msgstr ""
@@ -145,7 +146,7 @@ msgid "%s%% CI:"
 msgstr ""
 
 msgid "Effect size"
-msgstr ""
+msgstr "Taille d'effet"
 
 msgid "Raincloud Plots"
 msgstr ""
@@ -184,7 +185,7 @@ msgid ""
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "erreur %"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -224,31 +225,31 @@ msgid "Independent Samples T-Test"
 msgstr ""
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "Test U Mann-Whitney."
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "T-test de Welch."
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "T-test de Student."
 
 msgid "Statistic"
-msgstr ""
+msgstr "Statistique"
 
 msgid "Test"
-msgstr ""
+msgstr "Test"
 
 msgid "df"
-msgstr ""
+msgstr "ddl"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
 msgstr ""
