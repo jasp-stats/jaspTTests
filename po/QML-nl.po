@@ -333,7 +333,7 @@ msgid "Confidence interval"
 msgstr "Betrouwbaarheidsinterval"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Effectgrootte"
 
 msgctxt "TTestIndependentSamples|"
@@ -437,7 +437,7 @@ msgid "Confidence interval"
 msgstr "Betrouwbaarheidsinterval"
 
 msgctxt "TTestOneSample|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Effectgrootte"
 
 msgctxt "TTestOneSample|"
@@ -513,7 +513,7 @@ msgid "Confidence interval"
 msgstr "Betrouwbaarheidsinterval"
 
 msgctxt "TTestPairedSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Effectgrootte"
 
 msgctxt "TTestPairedSamples|"
