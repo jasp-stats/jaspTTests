@@ -57,7 +57,7 @@ Form
 		}
 		CheckBox
 		{
-			name: "effectSize"; label: qsTr("Effect Size")
+			name: "effectSize"; label: qsTr("Effect size")
 			RadioButtonGroup {
 				name: "effectSizesType";
 				RadioButton { value: "cohensD"; label: qsTr("Cohen's d") ; checked: true }
