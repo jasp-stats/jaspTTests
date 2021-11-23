@@ -332,8 +332,8 @@ msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect Size"
-msgstr "Magnitud del Efecto"
+msgid "Effect size"
+msgstr "Magnitud del efecto"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
@@ -436,8 +436,8 @@ msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
 msgctxt "TTestOneSample|"
-msgid "Effect Size"
-msgstr "Magnitud del Efecto"
+msgid "Effect size"
+msgstr "Magnitud del efecto"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
@@ -512,8 +512,8 @@ msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
 msgctxt "TTestPairedSamples|"
-msgid "Effect Size"
-msgstr "Magnitud del Efecto"
+msgid "Effect size"
+msgstr "Magnitud del efecto"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
