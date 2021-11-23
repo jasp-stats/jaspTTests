@@ -377,7 +377,7 @@ msgid "Confidence interval"
 msgstr "置信区间"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "效应量"
 
 msgctxt "TTestIndependentSamples|"
@@ -493,7 +493,7 @@ msgid "Confidence interval"
 msgstr "置信区间"
 
 msgctxt "TTestOneSample|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "效应量"
 
 msgctxt "TTestOneSample|"
@@ -581,7 +581,7 @@ msgid "Confidence interval"
 msgstr "置信区间"
 
 msgctxt "TTestPairedSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "效应量"
 
 msgctxt "TTestPairedSamples|"

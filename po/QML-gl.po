@@ -21,7 +21,7 @@ msgid "Welch"
 msgstr "Welch"
 
 msgctxt "TTestPairedSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Magnitude do Efecto"
 
 msgctxt "TTestIndependentSamples|"
@@ -489,7 +489,7 @@ msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Magnitude do Efecto"
 
 msgctxt "TTestIndependentSamples|"
@@ -565,7 +565,7 @@ msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
 msgctxt "TTestOneSample|"
-msgid "Effect Size"
+msgid "Effect size"
 msgstr "Magnitude do Efecto"
 
 msgctxt "TTestOneSample|"
