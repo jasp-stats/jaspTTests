@@ -332,10 +332,6 @@ msgid "Confidence interval"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect Size"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
 msgstr ""
 
@@ -436,10 +432,6 @@ msgid "Confidence interval"
 msgstr ""
 
 msgctxt "TTestOneSample|"
-msgid "Effect Size"
-msgstr ""
-
-msgctxt "TTestOneSample|"
 msgid "Descriptives"
 msgstr ""
 
@@ -509,10 +501,6 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Effect Size"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
@@ -637,4 +625,16 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Effect size"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Effect size"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Effect size"
 msgstr ""
