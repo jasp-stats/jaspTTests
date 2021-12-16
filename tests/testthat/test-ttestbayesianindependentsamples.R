@@ -168,7 +168,7 @@ test_that("Analysis handles integer overflow", {
   table <- getTtestTable(results)[["data"]]
   # the error statistic differs between osx <-> windows. if anyone can figure out why i'd be interested (especially because the BF is the same)
   if (identical(.Platform$OS.type, "windows"))
-     jaspTools::expect_equal_tables(table, list(0.00511047754408505, 0.309808326755948, "dependent_var"))
+     jaspTools::expect_equal_tables(table, list(0.00511047754408505, 4.61848285988607, "dependent_var"))
   else
      jaspTools::expect_equal_tables(table, list(0.00511048079567079, 0.185588508623007, "dependent_var"))
 })
