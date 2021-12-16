@@ -17,7 +17,7 @@ test_that("Main table results match", {
   options$priorWidth <- 0.707
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
-  jaspTools::expect_equal_tables(table, list(0.508160332089536, "contNormal", 2.80907441042415e-05))
+  jaspTools::expect_equal_tables(table, list(0.508160332005368, 0.0404156306791769, "contNormal"))
 })
 
 test_that("Inferential and descriptives plots match", {

@@ -20,7 +20,7 @@ test_that("Main table results match for Student test", {
   options$informativeCauchyScale <- 0.5
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
-  jaspTools::expect_equal_tables(table, list(0.123677493243643, 0.0217437890351034, "contNormal"))
+  jaspTools::expect_equal_tables(table, list(0.123678036469976, 0.021743789040271, "contNormal"))
 })
 
 test_that("Main table results match for Wilcoxon test", {
@@ -170,7 +170,7 @@ test_that("Analysis handles integer overflow", {
   if (identical(.Platform$OS.type, "windows"))
      jaspTools::expect_equal_tables(table, list(0.00511047754408505, 0.309808326755948, "dependent_var"))
   else
-     jaspTools::expect_equal_tables(table, list(0.00511047754408505, 0.311958523148014, "dependent_var"))
+     jaspTools::expect_equal_tables(table, list(0.00511048079567079, 0.185588508623007, "dependent_var"))
 })
 
 # all combinations of hypotheses and Bayes factor type
@@ -191,19 +191,15 @@ bftypes <- c("BF10", "BF01", "LogBF10")
 # }
 
 tables <- matrix(list(), 3, 3, dimnames = list(bftypes, hypotheses))
-tables[["BF10", "groupsNotEqual"]]     <- list(0.269544340467379, 0.0322341868191384, "mean_NEO")
-tables[["BF10", "groupOneGreater"]]    <- list(0.129051353111555, 0.00903931757819941, "mean_NEO")
-tables[["BF10", "groupTwoGreater"]]    <- list(0.4100373278359, 0.0140038714457594, "mean_NEO")
-tables[["BF01", "groupsNotEqual"]]     <- list(3.70996474370799, 0.0322341868191384, "mean_NEO")
-tables[["BF01", "groupOneGreater"]]    <- list(7.74885327343739, 0.00903931757819941, "mean_NEO")
-tables[["BF01", "groupTwoGreater"]]    <- list(2.43880235313651, 0.0140038714457594, "mean_NEO")
-tables[["LogBF10", "groupsNotEqual"]]  <- list(-1.31102237353052, 0.0322341868191384, "mean_NEO")
-tables[["LogBF10", "groupOneGreater"]] <- list(-2.04754486769964, 0.00903931757819941, "mean_NEO")
-tables[["LogBF10", "groupTwoGreater"]] <- list(-0.891507079925797, 0.0140038714457594, "mean_NEO")
-
-
-# original
-tables[["BF01", "groupTwoGreater"]] <- list(2.43880235313651, 0.0140038714457594, "mean_NEO")
+tables[["BF10",    "groupsNotEqual" ]] <- list(0.26954423651714, 0.0237083065632031, "mean_NEO")
+tables[["BF10",    "groupOneGreater"]] <- list(0.129051393730452, 0.00163909809942946, "mean_NEO")
+tables[["BF10",    "groupTwoGreater"]] <- list(0.410037079311444, 1.19851400702814e-06, "mean_NEO")
+tables[["BF01",    "groupsNotEqual" ]] <- list(3.70996617446284, 0.0237083065632031, "mean_NEO")
+tables[["BF01",    "groupOneGreater"]] <- list(7.74885083448756, 0.00163909809942946, "mean_NEO")
+tables[["BF01",    "groupTwoGreater"]] <- list(2.43880383130046, 1.19851400702814e-06, "mean_NEO")
+tables[["LogBF10", "groupsNotEqual" ]] <- list(-1.31102275918232, 0.0237083065632031, "mean_NEO")
+tables[["LogBF10", "groupOneGreater"]] <- list(-2.04754455294982, 0.00163909809942946, "mean_NEO")
+tables[["LogBF10", "groupTwoGreater"]] <- list(-0.891507686028008, 1.19851400702814e-06, "mean_NEO")
 
 set.seed(1)
 for (hypo in hypotheses) {
@@ -216,7 +212,7 @@ for (hypo in hypotheses) {
 
     results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "Kitchen Rolls", options)
     # run once with this uncommented to generate tables, afterwards call makeTables(tables)
-    # tables[[bftype, hypo]] <<- makeTestTable(getTtestTable(results)[["data"]], print = FALSE)
+    # tables[[bftype, hypo]] <- makeTestTable(getTtestTable(results)[["data"]], print = FALSE)
 
     test_that(sprintf("%s-%s Prior and Posterior plot matches", hypo, bftype), {
       plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotPriorAndPosterior"]][["data"]]
