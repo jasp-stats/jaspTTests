@@ -166,7 +166,9 @@ test_that("Analysis handles integer overflow", {
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
 
   table <- getTtestTable(results)[["data"]]
-  # the error statistic differs between osx <-> windows. if anyone can figure out why i'd be interested (especially because the BF is the same)
+  # ???: the error statistic differs between osx <-> windows. if anyone can figure out why i'd be interested (especially because the BF is the same)
+  # vandenman: The difference appears in integrate, for example:
+  # BayesFactor:::meta.bf.interval(-Inf, Inf, t = 0.158315759266202, N = 50000, df = 199998, rscale = 0.707)
   if (identical(.Platform$OS.type, "windows"))
      jaspTools::expect_equal_tables(table, list(0.00511047754408505, 4.61848285988607, "dependent_var"))
   else
