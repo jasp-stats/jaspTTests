@@ -5,7 +5,7 @@ context("Bayesian Paired Samples T-Test")
 # - missing value exclusion
 # - default cauchy and informed prior cauchy/Normal
 # - error handling of plots
- 
+
 getTtestTable <- function(x) x[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_ttestTable"]]
 getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["collection"]][["descriptivesContainer_table"]]
 
@@ -29,22 +29,22 @@ test_that("Inferential and descriptives plots match", {
   options$pairs <- list(c("contNormal", "contGamma"))
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- FALSE
-  
+
   options$plotBayesFactorRobustness <- TRUE
   options$plotBayesFactorRobustnessAdditionalInfo <- FALSE
-  
+
   options$plotSequentialAnalysis <- TRUE
   options$plotSequentialAnalysisRobustness <- FALSE
 
   options$descriptives <- TRUE
   options$descriptivesPlots <- TRUE
   options$descriptivesPlotsCredibleInterval <- 0.90
-  
+
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
-  
+
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives")
-  
+
   table <- getDescriptivesTable(results)[["data"]]
   jaspTools::expect_equal_tables(table,
     list(100, -0.364486647151235, -0.18874858754, 1.05841360919316, 0.105841360919316,
@@ -53,16 +53,16 @@ test_that("Inferential and descriptives plots match", {
     ),
     label = "Descriptives table"
   )
-  
+
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior")
-  
+
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "robustness-check")
-  
+
   testPlot <- results[["state"]][["figures"]][[4]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "sequential-analysis")
-  
+
 })
 
 test_that("Inferential plots with additional info match", {
@@ -71,24 +71,24 @@ test_that("Inferential plots with additional info match", {
   options$pairs <- list(c("contcor1", "contcor2"))
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- TRUE
-  
+
   options$plotBayesFactorRobustness <- TRUE
   options$plotBayesFactorRobustnessAdditionalInfo <- TRUE
-  
+
   options$plotSequentialAnalysis <- TRUE
   options$plotSequentialAnalysisRobustness <- TRUE
-  
+
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-additional")
-  
+
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "robustness-check-additional")
 
   testPlot <- results[["state"]][["figures"]][[3]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "sequential-analysis-additional")
-  
+
 })
 
 test_that("Raincloud plot matches", {
