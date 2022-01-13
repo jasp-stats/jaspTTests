@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2021-09-25 02:40\n"
-"PO-Revision-Date: 2021-11-16 04:40+0000\n"
-"Last-Translator: Julien Cegarra <julien.cegarra@univ-jfc.fr>\n"
+"PO-Revision-Date: 2022-01-14 14:52+0000\n"
+"Last-Translator: Jordy STEFAN <jordy.stefan@askoria.eu>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
 "Language: fr\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9.1-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr ""
@@ -25,12 +25,11 @@ msgstr "Pas encore implanté"
 msgid "not enough y observations"
 msgstr "Pas assez d'observations de y"
 
-#, fuzzy
 msgid "Assumption Checks"
-msgstr "Vérification des conditions"
+msgstr "Vérifications des présupposés"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptives"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -67,16 +66,16 @@ msgid "SD"
 msgstr "ET"
 
 msgid "SE"
-msgstr ""
+msgstr "ES"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Inférieur"
 
 msgid "Upper"
-msgstr ""
+msgstr "Supérieur"
 
 msgid "Inferential Plots"
 msgstr ""
@@ -185,7 +184,7 @@ msgid ""
 msgstr ""
 
 msgid "error %"
-msgstr "erreur %"
+msgstr "% erreur"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -313,7 +312,7 @@ msgid "Test of Equality of Variances (Levene's)"
 msgstr ""
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "greater"
 msgstr ""
