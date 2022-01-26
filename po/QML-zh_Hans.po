@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-26 13:55+0000\n"
+"PO-Revision-Date: 2022-01-27 06:29+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-qml/zh_Hans/>\n"
@@ -298,7 +298,7 @@ msgstr "描述统计"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr "云雨图"
+msgstr "雨云图"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
@@ -506,7 +506,7 @@ msgstr "描述图"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr "云雨图"
+msgstr "雨云图"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
@@ -594,7 +594,7 @@ msgstr "描述图"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr "云雨图"
+msgstr "雨云图"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
