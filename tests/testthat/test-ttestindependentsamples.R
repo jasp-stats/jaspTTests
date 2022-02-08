@@ -100,25 +100,25 @@ test_that("Raincloud plot matches (horizontal)", {
 
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestIndependentSamples")
-  
+
   options$variables <- "debInf"
   options$groupingVariable <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
-  
+
   options$variables <- "debSame"
   options$groupingVariable <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
-  
+
   options$variables <- "debMiss99"
   options$groupingVariable <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
-  
+
   options$dependent <- "contNormal"
   options$groupingVariable <- "debSame"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
@@ -126,3 +126,70 @@ test_that("Analysis handles errors", {
   expect_identical(status, "validationError", label = "1-level factor check")
 })
 
+
+test_that("Analysis works with unicode", {
+
+  options <- analysisOptions("TTestIndependentSamples")
+  options$descriptives <- TRUE
+  options$descriptivesPlots <- TRUE
+  options$descriptivesPlotsRainCloud <- TRUE
+  options$effectSize <- TRUE
+  options$equalityOfVariancesTests <- TRUE
+  options$groupingVariable <- "Cloak"
+  options$meanDifference <- TRUE
+  options$normalityTests <- TRUE
+  options$plotHeight <- 300
+  options$plotWidth <- 350
+  options$variables <- "Mischief"
+  options$welchs <- TRUE
+  set.seed(1)
+  dataset <- structure(list(Participant = 1:24,
+                            Cloak = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),
+                                              .Label = c("<U+672A><U+9009><U+4E2D>", "<U+9009><U+4E2D>"), class = "factor"),
+                            Mischief = c(3L, 1L, 5L, 4L, 6L, 4L, 6L, 2L, 0L, 5L, 4L, 5L, 4L, 3L, 6L, 6L, 8L, 5L, 5L, 4L, 2L, 5L, 7L, 5L)),
+                       row.names = c(NA, -24L), class = "data.frame")
+
+  results <- runAnalysis("TTestIndependentSamples", dataset, options)
+
+
+  table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
+  jaspTools::expect_equal_tables(table, list(0.544891640866872, 1, 0.468214303810626, "Mischief"), label = "Test of Equality of Variances (Levene's) table results match")
+
+  # NOTE: these results are bogus and this test should be updated, once .hasErrors handles unicode properly so that the shapiro wilk test actually runs
+  # table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
+  # jaspTools::expect_equal_tables(
+  #   table,
+  #   list(1, "TRUE", "NaN", "Mischief", "<unicode><unicode><unicode><unicode><unicode><unicode><unicode><unicode><unicode>",
+  #        1, "FALSE", "NaN", "Mischief", "<unicode><unicode><unicode><unicode><unicode><unicode>"
+  #   ),
+  #   label = "Test of Normality (Shapiro-Wilk) table results match"
+  # )
+
+  table <- results[["results"]][["ttest"]][["data"]]
+  jaspTools::expect_equal_tables(
+    table,
+    list("TRUE", -1.71345938396515, -0.699516864283035, 22, -1.25, 0.100686344874811,
+         0.72951831347607, "Student", "Mischief", "FALSE", -1.71345938396515,
+         -0.699516864283035, 21.5414052230847, -1.25, 0.100984669515183,
+         0.72951831347607, "Welch", "Mischief"),
+    label = "Independent Samples T-Test table results match"
+  )
+
+  plotName <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_plots"]][["collection"]][["ttestDescriptives_plots_Mischief"]][["data"]]
+  testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "mischief-Descriptives-plot")
+
+  plotName <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_plotsRainCloud"]][["collection"]][["ttestDescriptives_plotsRainCloud_Mischief"]][["data"]]
+  testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "mischief-raincloud-plot")
+
+  table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
+  jaspTools::expect_equal_tables(
+    table,
+    list("TRUE", 12, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>", 3.75, 1.91287503750007,
+         0.552199458913392, "Mischief", "FALSE", 12, "&lt;U+9009&gt;&lt;U+4E2D>",
+         5, 1.65144564768954, 0.476731294622796, "Mischief"),
+    label = "Group Descriptives table results match"
+  )
+
+})
