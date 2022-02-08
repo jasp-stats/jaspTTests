@@ -79,6 +79,9 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     ttest$addColumnInfo(name = "test", title = gettext("Test"), type = "string")
 
   ttest$addColumnInfo(name = testStat, title = testStatName,    type = "number")
+  if (optionsList$wantsWilcox) {
+    ttest$addColumnInfo(name = "zstat", title = gettext("z"),    type = "number")
+  }
   ttest$addColumnInfo(name = "df",     title = gettext("df"),   type = "integer")
   ttest$addColumnInfo(name = "p",      title = gettext("p"),    type = "pvalue")
 
@@ -195,7 +198,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
           table$addFootnote(errorMessage, colNames = testStat, rowNames = rowName)
         }
       } else {
-        row <- c(row, list(df = "", p = "", md = "", d = "", lowerCI = "", upperCI = "", sed = ""))
+        row <- c(row, list(df = "", p = "", md = "", d = "", lowerCI = "", upperCI = "", sed = "", zstat = ""))
         row[[testStat]] <- ""
       }
 
@@ -212,7 +215,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   c1 <- df$c1
   c2 <- df$c2
   n  <- length(c1)
-
+  zstat <- NULL
   direction <- .ttestMainGetDirection(options$hypothesis)
 
   ## if Wilcox box is ticked, run a paired wilcoxon signed rank test
@@ -225,6 +228,8 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     nd   <- sum(c1 - c2 != 0)
     maxw <- (nd * (nd + 1))/2
     d    <- as.numeric((res$statistic / maxw) * 2 - 1)
+    zstat <- (res$statistic - ((nd * (nd + 1)) / 4 ) ) / 
+      sqrt(((nd * (nd + 1)) * (2 * nd + 1)) / 24 ) 
     wSE  <- sqrt((nd * (nd + 1) * (2 * nd + 1)) / 6) / 2
     mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2))
     # zSign <- (ww$statistic - ((n*(n+1))/4))/wSE
@@ -285,7 +290,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   result <- list(df = df, p = p, md = m, d = d,
                      lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
                      lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize,
-                     sed = sed)
+                     sed = sed, zstat = zstat)
 
   result[testStat] <- stat
 
