@@ -525,7 +525,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   xLimits <- range(pretty(c(xMin, xMax)))
   xBreaks <- unique(x)
   yBreaks <- pretty(range(xDens))
-  xLabels <- unique(grp)
+  xLabels <- as.character(unique(grp))
 
   geomLine <- NULL
   if (addLines) {
