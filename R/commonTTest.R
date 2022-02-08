@@ -551,10 +551,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   p <-
     ggplot2::ggplot() +
     geomLine +
-    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp), size = 3) +
-    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp), color = "black", alpha = 0.5) +
-    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp), geom = "errorbar", width = 0.1, size = 1) +
-    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp), outlier.shape = NA, width = 0.2, size = 1)
+    ggplot2::geom_point  (data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp), size = 3) +
+    ggplot2::geom_polygon(data = densDf,     mapping = ggplot2::aes(x = y,  y = x, fill = grp ), color = "black", alpha = 0.5) +
+    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp), geom = "errorbar",  width = 0.1, size = 1) +
+    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp ), outlier.shape = NA, width = 0.2, size = 1)
     coordFlip +
     geomHline +
     ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
