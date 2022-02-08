@@ -29,12 +29,13 @@ test_that("Wilcoxon results match R, SPSS, SAS and MiniTab", {
   options$students <- FALSE
   options$wilcoxonSignedRank <- TRUE
   
-  results <- jaspTools::runAnalysis("TTestPairedSamples", "Wilcoxon.csv", options)
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dat, options)
   
   # Main Table
   resultTable <- results$results$ttest$data
   
   jaspTools::expect_equal_tables(
     "test"=resultTable,
-    "ref"=list("FALSE", 15, "", 0.220971735391012, "-", "Control", "Treatment."))
+    "ref"=list("FALSE", 15, "", 0.220971735391012, "-", "Control", "Treatment.",
+               -1.27411797859406))
 })

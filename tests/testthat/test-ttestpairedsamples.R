@@ -16,11 +16,12 @@ test_that("Main table results match for one pair * multiple tests", {
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("TRUE", -11.6121720596087, 1, -1.16121720596087, 99, -1.37211873031366,
-	       -2.22170938375, 1, 0.191325909773409, "-", "Student", "<unicode><unicode><unicode>",
-	       "contNormal", "contGamma", "FALSE", 199, 1, -0.921188118811881,
-	       "", -0.94536640190499, -2.1796113893332, 0.999999999999999,
-	       "", "", "Wilcoxon", "<unicode><unicode><unicode>", "", "")
+     list("TRUE", -11.6121720596087, 1, -1.16121720596087, 99, -1.37211873031366,
+          -2.22170938375, 1, 0.191325909773409, "-", "Student", "<unicode>",
+          "contNormal", "contGamma", "FALSE", 199, 1, -0.921188118811881,
+          "", -0.94536640190499, -2.1796113893332, 0.999999999999999,
+          "", "", "Wilcoxon", "<unicode>", "", "", -7.99754358622852
+     )
   )
 })
 
