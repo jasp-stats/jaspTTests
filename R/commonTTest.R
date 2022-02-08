@@ -572,7 +572,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                                 breaks = yBreaks) +
     ggplot2::scale_x_continuous(name = xLabel,
                                 breaks = xBreaks,
-                                labels = gettext(xLabels)) +
+                                labels = xLabels) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +
     ggplot2::scale_color_brewer(palette = "Dark2")
 
