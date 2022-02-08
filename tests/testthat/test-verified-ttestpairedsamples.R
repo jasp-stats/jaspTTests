@@ -29,7 +29,7 @@ test_that("Wilcoxon results match R, SPSS, SAS and MiniTab", {
   options$students <- FALSE
   options$wilcoxonSignedRank <- TRUE
   
-  results <- jaspTools::runAnalysis("TTestPairedSamples", dat, options)
+  results <- jaspTools::runAnalysis("TTestPairedSamples", "Wilcoxon.csv", options)
   
   # Main Table
   resultTable <- results$results$ttest$data
