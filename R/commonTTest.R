@@ -479,8 +479,8 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   dataset <- na.omit(dataset) # only applies when cases are excluded per dependent variable
   n   <- nrow(dataset)
-  y   <- dataset[, variable]
-  grp <- factor(dataset[, groups])
+  y   <- dataset[[variable]]
+  grp <- factor(dataset[[groups]])
   x   <- as.numeric(as.factor(grp)) - 1
   xj  <- jitter(x, amount = 0.1)
   if (horiz) {
@@ -527,8 +527,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   yBreaks <- pretty(range(xDens))
   xLabels <- unique(grp)
 
-  p <- ggplot2::ggplot()
-
+  geomLine <- NULL
   if (addLines) {
     id <- numeric(n)
     for (g in unique(grp)) {
@@ -536,43 +535,30 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
       id[idx] <- 1:length(idx)
     }
     pointBoxDf$id <- id
-    p <- p +
-      ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
+    geomLine <- ggplot2::geom_line(data  = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, group = id), color = 'gray')
   }
 
-  p <- p +
-    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp),
-                        size = 3) +
+  coordFlip <- if (horiz) ggplot2::coord_flip() else NULL
 
-    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp),
-                          color = "black", alpha = 0.5) +
-
-    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp),
-                          geom = "errorbar", width = 0.1, size = 1) +
-
-    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp),
-                          outlier.shape = NA, width = 0.2, size = 1)
-
-  if (horiz) {
-    p <- p + ggplot2::coord_flip()
-  }
-
+  geomHline <- NULL
   if (length(levels(grp)) == 1) {
     xBreaks <- NULL
     xLabels <- NULL
     if (!is.null(testValue))
-      p <- p + ggplot2::geom_hline(data = data.frame(testValue),
-                                   ggplot2::aes(yintercept = testValue),
-                                   linetype = "dashed")
+      geomHline <- ggplot2::geom_hline(data = data.frame(testValue), ggplot2::aes(yintercept = testValue), linetype = "dashed")
   }
 
-  p <- p +
-    ggplot2::scale_y_continuous(name = yLabel,
-                                limits = range(yBreaks),
-                                breaks = yBreaks) +
-    ggplot2::scale_x_continuous(name = xLabel,
-                                breaks = xBreaks,
-                                labels = xLabels) +
+  p <-
+    ggplot2::ggplot() +
+    geomLine +
+    ggplot2::geom_point(data = pointBoxDf, mapping = ggplot2::aes(x = xj, y = y, color = grp), size = 3) +
+    ggplot2::geom_polygon(data = densDf, mapping = ggplot2::aes(y = x, x = y, fill = grp), color = "black", alpha = 0.5) +
+    ggplot2::stat_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, group = grp), geom = "errorbar", width = 0.1, size = 1) +
+    ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp), outlier.shape = NA, width = 0.2, size = 1)
+    coordFlip +
+    geomHline +
+    ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
+    ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
     ggplot2::scale_fill_brewer(palette = "Dark2") +
     ggplot2::scale_color_brewer(palette = "Dark2")
 
