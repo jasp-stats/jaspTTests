@@ -48,7 +48,7 @@ test_that("Equality of variances table matches", {
   options$equalityOfVariancesTests<- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
-  jaspTools::expect_equal_tables(table, list("contNormal", 0.474760708390762, 1, 0.492433247088434))
+  jaspTools::expect_equal_tables(table, list("contNormal", 0.689028815355905, 98, 0.492433247088434))
 })
 
 test_that("Descriptives table matches", {
@@ -153,7 +153,7 @@ test_that("Analysis works with unicode", {
 
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
-  jaspTools::expect_equal_tables(table, list(0.544891640866872, 1, 0.468214303810626, "Mischief"), label = "Test of Equality of Variances (Levene's) table results match")
+  jaspTools::expect_equal_tables(table, list(0.738167759297893, 22, 0.468214303810626, "Mischief"), label = "Test of Equality of Variances (Levene's) table results match")
 
   # NOTE: these results are bogus and this test should be updated, once .hasErrors handles unicode properly so that the shapiro wilk test actually runs
   # table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
