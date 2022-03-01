@@ -427,7 +427,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentEqVarRow <- function(table, variable, groups, dataset) {
-  levene <- car::leveneTest(dataset[[ .v(variable) ]], dataset[[ .v(groups) ]], "mean")
+  levene <- car::leveneTest(dataset[[ variable ]], dataset[[ groups ]], "mean")
 
   t  <- sqrt(levene[1, "F value"])
   df <- levene[2, "Df"]
