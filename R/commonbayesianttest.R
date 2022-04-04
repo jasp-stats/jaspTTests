@@ -640,14 +640,22 @@
 
             posteriorSummary <- .posteriorSummaryGroupMean(variable=groupDataOm,
                                                            descriptivesPlotsCredibleInterval=CRI)
-            ciLower <- .clean(posteriorSummary[["ciLower"]])
-            ciUpper <- .clean(posteriorSummary[["ciUpper"]])
+            ciLower <- posteriorSummary[["ciLower"]]
+            ciUpper <- posteriorSummary[["ciUpper"]]
 
+<<<<<<< HEAD
             n <- .clean(length(groupDataOm))
             mean <- .clean(mean(groupDataOm))
             std <- .clean(sd(groupDataOm))
             sem <- .clean(sd(groupDataOm) / sqrt(length(groupDataOm)))
             coefOfVariation  <- .clean(sd(groupDataOm) / abs(mean(groupDataOm)))
+=======
+            n <- length(groupDataOm)
+            mean <- mean(groupDataOm)
+            std <- sd(groupDataOm)
+            sem <- sd(groupDataOm) / sqrt(length(groupDataOm))
+            coefOfVariation  <- sd(groupDataOm) / abs(mean(groupDataOm))
+>>>>>>> 60073a4 (Coefficient of variation added to the descriptive tables of all TTests)
 
             row <- list(variable = var,
                         N = n, mean = mean, sd = std, se = sem, coefOfVariation = coefOfVariation)
@@ -660,7 +668,7 @@
 
           } else {
 
-            n <- .clean(length(groupDataOm))
+            n <- length(groupDataOm)
             row <- list(variable = var, N = n,
                         mean = "", sd = "", se = "", coefOfVariation = "")
 
