@@ -184,11 +184,11 @@ test_that("Analysis works with unicode", {
   jaspTools::expect_equal_plots(testPlot, "mischief-raincloud-plot")
 
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
-  jaspTools::expect_equal_tables(
-    table,
-    list("TRUE", 12, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>", 3.75, 1.91287503750007,
-         0.552199458913392, "Mischief", "FALSE", 12, "&lt;U+9009&gt;&lt;U+4E2D>",
-         5, 1.65144564768954, 0.476731294622796, "Mischief"),
+  jaspTools::expect_equal_tables(table,
+    list("TRUE", 12, 0.51010001000002, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>",
+         3.75, 1.91287503750007, 0.552199458913392, "Mischief", "FALSE",
+         12, 0.330289129537908, "&lt;U+9009&gt;&lt;U+4E2D>", 5, 1.65144564768954,
+         0.476731294622796, "Mischief"),
     label = "Group Descriptives table results match"
   )
 
