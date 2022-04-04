@@ -353,7 +353,8 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   ttestDescriptivesTable$addColumnInfo(name = "mean", type = "number",  title = gettext("Mean"))
   ttestDescriptivesTable$addColumnInfo(name = "sd",   type = "number",  title = gettext("SD"))
   ttestDescriptivesTable$addColumnInfo(name = "se",   type = "number",  title = gettext("SE"))
-  ttestDescriptivesTable$addColumnInfo(name = "cv",   type = "number",  title = gettext("Coefficient of variation"))
+  ttestDescriptivesTable$addColumnInfo(name = "coefOfVariation",
+                                                      type = "number",  title = gettext("Coefficient of variation"))
   container[["table"]] <- ttestDescriptivesTable
 
   if (ready)
@@ -375,19 +376,19 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     std <- as.numeric(sd(dat,   na.rm = TRUE))
 
     if (is.numeric(std)) {
-      se <- as.numeric(std/sqrt(n))
-      cv <- as.numeric(std/abs(m))
+      se              <- as.numeric(std/sqrt(n))
+      coefOfVariation <- as.numeric(std/abs(m))
     }
     else {
-      se <- NaN
-      cv <- NaN
+      se              <- NaN
+      coefOfVariation <- NaN
     }
 
-    row[["N"]]    <- n
-    row[["mean"]] <- m
-    row[["sd"]]   <- std
-    row[["se"]]   <- se
-    row[["cv"]]   <- cv
+    row[["N"]]                 <- n
+    row[["mean"]]              <- m
+    row[["sd"]]                <- std
+    row[["se"]]                <- se
+    row[["coefOfVariation"]]   <- coefOfVariation
 
     table$addRows(row)
   }
