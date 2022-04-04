@@ -38,7 +38,7 @@ test_that("Main table results match for Wilcoxon signed rank", {
 # https://github.com/jasp-stats/jasp-issues/issues/1158
 test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
   tempTestDat <- data.frame("marieAguirre"=c(0, 1/3, 1/2, 3/7, 1/4, 1/4, 1/2, 0, 0, 1/5, 3/7, 3/4, 1, 1, 3/4, 0, 1, 1))
-  
+
   options <- jaspTools::analysisOptions("TTestOneSample")
   options$testValue <- 0.5
   options$meanDifference <- TRUE
@@ -48,11 +48,11 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
   options$meanDiffConfidenceIntervalCheckbox <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
   options$variables <- "marieAguirre"
-  
+
   results <- jaspTools::runAnalysis("TTestOneSample", tempTestDat, options)
-  
+
   resultTable <- results[["results"]][["ttest"]][["data"]]
-  
+
   jaspTools::expect_equal_tables(
     "test"=resultTable,
     "ref"=list("TRUE", -0.385804772181173, -0.0909350568744795, 17, -0.552576696667502,
@@ -96,8 +96,8 @@ test_that("Descriptives table matches", {
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("contGamma", 100, 2.03296079621, 1.53241112621044, 0.153241112621044)
-  )
+                                 list(100, 0.753782920490781, 2.03296079621, 1.53241112621044, 0.153241112621044,
+                                      "contGamma"))
 })
 
 test_that("Descriptives plot matches", {
@@ -142,17 +142,17 @@ test_that("Raincloud plot matches (missing data)", {
 
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestOneSample")
-  
+
   options$variables <- "debInf"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
-  
+
   options$variables <- "debSame"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
-  
+
   options$variables <- "debMiss99"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
