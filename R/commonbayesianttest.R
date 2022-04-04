@@ -582,6 +582,7 @@
   descriptives$addColumnInfo  (name = "mean",  title = gettext("Mean"),  type = "number")
   descriptives$addColumnInfo  (name = "sd",    title = gettext("SD"),    type = "number")
   descriptives$addColumnInfo  (name = "se",    title = gettext("SE"),    type = "number")
+  descriptives$addColumnInfo  (name = "cv",    title = gettext("Coefficient of variation"),    type = "number")
 
   if (hasCRI) {
     interval <- 100 * CRI
@@ -644,9 +645,10 @@
             mean <- .clean(mean(groupDataOm))
             std <- .clean(sd(groupDataOm))
             sem <- .clean(sd(groupDataOm) / sqrt(length(groupDataOm)))
+            cov  <- .clean(sd(groupDataOm) / abs(mean(groupDataOm)))
 
             row <- list(variable = var,
-                        N = n, mean = mean, sd = std, se = sem)
+                        N = n, mean = mean, sd = std, se = sem, cv = cov)
 
             if (hasGrouping)
               row[["group"]] <- level
@@ -658,7 +660,7 @@
 
             n <- .clean(length(groupDataOm))
             row <- list(variable = var, N = n,
-                        mean = "", sd = "", se = "")
+                        mean = "", sd = "", se = "", cv = "")
 
             if (hasGrouping)
               row[["group"]] <- ""

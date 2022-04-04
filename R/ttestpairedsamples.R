@@ -228,8 +228,8 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     nd   <- sum(c1 - c2 != 0)
     maxw <- (nd * (nd + 1))/2
     d    <- as.numeric((res$statistic / maxw) * 2 - 1)
-    zstat <- (res$statistic - ((nd * (nd + 1)) / 4 ) ) / 
-      sqrt(((nd * (nd + 1)) * (2 * nd + 1)) / 24 ) 
+    zstat <- (res$statistic - ((nd * (nd + 1)) / 4 ) ) /
+      sqrt(((nd * (nd + 1)) * (2 * nd + 1)) / 24 )
     wSE  <- sqrt((nd * (nd + 1) * (2 * nd + 1)) / 6) / 2
     mrSE <- sqrt(wSE^2  * 4 * (1 / maxw^2))
     # zSign <- (ww$statistic - ((n*(n+1))/4))/wSE
@@ -353,7 +353,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   ttestDescriptivesTable$addColumnInfo(name = "mean", type = "number",  title = gettext("Mean"))
   ttestDescriptivesTable$addColumnInfo(name = "sd",   type = "number",  title = gettext("SD"))
   ttestDescriptivesTable$addColumnInfo(name = "se",   type = "number",  title = gettext("SE"))
-
+  ttestDescriptivesTable$addColumnInfo(name = "cv",   type = "number",  title = gettext("Coefficient of variation"))
   container[["table"]] <- ttestDescriptivesTable
 
   if (ready)
@@ -374,15 +374,20 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     m   <- as.numeric(mean(dat, na.rm = TRUE))
     std <- as.numeric(sd(dat,   na.rm = TRUE))
 
-    if (is.numeric(std))
+    if (is.numeric(std)) {
       se <- as.numeric(std/sqrt(n))
-    else
+      cv <- as.numeric(std/abs(m))
+    }
+    else {
       se <- NaN
+      cv <- NaN
+    }
 
     row[["N"]]    <- n
     row[["mean"]] <- m
     row[["sd"]]   <- std
     row[["se"]]   <- se
+    row[["cv"]]   <- cv
 
     table$addRows(row)
   }
