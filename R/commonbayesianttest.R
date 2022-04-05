@@ -648,7 +648,11 @@
             mean <- mean(groupDataOm)
             std <- sd(groupDataOm)
             sem <- sd(groupDataOm) / sqrt(length(groupDataOm))
+<<<<<<< HEAD
             coefOfVariation  <- sd(groupDataOm) / abs(mean(groupDataOm))
+=======
+            coefOfVariation  <- sd(groupDataOm) / mean(groupDataOm)
+>>>>>>> 8000e9e (Mean instead of abs(mean))
 
             row <- list(variable = var,
                         N = n, mean = mean, sd = std, se = sem, coefOfVariation = coefOfVariation)

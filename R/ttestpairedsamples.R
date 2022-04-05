@@ -377,7 +377,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
     if (is.numeric(std)) {
       se              <- as.numeric(std/sqrt(n))
-      coefOfVariation <- as.numeric(std/abs(m))
+      coefOfVariation <- as.numeric(std/m)
     }
     else {
       se              <- NaN

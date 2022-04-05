@@ -44,7 +44,7 @@ test_that("Inferential and descriptives plots match", {
 
   table <- getDescriptivesTable(results)[["data"]]
   jaspTools::expect_equal_tables(table,
-    list(100, 5.60753128268502, -0.364486647151235, -0.18874858754, 1.05841360919316,
+    list(100, -5.60753128268502, -0.364486647151235, -0.18874858754, 1.05841360919316,
          0.105841360919316, -0.013010527928765, "contNormal"),
     label = "Descriptives table"
   )

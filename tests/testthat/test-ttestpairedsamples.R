@@ -55,7 +55,7 @@ test_that("Descriptives table matches", {
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
   jaspTools::expect_equal_tables(table,
-      list(100, 5.60753128268502, -0.18874858754, 1.05841360919316, 0.105841360919316,
+      list(100, -5.60753128268502, -0.18874858754, 1.05841360919316, 0.105841360919316,
            "contNormal", 100, 0.753782920490781, 2.03296079621, 1.53241112621044,
            0.153241112621044, "contGamma"))
 })
