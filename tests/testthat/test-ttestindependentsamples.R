@@ -48,7 +48,7 @@ test_that("Equality of variances table matches", {
   options$equalityOfVariancesTests<- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
-  jaspTools::expect_equal_tables(table, list("contNormal", 0.474760708390762, 1, 98, 0.492433247088434))
+  jaspTools::expect_equal_tables(table, list(0.575606965634445, 1, 0.449860273665838, "contNormal"))
 })
 
 test_that("Descriptives table matches", {

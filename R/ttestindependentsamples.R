@@ -48,7 +48,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
                    "meanDiffConfidenceIntervalPercent", "hypothesis",
                    "VovkSellkeMPR", "missingValues", "groupingVariable", "effectSizesType",
-                   "welchs", "mannWhitneyU", "descriptivesMeanDiffConfidenceIntervalPercent"))
+                   "welchs", "mannWhitneyU", "descriptivesMeanDiffConfidenceIntervalPercent", "equalityOfVarianceType"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
@@ -187,11 +187,16 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
 
-  if (!options$equalityOfVariancesTests || !is.null(container[["equalityVariance"]]))
+  if (!options$equalityOfVariancesTests || !is.null(container[["AssumptionChecks"]]))
     return()
 
+  if (options$equalityOfVarianceType == "brownForsythe")
+    nameOfEqVarTest <- gettext("Brown-Forsythe")
+  else if (options$equalityOfVarianceType == "levene")
+    nameOfEqVarTest <- gettext("Levene's")
+
   # Create table
-  equalityVariance <- createJaspTable(title = gettext("Test of Equality of Variances (Levene's)"))
+  equalityVariance <- createJaspTable(title = gettextf("Test of Equality of Variances (%1$s)", nameOfEqVarTest))
   equalityVariance$showSpecifiedColumnsOnly <- TRUE
   equalityVariance$position <- 3
   equalityVariance$addColumnInfo(name = "variable", type = "string",  title = "")
@@ -243,7 +248,9 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
         if (!isTryError(result)) {
           row <- c(row, result[["row"]])
-          if (result[["leveneViolated"]])
+          if (result[["leveneViolated"]] && options$equalityOfVarianceType == "brownForsythe")
+            table$addFootnote(gettext("Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"), colNames = "p", rowNames = rowName)
+          else if (result[["leveneViolated"]] && options$equalityOfVarianceType == "levene")
             table$addFootnote(gettext("Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"), colNames = "p", rowNames = rowName)
         } else {
           errorMessage <- .extractErrorMessage(result)
@@ -356,9 +363,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ## assumption is met; seems like in this setting there is no
   ## sampling plan, thus the p-value is not defined. haha!
   leveneViolated <- FALSE
-  if (!optionsList$wantsWelchs && !optionsList$wantsWilcox && optionsList$wantsStudents) {
+  if (!optionsList$wantsWelchs && !optionsList$wantsWilcox && optionsList$wantsStudents && options$equalityOfVarianceType == "brownForsythe") {
+    levene <- car::leveneTest(variableData, groupingData, "median")
+    ## arbitrary cut-offs are arbitrary
+    if (!is.na(levene[1, 3]) && levene[1, 3] < 0.05)
+      leveneViolated <- TRUE
+    }
+  if (!optionsList$wantsWelchs && !optionsList$wantsWilcox && optionsList$wantsStudents && options$equalityOfVarianceType == "levene") {
     levene <- car::leveneTest(variableData, groupingData, "mean")
-
     ## arbitrary cut-offs are arbitrary
     if (!is.na(levene[1, 3]) && levene[1, 3] < 0.05)
       leveneViolated <- TRUE
@@ -404,7 +416,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
     errorMessage <- NULL
     if (identical(errors, FALSE)) {
-      result <- try(.ttestIndependentEqVarRow(table, variable, groups, dataset))
+      result <- try(.ttestIndependentEqVarRow(table, variable, groups, dataset, options))
 
       if (!isTryError(result))
         row <- c(row, result[["row"]])
@@ -427,8 +439,15 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   }
 }
 
-.ttestIndependentEqVarRow <- function(table, variable, groups, dataset) {
-  levene <- car::leveneTest(dataset[[ variable ]], dataset[[ groups ]], "mean")
+.ttestIndependentEqVarRow <- function(table, variable, groups, dataset, options) {
+
+  if (options$equalityOfVarianceType == "brownForsythe") {
+    levene <- car::leveneTest(dataset[[ .v(variable) ]], dataset[[ .v(groups) ]], "median")
+  }
+  else if (options$equalityOfVarianceType == "levene") {
+    levene <- car::leveneTest(dataset[[ .v(variable) ]], dataset[[ .v(groups) ]], "mean")
+  }
+
 
   fStat  <- levene[1, "F value"]
   dfOne <- levene[1, "Df"]
@@ -442,7 +461,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     LeveneComputed <- FALSE
 
   return(list(row = row, LeveneComputed = LeveneComputed))
-}
+  }
 
 .ttestIndependentNormalFill <- function(table, dataset, options) {
   ## for a independent t-test, we need to check both group vectors for normality

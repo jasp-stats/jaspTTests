@@ -28,11 +28,11 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }		
+		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "variables";			title: qsTr("Dependent Variables");			suggestedColumns: ["scale"]	}
 		AssignedVariablesList { name: "groupingVariable";	title: qsTr("Grouping Variable");	suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
 	}
-	
+
 	Group
 	{
 		title: qsTr("Tests")
@@ -98,8 +98,14 @@ Form
 	{
 		title: qsTr("Assumption Checks")
 		CheckBox { name: "normalityTests";				label: qsTr("Normality")					}
-		CheckBox { name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")		}
-	}
+		CheckBox { name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")
+		  RadioButtonGroup {
+				name: "equalityOfVarianceType";
+				RadioButton { value: "brownForsythe"; label: qsTr("Brown-Forsythe") ; checked: true }
+				RadioButton { value: "levene"; label: qsTr("Levene's") }
+	                     }
+	           }
+	 }
 
 	RadioButtonGroup
 	{
