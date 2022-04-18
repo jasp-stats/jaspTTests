@@ -30,6 +30,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   # Descriptives
   .ttestIndependentDescriptivesTable(        jaspResults, dataset, options, ready)
   .ttestIndependentDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesPlotTwo(      jaspResults, dataset, options, ready)
   .ttestIndependentDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
 
   return()
@@ -631,6 +632,107 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   return(p)
 }
 
+.ttestIndependentDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsTwo)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  if (is.null(container[["plotsTwo"]])) {
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"),
+                                        dependencies = c("descriptivesPlotsTwo",
+                                                         "descriptivesPlotsTwoConfidenceIntervalField",
+                                                         "errorBarType",
+                                                         "zeroFix"))
+    subcontainer$position <- 6
+    container[["plotsTwo"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsTwo"]]
+  }
+
+  for(variable in options$variables) {
+    if(!is.null(subcontainer[[variable]]))
+      next
+    descriptivesPlotTwo <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesPlotTwo$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesPlotTwo
+    if(ready){
+      p <- try(.ttestIndependentDescriptivesPlotTwoFill(dataset, options, variable))
+      if(isTryError(p))
+        descriptivesPlotTwo$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotTwo$plotObject <- p
+    }
+  }
+  return()
+}
+
+.ttestIndependentDescriptivesPlotTwoFill <- function(dataset, options, variable) {
+  groups   <- options$groupingVariable
+
+  errors <- .hasErrors(dataset,
+                       message = 'short',
+                       type = c('observations', 'variance', 'infinity'),
+                       all.target = variable,
+                       observations.amount = '< 2',
+                       observations.grouping = groups)
+
+  if(!identical(errors, FALSE))
+    stop(errors$message)
+
+  descriptivesPlotList <- list()
+
+  dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
+  ci <- options$descriptivesPlotsTwoConfidenceIntervalField
+
+  if(options$errorBarType == "descriptivesPlotsTwoConfidenceInterval"){
+    summaryStat <- summarySE(as.data.frame(dataset),
+                             measurevar = .v(variable),
+                             groupvars = .v(groups),
+                             conf.interval = ci, na.rm = TRUE, .drop = FALSE)
+  } else if (options$errorBarType == "standardError"){
+    summaryStat <- summarySE(as.data.frame(dataset),
+                             measurevar = .v(variable),
+                             groupvars = .v(groups),
+                             conf.interval = ci, na.rm = TRUE, .drop = FALSE,
+                             errorBarType = "se")
+  }
+
+  colnames(summaryStat)[which(colnames(summaryStat) == .v(variable))] <- "dependent"
+  colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
+
+  ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
+  prettyA <- pretty(ciPos)
+  prettyB <- pretty(c(0, ciPos))
+  ylim <- c(min(prettyA), max(prettyA))
+
+  pd <- ggplot2::position_dodge(0.2)
+  pd2 <- ggplot2::position_dodge2(preserve = "single") ###NEW###
+
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable,
+                                                 y = dependent, group = 1)) +
+    ggplot2::geom_bar(stat = "identity", fill = "grey",
+                      col = "black", size = .3, position = pd2) + ###NEW###
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper),
+                           colour = "black", width = 0.2, position = pd) +
+    ggplot2::ylab(unlist(variable)) +
+    ggplot2::xlab(options$groupingVariable) ###NEW### below
+
+  if(options$zeroFix){
+    p <- p + ggplot2::scale_y_continuous(breaks = prettyB) +
+      jaspGraphs::geom_rangeframe(sides = "bl") +
+      jaspGraphs::themeJaspRaw()
+  } else {
+    p <- p + ggplot2::scale_y_continuous(breaks = prettyA) +
+      ggplot2::coord_cartesian(ylim = ylim) +
+      jaspGraphs::geom_rangeframe(sides = "l") +
+      jaspGraphs::themeJaspRaw()
+  }
+
+  #p <- jaspGraphs::themeJasp(p, sides = "l") # Not supposed to use this, but this has appropriate fontsize
+
+  return(p)
+}
+
 .ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
   if(!options$descriptivesPlotsRainCloud)
     return()
@@ -639,7 +741,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
-    subcontainer$position <- 6
+    subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
