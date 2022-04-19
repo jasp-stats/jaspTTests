@@ -132,7 +132,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsRainCloud && isFALSE(options$descriptivesPlotsRainCloudDifference))
+  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesPlotsTwo && !options$descriptivesPlotsRainCloud && isFALSE(options$descriptivesPlotsRainCloudDifference))
     return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))

@@ -638,11 +638,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
   if (is.null(container[["plotsTwo"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"),
-                                        dependencies = c("descriptivesPlotsTwo",
-                                                         "descriptivesPlotsTwoConfidenceIntervalField",
-                                                         "errorBarType",
-                                                         "zeroFix"))
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesPlotsTwo",
+                                                                               "descriptivesPlotsTwoConfidenceIntervalField",
+                                                                               "errorBarType",
+                                                                               "zeroFix"))
     subcontainer$position <- 6
     container[["plotsTwo"]] <- subcontainer
   } else {
@@ -689,7 +688,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
                              measurevar = .v(variable),
                              groupvars = .v(groups),
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if (options$errorBarType == "standardError"){
+  } else if(options$errorBarType == "standardError"){
     summaryStat <- summarySE(as.data.frame(dataset),
                              measurevar = .v(variable),
                              groupvars = .v(groups),
@@ -701,32 +700,32 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
 
   ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
-  prettyA <- pretty(ciPos)
-  prettyB <- pretty(c(0, ciPos))
-  ylim <- c(min(prettyA), max(prettyA))
+  #ciPos <- c(summaryStat[, "dependent"] - summaryStat[, "ci"], summaryStat[, "dependent"] + summaryStat[, "ci"])
+
+  if(options$zeroFix){
+    breaks <- pretty(c(0, ciPos))
+    ylim <- c(min(breaks), max(breaks))
+  } else {
+    breaks <- pretty(ciPos)
+    ylim <- c(min(breaks), max(breaks))
+  }
 
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single") ###NEW###
 
   p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable,
                                                  y = dependent, group = 1)) +
+    ggplot2::geom_hline(yintercept = 0) +
     ggplot2::geom_bar(stat = "identity", fill = "grey",
-                      col = "black", size = .3, position = pd2) + ###NEW###
+                      col = "black", width = .6, position = pd2) + ###NEW###
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper),
                            colour = "black", width = 0.2, position = pd) +
     ggplot2::ylab(unlist(variable)) +
-    ggplot2::xlab(options$groupingVariable) ###NEW### below
-
-  if(options$zeroFix){
-    p <- p + ggplot2::scale_y_continuous(breaks = prettyB) +
-      jaspGraphs::geom_rangeframe(sides = "bl") +
-      jaspGraphs::themeJaspRaw()
-  } else {
-    p <- p + ggplot2::scale_y_continuous(breaks = prettyA) +
-      ggplot2::coord_cartesian(ylim = ylim) +
-      jaspGraphs::geom_rangeframe(sides = "l") +
-      jaspGraphs::themeJaspRaw()
-  }
+    ggplot2::xlab(options$groupingVariable) + ###NEW### below
+    ggplot2::scale_y_continuous(breaks = breaks) +
+    ggplot2::coord_cartesian(ylim = ylim) +
+    jaspGraphs::geom_rangeframe(sides = "l") +
+    jaspGraphs::themeJaspRaw()
 
   #p <- jaspGraphs::themeJasp(p, sides = "l") # Not supposed to use this, but this has appropriate fontsize
 
