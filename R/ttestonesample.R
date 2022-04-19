@@ -29,6 +29,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   vars <- unique(unlist(options$variables))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestOneSampleDescriptivesPlotTwo(      jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
 
   return()
@@ -434,6 +435,97 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   return(p)
 }
 
+.ttestOneSampleDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
+  if(!options$descriptivesPlotsTwo)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+
+  if (is.null(container[["plotsTwo"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesPlotsTwo",
+                                                                               "descriptivesPlotsTwoConfidenceIntervalField",
+                                                                               "errorBarType",
+                                                                               "testValue",
+                                                                               "zeroFix"))
+    subcontainer$position <- 6
+    container[["plotsTwo"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsTwo"]]
+  }
+
+  for(variable in options$variables) {
+    if(!is.null(subcontainer[[variable]]))
+      next
+    descriptivesPlotTwo <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesPlotTwo$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesPlotTwo
+    if(ready){
+      p <- try(.ttestOneSampleDescriptivesPlotTwoFill(dataset, options, variable))
+      if(isTryError(p))
+        descriptivesPlotTwo$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotTwo$plotObject <- p
+    }
+  }
+  return()
+}
+
+.ttestOneSampleDescriptivesPlotTwoFill <- function(dataset, options, variable) {
+  errors <- .hasErrors(dataset,
+                       message = 'short',
+                       type = c('observations', 'variance', 'infinity'),
+                       all.target = variable,
+                       observations.amount = c('< 2'))
+  if(!identical(errors, FALSE))
+    stop(errors$message)
+
+  dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
+                           groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
+  ci <- options$descriptivesPlotsTwoConfidenceIntervalField
+
+  if(options$errorBarType == "descriptivesPlotsTwoConfidenceInterval"){
+    summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
+                             conf.interval = ci, na.rm = TRUE, .drop = FALSE)
+  } else if(options$errorBarType == "standardError"){
+    summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
+                             conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
+  }
+
+  values <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
+  ciPos <- c(min(values), max(values))
+
+  if(options$zeroFix){
+    breaks <- pretty(c(0, ciPos))
+    ylim <- c(min(breaks), max(breaks))
+  } else {
+    breaks <- pretty(ciPos)
+    ylim <- c(min(breaks), max(breaks))
+  }
+
+  testValue <- data.frame(testValue = options$testValue)
+  pd <- ggplot2::position_dodge(0.2)
+  pd2 <- ggplot2::position_dodge2(preserve = "single")
+
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1))
+  if(options$testValue != 0){
+    p <- p + ggplot2::geom_hline(yintercept = 0)
+  }
+  p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper),
+                           colour = "black", width = 0.2, position = pd) +
+    ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") +
+    ggplot2::ylab(NULL) +
+    ggplot2::xlab(NULL) +
+    ggplot2::scale_y_continuous(breaks = breaks) +
+    ggplot2::coord_cartesian(ylim = ylim) +
+    jaspGraphs::geom_rangeframe(sides = "l") +
+    jaspGraphs::themeJaspRaw() +
+    ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                   axis.ticks.x = ggplot2::element_blank())
+
+  return(p)
+}
+
 .ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
   if(!options$descriptivesPlotsRainCloud)
     return()
@@ -442,7 +534,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay", "testValue"))
-    subcontainer$position <- 6
+    subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
