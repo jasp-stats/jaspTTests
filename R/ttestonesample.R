@@ -491,17 +491,14 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
   }
 
-  values <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
-  ciPos <- c(min(values), max(values))
+  ciPos <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
 
   if(options$zeroFix){
     breaks <- pretty(c(0, ciPos))
-    ylim <- c(min(breaks), max(breaks))
   } else {
     breaks <- pretty(ciPos)
-    ylim <- c(min(breaks), max(breaks))
   }
-
+  ylim <- c(min(breaks), max(breaks))
   testValue <- data.frame(testValue = options$testValue)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")

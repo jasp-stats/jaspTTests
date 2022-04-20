@@ -704,12 +704,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
   if(options$zeroFix){
     breaks <- pretty(c(0, ciPos))
-    ylim <- c(min(breaks), max(breaks))
   } else {
     breaks <- pretty(ciPos)
-    ylim <- c(min(breaks), max(breaks))
   }
-
+  ylim <- c(min(breaks), max(breaks))
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single") ###NEW###
 
