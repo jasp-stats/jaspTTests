@@ -36,7 +36,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   # create empty object for the table, this has previously computed rows already filled in
   ttestRows <- .ttestBayesianCreateTtestRows(dependents, options, derivedOptions, ttestState)
   alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["hypothesis"]]
-  
+
   ttestTable$setData(ttestRows)
   .ttestBayesianSetFootnotesMainTable(ttestTable, ttestResults, dependents[alreadyComputed])
 
@@ -48,7 +48,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   nvar <- length(dependents)
   if (derivedOptions[["wilcoxTest"]])
     .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamplesNumber"]])
-  
+
   for (var in dependents[!alreadyComputed]) {
 
     if (!isFALSE(errors[[var]])) {
@@ -70,32 +70,32 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
       x <- x[!is.na(x)]  - options[["testValue"]]
 
       if (!derivedOptions[["wilcoxTest"]]) {
-        
+
         r <- try(.generalTtestBF(x = x, oneSided = oneSided, options = options))
-  
+
         if (isTryError(r)) {
-  
+
           errorMessage <- .extractErrorMessage(r)
           ttestResults[["status"]][var] <- "error"
           ttestResults[["errorFootnotes"]][[var]] <- errorMessage
-  
+
           ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
         } else {
-  
+
           bf.raw <- r[["bf"]]
           error  <- r[["error"]]
           ttestResults[["tValue"]][[var]] <- r[["tValue"]]
           ttestResults[["n1"]][var]       <- r[["n1"]]
           # ttestResults[["n2"]][var]       <- r[["n2"]]
           ttestResults[["tValue"]][var]   <- r[["tValue"]]
-  
+
           if (!is.null(error) && is.na(error) && grepl("approximation", r[["method"]])) {
             error <- NaN
             message <- gettext("t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given.")
             ttestTable$addFootnote(message = message, symbol = "", rowNames = var, colNames = "error")
             ttestResults[["footnotes"]][[var]] <- c(ttestResults[["footnotes"]][[var]], message)
           }
-          if (is.null(error) && options[["effectSizeStandardized"]] == "informative" && 
+          if (is.null(error) && options[["effectSizeStandardized"]] == "informative" &&
               options[["informativeStandardizedEffectSize"]] == "normal") {
             error <- NA_real_
             message <- gettext("No error estimate is available for normal priors.")
@@ -103,59 +103,59 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
             ttestResults[["globalFootnotes"]] <- c(ttestResults[["globalFootnotes"]], message)
           }
         }
-        
+
       } else { # wilcoxtest
-        
+
         # If the samples can be reused, don't call the Gibbs sampler again, but recalculate the
         # Bayes factor with new settings and take the samples from state.
         if (!is.null(ttestResults[["delta"]][[var]]) && !is.na(ttestResults[["delta"]][[var]])) {
-          
+
           bf.raw <- try(.computeBayesFactorWilcoxon(
             deltaSamples         = ttestResults[["delta"]][[var]],
             cauchyPriorParameter = options[["priorWidth"]],
             oneSided             = oneSided
           ))
           rHat <- ttestResults[["rHat"]][[var]]
-          
+
         } else {
-          
+
           .setSeedJASP(options)
           r <- try(.signRankGibbsSampler(
             xVals = x, nSamples = options[["wilcoxonSamplesNumber"]], testValue = 0, nBurnin = 0,
             cauchyPriorParameter = options[["priorWidth"]]
           ))
-          
+
           if (isTryError(r)) {
-            
+
             errorMessage <- .extractErrorMessage(r)
             ttestResults[["status"]][var] <- "error"
             ttestResults[["errorFootnotes"]][[var]] <- errorMessage
             ttestTable$addFootnote(message = errorMessage, rowNames = var, colNames = "BF")
 
           } else {
-            
+
             ttestResults[["delta"]][[var]]  <- r[["deltaSamples"]]
             ttestResults[["rHat"]][[var]]  <- r[["rHat"]]
-            
+
             bf.raw <- .computeBayesFactorWilcoxon(
               deltaSamples         = r[["deltaSamples"]],
               cauchyPriorParameter = options[["priorWidth"]],
               oneSided             = oneSided)
-            
+
             rHat <- r[["rHat"]]
-            
+
           }
         }
-        
+
         if (!is.null(ttestResults[["delta"]][[var]]))
           ttestResults[["tValue"]][[var]] <- median(ttestResults[["delta"]][[var]])
         ttestResults[["n1"]][var]       <- length(x)
         wValue <- unname(wilcox.test(x)[["statistic"]])
         error <- wValue
         ttestRows[var, "rHat"] <- rHat
-        
+
       }
-      
+
       ttestResults[["BF10post"]][var] <- bf.raw
       BF <- jaspBase:::.recodeBFtype(bfOld     = bf.raw,
                           newBFtype = bf.type,
@@ -188,9 +188,9 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   } else {
     gettext("Bayesian One Sample T-Test")
   }
-  
+
   jaspTable$dependOn(c("bayesFactorType", "variables", "testValue"))
-  
+
   if (options[["effectSizeStandardized"]] == "default") {
     citations <- .ttestBayesianCitations[c("MoreyEtal2015", "RouderEtal2009")]
   } else if (derivedOptions[["wilcoxTest"]]) {
@@ -241,7 +241,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
     }
     jaspTable$addColumnInfo(name = "error", type = "number", format = fmt, title = gettext("error %"))
   }
-  
+
   return(jaspTable)
 }
 
@@ -403,8 +403,11 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   location <- mean(variable)
   scale <- sd(variable) / sqrt(length(variable))
 
+  ciLowerSe <- location - scale
+  ciUpperSe <- location + scale
+
   outTmp <- .qt.shiftedT(c(ciLower, .5, ciUpper), parameters=c(location, scale, df))
-  out <- list(ciLower=outTmp[1], median=outTmp[2], ciUpper=outTmp[3])
+  out <- list(ciLower=outTmp[1], median=outTmp[2], ciUpper=outTmp[3], ciLowerSe=ciLowerSe, ciUpperSe=ciUpperSe)
 
   return(out)
 
