@@ -73,6 +73,13 @@ Form {
 			name: "descriptivesPlots";			label: qsTr("Descriptives")
 			CIField { name: "descriptivesPlotsCredibleInterval";	label: qsTr("Credible interval") }
 		}
+		
+		CheckBox
+		{
+			name: "descriptivesPlotsTwo";			label: qsTr("Bar plots")
+			CIField { name: "descriptivesPlotsTwoCredibleInterval";	label: qsTr("Credible interval") }
+			CheckBox { name: "zeroFix";		label: qsTr("Fix y-axis to 0")							 }
+		}
 
 		CheckBox
 		{

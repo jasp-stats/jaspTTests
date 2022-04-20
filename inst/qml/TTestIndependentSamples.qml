@@ -79,7 +79,7 @@ Form
 		}
 		CheckBox
 		{
-			name: "descriptivesPlotsTwo";	label: qsTr("Descriptives plots 2.0")
+			name: "descriptivesPlotsTwo";	label: qsTr("Bar plots")
 			RadioButtonGroup
 				{
 					name: "errorBarType"
