@@ -1354,6 +1354,7 @@
     xlab +
     ylab +
     ggplot2::scale_y_continuous(breaks = breaks) +
+    ggplot2::scale_x_discrete(limits = summaryStat$groupingVariable) +
     ggplot2::coord_cartesian(ylim = ylim) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw()
