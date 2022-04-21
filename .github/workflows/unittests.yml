@@ -12,7 +12,7 @@ jobs:
 
   unit-tests:
 
-    uses: vandenman/jasp-actions/.github/workflows/unittests.yml@reuseable_workflow_unittests
+    uses: jasp-stats/jasp-actions/.github/workflows/unittests.yml@master
     with:
       needs_JAGS:   false
       needs_igraph: false
