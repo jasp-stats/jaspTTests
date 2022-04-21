@@ -403,10 +403,11 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   location <- mean(variable)
   scale <- sd(variable) / sqrt(length(variable))
 
-  ciLowerSe <- location - scale
-  ciUpperSe <- location + scale
-
   outTmp <- .qt.shiftedT(c(ciLower, .5, ciUpper), parameters=c(location, scale, df))
+
+  ciLowerSe <- outTmp[2] - scale
+  ciUpperSe <- outTmp[2] + scale
+
   out <- list(ciLower=outTmp[1], median=outTmp[2], ciUpper=outTmp[3], ciLowerSe=ciLowerSe, ciUpperSe=ciUpperSe)
 
   return(out)
