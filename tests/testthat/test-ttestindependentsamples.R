@@ -59,10 +59,10 @@ test_that("Descriptives table matches", {
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("TRUE", 58, 0, -0.120135614827586, 1.10575982846952, 0.145193378675912,
-	       "contNormal", "FALSE", 42, 1, -0.283499835571428, 0.994612407217046,
-	       0.15347202634745, "contNormal")
-  )
+                                 list("TRUE", 58, -9.20426328242848, 0, -0.120135614827586, 1.10575982846952,
+                                      0.145193378675912, "contNormal", "FALSE", 42, -3.50833504087324,
+                                      1, -0.283499835571429, 0.994612407217046, 0.15347202634745,
+                                      "contNormal"))
 })
 
 test_that("Descriptives plot matches", {
@@ -184,11 +184,11 @@ test_that("Analysis works with unicode", {
   jaspTools::expect_equal_plots(testPlot, "mischief-raincloud-plot")
 
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
-  jaspTools::expect_equal_tables(
-    table,
-    list("TRUE", 12, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>", 3.75, 1.91287503750007,
-         0.552199458913392, "Mischief", "FALSE", 12, "&lt;U+9009&gt;&lt;U+4E2D>",
-         5, 1.65144564768954, 0.476731294622796, "Mischief"),
+  jaspTools::expect_equal_tables(table,
+    list("TRUE", 12, 0.51010001000002, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>",
+         3.75, 1.91287503750007, 0.552199458913392, "Mischief", "FALSE",
+         12, 0.330289129537908, "&lt;U+9009&gt;&lt;U+4E2D>", 5, 1.65144564768954,
+         0.476731294622796, "Mischief"),
     label = "Group Descriptives table results match"
   )
 

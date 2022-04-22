@@ -582,6 +582,9 @@
   descriptives$addColumnInfo  (name = "mean",  title = gettext("Mean"),  type = "number")
   descriptives$addColumnInfo  (name = "sd",    title = gettext("SD"),    type = "number")
   descriptives$addColumnInfo  (name = "se",    title = gettext("SE"),    type = "number")
+  descriptives$addColumnInfo  (name = "coefOfVariation",
+                                               title = gettext("Coefficient of variation"),
+                                                                         type = "number")
 
   if (hasCRI) {
     interval <- 100 * CRI
@@ -637,16 +640,21 @@
 
             posteriorSummary <- .posteriorSummaryGroupMean(variable=groupDataOm,
                                                            descriptivesPlotsCredibleInterval=CRI)
-            ciLower <- .clean(posteriorSummary[["ciLower"]])
-            ciUpper <- .clean(posteriorSummary[["ciUpper"]])
+            ciLower <- posteriorSummary[["ciLower"]]
+            ciUpper <- posteriorSummary[["ciUpper"]]
 
-            n <- .clean(length(groupDataOm))
-            mean <- .clean(mean(groupDataOm))
-            std <- .clean(sd(groupDataOm))
-            sem <- .clean(sd(groupDataOm) / sqrt(length(groupDataOm)))
+
+            n <- length(groupDataOm)
+            mean <- mean(groupDataOm)
+            std <- sd(groupDataOm)
+            sem <- sd(groupDataOm) / sqrt(length(groupDataOm))
+
+
+            coefOfVariation  <- sd(groupDataOm) / mean(groupDataOm)
+
 
             row <- list(variable = var,
-                        N = n, mean = mean, sd = std, se = sem)
+                        N = n, mean = mean, sd = std, se = sem, coefOfVariation = coefOfVariation)
 
             if (hasGrouping)
               row[["group"]] <- level
@@ -656,9 +664,9 @@
 
           } else {
 
-            n <- .clean(length(groupDataOm))
+            n <- length(groupDataOm)
             row <- list(variable = var, N = n,
-                        mean = "", sd = "", se = "")
+                        mean = "", sd = "", se = "", coefOfVariation = "")
 
             if (hasGrouping)
               row[["group"]] <- ""

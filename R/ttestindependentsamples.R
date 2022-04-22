@@ -495,6 +495,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ttestDescriptivesTable$addColumnInfo(name = "mean",     type = "number",  title = gettext("Mean"))
   ttestDescriptivesTable$addColumnInfo(name = "sd",       type = "number",  title = gettext("SD"))
   ttestDescriptivesTable$addColumnInfo(name = "se",       type = "number",  title = gettext("SE"))
+  ttestDescriptivesTable$addColumnInfo(name = "coefOfVariation",
+                                                          type = "number",  title = gettext("Coefficient of variation"))
 
   container[["table"]] <- ttestDescriptivesTable
 
@@ -524,8 +526,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         mean <- mean(groupDataOm)
         std  <- sd(groupDataOm)
         sem  <- std / sqrt(n)
+        coefOfVariation <- std / mean
 
-        row <- c(row, list(N = n, mean = mean, sd = std, se = sem))
+        row <- c(row, list(N = n, mean = mean, sd = std, se = sem,
+                           coefOfVariation = coefOfVariation))
 
       } else {
         n   <- length(groupDataOm)

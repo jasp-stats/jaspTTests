@@ -55,9 +55,9 @@ test_that("Descriptives table matches", {
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("contNormal", 100, -0.18874858754, 1.05841360919316, 0.105841360919316,
-         "contGamma", 100, 2.03296079621, 1.53241112621044, 0.153241112621044)
-  )
+      list(100, -5.60753128268502, -0.18874858754, 1.05841360919316, 0.105841360919316,
+           "contNormal", 100, 0.753782920490781, 2.03296079621, 1.53241112621044,
+           0.153241112621044, "contGamma"))
 })
 
 test_that("Descriptives plot matches", {
@@ -102,22 +102,22 @@ test_that("Raincloud difference plot matches (horizontal)", {
 
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
-  
+
   options$pairs <- list(c("contNormal", "debInf"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
-  
+
   options$pairs <- list(c("contNormal", "debSame"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
-  
+
   options$pairs <- list(c("contNormal", "debMiss99"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
-  
+
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contNormal"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
