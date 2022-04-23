@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-02-12 02:44\n"
+"POT-Creation-Date: 2022-04-23 02:54\n"
 "PO-Revision-Date: 2022-02-04 03:57+0000\n"
 "Last-Translator: Harris Abd Hamid <harris75@gmail.com>\n"
 "Language-Team: Malay <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -71,6 +71,9 @@ msgstr "SP"
 
 msgid "SE"
 msgstr "RP"
+
+msgid "Coefficient of variation"
+msgstr ""
 
 msgid "%.0f%% Credible Interval"
 msgstr "%. Daripada %% Jeda Boleh Percaya"

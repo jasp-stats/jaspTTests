@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2022-02-12 02:44\n"
+"POT-Creation-Date: 2022-04-23 02:54\n"
 "PO-Revision-Date: 2021-11-10 04:46+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -70,6 +70,9 @@ msgstr "標準偏差"
 
 msgid "SE"
 msgstr "標準誤差"
+
+msgid "Coefficient of variation"
+msgstr ""
 
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% 信用区間"

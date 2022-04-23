@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-02-12 02:44\n"
+"POT-Creation-Date: 2022-04-23 02:54\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,9 @@ msgid "SD"
 msgstr ""
 
 msgid "SE"
+msgstr ""
+
+msgid "Coefficient of variation"
 msgstr ""
 
 msgid "%.0f%% Credible Interval"
