@@ -52,6 +52,10 @@ The independent samples t-test allows the user to estimate the effect size and t
   - Robustness check: Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
 - Descriptives plots
   - Credible interval: Display central credible intervals. Default is 95%.
+- Bar plots: Displays the sample means as bars and the credible intervals or standard errors as error bars for each group. 
+  - Credible interval: Displays the central credible intervals. By default, the credible interval is set to 95%. This can be changed into the desired percentage.
+  - Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+  - Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each group.
   - Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.
 
@@ -91,6 +95,7 @@ The independent samples t-test allows the user to estimate the effect size and t
   - Robustness check: Displays the development of the Bayes factor as a function of the number of data points (n) using the wide and ultrawide prior distribution. The black circle represents the Bayes factor computed with a wide prior distribution; the white circle represents the Bayes factor computed with an ultrawide prior distribution; the gray circle represents the Bayes factor computed with the user-defined prior distribution.
 - Descriptives plots
   - Credible interval: Central credible interval. Default is 95%.
+- Bar plots: Displays the sample means (grey bars), the x% credible intervals or standard errors (whiskers) for each group. The x-axis represents the grouping variable, and the y-axis the dependent variable. 
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each group. The x-axis and color represent the grouping variable, and the y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).
 
 
