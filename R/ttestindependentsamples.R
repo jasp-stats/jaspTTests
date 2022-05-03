@@ -195,8 +195,9 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   equalityVariance$showSpecifiedColumnsOnly <- TRUE
   equalityVariance$position <- 3
   equalityVariance$addColumnInfo(name = "variable", type = "string",  title = "")
-  equalityVariance$addColumnInfo(name = "t",        type = "number",  title = gettext("t"))
-  equalityVariance$addColumnInfo(name = "df",       type = "integer", title = gettext("df"))
+  equalityVariance$addColumnInfo(name = "fStat",    type = "number",  title = gettext("t"))
+  equalityVariance$addColumnInfo(name = "dfOne",    type = "integer", title = gettextf("%s<sub>1</sub>", "df"))
+  equalityVariance$addColumnInfo(name = "dfTwo",    type = "integer", title = gettextf("%s<sub>2</sub>", "df"))
   equalityVariance$addColumnInfo(name = "p",        type = "pvalue",  title = gettext("p"))
 
   container[["equalityVariance"]] <- equalityVariance
@@ -429,11 +430,12 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 .ttestIndependentEqVarRow <- function(table, variable, groups, dataset) {
   levene <- car::leveneTest(dataset[[ variable ]], dataset[[ groups ]], "mean")
 
-  t  <- sqrt(levene[1, "F value"])
-  df <- levene[2, "Df"]
+  fStat  <- levene[1, "F value"]
+  dfOne <- levene[1, "Df"]
+  dfTwo <- levene[2, "Df"]
   p  <- levene[1, "Pr(>F)"]
 
-  row <- list(t = t, df = df, p = p)
+  row <- list(fStat = fStat, dfOne = dfOne, dfTwo = dfTwo, p = p)
 
   LeveneComputed <- TRUE
   if (is.na(levene[1, "F value"]))
