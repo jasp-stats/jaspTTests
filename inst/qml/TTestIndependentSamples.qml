@@ -97,15 +97,16 @@ Form
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTests";				label: qsTr("Normality")					}
+		CheckBox { name: "normalityTests";				    label: qsTr("Normality") }
 		CheckBox { name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")
-		  RadioButtonGroup {
-				name: "equalityOfVarianceType";
-				RadioButton { value: "brownForsythe"; label: qsTr("Brown-Forsythe") ; checked: true }
-				RadioButton { value: "levene"; label: qsTr("Levene's") }
-	                     }
+		           RadioButtonGroup
+		           {
+		             name: "equalityOfVarianceType"
+				         RadioButton { value: "brownForsythe"; label: qsTr("Brown-Forsythe") ; checked: true }
+				         RadioButton { value: "levene";        label: qsTr("Levene's") }
+	             }
 	           }
-	 }
+	}
 
 	RadioButtonGroup
 	{
