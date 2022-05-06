@@ -494,11 +494,10 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   ciPos <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
 
   if(options$zeroFix){
-    breaks <- pretty(c(0, ciPos))
+    yBreaks <- pretty(c(0, ciPos))
   } else {
-    breaks <- pretty(ciPos)
+    yBreaks <- pretty(ciPos)
   }
-  ylim <- c(min(breaks), max(breaks))
   testValue <- data.frame(testValue = options$testValue)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
@@ -513,8 +512,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") +
     ggplot2::ylab(NULL) +
     ggplot2::xlab(NULL) +
-    ggplot2::scale_y_continuous(breaks = breaks) +
-    ggplot2::coord_cartesian(ylim = ylim) +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw() +
     ggplot2::theme(axis.text.x = ggplot2::element_blank(),

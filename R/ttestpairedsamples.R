@@ -540,11 +540,10 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
 
   if(options$zeroFix){
-    breaks <- pretty(c(0, ciPos))
+    yBreaks <- pretty(c(0, ciPos))
   } else {
-    breaks <- pretty(ciPos)
+    yBreaks <- pretty(ciPos)
   }
-  ylim <- c(min(breaks), max(breaks))
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
@@ -555,8 +554,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     ggplot2::ylab(NULL) +
     ggplot2::xlab(NULL) +
     ggplot2::scale_x_discrete(labels = c(pair[[1]], pair[[2]])) +
-    ggplot2::scale_y_continuous(breaks = breaks) +
-    ggplot2::coord_cartesian(ylim = ylim) +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw()
 

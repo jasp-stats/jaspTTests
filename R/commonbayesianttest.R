@@ -1328,11 +1328,10 @@
   ciPos <- c(testValueOpt, summaryStat$ciLower, summaryStat$ciUpper)
 
   if(zeroFix){
-    breaks <- pretty(c(0, ciPos))
+    yBreaks <- pretty(c(0, ciPos))
   } else {
-    breaks <- pretty(ciPos)
+    yBreaks <- pretty(ciPos)
   }
-  ylim <- c(min(breaks), max(breaks))
 
   if (hasGrouping && !paired) {
     ylab <- ggplot2::ylab(var)
@@ -1353,9 +1352,8 @@
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper), colour = "black", width = .2, position = pd) +
     xlab +
     ylab +
-    ggplot2::scale_y_continuous(breaks = breaks) +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
     ggplot2::scale_x_discrete(limits = summaryStat$groupingVariable) +
-    ggplot2::coord_cartesian(ylim = ylim) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw()
 

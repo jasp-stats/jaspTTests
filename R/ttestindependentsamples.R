@@ -678,8 +678,6 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if(!identical(errors, FALSE))
     stop(errors$message)
 
-  descriptivesPlotList <- list()
-
   dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
@@ -703,25 +701,23 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   #ciPos <- c(summaryStat[, "dependent"] - summaryStat[, "ci"], summaryStat[, "dependent"] + summaryStat[, "ci"])
 
   if(options$zeroFix){
-    breaks <- pretty(c(0, ciPos))
+    yBreaks <- pretty(c(0, ciPos))
   } else {
-    breaks <- pretty(ciPos)
+    yBreaks <- pretty(ciPos)
   }
-  ylim <- c(min(breaks), max(breaks))
   pd <- ggplot2::position_dodge(0.2)
-  pd2 <- ggplot2::position_dodge2(preserve = "single") ###NEW###
+  pd2 <- ggplot2::position_dodge2(preserve = "single")
 
   p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable,
                                                  y = dependent, group = 1)) +
     ggplot2::geom_hline(yintercept = 0) +
     ggplot2::geom_bar(stat = "identity", fill = "grey",
-                      col = "black", width = .6, position = pd2) + ###NEW###
+                      col = "black", width = .6, position = pd2) +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper),
                            colour = "black", width = 0.2, position = pd) +
     ggplot2::ylab(unlist(variable)) +
-    ggplot2::xlab(options$groupingVariable) + ###NEW### below
-    ggplot2::scale_y_continuous(breaks = breaks) +
-    ggplot2::coord_cartesian(ylim = ylim) +
+    ggplot2::xlab(options$groupingVariable) +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw()
 
