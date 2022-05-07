@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-04-23 02:54\n"
+"POT-Creation-Date: 2022-05-07 02:54\n"
 "PO-Revision-Date: 2021-11-03 04:34+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -314,7 +314,10 @@ msgstr ""
 msgid "Test of Equality of Variances (Levene's)"
 msgstr "Levene 的變異數同值性檢定"
 
-msgid "F"
+msgid "%s<sub>1</sub>"
+msgstr ""
+
+msgid "%s<sub>2</sub>"
 msgstr ""
 
 msgid "greater"

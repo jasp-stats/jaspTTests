@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2022-04-23 02:54\n"
+"POT-Creation-Date: 2022-05-07 02:54\n"
 "PO-Revision-Date: 2021-11-10 04:46+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -337,8 +337,11 @@ msgstr "有意な結果は、正規性からの逸脱を示唆しています。
 msgid "Test of Equality of Variances (Levene's)"
 msgstr "Levene'sの分散の等質性の検定"
 
-msgid "F"
-msgstr "F"
+msgid "%s<sub>1</sub>"
+msgstr ""
+
+msgid "%s<sub>2</sub>"
+msgstr ""
 
 msgid "greater"
 msgstr "より大きい"
@@ -510,6 +513,9 @@ msgstr ""
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "次のペアは重複しています: %s"
+
+#~ msgid "F"
+#~ msgstr "F"
 
 #~ msgid "Evidence for H1"
 #~ msgstr "H1のエビデンス"
