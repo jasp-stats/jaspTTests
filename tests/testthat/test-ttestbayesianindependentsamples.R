@@ -108,6 +108,17 @@ test_that("Inferential plots with additional info match", {
 
 })
 
+test_that("Bar plot matches", {
+  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesPlotsTwo <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches (vertical)", {
   options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"

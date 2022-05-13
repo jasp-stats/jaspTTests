@@ -75,6 +75,17 @@ test_that("Descriptives plot matches", {
   jaspTools::expect_equal_plots(testPlot, "descriptives")
 })
 
+test_that("Bar plot matches", {
+  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesPlotsTwo <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches (vertical)", {
   options <- jaspTools::analysisOptions("TTestIndependentSamples")
   options$variables <- "contNormal"

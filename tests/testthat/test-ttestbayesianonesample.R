@@ -60,6 +60,16 @@ test_that("Inferential and descriptives plots match", {
 
 })
 
+test_that("Bar plot matches", {
+  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options$variables <- "contGamma"
+  options$descriptivesPlotsTwo <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches (vertical)", {
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")
   options$variables <- "contGamma"
