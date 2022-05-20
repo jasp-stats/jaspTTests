@@ -33,6 +33,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
   - Confidence interval: Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 - Effect Size: For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).
   - Confidence interval: Confidence interval for the effect size.
+  - Standard error: Standard error of the effect size.
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.
 - Descriptive plots: Displays the sample mean and the confidence interval.
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
@@ -63,6 +64,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
 - % CI for Effect Size: The confidence interval for effect size. By default this is set to 95%.
     - Lower: The lower bound of the confidence interval.
     - Upper: The upper bound of the confidence interval.
+- SE Effect Size: Standard error of the effect size.
 
 #### Assumption Checks
 Test of Normality (Shapiro-Wilk)

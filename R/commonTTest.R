@@ -76,6 +76,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   optionsList <- list()
   optionsList$wantsEffect     <- options$effectSize
   optionsList$wantsConfidenceEffSize <- (options$effSizeConfidenceIntervalCheckbox && options$effectSize)
+  optionsList$wantsEffSizeSE <- options$effectSizeSE
   optionsList$wantsStudents   <- options$students
   optionsList$wantsDifference <- options$meanDifference
   optionsList$wantsConfidenceMeanDiff <- (options$meanDiffConfidenceIntervalCheckbox && options$meanDifference)

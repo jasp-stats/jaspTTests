@@ -34,7 +34,7 @@ Form
 		AvailableVariablesList { name: "allVariablesList" }
 		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); suggestedColumns: ["scale"] }
 	}
-	
+
 	Group
 	{
 		title: qsTr("Tests")
@@ -66,6 +66,7 @@ Form
 				childrenOnSameRow: true
 				CIField { name: "effSizeConfidenceIntervalPercent" }
 			}
+			CheckBox {name: "effectSizeSE"; label: qsTr("Standard error")}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
 		CheckBox
@@ -81,7 +82,7 @@ Form
 		}
 		CheckBox { name: "VovkSellkeMPR";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
 	}
-    
+
 	RadioButtonGroup
 	{
 		name: "hypothesis"

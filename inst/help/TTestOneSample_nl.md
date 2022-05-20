@@ -33,6 +33,7 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de locatieparameter. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
 - Effectgrootte: Bij de Student t-toets wordt de effectgrootte gegeven met Cohen's d; bij de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie; voor de Z-toets wordt de effectgrootte gegeven met Cohen's d (gebaseerd op de gegeven standaardafwijking van de populatie).
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de effectgrootte.
+  - Standaardfout: Standaardfout van de Effectgrootte
 - Beschrijvend: Steekproefgrootte, steekproefgemiddelde, steekproefstandaarddeviatie, standaardfout van het gemiddelde voor elke maat.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer.
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
@@ -61,6 +62,7 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
 - % BI voor effectgrootte: Het betrouwbaarheidsinterval voor de effectgrootte. De standaardoptie is 95%.
   - Onder: De ondergrens van het betrouwbaarheidsinterval.
   - Boven: De bovengrens van het betrouwbaarheidsinterval.
+- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 
 #### Verificatie van aannames
 Toets voor normaliteit (Shapiro-Wilk)

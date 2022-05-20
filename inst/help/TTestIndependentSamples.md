@@ -37,7 +37,8 @@ The independent samples t-test allows the user to estimate the effect size and t
   - Cohen's d: For the Student's t-test, uses the pooled standard deviation to standardize the mean difference. For the Welch's t-test, uses the square-root of the average variance to standardize the mean difference.
   - Glass' delta: Uses the standard deviation of group 2 to standardize the mean difference. In order to change which group is used as group 2, you can change the order of the levels by clicking on the name of the grouping variable in the data window, click on one of the levels and then click the arrow buttons to switch the order.
   - Hedges' g: Applies a correction factor to Cohen's d to make it unbiased.
-  - Confidence interval: Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation. 
+  - Confidence interval: Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.
+  - Standard error: Standard error of the effect size.
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each group. 
 - Descriptive plots: Displays the sample means and the confidence intervals for each group. 
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.
@@ -69,6 +70,7 @@ The independent samples t-test allows the user to estimate the effect size and t
 - % CI for Effect Size: The confidence interval for the effect size. By default this is set to 95%. 
     - Lower: The lower bound of the confidence interval. 
     - Upper: The upper bound of the confidence interval. 
+- SE Effect Size: Standard error of the effect size. 
 
 #### Assumption Checks 
 Test of Normality (Shapiro-Wilk):

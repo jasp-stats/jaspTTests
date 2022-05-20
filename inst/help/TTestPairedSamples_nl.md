@@ -29,7 +29,8 @@ Met de gepaarde t-toets kan de gebruiker de effectgrootte schatten en de nulhypo
 - Locatieparameter: Voor de Student's t-toets wordt de locatieparameter gegeven met het gemiddelde verschil; voor de Wilcoxon rangtekentoets wordt de locatieparameter gegeven met de Hodges-Lehmann schatting. 
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de locatieparameter. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
 - Effectgrootte: Bij de Student t-toets wordt de effectgrootte gegeven met Cohen's d; voor de Wilcoxon toets wordt de effectgrootte gegeven met de rank biserial correlatie. 
-  - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de effectgrootte gebaseerd op een niet-centrale t-verdeling voor Cohen's d, Glass' delta en Hedges' g, en de normaal benadering van de Fisher getransformeerde rank biseriële correlatie. 
+  - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de effectgrootte gebaseerd op een niet-centrale t-verdeling voor Cohen's d, Glass' delta en Hedges' g, en de normaal benadering van de Fisher getransformeerde rank biseriële correlatie.
+  - Standaardfout: Standaardfout van de Effectgrootte
 - Beschrijvend: Steekproef grootte, steekproefgemiddelde, steekproef standaarddeviatie, standaardfout van het gemiddelde voor iedere maat.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer voor iedere maat (zie Morey [2008] voor de berekening van de standaardfout van het gemiddelde in gepaarde designs). 
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
@@ -58,6 +59,7 @@ Met de gepaarde t-toets kan de gebruiker de effectgrootte schatten en de nulhypo
 - % BI voor effectgrootte: Het betrouwbaarheidsinterval voor de effectgrootte. De standaardoptie is 95%. 
   - Onder: De ondergrens van het betrouwbaarheidsinterval. 
   - Boven: De bovengrens van het betrouwbaarheidsinterval.
+- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 
 #### Verificatie van aannames
 Toets voor normaliteit (Shapiro-Wilk)

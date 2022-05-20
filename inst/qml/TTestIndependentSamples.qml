@@ -28,11 +28,11 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }		
+		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "variables";			title: qsTr("Dependent Variables");			suggestedColumns: ["scale"]	}
 		AssignedVariablesList { name: "groupingVariable";	title: qsTr("Grouping Variable");	suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
 	}
-	
+
 	Group
 	{
 		title: qsTr("Tests")
@@ -69,6 +69,7 @@ Form
 					childrenOnSameRow: true
 					PercentField { name: "descriptivesEffectSizeConfidenceIntervalPercent"; defaultValue: 95 }
 				}
+				CheckBox {name: "effectSizeSE"; label: qsTr("Standard error")}
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives")								}

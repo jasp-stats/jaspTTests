@@ -12,17 +12,17 @@ test_that("Main table results match for one pair * multiple tests", {
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$effectSizeSE <- TRUE
   options$VovkSellkeMPR <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-     list("TRUE", -11.6121720596087, 1, -1.16121720596087, 99, -1.37211873031366,
-          -2.22170938375, 1, 0.191325909773409, "-", "Student", "<unicode>",
-          "contNormal", "contGamma", "FALSE", 199, 1, -0.921188118811881,
-          "", -0.94536640190499, -2.1796113893332, 0.999999999999999,
-          "", "", "Wilcoxon", "<unicode>", "", "", -7.99754358622852
-     )
-  )
+                                 list("TRUE", -11.6121720596087, 1, -1.16121720596087, 99, 0.188325608332799,
+                                      -1.37211873031366, -2.22170938375, 1, 0.191325909773409, "-",
+                                      "Student", "<unicode>", "contNormal", "contGamma", "FALSE",
+                                      199, 1, -0.921188118811881, "", 0.114677177073573, -0.94536640190499,
+                                      -2.1796113893332, 0.999999999999999, "", "", "Wilcoxon", "<unicode>",
+                                      "", "", -7.99754358622852))
 })
 
 test_that("Main table results match for multiple pairs * one test", {

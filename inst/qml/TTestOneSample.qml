@@ -26,10 +26,10 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }		
+		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); suggestedColumns: ["scale"] }
 	}
-	
+
 	Group
 	{
 		title: qsTr("Tests")
@@ -64,6 +64,7 @@ Form
 				childrenOnSameRow: true
 				CIField { name: "effSizeConfidenceIntervalPercent" }
 			}
+			CheckBox {name: "effectSizeSE"; label: qsTr("Standard error")}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") }
 		CheckBox

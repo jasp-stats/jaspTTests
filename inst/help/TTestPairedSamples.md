@@ -29,7 +29,8 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 - Location parameter: For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.
   - Confidence interval: Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 - Effect Size: For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation.  
-  - Confidence interval: Confidence interval for the effect size. 
+  - Confidence interval: Confidence interval for the effect size.
+  - Standard error: Standard error of the effect size.
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each measure. 
 - Descriptive plots: Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs).
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.
@@ -62,6 +63,7 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 - % CI for Effect Size: The confidence interval for the effect size. By default this is set to 95%. 
     - Lower: The lower bound of the confidence interval. 
     - Upper: The upper bound of the confidence interval.
+- SE Effect Size: Standard error of the effect size.
 
 #### Assumption Checks 
 Test of Normality (Shapiro-Wilk)

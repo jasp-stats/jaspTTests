@@ -14,18 +14,19 @@ test_that("Main table results match", {
   options$effectSize <- TRUE
   options$VovkSellkeMPR <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$effectSizeSE <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("TRUE", 0.760172707980336, 1, 0.15401876311258, 98, -0.244064746209808,
-	       0.163364220743842, 0.448976320466698, 0.214904085649005, "Student",
-	       0.551319670653115, "contNormal", "FALSE", 0.773250564688269,
-	       1, 0.155340050635411, 93.4114683704755, -0.242805192811962,
-	       0.163364220743842, 0.441326472332004, 0.211269449004155, "Welch",
-	       0.552657418835939, "contNormal", "FALSE", 1290, 1, 0.0591133004926108,
-	       "", -0.169577908162339, 0.0932984248674163, 0.617539087467476,
-	       "", "Mann-Whitney", 0.281763520076616, "contNormal")
-  )
+                                 list("TRUE", 0.760172707980336, 1, 0.15401876311258, 98, 0.203114256560352,
+                                      -0.244064746209808, 0.163364220743842, 0.448976320466698, 0.214904085649005,
+                                      "Student", 0.551319670653115, "contNormal", "FALSE", 0.773250564688269,
+                                      1, 0.155340050635411, 93.4114683704755, 0.20312293061516, -0.242805192811962,
+                                      0.163364220743842, 0.441326472332004, 0.211269449004155, "Welch",
+                                      0.552657418835939, "contNormal", "FALSE", 1290, 1, 0.0591133004926108,
+                                      "", 0.117021894944905, -0.169577908162339, 0.0932984248674163,
+                                      0.617539087467476, "", "Mann-Whitney", 0.281763520076616, "contNormal"
+                                 ))
 })
 
 test_that("Normality table matches", {
