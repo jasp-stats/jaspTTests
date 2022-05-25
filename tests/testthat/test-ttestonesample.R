@@ -13,8 +13,9 @@ test_that("Main table results match for t-test", {
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("FALSE", 6.42284229078859e+20, 1.32664189226908, 99, 2.03296079621,
-	       1.08315413981152e-23, 13.2664189226908, "contGamma")
+                                 list("FALSE", 6.42284229078859e+20, 1.32664189226908, 99, 0.137112703830157,
+                                      2.03296079621, 1.08315413981152e-23, 13.2664189226908, "contGamma"
+                                 )
   )
 })
 

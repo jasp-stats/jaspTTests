@@ -340,7 +340,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     j <- ifelse(effSize == "hedges", exp(logCorrection), 1)
     ni <- ifelse(effSize == "glass", ns[2], ns)
 
-    effectSizeVar <- j^2 * (sum(ns)/prod(ns) + (d^2 / (2*sum(ni))))
+    effectSizeVar <- as.numeric(j)^2 * (sum(ns)/prod(ns) + (as.numeric(d)^2 / (2*sum(ni))))
     #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.20/4.24).
     effectSizeSe <- sqrt(effectSizeVar)
 

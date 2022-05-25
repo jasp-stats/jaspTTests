@@ -168,10 +168,11 @@ test_that("Analysis works with unicode", {
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(
     table,
-    list("TRUE", -1.71345938396515, -0.699516864283035, 22, -1.25, 0.100686344874811,
-         0.72951831347607, "Student", "Mischief", "FALSE", -1.71345938396515,
-         -0.699516864283035, 21.5414052230847, -1.25, 0.100984669515183,
-         0.72951831347607, "Welch", "Mischief"),
+    list("TRUE", -1.71345938396515, -0.699516864283035, 22, 0.432498740047123,
+         -1.25, 0.100686344874811, 0.72951831347607, "Student", "Mischief",
+         "FALSE", -1.71345938396515, -0.699516864283035, 21.5414052230847,
+         0.432498740047123, -1.25, 0.100984669515183, 0.72951831347607,
+         "Welch", "Mischief"),
     label = "Independent Samples T-Test table results match"
   )
 

@@ -251,7 +251,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     d   <- mean(c1 - c2) / sd(c1 - c2)
 
     #compute effect size SE
-    effectSizeVar <- ((1/n)+(d^2 / (2*n))) * (2*(1-cor(c1,c2)))
+    effectSizeVar <- ((1/n)+(as.numeric(d)^2 / (2*n))) * (2*(1-cor(c1,c2)))
     #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.28)
     effectSizeSe <- sqrt(effectSizeVar)
 

@@ -274,7 +274,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
     df <- ""
     d  <- tempResult[["d"]]
-    effectSizeSe <- sqrt((1/n)+(d^2 / (2*n)))
+    effectSizeSe <- sqrt((1/n)+(as.numeric(d)^2 / (2*n)))
     confIntEffSize <- tempResult[["confIntEffSize"]]
 
 
@@ -285,7 +285,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
     t  <- as.numeric(tempResult[["statistic"]])
 
-    effectSizeSe <- sqrt((1/n)+(d^2 / (2*n)))
+    effectSizeSe <- sqrt((1/n)+(as.numeric(d)^2 / (2*n)))
     #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.28(with r = .5))
 
     confIntEffSize <- c(0,0)
