@@ -220,7 +220,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   else if (options$effectSizesType == "hedgesG")
     effSize <- "hedges"
 
-  levels <- levels(dataset[[ .v(options$groupingVariable) ]])
+  levels <- levels(dataset[[ options$groupingVariable ]])
 
   if (options$hypothesis == "groupOneGreater" || options$hypothesis == "groupTwoGreater") {
     directionNote <- ifelse(options$hypothesis == "groupOneGreater", gettext("greater"), gettext("less"))
@@ -269,7 +269,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
     }
 
     if (effSize == "glass") {
-      ns  <- tapply(dataset[[.v(variable)]], dataset[[.v(options$groupingVariable)]], function(x) length(na.omit(x)))
+      ns  <- tapply(dataset[[variable]], dataset[[options$groupingVariable]], function(x) length(na.omit(x)))
       sdMessage <- gettextf("Glass' delta uses the standard deviation of group %1$s of variable %2$s.", names(ns[2]), options$groupingVariable)
       table$addFootnote(sdMessage)
     }
@@ -279,11 +279,11 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effSize, optionsList, options) {
   ciEffSize  <- optionsList$percentConfidenceEffSize
   ciMeanDiff <- optionsList$percentConfidenceMeanDiff
-  f <- as.formula(paste(.v(variable), "~",
-                        .v(options$groupingVariable)))
+  f <- as.formula(paste(variable, "~",
+                        options$groupingVariable))
 
-  variableData <- dataset[[ .v(variable) ]]
-  groupingData <- dataset[[ .v(options$groupingVariable) ]]
+  variableData <- dataset[[ variable ]]
+  groupingData <- dataset[[ options$groupingVariable ]]
 
   sds <- tapply(variableData, groupingData, sd, na.rm = TRUE)
   ms  <- tapply(variableData, groupingData, mean, na.rm = TRUE)
@@ -401,7 +401,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   variables <- options$variables
   groups    <- options$groupingVariable
 
-  levels <- levels(dataset[[ .v(groups) ]])
+  levels <- levels(dataset[[ groups ]])
 
   for (variable in variables) {
 
@@ -446,7 +446,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   else
     center <- "mean"
 
-  levene <- car::leveneTest(dataset[[ .v(variable) ]], dataset[[ .v(groups) ]], center)
+  levene <- car::leveneTest(dataset[[ variable ]], dataset[[ groups ]], center)
 
 
   fStat  <- levene[1, "F value"]
@@ -467,7 +467,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ## for a independent t-test, we need to check both group vectors for normality
   variables <- options$variables
   factor    <- options$groupingVariable
-  levels    <- levels(dataset[[.v(factor)]])
+  levels    <- levels(dataset[[factor]])
 
   for (variable in variables) {
     ## there will be two levels, otherwise .hasErrors will quit
@@ -489,7 +489,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         table$addFootnote(errors$message, colNames = "W", rowNames = rowName)
       } else {
         ## get the dependent variable at a certain factor level
-        data <- na.omit(dataset[[.v(variable)]][dataset[[.v(factor)]] == level])
+        data <- na.omit(dataset[[variable]][dataset[[factor]] == level])
         r <- stats::shapiro.test(data)
         row[["W"]] <- as.numeric(r$statistic)
         row[["p"]] <- r$p.value
@@ -528,8 +528,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 .ttestIndependentDescriptivesFill <- function(table, dataset, options) {
   variables <- options$variables
   groups <- options$groupingVariable
-  levels <- base::levels(dataset[[ .v(groups) ]])
-  groupingData <- dataset[[.v(groups)]]
+  levels <- base::levels(dataset[[ groups ]])
+  groupingData <- dataset[[groups]]
 
   for (variable in variables) {
 
@@ -537,7 +537,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
       row <- list(variable = variable, group = level, .isNewGroup = (level == levels[1]))
 
-      variableData <- dataset[[.v(variable)]]
+      variableData <- dataset[[variable]]
       groupData   <- variableData[groupingData == level]
       groupDataOm <- na.omit(groupData)
 
@@ -623,15 +623,15 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
          ggplot2::scale_y_continuous(breaks = c(min(b), max(b))))
   }
 
-  dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
+  dataset <- na.omit(dataset[, c(groups, variable)])
   ci <- options$descriptivesPlotsConfidenceInterval
   summaryStat <- summarySE(as.data.frame(dataset),
-                           measurevar = .v(variable),
-                           groupvars = .v(groups),
+                           measurevar = variable,
+                           groupvars = groups,
                            conf.interval = ci, na.rm = TRUE, .drop = FALSE)
 
-  colnames(summaryStat)[which(colnames(summaryStat) == .v(variable))] <- "dependent"
-  colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
+  colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
+  colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "groupingVariable"
 
   pd <- ggplot2::position_dodge(0.2)
 
