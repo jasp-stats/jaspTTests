@@ -43,7 +43,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("Paired Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "effectSizeSE",
+  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox",
                    "variables", "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
                    "meanDiffConfidenceIntervalPercent", "hypothesis",
@@ -104,8 +104,8 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   if (optionsList$wantsEffect) {
-    ttest$addColumnInfo(name = "d", title = nameOfEffectSize, type = "number")
-
+    ttest$addColumnInfo(name = "d",            title = nameOfEffectSize,                      type = "number")
+    ttest$addColumnInfo(name = "effectSizeSe", title = gettextf("SE %1$s", nameOfEffectSize), type = "number")
     if (optionsList$wantsWilcox && optionsList$wantsStudents)
       ttest$addFootnote(gettext("For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."))
   }
@@ -114,9 +114,6 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceEffSize, nameOfEffectSize)
     ttest$addColumnInfo(name = "lowerCIeffectSize", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
-  }
-  if (optionsList$wantsEffSizeSE) {
-    ttest$addColumnInfo(name = "effectSizeSE", type = "number", title = gettextf("SE %1$s", nameOfEffectSize))
   }
 
   if (options$hypothesis == "groupOneGreater" || options$hypothesis == "groupTwoGreater")
@@ -244,7 +241,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList$percentConfidenceEffSize))*mrSE), Inf))
 
-    effectSizeSE <- tanh(mrSE)
+    effectSizeSe <- tanh(mrSE)
 
     ## else run a simple paired t-test
   } else {
@@ -252,8 +249,13 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                          alternative = direction)
     df  <- ifelse(is.null(res$parameter), "", as.numeric(res$parameter))
     d   <- mean(c1 - c2) / sd(c1 - c2)
+
+    #compute effect size SE
+    effectSizeVar <- ((1/n)+(d^2 / (2*n))) * (2*(1-cor(c1,c2)))
+    #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.28)
+    effectSizeSe <- sqrt(effectSizeVar)
+
     confIntEffSize <- c(0,0)
-    effectSizeSE <- NULL
 
 
     if (optionsList$wantsConfidenceEffSize) {
@@ -272,11 +274,6 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
         confIntEffSize[1] <- -Inf
 
       confIntEffSize <- sort(confIntEffSize)
-    }
-    if (optionsList$wantsEffSizeSE){
-      effectSizeVar <- ((1/n)+(d**2 / (2*n))) * (2*(1-cor(c1,c2)))
-      #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009)
-      effectSizeSE <- sqrt(effectSizeVar)
     }
   }
 
@@ -303,7 +300,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   result <- list(df = df, p = p, md = m, d = d,
                      lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
                      lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize,
-                     effectSizeSE = effectSizeSE, sed = sed, zstat = zstat)
+                     effectSizeSe = effectSizeSe, sed = sed, zstat = zstat)
 
   result[testStat] <- stat
 

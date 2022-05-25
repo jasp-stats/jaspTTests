@@ -30,7 +30,6 @@ Met de gepaarde t-toets kan de gebruiker de effectgrootte schatten en de nulhypo
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de locatieparameter. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
 - Effectgrootte: Bij de Student t-toets wordt de effectgrootte gegeven met Cohen's d; voor de Wilcoxon toets wordt de effectgrootte gegeven met de rank biserial correlatie. 
   - Betrouwbaarheidsinterval: Betrouwbaarheidsinterval voor de effectgrootte gebaseerd op een niet-centrale t-verdeling voor Cohen's d, Glass' delta en Hedges' g, en de normaal benadering van de Fisher getransformeerde rank biseriële correlatie.
-  - Standaardfout: Standaardfout van de Effectgrootte
 - Beschrijvend: Steekproef grootte, steekproefgemiddelde, steekproef standaarddeviatie, standaardfout van het gemiddelde voor iedere maat.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer voor iedere maat (zie Morey [2008] voor de berekening van de standaardfout van het gemiddelde in gepaarde designs). 
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
@@ -55,11 +54,11 @@ Met de gepaarde t-toets kan de gebruiker de effectgrootte schatten en de nulhypo
 - % BI voor gemiddelde verschil/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddelde verschil/de locatieparameter van de verschilscores. De standaardoptie is 95%. 
   - Onder: De ondergrens van het betrouwbaarheidsinterval. 
   - Boven: De bovengrens van het betrouwbaarheidsinterval.  
-- Effectgrootte: Voor de Student t-toets wordt de effectgrootte gegeven met Cohen's d; Voor de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie. 
+- Effectgrootte: Voor de Student t-toets wordt de effectgrootte gegeven met Cohen's d; Voor de Wilcoxon toets wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie.
+- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 - % BI voor effectgrootte: Het betrouwbaarheidsinterval voor de effectgrootte. De standaardoptie is 95%. 
   - Onder: De ondergrens van het betrouwbaarheidsinterval. 
   - Boven: De bovengrens van het betrouwbaarheidsinterval.
-- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 
 #### Verificatie van aannames
 Toets voor normaliteit (Shapiro-Wilk)
@@ -83,7 +82,7 @@ Toets voor normaliteit (Shapiro-Wilk)
 - Morey, R. D. (2008). Confidence intervals from normalized data: A correction to Cousineau (2005). *Tutorials in Quantitative Methods for Psychology, 4*, 61-64.
 - Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of *p* values for testing precise null hypotheses. *The American Statistician, 55*(1), 62-71.
 - Whitlock, M. C., & Schluter, D. (2015). *The analysis of biological data (2nd ed.)*. Greenwood Village, Colorado: Roberts and Company Publishers.
-
+- Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). *Introduction to Meta-Analysis (1st ed.)*. Chichester, UK: John Wiley & Sons, Ltd.
 
 ### R-packages 
 ---

@@ -43,7 +43,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("Independent Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "effectSizeSE", "variables",
+  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "variables",
                    "descriptivesEffectSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
                    "meanDiffConfidenceIntervalPercent", "hypothesis",
@@ -131,7 +131,8 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   ## add Cohen's d
   if (optionsList$wantsEffect) {
-    ttest$addColumnInfo(name = "d", title = nameOfEffectSize, type = "number")
+    ttest$addColumnInfo(name = "d",            title = nameOfEffectSize,                      type = "number")
+    ttest$addColumnInfo(name = "effectSizeSe", title = gettextf("SE %1$s", nameOfEffectSize), type = "number")
 
     if (optionsList$wantsWilcox) {
       wNote <- gettext("For the Mann-Whitney test, effect size is given by the rank biserial correlation.")
@@ -148,10 +149,6 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceEffSize, nameOfEffectSize)
     ttest$addColumnInfo(name = "lowerCIeffectSize", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
-  }
-
-  if (optionsList$wantsEffSizeSE) {
-    ttest$addColumnInfo(name = "effectSizeSE", type = "number", title = gettextf("SE %1$s", nameOfEffectSize))
   }
 
   jaspResults[["ttest"]] <- ttest
@@ -309,7 +306,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zRankBis + qnorm((1-ciEffSize))*rankBisSE), Inf))
 
-    effectSizeSE <- tanh(rankBisSE)
+    effectSizeSe <- tanh(rankBisSE)
   } else {
     r <- stats::t.test(f, data = dataset, alternative = direction,
                        var.equal = test != "Welch", conf.level = ciMeanDiff, paired = FALSE)
@@ -338,8 +335,16 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       }
     }
     sed <- (as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])) / stat
+
+    #compute effect size SE
+    j <- ifelse(effSize == "hedges", exp(logCorrection), 1)
+    ni <- ifelse(effSize == "glass", ns[2], ns)
+
+    effectSizeVar <- j^2 * (sum(ns)/prod(ns) + (d^2 / (2*sum(ni))))
+    #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.20/4.24).
+    effectSizeSe <- sqrt(effectSizeVar)
+
     confIntEffSize <- c(0,0)
-    effectSizeSE <- NULL
 
     if (optionsList$wantsConfidenceEffSize){
       # From MBESS package by Ken Kelley, v4.6
@@ -356,16 +361,6 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         confIntEffSize[1] <- -Inf
 
       confIntEffSize <- sort(confIntEffSize)
-    }
-
-    if (optionsList$wantsEffSizeSE){
-
-      j <- ifelse(effSize == "hedges", exp(logCorrection), 1)
-      i <- ifelse(effSize == "glass", ns[2], ns)
-
-      effectSizeVar <- j**2 * (sum(ns)/prod(ns) + (d**2 / (2*sum(i))))
-      #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009)
-      effectSizeSE <- sqrt(effectSizeVar)
     }
   }
   ## if the user doesn't want a Welch's t-test or Mann-Whitney,
@@ -392,7 +387,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   row <- list(df = df, p = p, md = m, d = d,
               lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
               lowerCIeffectSize = lowerCIeffectSize, upperCIeffectSize = upperCIeffectSize,
-              effectSizeSE = effectSizeSE, sed = sed)
+              effectSizeSe = effectSizeSe, sed = sed)
 
   row[[testStat]] <- stat
 

@@ -69,7 +69,6 @@ Form
 					childrenOnSameRow: true
 					PercentField { name: "descriptivesEffectSizeConfidenceIntervalPercent"; defaultValue: 95 }
 				}
-				CheckBox {name: "effectSizeSE"; label: qsTr("Standard error")}
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives")								}

@@ -12,7 +12,6 @@ test_that("Main table results match for one pair * multiple tests", {
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
-  options$effectSizeSE <- TRUE
   options$VovkSellkeMPR <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]

@@ -41,7 +41,6 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
 - Beschrijvend: Steekproef grootte, steekproefgemiddelde, steekproef standaarddeviatie, standaardfout van het gemiddelde voor iedere groep.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer voor iedere groep. 
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
-  - Standaardfout: Standaardfout van de Effectgrootte
 - Vovk-Sellke Maximum *p*-Ratio: De grens 1/(-e *p* log(*p*)) wordt afgeleid van de vorm van de verdeling van de *p*-waarde. Onder de nulhypothese (H<sub>0</sub>) is het uniform(0,1), en onder de alternatieve (H<sub>1</sub>) neemt hij af in *p*, bijv., een beta(&#945;, 1) vergelijking, waarin 0 < &#945; < 1. The Vovk-Sellke MPR wordt verkregen door de vorm van &#945; van de verdeling onder H<sub>1</sub> zodat de verkregen *p*-waarde *maximaal diagnostisch* is. De waarde is dan de ratio van de dichtheid op punt *p* onder H<sub>0</sub> en H<sub>1</sub>. Bijvoorbeeld, als de tweezijdige *p*-waarde gelijk is aan .05, dan is de Vovk-Sellke MPR gelijk aan 2.46, wat aangeeft dat deze *p*-waarde op zijn hoogst 2.46 keer meer kans heeft om voor te komen onder H<sub>1</sub> dan onder H<sub>0</sub>.
 
 #### Ontbrekende Waarden
@@ -64,11 +63,11 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
 - % BI voor gemiddeld verschil/locatieparameter: Het betrouwbaarheidsinterval voor het gemiddeld verschil/de locatieparameter van de verschilscores. De standaardoptie is 95%. 
   - Onder: De ondergrens van het betrouwbaarheidsinterval. 
   - Boven: De bovengrens van het betrouwbaarheidsinterval.  
-- Effectgrootte: Voor de Student t-toets en de Welch t-toets wordt de effectgrootte gegeven met Cohen's d/Glass' delta/Hedges' g; Voor de Mann-Whitney test wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie. 
+- Effectgrootte: Voor de Student t-toets en de Welch t-toets wordt de effectgrootte gegeven met Cohen's d/Glass' delta/Hedges' g; Voor de Mann-Whitney test wordt de effectgrootte gegeven met de gematchte rank biseriële correlatie.
+- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 - % BI voor effectgrootte: Het betrouwbaarheidsinterval voor de effectgrootte. De standaardoptie is 95%. 
   - Onder: De ondergrens van het betrouwbaarheidsinterval. 
   - Boven: De bovengrens van het betrouwbaarheidsinterval.
-- Std. Fout Effectgrootte: Standaardfout van de Effectgrootte
 
 #### Verificatie van aannames
 Toets voor normaliteit (Shapiro-Wilk)
@@ -98,6 +97,7 @@ Variantiegelijkheid toets (Levene's):
 - Moore, D. S., McCabe, G. P., & Craig, B. A. (2012). *Introduction to the practice of statistics (7th ed.)*. New York, NY: W. H. Freeman and Company.
 - Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of *p* values for testing precise null hypotheses. *The American Statistician, 55*(1), 62-71.
 - Whitlock, M. C., & Schluter, D. (2015). *The analysis of biological data (2nd ed.)*. Greenwood Village, Colorado: Roberts and Company Publishers.
+- Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). *Introduction to Meta-Analysis (1st ed.)*. Chichester, UK: John Wiley & Sons, Ltd.
 
 ### R-packages
 ---

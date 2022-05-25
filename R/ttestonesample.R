@@ -42,7 +42,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "effectSizeSE",
+  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox",
                    "variables", "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
                    "meanDiffConfidenceIntervalPercent", "hypothesis",
@@ -120,8 +120,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   if (optionsList$wantsEffect) {
-    ttest$addColumnInfo(name = "d", title = nameOfEffectSize, type = "number")
-
+    ttest$addColumnInfo(name = "d",            title = nameOfEffectSize,                      type = "number")
+    ttest$addColumnInfo(name = "effectSizeSe", title = gettextf("SE %1$s", nameOfEffectSize), type = "number")
     if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
       tNote <- wNote <- zNote <- NULL
 
@@ -142,9 +142,6 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceEffSize, nameOfEffectSize)
     ttest$addColumnInfo(name = "lowerCIeffectSize", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
-  }
-  if (optionsList$wantsEffSizeSE) {
-    ttest$addColumnInfo(name = "effectSizeSE", type = "number", title = gettextf("SE %1$s", nameOfEffectSize))
   }
 
   ### check the directionality
@@ -267,7 +264,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
 
-    effectSizeSE <- tanh(mrSE)
+    effectSizeSe <- tanh(mrSE)
 
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
@@ -277,8 +274,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
     df <- ""
     d  <- tempResult[["d"]]
+    effectSizeSe <- sqrt((1/n)+(d^2 / (2*n)))
     confIntEffSize <- tempResult[["confIntEffSize"]]
-    effectSizeSE <- sqrt((1/n)+(d**2 / (2*n)))
+
 
   } else {
     tempResult <- stats::t.test(dat, alternative = direction, mu = options[["testValue"]],
@@ -287,8 +285,11 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
     t  <- as.numeric(tempResult[["statistic"]])
 
+    effectSizeSe <- sqrt((1/n)+(d^2 / (2*n)))
+    #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.28(with r = .5))
+
     confIntEffSize <- c(0,0)
-    effectSizeSE <- NULL
+
 
     if (optionsList[["wantsConfidenceEffSize"]]) {
 
@@ -305,12 +306,6 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
         confIntEffSize[1] <- -Inf
 
       confIntEffSize <- sort(confIntEffSize)
-    }
-
-    if (optionsList$wantsEffSizeSE){
-      effectSizeVar <- ((1/n)+(d**2 / (2*n)))
-      #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009)
-      effectSizeSE <- sqrt(effectSizeVar)
     }
   }
 
@@ -330,7 +325,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   ciLowEffSize <- as.numeric(confIntEffSize[1])
   ciUpEffSize  <- as.numeric(confIntEffSize[2])
-  effectSizeSE <- as.numeric(effectSizeSE)
+  effectSizeSe <- as.numeric(effectSizeSe)
 
   if (suppressWarnings(is.na(t)))  # do not throw warning when test stat is not 't'
     stop("data are essentially constant")
@@ -338,7 +333,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   result <- list(df = df, p = p, m = m, d = d,
                  lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
                  lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize,
-                 effectSizeSE = effectSizeSE)
+                 effectSizeSe = effectSizeSe)
   result[[testStat]] <- stat
 
   if (options[["VovkSellkeMPR"]])

@@ -14,7 +14,6 @@ test_that("Main table results match", {
   options$effectSize <- TRUE
   options$VovkSellkeMPR <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
-  options$effectSizeSE <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,

@@ -66,7 +66,6 @@ Form
 				childrenOnSameRow: true
 				CIField { name: "effSizeConfidenceIntervalPercent" }
 			}
-			CheckBox {name: "effectSizeSE"; label: qsTr("Standard error")}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
 		CheckBox
