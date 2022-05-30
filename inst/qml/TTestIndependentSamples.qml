@@ -91,22 +91,24 @@ Form
 		title: qsTr("Alt. Hypothesis")
 		RadioButton { value: "groupsNotEqual";	label: qsTr("Group 1 ≠ Group 2"); checked: true	}
 		RadioButton { value: "groupOneGreater";	label: qsTr("Group 1 > Group 2")					}
-		RadioButton { value: "groupTwoGreater";	label: qsTr("Group 1 < Group 2")					}
+		RadioButton { value: "groupTwoGreater"; label: qsTr("Group 1 < Group 2")					}
 	}
 
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTests";				    label: qsTr("Normality") }
-		CheckBox { name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")
-      RadioButtonGroup
-      {
-        name: "equalityOfVarianceType"
-        RadioButton { value: "brownForsythe"; label: qsTr("Brown-Forsythe") ; checked: true }
-        RadioButton { value: "levene";        label: qsTr("Levene's") }
-      }
-    }
-  }
+		CheckBox { name: "normalityTests";	label: qsTr("Normality") }
+		CheckBox
+		{
+			name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")
+			RadioButtonGroup
+			{
+				name: "equalityOfVarianceType"
+				RadioButton { value: "brownForsythe";	label: qsTr("Brown-Forsythe") ; checked: true }
+				RadioButton { value: "levene";			label: qsTr("Levene's") }
+			}
+		}
+	}
 
 	RadioButtonGroup
 	{
