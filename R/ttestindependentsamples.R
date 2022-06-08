@@ -195,7 +195,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   equalityVariance$showSpecifiedColumnsOnly <- TRUE
   equalityVariance$position <- 3
   equalityVariance$addColumnInfo(name = "variable", type = "string",  title = "")
-  equalityVariance$addColumnInfo(name = "fStat",    type = "number",  title = gettext("t"))
+  equalityVariance$addColumnInfo(name = "fStat",    type = "number",  title = gettext("F"))
   equalityVariance$addColumnInfo(name = "dfOne",    type = "integer", title = gettextf("%s<sub>1</sub>", "df"))
   equalityVariance$addColumnInfo(name = "dfTwo",    type = "integer", title = gettextf("%s<sub>2</sub>", "df"))
   equalityVariance$addColumnInfo(name = "p",        type = "pvalue",  title = gettext("p"))
