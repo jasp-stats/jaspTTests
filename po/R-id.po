@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-05-07 02:54\n"
+"POT-Creation-Date: 2022-06-09 14:53\n"
 "PO-Revision-Date: 2022-02-17 15:13+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
@@ -312,6 +312,9 @@ msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
 msgid "Test of Equality of Variances (Levene's)"
+msgstr ""
+
+msgid "F"
 msgstr ""
 
 msgid "%s<sub>1</sub>"

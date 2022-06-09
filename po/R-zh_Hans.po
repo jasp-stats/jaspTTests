@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-05-07 02:54\n"
+"POT-Creation-Date: 2022-06-09 14:53\n"
 "PO-Revision-Date: 2022-05-23 06:17+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -326,6 +326,9 @@ msgstr "显着结果表明偏离正态性。"
 msgid "Test of Equality of Variances (Levene's)"
 msgstr "等方差(齐)性检验(Levene's)"
 
+msgid "F"
+msgstr "F"
+
 msgid "%s<sub>1</sub>"
 msgstr "%s<sub>1</sub>"
 
@@ -479,6 +482,3 @@ msgstr "对于所有检验，备择假设指定度量 1 大于度量 2。例如�
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "以下配对是重复的: %s"
-
-#~ msgid "F"
-#~ msgstr "F"
