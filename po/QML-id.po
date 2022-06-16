@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-08 12:10+0000\n"
-"Last-Translator: Kukuh Pambuka Putra <kukuh.pambuka@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/id/>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.12.1\n"
-"X-Qt-Contexts: true\n"
 "X-Language: id\n"
+"X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
@@ -117,9 +111,10 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Tes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
@@ -213,9 +208,10 @@ msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Tes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
@@ -309,9 +305,10 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Tes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
@@ -349,9 +346,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Tes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
@@ -557,9 +555,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Tes"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
