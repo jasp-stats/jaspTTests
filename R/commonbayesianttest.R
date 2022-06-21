@@ -1346,7 +1346,7 @@
 
   p <-  ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1))
   if (is.null(testValueOpt) || testValueOpt != 0) {
-    p <- p + ggplot2::geom_hline(yintercept = 0)
+    p <- p + ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3)
   }
   p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper), colour = "black", width = .2, position = pd) +
