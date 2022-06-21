@@ -633,7 +633,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsTwo)
+  if (!options$descriptivesPlotsTwo)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
@@ -648,15 +648,15 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     subcontainer <- container[["plotsTwo"]]
   }
 
-  for(variable in options$variables) {
-    if(!is.null(subcontainer[[variable]]))
+  for (variable in options$variables) {
+    if (!is.null(subcontainer[[variable]]))
       next
     descriptivesPlotTwo <- createJaspPlot(title = variable, width = 480, height = 320)
     descriptivesPlotTwo$dependOn(optionContainsValue = list(variables = variable))
     subcontainer[[variable]] <- descriptivesPlotTwo
-    if(ready){
+    if (ready) {
       p <- try(.ttestIndependentDescriptivesPlotTwoFill(dataset, options, variable))
-      if(isTryError(p))
+      if (isTryError(p))
         descriptivesPlotTwo$setError(.extractErrorMessage(p))
       else
         descriptivesPlotTwo$plotObject <- p
@@ -675,18 +675,18 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
                        observations.amount = '< 2',
                        observations.grouping = groups)
 
-  if(!identical(errors, FALSE))
+  if (!identical(errors, FALSE))
     stop(errors$message)
 
   dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
-  if(options$errorBarType == "descriptivesPlotsTwoConfidenceInterval"){
+  if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {
     summaryStat <- summarySE(as.data.frame(dataset),
                              measurevar = .v(variable),
                              groupvars = .v(groups),
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if(options$errorBarType == "standardError"){
+  } else if (options$errorBarType == "standardError") {
     summaryStat <- summarySE(as.data.frame(dataset),
                              measurevar = .v(variable),
                              groupvars = .v(groups),
@@ -698,9 +698,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
 
   ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
-  #ciPos <- c(summaryStat[, "dependent"] - summaryStat[, "ci"], summaryStat[, "dependent"] + summaryStat[, "ci"])
 
-  if(options$zeroFix){
+  if (options$zeroFix) {
     yBreaks <- pretty(c(0, ciPos))
   } else {
     yBreaks <- pretty(ciPos)
@@ -720,8 +719,6 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
     jaspGraphs::geom_rangeframe(sides = "l") +
     jaspGraphs::themeJaspRaw()
-
-  #p <- jaspGraphs::themeJasp(p, sides = "l") # Not supposed to use this, but this has appropriate fontsize
 
   return(p)
 }

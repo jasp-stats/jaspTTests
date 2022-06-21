@@ -478,7 +478,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsTwo)
+  if (!options$descriptivesPlotsTwo)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
@@ -494,16 +494,16 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     subcontainer <- container[["plotsTwo"]]
   }
 
-  for(pair in options$pairs) {
+  for (pair in options$pairs) {
     title <- paste(pair, collapse = " - ")
-    if(!is.null(subcontainer[[title]]))
+    if (!is.null(subcontainer[[title]]))
       next
     descriptivesPlotTwo <- createJaspPlot(title = title, width = 480, height = 320)
     descriptivesPlotTwo$dependOn(optionContainsValue = list(pairs = pair))
     subcontainer[[title]] <- descriptivesPlotTwo
-    if(ready){
+    if (ready) {
       p <- try(.ttestPairedDescriptivesPlotTwoFill(dataset, options, pair))
-      if(isTryError(p))
+      if (isTryError(p))
         descriptivesPlotTwo$setError(.extractErrorMessage(p))
       else
         descriptivesPlotTwo$plotObject <- p
@@ -517,7 +517,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                        message = 'short',
                        type = c('variance', 'infinity'),
                        all.target = pair)
-  if(!identical(errors, FALSE))
+  if (!identical(errors, FALSE))
     stop(errors$message)
 
   c1 <- dataset[[pair[[1]]]]
@@ -529,17 +529,17 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                      stringsAsFactors = TRUE)
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
-  if(options$errorBarType == "descriptivesPlotsTwoConfidenceInterval"){
+  if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {
     summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
                                    idvar = "id", conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if(options$errorBarType == "standardError"){
+  } else if (options$errorBarType == "standardError") {
     summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
                                    idvar = "id", conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
   }
 
   ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
 
-  if(options$zeroFix){
+  if (options$zeroFix) {
     yBreaks <- pretty(c(0, ciPos))
   } else {
     yBreaks <- pretty(ciPos)

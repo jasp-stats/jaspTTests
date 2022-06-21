@@ -1321,13 +1321,13 @@
 
   }
 
-  if(errorBarType == "standardError"){
+  if (errorBarType == "standardError") {
     summaryStat$ciLower <- summaryStat$ciLowerSe
     summaryStat$ciUpper <- summaryStat$ciUpperSe
   }
   ciPos <- c(testValueOpt, summaryStat$ciLower, summaryStat$ciUpper)
 
-  if(zeroFix){
+  if (zeroFix) {
     yBreaks <- pretty(c(0, ciPos))
   } else {
     yBreaks <- pretty(ciPos)
@@ -1345,7 +1345,7 @@
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
   p <-  ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1))
-  if(is.null(testValueOpt) || testValueOpt != 0){
+  if (is.null(testValueOpt) || testValueOpt != 0) {
     p <- p + ggplot2::geom_hline(yintercept = 0)
   }
   p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +

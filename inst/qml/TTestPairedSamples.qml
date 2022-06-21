@@ -75,21 +75,26 @@ Form
 		}
 		CheckBox
 		{
-			name: "descriptivesPlotsTwo";					label: qsTr("Bar plots")
+			name: 	"descriptivesPlotsTwo"
+			label: 	qsTr("Bar plots")
+			
 			RadioButtonGroup
 				{
 					name: "errorBarType"
+					
 					RadioButton
 					{
-						value: "descriptivesPlotsTwoConfidenceInterval";		
-						label: qsTr("Confidence interval"); 
-						checked: true;
-						childrenOnSameRow: true
-						CIField { name: "descriptivesPlotsTwoConfidenceIntervalField" }
+						value: 				"descriptivesPlotsTwoConfidenceInterval"		
+						label: 				qsTr("Confidence interval")
+						checked: 			true
+						childrenOnSameRow: 	true
+						
+						CIField { name: 	"descriptivesPlotsTwoConfidenceIntervalField" }
 					}
-					RadioButton { value: "standardError";	label: qsTr("Standard error") }
+					RadioButton { value: 	"standardError";	label: qsTr("Standard error") }
 				}
-			CheckBox { name: "zeroFix";						label: qsTr("Fix horizontal axis to 0")	}
+			
+			CheckBox { name: "zeroFix";		label: qsTr("Fix horizontal axis to 0") }
 		}
 		CheckBox{ name: "descriptivesPlotsRainCloud";		label: qsTr("Raincloud plots")									}
 		CheckBox

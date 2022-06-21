@@ -436,7 +436,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsTwo)
+  if (!options$descriptivesPlotsTwo)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
@@ -453,15 +453,15 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     subcontainer <- container[["plotsTwo"]]
   }
 
-  for(variable in options$variables) {
-    if(!is.null(subcontainer[[variable]]))
+  for (variable in options$variables) {
+    if (!is.null(subcontainer[[variable]]))
       next
     descriptivesPlotTwo <- createJaspPlot(title = variable, width = 480, height = 320)
     descriptivesPlotTwo$dependOn(optionContainsValue = list(variables = variable))
     subcontainer[[variable]] <- descriptivesPlotTwo
-    if(ready){
+    if (ready) {
       p <- try(.ttestOneSampleDescriptivesPlotTwoFill(dataset, options, variable))
-      if(isTryError(p))
+      if (isTryError(p))
         descriptivesPlotTwo$setError(.extractErrorMessage(p))
       else
         descriptivesPlotTwo$plotObject <- p
@@ -476,24 +476,24 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                        type = c('observations', 'variance', 'infinity'),
                        all.target = variable,
                        observations.amount = c('< 2'))
-  if(!identical(errors, FALSE))
+  if (!identical(errors, FALSE))
     stop(errors$message)
 
   dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
                            groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
-  if(options$errorBarType == "descriptivesPlotsTwoConfidenceInterval"){
+  if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {
     summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if(options$errorBarType == "standardError"){
+  } else if (options$errorBarType == "standardError") {
     summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
   }
 
   ciPos <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
 
-  if(options$zeroFix){
+  if (options$zeroFix) {
     yBreaks <- pretty(c(0, ciPos))
   } else {
     yBreaks <- pretty(ciPos)
@@ -503,7 +503,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
   p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1))
-  if(options$testValue != 0){
+  if (options$testValue != 0) {
     p <- p + ggplot2::geom_hline(yintercept = 0)
   }
   p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
