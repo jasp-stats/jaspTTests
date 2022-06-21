@@ -91,7 +91,7 @@ Form
 					RadioButton { value: 	"standardError";	label: qsTr("Standard error") }
 				}
 			
-			CheckBox { name: "zeroFix";		label: qsTr("Fix horizontal axis to 0") }
+			CheckBox { name: "zeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
 		}
 		
 		CheckBox
