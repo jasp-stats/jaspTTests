@@ -33,6 +33,10 @@ Met de gepaarde t-toets kan de gebruiker de effectgrootte schatten en de nulhypo
 - Beschrijvend: Steekproef grootte, steekproefgemiddelde, steekproef standaarddeviatie, standaardfout van het gemiddelde voor iedere maat.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer voor iedere maat (zie Morey [2008] voor de berekening van de standaardfout van het gemiddelde in gepaarde designs). 
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
+- Staafdiagrammen: Geeft de steekproefgemiddelden weer als balken en de betrouwbaarheidsintervallen of standaardfouten als foutbalken voor elke maat (zie Morey [2008] voor de berekening van de standaardfout van het gemiddelde in gepaarde ontwerpen). 
+  - Betrouwbaarheidsinterval: Dekking van de betrouwbaarheidsintervallen in percentages. Standaard is het betrouwbaarheidsinterval ingesteld op 95%. Dit kan worden veranderd in het gewenste percentage.
+  - Standaardfout: Door deze optie te selecteren, zullen de foutbalken de standaardfouten van het gemiddelde van elke conditie weergeven.
+  - Fix horizontale as op 0: Forceert de grafiek om de standaard x-as op y = 0 te tonen.
 - Vovk-Sellke Maximum *p*-Ratio: De grens 1/(-e *p* log(*p*)) wordt afgeleid van de vorm van de verdeling van de *p*-waarde. Onder de nulhypothese (H<sub>0</sub>) is het uniform(0,1), en onder de alternatieve (H<sub>1</sub>) neemt hij af in *p*, bijv., een beta(&#945;, 1) vergelijking, waarin 0 < &#945; < 1. The Vovk-Sellke MPR wordt verkregen door de vorm van &#945; van de verdeling onder H<sub>1</sub> zodat de verkregen *p*-waarde *maximaal diagnostisch* is. De waarde is dan de ratio van de dichtheid op punt *p* onder H<sub>0</sub> en H<sub>1</sub>. Bijvoorbeeld, als de tweezijdige *p*-waarde gelijk is aan .05, dan is de Vovk-Sellke MPR gelijk aan 2.46, wat aangeeft dat deze *p*-waarde op zijn hoogst 2.46 keer meer kans heeft om voor te komen onder H<sub>1</sub> dan onder H<sub>0</sub>.
 
 #### Ontbrekende Waarden
@@ -74,6 +78,9 @@ Toets voor normaliteit (Shapiro-Wilk)
 
 #### Beschrijvende Grafieken 
 - Geeft het steekproefgemiddelde weer (black bullet), het % betrouwbaarheidsinterval (whiskers) voor iedere maat.  
+
+#### Staafdiagrammen
+- Geeft de steekproefgemiddelden (grijze balken), de x%-betrouwbaarheidsintervallen of standaardfouten (schijven) voor elke maat weer. De x-as vertegenwoordigt de gepaarde variabelen, en de y-as de afhankelijke variabele. 
 
 ### Referenties
 -------
