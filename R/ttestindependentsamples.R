@@ -666,7 +666,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesPlotTwoFill <- function(dataset, options, variable) {
-  groups   <- options$groupingVariable
+  groups <- options$groupingVariable
 
   errors <- .hasErrors(dataset,
                        message = 'short',
@@ -678,24 +678,24 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if (!identical(errors, FALSE))
     stop(errors$message)
 
-  dataset <- na.omit(dataset[, c(.v(groups), .v(variable))])
+  dataset <- na.omit(dataset[, c(groups, variable)])
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
   if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {
     summaryStat <- summarySE(as.data.frame(dataset),
-                             measurevar = .v(variable),
-                             groupvars = .v(groups),
+                             measurevar = variable,
+                             groupvars = groups,
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE)
   } else if (options$errorBarType == "standardError") {
     summaryStat <- summarySE(as.data.frame(dataset),
-                             measurevar = .v(variable),
-                             groupvars = .v(groups),
+                             measurevar = variable,
+                             groupvars = groups,
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE,
                              errorBarType = "se")
   }
 
-  colnames(summaryStat)[which(colnames(summaryStat) == .v(variable))] <- "dependent"
-  colnames(summaryStat)[which(colnames(summaryStat) == .v(groups))]   <- "groupingVariable"
+  colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
+  colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "groupingVariable"
 
   ciPos <- c(summaryStat$ciLower, summaryStat$ciUpper)
 

@@ -479,8 +479,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   if (!identical(errors, FALSE))
     stop(errors$message)
 
-  dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
-                           groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
+  dataSubset <- data.frame(dependent = dataset[[variable]],
+                           groupingVariable = rep(variable, length(dataset[[variable]])))
   ci <- options$descriptivesPlotsTwoConfidenceIntervalField
 
   if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {

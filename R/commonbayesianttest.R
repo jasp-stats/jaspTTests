@@ -567,7 +567,7 @@
       descriptivesPlotsTwo <- createJaspContainer(
         title = gettext("Bar Plots"),
         dependencies = c("descriptivesPlotsTwo", "testValue", "zeroFix",
-                         "errorBarType","descriptivesPlotsTwoCredibleInterval")
+                         "errorBarType", "descriptivesPlotsTwoCredibleInterval")
       )
       descriptivesPlotsTwo$position <- 3L
       descriptivesContainer[["plotsTwo"]] <- descriptivesPlotsTwo
@@ -798,8 +798,8 @@
   paired <- !is.null(pairs)
 
   if (hasGrouping) {
-    groupingData <- dataset[[.v(grouping)]]
-    levels   <- base::levels(dataset[[.v(grouping)]])
+    groupingData <- dataset[[grouping]]
+    levels <- base::levels(dataset[[grouping]])
     canDoDescriptives <- length(dependents) >= 1 && !(is.null(grouping) || grouping == "")
   } else if (paired) {
     grouping <- "group"
@@ -821,7 +821,7 @@
             pair <- pairs[[var]]
             levels <- c(pair[[1]], pair[[2]])
 
-            dat <- c(dataset[[.v(pair[[1]])]], dataset[[.v(pair[[2]])]])
+            dat <- c(dataset[[(pair[[1]])]], dataset[[(pair[[2]])]])
             dat <- data.frame(
               value = dat,
               group = groupingData
@@ -829,8 +829,8 @@
             dat <- dat[!is.na(dat[[1]]), ]
 
           } else {
-            idxC <- !is.na(dataset[[.v(var)]])
-            dat <- dataset[idxC, .v(c(var, grouping))]
+            idxC <- !is.na(dataset[[var]])
+            dat <- dataset[idxC, c(var, grouping)]
           }
 
           obj <- try(.ttestBayesianPlotTwoKGroupMeans(
@@ -1317,7 +1317,7 @@
 
     summaryStat <- as.data.frame(.posteriorSummaryGroupMean(data, descriptivesPlotsCredibleInterval = CRI))
     summaryStat$groupingVariable <- var
-    testValue <- data.frame("testValue" = testValueOpt) # default zero
+    testValue <- data.frame("testValue" = testValueOpt)
 
   }
 
@@ -1344,7 +1344,7 @@
   pd <- ggplot2::position_dodge(.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
-  p <-  ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1))
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1))
   if (is.null(testValueOpt) || testValueOpt != 0) {
     p <- p + ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3)
   }
