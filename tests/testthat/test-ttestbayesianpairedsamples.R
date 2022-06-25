@@ -94,7 +94,7 @@ test_that("Inferential plots with additional info match", {
 test_that("Bar plot matches", {
   options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlotsTwo <- TRUE
+  options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

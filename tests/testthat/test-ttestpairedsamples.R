@@ -72,7 +72,7 @@ test_that("Descriptives plot matches", {
 test_that("Bar plot matches", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlotsTwo <- TRUE
+  options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

@@ -79,7 +79,7 @@ test_that("Bar plot matches", {
   options <- jaspTools::analysisOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
-  options$descriptivesPlotsTwo <- TRUE
+  options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

@@ -76,7 +76,7 @@ Form {
 		
 		CheckBox
 		{
-			name: 	"descriptivesPlotsTwo"
+			name: 	"descriptivesBarPlots"
 			label: 	qsTr("Bar plots")
 			
 			RadioButtonGroup
@@ -85,17 +85,17 @@ Form {
 					
 					RadioButton
 					{
-						value: 				"descriptivesPlotsCredibleIntervalTwo"	
+						value: 				"confidenceInterval"	
 						label: 				qsTr("Credible interval")
 						checked: 			true
 						childrenOnSameRow: 	true
 						
-						CIField { name: 	"descriptivesPlotsTwoCredibleInterval" }
+						CIField { name: 	"descriptivesBarPlotsCredibleInterval" }
 					}
 					RadioButton { value: 	"standardError";	label: qsTr("Standard error") }
 				}
 			
-			CheckBox { name: "zeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+			CheckBox { name: "descriptivesBarPlotsZeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
 		}
 
 		CheckBox

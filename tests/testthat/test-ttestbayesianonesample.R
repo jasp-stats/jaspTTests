@@ -63,7 +63,7 @@ test_that("Inferential and descriptives plots match", {
 test_that("Bar plot matches", {
   options <- jaspTools::analysisOptions("TTestBayesianOneSample")
   options$variables <- "contGamma"
-  options$descriptivesPlotsTwo <- TRUE
+  options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

@@ -112,7 +112,7 @@ test_that("Bar plot matches", {
   options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
-  options$descriptivesPlotsTwo <- TRUE
+  options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

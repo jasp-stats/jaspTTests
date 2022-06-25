@@ -29,7 +29,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   vars <- unique(unlist(options$variables))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
-  .ttestOneSampleDescriptivesPlotTwo(      jaspResults, dataset, options, ready)
+  .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
 
   return()
@@ -435,42 +435,42 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   return(p)
 }
 
-.ttestOneSampleDescriptivesPlotTwo <- function(jaspResults, dataset, options, ready) {
-  if (!options$descriptivesPlotsTwo)
+.ttestOneSampleDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
+  if (!options[["descriptivesBarPlots"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
-  if (is.null(container[["plotsTwo"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesPlotsTwo",
-                                                                               "descriptivesPlotsTwoConfidenceIntervalField",
+  if (is.null(container[["barPlots"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
+                                                                               "descriptivesBarPlotsConfidenceInterval",
                                                                                "errorBarType",
                                                                                "testValue",
-                                                                               "zeroFix"))
+                                                                               "descriptivesBarPlotsZeroFix"))
     subcontainer$position <- 6
-    container[["plotsTwo"]] <- subcontainer
+    container[["barPlots"]] <- subcontainer
   } else {
-    subcontainer <- container[["plotsTwo"]]
+    subcontainer <- container[["barPlots"]]
   }
 
-  for (variable in options$variables) {
+  for (variable in options[["variables"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
-    descriptivesPlotTwo <- createJaspPlot(title = variable, width = 480, height = 320)
-    descriptivesPlotTwo$dependOn(optionContainsValue = list(variables = variable))
-    subcontainer[[variable]] <- descriptivesPlotTwo
+    descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesBarPlot
     if (ready) {
-      p <- try(.ttestOneSampleDescriptivesPlotTwoFill(dataset, options, variable))
+      p <- try(.ttestOneSampleDescriptivesBarPlotFill(dataset, options, variable))
       if (isTryError(p))
-        descriptivesPlotTwo$setError(.extractErrorMessage(p))
+        descriptivesBarPlot$setError(.extractErrorMessage(p))
       else
-        descriptivesPlotTwo$plotObject <- p
+        descriptivesBarPlot$plotObject <- p
     }
   }
   return()
 }
 
-.ttestOneSampleDescriptivesPlotTwoFill <- function(dataset, options, variable) {
+.ttestOneSampleDescriptivesBarPlotFill <- function(dataset, options, variable) {
   errors <- .hasErrors(dataset,
                        message = 'short',
                        type = c('observations', 'variance', 'infinity'),
@@ -481,29 +481,25 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   dataSubset <- data.frame(dependent = dataset[[variable]],
                            groupingVariable = rep(variable, length(dataset[[variable]])))
-  ci <- options$descriptivesPlotsTwoConfidenceIntervalField
+  ci <- options[["descriptivesBarPlotsConfidenceInterval"]]
 
-  if (options$errorBarType == "descriptivesPlotsTwoConfidenceInterval") {
+  if (options[["errorBarType"]] == "confidenceInterval") {
     summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if (options$errorBarType == "standardError") {
+  } else if (options[["errorBarType"]] == "standardError") {
     summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
                              conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
   }
 
-  ciPos <- c(options$testValue, summaryStat$ciLower, summaryStat$ciUpper)
+  ciPos <- c(options[["testValue"]], summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarPlotsZeroFix"]]) c(0, ciPos) else ciPos)
 
-  if (options$zeroFix) {
-    yBreaks <- pretty(c(0, ciPos))
-  } else {
-    yBreaks <- pretty(ciPos)
-  }
-  testValue <- data.frame(testValue = options$testValue)
+  testValue <- data.frame(testValue = options[["testValue"]])
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
   p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1))
-  if (options$testValue != 0) {
+  if (options[["testValue"]] != 0) {
     p <- p + ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3)
   }
   p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
