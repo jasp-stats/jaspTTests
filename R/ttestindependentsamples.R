@@ -655,7 +655,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
     subcontainer[[variable]] <- descriptivesBarPlot
     if (ready) {
-      p <- try(.ttestIndependentDescriptivesBarPlotFill(dataset, options, variable))
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
       if (isTryError(p))
         descriptivesBarPlot$setError(.extractErrorMessage(p))
       else
@@ -663,60 +663,6 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     }
   }
   return()
-}
-
-.ttestIndependentDescriptivesBarPlotFill <- function(dataset, options, variable) {
-  groups <- options[["groupingVariable"]]
-
-  errors <- .hasErrors(dataset,
-                       message = 'short',
-                       type = c('observations', 'variance', 'infinity'),
-                       all.target = variable,
-                       observations.amount = '< 2',
-                       observations.grouping = groups)
-
-  if (!identical(errors, FALSE))
-    stop(errors$message)
-
-  dataset <- na.omit(dataset[, c(groups, variable)])
-  ci <- options[["descriptivesBarPlotsConfidenceInterval"]]
-
-  if (options[["errorBarType"]] == "confidenceInterval") {
-    summaryStat <- summarySE(as.data.frame(dataset),
-                             measurevar = variable,
-                             groupvars = groups,
-                             conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if (options[["errorBarType"]] == "standardError") {
-    summaryStat <- summarySE(as.data.frame(dataset),
-                             measurevar = variable,
-                             groupvars = groups,
-                             conf.interval = ci, na.rm = TRUE, .drop = FALSE,
-                             errorBarType = "se")
-  }
-
-  colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
-  colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "groupingVariable"
-
-  ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarPlotsZeroFix"]]) c(0, ciPos) else ciPos)
-
-  pd <- ggplot2::position_dodge(0.2)
-  pd2 <- ggplot2::position_dodge2(preserve = "single")
-
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable,
-                                                 y = dependent, group = 1)) +
-    ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3) +
-    ggplot2::geom_bar(stat = "identity", fill = "grey",
-                      col = "black", width = .6, position = pd2) +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper),
-                           colour = "black", width = 0.2, position = pd) +
-    ggplot2::ylab(unlist(variable)) +
-    ggplot2::xlab(options[["groupingVariable"]]) +
-    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
-    jaspGraphs::geom_rangeframe(sides = "l") +
-    jaspGraphs::themeJaspRaw()
-
-  return(p)
 }
 
 .ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {

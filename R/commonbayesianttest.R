@@ -1306,19 +1306,15 @@
 
   hasGrouping <- !is.null(grouping)
   if (hasGrouping) {
-
     summaryStat <- tapply(data[[1L]], data[[2L]], function(x) {
       .posteriorSummaryGroupMean(variable = x, descriptivesPlotsCredibleInterval = CRI)
     })
     summaryStat <- do.call(rbind.data.frame, summaryStat)
     summaryStat[["groupingVariable"]] <- factor(groupNames)
-
   } else {
-
     summaryStat <- as.data.frame(.posteriorSummaryGroupMean(data, descriptivesPlotsCredibleInterval = CRI))
     summaryStat[["groupingVariable"]] <- var
     testValue <- data.frame("testValue" = testValueOpt)
-
   }
 
   if (errorBarType == "standardError") {
@@ -1335,15 +1331,12 @@
     ylab <- ggplot2::ylab(NULL)
     xlab <- ggplot2::xlab(NULL)
   }
-
   pd <- ggplot2::position_dodge(.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1))
-  if (is.null(testValueOpt) || testValueOpt != 0) {
-    p <- p + ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3)
-  }
-  p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1)) +
+    ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3) +
+    ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper), colour = "black", width = .2, position = pd) +
     xlab +
     ylab +

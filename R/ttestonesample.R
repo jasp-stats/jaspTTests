@@ -460,7 +460,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
     subcontainer[[variable]] <- descriptivesBarPlot
     if (ready) {
-      p <- try(.ttestOneSampleDescriptivesBarPlotFill(dataset, options, variable))
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
       if (isTryError(p))
         descriptivesBarPlot$setError(.extractErrorMessage(p))
       else
@@ -468,53 +468,6 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     }
   }
   return()
-}
-
-.ttestOneSampleDescriptivesBarPlotFill <- function(dataset, options, variable) {
-  errors <- .hasErrors(dataset,
-                       message = 'short',
-                       type = c('observations', 'variance', 'infinity'),
-                       all.target = variable,
-                       observations.amount = c('< 2'))
-  if (!identical(errors, FALSE))
-    stop(errors$message)
-
-  dataSubset <- data.frame(dependent = dataset[[variable]],
-                           groupingVariable = rep(variable, length(dataset[[variable]])))
-  ci <- options[["descriptivesBarPlotsConfidenceInterval"]]
-
-  if (options[["errorBarType"]] == "confidenceInterval") {
-    summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
-                             conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  } else if (options[["errorBarType"]] == "standardError") {
-    summaryStat <- summarySE(dataSubset, measurevar = "dependent", groupvars = "groupingVariable",
-                             conf.interval = ci, na.rm = TRUE, .drop = FALSE, errorBarType = "se")
-  }
-
-  ciPos <- c(options[["testValue"]], summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarPlotsZeroFix"]]) c(0, ciPos) else ciPos)
-
-  testValue <- data.frame(testValue = options[["testValue"]])
-  pd <- ggplot2::position_dodge(0.2)
-  pd2 <- ggplot2::position_dodge2(preserve = "single")
-
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1))
-  if (options[["testValue"]] != 0) {
-    p <- p + ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3)
-  }
-  p <- p + ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper),
-                           colour = "black", width = 0.2, position = pd) +
-    ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") +
-    ggplot2::ylab(NULL) +
-    ggplot2::xlab(NULL) +
-    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
-    jaspGraphs::geom_rangeframe(sides = "l") +
-    jaspGraphs::themeJaspRaw() +
-    ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                   axis.ticks.x = ggplot2::element_blank())
-
-  return(p)
 }
 
 .ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {

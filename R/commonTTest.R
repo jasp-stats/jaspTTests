@@ -566,3 +566,81 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   return(p)
 }
+
+.ttestDescriptivesBarPlotFill <- function(dataset, options, variable) {
+
+  pair <- NULL
+  test <- NULL
+  errorType <- options[["errorBarType"]]
+  groups <- if (!is.null(options[["groupingVariable"]])) options[["groupingVariable"]] else NULL
+
+  errors <- .hasErrors(dataset,
+                       message = 'short',
+                       type = c('observations', 'variance', 'infinity'),
+                       all.target = variable,
+                       observations.amount = '< 2',
+                       observations.grouping = if (!is.null(groups)) groups else NULL)
+  if (!identical(errors, FALSE))
+    stop(errors$message)
+
+  # Creating data frames and summary data
+  if (length(variable) != 1) {  # checks whether paired t-test is used
+    pair <- ggplot2::scale_x_discrete(labels = c(variable[[1]], variable[[2]]))
+    data <- data.frame(id = rep(1:length(dataset[[variable[[1]]]]), 2),
+                       dependent = c(dataset[[variable[[1]]]], dataset[[variable[[2]]]]),
+                       groupingVariable = c(rep(paste("1.", variable[[1]], sep = ""), length(dataset[[variable[[1]]]])),
+                                            rep(paste("2.", variable[[2]], sep = ""), length(dataset[[variable[[2]]]]))),
+                       stringsAsFactors = TRUE)
+    summaryStat <- summarySEwithin(data,
+                                   measurevar = "dependent",
+                                   withinvars = "groupingVariable",
+                                   idvar = "id",
+                                   conf.interval = options[["descriptivesBarPlotsConfidenceInterval"]],
+                                   na.rm = TRUE,
+                                   .drop = FALSE,
+                                   errorBarType = if (errorType == "confidenceInterval") errorType else "se")
+  } else {
+    data <- data.frame(dependent = dataset[[variable]],
+                       groupingVariable = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))
+    data <- na.omit(data)
+    summaryStat <- summarySE(data,
+                             measurevar = "dependent",
+                             groupvars = "groupingVariable",
+                             conf.interval = options[["descriptivesBarPlotsConfidenceInterval"]],
+                             na.rm = TRUE,
+                             .drop = FALSE,
+                             errorBarType = if (errorType == "confidenceInterval") errorType else "se")
+  }
+  ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
+
+  if (!is.null(options[["testValue"]])) {
+    ciPos <- c(options[["testValue"]], ciPos)
+    testValue <- data.frame(testValue = options[["testValue"]])
+    test <- ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed")
+  }
+
+  if (!is.null(groups)) {
+    ylab <- ggplot2::ylab(unlist(variable))
+    xlab <- ggplot2::xlab(groups)
+  } else {
+    ylab <- ggplot2::ylab(NULL)
+    xlab <- ggplot2::xlab(NULL)
+  }
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarPlotsZeroFix"]]) c(0, ciPos) else ciPos)
+  pd <- ggplot2::position_dodge(0.2)
+  pd2 <- ggplot2::position_dodge2(preserve = "single")
+
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) +
+    ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3) +
+    ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper), colour = "black", width = 0.2, position = pd) +
+    test +
+    ylab +
+    xlab +
+    pair +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
+    jaspGraphs::geom_rangeframe(sides = "l") +
+    jaspGraphs::themeJaspRaw()
+
+  return(p)
+}
