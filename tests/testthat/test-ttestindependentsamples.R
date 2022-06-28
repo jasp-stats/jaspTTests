@@ -140,7 +140,7 @@ test_that("Analysis handles errors", {
 
 test_that("Analysis works with unicode", {
 
-  options <- analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$descriptives <- TRUE
   options$descriptivesPlots <- TRUE
   options$descriptivesPlotsRainCloud <- TRUE

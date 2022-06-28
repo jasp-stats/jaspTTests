@@ -1,6 +1,5 @@
 initTTestOptions <- function(analysis = c("TTestIndependentSamples", "TTestPairedSamples", "TTestOneSample",
                                           "TTestBayesianIndependentSamples", "TTestBayesianPairedSamples", "TTestBayesianOneSample")) {
-  analysis <- match.arg(analysis)
   options <- jaspTools::analysisOptions(analysis)
   options <- addCommonQMLoptions(options)
 
