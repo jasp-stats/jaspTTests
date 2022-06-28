@@ -5,7 +5,7 @@ context("Paired Samples TTest")
 # - error handling of plots
 
 test_that("Main table results match for one pair * multiple tests", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$wilcoxonSignedRank <- TRUE
   options$hypothesis <- "groupOneGreater"
@@ -26,7 +26,7 @@ test_that("Main table results match for one pair * multiple tests", {
 })
 
 test_that("Main table results match for multiple pairs * one test", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"), c("contNormal", "contcor1"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
@@ -38,7 +38,7 @@ test_that("Main table results match for multiple pairs * one test", {
 })
 
 test_that("Normality table matches", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$normalityTests <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
@@ -49,7 +49,7 @@ test_that("Normality table matches", {
 })
 
 test_that("Descriptives table matches", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptives <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
@@ -61,7 +61,7 @@ test_that("Descriptives table matches", {
 })
 
 test_that("Descriptives plot matches", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlots <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
@@ -70,7 +70,7 @@ test_that("Descriptives plot matches", {
 })
 
 test_that("Bar plot matches", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
@@ -80,7 +80,7 @@ test_that("Bar plot matches", {
 })
 
 test_that("Raincloud plot matches", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloud <- TRUE
   set.seed(12312414)
@@ -90,7 +90,7 @@ test_that("Raincloud plot matches", {
 })
 
 test_that("Raincloud difference plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloudDifference <- TRUE
   set.seed(12312414)
@@ -100,7 +100,7 @@ test_that("Raincloud difference plot matches (vertical)", {
 })
 
 test_that("Raincloud difference plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloudDifference <- TRUE
   options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay <- TRUE
@@ -111,7 +111,7 @@ test_that("Raincloud difference plot matches (horizontal)", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
 
   options$pairs <- list(c("contNormal", "debInf"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
@@ -128,7 +128,7 @@ test_that("Analysis handles errors", {
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 
-  options <- jaspTools::analysisOptions("TTestPairedSamples")
+  options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contNormal"))
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   status <- results[["status"]]

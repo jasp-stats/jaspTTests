@@ -19,10 +19,13 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.3
 import JASP.Controls 1.0
-
+import "./common" as Common
 
 Form
 {
+	id: form
+	property int framework:	Common.Type.Framework.Classical
+
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
@@ -71,29 +74,12 @@ Form
 			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval") }
 		}
-		CheckBox
+		
+		Common.BarPlots
 		{
-			name: 	"descriptivesBarPlots"
-			label: 	qsTr("Bar plots")
-			
-			RadioButtonGroup
-				{
-					name: "errorBarType"
-					
-					RadioButton
-					{
-						value: 				"confidenceInterval"		
-						label: 				qsTr("Confidence interval")
-						checked: 			true
-						childrenOnSameRow: 	true
-						
-						CIField { name: 	"descriptivesBarPlotsConfidenceInterval" }
-					}
-					RadioButton { value: 	"standardError";	label: qsTr("Standard error") }
-				}
-			
-			CheckBox { name: "descriptivesBarPlotsZeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+			framework:	form.framework
 		}
+		
 		CheckBox
 		{
 			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")

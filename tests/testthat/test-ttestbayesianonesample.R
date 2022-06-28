@@ -10,7 +10,7 @@ getTtestTable <- function(x) x[["results"]][["ttestContainer"]][["collection"]][
 getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["collection"]][["descriptivesContainer_table"]]
 
 test_that("Main table results match", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contNormal"
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
@@ -22,7 +22,7 @@ test_that("Main table results match", {
 
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contNormal"
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- FALSE
@@ -61,7 +61,7 @@ test_that("Inferential and descriptives plots match", {
 })
 
 test_that("Bar plot matches", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contGamma"
   options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
@@ -71,7 +71,7 @@ test_that("Bar plot matches", {
 })
 
 test_that("Raincloud plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contGamma"
   options$descriptivesPlotsRainCloud <- TRUE
   set.seed(12312414)
@@ -81,7 +81,7 @@ test_that("Raincloud plot matches (vertical)", {
 })
 
 test_that("Raincloud plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contGamma"
   options$descriptivesPlotsRainCloud <- TRUE
   options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
@@ -93,7 +93,7 @@ test_that("Raincloud plot matches (horizontal)", {
 
 test_that("Inferential plots with additional info match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contcor1"
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- TRUE
@@ -118,7 +118,7 @@ test_that("Inferential plots with additional info match", {
 })
 
 test_that("Prior and posterior plot custom CI level match", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- "contcor1"
   options$plotPriorAndPosterior <- TRUE
 
@@ -147,7 +147,7 @@ test_that("Prior and posterior plot custom CI level match", {
 test_that("Wilcoxon results match", {
   set.seed(0)
   suppressWarnings(RNGkind(sample.kind = "Rounding"))
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
   options$variables <- c("contNormal", "contExpon")
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
@@ -164,7 +164,7 @@ test_that("Wilcoxon results match", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestBayesianOneSample")
+  options <- initTTestOptions("TTestBayesianOneSample")
 
   options$variables <- "debInf"
 

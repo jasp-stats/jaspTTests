@@ -5,7 +5,7 @@ context("One Sample TTest")
 # - error handling of plots
 
 test_that("Main table results match for t-test", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
@@ -19,7 +19,7 @@ test_that("Main table results match for t-test", {
 })
 
 test_that("Main table results match for Wilcoxon signed rank", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contNormal"
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
@@ -39,7 +39,7 @@ test_that("Main table results match for Wilcoxon signed rank", {
 test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
   tempTestDat <- data.frame("marieAguirre"=c(0, 1/3, 1/2, 3/7, 1/4, 1/4, 1/2, 0, 0, 1/5, 3/7, 3/4, 1, 1, 3/4, 0, 1, 1))
 
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$testValue <- 0.5
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
@@ -65,7 +65,7 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
 })
 
 test_that("Main table results match for Z-test", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contNormal"
   options$students <- FALSE
   options$zTest <- TRUE
@@ -81,7 +81,7 @@ test_that("Main table results match for Z-test", {
 })
 
 test_that("Normality table matches", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$normalityTests <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -90,7 +90,7 @@ test_that("Normality table matches", {
 })
 
 test_that("Descriptives table matches", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$descriptives <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -101,7 +101,7 @@ test_that("Descriptives table matches", {
 })
 
 test_that("Descriptives plot matches", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$descriptivesPlots <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -110,7 +110,7 @@ test_that("Descriptives plot matches", {
 })
 
 test_that("Bar plot matches", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$descriptivesBarPlots <- TRUE
   options$errorBarType <- "standardError"
@@ -120,7 +120,7 @@ test_that("Bar plot matches", {
 })
 
 test_that("Raincloud plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$descriptivesPlotsRainCloud <- TRUE
   set.seed(12312414)
@@ -130,7 +130,7 @@ test_that("Raincloud plot matches (vertical)", {
 })
 
 test_that("Raincloud plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "contGamma"
   options$descriptivesPlotsRainCloud <- TRUE
   options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
@@ -141,7 +141,7 @@ test_that("Raincloud plot matches (horizontal)", {
 })
 
 test_that("Raincloud plot matches (missing data)", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
   options$variables <- "debMiss30"
   options$descriptivesPlotsRainCloud <- TRUE
   set.seed(12312414)
@@ -151,7 +151,7 @@ test_that("Raincloud plot matches (missing data)", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestOneSample")
+  options <- initTTestOptions("TTestOneSample")
 
   options$variables <- "debInf"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)

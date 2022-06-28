@@ -567,7 +567,7 @@
       descriptivesBarPlots <- createJaspContainer(
         title = gettext("Bar Plots"),
         dependencies = c("descriptivesBarPlots", "testValue", "descriptivesBarPlotsZeroFix",
-                         "errorBarType", "descriptivesBarPlotsCredibleInterval")
+                         "errorBarType", "descriptivesBarPlotsConfidenceInterval")
       )
       descriptivesBarPlots$position <- 3L
       descriptivesContainer[["barPlots"]] <- descriptivesBarPlots
@@ -582,7 +582,7 @@
       dependents       = dependents,
       errors           = errors,
       grouping         = grouping,
-      CRI              = options[["descriptivesBarPlotsCredibleInterval"]],
+      CRI              = options[["descriptivesBarPlotsConfidenceInterval"]],
       canRun           = canDoAnalysis,
       testValueOpt     = options[["testValue"]],
       pairs            = derivedOptions[["pairs"]],
