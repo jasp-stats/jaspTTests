@@ -42,8 +42,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "variables",
-                   "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
+  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox",
+                   "variables", "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
                    "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
                    "meanDiffConfidenceIntervalPercent", "hypothesis",
                    "VovkSellkeMPR", "missingValues", "zTest", "testValue"))
@@ -120,8 +120,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   if (optionsList$wantsEffect) {
-    ttest$addColumnInfo(name = "d", title = nameOfEffectSize, type = "number")
-
+    ttest$addColumnInfo(name = "d",            title = nameOfEffectSize,                      type = "number")
+    ttest$addColumnInfo(name = "effectSizeSe", title = gettextf("SE %1$s", nameOfEffectSize), type = "number")
     if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
       tNote <- wNote <- zNote <- NULL
 
@@ -264,6 +264,8 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     else if (direction == "greater")
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
 
+    effectSizeSe <- tanh(mrSE)
+
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
                           "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]],
@@ -272,8 +274,10 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
     df <- ""
     d  <- tempResult[["d"]]
-
+    effectSizeSe <- sqrt((1/n)+(as.numeric(d)^2 / (2*n)))
     confIntEffSize <- tempResult[["confIntEffSize"]]
+
+
   } else {
     tempResult <- stats::t.test(dat, alternative = direction, mu = options[["testValue"]],
                                 conf.level = optionsList[["percentConfidenceMeanDiff"]])
@@ -281,7 +285,11 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     d  <- (mean(dat) - options[["testValue"]]) / sd(dat)
     t  <- as.numeric(tempResult[["statistic"]])
 
+    effectSizeSe <- sqrt((1/n)+(as.numeric(d)^2 / (2*n)))
+    #Introduction to Meta-Analysis. Michael Borenstein, L. V. Hedges, J. P. T. Higgins and H. R. Rothstein (2009). Chapter 4, equation (4.28(with r = .5))
+
     confIntEffSize <- c(0,0)
+
 
     if (optionsList[["wantsConfidenceEffSize"]]) {
 
@@ -317,13 +325,15 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   ciLowEffSize <- as.numeric(confIntEffSize[1])
   ciUpEffSize  <- as.numeric(confIntEffSize[2])
+  effectSizeSe <- as.numeric(effectSizeSe)
 
   if (suppressWarnings(is.na(t)))  # do not throw warning when test stat is not 't'
     stop("data are essentially constant")
 
   result <- list(df = df, p = p, m = m, d = d,
                  lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
-                 lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize)
+                 lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize,
+                 effectSizeSe = effectSizeSe)
   result[[testStat]] <- stat
 
   if (options[["VovkSellkeMPR"]])

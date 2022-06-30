@@ -37,7 +37,7 @@ The independent samples t-test allows the user to estimate the effect size and t
   - Cohen's d: For the Student's t-test, uses the pooled standard deviation to standardize the mean difference. For the Welch's t-test, uses the square-root of the average variance to standardize the mean difference.
   - Glass' delta: Uses the standard deviation of group 2 to standardize the mean difference. In order to change which group is used as group 2, you can change the order of the levels by clicking on the name of the grouping variable in the data window, click on one of the levels and then click the arrow buttons to switch the order.
   - Hedges' g: Applies a correction factor to Cohen's d to make it unbiased.
-  - Confidence interval: Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation. 
+  - Confidence interval: Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each group. 
 - Descriptive plots: Displays the sample means and the confidence intervals for each group. 
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.
@@ -65,7 +65,8 @@ The independent samples t-test allows the user to estimate the effect size and t
 - % CI for Mean difference/location parameter: The confidence interval for the mean difference/location parameter. By default this is set to 95%. 
   - Lower: The lower bound of the confidence interval. 
   - Upper: The upper bound of the confidence interval. 
-- Effect Size: For the Student t-test and Welch t-test, the effect size is given by Cohen's d/Glass' delta/Hedges' g; for the Mann-Whitney test, the effect size is given by the rank biserial correlation. 
+- Effect Size: For the Student t-test and Welch t-test, the effect size is given by Cohen's d/Glass' delta/Hedges' g; for the Mann-Whitney test, the effect size is given by the rank biserial correlation.
+- SE Effect Size: Standard error of the effect size.
 - % CI for Effect Size: The confidence interval for the effect size. By default this is set to 95%. 
     - Lower: The lower bound of the confidence interval. 
     - Upper: The upper bound of the confidence interval. 
@@ -103,6 +104,7 @@ Test of Equality of Variances (Levene's):
 - Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of *p* values for testing precise null hypotheses. *The American Statistician, 55*(1), 62-71.
 - Silverman, B. W. (1986). *Density Estimation*. London: Chapman and Hall.
 - Whitlock, M. C., & Schluter, D. (2015). *The analysis of biological data (2nd ed.)*. Greenwood Village, Colorado: Roberts and Company Publishers.
+- Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). *Introduction to Meta-Analysis (1st ed.)*. Chichester, UK: John Wiley & Sons, Ltd.
 
 ### R-packages
 ---

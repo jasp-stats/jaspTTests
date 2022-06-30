@@ -34,7 +34,7 @@ Form
 		AvailableVariablesList { name: "allVariablesList" }
 		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); suggestedColumns: ["scale"] }
 	}
-	
+
 	Group
 	{
 		title: qsTr("Tests")
@@ -81,7 +81,7 @@ Form
 		}
 		CheckBox { name: "VovkSellkeMPR";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
 	}
-    
+
 	RadioButtonGroup
 	{
 		name: "hypothesis"

@@ -13,8 +13,9 @@ test_that("Main table results match for t-test", {
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("FALSE", 6.42284229078859e+20, 1.32664189226908, 99, 2.03296079621,
-	       1.08315413981152e-23, 13.2664189226908, "contGamma")
+                                 list("FALSE", 6.42284229078859e+20, 1.32664189226908, 99, 0.137112703830157,
+                                      2.03296079621, 1.08315413981152e-23, 13.2664189226908, "contGamma"
+                                 )
   )
 })
 
@@ -24,6 +25,7 @@ test_that("Main table results match for Wilcoxon signed rank", {
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$effectSizeSE <- TRUE
   options$students <- FALSE
   options$mannWhitneyU <- TRUE
 
@@ -31,8 +33,9 @@ test_that("Main table results match for Wilcoxon signed rank", {
   table <- results[["results"]][["ttest"]][["data"]]
 
   jaspTools::expect_equal_tables(table,
-                      list("FALSE", 1789, -0.291485148514852, -0.482275183604466, -0.225731139327267,
-	                         0.0114424559827519, -0.0742951335226289, "contNormal"))
+                                 list("FALSE", 1789, -0.291485148514852, 0.114677177073573, -0.482275183604466,
+                                      -0.225731139327267, 0.0114424559827519, -0.0742951335226289,
+                                      "contNormal"))
 })
 
 # https://github.com/jasp-stats/jasp-issues/issues/1158
@@ -47,6 +50,7 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
   options$effectSize <- TRUE
   options$meanDiffConfidenceIntervalCheckbox <- TRUE
   options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$effectSizeSE <- TRUE
   options$variables <- "marieAguirre"
 
   results <- jaspTools::runAnalysis("TTestOneSample", tempTestDat, options)
@@ -55,13 +59,13 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
 
   jaspTools::expect_equal_tables(
     "test"=resultTable,
-    "ref"=list("TRUE", -0.385804772181173, -0.0909350568744795, 17, -0.552576696667502,
-               -0.219042855717774, -0.0338624338624338, 0.704426623388777,
-               "Student", 0.373348871605267, 0.151317987992907, "marieAguirre",
-               "FALSE", 61, -0.102941176470588, "", -0.578840649433725, -0.28571825336767,
-               -6.94926732683898e-05, 0.73267192272089, "Wilcoxon", 0.425265962284788,
-               0.166692689375401, "marieAguirre")
-  )
+    "ref"=list("TRUE", -0.385804772181173, -0.0909350568744795, 17, 0.236189024145726,
+               -0.552576696667502, -0.219042855717775, -0.0338624338624338,
+               0.704426623388777, "Student", 0.373348871605267, 0.151317987992907,
+               "marieAguirre", "FALSE", 61, -0.102941176470588, "", 0.276970835977861,
+               -0.578840649433725, -0.28571825336767, -6.94926732683898e-05,
+               0.73267192272089, "Wilcoxon", 0.425265962284788, 0.166692689375401,
+               "marieAguirre"))
 })
 
 test_that("Main table results match for Z-test", {
@@ -75,9 +79,9 @@ test_that("Main table results match for Z-test", {
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
-                      list("FALSE", -1.25832391693333, -0.125832391693333, -0.321828790147339,
-	                         0.208274634966236, 0.070164006760672, "contNormal")
-                      )
+                                 list("FALSE", -1.25832391693333, -0.125832391693333, 0.100395064390618,
+                                      -0.321828790147339, 0.208274634966236, 0.070164006760672, "contNormal"
+                                 ))
 })
 
 test_that("Normality table matches", {

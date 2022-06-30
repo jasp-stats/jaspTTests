@@ -60,6 +60,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
   - Lower: The lower bound of the confidence interval.
   - Upper: The upper bound of the confidence interval.
 - Effect Size: For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).
+- SE Effect Size: Standard error of the effect size.
 - % CI for Effect Size: The confidence interval for effect size. By default this is set to 95%.
     - Lower: The lower bound of the confidence interval.
     - Upper: The upper bound of the confidence interval.
@@ -89,6 +90,7 @@ Test of Normality (Shapiro-Wilk)
 - Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of *p* values for testing precise null hypotheses. *The American Statistician, 55*(1), 62-71.
 - Silverman, B. W. (1986). *Density Estimation*. London: Chapman and Hall.
 - Whitlock, M. C., & Schluter, D. (2015). *The analysis of biological data (2nd ed.)*. Greenwood Village, Colorado: Roberts and Company Publishers.
+- Borenstein, M., Hedges, L. V., Higgins, J. P. T., & Rothstein, H. R. (2009). *Introduction to Meta-Analysis (1st ed.)*. Chichester, UK: John Wiley & Sons, Ltd.
 
 ### R-packages
 ---
