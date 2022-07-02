@@ -638,3 +638,11 @@ msgstr "排除每个因变量的个案"
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "按列表排除个案"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr ""

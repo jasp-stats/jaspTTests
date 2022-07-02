@@ -638,3 +638,11 @@ msgstr "雨雲の差分プロット"
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
 msgstr "水平方向の表示"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr ""

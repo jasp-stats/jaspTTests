@@ -638,3 +638,11 @@ msgstr "Gráficos de diferencias tipo nube con lluvia"
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
 msgstr "Presentación horizontal"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr ""

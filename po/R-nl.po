@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-06-09 14:53\n"
+"POT-Creation-Date: 2022-07-02 03:17\n"
 "PO-Revision-Date: 2022-06-08 07:20+0000\n"
 "Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -325,6 +325,9 @@ msgstr ""
 msgid "%1$s%% CI for %2$s"
 msgstr "%1$s%% BI voor %2$s"
 
+msgid "SE %1$s"
+msgstr ""
+
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
@@ -341,7 +344,14 @@ msgstr "Toets voor normaliteit (Shapiro-Wilk)"
 msgid "Significant results suggest a deviation from normality."
 msgstr "Significante resultaten wijzen op afwijking van normaliteit."
 
-msgid "Test of Equality of Variances (Levene's)"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+#, fuzzy
+msgid "Test of Equality of Variances (%1$s)"
 msgstr "Toets van gelijkheid van varianties (Levene's)"
 
 msgid "F"
@@ -365,6 +375,14 @@ msgid ""
 msgstr ""
 "Voor alle toetsen specificeert de alternatieve hypothese dat groep %1$s %2$s "
 "is dan groep %3$s."
+
+#, fuzzy
+msgid ""
+"Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
+"equal variance assumption"
+msgstr ""
+"Levene's toets is significant (p < .05), wat suggereert dat de aanname van "
+"gelijke variantie is geschonden"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "

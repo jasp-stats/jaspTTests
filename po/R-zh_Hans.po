@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-06-09 14:53\n"
+"POT-Creation-Date: 2022-07-02 03:17\n"
 "PO-Revision-Date: 2022-05-23 06:17+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -309,6 +309,9 @@ msgstr ""
 msgid "%1$s%% CI for %2$s"
 msgstr "%2$s 的 %1$s%% 置信区间"
 
+msgid "SE %1$s"
+msgstr ""
+
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
@@ -323,7 +326,14 @@ msgstr "正态性检验 (Shapiro-Wilk)"
 msgid "Significant results suggest a deviation from normality."
 msgstr "显着结果表明偏离正态性。"
 
-msgid "Test of Equality of Variances (Levene's)"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+#, fuzzy
+msgid "Test of Equality of Variances (%1$s)"
 msgstr "等方差(齐)性检验(Levene's)"
 
 msgid "F"
@@ -345,6 +355,12 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
 msgstr "对于所有检验，备择假设指定组 %1$s 是 %2$s，而不是组 %3$s。"
+
+#, fuzzy
+msgid ""
+"Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
+"equal variance assumption"
+msgstr "Levene 检验显着 (p < .05)，表明违反了等方差假设"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2022-06-09 14:53\n"
+"POT-Creation-Date: 2022-07-02 03:17\n"
 "PO-Revision-Date: 2021-11-10 04:46+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -318,6 +318,9 @@ msgstr ""
 msgid "%1$s%% CI for %2$s"
 msgstr "%2$sについての%1$s%% CI"
 
+msgid "SE %1$s"
+msgstr ""
+
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
@@ -334,7 +337,14 @@ msgstr "正規性の検定 (シャピロ・ウィルク)"
 msgid "Significant results suggest a deviation from normality."
 msgstr "有意な結果は、正規性からの逸脱を示唆しています。"
 
-msgid "Test of Equality of Variances (Levene's)"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+#, fuzzy
+msgid "Test of Equality of Variances (%1$s)"
 msgstr "Levene'sの分散の等質性の検定"
 
 msgid "F"
@@ -358,6 +368,14 @@ msgid ""
 msgstr ""
 "すべての検定において、対立仮説は、グループ %1$s がグループ %3$s よりも %2$s "
 "であるとしています。"
+
+#, fuzzy
+msgid ""
+"Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
+"equal variance assumption"
+msgstr ""
+"Leveneの検定は有意ですから(p <.05)、等分散の仮定が満たされていないことを示し"
+"ています"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "

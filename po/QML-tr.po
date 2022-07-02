@@ -638,3 +638,11 @@ msgstr ""
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr ""

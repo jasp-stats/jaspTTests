@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-06-09 14:53\n"
+"POT-Creation-Date: 2022-07-02 03:17\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -271,6 +271,9 @@ msgstr ""
 msgid "%1$s%% CI for %2$s"
 msgstr ""
 
+msgid "SE %1$s"
+msgstr ""
+
 msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
 msgstr ""
 
@@ -283,7 +286,13 @@ msgstr ""
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
-msgid "Test of Equality of Variances (Levene's)"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+msgid "Test of Equality of Variances (%1$s)"
 msgstr ""
 
 msgid "F"
@@ -302,6 +311,9 @@ msgid "less"
 msgstr ""
 
 msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"

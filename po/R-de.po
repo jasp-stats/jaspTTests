@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-06-09 14:53\n"
+"POT-Creation-Date: 2022-07-02 03:17\n"
 "PO-Revision-Date: 2022-05-08 09:10+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -327,6 +327,9 @@ msgstr ""
 msgid "%1$s%% CI for %2$s"
 msgstr "%1$s%% KI für %2$s"
 
+msgid "SE %1$s"
+msgstr ""
+
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
@@ -345,7 +348,14 @@ msgstr ""
 "Ein signifikantes Ergebnis deutet auf Abweichung von einer Normalverteilung "
 "hin."
 
-msgid "Test of Equality of Variances (Levene's)"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+#, fuzzy
+msgid "Test of Equality of Variances (%1$s)"
 msgstr "Prüfung auf Gleichheit der Varianzen (Levenes)"
 
 msgid "F"
@@ -369,6 +379,14 @@ msgid ""
 msgstr ""
 "Bei allen Tests gibt die Alternativhypothese an, dass Gruppe %1$s %2$s ist "
 "als Gruppe %3$s."
+
+#, fuzzy
+msgid ""
+"Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
+"equal variance assumption"
+msgstr ""
+"Levenes Test ist signifikant (p < .05), was auf eine Verletzung der Annahme "
+"von gleichen Varianzen hindeutet"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "
