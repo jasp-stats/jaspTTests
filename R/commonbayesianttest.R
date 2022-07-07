@@ -1176,7 +1176,7 @@
     noXLevelNames          = FALSE,
     horizontalLine         = testValueOpt,
     horizontalLineLineType = "dashed"
-  )
+  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
   return(p)
 
