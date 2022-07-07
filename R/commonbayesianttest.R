@@ -1141,49 +1141,42 @@
                                           groupNames = NULL, CRI = .95,
                                           testValueOpt = NULL, paired = FALSE) {
 
-  # to be remade in jaspGraphs
   hasGrouping <- !is.null(grouping)
   if (hasGrouping) {
 
     summaryStat <- tapply(data[[1L]], data[[2L]], function(x) {
       .posteriorSummaryGroupMean(variable = x, descriptivesPlotsCredibleInterval = CRI)
     })
+
     summaryStat <- do.call(rbind.data.frame, summaryStat)
-    summaryStat$groupingVariable <- factor(groupNames)
-    mapping <- ggplot2::aes(x=groupingVariable, y=median, group=group)
+    summaryStat$groupingVariable <- factor(groupNames, levels = groupNames)
 
   } else {
 
     summaryStat <- as.data.frame(.posteriorSummaryGroupMean(data, descriptivesPlotsCredibleInterval = CRI))
     summaryStat$groupingVariable <- var
-    mapping <- ggplot2::aes(x=groupingVariable, y=median, group=group)
-    testValue <- data.frame("testValue" = testValueOpt) # default zero
 
   }
 
   if (hasGrouping && !paired) {
-    ylab <- ggplot2::ylab(var)
-    xlab <- ggplot2::xlab(grouping)
+    yName <- var
+    xName <- grouping
   } else {
-    ylab <- ggplot2::ylab(NULL)
-    xlab <- ggplot2::xlab(NULL)
+    xName <- yName <- NULL
   }
 
-  summaryStat$group <- 1
-
-  pd <- ggplot2::position_dodge(.2)
-
-  p <-  jaspGraphs::themeJasp(ggplot2::ggplot(summaryStat, mapping = mapping) +
-      ggplot2::geom_errorbar(ggplot2::aes(ymin=ciLower, ymax=ciUpper), colour="black", width=.2, position=pd) +
-      ggplot2::geom_line(position=pd, size = .7) +
-      ggplot2::geom_point(position=pd, size=4) +
-      xlab + ylab) +
-      jaspGraphs::themeJaspRaw() +
-      .base_breaks_y2(summaryStat, testValueOpt) +
-      .base_breaks_x(summaryStat$groupingVariable)
-
-  if (!is.null(testValueOpt))
-    p <- p + ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept=testValue), linetype="dashed")
+  p <- jaspGraphs::descriptivesPlot(
+    x                      = summaryStat[["groupingVariable"]],
+    y                      = summaryStat[["median"]],
+    ciLower                = summaryStat[["ciLower"]],
+    ciUpper                = summaryStat[["ciUpper"]],
+    group                  = summaryStat[["group"]],
+    xName                  = xName,
+    yName                  = yName,
+    noXLevelNames          = FALSE,
+    horizontalLine         = testValueOpt,
+    horizontalLineLineType = "dashed"
+  )
 
   return(p)
 
