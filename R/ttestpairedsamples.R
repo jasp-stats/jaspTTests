@@ -437,52 +437,38 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesPlotFill <- function(dataset, options, pair) {
+
   errors <- .hasErrors(dataset,
                        message = 'short',
                        type = c('variance', 'infinity'),
                        all.target = pair)
-  if(!identical(errors, FALSE))
+  if (!isFALSE(errors))
     stop(errors$message)
-  base_breaks_x <- function(x) {
-    b <- unique(as.numeric(x))
-    d <- data.frame(y = -Inf, yend = -Inf, x = min(b), xend = max(b))
-    list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend,
-                                                      yend = yend), inherit.aes = FALSE, size = 1))
-  }
 
-  base_breaks_y <- function(x) {
-    ci.pos <- c(x[, "dependent"] - x[, "ci"], x[, "dependent"] + x[, "ci"])
-    b <- pretty(ci.pos)
-    d <- data.frame(x = -Inf, xend = -Inf, y = min(b), yend = max(b))
-    list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend, yend = yend), inherit.aes = FALSE, size = 1),
-         ggplot2::scale_y_continuous(breaks = c(min(b), max(b))))
-  }
   c1 <- dataset[[pair[[1]]]]
   c2 <- dataset[[pair[[2]]]]
-  ####
-  data <- data.frame(id = rep(1:length(c1), 2), dependent = c(c1, c2),
-                     groupingVariable = c(rep(paste("1.", pair[[1]], sep = ""), length(c1)),
-                                          rep(paste("2.", pair[[2]], sep = ""), length(c2))),
-                     stringsAsFactors = TRUE)
+
+  data <- data.frame(
+    id = c(1:length(c1), 1:length(c2)),
+    dependent = c(c1, c2),
+    groupingVariable = factor(c(rep(paste0(pair[[1]]), length(c1)),
+                                rep(paste0(pair[[2]]), length(c2))), levels = pair)
+  )
 
   summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
-                                 idvar = "id", conf.interval = options$descriptivesPlotsConfidenceInterval,
+                                 idvar = "id", conf.interval = options[["descriptivesPlotsConfidenceInterval"]],
                                  na.rm = TRUE, .drop = FALSE)
 
-  pd <- ggplot2::position_dodge(0.2)
+  p <- jaspGraphs::descriptivesPlot(
+    x                      = summaryStat[["groupingVariable"]],
+    y                      = summaryStat[["dependent"]],
+    ciLower                = summaryStat[["ciLower"]],
+    ciUpper                = summaryStat[["ciUpper"]],
+    group                  = summaryStat[["group"]],
+    noXLevelNames          = FALSE
+  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper), colour = "black", width = 0.2, position = pd) +
-    ggplot2::geom_line(position = pd, size = 0.7) +
-    ggplot2::geom_point(position = pd, size = 4) +
-    ggplot2::ylab(NULL) +
-    ggplot2::xlab(NULL) +
-    base_breaks_y(summaryStat) +
-    base_breaks_x(summaryStat$groupingVariable) +
-    ggplot2::scale_x_discrete(labels = c(pair[[1]], pair[[2]]))
-
-  p <- jaspGraphs::themeJasp(p)
-
+  jaspGraphs::themeJasp
   return(p)
 }
 
