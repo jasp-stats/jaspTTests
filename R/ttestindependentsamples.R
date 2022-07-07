@@ -618,8 +618,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesPlotFill <- function(dataset, options, variable) {
-  groups   <- options$group
 
+  groups <- options$groupingVariable
   errors <- .hasErrors(dataset,
                        message = 'short',
                        type = c('observations', 'variance', 'infinity'),
@@ -627,50 +627,32 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
                        observations.amount = '< 2',
                        observations.grouping = groups)
 
-  if(!identical(errors, FALSE))
+  if (!isFALSE(errors))
     stop(errors$message)
 
-  descriptivesPlotList <- list()
-
-  base_breaks_x <- function(x) {
-    b <- unique(as.numeric(x))
-    d <- data.frame(y = -Inf, yend = -Inf, x = min(b), xend = max(b))
-    list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend,
-                                                      yend = yend), inherit.aes = FALSE, size = 1))
-  }
-
-  base_breaks_y <- function(x) {
-    ci.pos <- c(x[, "dependent"] - x[, "ci"], x[, "dependent"] + x[, "ci"])
-    b <- pretty(ci.pos)
-    d <- data.frame(x = -Inf, xend = -Inf, y = min(b), yend = max(b))
-    list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y,xend = xend,
-                                                      yend = yend), inherit.aes = FALSE, size = 1),
-         ggplot2::scale_y_continuous(breaks = c(min(b), max(b))))
-  }
-
   dataset <- na.omit(dataset[, c(groups, variable)])
-  ci <- options$descriptivesPlotCiLevel
-  summaryStat <- summarySE(as.data.frame(dataset),
-                           measurevar = variable,
-                           groupvars = groups,
-                           conf.interval = ci, na.rm = TRUE, .drop = FALSE)
+  summaryStat <- summarySE(
+    dataset,
+    measurevar    = variable,
+    groupvars     = groups,
+    conf.interval = options[["descriptivesPlotsConfidenceInterval"]],
+    na.rm         = TRUE,
+    .drop         = FALSE
+  )
 
   colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
   colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "groupingVariable"
 
-  pd <- ggplot2::position_dodge(0.2)
-
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable,
-                                                 y = dependent, group = 1)) +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper),
-                           colour = "black", width = 0.2, position = pd) +
-    ggplot2::geom_line(position = pd, size = 0.7) +
-    ggplot2::geom_point(position = pd, size = 4) +
-    ggplot2::ylab(unlist(variable)) +
-    ggplot2::xlab(options$group) +
-    base_breaks_y(summaryStat) + base_breaks_x(summaryStat$groupingVariable)
-
-  p <- jaspGraphs::themeJasp(p)
+  p <- jaspGraphs::descriptivesPlot(
+    x                      = summaryStat[["groupingVariable"]],
+    y                      = summaryStat[["dependent"]],
+    ciLower                = summaryStat[["ciLower"]],
+    ciUpper                = summaryStat[["ciUpper"]],
+    group                  = summaryStat[["group"]],
+    noXLevelNames          = FALSE,
+    yName                  = variable,
+    xName                  = groups
+  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
   return(p)
 }
