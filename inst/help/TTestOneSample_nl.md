@@ -36,6 +36,10 @@ Met de t-toets voor één gemiddelde kan de gebruiker de effectgrootte schatten 
 - Beschrijvend: Steekproefgrootte, steekproefgemiddelde, steekproefstandaarddeviatie, standaardfout van het gemiddelde voor elke maat.
 - Beschrijvende grafieken: Geeft het steekproefgemiddelde en de betrouwbaarheidsinterval weer.
   - Betrouwbaarheidsinterval: De betrouwbaarheidsintervallen worden weergegeven in percentages. De standaardoptie is 95%. Dit kan naar het gewenste percentage worden aangepast.
+- Staafdiagrammen: Geeft het steekproefgemiddelde weer als een balk en het betrouwbaarheidsinterval of de standaardfout als de foutenbalk. 
+  - Betrouwbaarheidsinterval: Dekking van de betrouwbaarheidsintervallen in percentages. Standaard is het betrouwbaarheidsinterval ingesteld op 95%. Dit kan worden gewijzigd in het gewenste percentage.
+  - Standaardfout: Door deze optie te selecteren, zullen de foutbalken standaardfouten van het gemiddelde weergeven.
+  - Fix horizontale as op 0: Forceert de grafiek om de standaard x-as op y = 0 te tonen.
 - Vovk-Sellke Maximum *p*-Ratio: De grens 1/(-e *p* log(*p*)) wordt afgeleid van de vorm van de verdeling van de *p*-waarde. Onder de nulhypothese (H<sub>0</sub>) is het uniform (0,1), en onder de alternatieve (H<sub>1</sub>) neemt hij af in *p*, bijv., een beta(&#945;, 1) vergelijking, waarin 0 < &#945; < 1. De Vovk-Sellke MPR wordt verkregen door de vorm van &#945; van de verdeling onder H<sub>1</sub> zodat de verkregen *p*-waarde *maximaal diagnostisch* is. De waarde is dan de ratio van de dichtheid op punt *p* onder H<sub>0</sub> en H<sub>1</sub>. Bijvoorbeeld, als de tweezijdige *p*-waarde gelijk is aan .05, dan is de Vovk-Sellke MPR gelijk aan 2.46, wat aangeeft dat deze *p*-waarde hoogstens 2.46 keer meer kans heeft om voor te komen onder H<sub>1</sub> dan onder H<sub>0</sub>.
 
 #### Ontbrekende Waarden
@@ -78,6 +82,9 @@ Toets voor normaliteit (Shapiro-Wilk)
 
 #### Beschrijvende Grafieken
 - Geeft het steekproefgemiddelde weer (black bullet), de % betrouwbaarheidsinterval (whiskers), en de waarde van de teststatistiek (onderbroken lijn).
+
+#### Staafdiagrammen
+- Geeft het steekproefgemiddelde (grijze balk), het x%-betrouwbaarheidsinterval of de standaardfout (schuine strepen), en de waarde van de teststatistiek (stippellijn).
 
 ### Referenties
 -------

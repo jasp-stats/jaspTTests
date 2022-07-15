@@ -5,7 +5,7 @@ context("Independent Samples TTest")
 # - error handling of plots
 
 test_that("Main table results match", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$welchs <- TRUE
@@ -29,7 +29,7 @@ test_that("Main table results match", {
 })
 
 test_that("Normality table matches", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$normalityTests <- TRUE
@@ -42,7 +42,7 @@ test_that("Normality table matches", {
 })
 
 test_that("Equality of variances table matches", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$equalityOfVariancesTests<- TRUE
@@ -52,7 +52,7 @@ test_that("Equality of variances table matches", {
 })
 
 test_that("Descriptives table matches", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptives <- TRUE
@@ -66,7 +66,7 @@ test_that("Descriptives table matches", {
 })
 
 test_that("Descriptives plot matches", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlots <- TRUE
@@ -75,8 +75,19 @@ test_that("Descriptives plot matches", {
   jaspTools::expect_equal_plots(testPlot, "descriptives")
 })
 
+test_that("Bar plot matches", {
+  options <- initTTestOptions("TTestIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesBarPlots <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
@@ -87,7 +98,7 @@ test_that("Raincloud plot matches (vertical)", {
 })
 
 test_that("Raincloud plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
@@ -99,7 +110,7 @@ test_that("Raincloud plot matches (horizontal)", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
 
   options$variables <- "debInf"
   options$groupingVariable <- "contBinom"
@@ -129,7 +140,7 @@ test_that("Analysis handles errors", {
 
 test_that("Analysis works with unicode", {
 
-  options <- analysisOptions("TTestIndependentSamples")
+  options <- initTTestOptions("TTestIndependentSamples")
   options$descriptives <- TRUE
   options$descriptivesPlots <- TRUE
   options$descriptivesPlotsRainCloud <- TRUE

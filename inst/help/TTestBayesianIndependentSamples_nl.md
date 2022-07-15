@@ -53,6 +53,10 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
   - Robuustheidscheck: Voegt de resultaten van de sequentiële analyse toe, gebruik makende van de brede (scale=1) en ultrabrede prior (scale=sqrt(2)).
 - Beschrijvende grafieken
   - Geloofwaardigheidsinterval: Geeft de centrale geloofwaardigheidsintervallen weer. De standaardoptie is 95%.
+- Staafdiagrammen: Geeft de steekproefgemiddelden weer als balken en de geloofwaardige intervallen of standaardfouten als foutbalken voor elke groep. 
+  - Geloofwaardigheidsinterval: Geeft de centrale geloofwaardige intervallen weer. Standaard is het geloofwaardigheidsinterval ingesteld op 95%. Dit kan worden veranderd in het gewenste percentage.
+  - Standaardfout: Door deze optie te selecteren, zullen de foutbalken de standaardfouten van het gemiddelde van elke conditie weergeven.
+  - Fix horizontal axis to 0: Forceert de grafiek om de standaard x-as op y = 0 te tonen.
 
 ### Prior
 - Standaard:
@@ -90,6 +94,7 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
   - Robuustheidscheck: Geeft de ontwikkeling van de Bayes factor als een functie van het aantal datapunten (n), met de brede en ultrabrede verdeling van de prior. De zwarte cirkel geeft de Bayes factor berekend met een brede prior verdeling weer; de witte cirkel geeft de Bayes factor berekend met een ultrabrede prior verdeling weer; de grijze cirkel geeft de Bayes factor berekend met de door de gebruiker gedefinieerde prior verdeling weer.
 - Beschrijvende grafieken:
   - Geloofwaardigheidsinterval: Centrale geloofwaardigheidsinterval. De standaardoptie is 95%.
+- Staafdiagrammen: Geeft de steekproefgemiddelden (grijze balken), de x% geloofwaardigheidsintervallen of standaardfouten (whiskers) voor elke groep weer. De x-as vertegenwoordigt de groeperingsvariabele, en de y-as de afhankelijke variabele. 
 
 ### Referenties
 ---

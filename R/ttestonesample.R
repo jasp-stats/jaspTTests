@@ -29,6 +29,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   vars <- unique(unlist(options$variables))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
+  .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
 
   return()
@@ -444,6 +445,41 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   return(p)
 }
 
+.ttestOneSampleDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
+  if (!options[["descriptivesBarPlots"]])
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+
+  if (is.null(container[["barPlots"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
+                                                                               "descriptivesBarPlotsConfidenceInterval",
+                                                                               "errorBarType",
+                                                                               "testValue",
+                                                                               "descriptivesBarPlotsZeroFix"))
+    subcontainer$position <- 6
+    container[["barPlots"]] <- subcontainer
+  } else {
+    subcontainer <- container[["barPlots"]]
+  }
+
+  for (variable in options[["variables"]]) {
+    if (!is.null(subcontainer[[variable]]))
+      next
+    descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesBarPlot
+    if (ready) {
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
+      if (isTryError(p))
+        descriptivesBarPlot$setError(.extractErrorMessage(p))
+      else
+        descriptivesBarPlot$plotObject <- p
+    }
+  }
+  return()
+}
+
 .ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
   if(!options$descriptivesPlotsRainCloud)
     return()
@@ -452,7 +488,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay", "testValue"))
-    subcontainer$position <- 6
+    subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]

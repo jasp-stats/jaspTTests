@@ -60,6 +60,10 @@ De toetswaarde gespecificeerd in de nulhypothese.
   - Robuustheidscheck: Voegt de resultaten van de sequentiële analyse toe, gebruik makende van de brede (scale=1) en ultrabrede prior (scale=sqrt (2)).
 - Beschrijvende grafieken
   - Geloofwaardigheidsinterval: Standaardoptie is 95%.
+- Staafdiagrammen: Geeft het steekproefgemiddelde weer als een balk en het geloofwaardigheidsinterval of de standaardfout als de foutenbalk.
+  - Geloofwaardig interval: Geeft de centrale geloofwaardige intervallen weer. Standaard is het geloofwaardigheidsinterval ingesteld op 95%. Dit kan worden gewijzigd in het gewenste percentage.
+  - Standaardfout: Door deze optie te selecteren, zullen de foutbalken standaardfouten van het gemiddelde weergeven.
+  - Fix horizontal as to 0: Forceert de grafiek om de standaard x-as op y = 0 weer te geven.
 
 #### Ontbrekende waarden
  - Het uitsluiten van waarnemingen, analyse bij analyse: Wanneer er meerdere t-toetsen in een analyse zitten, wordt elke test uitgevoerd met alle waarnemingen die valide data bevatten voor de afhankelijke variabele in de t-toets. De steekproefgroottes kunnen daardoor verschillen per toets.
@@ -92,6 +96,7 @@ De toetswaarde gespecificeerd in de nulhypothese.
   - Robuustheidscheck: Geeft de ontwikkeling van de Bayes factor als een functie van het aantal datapunten (n), met de brede en ultrabrede verdeling van de prior. De zwarte cirkel geeft de Bayes factor berekend met een brede prior verdeling weer; de witte cirkel geeft de Bayes factor berekend met een ultrabrede prior verdeling weer; de grijze cirkel geeft de Bayes factor berekend met de door de gebruiker gedefinieerde prior verdeling weer.
 - Beschrijvende grafieken:
   - Geloofwaardigheidsinterval: Standaardoptie is 95%.
+- Staafdiagrammen: Geeft het steekproefgemiddelde (grijze balk), het x% geloofwaardigheidsinterval of de standaardfout (schijven), en de waarde van de teststatistiek (stippellijn) weer.
 
 ### Referenties
 ---

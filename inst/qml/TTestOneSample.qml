@@ -19,10 +19,13 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.3
 import JASP.Controls 1.0
-
+import "./common" as Common
 
 Form
 {
+	id: form
+	property int framework:	Common.Type.Framework.Classical
+
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
@@ -71,6 +74,12 @@ Form
 			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval") }
 		}
+		
+		Common.BarPlots
+		{
+			framework:	form.framework
+		}
+		
 		CheckBox
 		{
 			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")

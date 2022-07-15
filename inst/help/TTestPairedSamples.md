@@ -33,6 +33,10 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each measure. 
 - Descriptive plots: Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs).
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.
+- Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs). 
+  - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+  - Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+  - Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each measure. 
 - Raincloud difference plots: Displays a raincloud plot of the differences between the two measures.
   - Horizontal display: Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.
@@ -79,6 +83,9 @@ Test of Normality (Shapiro-Wilk)
 
 ##### Descriptive Plots 
 - Displays the sample means (black bullet), the % confidence intervals (whiskers) for each measure.  
+
+##### Bar Plots 
+- Displays the sample means (grey bars), the x% confidence intervals or standard errors (whiskers) for each measure. The x-axis represents the paired variables, and the y-axis the dependent variable. 
 
 ##### Raincloud Plots
 - Displays the individual cases (colored dots), box plots, and densities for each measure. The cases from both measures are connected with individual lines. The x-axis and color represent the measures, and the y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).

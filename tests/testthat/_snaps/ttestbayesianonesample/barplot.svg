@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' data-engine-version='2.0' width='720.00pt' height='576.00pt' viewBox='0 0 720.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='576.00' style='stroke-width: 10.67; stroke: none;' />
+</g>
+<defs>
+  <clipPath id='cpMzkuMTF8NzIwLjAwfDIwLjcxfDU0NS4yOQ=='>
+    <rect x='39.11' y='20.71' width='680.89' height='524.59' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzkuMTF8NzIwLjAwfDIwLjcxfDU0NS4yOQ==)'>
+<rect x='39.11' y='20.71' width='680.89' height='524.59' style='stroke-width: 10.67; stroke: none;' />
+<line x1='39.11' y1='521.45' x2='720.00' y2='521.45' style='stroke-width: 0.64; stroke: #858585; stroke-linecap: butt;' />
+<rect x='209.33' y='133.64' width='340.44' height='387.80' style='stroke-width: 1.07; stroke-linecap: square; stroke-linejoin: miter; fill: #BEBEBE;' />
+<polyline points='322.81,104.41 436.30,104.41 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='379.56,104.41 379.56,162.88 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='322.81,162.88 436.30,162.88 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<line x1='39.11' y1='521.77' x2='39.11' y2='44.23' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<line x1='39.11' y1='521.45' x2='720.00' y2='521.45' style='stroke-width: 1.07; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<rect x='39.11' y='20.71' width='680.89' height='524.59' style='stroke-width: 0.00; stroke: none;' />
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<polyline points='39.11,545.29 39.11,20.71 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt;' />
+<text x='23.63' y='527.30' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='23.63' y='431.92' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='23.63' y='336.54' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='23.63' y='241.16' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>1.5</text>
+<text x='23.63' y='145.78' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>2.0</text>
+<text x='23.63' y='50.40' text-anchor='end' style='font-size: 17.00px; font-family: sans;' textLength='23.63px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<polyline points='30.61,521.45 39.11,521.45 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='30.61,426.07 39.11,426.07 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='30.61,330.69 39.11,330.69 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='30.61,235.31 39.11,235.31 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='30.61,139.93 39.11,139.93 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='30.61,44.55 39.11,44.55 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='39.11,545.29 720.00,545.29 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt;' />
+<polyline points='379.56,553.80 379.56,545.29 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<text x='379.56' y='572.47' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='92.62px' lengthAdjust='spacingAndGlyphs'>contGamma</text>
+<text x='379.56' y='11.70' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='53.87px' lengthAdjust='spacingAndGlyphs'>barPlot</text>
+</g>
+</svg>

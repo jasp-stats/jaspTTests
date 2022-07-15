@@ -10,7 +10,7 @@ getTtestTable <- function(x) x[["results"]][["ttestContainer"]][["collection"]][
 getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["collection"]][["descriptivesContainer_table"]]
 
 test_that("Main table results match", {
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$hypothesis <- "groupOneGreater"
   options$effectSizeStandardized <- "informative"
@@ -25,7 +25,7 @@ test_that("Main table results match", {
 
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- FALSE
@@ -67,7 +67,7 @@ test_that("Inferential and descriptives plots match", {
 
 test_that("Inferential plots with additional info match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contcor1", "contcor2"))
   options$plotPriorAndPosterior <- TRUE
   options$plotPriorAndPosteriorAdditionalInfo <- TRUE
@@ -91,8 +91,18 @@ test_that("Inferential plots with additional info match", {
 
 })
 
+test_that("Bar plot matches", {
+  options <- initTTestOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("contNormal", "contGamma"))
+  options$descriptivesBarPlots <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches", {
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloud <- TRUE
   set.seed(12312414)
@@ -102,7 +112,7 @@ test_that("Raincloud plot matches", {
 })
 
 test_that("Raincloud difference plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloudDifference <- TRUE
   set.seed(12312414)
@@ -112,7 +122,7 @@ test_that("Raincloud difference plot matches (vertical)", {
 })
 
 test_that("Raincloud difference plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
   options$descriptivesPlotsRainCloudDifference <- TRUE
   options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay <- TRUE
@@ -123,7 +133,7 @@ test_that("Raincloud difference plot matches (horizontal)", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestBayesianPairedSamples")
+  options <- initTTestOptions("TTestBayesianPairedSamples")
 
   options$pairs <- list(c("contNormal", "debInf"))
 

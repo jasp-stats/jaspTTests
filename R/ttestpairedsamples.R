@@ -29,6 +29,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   vars <- unique(unlist(options$pairs))
   .ttestDescriptivesTable(                        jaspResults, dataset, options, ready, vars)
   .ttestPairedDescriptivesPlot(                   jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesBarPlot(                jaspResults, dataset, options, ready)
   .ttestPairedDescriptivesRainCloudPlot(          jaspResults, dataset, options, ready)
   .ttestPairedDescriptivesRainCloudDifferencePlot(jaspResults, dataset, options, ready)
 
@@ -486,6 +487,41 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   return(p)
 }
 
+.ttestPairedDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
+  if (!options[["descriptivesBarPlots"]])
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+
+  if (is.null(container[["barPlots"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
+                                                                               "descriptivesBarPlotsConfidenceInterval",
+                                                                               "errorBarType",
+                                                                               "descriptivesBarPlotsZeroFix"))
+    subcontainer$position <- 6
+    container[["barPlots"]] <- subcontainer
+  } else {
+    subcontainer <- container[["barPlots"]]
+  }
+
+  for (pair in options[["pairs"]]) {
+    title <- paste(pair, collapse = " - ")
+    if (!is.null(subcontainer[[title]]))
+      next
+    descriptivesBarPlot <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesBarPlot$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesBarPlot
+    if (ready) {
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, pair))
+      if (isTryError(p))
+        descriptivesBarPlot$setError(.extractErrorMessage(p))
+      else
+        descriptivesBarPlot$plotObject <- p
+    }
+  }
+  return()
+}
+
 .ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
   if(!options$descriptivesPlotsRainCloud)
     return()
@@ -494,7 +530,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "descriptivesPlotsRainCloud")
-    subcontainer$position <- 6
+    subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
@@ -533,7 +569,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(container[["plotsRainCloudDifference"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"), dependencies = c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
-    subcontainer$position <- 7
+    subcontainer$position <- 8
     container[["plotsRainCloudDifference"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloudDifference"]]

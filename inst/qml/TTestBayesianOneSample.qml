@@ -20,10 +20,13 @@ import QtQuick 2.8
 import QtQuick.Layouts 1.3
 import JASP.Controls 1.0
 import JASP.Widgets 1.0
-
+import "./common" as Common
 
 Form
 {
+	id: form
+	property int framework:	Common.Type.Framework.Bayesian
+
 	plotHeight: 240
 	plotWidth:  320
 	
@@ -69,6 +72,12 @@ Form
 			name: "descriptivesPlots";			label: qsTr("Descriptives")
 			CIField { name: "descriptivesPlotsCredibleInterval";	label: qsTr("Credible interval") }
 		}
+		
+		Common.BarPlots
+		{
+			framework:	form.framework
+		}
+		
 		CheckBox
 		{
 			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")

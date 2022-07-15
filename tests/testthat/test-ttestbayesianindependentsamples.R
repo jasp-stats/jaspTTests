@@ -11,7 +11,7 @@ getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["
 
 test_that("Main table results match for Student test", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$hypothesis <- "groupOneGreater"
@@ -25,7 +25,7 @@ test_that("Main table results match for Student test", {
 
 test_that("Main table results match for Wilcoxon test", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$testStatistic <- "Wilcoxon"
@@ -38,7 +38,7 @@ test_that("Main table results match for Wilcoxon test", {
 
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$plotPriorAndPosterior <- TRUE
@@ -82,7 +82,7 @@ test_that("Inferential and descriptives plots match", {
 
 test_that("Inferential plots with additional info match", {
   set.seed(0)
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contcor1"
   options$groupingVariable <- "facGender"
   options$plotPriorAndPosterior <- TRUE
@@ -108,8 +108,19 @@ test_that("Inferential plots with additional info match", {
 
 })
 
+test_that("Bar plot matches", {
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
+  options$variables <- "contNormal"
+  options$groupingVariable <- "contBinom"
+  options$descriptivesBarPlots <- TRUE
+  options$errorBarType <- "standardError"
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
+  jaspTools::expect_equal_plots(testPlot, "barPlot")
+})
+
 test_that("Raincloud plot matches (vertical)", {
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
@@ -120,7 +131,7 @@ test_that("Raincloud plot matches (vertical)", {
 })
 
 test_that("Raincloud plot matches (horizontal)", {
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "contNormal"
   options$groupingVariable <- "contBinom"
   options$descriptivesPlotsRainCloud <- TRUE
@@ -132,7 +143,7 @@ test_that("Raincloud plot matches (horizontal)", {
 })
 
 test_that("Analysis handles errors", {
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
 
   options$variables <- c("debInf", "debSame")
   options$groupingVariable <- "contBinom"
@@ -161,7 +172,7 @@ test_that("Analysis handles integer overflow", {
   dat <- data.frame(dependent_var = rnorm(2e5),
                     grouping      = rep(c(1, 2), each = 1e5))
 
-  options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$variables <- "dependent_var"
   options$groupingVariable <- "grouping"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
@@ -177,7 +188,7 @@ test_that("Analysis handles integer overflow", {
 })
 
 # all combinations of hypotheses and Bayes factor type
-options <- jaspTools::analysisOptions("TTestBayesianIndependentSamples")
+options <- initTTestOptions("TTestBayesianIndependentSamples")
 options$groupingVariable <- "Rotation"
 options$plotBayesFactorRobustness <- TRUE
 options$plotPriorAndPosterior <- TRUE

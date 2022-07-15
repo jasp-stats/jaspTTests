@@ -496,14 +496,14 @@
 # descriptives ----
 .ttestBayesianDescriptives <- function(jaspResults, dataset, options, ttestResults, errors) {
 
-  if (!(options[["descriptives"]] || options[["descriptivesPlots"]]))
+  if (!(options[["descriptives"]] || options[["descriptivesPlots"]] || options[["descriptivesBarPlots"]]))
     return()
 
   if (is.null(jaspResults[["descriptivesContainer"]])) {
     descriptivesContainer <- createJaspContainer("")
     jaspResults[["descriptivesContainer"]] <- descriptivesContainer
     descriptivesContainer$dependOn(c(
-      "groupingVariable", "missingValues", "descriptivesPlotsCredibleInterval", "descriptivesPlots"
+      "groupingVariable", "missingValues"
     ))
     descriptivesContainer$position <- 2L
   } else {
@@ -518,7 +518,7 @@
   if (options[["descriptives"]]) {
     if (is.null(descriptivesContainer[["table"]])) {
       descriptivesTable <- createJaspTable(title = "Descriptives")
-      descriptivesTable$dependOn(c("descriptives", "variables", "pairs"))
+      descriptivesTable$dependOn(c("descriptives", "variables", "pairs", "descriptivesPlotsCredibleInterval"))
       descriptivesTable$position <- 1L
 
       .ttestBayesianDescriptivesTable(
@@ -539,7 +539,7 @@
 
       descriptivesPlots <- createJaspContainer(
         title = gettext("Descriptives Plots"),
-        dependencies = "descriptivesPlots"
+        dependencies = c("descriptivesPlots", "descriptivesPlotsCredibleInterval", "testValue")
       )
       descriptivesPlots$position <- 2L
       descriptivesContainer[["plots"]] <- descriptivesPlots
@@ -558,6 +558,36 @@
       canRun           = canDoAnalysis,
       testValueOpt     = options[["testValue"]],
       pairs            = derivedOptions[["pairs"]]
+    )
+  }
+
+  if (options[["descriptivesBarPlots"]]) {
+    if (is.null(descriptivesContainer[["barPlots"]])) {
+
+      descriptivesBarPlots <- createJaspContainer(
+        title = gettext("Bar Plots"),
+        dependencies = c("descriptivesBarPlots", "testValue", "descriptivesBarPlotsZeroFix",
+                         "errorBarType", "descriptivesBarPlotsConfidenceInterval")
+      )
+      descriptivesBarPlots$position <- 3L
+      descriptivesContainer[["barPlots"]] <- descriptivesBarPlots
+
+    } else {
+      descriptivesBarPlots <- descriptivesContainer[["barPlots"]]
+    }
+
+    .ttestBayesianDescriptivesBarPlots(
+      descriptivePlots = descriptivesBarPlots,
+      dataset          = dataset,
+      dependents       = dependents,
+      errors           = errors,
+      grouping         = grouping,
+      CRI              = options[["descriptivesBarPlotsConfidenceInterval"]],
+      canRun           = canDoAnalysis,
+      testValueOpt     = options[["testValue"]],
+      pairs            = derivedOptions[["pairs"]],
+      zeroFix          = options[["descriptivesBarPlotsZeroFix"]],
+      errorBarType     = options[["errorBarType"]]
     )
   }
   return()
@@ -756,6 +786,79 @@
         plot$dependOn(optionContainsValue = list(variables = var))
       }
       descriptivePlots[[var]] <- plot
+    }
+  }
+  return()
+}
+
+.ttestBayesianDescriptivesBarPlots <- function(descriptivePlots, dataset, dependents, errors, grouping = NULL,
+                                               CRI = .95, canRun = FALSE, testValueOpt = NULL, pairs = NULL,
+                                               zeroFix = FALSE, errorBarType = "confidenceInterval") {
+  hasGrouping <- !is.null(grouping)
+  paired <- !is.null(pairs)
+
+  if (hasGrouping) {
+    groupingData <- dataset[[grouping]]
+    levels <- base::levels(dataset[[grouping]])
+    canDoDescriptives <- length(dependents) >= 1 && !(is.null(grouping) || grouping == "")
+  } else if (paired) {
+    grouping <- "group"
+    groupingData <- factor(rep(0:1, each = nrow(dataset)))
+    canDoDescriptives <- length(pairs) >= 1
+  } else {
+    canDoDescriptives <- length(dependents) >= 1
+  }
+
+  for (var in dependents) {
+
+    if (is.null(descriptivePlots[[var]])) {
+
+      barPlot <- createJaspPlot(title = var, width = 530, height = 400)
+      if (canDoDescriptives) {
+        if (isFALSE(errors[[var]])) {
+
+          if (paired) {
+            pair <- pairs[[var]]
+            levels <- c(pair[[1]], pair[[2]])
+
+            dat <- c(dataset[[(pair[[1]])]], dataset[[(pair[[2]])]])
+            dat <- data.frame(
+              value = dat,
+              group = groupingData
+            )
+            dat <- dat[!is.na(dat[[1]]), ]
+
+          } else {
+            idxC <- !is.na(dataset[[var]])
+            dat <- dataset[idxC, c(var, grouping)]
+          }
+
+          obj <- try(.ttestBayesianBarPlotKGroupMeans(
+            data         = dat,
+            var          = var,
+            grouping     = grouping,
+            paired       = paired,
+            groupNames   = levels,
+            CRI          = CRI,
+            testValueOpt = testValueOpt,
+            zeroFix      = zeroFix,
+            errorBarType = errorBarType
+          ))
+          if (isTryError(obj)) {
+            barPlot$setError(.extractErrorMessage(obj))
+          } else {
+            barPlot$plotObject <- obj
+          }
+        } else {
+          barPlot$setError(errors[[var]][["message"]])
+        }
+      }
+      if (paired) {
+        barPlot$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
+      } else {
+        barPlot$dependOn(optionContainsValue = list(variables = var))
+      }
+      descriptivePlots[[var]] <- barPlot
     }
   }
   return()
@@ -1194,6 +1297,58 @@
   b <- unique(as.numeric(x))
   d <- data.frame(y=-Inf, yend=-Inf, x=min(b), xend=max(b))
   list(ggplot2::geom_segment(data=d, ggplot2::aes(x=x, y=y, xend=xend, yend=yend), inherit.aes=FALSE, size = 1))
+
+}
+
+.ttestBayesianBarPlotKGroupMeans <- function(data, var, grouping = NULL, groupNames = NULL,
+                                             CRI = .95, testValueOpt = NULL, paired = FALSE,
+                                             zeroFix = FALSE, errorBarType = "confidenceInterval") {
+
+  hasGrouping <- !is.null(grouping)
+  if (hasGrouping) {
+    summaryStat <- tapply(data[[1L]], data[[2L]], function(x) {
+      .posteriorSummaryGroupMean(variable = x, descriptivesPlotsCredibleInterval = CRI)
+    })
+    summaryStat <- do.call(rbind.data.frame, summaryStat)
+    summaryStat[["groupingVariable"]] <- factor(groupNames)
+  } else {
+    summaryStat <- as.data.frame(.posteriorSummaryGroupMean(data, descriptivesPlotsCredibleInterval = CRI))
+    summaryStat[["groupingVariable"]] <- var
+    testValue <- data.frame("testValue" = testValueOpt)
+  }
+
+  if (errorBarType == "standardError") {
+    summaryStat[["ciLower"]] <- summaryStat[["ciLowerSe"]]
+    summaryStat[["ciUpper"]] <- summaryStat[["ciUpperSe"]]
+  }
+  ciPos <- c(testValueOpt, summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (zeroFix) c(0, ciPos) else ciPos)
+
+  if (hasGrouping && !paired) {
+    ylab <- ggplot2::ylab(var)
+    xlab <- ggplot2::xlab(grouping)
+  } else {
+    ylab <- ggplot2::ylab(NULL)
+    xlab <- ggplot2::xlab(NULL)
+  }
+  pd <- ggplot2::position_dodge(.2)
+  pd2 <- ggplot2::position_dodge2(preserve = "single")
+
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = median, group = 1)) +
+    ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3) +
+    ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower, ymax = ciUpper), colour = "black", width = .2, position = pd) +
+    xlab +
+    ylab +
+    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks), oob = scales::rescale_none) +
+    ggplot2::scale_x_discrete(limits = summaryStat[["groupingVariable"]]) +
+    jaspGraphs::geom_rangeframe(sides = "l") +
+    jaspGraphs::themeJaspRaw()
+
+  if (!is.null(testValueOpt))
+    p <- p + ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed")
+
+  return(p)
 
 }
 

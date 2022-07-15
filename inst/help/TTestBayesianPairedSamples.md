@@ -42,6 +42,10 @@ The paired samples t-test allows you to estimate the effect size  and test the n
   - Robustness check: Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
 - Descriptives plots:
   - Credible interval: Default is 95%.
+- Bar plots: Displays the sample means as bars and the credible intervals or standard errors as error bars for each measure. 
+  - Credible interval: Displays the central credible intervals. By default, the credible interval is set to 95%. This can be changed into the desired percentage.
+  - Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+  - Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each measure. 
 - Raincloud difference plots: Displays a raincloud plot of the differences between the two measures.
   - Horizontal display: Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.
@@ -86,6 +90,7 @@ The paired samples t-test allows you to estimate the effect size  and test the n
   - Robustness check: Displays the development of the Bayes factor as a function of the number of data points (n) using the wide and ultrawide prior distribution. The black circle represents the Bayes factor computed with a wide prior distribution; the white circle represents the Bayes factor computed with an ultrawide prior distribution; the gray circle represents the Bayes factor computed with the user-defined prior distribution.
 - Descriptives plots
   - Credible interval: Default is 95%.
+- Bar plots: Displays the sample means (grey bars), the x% credible intervals or standard errors (whiskers) for each measure. The x-axis represents the paired variables, and the y-axis the dependent variable.
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each measure. The cases from both measures are connected with individual lines. The x-axis and color represent the measures, and the y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).
 - Raincloud difference plots: Displays the individual cases (colored dots), box plot, and density for the difference between the measures. The x-axis and color represent the measures, and the y-axis represents the dependent variable. Within the box plots, the bold black line shows the sample median, the hinges indicate the 25th and 75th quantile, and the whiskers point to 1.5 interquartile ranges beyond the hinges. Densities are estimated using a Gaussian kernel and the bandwidth is determined with the 'nrd0' method (Silverman, 1986).
 
