@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2022-05-23 06:17+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -57,6 +57,9 @@ msgstr "变量 %s 和 %s 是相同的！"
 
 msgid "Descriptives Plots"
 msgstr "描述性绘图"
+
+msgid "Bar Plots"
+msgstr ""
 
 msgid "Group"
 msgstr "分组"

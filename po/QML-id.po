@@ -651,3 +651,23 @@ msgstr ""
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
 msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Bar plots"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Standard error"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Fix horizontal axis to 0"
+msgstr ""

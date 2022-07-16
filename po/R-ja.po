@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2021-11-10 04:46+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -55,6 +55,9 @@ msgstr "変数 %s と %s は同じです!"
 
 msgid "Descriptives Plots"
 msgstr "記述統計量プロット"
+
+msgid "Bar Plots"
+msgstr ""
 
 msgid "Group"
 msgstr "群"

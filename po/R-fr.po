@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2022-02-16 07:57+0000\n"
 "Last-Translator: Jordy STEFAN <jordy.stefan@askoria.eu>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -51,6 +51,9 @@ msgid "Variables %s and %s are the same!"
 msgstr "Les variables %s et %s sont identiques !"
 
 msgid "Descriptives Plots"
+msgstr ""
+
+msgid "Bar Plots"
 msgstr ""
 
 msgid "Group"

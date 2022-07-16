@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2022-06-09 14:52+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Malay <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -56,6 +56,9 @@ msgstr "Pemboleh ubah %s dan %s adalah sama!"
 
 msgid "Descriptives Plots"
 msgstr "Plot Deskriptif"
+
+msgid "Bar Plots"
+msgstr ""
 
 msgid "Group"
 msgstr "Kumpulan"

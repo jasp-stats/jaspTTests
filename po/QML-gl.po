@@ -647,3 +647,25 @@ msgstr "Brown-Forsythe"
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
 msgstr "de Levene"
+
+msgctxt "BarPlots|"
+msgid "Bar plots"
+msgstr ""
+
+#, fuzzy
+msgctxt "BarPlots|"
+msgid "Confidence interval"
+msgstr "Intervalo de confianza"
+
+#, fuzzy
+msgctxt "BarPlots|"
+msgid "Credible interval"
+msgstr "Intervalo de credibilidade"
+
+msgctxt "BarPlots|"
+msgid "Standard error"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Fix horizontal axis to 0"
+msgstr ""

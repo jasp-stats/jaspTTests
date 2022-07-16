@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2022-07-04 10:16+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -58,6 +58,9 @@ msgstr "Variablen %s und %s sind gleich!"
 
 msgid "Descriptives Plots"
 msgstr "Deskriptive Abbildungen"
+
+msgid "Bar Plots"
+msgstr ""
 
 msgid "Group"
 msgstr "Gruppe"

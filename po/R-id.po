@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-07-02 03:17\n"
+"POT-Creation-Date: 2022-07-16 03:11\n"
 "PO-Revision-Date: 2022-02-17 15:13+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
@@ -51,6 +51,9 @@ msgid "Variables %s and %s are the same!"
 msgstr "Variabel %s dan %s sama!"
 
 msgid "Descriptives Plots"
+msgstr ""
+
+msgid "Bar Plots"
 msgstr ""
 
 msgid "Group"
