@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-19 10:03+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/gl/>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14-dev\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
 "X-Qt-Contexts: true\n"
@@ -650,22 +656,20 @@ msgstr "de Levene"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "Gráficas de barras"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
 msgstr "Intervalo de credibilidade"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "Erro padrón"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "Fixar o eixe horizontal en 0"
