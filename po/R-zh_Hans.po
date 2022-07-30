@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-07-16 03:11\n"
-"PO-Revision-Date: 2022-05-23 06:17+0000\n"
+"PO-Revision-Date: 2022-07-31 13:21+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 "X-Language: zh_Hans\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
@@ -59,7 +59,7 @@ msgid "Descriptives Plots"
 msgstr "描述性绘图"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "条形图"
 
 msgid "Group"
 msgstr "分组"
@@ -313,7 +313,7 @@ msgid "%1$s%% CI for %2$s"
 msgstr "%2$s 的 %1$s%% 置信区间"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "SE %1$s"
 
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
@@ -330,14 +330,13 @@ msgid "Significant results suggest a deviation from normality."
 msgstr "显着结果表明偏离正态性。"
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgid "Levene's"
-msgstr ""
+msgstr "Levene's"
 
-#, fuzzy
 msgid "Test of Equality of Variances (%1$s)"
-msgstr "等方差(齐)性检验(Levene's)"
+msgstr "等方差(齐)性检验 (%1$s)"
 
 msgid "F"
 msgstr "F"
@@ -359,11 +358,10 @@ msgid ""
 "than group %3$s."
 msgstr "对于所有检验，备择假设指定组 %1$s 是 %2$s，而不是组 %3$s。"
 
-#, fuzzy
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
 "equal variance assumption"
-msgstr "Levene 检验显着 (p < .05)，表明违反了等方差假设"
+msgstr "Brown-Forsythe 检验显着 (p < .05)，表明违反了等方差假设"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "
