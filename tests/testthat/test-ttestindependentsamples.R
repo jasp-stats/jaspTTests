@@ -6,14 +6,14 @@ context("Independent Samples TTest")
 
 test_that("Main table results match", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$welchs <- TRUE
-  options$mannWhitneyU <- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$welch <- TRUE
+  options$wilcoxon <- TRUE
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
-  options$VovkSellkeMPR <- TRUE
-  options$effSizeConfidenceIntervalCheckbox <- TRUE
+  options$vovkSellke <- TRUE
+  options$effectSizeCi <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -30,9 +30,9 @@ test_that("Main table results match", {
 
 test_that("Normality table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$normalityTests <- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$normalityTest <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -43,9 +43,9 @@ test_that("Normality table matches", {
 
 test_that("Equality of variances table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$equalityOfVariancesTests<- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$equalityOfVariancesTest<- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
   jaspTools::expect_equal_tables(table, list(1, 98, 0.575606965634445, 0.449860273665838, "contNormal"))
@@ -53,8 +53,8 @@ test_that("Equality of variances table matches", {
 
 test_that("Descriptives table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
   options$descriptives <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
@@ -67,9 +67,9 @@ test_that("Descriptives table matches", {
 
 test_that("Descriptives plot matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$descriptivesPlots <- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives")
@@ -77,10 +77,10 @@ test_that("Descriptives plot matches", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$descriptivesBarPlots <- TRUE
-  options$errorBarType <- "standardError"
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$descriptivesBarplot <- TRUE
+  options$descriptivesBarplotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -88,9 +88,9 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$descriptivesPlotsRainCloud <- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -99,10 +99,10 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$variables <- "contNormal"
-  options$groupingVariable <- "contBinom"
-  options$descriptivesPlotsRainCloud <- TRUE
-  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  options$dependents <- "contNormal"
+  options$group <- "contBinom"
+  options$descriptivesRaincloudPlot <- TRUE
+  options$descriptivesRaincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -112,26 +112,26 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestIndependentSamples")
 
-  options$variables <- "debInf"
-  options$groupingVariable <- "contBinom"
+  options$dependents <- "debInf"
+  options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$variables <- "debSame"
-  options$groupingVariable <- "contBinom"
+  options$dependents <- "debSame"
+  options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$variables <- "debMiss99"
-  options$groupingVariable <- "contBinom"
+  options$dependents <- "debMiss99"
+  options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 
   options$dependent <- "contNormal"
-  options$groupingVariable <- "debSame"
+  options$group <- "debSame"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError", label = "1-level factor check")
@@ -142,17 +142,17 @@ test_that("Analysis works with unicode", {
 
   options <- initTTestOptions("TTestIndependentSamples")
   options$descriptives <- TRUE
-  options$descriptivesPlots <- TRUE
-  options$descriptivesPlotsRainCloud <- TRUE
+  options$descriptivesPlot <- TRUE
+  options$descriptivesRaincloudPlot <- TRUE
   options$effectSize <- TRUE
-  options$equalityOfVariancesTests <- TRUE
-  options$groupingVariable <- "Cloak"
+  options$equalityOfVariancesTest <- TRUE
+  options$group <- "Cloak"
   options$meanDifference <- TRUE
-  options$normalityTests <- TRUE
+  options$normalityTest <- TRUE
   options$plotHeight <- 300
   options$plotWidth <- 350
-  options$variables <- "Mischief"
-  options$welchs <- TRUE
+  options$dependents <- "Mischief"
+  options$welch <- TRUE
   set.seed(1)
   dataset <- structure(list(Participant = 1:24,
                             Cloak = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),

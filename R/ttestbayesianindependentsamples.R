@@ -27,7 +27,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 .ttestBISTTest <- function(ttestContainer, dataset, options, derivedOptions, errors, ttestState) {
 
 	# this function is the main workhorse, and also makes a table
-	grouping   <- options[["groupingVariable"]]
+	grouping   <- options[["group"]]
 	levels     <- levels(dataset[[.v(grouping)]])
 	g1 <- levels[1L]
 	g2 <- levels[2L]
@@ -37,7 +37,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
 	# this is a standardized object. The names are identical to those in the other Bayesian t-tests
   ttestResults <- .ttestBayesianEmptyObject(options, derivedOptions, ttestState)
-  dependents <- options[["variables"]]
+  dependents <- options[["dependents"]]
 
   # create empty object for the table, this has previously computed rows already filled in
   ttestRows <- .ttestBayesianCreateTtestRows(dependents, options, derivedOptions, ttestState)
@@ -47,7 +47,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   	return(ttestResults)
 
   # we can do the analysis
-  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["hypothesis"]]
+  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["alternative"]]
   .ttestBayesianSetFootnotesMainTable(ttestTable, ttestResults, dependents[alreadyComputed])
 
   nvar <- length(dependents)
@@ -56,10 +56,10 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   .ttestBayesianInitBayesFactorPackageOptions()
 
   if (derivedOptions[["wilcoxTest"]])
-    .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamplesNumber"]])
+    .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamples"]])
 
-  idxg1 <- dataset[[.v(options[["groupingVariable"]])]] == g1
-  idxg2 <- dataset[[.v(options[["groupingVariable"]])]] == g2
+  idxg1 <- dataset[[.v(options[["group"]])]] == g1
+  idxg2 <- dataset[[.v(options[["group"]])]] == g2
   idxNAg <- is.na(dataset[[.v(grouping)]])
 
   for (var in dependents[!alreadyComputed]) {
@@ -137,7 +137,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
           .setSeedJASP(options)
           r <- try(.rankSumGibbsSampler(
-            x = group1, y = group2, nSamples = options[["wilcoxonSamplesNumber"]], nBurnin = 0,
+            x = group1, y = group2, nSamples = options[["wilcoxonSamples"]], nBurnin = 0,
             cauchyPriorParameter = options[["priorWidth"]]
           ))
 
@@ -194,7 +194,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 .ttestBISTTestMarkup <- function(options, derivedOptions, g1 = NULL, g2 = NULL) {
 
   jaspTable <- createJaspTable()
-	jaspTable$dependOn(c("bayesFactorType", "variables"))
+	jaspTable$dependOn(c("bayesFactorType", "dependents"))
 
   jaspTable$title <- if (derivedOptions[["wilcoxTest"]]) {
     gettext("Bayesian Mann-Whitney U Test")
@@ -216,10 +216,10 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
   bfType <- options$bayesFactorType
   hypothesis <- switch(
-    options[["hypothesis"]],
-    "groupsNotEqual"  = "equal",
-    "groupOneGreater" = "greater",
-    "groupTwoGreater" = "smaller"
+    options[["alternative"]],
+    "twoSided"  = "equal",
+    "greater" = "greater",
+    "less" = "smaller"
   )
   bfTitle <- .ttestBayesianGetBFTitle(bfType, hypothesis)
   jaspTable$addColumnInfo(name = "BF", type = "number", title = bfTitle)
@@ -227,9 +227,9 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
   if (derivedOptions[["wilcoxTest"]]) {
     jaspTable$addColumnInfo(name = "error", type = "number", title = "W")
     jaspTable$addColumnInfo(name = "rHat", type = "number", title = "Rhat")
-    jaspTable$addFootnote(gettextf("Result based on data augmentation algorithm with 5 chains of %.0f iterations.", options[["wilcoxonSamplesNumber"]]))
+    jaspTable$addFootnote(gettextf("Result based on data augmentation algorithm with 5 chains of %.0f iterations.", options[["wilcoxonSamples"]]))
   } else {
-    if (options[["hypothesis"]] == "groupsNotEqual") {
+    if (options[["alternative"]] == "twoSided") {
       fmt <- "sf:4;dp:3"
     } else {
       fmt <- "sf:4;dp:3;~"
@@ -239,9 +239,9 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
   if (!(is.null(g1) || is.null(g2))) {
     message <- NULL
-    if (options$hypothesis == "groupOneGreater") {
+    if (options$alternative == "greater") {
       message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>.", g1, g2)
-    } else if (options$hypothesis == "groupTwoGreater") {
+    } else if (options$alternative == "less") {
       message <- gettextf("For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>.", g1, g2)
     }
     if (!is.null(message))

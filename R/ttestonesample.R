@@ -16,7 +16,7 @@
 #
 
 TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
-  ready <- length(options$variables) > 0
+  ready <- length(options$dependents) > 0
   type  <- "one-sample"
   if(ready) {
     dataset <- .ttestReadData(dataset, options, type)
@@ -26,7 +26,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestOneSampleMainTable(  jaspResults, dataset, options, ready, type)
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
-  vars <- unique(unlist(options$variables))
+  vars <- unique(unlist(options$dependents))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
@@ -43,11 +43,11 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox",
-                   "variables", "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
-                   "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
-                   "meanDiffConfidenceIntervalPercent", "hypothesis",
-                   "VovkSellkeMPR", "missingValues", "zTest", "testValue"))
+  ttest$dependOn(c("effectSize", "effectSizeCi",
+                   "dependents", "effectSizeCiLevel", "student", "wilcoxon",
+                   "meanDifference", "meanDifferenceCi", "sd",
+                   "meanDifferenceCiLevel", "alternative",
+                   "vovkSellke", "naAction", "zTest", "testValue"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
@@ -146,10 +146,10 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   ### check the directionality
-  if (options$hypothesis == "greaterThanTestValue") {
+  if (options$alternative == "greater") {
     directionFootnote <- gettext("greater than")
     direction <- "greater"
-  } else if (options$hypothesis == "lessThanTestValue") {
+  } else if (options$alternative == "less") {
     directionFootnote <- gettext("less than")
     direction <- "less"
   } else {
@@ -179,7 +179,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   # Container
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
-  if (!options$normalityTests || !is.null(container[["ttestNormalTable"]]))
+  if (!options$normalityTest || !is.null(container[["ttestNormalTable"]]))
     return()
   container <- jaspResults[["AssumptionChecks"]]
   # Create table
@@ -201,7 +201,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleMainFill <-function(table, dataset, options, testStat, optionsList) {
-  variables <- options$variables
+  variables <- options$dependents
   for (variable in variables) {
 
     errors <- .hasErrors(dataset,
@@ -239,10 +239,10 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleComputeMainTableRow <- function(variable, dataset, test, testStat, optionsList, options) {
-  direction <- switch(options[["hypothesis"]],
-                      "notEqualToTestValue"  ="two.sided",
-                      "greaterThanTestValue" ="greater",
-                      "lessThanTestValue"    ="less")
+  direction <- switch(options[["alternative"]],
+                      "twoSided"  ="two.sided",
+                      "greater" ="greater",
+                      "less"    ="less")
   dat <- na.omit(dataset[[ .v(variable) ]])
   n   <- length(dat)
   if (test == "Wilcoxon") {
@@ -269,9 +269,9 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
-                          "mu" = options[["testValue"]], "sigma.x" = options[["stddev"]],
+                          "mu" = options[["testValue"]], "sigma.x" = options[["sd"]],
                           "ciValueMeanDiff"=optionsList[["percentConfidenceMeanDiff"]],
-                          "ciValueESMeanDiff"=options[["effSizeConfidenceIntervalPercent"]])
+                          "ciValueESMeanDiff"=options[["effectSizeCiLevel"]])
 
     df <- ""
     d  <- tempResult[["d"]]
@@ -294,7 +294,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
     if (optionsList[["wantsConfidenceEffSize"]]) {
 
-      ciEffSize  <- options[["effSizeConfidenceIntervalPercent"]]
+      ciEffSize  <- options[["effectSizeCiLevel"]]
       alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
 
       confIntEffSize <- .confidenceLimitsEffectSizes(ncp = d * sqrt(n), df = df, alpha.lower = alphaLevel,
@@ -337,14 +337,14 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                  effectSizeSe = effectSizeSe)
   result[[testStat]] <- stat
 
-  if (options[["VovkSellkeMPR"]])
+  if (options[["vovkSellke"]])
     result[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
 
   return(result)
 }
 
 .ttestOneSampleNormalFill <- function(table, dataset, options) {
-  variables <- options[["variables"]]
+  variables <- options[["dependents"]]
   for (variable in variables) {
     row <- list(v = variable)
 
@@ -370,20 +370,20 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlots)
+  if(!options$descriptivesPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval", "testValue"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlot", "descriptivesPlotCi", "testValue"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
     subcontainer <- container[["plots"]]
   }
 
-  for(variable in options$variables) {
+  for(variable in options$dependents) {
     if(!is.null(subcontainer[[variable]]))
       next
     descriptivesPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -425,7 +425,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
                            groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
 
-  ci <- options$descriptivesPlotsConfidenceInterval
+  ci <- options$descriptivesPlotCi
   summaryStat <- summarySE(dataSubset, measurevar = "dependent",
                            groupvars = "groupingVariable",
                            conf.interval = ci, na.rm = TRUE, .drop = FALSE)
@@ -446,24 +446,24 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarPlots"]])
+  if (!options[["descriptivesBarplot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
-                                                                               "descriptivesBarPlotsConfidenceInterval",
-                                                                               "errorBarType",
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
+                                                                               "descriptivesBarplotCiLevel",
+                                                                               "descriptivesBarplotErrorType",
                                                                                "testValue",
-                                                                               "descriptivesBarPlotsZeroFix"))
+                                                                               "descriptivesBarplotZeroFix"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
     subcontainer <- container[["barPlots"]]
   }
 
-  for (variable in options[["variables"]]) {
+  for (variable in options[["dependents"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
     descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -481,23 +481,23 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsRainCloud)
+  if(!options$descriptivesRaincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay", "testValue"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesRaincloudPlot", "descriptivesRaincloudPlotHorizontal", "testValue"))
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
 
-  horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  horiz <- options$descriptivesRaincloudPlotHorizontal
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "one-sample")
-    for(variable in options$variables) {
+    for(variable in options$dependents) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)

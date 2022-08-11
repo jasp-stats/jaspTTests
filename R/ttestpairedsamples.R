@@ -44,11 +44,11 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("Paired Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox",
-                   "variables", "effSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
-                   "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
-                   "meanDiffConfidenceIntervalPercent", "hypothesis",
-                   "VovkSellkeMPR", "missingValues", "pairs", "wilcoxonSignedRank"))
+  ttest$dependOn(c("effectSize", "effectSizeCi", "effectSizeCiLevel",
+                   "student", "wilcoxon",
+                   "meanDifference", "meanDifferenceCi",
+                   "meanDifferenceCiLevel", "alternative",
+                   "vovkSellke", "naAction", "pairs"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
@@ -117,8 +117,8 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
   }
 
-  if (options$hypothesis == "groupOneGreater" || options$hypothesis == "groupTwoGreater")
-    ttest$addFootnote(.ttestPairedGetHypothesisFootnote(options[["hypothesis"]], options[["pairs"]]))
+  if (options$alternative == "greater" || options$alternative == "less")
+    ttest$addFootnote(.ttestPairedGetHypothesisFootnote(options[["alternative"]], options[["pairs"]]))
 
   jaspResults[["ttest"]] <- ttest
 
@@ -131,7 +131,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   # Container
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
-  if (!options$normalityTests || !is.null(container[["ttestNormalTable"]]))
+  if (!options$normalityTest || !is.null(container[["ttestNormalTable"]]))
     return()
 
   container <- jaspResults[["AssumptionChecks"]]
@@ -217,7 +217,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   c2 <- df$c2
   n  <- length(c1)
   zstat <- NULL
-  direction <- .ttestMainGetDirection(options$hypothesis)
+  direction <- .ttestMainGetDirection(options$alternative)
 
   ## if Wilcox box is ticked, run a paired wilcoxon signed rank test
   if (test == "Wilcoxon") {
@@ -261,7 +261,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
     if (optionsList$wantsConfidenceEffSize) {
 
-      ciEffSize  <- options$effSizeConfidenceIntervalPercent
+      ciEffSize  <- options$effectSizeCiLevel
       alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
 
       confIntEffSize <- .confidenceLimitsEffectSizes(ncp = d * sqrt(n), df = df,
@@ -305,7 +305,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   result[testStat] <- stat
 
-  if (options$VovkSellkeMPR)
+  if (options$vovkSellke)
     result[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
 
   return(result)
@@ -406,13 +406,13 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlots)
+  if(!options$descriptivesPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlot", "descriptivesPlotCiLevel"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -467,7 +467,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
                      stringsAsFactors = TRUE)
 
   summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
-                                 idvar = "id", conf.interval = options$descriptivesPlotsConfidenceInterval,
+                                 idvar = "id", conf.interval = options$descriptivesPlotCiLevel,
                                  na.rm = TRUE, .drop = FALSE)
 
   pd <- ggplot2::position_dodge(0.2)
@@ -488,16 +488,16 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarPlots"]])
+  if (!options[["descriptivesBarplot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
-                                                                               "descriptivesBarPlotsConfidenceInterval",
-                                                                               "errorBarType",
-                                                                               "descriptivesBarPlotsZeroFix"))
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
+                                                                               "descriptivesBarplotCiLevel",
+                                                                               "descriptivesBarplotErrorType",
+                                                                               "descriptivesBarplotZeroFix"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
@@ -523,13 +523,13 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsRainCloud)
+  if(!options$descriptivesRaincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "descriptivesPlotsRainCloud")
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "descriptivesRaincloudPlot")
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
@@ -562,20 +562,20 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesRainCloudDifferencePlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsRainCloudDifference)
+  if(!options$differenceRaincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloudDifference"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"), dependencies = c("descriptivesPlotsRainCloudDifference", "descriptivesPlotsRainCloudDifferenceHorizontalDisplay"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"), dependencies = c("differenceRaincloudPlot", "differenceRaincloudPlotHorizontal"))
     subcontainer$position <- 8
     container[["plotsRainCloudDifference"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloudDifference"]]
   }
 
-  horiz <- options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay
+  horiz <- options$differenceRaincloudPlotHorizontal
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
     for(pair in options$pairs) {
@@ -606,7 +606,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   idx <- .ttestPairedGetIndexOfFirstNonEmptyPair(pairs)
   onePair <- length(pairs) == 1L
-  isLess <- hypothesis == "groupTwoGreater" # greater -> 1 is less than 2
+  isLess <- hypothesis == "less" # greater -> 1 is less than 2
 
   if (idx == 0L) { # no pairs, no example
     ans <- if (isLess) {
@@ -642,7 +642,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                             conf.interval=.95, .drop=TRUE, errorBarType="confidenceInterval", usePooledSE=FALSE) {
+                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE) {
 
   # Get the means from the un-normed data
   datac <- .summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
@@ -674,7 +674,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   ndatac$se <- ndatac$se * correctionFactor
   ndatac$ci <- ndatac$ci * correctionFactor
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
     ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
@@ -691,7 +691,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
-                       errorBarType="confidenceInterval", usePooledSE=FALSE) {
+                       errorBarType="ci", usePooledSE=FALSE) {
 
   # New version of length which can handle NA's: if na.rm==T, don't count them
   length2 <- function (x, na.rm=FALSE) {
@@ -737,7 +737,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
   ciMult <- qt(conf.interval/2 + .5, datac$N-1)
   datac$ci <- datac$se * ciMult
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     datac$ciLower <- datac[,measurevar] - datac[,"ci"]
     datac$ciUpper <- datac[,measurevar] + datac[,"ci"]

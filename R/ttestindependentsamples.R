@@ -17,7 +17,7 @@
 
 TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   #at least one variable and one grouping variable
-  ready <- length(options$variables) > 0 && options$groupingVariable != ""
+  ready <- length(options$dependents) > 0 && options$group != ""
   type  <- "independent"
   if(ready) {
     dataset <- .ttestReadData(dataset, options, type)
@@ -44,12 +44,12 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("Independent Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effSizeConfidenceIntervalCheckbox", "variables",
-                   "descriptivesEffectSizeConfidenceIntervalPercent", "students", "mannWhitneyU",
-                   "meanDifference", "meanDiffConfidenceIntervalCheckbox", "stddev",
-                   "meanDiffConfidenceIntervalPercent", "hypothesis",
-                   "VovkSellkeMPR", "missingValues", "groupingVariable", "effectSizesType",
-                   "welchs", "mannWhitneyU", "descriptivesMeanDiffConfidenceIntervalPercent", "equalityOfVarianceType"))
+  ttest$dependOn(c("effectSize", "effectSizeCi", "dependents",
+                   "effectSizeCiLevel", "student",
+                   "meanDifference", "meanDifferenceCi",
+                   "meanDifferenceCiLevel", "alternative",
+                   "vovkSellke", "naAction", "group", "effectSizeType",
+                   "welch", "wilcoxon", "equalityOfVariancesTest", "equalityOfVariancesTestType"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
@@ -83,11 +83,11 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   .ttestVovkSellke(ttest, options)
 
-  if (options$effectSizesType == "cohensD")
+  if (options$effectSizeType == "cohen")
     effSize <- "cohen"
-  else if (options$effectSizesType == "glassD")
+  else if (options$effectSizeType == "glass")
     effSize <- "glass"
-  else if (options$effectSizesType == "hedgesG")
+  else if (options$effectSizeType == "hedges")
     effSize <- "hedges"
 
   nameOfEffectSizeParametric <- switch(effSize,
@@ -162,7 +162,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   # Container
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
-  if (!options$normalityTests || !is.null(container[["ttestNormalTable"]]))
+  if (!options$normalityTest || !is.null(container[["ttestNormalTable"]]))
     return()
   container <- jaspResults[["AssumptionChecks"]]
   # Create table
@@ -189,16 +189,16 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
 
-  if (!options$equalityOfVariancesTests || !is.null(container[["equalityVariance"]]))
+  if (!options$equalityOfVariancesTest || !is.null(container[["equalityVariance"]]))
     return()
 
-  nameOfEqVarTest <- switch(options$equalityOfVarianceType,
+  nameOfEqVarTest <- switch(options$equalityOfVariancesTestType,
                             "brownForsythe" = gettext("Brown-Forsythe"),
                             "levene" = gettext("Levene's"))
 
   # Create table
   equalityVariance <- createJaspTable(title = gettextf("Test of Equality of Variances (%1$s)", nameOfEqVarTest))
-  equalityVariance$dependOn(c("equalityOfVarianceType"))
+  equalityVariance$dependOn(c("equalityOfVariancesTestType"))
   equalityVariance$showSpecifiedColumnsOnly <- TRUE
   equalityVariance$position <- 3
   equalityVariance$addColumnInfo(name = "variable", type = "string",  title = "")
@@ -215,28 +215,28 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
 .ttestIndependentMainFill <- function(table, dataset, options, testStat, optionsList) {
 
-  if (options$effectSizesType == "cohensD")
+  if (options$effectSizeType == "cohen")
     effSize <- "cohen"
-  else if (options$effectSizesType == "glassD")
+  else if (options$effectSizeType == "glass")
     effSize <- "glass"
-  else if (options$effectSizesType == "hedgesG")
+  else if (options$effectSizeType == "hedges")
     effSize <- "hedges"
 
-  levels <- levels(dataset[[ options$groupingVariable ]])
+  levels <- levels(dataset[[ options$group ]])
 
-  if (options$hypothesis == "groupOneGreater" || options$hypothesis == "groupTwoGreater") {
-    directionNote <- ifelse(options$hypothesis == "groupOneGreater", gettext("greater"), gettext("less"))
+  if (options$alternative == "greater" || options$alternative == "less") {
+    directionNote <- ifelse(options$alternative == "greater", gettext("greater"), gettext("less"))
     table$addFootnote(gettextf("For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s.",
                                                 paste("<em>", levels[1], "</em>"), directionNote, paste("<em>", levels[2], "</em>")))
   }
 
   ## for each variable specified, run each test that the user wants
-  for (variable in options$variables) {
+  for (variable in options$dependents) {
     errors <- .hasErrors(dataset,
                          message = 'short',
                          type = c('observations', 'variance', 'infinity'),
                          all.target = variable,
-                         all.grouping = options$groupingVariable,
+                         all.grouping = options$group,
                          observations.amount = '< 2')
 
     for (test in optionsList$whichTests) {
@@ -250,9 +250,9 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
         if (!isTryError(result)) {
           row <- c(row, result[["row"]])
-          if (result[["leveneViolated"]] && options$equalityOfVarianceType == "brownForsythe")
+          if (result[["leveneViolated"]] && options$equalityOfVariancesTestType == "brownForsythe")
             table$addFootnote(gettext("Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"), colNames = "p", rowNames = rowName)
-          else if (result[["leveneViolated"]] && options$equalityOfVarianceType == "levene")
+          else if (result[["leveneViolated"]] && options$equalityOfVariancesTestType == "levene")
             table$addFootnote(gettext("Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"), colNames = "p", rowNames = rowName)
         } else {
           errorMessage <- .extractErrorMessage(result)
@@ -271,8 +271,8 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
     }
 
     if (effSize == "glass") {
-      ns  <- tapply(dataset[[variable]], dataset[[options$groupingVariable]], function(x) length(na.omit(x)))
-      sdMessage <- gettextf("Glass' delta uses the standard deviation of group %1$s of variable %2$s.", names(ns[2]), options$groupingVariable)
+      ns  <- tapply(dataset[[variable]], dataset[[options$group]], function(x) length(na.omit(x)))
+      sdMessage <- gettextf("Glass' delta uses the standard deviation of group %1$s of variable %2$s.", names(ns[2]), options$group)
       table$addFootnote(sdMessage)
     }
   }
@@ -282,16 +282,16 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ciEffSize  <- optionsList$percentConfidenceEffSize
   ciMeanDiff <- optionsList$percentConfidenceMeanDiff
   f <- as.formula(paste(variable, "~",
-                        options$groupingVariable))
+                        options$group))
 
   variableData <- dataset[[ variable ]]
-  groupingData <- dataset[[ options$groupingVariable ]]
+  groupingData <- dataset[[ options$group ]]
 
   sds <- tapply(variableData, groupingData, sd, na.rm = TRUE)
   ms  <- tapply(variableData, groupingData, mean, na.rm = TRUE)
   ns  <- tapply(variableData, groupingData, function(x) length(na.omit(x)))
 
-  direction <- .ttestMainGetDirection(options$hypothesis)
+  direction <- .ttestMainGetDirection(options$alternative)
 
   if (test == "Mann-Whitney") {
     r <- stats::wilcox.test(f, data = dataset,
@@ -331,12 +331,12 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     d <- "."
     if (optionsList$wantsEffect) {
       # Sources are https://en.wikipedia.org/wiki/Effect_size for now.
-      if (options$effectSizesType == "cohensD")
+      if (options$effectSizeType == "cohen")
         d <- as.numeric((ms[1] - ms[2]) / sdPooled)
-      else if (options$effectSizesType == "glassD")
+      else if (options$effectSizeType == "glass")
         d <- as.numeric((ms[1] - ms[2]) / sds[2])
       # Should give feedback on which data is considered 2.
-      else if (options$effectSizesType == "hedgesG") {
+      else if (options$effectSizeType == "hedges") {
         a <- sum(ns) - 2
         logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
         d <- as.numeric((ms[1] - ms[2]) / sdPooled) * exp(logCorrection) # less biased / corrected version
@@ -378,7 +378,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   leveneViolated <- FALSE
   if (!optionsList$wantsWelchs && !optionsList$wantsWilcox && optionsList$wantsStudents) {
 
-    if (options$equalityOfVarianceType == "brownForsythe")
+    if (options$equalityOfVariancesTestType == "brownForsythe")
       center <- "median"
     else
       center <- "mean"
@@ -404,15 +404,15 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
   row[[testStat]] <- stat
 
-  if (options$VovkSellkeMPR)
+  if (options$vovkSellke)
     row[["VovkSellkeMPR"]] <- VovkSellkeMPR(p)
 
   return(list(row = row, leveneViolated = leveneViolated))
 }
 
 .ttestIndependentEqVarFill <- function(table, dataset, options) {
-  variables <- options$variables
-  groups    <- options$groupingVariable
+  variables <- options$dependents
+  groups    <- options$group
 
   levels <- levels(dataset[[ groups ]])
 
@@ -452,7 +452,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
 .ttestIndependentEqVarRow <- function(table, variable, groups, dataset, options) {
 
-  if (options$equalityOfVarianceType == "brownForsythe")
+  if (options$equalityOfVariancesTestType == "brownForsythe")
     center <- "median"
   else
     center <- "mean"
@@ -476,8 +476,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
 .ttestIndependentNormalFill <- function(table, dataset, options) {
   ## for a independent t-test, we need to check both group vectors for normality
-  variables <- options$variables
-  factor    <- options$groupingVariable
+  variables <- options$dependents
+  factor    <- options$group
   levels    <- levels(dataset[[factor]])
 
   for (variable in variables) {
@@ -537,8 +537,8 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesFill <- function(table, dataset, options) {
-  variables <- options$variables
-  groups <- options$groupingVariable
+  variables <- options$dependents
+  groups <- options$group
   levels <- base::levels(dataset[[ groups ]])
   groupingData <- dataset[[groups]]
 
@@ -574,19 +574,19 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlots)
+  if(!options$descriptivesPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlots", "descriptivesPlotsConfidenceInterval"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlot", "descriptivesPlotCiLevel"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
     subcontainer <- container[["plots"]]
   }
 
-  for(variable in options$variables) {
+  for(variable in options$dependents) {
     if(!is.null(subcontainer[[variable]]))
       next
     descriptivesPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -604,7 +604,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesPlotFill <- function(dataset, options, variable) {
-  groups   <- options$groupingVariable
+  groups   <- options$group
 
   errors <- .hasErrors(dataset,
                        message = 'short',
@@ -635,7 +635,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   }
 
   dataset <- na.omit(dataset[, c(groups, variable)])
-  ci <- options$descriptivesPlotsConfidenceInterval
+  ci <- options$descriptivesPlotCiLevel
   summaryStat <- summarySE(as.data.frame(dataset),
                            measurevar = variable,
                            groupvars = groups,
@@ -653,7 +653,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     ggplot2::geom_line(position = pd, size = 0.7) +
     ggplot2::geom_point(position = pd, size = 4) +
     ggplot2::ylab(unlist(variable)) +
-    ggplot2::xlab(options$groupingVariable) +
+    ggplot2::xlab(options$group) +
     base_breaks_y(summaryStat) + base_breaks_x(summaryStat$groupingVariable)
 
   p <- jaspGraphs::themeJasp(p)
@@ -662,22 +662,22 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarPlots"]])
+  if (!options[["descriptivesBarplot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarPlots",
-                                                                               "descriptivesBarPlotsConfidenceInterval",
-                                                                               "errorBarType",
-                                                                               "descriptivesBarPlotsZeroFix"))
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
+                                                                               "descriptivesBarplotCiLevel",
+                                                                               "descriptivesBarplotErrorType",
+                                                                               "descriptivesBarplotZeroFix"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
     subcontainer <- container[["barPlots"]]
   }
 
-  for (variable in options[["variables"]]) {
+  for (variable in options[["dependents"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
     descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -695,23 +695,23 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlotsRainCloud)
+  if(!options$descriptivesRaincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesPlotsRainCloud", "descriptivesPlotsRainCloudHorizontalDisplay"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesRaincloudPlot", "descriptivesRaincloudPlotHorizontal"))
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
-  horiz <- options$descriptivesPlotsRainCloudHorizontalDisplay
+  horiz <- options$descriptivesRaincloudPlotHorizontal
   if(ready){
-    groups <- options$groupingVariable
+    groups <- options$group
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "independent")
-    for(variable in options$variables) {
+    for(variable in options$dependents) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
