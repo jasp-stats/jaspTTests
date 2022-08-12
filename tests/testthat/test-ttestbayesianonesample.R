@@ -122,21 +122,21 @@ test_that("Prior and posterior plot custom CI level match", {
   options$dependents <- "contcor1"
   options$priorAndPosteriorPlot <- TRUE
 
-  options$priorAndPosteriorPlotCi <- 0.8
+  options$priorAndPosteriorPlotCiLevel <- 0.8
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-80")
 
-  options$priorAndPosteriorPlotCi <- 0.99
+  options$priorAndPosteriorPlotCiLevel <- 0.99
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99")
 
-  options$priorAndPosteriorPlotCi <- 0.999
+  options$priorAndPosteriorPlotCiLevel <- 0.999
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
