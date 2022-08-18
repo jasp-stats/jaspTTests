@@ -919,7 +919,7 @@
     gettext("Bayes Factor Robustness Check"),
     gettext("Sequential Analysis")
   )
-  jaspTitles <- c("priorAndPosteriorPlot", "plotRobustness", "plotSequential")
+  jaspTitles <- c("priorAndPosteriorPlot", "robustnessPlot", "sequentialPlot")
   for (var in dependents) { # was there a container for these plots for this variable?
     if (is.null(inferentialPlotsCollection[[var]])) {
       container <- createJaspContainer(title = var)
@@ -1092,8 +1092,8 @@
 
   currentPlot <- 1L
   for (var in dependents) {
-    if (is.null(collection[[var]][["plotRobustness"]]$plotObject)) {
-      plot <- collection[[var]][["plotRobustness"]]
+    if (is.null(collection[[var]][["robustnessPlot"]]$plotObject)) {
+      plot <- collection[[var]][["robustnessPlot"]]
       if (effectSizeStandardized == "informative") {
         plot$setError(gettext("Bayes factor robustness check plot currently not supported for informed prior."))
       } else if (isFALSE(errors[[var]]) && is.null(plottingError[[var]])) {
@@ -1175,8 +1175,8 @@
 
   currentPlot <- 1L
   for (var in dependents) {
-    if (is.null(collection[[var]][["plotSequential"]]$plotObject)) {
-      plot <- collection[[var]][["plotSequential"]]
+    if (is.null(collection[[var]][["sequentialPlot"]]$plotObject)) {
+      plot <- collection[[var]][["sequentialPlot"]]
 
       if (effectSizeStandardized == "informative") {
         plot$setError(gettext("Sequential analysis robustness check plot currently not supported for informed prior."))
