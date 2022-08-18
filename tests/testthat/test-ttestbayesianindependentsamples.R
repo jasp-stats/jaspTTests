@@ -229,19 +229,19 @@ for (hypo in hypotheses) {
     # tables[[bftype, hypo]] <- makeTestTable(getTtestTable(results)[["data"]], print = FALSE)
 
     test_that(sprintf("%s-%s Prior and Posterior plot matches", hypo, bftype), {
-      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotPriorAndPosterior"]][["data"]]
+      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_priorAndPosteriorPlot"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
       jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-prior-and-posterior", hypo, bftype))
     })
 
     test_that(sprintf("%s-%s Bayes Factor Robustness Check plot matches", hypo, bftype), {
-      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotRobustness"]][["data"]]
+      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_robustnessPlot"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
       jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-bayes-factor-robustness-check", hypo, bftype))
     })
 
     test_that(sprintf("%s-%s Sequential Analysis plot matches", hypo, bftype), {
-      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_plotSequential"]][["data"]]
+      plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_sequentialPlot"]][["data"]]
       testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
       jaspTools::expect_equal_plots(testPlot, sprintf("%s-%s-sequential-analysis", hypo, bftype))
     })
