@@ -20,10 +20,10 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"effectSizesType"
+	                    name:		"effectSizeType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["effectSizesType"])
+		                        switch(options["effectSizeType"])
 		                        {
 			                            case "cohensD":	return "cohen";
 			                            case "glassD":	return "glass";
@@ -41,13 +41,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -61,14 +61,14 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
-			                            case "groupsNotEqual"	:	return "twoSided";
-			                            case "groupOneGreater"	:	return "greater";
-			                            case "groupTwoGreater"	:	return "less";
+			                            case "groupsNotEqual":	return "twoSided";
+			                            case "groupOneGreater":	return "greater";
+			                            case "groupTwoGreater":	return "less";
 		                        }
 	                    }
                 }
@@ -79,13 +79,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perDependent";
-			                            case "excludeListwise"			:	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
@@ -110,13 +110,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -131,14 +131,14 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
-			                            case "groupsNotEqual"	:	return "twoSided";
-			                            case "groupOneGreater"	:	return "greater";
-			                            case "groupTwoGreater"	:	return "less";
+			                            case "groupsNotEqual":	return "twoSided";
+			                            case "groupOneGreater":	return "greater";
+			                            case "groupTwoGreater":	return "less";
 		                        }
 	                    }
                 }
@@ -148,13 +148,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perDependent";
-			                            case "excludeListwise"			:	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
@@ -179,13 +179,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -199,14 +199,14 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
-			                            case "notEqualToTestValue"	:	return "twoSided";
-			                            case "greaterThanTestValue"	:	return "greater";
-			                            case "lessThanTestValue"	:	return "less";
+			                            case "notEqualToTestValue":		return "twoSided";
+			                            case "greaterThanTestValue":	return "greater";
+			                            case "lessThanTestValue":		return "less";
 		                        }
 	                    }
                 }
@@ -216,13 +216,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perVariable";
-			                            case "excludeListwise":	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
@@ -238,10 +238,10 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
 			                            case "groupsNotEqual":	return "twoSided";
 			                            case "groupOneGreater":	return "greater";
@@ -260,13 +260,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -279,12 +279,12 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"testStatistic"
+	                    name:		"test"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["testStatistic"])
+		                        switch(options["test"])
 		                        {
-			                            case "Student":	return "student";
+			                            case "Student":		return "student";
 			                            case "Wilcoxon":	return "wilcoxon";
 		                        }
 	                    }
@@ -295,13 +295,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perDependent";
-			                            case "excludeListwise":	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
@@ -315,10 +315,10 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
 			                            case "groupsNotEqual":	return "twoSided";
 			                            case "groupOneGreater":	return "greater";
@@ -337,13 +337,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -357,12 +357,12 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"testStatistic"
+	                    name:		"test"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["testStatistic"])
+		                        switch(options["test"])
 		                        {
-			                            case "Student":	return "student";
+			                            case "Student":		return "student";
 			                            case "Wilcoxon":	return "wilcoxon";
 		                        }
 	                    }
@@ -373,13 +373,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perDependent";
-			                            case "excludeListwise":	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
@@ -400,13 +400,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"errorBarType"
+	                    name:		"descriptivesBarplotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["errorBarType"])
+		                        switch(options["descriptivesBarplotErrorType"])
 		                        {
-			                            case "confidenceInterval"	:	return "ci";
-			                            case "standardError"	:	return "se";
+			                            case "confidenceInterval":	return "ci";
+			                            case "standardError":		return "se";
 		                        }
 	                    }
                 }
@@ -420,14 +420,14 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"hypothesis"
+	                    name:		"alternative"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["hypothesis"])
+		                        switch(options["alternative"])
 		                        {
-			                            case "notEqualToTestValue":	return "twoSided";
+			                            case "notEqualToTestValue":		return "twoSided";
 			                            case "greaterThanTestValue":	return "greater";
-										case "lessThanTestValue":	return "less";
+										case "lessThanTestValue":		return "less";
 		                        }
 	                    }
                 }
@@ -436,12 +436,12 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"testStatistic"
+	                    name:		"test"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["testStatistic"])
+		                        switch(options["test"])
 		                        {
-			                            case "Student":	return "student";
+			                            case "Student":		return "student";
 			                            case "Wilcoxon":	return "wilcoxon";
 		                        }
 	                    }
@@ -452,13 +452,13 @@ Upgrades
 
 				ChangeJS
                 {
-	                    name:		"missingValues"
+	                    name:		"naAction"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["missingValues"])
+		                        switch(options["naAction"])
 		                        {
 			                            case "excludeAnalysisByAnalysis":	return "perDependent";
-			                            case "excludeListwise":	return "listwise";
+			                            case "excludeListwise":				return "listwise";
 		                        }
 	                    }
                 }
