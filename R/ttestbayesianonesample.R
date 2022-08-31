@@ -31,7 +31,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   if (!derivedOptions[["ready"]])
     return(ttestResults)
 
-  dependents <- options[["dependents"]]
+  dependents <- options[["dependent"]]
 
   # create empty object for the table, this has previously computed rows already filled in
   ttestRows <- .ttestBayesianCreateTtestRows(dependents, options, derivedOptions, ttestState)
@@ -189,7 +189,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
     gettext("Bayesian One Sample T-Test")
   }
 
-  jaspTable$dependOn(c("bayesFactorType", "dependents", "testValue"))
+  jaspTable$dependOn(c("bayesFactorType", "dependent", "testValue"))
 
   if (options[["effectSizeStandardized"]] == "default") {
     citations <- .ttestBayesianCitations[c("MoreyEtal2015", "RouderEtal2009")]

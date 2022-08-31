@@ -10,7 +10,7 @@ test_that("Main table results match R, SPSS, SAS and MiniTab", {
   options$effectSize <- TRUE
   options$meanDifferenceCi <- TRUE
   options$effectSizeCi <- TRUE
-  options$dependents <- "V1"
+  options$dependent <- "V1"
 
   results <- jaspTools::runAnalysis("TTestOneSample", "OSTT.csv", options)
 

@@ -29,8 +29,6 @@ Form
 	plotHeight: 300
 	plotWidth:  350
 
-	CheckBox { name: "welch"; checked: false; visible: false }
-
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight

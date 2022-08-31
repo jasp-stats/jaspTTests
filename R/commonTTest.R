@@ -33,7 +33,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     if (!is.null(groups) && groups == "")
       groups <- NULL
     if(type %in% c("one-sample", "independent"))
-      depvars <- unlist(options$dependents)
+      depvars <- unlist(options$dependent)
     else if (type == 'paired') {
       depvars <- unlist(options$pairs)
       depvars <- depvars[depvars != ""]
@@ -63,7 +63,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                  exitAnalysisIfErrors = TRUE)
     }
   else if(type == "independent") {
-    if (length(options$dependents) != 0 && options$group != '')
+    if (length(options$dependent) != 0 && options$group != '')
       .hasErrors(dataset,
                  type = 'factorLevels',
                  factorLevels.target  = options$group,
@@ -123,7 +123,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       return()
   if (is.null(jaspResults[["AssumptionChecks"]])) {
     container <- createJaspContainer(gettext("Assumption Checks"))
-    dependList <- c("dependents", "group", "pairs", "naAction",
+    dependList <- c("dependent", "group", "pairs", "naAction",
                     "normalityTest", "equalityOfVariancesTest")
     container$dependOn(dependList)
     container$position <- 2
@@ -136,7 +136,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
-    container$dependOn(c("naAction", "dependents", "pairs", "group"))
+    container$dependOn(c("naAction", "dependent", "pairs", "group"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container
   }
@@ -626,7 +626,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     ylab <- ggplot2::ylab(NULL)
     xlab <- ggplot2::xlab(NULL)
   }
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarplotZeroFix"]]) c(0, ciPos) else ciPos)
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarplotYAxisFixedToZero"]]) c(0, ciPos) else ciPos)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 

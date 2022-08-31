@@ -6,7 +6,7 @@ context("Independent Samples TTest")
 
 test_that("Main table results match", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$welch <- TRUE
   options$wilcoxon <- TRUE
@@ -30,7 +30,7 @@ test_that("Main table results match", {
 
 test_that("Normality table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$normalityTest <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
@@ -43,7 +43,7 @@ test_that("Normality table matches", {
 
 test_that("Equality of variances table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$equalityOfVariancesTest<- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
@@ -53,7 +53,7 @@ test_that("Equality of variances table matches", {
 
 test_that("Descriptives table matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptives <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
@@ -67,7 +67,7 @@ test_that("Descriptives table matches", {
 
 test_that("Descriptives plot matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
@@ -77,7 +77,7 @@ test_that("Descriptives plot matches", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesBarplot <- TRUE
   options$descriptivesBarplotErrorType <- "se"
@@ -88,7 +88,7 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
@@ -99,7 +99,7 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesRaincloudPlot <- TRUE
   options$descriptivesRaincloudPlotHorizontal <- TRUE
@@ -112,19 +112,19 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestIndependentSamples")
 
-  options$dependents <- "debInf"
+  options$dependent <- "debInf"
   options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$dependents <- "debSame"
+  options$dependent <- "debSame"
   options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$dependents <- "debMiss99"
+  options$dependent <- "debMiss99"
   options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
@@ -151,7 +151,7 @@ test_that("Analysis works with unicode", {
   options$normalityTest <- TRUE
   options$plotHeight <- 300
   options$plotWidth <- 350
-  options$dependents <- "Mischief"
+  options$dependent <- "Mischief"
   options$welch <- TRUE
   set.seed(1)
   dataset <- structure(list(Participant = 1:24,

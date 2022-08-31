@@ -134,11 +134,11 @@
 
   if (is.null(dataset)) {
     missing <- options[["naAction"]]
-    if (is.null(options[["dependents"]])) {
+    if (is.null(options[["dependent"]])) {
       dependents <- unique(unlist(options[["pairs"]] ))
       dependents <- dependents[dependents != ""]
     } else {
-      dependents <- unlist(options[["dependents"]])
+      dependents <- unlist(options[["dependent"]])
     }
     grouping <- options[["group"]]
     if (identical(grouping, ""))
@@ -169,7 +169,7 @@
   errors <- list()
   if (analysis == "independent") {
 
-    dependents <- unlist(options[["dependents"]])
+    dependents <- unlist(options[["dependent"]])
     grouping   <- options[["group"]]
 
     # analysis breaking errors
@@ -193,7 +193,7 @@
 
   } else if (analysis == "one-sample") {
 
-    dependents <- unlist(options[["dependents"]])
+    dependents <- unlist(options[["dependent"]])
     for (var in dependents) {
       errors[[var]] <- .hasErrors(dataset, message = 'short',
                                   type = c('infinity','observations','variance'),
@@ -259,7 +259,7 @@
 
   if (analysis == "independent") {
 
-    dependents <- unlist(options[["dependents"]])
+    dependents <- unlist(options[["dependent"]])
 
     derivedOptions[["dependents"]]    <- dependents
     derivedOptions[["ready"]] <- length(dependents) > 0L && options[["group"]] != ""
@@ -273,7 +273,7 @@
 
   } else if (analysis == "one-sample") { # one-sample
 
-    dependents <- unlist(options[["dependents"]])
+    dependents <- unlist(options[["dependent"]])
     derivedOptions[["dependents"]]    <- dependents
     derivedOptions[["ready"]] <- length(dependents) > 0L
 
@@ -390,11 +390,11 @@
 .ttestBayesianEmptyObject <- function(options, derivedOptions, ttestState = NULL) {
 
   # construct a t-test object based on supplied options
-  nvar <- length(options[["dependents"]])
+  nvar <- length(options[["dependent"]])
   isPaired <- derivedOptions[["ttestType"]] == "paired"
 
   # exception for paired t-test
-  if (nvar == 1L && options[["dependents"]] == " - " && isPaired)
+  if (nvar == 1L && options[["dependent"]] == " - " && isPaired)
     nvar <- 0L
 
   if (!is.null(ttestState)) {
@@ -518,7 +518,7 @@
   if (options[["descriptives"]]) {
     if (is.null(descriptivesContainer[["table"]])) {
       descriptivesTable <- createJaspTable(title = "Descriptives")
-      descriptivesTable$dependOn(c("descriptives", "dependents", "pairs", "descriptivesPlotCiLevel"))
+      descriptivesTable$dependOn(c("descriptives", "dependent", "pairs", "descriptivesPlotCiLevel"))
       descriptivesTable$position <- 1L
 
       .ttestBayesianDescriptivesTable(
@@ -566,7 +566,7 @@
 
       descriptivesBarPlots <- createJaspContainer(
         title = gettext("Bar Plots"),
-        dependencies = c("descriptivesBarplot", "testValue", "descriptivesBarplotZeroFix",
+        dependencies = c("descriptivesBarplot", "testValue", "descriptivesBarplotYAxisFixedToZero",
                          "descriptivesBarplotErrorType", "descriptivesBarplotCiLevel")
       )
       descriptivesBarPlots$position <- 3L
@@ -586,7 +586,7 @@
       canRun           = canDoAnalysis,
       testValueOpt     = options[["testValue"]],
       pairs            = derivedOptions[["pairs"]],
-      zeroFix          = options[["descriptivesBarplotZeroFix"]],
+      zeroFix          = options[["descriptivesBarplotYAxisFixedToZero"]],
       errorBarType     = options[["descriptivesBarplotErrorType"]]
     )
   }
@@ -882,7 +882,7 @@
     grouping   <- NULL
     pairs      <- ttestResults[["derivedOptions"]][["pairs"]]
   } else {
-    dependents <- unlist(options[["dependents"]])
+    dependents <- unlist(options[["dependent"]])
     grouping   <- options[["group"]]
     pairs <- NULL
   }
@@ -2316,7 +2316,7 @@
   horiz <- options[["descriptivesRaincloudPlotHorizontal"]]
   errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   if (analysis == "one-sample") {
-    for(variable in options$dependents) {
+    for(variable in options$dependent) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -2335,7 +2335,7 @@
         descriptivesPlotRainCloud$plotObject <- p
     }
   } else if (analysis == "independent") {
-    for(variable in options$dependents) {
+    for(variable in options$dependent) {
       if(!is.null(subcontainer[[variable]]))
         next
       groups <- options$group

@@ -45,5 +45,5 @@ CheckBox
 			RadioButton { value: 	"se";	label: qsTr("Standard error") }
 		}
 
-	CheckBox { name: "descriptivesBarplotZeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+	CheckBox { name: "descriptivesBarplotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0");	checked: true }
 }

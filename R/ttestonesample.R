@@ -16,7 +16,7 @@
 #
 
 TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
-  ready <- length(options$dependents) > 0
+  ready <- length(options$dependent) > 0
   type  <- "one-sample"
   if(ready) {
     dataset <- .ttestReadData(dataset, options, type)
@@ -26,7 +26,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestOneSampleMainTable(  jaspResults, dataset, options, ready, type)
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
   # Descriptives
-  vars <- unique(unlist(options$dependents))
+  vars <- unique(unlist(options$dependent))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
@@ -44,7 +44,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   # Create table
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
   ttest$dependOn(c("effectSize", "effectSizeCi",
-                   "dependents", "effectSizeCiLevel", "student", "wilcoxon",
+                   "dependent", "effectSizeCiLevel", "student", "wilcoxon",
                    "meanDifference", "meanDifferenceCi", "sd",
                    "meanDifferenceCiLevel", "alternative",
                    "vovkSellke", "naAction", "zTest", "testValue"))
@@ -201,7 +201,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleMainFill <-function(table, dataset, options, testStat, optionsList) {
-  variables <- options$dependents
+  variables <- options$dependent
   for (variable in variables) {
 
     errors <- .hasErrors(dataset,
@@ -344,7 +344,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleNormalFill <- function(table, dataset, options) {
-  variables <- options[["dependents"]]
+  variables <- options[["dependent"]]
   for (variable in variables) {
     row <- list(v = variable)
 
@@ -383,7 +383,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
     subcontainer <- container[["plots"]]
   }
 
-  for(variable in options$dependents) {
+  for(variable in options$dependent) {
     if(!is.null(subcontainer[[variable]]))
       next
     descriptivesPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -456,14 +456,14 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
                                                                                "descriptivesBarplotCiLevel",
                                                                                "descriptivesBarplotErrorType",
                                                                                "testValue",
-                                                                               "descriptivesBarplotZeroFix"))
+                                                                               "descriptivesBarplotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
     subcontainer <- container[["barPlots"]]
   }
 
-  for (variable in options[["dependents"]]) {
+  for (variable in options[["dependent"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
     descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -497,7 +497,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   horiz <- options$descriptivesRaincloudPlotHorizontal
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "one-sample")
-    for(variable in options$dependents) {
+    for(variable in options$dependent) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)

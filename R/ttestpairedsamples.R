@@ -497,7 +497,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
                                                                                "descriptivesBarplotCiLevel",
                                                                                "descriptivesBarplotErrorType",
-                                                                               "descriptivesBarplotZeroFix"))
+                                                                               "descriptivesBarplotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {

@@ -17,7 +17,7 @@
 
 TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   #at least one variable and one grouping variable
-  ready <- length(options$dependents) > 0 && options$group != ""
+  ready <- length(options$dependent) > 0 && options$group != ""
   type  <- "independent"
   if(ready) {
     dataset <- .ttestReadData(dataset, options, type)
@@ -44,7 +44,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   ttest <- createJaspTable(title = gettext("Independent Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effectSizeCi", "dependents",
+  ttest$dependOn(c("effectSize", "effectSizeCi", "dependent",
                    "effectSizeCiLevel", "student",
                    "meanDifference", "meanDifferenceCi",
                    "meanDifferenceCiLevel", "alternative",
@@ -231,7 +231,7 @@ TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   ## for each variable specified, run each test that the user wants
-  for (variable in options$dependents) {
+  for (variable in options$dependent) {
     errors <- .hasErrors(dataset,
                          message = 'short',
                          type = c('observations', 'variance', 'infinity'),
@@ -411,7 +411,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentEqVarFill <- function(table, dataset, options) {
-  variables <- options$dependents
+  variables <- options$dependent
   groups    <- options$group
 
   levels <- levels(dataset[[ groups ]])
@@ -476,7 +476,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
 .ttestIndependentNormalFill <- function(table, dataset, options) {
   ## for a independent t-test, we need to check both group vectors for normality
-  variables <- options$dependents
+  variables <- options$dependent
   factor    <- options$group
   levels    <- levels(dataset[[factor]])
 
@@ -537,7 +537,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesFill <- function(table, dataset, options) {
-  variables <- options$dependents
+  variables <- options$dependent
   groups <- options$group
   levels <- base::levels(dataset[[ groups ]])
   groupingData <- dataset[[groups]]
@@ -586,7 +586,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     subcontainer <- container[["plots"]]
   }
 
-  for(variable in options$dependents) {
+  for(variable in options$dependent) {
     if(!is.null(subcontainer[[variable]]))
       next
     descriptivesPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -670,14 +670,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
                                                                                "descriptivesBarplotCiLevel",
                                                                                "descriptivesBarplotErrorType",
-                                                                               "descriptivesBarplotZeroFix"))
+                                                                               "descriptivesBarplotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
     subcontainer <- container[["barPlots"]]
   }
 
-  for (variable in options[["dependents"]]) {
+  for (variable in options[["dependent"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
     descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
@@ -711,7 +711,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if(ready){
     groups <- options$group
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "independent")
-    for(variable in options$dependents) {
+    for(variable in options$dependent) {
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)

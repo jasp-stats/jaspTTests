@@ -37,7 +37,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 
 	# this is a standardized object. The names are identical to those in the other Bayesian t-tests
   ttestResults <- .ttestBayesianEmptyObject(options, derivedOptions, ttestState)
-  dependents <- options[["dependents"]]
+  dependents <- options[["dependent"]]
 
   # create empty object for the table, this has previously computed rows already filled in
   ttestRows <- .ttestBayesianCreateTtestRows(dependents, options, derivedOptions, ttestState)
@@ -194,7 +194,7 @@ TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
 .ttestBISTTestMarkup <- function(options, derivedOptions, g1 = NULL, g2 = NULL) {
 
   jaspTable <- createJaspTable()
-	jaspTable$dependOn(c("bayesFactorType", "dependents"))
+	jaspTable$dependOn(c("bayesFactorType", "dependent"))
 
   jaspTable$title <- if (derivedOptions[["wilcoxTest"]]) {
     gettext("Bayesian Mann-Whitney U Test")

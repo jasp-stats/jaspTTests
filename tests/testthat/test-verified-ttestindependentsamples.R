@@ -6,7 +6,7 @@ context("Independent Samples TTest -- Verification project")
 
 
 options <- jaspTools::analysisOptions("TTestIndependentSamples")
-options$dependents <- "Score"
+options$dependent <- "Score"
 options$group <- "Group"
 options$student <- TRUE
 options$welch <- TRUE
@@ -45,7 +45,7 @@ test_that("Descriptives table results match R, SPSS, SAS and Minitab 1", {
 # https://jasp-stats.github.io/jasp-verification-project/t-tests.html#mann-whitney-test
 test_that("Mann-Whitney U table results match R, SPSS, SAS and MiniTab", {
   options <- jaspTools::analysisOptions("TTestIndependentSamples")
-  options$dependents <- "Score"
+  options$dependent <- "Score"
   options$group <- "Group"
   options$student <- FALSE
   options$welch <- FALSE

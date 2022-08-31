@@ -12,7 +12,7 @@ getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["
 test_that("Main table results match for Student test", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$alternative <- "greater"
   options$effectSizeStandardized <- "informative"
@@ -26,7 +26,7 @@ test_that("Main table results match for Student test", {
 test_that("Main table results match for Wilcoxon test", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$test <- "wilcoxon"
   options$wilcoxonSamples <- 100
@@ -39,7 +39,7 @@ test_that("Main table results match for Wilcoxon test", {
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- FALSE
@@ -83,7 +83,7 @@ test_that("Inferential and descriptives plots match", {
 test_that("Inferential plots with additional info match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contcor1"
+  options$dependent <- "contcor1"
   options$group <- "facGender"
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- TRUE
@@ -110,7 +110,7 @@ test_that("Inferential plots with additional info match", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesBarplot <- TRUE
   options$descriptivesBarplotErrorType <- "se"
@@ -121,7 +121,7 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
@@ -132,7 +132,7 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$descriptivesRaincloudPlot <- TRUE
   options$descriptivesRaincloudPlotHorizontal <- TRUE
@@ -145,7 +145,7 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
 
-  options$dependents <- c("debInf", "debSame")
+  options$dependent <- c("debInf", "debSame")
   options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
@@ -153,7 +153,7 @@ test_that("Analysis handles errors", {
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "variance check")
   expect_null(results[["results"]][["errorMessage"]])
 
-  options$dependents <- "debMiss99"
+  options$dependent <- "debMiss99"
   options$group <- "contBinom"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
@@ -173,7 +173,7 @@ test_that("Analysis handles integer overflow", {
                     grouping      = rep(c(1, 2), each = 1e5))
 
   options <- initTTestOptions("TTestBayesianIndependentSamples")
-  options$dependents <- "dependent_var"
+  options$dependent <- "dependent_var"
   options$group <- "grouping"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
 
@@ -193,7 +193,7 @@ options$group <- "Rotation"
 options$bayesFactorRobustnessPlot <- TRUE
 options$priorAndPosteriorPlot <- TRUE
 options$sequentialAnalysisPlot <- TRUE
-options$dependents <- list("mean_NEO")
+options$dependent <- list("mean_NEO")
 
 hypotheses <- c("twoSided", "greater", "less")
 bftypes <- c("BF10", "BF01", "LogBF10")

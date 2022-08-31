@@ -11,7 +11,7 @@ getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["
 
 test_that("Main table results match", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
@@ -23,7 +23,7 @@ test_that("Main table results match", {
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- FALSE
 
@@ -62,7 +62,7 @@ test_that("Inferential and descriptives plots match", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesBarplot <- TRUE
   options$descriptivesBarplotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
@@ -72,7 +72,7 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
@@ -82,7 +82,7 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesRaincloudPlot <- TRUE
   options$descriptivesRaincloudPlotHorizontal <- TRUE
   set.seed(12312414)
@@ -94,7 +94,7 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Inferential plots with additional info match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contcor1"
+  options$dependent <- "contcor1"
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- TRUE
 
@@ -119,7 +119,7 @@ test_that("Inferential plots with additional info match", {
 
 test_that("Prior and posterior plot custom CI level match", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- "contcor1"
+  options$dependent <- "contcor1"
   options$priorAndPosteriorPlot <- TRUE
 
   options$priorAndPosteriorPlotCiLevel <- 0.8
@@ -148,7 +148,7 @@ test_that("Wilcoxon results match", {
   set.seed(0)
   suppressWarnings(RNGkind(sample.kind = "Rounding"))
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$dependents <- c("contNormal", "contExpon")
+  options$dependent <- c("contNormal", "contExpon")
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
@@ -166,18 +166,18 @@ test_that("Wilcoxon results match", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianOneSample")
 
-  options$dependents <- "debInf"
+  options$dependent <- "debInf"
 
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$dependents <- "debSame"
+  options$dependent <- "debSame"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$dependents <- "debMiss99"
+  options$dependent <- "debMiss99"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")

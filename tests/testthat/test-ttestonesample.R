@@ -6,7 +6,7 @@ context("One Sample TTest")
 
 test_that("Main table results match for t-test", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$vovkSellke <- TRUE
@@ -21,7 +21,7 @@ test_that("Main table results match for t-test", {
 
 test_that("Main table results match for Wilcoxon signed rank", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$effectSizeCi <- TRUE
@@ -51,7 +51,7 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
   options$meanDifferenceCi <- TRUE
   options$effectSizeCi <- TRUE
   options$effectSizeSE <- TRUE
-  options$dependents <- "marieAguirre"
+  options$dependent <- "marieAguirre"
 
   results <- jaspTools::runAnalysis("TTestOneSample", tempTestDat, options)
 
@@ -70,7 +70,7 @@ test_that("Rank biserial is consistent with rcompanion::wilcoxonOneSampleRC", {
 
 test_that("Main table results match for Z-test", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contNormal"
+  options$dependent <- "contNormal"
   options$student <- FALSE
   options$zTest <- TRUE
   options$sd <- 1.5
@@ -86,7 +86,7 @@ test_that("Main table results match for Z-test", {
 
 test_that("Normality table matches", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$normalityTest <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
@@ -95,7 +95,7 @@ test_that("Normality table matches", {
 
 test_that("Descriptives table matches", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptives <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
@@ -106,7 +106,7 @@ test_that("Descriptives table matches", {
 
 test_that("Descriptives plot matches", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -115,7 +115,7 @@ test_that("Descriptives plot matches", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesBarplot <- TRUE
   options$descriptivesBarplotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -125,7 +125,7 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -135,7 +135,7 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "contGamma"
+  options$dependent <- "contGamma"
   options$descriptivesRaincloudPlot <- TRUE
   options$descriptivesRaincloudPlotHorizontal <- TRUE
   set.seed(12312414)
@@ -146,7 +146,7 @@ test_that("Raincloud plot matches (horizontal)", {
 
 test_that("Raincloud plot matches (missing data)", {
   options <- initTTestOptions("TTestOneSample")
-  options$dependents <- "debMiss30"
+  options$dependent <- "debMiss30"
   options$descriptivesRaincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -157,17 +157,17 @@ test_that("Raincloud plot matches (missing data)", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestOneSample")
 
-  options$dependents <- "debInf"
+  options$dependent <- "debInf"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$dependents <- "debSame"
+  options$dependent <- "debSame"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$dependents <- "debMiss99"
+  options$dependent <- "debMiss99"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
