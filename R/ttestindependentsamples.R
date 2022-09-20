@@ -441,12 +441,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     }
 
     if (!is.null(errorMessage)) {
-      row[["F"]] <- NaN
-      table$addFootnote(errors$message, colNames = "F", rowNames = variable)
-    }
-
-    if (!result[["LeveneComputed"]])
-      table$addFootnote(gettext("F-statistic could not be calculated"), colNames = "F", rowNames = variable)
+      row[["fStat"]] <- NaN
+      table$addFootnote(errorMessage, colNames = "fStat", rowNames = variable)
+    } else if (!result[["LeveneComputed"]])
+      table$addFootnote(gettext("F-statistic could not be calculated"), colNames = "fStat", rowNames = variable)
 
     table$addRows(row, rowNames = variable)
   }
