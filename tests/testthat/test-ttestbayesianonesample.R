@@ -63,8 +63,8 @@ test_that("Inferential and descriptives plots match", {
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestBayesianOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesBarplot <- TRUE
-  options$descriptivesBarplotErrorType <- "se"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -73,7 +73,7 @@ test_that("Bar plot matches", {
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestBayesianOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -83,8 +83,8 @@ test_that("Raincloud plot matches (vertical)", {
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestBayesianOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesRaincloudPlot <- TRUE
-  options$descriptivesRaincloudPlotHorizontal <- TRUE
+  options$raincloudPlot <- TRUE
+  options$raincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

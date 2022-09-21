@@ -132,7 +132,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlot && !options$descriptivesBarplot && !options$descriptivesRaincloudPlot && isFALSE(options$differenceRaincloudPlot))
+  if(!options$descriptives && !options$descriptivesPlot && !options$barPlot && !options$raincloudPlot && isFALSE(options$differenceRaincloudPlot))
     return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
@@ -571,7 +571,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   pair <- NULL
   test <- NULL
-  errorType <- options[["descriptivesBarplotErrorType"]]
+  errorType <- options[["barPlotErrorType"]]
   groups <- if (!is.null(options[["group"]])) options[["group"]] else NULL
 
   errors <- .hasErrors(dataset,
@@ -595,7 +595,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                                    measurevar = "dependent",
                                    withinvars = "groupingVariable",
                                    idvar = "id",
-                                   conf.interval = options[["descriptivesBarplotCiLevel"]],
+                                   conf.interval = options[["barPlotCiLevel"]],
                                    na.rm = TRUE,
                                    .drop = FALSE,
                                    errorBarType = if (errorType == "ci") errorType else "se")
@@ -606,7 +606,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     summaryStat <- summarySE(data,
                              measurevar = "dependent",
                              groupvars = "groupingVariable",
-                             conf.interval = options[["descriptivesBarplotCiLevel"]],
+                             conf.interval = options[["barPlotCiLevel"]],
                              na.rm = TRUE,
                              .drop = FALSE,
                              errorBarType = if (errorType == "ci") errorType else "se")
@@ -626,7 +626,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     ylab <- ggplot2::ylab(NULL)
     xlab <- ggplot2::xlab(NULL)
   }
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarplotYAxisFixedToZero"]]) c(0, ciPos) else ciPos)
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["barPlotYAxisFixedToZero"]]) c(0, ciPos) else ciPos)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 

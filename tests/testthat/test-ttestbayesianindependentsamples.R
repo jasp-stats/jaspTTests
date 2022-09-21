@@ -112,8 +112,8 @@ test_that("Bar plot matches", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesBarplot <- TRUE
-  options$descriptivesBarplotErrorType <- "se"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -123,7 +123,7 @@ test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -134,8 +134,8 @@ test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesRaincloudPlot <- TRUE
-  options$descriptivesRaincloudPlotHorizontal <- TRUE
+  options$raincloudPlot <- TRUE
+  options$raincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

@@ -496,7 +496,7 @@
 # descriptives ----
 .ttestBayesianDescriptives <- function(jaspResults, dataset, options, ttestResults, errors) {
 
-  if (!(options[["descriptives"]] || options[["descriptivesPlot"]] || options[["descriptivesBarplot"]]))
+  if (!(options[["descriptives"]] || options[["descriptivesPlot"]] || options[["barPlot"]]))
     return()
 
   if (is.null(jaspResults[["descriptivesContainer"]])) {
@@ -561,13 +561,13 @@
     )
   }
 
-  if (options[["descriptivesBarplot"]]) {
+  if (options[["barPlot"]]) {
     if (is.null(descriptivesContainer[["barPlots"]])) {
 
       descriptivesBarPlots <- createJaspContainer(
         title = gettext("Bar Plots"),
-        dependencies = c("descriptivesBarplot", "testValue", "descriptivesBarplotYAxisFixedToZero",
-                         "descriptivesBarplotErrorType", "descriptivesBarplotCiLevel")
+        dependencies = c("barPlot", "testValue", "barPlotYAxisFixedToZero",
+                         "barPlotErrorType", "barPlotCiLevel")
       )
       descriptivesBarPlots$position <- 3L
       descriptivesContainer[["barPlots"]] <- descriptivesBarPlots
@@ -582,12 +582,12 @@
       dependents       = dependents,
       errors           = errors,
       grouping         = grouping,
-      CRI              = options[["descriptivesBarplotCiLevel"]],
+      CRI              = options[["barPlotCiLevel"]],
       canRun           = canDoAnalysis,
       testValueOpt     = options[["testValue"]],
       pairs            = derivedOptions[["pairs"]],
-      zeroFix          = options[["descriptivesBarplotYAxisFixedToZero"]],
-      errorBarType     = options[["descriptivesBarplotErrorType"]]
+      zeroFix          = options[["barPlotYAxisFixedToZero"]],
+      errorBarType     = options[["barPlotErrorType"]]
     )
   }
   return()
@@ -2298,7 +2298,7 @@
 }
 
 .ttestBayesianRainCloudPlots <- function(jaspResults, dataset, options, analysis) {
-  if (is.null(options[["descriptivesRaincloudPlot"]]) || !options[["descriptivesRaincloudPlot"]])
+  if (is.null(options[["raincloudPlot"]]) || !options[["raincloudPlot"]])
     return()
 
   .ttestDescriptivesContainer(jaspResults, options)
@@ -2306,14 +2306,14 @@
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
-    subcontainer$dependOn(c("descriptivesRaincloudPlot", "descriptivesRaincloudPlotHorizontal"))
+    subcontainer$dependOn(c("raincloudPlot", "raincloudPlotHorizontal"))
     subcontainer$position <- 6
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
 
-  horiz <- options[["descriptivesRaincloudPlotHorizontal"]]
+  horiz <- options[["raincloudPlotHorizontal"]]
   errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
   if (analysis == "one-sample") {
     for(variable in options$dependent) {

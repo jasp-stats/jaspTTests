@@ -45,7 +45,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
   ttest <- createJaspTable(title = gettext("One Sample T-Test"))
   ttest$dependOn(c("effectSize", "effectSizeCi",
                    "dependent", "effectSizeCiLevel", "student", "wilcoxon",
-                   "meanDifference", "meanDifferenceCi", "sd",
+                   "meanDifference", "meanDifferenceCi", "zTestSd",
                    "meanDifferenceCiLevel", "alternative",
                    "vovkSellke", "naAction", "zTest", "testValue"))
   ttest$showSpecifiedColumnsOnly <- TRUE
@@ -269,7 +269,7 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
-                          "mu" = options[["testValue"]], "sigma.x" = options[["sd"]],
+                          "mu" = options[["testValue"]], "sigma.x" = options[["zTestSd"]],
                           "ciValueMeanDiff"=optionsList[["percentConfidenceMeanDiff"]],
                           "ciValueESMeanDiff"=options[["effectSizeCiLevel"]])
 
@@ -446,17 +446,17 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarplot"]])
+  if (!options[["barPlot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
-                                                                               "descriptivesBarplotCiLevel",
-                                                                               "descriptivesBarplotErrorType",
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
+                                                                               "barPlotCiLevel",
+                                                                               "barPlotErrorType",
                                                                                "testValue",
-                                                                               "descriptivesBarplotYAxisFixedToZero"))
+                                                                               "barPlotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
@@ -481,20 +481,20 @@ TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestOneSampleDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesRaincloudPlot)
+  if(!options$raincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesRaincloudPlot", "descriptivesRaincloudPlotHorizontal", "testValue"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("raincloudPlot", "raincloudPlotHorizontal", "testValue"))
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
 
-  horiz <- options$descriptivesRaincloudPlotHorizontal
+  horiz <- options$raincloudPlotHorizontal
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "one-sample")
     for(variable in options$dependent) {

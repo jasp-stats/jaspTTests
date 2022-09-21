@@ -6,8 +6,8 @@ Upgrades
         Upgrade
         {
 	            functionName: "TTestIndependentSamples"
-				fromVersion: "0.16.3"
-				toVersion: "0.16.4"
+				fromVersion: "0.16.4"
+				toVersion: "0.16.5"
 
 	            ChangeRename { from:	"variables";										to:		"dependent"								}
 				ChangeRename { from:	"groupingVariable";									to:		"group"									}
@@ -36,15 +36,15 @@ Upgrades
 				ChangeRename { from:	"descriptivesEffectSizeConfidenceIntervalPercent";	to:		"effectSizeCiLevel"						}
 				ChangeRename { from:	"descriptivesPlots";								to:		"descriptivesPlot"						}
 				ChangeRename { from:	"descriptivesPlotsConfidenceInterval";				to:		"descriptivesPlotCiLevel"				}
-				ChangeRename { from:	"descriptivesBarPlots";								to:		"descriptivesBarplot"					}
-				ChangeRename { from:	"errorBarType";										to:		"descriptivesBarplotErrorType"			}
+				ChangeRename { from:	"descriptivesBarPlots";								to:		"barPlot"					}
+				ChangeRename { from:	"errorBarType";										to:		"barPlotErrorType"			}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -52,10 +52,10 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";			to:		"descriptivesBarplotCiLevel"			}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";						to:		"descriptivesBarplotYAxisFixedToZero"	}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";						to:		"descriptivesRaincloudPlot"				}
-				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";		to:		"descriptivesRaincloudPlotHorizontal"	}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";			to:		"barPlotCiLevel"			}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";						to:		"barPlotYAxisFixedToZero"	}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";						to:		"raincloudPlot"				}
+				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";		to:		"raincloudPlotHorizontal"	}
 				ChangeRename { from:	"VovkSellkeMPR";									to:		"vovkSellke"							}
 				ChangeRename { from:	"hypothesis";										to:		"alternative"							}
 
@@ -94,8 +94,8 @@ Upgrades
 		Upgrade
         {
 	            functionName: "TTestPairedSamples"
-				fromVersion: "0.16.3"
-				toVersion: "0.16.4"
+				fromVersion: "0.16.4"
+				toVersion: "0.16.5"
 
 				ChangeRename { from:	"students";													to:		"student"								}
 				ChangeRename { from:	"wilcoxonSignedRank";										to:		"wilcoxon"								}
@@ -105,15 +105,15 @@ Upgrades
 				ChangeRename { from:	"effSizeConfidenceIntervalPercent";							to:		"effectSizeCiLevel"						}
 				ChangeRename { from:	"descriptivesPlots";										to:		"descriptivesPlot"						}
 				ChangeRename { from:	"descriptivesPlotsConfidenceInterval";						to:		"descriptivesPlotCiLevel"				}
-				ChangeRename { from:	"descriptivesBarPlots";										to:		"descriptivesBarplot"					}
-				ChangeRename { from:	"errorBarType";												to:		"descriptivesBarplotErrorType"			}
+				ChangeRename { from:	"descriptivesBarPlots";										to:		"barPlot"					}
+				ChangeRename { from:	"errorBarType";												to:		"barPlotErrorType"			}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -121,9 +121,9 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";					to:		"descriptivesBarplotCiLevel"			}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";								to:		"descriptivesBarplotYAxisFixedToZero"	}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";								to:		"descriptivesRaincloudPlot"				}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";					to:		"barPlotCiLevel"			}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";								to:		"barPlotYAxisFixedToZero"	}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";								to:		"raincloudPlot"				}
 				ChangeRename { from:	"descriptivesPlotsRainCloudDifference";						to:		"differenceRaincloudPlot"				}
 				ChangeRename { from:	"descriptivesPlotsRainCloudDifferenceHorizontalDisplay";	to:		"differenceRaincloudPlotHorizontal"		}
 				ChangeRename { from:	"VovkSellkeMPR";											to:		"vovkSellke"							}
@@ -162,27 +162,27 @@ Upgrades
 
 		Upgrade
         {
-	            functionName: "TTestOneSample";	fromVersion: "0.16.3";		toVersion: "0.16.4";
+	            functionName: "TTestOneSample";	fromVersion: "0.16.4";		toVersion: "0.16.5";
 
 				ChangeRename { from:	"variables";									to:		"dependent"										}
 				ChangeRename { from:	"students";										to:		"student"										}
 				ChangeRename { from:	"mannWhitneyU";									to:		"wilcoxon"										}
-				ChangeRename { from:	"stddev";										to:		"sd"											}
+				ChangeRename { from:	"stddev";										to:		"zTestSd"											}
 				ChangeRename { from:	"meanDiffConfidenceIntervalCheckbox";			to:		"meanDifferenceCi"								}
 				ChangeRename { from:	"meanDiffConfidenceIntervalPercent";			to:		"meanDifferenceCiLevel"							}
 				ChangeRename { from:	"effSizeConfidenceIntervalCheckbox";			to:		"effectSizeCi"									}
 				ChangeRename { from:	"effSizeConfidenceIntervalPercent";				to:		"effectSizeCiLevel"								}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"								}
 				ChangeRename { from:	"descriptivesPlotsConfidenceInterval";			to:		"descriptivesPlotCi"							}
-				ChangeRename { from:	"descriptivesBarPlots";							to:		"descriptivesBarplot"							}
-				ChangeRename { from:	"errorBarType";									to:		"descriptivesBarplotErrorType"					}
+				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"							}
+				ChangeRename { from:	"errorBarType";									to:		"barPlotErrorType"					}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -190,10 +190,10 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"descriptivesBarplotCiLevel"					}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"descriptivesBarplotYAxisFixedToZero"			}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"descriptivesRaincloudPlot"						}
-				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"descriptivesRaincloudPlotHorizontal"			}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"barPlotCiLevel"					}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"barPlotYAxisFixedToZero"			}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"raincloudPlot"						}
+				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"raincloudPlotHorizontal"			}
 				ChangeRename { from:	"VovkSellkeMPR";								to:		"vovkSellke"									}
 				ChangeRename { from:	"hypothesis";									to:		"alternative"									}
 
@@ -230,7 +230,7 @@ Upgrades
 
 		Upgrade
         {
-	            functionName: "TTestBayesianIndependentSamples";	fromVersion: "0.16.3";		toVersion: "0.16.4";
+	            functionName: "TTestBayesianIndependentSamples";	fromVersion: "0.16.4";		toVersion: "0.16.5";
 
 				ChangeRename { from:	"variables";									to:		"dependent"										}
 				ChangeRename { from:	"groupingVariable";								to:		"group"											}
@@ -255,15 +255,15 @@ Upgrades
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";		to:		"priorAndPosteriorPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"								}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";			to:		"descriptivesPlotCiLevel"						}
-				ChangeRename { from:	"descriptivesBarPlots";							to:		"descriptivesBarplot"							}
-				ChangeRename { from:	"errorBarType";									to:		"descriptivesBarplotErrorType"					}
+				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"							}
+				ChangeRename { from:	"errorBarType";									to:		"barPlotErrorType"					}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -271,10 +271,10 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"descriptivesBarplotCiLevel"					}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"descriptivesBarplotYAxisFixedToZero"			}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"descriptivesRaincloudPlot"						}
-				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"descriptivesRaincloudPlotHorizontal"			}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"barPlotCiLevel"					}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"barPlotYAxisFixedToZero"			}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"raincloudPlot"						}
+				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"raincloudPlotHorizontal"			}
 				ChangeRename { from:	"testStatistic";								to:		"test"											}
 
 				ChangeJS
@@ -309,7 +309,7 @@ Upgrades
 
 		Upgrade
         {
-	            functionName: "TTestBayesianPairedSamples";	fromVersion: "0.16.3";		toVersion: "0.16.4";
+	            functionName: "TTestBayesianPairedSamples";	fromVersion: "0.16.4";		toVersion: "0.16.5";
 
 				ChangeRename { from:	"hypothesis";												to:		"alternative"									}
 
@@ -332,15 +332,15 @@ Upgrades
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";					to:		"priorAndPosteriorPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesPlots";										to:		"descriptivesPlot"								}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";						to:		"descriptivesPlotCiLevel"						}
-				ChangeRename { from:	"descriptivesBarPlots";										to:		"descriptivesBarplot"							}
-				ChangeRename { from:	"errorBarType";												to:		"descriptivesBarplotErrorType"					}
+				ChangeRename { from:	"descriptivesBarPlots";										to:		"barPlot"							}
+				ChangeRename { from:	"errorBarType";												to:		"barPlotErrorType"					}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -348,9 +348,9 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";					to:		"descriptivesBarplotCiLevel"					}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";								to:		"descriptivesBarplotYAxisFixedToZero"			}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";								to:		"descriptivesRaincloudPlot"						}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";					to:		"barPlotCiLevel"					}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";								to:		"barPlotYAxisFixedToZero"			}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";								to:		"raincloudPlot"						}
 				ChangeRename { from:	"descriptivesPlotsRainCloudDifference";						to:		"differenceRaincloudPlot"						}
 				ChangeRename { from:	"descriptivesPlotsRainCloudDifferenceHorizontalDisplay";	to:		"differenceRaincloudPlotHorizontal"				}
 				ChangeRename { from:	"testStatistic";											to:		"test"											}
@@ -387,7 +387,7 @@ Upgrades
 
 		Upgrade
         {
-	            functionName: "TTestBayesianOneSample";	fromVersion: "0.16.3";		toVersion: "0.16.4";
+	            functionName: "TTestBayesianOneSample";	fromVersion: "0.16.4";		toVersion: "0.16.5";
 
 				ChangeRename { from:	"variables";									to:		"dependent"										}
 				ChangeRename { from:	"plotPriorAndPosterior";						to:		"priorAndPosteriorPlot"							}
@@ -395,15 +395,15 @@ Upgrades
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";		to:		"priorAndPosteriorPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"								}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";			to:		"descriptivesPlotCiLevel"						}
-				ChangeRename { from:	"descriptivesBarPlots";							to:		"descriptivesBarplot"							}
-				ChangeRename { from:	"errorBarType";									to:		"descriptivesBarplotErrorType"					}
+				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"							}
+				ChangeRename { from:	"errorBarType";									to:		"barPlotErrorType"					}
 
 				ChangeJS
                 {
-	                    name:		"descriptivesBarplotErrorType"
+	                    name:		"barPlotErrorType"
 	                    jsFunction:	function(options)
 	                    {
-		                        switch(options["descriptivesBarplotErrorType"])
+		                        switch(options["barPlotErrorType"])
 		                        {
 			                            case "confidenceInterval":	return "ci";
 			                            case "standardError":		return "se";
@@ -411,10 +411,10 @@ Upgrades
 	                    }
                 }
 
-				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"descriptivesBarplotCiLevel"					}
-				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"descriptivesBarplotYAxisFixedToZero"			}
-				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"descriptivesRaincloudPlot"						}
-				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"descriptivesRaincloudPlotHorizontal"			}
+				ChangeRename { from:	"descriptivesBarPlotsConfidenceInterval";		to:		"barPlotCiLevel"					}
+				ChangeRename { from:	"descriptivesBarPlotsZeroFix";					to:		"barPlotYAxisFixedToZero"			}
+				ChangeRename { from:	"descriptivesPlotsRainCloud";					to:		"raincloudPlot"						}
+				ChangeRename { from:	"descriptivesPlotsRainCloudHorizontalDisplay";	to:		"raincloudPlotHorizontal"			}
 				ChangeRename { from:	"hypothesis";									to:		"alternative"
 	            }
 

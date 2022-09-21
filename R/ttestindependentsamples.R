@@ -662,15 +662,15 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarplot"]])
+  if (!options[["barPlot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
-                                                                               "descriptivesBarplotCiLevel",
-                                                                               "descriptivesBarplotErrorType",
-                                                                               "descriptivesBarplotYAxisFixedToZero"))
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
+                                                                               "barPlotCiLevel",
+                                                                               "barPlotErrorType",
+                                                                               "barPlotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
@@ -695,19 +695,19 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 }
 
 .ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesRaincloudPlot)
+  if(!options$raincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("descriptivesRaincloudPlot", "descriptivesRaincloudPlotHorizontal"))
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("raincloudPlot", "raincloudPlotHorizontal"))
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
-  horiz <- options$descriptivesRaincloudPlotHorizontal
+  horiz <- options$raincloudPlotHorizontal
   if(ready){
     groups <- options$group
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "independent")

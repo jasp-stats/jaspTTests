@@ -488,16 +488,16 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["descriptivesBarplot"]])
+  if (!options[["barPlot"]])
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("descriptivesBarplot",
-                                                                               "descriptivesBarplotCiLevel",
-                                                                               "descriptivesBarplotErrorType",
-                                                                               "descriptivesBarplotYAxisFixedToZero"))
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
+                                                                               "barPlotCiLevel",
+                                                                               "barPlotErrorType",
+                                                                               "barPlotYAxisFixedToZero"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
@@ -523,13 +523,13 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesRaincloudPlot)
+  if(!options$raincloudPlot)
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "descriptivesRaincloudPlot")
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "raincloudPlot")
     subcontainer$position <- 7
     container[["plotsRainCloud"]] <- subcontainer
   } else {

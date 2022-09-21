@@ -84,7 +84,7 @@ Form {
 
 		CheckBox
 		{
-			name: "descriptivesRaincloudPlot"; label: qsTr("Raincloud plots")
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
 		}
 
 		CheckBox

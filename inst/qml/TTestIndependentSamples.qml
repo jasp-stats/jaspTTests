@@ -89,8 +89,8 @@ Form
 
 		CheckBox
 		{
-			name: "descriptivesRaincloudPlot"; label: qsTr("Raincloud plots")
-			CheckBox { name: "descriptivesRaincloudPlotHorizontal"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
 		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}

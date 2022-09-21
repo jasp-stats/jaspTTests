@@ -25,13 +25,13 @@ import "./" as Common
 
 CheckBox
 {
-	name: 						"descriptivesBarplot"
+	name: 						"barPlot"
 	label: 						qsTr("Bar plots")
 	property int framework:		Common.Type.Framework.Classical
 
 	RadioButtonGroup
 		{
-			name: "descriptivesBarplotErrorType"
+			name: "barPlotErrorType"
 
 			RadioButton
 			{
@@ -40,10 +40,10 @@ CheckBox
 				checked: 			true
 				childrenOnSameRow: 	true
 
-				CIField { name: 	"descriptivesBarplotCiLevel" }
+				CIField { name: 	"barPlotCiLevel" }
 			}
 			RadioButton { value: 	"se";	label: qsTr("Standard error") }
 		}
 
-	CheckBox { name: "descriptivesBarplotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+	CheckBox { name: "barPlotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0");	checked: true }
 }

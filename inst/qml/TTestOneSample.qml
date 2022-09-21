@@ -40,7 +40,7 @@ Form
 		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")		}
 		CheckBox { name: "zTest";			label: qsTr("Z Test"); id: zTest		}
 		DoubleField { name: "testValue";	label: qsTr("Test value:");		defaultValue: 0;	negativeValues: true	}
-		DoubleField { name: "sd";		label: qsTr("Std. deviation:");	defaultValue: 1.0;	enabled: zTest.checked	}
+		DoubleField { name: "zTestSd";		label: qsTr("Std. deviation:");	defaultValue: 1.0;	enabled: zTest.checked	}
 	}
 
 	Group
@@ -82,8 +82,8 @@ Form
 
 		CheckBox
 		{
-			name: "descriptivesRaincloudPlot"; label: qsTr("Raincloud plots")
-			CheckBox { name: "descriptivesRaincloudPlotHorizontal"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
 		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}

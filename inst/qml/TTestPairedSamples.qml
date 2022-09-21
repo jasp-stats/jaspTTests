@@ -80,7 +80,7 @@ Form
 			framework:	form.framework
 		}
 
-		CheckBox{ name: "descriptivesRaincloudPlot";		label: qsTr("Raincloud plots")									}
+		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
 		CheckBox
 		{
 			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots")

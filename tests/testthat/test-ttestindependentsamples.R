@@ -79,8 +79,8 @@ test_that("Bar plot matches", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesBarplot <- TRUE
-  options$descriptivesBarplotErrorType <- "se"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -90,7 +90,7 @@ test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -101,8 +101,8 @@ test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
-  options$descriptivesRaincloudPlot <- TRUE
-  options$descriptivesRaincloudPlotHorizontal <- TRUE
+  options$raincloudPlot <- TRUE
+  options$raincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -143,7 +143,7 @@ test_that("Analysis works with unicode", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$descriptives <- TRUE
   options$descriptivesPlot <- TRUE
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   options$effectSize <- TRUE
   options$equalityOfVariancesTest <- TRUE
   options$group <- "Cloak"

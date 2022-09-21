@@ -73,7 +73,7 @@ test_that("Main table results match for Z-test", {
   options$dependent <- "contNormal"
   options$student <- FALSE
   options$zTest <- TRUE
-  options$sd <- 1.5
+  options$zTestSd <- 1.5
   options$effectSize <- TRUE
   options$effectSizeCi <- TRUE
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
@@ -116,8 +116,8 @@ test_that("Descriptives plot matches", {
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesBarplot <- TRUE
-  options$descriptivesBarplotErrorType <- "se"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -126,7 +126,7 @@ test_that("Bar plot matches", {
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -136,8 +136,8 @@ test_that("Raincloud plot matches (vertical)", {
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestOneSample")
   options$dependent <- "contGamma"
-  options$descriptivesRaincloudPlot <- TRUE
-  options$descriptivesRaincloudPlotHorizontal <- TRUE
+  options$raincloudPlot <- TRUE
+  options$raincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -147,7 +147,7 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Raincloud plot matches (missing data)", {
   options <- initTTestOptions("TTestOneSample")
   options$dependent <- "debMiss30"
-  options$descriptivesRaincloudPlot <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
