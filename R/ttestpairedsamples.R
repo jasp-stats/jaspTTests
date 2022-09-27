@@ -95,7 +95,7 @@ TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
       ttest$addColumnInfo(name = "sed", title = gettext("SE Difference"), type = "number")
 
     if (optionsList$wantsWilcox && optionsList$wantsStudents)
-      ttest$addFootnote(gettext("For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, effect size is given by the Hodges-Lehmann estimate."))
+      ttest$addFootnote(gettext("For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."))
   }
 
   if (optionsList$wantsConfidenceMeanDiff) {
