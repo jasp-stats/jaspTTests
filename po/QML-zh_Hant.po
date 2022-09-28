@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-30 19:46+0000\n"
-"Last-Translator: Changya Hu <changyahu@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
-"jasp/jaspttests-qml/zh_Hant/>\n"
-"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.9-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -145,17 +139,19 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "其他資訊"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
@@ -209,25 +205,29 @@ msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -241,17 +241,19 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "其他資訊"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
@@ -289,25 +291,29 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "分群變項"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
@@ -325,9 +331,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
@@ -365,21 +372,25 @@ msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "組1 ≠ 組1"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "組1 > 組2"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "組1 < 組2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -393,17 +404,19 @@ msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
@@ -433,9 +446,10 @@ msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
@@ -457,9 +471,10 @@ msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -481,17 +496,19 @@ msgctxt "TTestOneSample|"
 msgid "Normality"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per dependent variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
@@ -505,9 +522,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
@@ -533,9 +551,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -557,17 +576,19 @@ msgctxt "TTestPairedSamples|"
 msgid "Normality"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per dependent variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "完全排除法"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
@@ -605,9 +626,10 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "依變項"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
@@ -643,4 +665,32 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Bar plots"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Standard error"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Fix horizontal axis to 0"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
 msgstr ""

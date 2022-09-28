@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.16.4\n"
-"POT-Creation-Date: 2022-09-17 03:21\n"
+"POT-Creation-Date: 2022-09-28 10:01\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -391,7 +391,7 @@ msgstr ""
 msgid "z"
 msgstr ""
 
-msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, effect size is given by the Hodges-Lehmann estimate."
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
