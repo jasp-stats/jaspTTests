@@ -1,15 +1,21 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-10-12 19:54+0000\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15-dev\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr "T-Tests"
+msgstr "Tests t"
 
 msgctxt "Description|"
 msgid "Classical"
@@ -17,15 +23,15 @@ msgstr "Classique"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "Test T pour échantillons indépendants"
+msgstr "Test t pour échantillons indépendants"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Test T pour échantillons appariés"
+msgstr "Test t pour échantillons appariés"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Test T pour échantillon unique"
+msgstr "Test t pour échantillon unique"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -33,15 +39,15 @@ msgstr "Bayésien"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "Test T bayésien pour échantillons indépendants"
+msgstr "Test t bayésien pour échantillons indépendants"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Test T bayésien pour échantillons appariés"
+msgstr "Test t bayésien pour échantillons appariés"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "Test T bayésien pour échantillon unique"
+msgstr "Test t bayésien pour échantillon unique"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
@@ -641,30 +647,28 @@ msgstr "Affichage horizontal"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr ""
+msgstr "de Levene"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "Diagramme en barres"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
 msgstr "Intervalle de confiance"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
 msgstr "Intervalle de crédibilité"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "Erreur standard"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "Fixer l'axe horizontal à 0"
