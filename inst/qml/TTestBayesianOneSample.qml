@@ -29,16 +29,16 @@ Form
 
 	plotHeight: 240
 	plotWidth:  320
-	
+
 	CheckBox { name: "standardizedEffectSize"; checked: true; visible: false }
-	
+
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }		
-		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); suggestedColumns: ["scale"] }
+		AvailableVariablesList { name: "allVariablesList" }
+		AssignedVariablesList { name: "dependent"; title: qsTr("Variables"); suggestedColumns: ["scale"] }
 	}
-	
+
 	DoubleField { name: "testValue"; label: qsTr("Test value:"); defaultValue: 0; negativeValues: true }
 
 	Group
@@ -48,71 +48,71 @@ Form
 
 		CheckBox
 		{
-			name: "plotPriorAndPosterior";		label: qsTr("Prior and posterior")
-			CheckBox { name: "plotPriorAndPosteriorAdditionalInfo";		label: qsTr("Additional info"); checked: true }
-			CIField  { name: "priorAndPosteriorPlotsCredibleInterval";	label: qsTr("Credible interval") }
+			name: "priorAndPosteriorPlot";		label: qsTr("Prior and posterior")
+			CheckBox { name: "priorAndPosteriorPlotAdditionalInfo";		label: qsTr("Additional info"); checked: true }
+			CIField  { name: "priorAndPosteriorPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "plotBayesFactorRobustness";	label: qsTr("Bayes factor robustness check")
-			CheckBox { name: "plotBayesFactorRobustnessAdditionalInfo";	label: qsTr("Additional info"); checked: true }
+			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check")
+			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); checked: true }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "plotSequentialAnalysis";		label: qsTr("Sequential analysis")
-			CheckBox { name: "plotSequentialAnalysisRobustness";		label: qsTr("Robustness check") }
+			name: "bfSequentialPlot";		label: qsTr("Sequential analysis")
+			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check") }
 		}
 
 		CheckBox
 		{
-			name: "descriptivesPlots";			label: qsTr("Descriptives")
-			CIField { name: "descriptivesPlotsCredibleInterval";	label: qsTr("Credible interval") }
+			name: "descriptivesPlot";			label: qsTr("Descriptives")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
-		
+
 		Common.BarPlots
 		{
 			framework:	form.framework
 		}
-		
+
 		CheckBox
 		{
-			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
-			CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
 	}
 
 
 	RadioButtonGroup
 	{
-		name: "hypothesis"
-		title: qsTr("Alt. Hypothesis")
-		RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true		}
-		RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value");					}
-		RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value");					}
+		name: "alternative"
+		title: qsTr("Alternative Hypothesis")
+		RadioButton { value: "twoSided";		label: qsTr("≠ Test value"); checked: true		}
+		RadioButton { value: "greater";	label: qsTr("> Test value");					}
+		RadioButton { value: "less";		label: qsTr("< Test value");					}
 	}
 
 	BayesFactorType { }
 
 		RadioButtonGroup
 	{
-		name: "testStatistic"
+		name: "test"
 		id: testStatistic
 		title: qsTr("Tests")
 		RadioButton
 		{
 			id: student
-			value: "Student";	label: qsTr("Student"); checked: true }
+			value: "student";	label: qsTr("Student"); checked: true }
 		RadioButton
 		{
-			value: "Wilcoxon";	label: qsTr("Wilcoxon signed-rank"); id: testWilcoxon
-			IntegerField { name: "wilcoxonSamplesNumber"; label: qsTr("No. samples"); defaultValue: 1000; min: 100; max: 10000; fieldWidth: 60 }
+			value: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); id: testWilcoxon
+			IntegerField { name: "wilcoxonSamples"; label: qsTr("No. samples"); defaultValue: 1000; min: 100; max: 10000; fieldWidth: 60 }
 		}
 	}
-	
+
 	Group
 	{
 		title: qsTr("Additional Statistics")
@@ -121,13 +121,13 @@ Form
 
 	RadioButtonGroup
 	{
-		name: "missingValues"
+		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "excludeAnalysisByAnalysis";	label: qsTr("Exclude cases per dependent variable"); checked: true	}
-		RadioButton { value: "excludeListwise";				label: qsTr("Exclude cases listwise")							}
+		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); checked: true }
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")							}
 	}
-	
+
 
 	SubjectivePriors { id: priors }
-	
+
 }

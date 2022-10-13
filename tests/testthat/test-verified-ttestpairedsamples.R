@@ -6,15 +6,15 @@ context("Paired Samples TTest -- Verification project")
 
 
 # https://jasp-stats.github.io/jasp-verification-project/t-tests.html#paired-samples-t-test
-test_that("Main table results match R, SPSS, SAS and MiniTab", { 
+test_that("Main table results match R, SPSS, SAS and MiniTab", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   options$pairs <- list(c("Husband", "Wife"))
   options$meanDifference <- TRUE
-  options$meanDiffConfidenceIntervalCheckbox <- TRUE
+  options$meanDifferenceCi <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "Pairedsamplettest.csv", options)
-  
+
   resultTable <- results$results$ttest$data
-  
+
   jaspTools::expect_equal_tables(
     "test"=resultTable,
     "ref"=list("FALSE", 7, -1.10992653616265, 3.875, 0.108643283879839, 2.10812628382918,
@@ -23,17 +23,17 @@ test_that("Main table results match R, SPSS, SAS and MiniTab", {
 
 
 # https://jasp-stats.github.io/jasp-verification-project/t-tests.html#wilcoxon-test
-test_that("Wilcoxon results match R, SPSS, SAS and MiniTab", { 
+test_that("Wilcoxon results match R, SPSS, SAS and MiniTab", {
   options <- jaspTools::analysisOptions("TTestPairedSamples")
   options$pairs <- list(c("Control", "Treatment."))
-  options$students <- FALSE
-  options$wilcoxonSignedRank <- TRUE
-  
+  options$student <- FALSE
+  options$wilcoxon <- TRUE
+
   results <- jaspTools::runAnalysis("TTestPairedSamples", "Wilcoxon.csv", options)
-  
+
   # Main Table
   resultTable <- results$results$ttest$data
-  
+
   jaspTools::expect_equal_tables(
     "test"=resultTable,
     "ref"=list("FALSE", 15, "", 0.220971735391012, "-", "Control", "Treatment.",

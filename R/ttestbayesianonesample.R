@@ -31,11 +31,11 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   if (!derivedOptions[["ready"]])
     return(ttestResults)
 
-  dependents <- options[["variables"]]
+  dependents <- options[["dependent"]]
 
   # create empty object for the table, this has previously computed rows already filled in
   ttestRows <- .ttestBayesianCreateTtestRows(dependents, options, derivedOptions, ttestState)
-  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["hypothesis"]]
+  alreadyComputed <- !is.na(ttestRows[, "BF"]) & ttestResults[["hypothesis"]] == options[["alternative"]]
 
   ttestTable$setData(ttestRows)
   .ttestBayesianSetFootnotesMainTable(ttestTable, ttestResults, dependents[alreadyComputed])
@@ -47,7 +47,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
 
   nvar <- length(dependents)
   if (derivedOptions[["wilcoxTest"]])
-    .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamplesNumber"]])
+    .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamples"]])
 
   for (var in dependents[!alreadyComputed]) {
 
@@ -121,7 +121,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
 
           .setSeedJASP(options)
           r <- try(.signRankGibbsSampler(
-            xVals = x, nSamples = options[["wilcoxonSamplesNumber"]], testValue = 0, nBurnin = 0,
+            xVals = x, nSamples = options[["wilcoxonSamples"]], testValue = 0, nBurnin = 0,
             cauchyPriorParameter = options[["priorWidth"]]
           ))
 
@@ -189,7 +189,7 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
     gettext("Bayesian One Sample T-Test")
   }
 
-  jaspTable$dependOn(c("bayesFactorType", "variables", "testValue"))
+  jaspTable$dependOn(c("bayesFactorType", "dependent", "testValue"))
 
   if (options[["effectSizeStandardized"]] == "default") {
     citations <- .ttestBayesianCitations[c("MoreyEtal2015", "RouderEtal2009")]
@@ -201,25 +201,25 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   jaspTable$addCitation(citations)
 
   bfType <- options[["bayesFactorType"]]
-	hypothesis <- switch(options[["hypothesis"]],
-	  "notEqualToTestValue"  = "equal",
-	  "greaterThanTestValue" = "greater",
-	  "lessThanTestValue"    = "smaller"
+	hypothesis <- switch(options[["alternative"]],
+	  "twoSided"  = "equal",
+	  "greater" = "greater",
+	  "less"    = "smaller"
 	)
 	bfTitle <- .ttestBayesianGetBFTitle(bfType, hypothesis)
 
   testValueFormatted <- format(options[["testValue"]], drop0trailing = TRUE)
   message <- switch(
-    options[["hypothesis"]],
-    "greaterThanTestValue" = gettextf(
+    options[["alternative"]],
+    "greater" = gettextf(
       "For all tests, the alternative hypothesis specifies that the population mean is greater than %s.",
       testValueFormatted
     ),
-    "lessThanTestValue"    = gettextf(
+    "less"    = gettextf(
       "For all tests, the alternative hypothesis specifies that the population mean is less than %s.",
       testValueFormatted
     ),
-    "notEqualToTestValue"  = gettextf(
+    "twoSided"  = gettextf(
       "For all tests, the alternative hypothesis specifies that the population mean differs from %s.",
       testValueFormatted
     )
@@ -232,9 +232,9 @@ TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) 
   if (derivedOptions[["wilcoxTest"]]) {
     jaspTable$addColumnInfo(name = "error", type = "number", title = "W")
     jaspTable$addColumnInfo(name = "rHat", type = "number", title = "Rhat")
-    jaspTable$addFootnote(gettextf("Result based on data augmentation algorithm with 5 chains of %.0f iterations.", options[["wilcoxonSamplesNumber"]]))
+    jaspTable$addFootnote(gettextf("Result based on data augmentation algorithm with 5 chains of %.0f iterations.", options[["wilcoxonSamples"]]))
   } else {
-    if (options[["hypothesis"]] == "notEqualToTestValue") {
+    if (options[["alternative"]] == "twoSided") {
       fmt <- "sf:4;dp:3"
     } else {
       fmt <- "sf:4;dp:3;~"

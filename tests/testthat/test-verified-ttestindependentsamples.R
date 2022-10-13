@@ -6,13 +6,13 @@ context("Independent Samples TTest -- Verification project")
 
 
 options <- jaspTools::analysisOptions("TTestIndependentSamples")
-options$variables <- "Score"
-options$groupingVariable <- "Group"
-options$students <- TRUE
-options$welchs <- TRUE
-options$mannWhitneyU <- FALSE
+options$dependent <- "Score"
+options$group <- "Group"
+options$student <- TRUE
+options$welch <- TRUE
+options$wilcoxon <- FALSE
 options$meanDifference <- TRUE
-options$meanDiffConfidenceIntervalCheckbox <- TRUE
+options$meanDifferenceCi <- TRUE
 options$descriptives <- TRUE
 
 results <- jaspTools::runAnalysis("TTestIndependentSamples", "IndependentSamplettest.csv", options)
@@ -45,11 +45,11 @@ test_that("Descriptives table results match R, SPSS, SAS and Minitab 1", {
 # https://jasp-stats.github.io/jasp-verification-project/t-tests.html#mann-whitney-test
 test_that("Mann-Whitney U table results match R, SPSS, SAS and MiniTab", {
   options <- jaspTools::analysisOptions("TTestIndependentSamples")
-  options$variables <- "Score"
-  options$groupingVariable <- "Group"
-  options$students <- FALSE
-  options$welchs <- FALSE
-  options$mannWhitneyU <- TRUE
+  options$dependent <- "Score"
+  options$group <- "Group"
+  options$student <- FALSE
+  options$welch <- FALSE
+  options$wilcoxon <- TRUE
 
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "MannWhitney.csv", options)
 

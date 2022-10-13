@@ -33,16 +33,16 @@ Form
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "variables";			title: qsTr("Dependent Variables");			suggestedColumns: ["scale"]	}
-		AssignedVariablesList { name: "groupingVariable";	title: qsTr("Grouping Variable");	suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
+		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");			suggestedColumns: ["scale"]	}
+		AssignedVariablesList { name: "group";	title: qsTr("Grouping Variable");	suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
 	}
 
 	Group
 	{
 		title: qsTr("Tests")
-    CheckBox { name: "students";		label: qsTr("Student"); checked: true	}
-		CheckBox { name: "welchs";			label: qsTr("Welch")					}
-		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney")				}
+    	CheckBox { name: "student";		label: qsTr("Student"); checked: true	}
+		CheckBox { name: "welch";			label: qsTr("Welch")					}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")				}
 	}
 
 	Group
@@ -54,32 +54,32 @@ Form
 			name: "meanDifference"; label: qsTr("Location parameter")
 			CheckBox
 			{
-				name: "meanDiffConfidenceIntervalCheckbox"; label: qsTr("Confidence interval")
+				name: "meanDifferenceCi"; label: qsTr("Confidence interval")
 				childrenOnSameRow: true
-				CIField { name: "descriptivesMeanDiffConfidenceIntervalPercent" }
+				CIField { name: "meanDifferenceCiLevel" }
 			}
 		}
 		CheckBox
 		{
 			name: "effectSize"; label: qsTr("Effect size")
 			RadioButtonGroup {
-				name: "effectSizesType";
-				RadioButton { value: "cohensD"; label: qsTr("Cohen's d") ; checked: true }
-				RadioButton { value: "glassD"; label: qsTr("Glass' delta") }
-				RadioButton { value: "hedgesG"; label: qsTr("Hedges' g") }
+				name: "effectSizeType";
+				RadioButton { value: "cohen"; label: qsTr("Cohen's d") ; checked: true }
+				RadioButton { value: "glass"; label: qsTr("Glass' delta") }
+				RadioButton { value: "hedges"; label: qsTr("Hedges' g") }
 				CheckBox
 				{
-					name: "effSizeConfidenceIntervalCheckbox"; label: qsTr("Confidence interval")
+					name: "effectSizeCi"; label: qsTr("Confidence interval")
 					childrenOnSameRow: true
-					PercentField { name: "descriptivesEffectSizeConfidenceIntervalPercent"; defaultValue: 95 }
+					PercentField { name: "effectSizeCiLevel"; defaultValue: 95 }
 				}
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives")								}
 		CheckBox
 		{
-			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotsConfidenceInterval"; label: qsTr("Confidence interval") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") }
 		}
 
 		Common.BarPlots
@@ -89,31 +89,31 @@ Form
 
 		CheckBox
 		{
-			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
-			CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
-		CheckBox { name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}
 
 	RadioButtonGroup
 	{
-		name: "hypothesis"
-		title: qsTr("Alt. Hypothesis")
-		RadioButton { value: "groupsNotEqual";	label: qsTr("Group 1 ≠ Group 2"); checked: true	}
-		RadioButton { value: "groupOneGreater";	label: qsTr("Group 1 > Group 2")					}
-		RadioButton { value: "groupTwoGreater"; label: qsTr("Group 1 < Group 2")					}
+		name: "alternative"
+		title: qsTr("Alternative Hypothesis")
+		RadioButton { value: "twoSided";	label: qsTr("Group 1 ≠ Group 2"); checked: true	}
+		RadioButton { value: "greater";	label: qsTr("Group 1 > Group 2")					}
+		RadioButton { value: "less"; label: qsTr("Group 1 < Group 2")					}
 	}
 
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTests";	label: qsTr("Normality") }
+		CheckBox { name: "normalityTest";	label: qsTr("Normality") }
 		CheckBox
 		{
-			name: "equalityOfVariancesTests";	label: qsTr("Equality of variances")
+			name: "equalityOfVariancesTest";	label: qsTr("Equality of variances")
 			RadioButtonGroup
 			{
-				name: "equalityOfVarianceType"
+				name: "equalityOfVariancesTestType"
 				RadioButton { value: "brownForsythe";	label: qsTr("Brown-Forsythe") ; checked: true }
 				RadioButton { value: "levene";			label: qsTr("Levene's") }
 			}
@@ -122,9 +122,9 @@ Form
 
 	RadioButtonGroup
 	{
-		name: "missingValues"
+		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "excludeAnalysisByAnalysis";	label: qsTr("Exclude cases per dependent variable"); checked: true	}
-		RadioButton { value: "excludeListwise";				label: qsTr("Exclude cases listwise")							}
+		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); checked: true	}
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")							}
 	}
 }

@@ -8,9 +8,9 @@ test_that("Main table results match R, SPSS, SAS and MiniTab", {
   options$testValue <- 3
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
-  options$meanDiffConfidenceIntervalCheckbox <- TRUE
-  options$effSizeConfidenceIntervalCheckbox <- TRUE
-  options$variables <- "V1"
+  options$meanDifferenceCi <- TRUE
+  options$effectSizeCi <- TRUE
+  options$dependent <- "V1"
 
   results <- jaspTools::runAnalysis("TTestOneSample", "OSTT.csv", options)
 

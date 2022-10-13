@@ -11,7 +11,7 @@ getDescriptivesTable <- function(x) x[["results"]][["descriptivesContainer"]][["
 
 test_that("Main table results match", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contNormal"
+  options$dependent <- "contNormal"
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
@@ -23,19 +23,19 @@ test_that("Main table results match", {
 test_that("Inferential and descriptives plots match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contNormal"
-  options$plotPriorAndPosterior <- TRUE
-  options$plotPriorAndPosteriorAdditionalInfo <- FALSE
+  options$dependent <- "contNormal"
+  options$priorAndPosteriorPlot <- TRUE
+  options$priorAndPosteriorPlotAdditionalInfo <- FALSE
 
-  options$plotBayesFactorRobustness <- TRUE
-  options$plotBayesFactorRobustnessAdditionalInfo <- FALSE
+  options$bfRobustnessPlot <- TRUE
+  options$bfRobustnessPlotAdditionalInfo <- FALSE
 
-  options$plotSequentialAnalysis <- TRUE
-  options$plotSequentialAnalysisRobustness <- FALSE
+  options$bfSequentialPlot <- TRUE
+  options$bfSequentialPlotRobustness <- FALSE
 
   options$descriptives <- TRUE
-  options$descriptivesPlots <- TRUE
-  options$descriptivesPlotsCredibleInterval <- 0.90
+  options$descriptivesPlot <- TRUE
+  options$descriptivesPlotCiLevel <- 0.90
 
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
 
@@ -62,9 +62,9 @@ test_that("Inferential and descriptives plots match", {
 
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contGamma"
-  options$descriptivesBarPlots <- TRUE
-  options$errorBarType <- "standardError"
+  options$dependent <- "contGamma"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -72,8 +72,8 @@ test_that("Bar plot matches", {
 
 test_that("Raincloud plot matches (vertical)", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contGamma"
-  options$descriptivesPlotsRainCloud <- TRUE
+  options$dependent <- "contGamma"
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -82,9 +82,9 @@ test_that("Raincloud plot matches (vertical)", {
 
 test_that("Raincloud plot matches (horizontal)", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contGamma"
-  options$descriptivesPlotsRainCloud <- TRUE
-  options$descriptivesPlotsRainCloudHorizontalDisplay <- TRUE
+  options$dependent <- "contGamma"
+  options$raincloudPlot <- TRUE
+  options$raincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -94,15 +94,15 @@ test_that("Raincloud plot matches (horizontal)", {
 test_that("Inferential plots with additional info match", {
   set.seed(0)
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contcor1"
-  options$plotPriorAndPosterior <- TRUE
-  options$plotPriorAndPosteriorAdditionalInfo <- TRUE
+  options$dependent <- "contcor1"
+  options$priorAndPosteriorPlot <- TRUE
+  options$priorAndPosteriorPlotAdditionalInfo <- TRUE
 
-  options$plotBayesFactorRobustness <- TRUE
-  options$plotBayesFactorRobustnessAdditionalInfo <- TRUE
+  options$bfRobustnessPlot <- TRUE
+  options$bfRobustnessPlotAdditionalInfo <- TRUE
 
-  options$plotSequentialAnalysis <- TRUE
-  options$plotSequentialAnalysisRobustness <- TRUE
+  options$bfSequentialPlot <- TRUE
+  options$bfSequentialPlotRobustness <- TRUE
 
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
 
@@ -119,27 +119,27 @@ test_that("Inferential plots with additional info match", {
 
 test_that("Prior and posterior plot custom CI level match", {
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- "contcor1"
-  options$plotPriorAndPosterior <- TRUE
+  options$dependent <- "contcor1"
+  options$priorAndPosteriorPlot <- TRUE
 
-  options$priorAndPosteriorPlotsCredibleInterval <- 0.8
+  options$priorAndPosteriorPlotCiLevel <- 0.8
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
-  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
+  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_priorAndPosteriorPlot"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-80")
 
-  options$priorAndPosteriorPlotsCredibleInterval <- 0.99
+  options$priorAndPosteriorPlotCiLevel <- 0.99
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
-  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
+  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_priorAndPosteriorPlot"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99")
 
-  options$priorAndPosteriorPlotsCredibleInterval <- 0.999
+  options$priorAndPosteriorPlotCiLevel <- 0.999
 
   results  <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
-  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_plotPriorAndPosterior"]][["data"]]
+  plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_contcor1"]][["collection"]][["ttestContainer_inferentialPlots_contcor1_priorAndPosteriorPlot"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "prior-posterior-ci-level-99.9")
 })
@@ -148,14 +148,14 @@ test_that("Wilcoxon results match", {
   set.seed(0)
   suppressWarnings(RNGkind(sample.kind = "Rounding"))
   options <- initTTestOptions("TTestBayesianOneSample")
-  options$variables <- c("contNormal", "contExpon")
+  options$dependent <- c("contNormal", "contExpon")
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
-  options$wilcoxonSamplesNumber <- 1e1
+  options$wilcoxonSamples <- 1e1
   options$testValue <- 1
-  options$testStatistic <- "Wilcoxon"
-  options$hypothesis <- "greaterThanTestValue"
+  options$test <- "wilcoxon"
+  options$alternative <- "greater"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
   jaspTools::expect_equal_tables(table, list(0.0451492401700035, 351, 1.06493226208061, "contNormal", 42.1408097943746,
@@ -166,18 +166,18 @@ test_that("Wilcoxon results match", {
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianOneSample")
 
-  options$variables <- "debInf"
+  options$dependent <- "debInf"
 
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$variables <- "debSame"
+  options$dependent <- "debSame"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$variables <- "debMiss99"
+  options$dependent <- "debMiss99"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")

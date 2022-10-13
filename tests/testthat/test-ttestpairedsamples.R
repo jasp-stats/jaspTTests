@@ -7,12 +7,12 @@ context("Paired Samples TTest")
 test_that("Main table results match for one pair * multiple tests", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$wilcoxonSignedRank <- TRUE
-  options$hypothesis <- "groupOneGreater"
+  options$wilcoxon <- TRUE
+  options$alternative <- "greater"
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
-  options$effSizeConfidenceIntervalCheckbox <- TRUE
-  options$VovkSellkeMPR <- TRUE
+  options$effectSizeCi <- TRUE
+  options$vovkSellke <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -39,7 +39,7 @@ test_that("Main table results match for multiple pairs * one test", {
 test_that("Normality table matches", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$normalityTests <- TRUE
+  options$normalityTest <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -62,7 +62,7 @@ test_that("Descriptives table matches", {
 test_that("Descriptives plot matches", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlots <- TRUE
+  options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives")
@@ -71,8 +71,8 @@ test_that("Descriptives plot matches", {
 test_that("Bar plot matches", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesBarPlots <- TRUE
-  options$errorBarType <- "standardError"
+  options$barPlot <- TRUE
+  options$barPlotErrorType <- "se"
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "barPlot")
@@ -81,7 +81,7 @@ test_that("Bar plot matches", {
 test_that("Raincloud plot matches", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlotsRainCloud <- TRUE
+  options$raincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -91,7 +91,7 @@ test_that("Raincloud plot matches", {
 test_that("Raincloud difference plot matches (vertical)", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlotsRainCloudDifference <- TRUE
+  options$differenceRaincloudPlot <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -101,8 +101,8 @@ test_that("Raincloud difference plot matches (vertical)", {
 test_that("Raincloud difference plot matches (horizontal)", {
   options <- initTTestOptions("TTestPairedSamples")
   options$pairs <- list(c("contNormal", "contGamma"))
-  options$descriptivesPlotsRainCloudDifference <- TRUE
-  options$descriptivesPlotsRainCloudDifferenceHorizontalDisplay <- TRUE
+  options$differenceRaincloudPlot <- TRUE
+  options$differenceRaincloudPlotHorizontal <- TRUE
   set.seed(12312414)
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

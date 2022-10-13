@@ -25,25 +25,25 @@ import "./" as Common
 
 CheckBox
 {
-	name: 						"descriptivesBarPlots"
+	name: 						"barPlot"
 	label: 						qsTr("Bar plots")
 	property int framework:		Common.Type.Framework.Classical
-	
+
 	RadioButtonGroup
 		{
-			name: "errorBarType"
-			
+			name: "barPlotErrorType"
+
 			RadioButton
 			{
-				value: 				"confidenceInterval"		
+				value: 				"ci"
 				label: 				framework === Common.Type.Framework.Classical ? qsTr("Confidence interval") : qsTr("Credible interval")
 				checked: 			true
 				childrenOnSameRow: 	true
-				
-				CIField { name: 	"descriptivesBarPlotsConfidenceInterval" }
+
+				CIField { name: 	"barPlotCiLevel" }
 			}
-			RadioButton { value: 	"standardError";	label: qsTr("Standard error") }
+			RadioButton { value: 	"se";	label: qsTr("Standard error") }
 		}
-	
-	CheckBox { name: "descriptivesBarPlotsZeroFix";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+
+	CheckBox { name: "barPlotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0");	checked: true }
 }

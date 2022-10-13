@@ -29,17 +29,17 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   if (!is.null(dataset))
     return(dataset)
   else {
-    groups  <- options$groupingVariable
+    groups  <- options$group
     if (!is.null(groups) && groups == "")
       groups <- NULL
     if(type %in% c("one-sample", "independent"))
-      depvars <- unlist(options$variables)
+      depvars <- unlist(options$dependent)
     else if (type == 'paired') {
       depvars <- unlist(options$pairs)
       depvars <- depvars[depvars != ""]
     }
     exclude <- NULL
-    if (options$missingValues == "excludeListwise")
+    if (options$naAction == "listwise")
       exclude <- depvars
     return(.readDataSetToEnd(columns.as.numeric  = depvars,
                              columns.as.factor   = groups,
@@ -63,10 +63,10 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                  exitAnalysisIfErrors = TRUE)
     }
   else if(type == "independent") {
-    if (length(options$variables) != 0 && options$groupingVariable != '')
+    if (length(options$dependent) != 0 && options$group != '')
       .hasErrors(dataset,
                  type = 'factorLevels',
-                 factorLevels.target  = options$groupingVariable,
+                 factorLevels.target  = options$group,
                  factorLevels.amount  = '!= 2',
                  exitAnalysisIfErrors = TRUE)
       }
@@ -75,30 +75,30 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 .ttestOptionsList <- function(options, type){
   optionsList <- list()
   optionsList$wantsEffect     <- options$effectSize
-  optionsList$wantsConfidenceEffSize <- (options$effSizeConfidenceIntervalCheckbox && options$effectSize)
-  optionsList$wantsStudents   <- options$students
+  optionsList$wantsConfidenceEffSize <- (options$effectSizeCi && options$effectSize)
+  optionsList$wantsStudents   <- options$student
   optionsList$wantsDifference <- options$meanDifference
-  optionsList$wantsConfidenceMeanDiff <- (options$meanDiffConfidenceIntervalCheckbox && options$meanDifference)
+  optionsList$wantsConfidenceMeanDiff <- (options$meanDifferenceCi && options$meanDifference)
 
   if(type == "paired") {
-    optionsList$wantsWilcox <- options$wilcoxonSignedRank
+    optionsList$wantsWilcox <- options$wilcoxon
     optionsList$whichTests  <- c("Student", "Wilcoxon")[c(optionsList$wantsStudents, optionsList$wantsWilcox)]
   }
   else if(type == "one-sample"){
     optionsList$wantsZtest  <- options$zTest
-    optionsList$wantsWilcox <- options$mannWhitneyU
+    optionsList$wantsWilcox <- options$wilcoxon
     optionsList$whichTests  <- c("Student", "Wilcoxon", "Z")[c(optionsList$wantsStudents, optionsList$wantsWilcox, optionsList$wantsZtest)]
   }
-  optionsList$wantsConfidenceEffSize    <- (options$effSizeConfidenceIntervalCheckbox && options$effectSize)
+  optionsList$wantsConfidenceEffSize    <- (options$effectSizeCi && options$effectSize)
   if(type %in% c("paired", "one-sample")) {
-    optionsList$percentConfidenceEffSize  <- options$effSizeConfidenceIntervalPercent
-    optionsList$percentConfidenceMeanDiff <- options$meanDiffConfidenceIntervalPercent
+    optionsList$percentConfidenceEffSize  <- options$effectSizeCiLevel
+    optionsList$percentConfidenceMeanDiff <- options$meanDifferenceCiLevel
   } else if(type == "independent") {
-    optionsList$wantsWelchs <- options$welchs
-    optionsList$wantsWilcox <- options$mannWhitneyU
+    optionsList$wantsWelchs <- options$welch
+    optionsList$wantsWilcox <- options$wilcoxon
     optionsList$whichTests  <- c("Student", "Welch", "Mann-Whitney")[c(optionsList$wantsStudents, optionsList$wantsWelchs, optionsList$wantsWilcox)]
-    optionsList$percentConfidenceEffSize  <- options$descriptivesEffectSizeConfidenceIntervalPercent
-    optionsList$percentConfidenceMeanDiff <- options$descriptivesMeanDiffConfidenceIntervalPercent
+    optionsList$percentConfidenceEffSize  <- options$effectSizeCiLevel
+    optionsList$percentConfidenceMeanDiff <- options$meanDifferenceCiLevel
   }
   optionsList$allTests <- c(optionsList$wantsStudents, optionsList$wantsWilcox)
   if(type == "one-sample")
@@ -116,15 +116,15 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 .ttestAssumptionCheckContainer <- function(jaspResults, options, type) {
   if(type == "independent")
-    if(!options$normalityTests && !options$equalityOfVariancesTests)
+    if(!options$normalityTest && !options$equalityOfVariancesTest)
       return()
   else if (type %in% c("paired", "one-sample"))
-    if(!options$normalityTests)
+    if(!options$normalityTest)
       return()
   if (is.null(jaspResults[["AssumptionChecks"]])) {
     container <- createJaspContainer(gettext("Assumption Checks"))
-    dependList <- c("variables", "groupingVariable", "pairs", "missingValues",
-                    "normalityTests", "equalityOfVariancesTests")
+    dependList <- c("dependent", "group", "pairs", "naAction",
+                    "normalityTest", "equalityOfVariancesTest")
     container$dependOn(dependList)
     container$position <- 2
     jaspResults[["AssumptionChecks"]] <- container
@@ -132,18 +132,18 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestDescriptivesContainer <- function(jaspResults, options) {
-  if(!options$descriptives && !options$descriptivesPlots && !options$descriptivesBarPlots && !options$descriptivesPlotsRainCloud && isFALSE(options$descriptivesPlotsRainCloudDifference))
+  if(!options$descriptives && !options$descriptivesPlot && !options$barPlot && !options$raincloudPlot && isFALSE(options$differenceRaincloudPlot))
     return()
   if (is.null(jaspResults[["ttestDescriptives"]])) {
     container <- createJaspContainer(gettext("Descriptives"))
-    container$dependOn(c("missingValues", "variables", "pairs", "groupingVariable"))
+    container$dependOn(c("naAction", "dependent", "pairs", "group"))
     container$position <- 3
     jaspResults[["ttestDescriptives"]] <- container
   }
 }
 
 .ttestVovkSellke <- function(table, options) {
-  if (options$VovkSellkeMPR) {
+  if (options$vovkSellke) {
     message <-gettextf("Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001).","\u2081","\u2080","\u2264");
     table$addFootnote(message, symbol = "\u002A")
     table$addColumnInfo(name = "VovkSellkeMPR", title = "VS-MPR\u002A", type = "number")
@@ -151,9 +151,9 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestMainGetDirection <- function(hypothesis) {
-  if (hypothesis == "groupOneGreater")
+  if (hypothesis == "greater")
     return("greater")
-  else if (hypothesis == "groupTwoGreater")
+  else if (hypothesis == "less")
     return("less")
   else
     return("two.sided")
@@ -311,7 +311,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
-                      errorBarType="confidenceInterval", usePooledSE=FALSE,
+                      errorBarType="ci", usePooledSE=FALSE,
                       dependentName = "", subjectName = "") {
 
   # New version of length which can handle NA's: if na.rm==T, don't count them
@@ -358,7 +358,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.i
   ciMult <- qt(conf.interval/2 + .5, datac$N-1)
   datac$ci <- datac$se * ciMult
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     datac$ciLower <- datac[,measurevar] - datac[,"ci"]
     datac$ciUpper <- datac[,measurevar] + datac[,"ci"]
@@ -399,7 +399,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.i
 }
 
 summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                            conf.interval=.95, .drop=TRUE, errorBarType="confidenceInterval", usePooledSE=FALSE,
+                            conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE,
                             dependentName = .BANOVAdependentName,
                             subjectName = .BANOVAsubjectName) {
 
@@ -444,7 +444,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   ndatac$se <- ndatac$se * correctionFactor
   ndatac$ci <- ndatac$ci * correctionFactor
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
     ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
@@ -571,8 +571,8 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
 
   pair <- NULL
   test <- NULL
-  errorType <- options[["errorBarType"]]
-  groups <- if (!is.null(options[["groupingVariable"]])) options[["groupingVariable"]] else NULL
+  errorType <- options[["barPlotErrorType"]]
+  groups <- if (!is.null(options[["group"]])) options[["group"]] else NULL
 
   errors <- .hasErrors(dataset,
                        message = 'short',
@@ -595,10 +595,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                                    measurevar = "dependent",
                                    withinvars = "groupingVariable",
                                    idvar = "id",
-                                   conf.interval = options[["descriptivesBarPlotsConfidenceInterval"]],
+                                   conf.interval = options[["barPlotCiLevel"]],
                                    na.rm = TRUE,
                                    .drop = FALSE,
-                                   errorBarType = if (errorType == "confidenceInterval") errorType else "se")
+                                   errorBarType = if (errorType == "ci") errorType else "se")
   } else {
     data <- data.frame(dependent = dataset[[variable]],
                        groupingVariable = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))
@@ -606,10 +606,10 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     summaryStat <- summarySE(data,
                              measurevar = "dependent",
                              groupvars = "groupingVariable",
-                             conf.interval = options[["descriptivesBarPlotsConfidenceInterval"]],
+                             conf.interval = options[["barPlotCiLevel"]],
                              na.rm = TRUE,
                              .drop = FALSE,
-                             errorBarType = if (errorType == "confidenceInterval") errorType else "se")
+                             errorBarType = if (errorType == "ci") errorType else "se")
   }
   ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
 
@@ -626,7 +626,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     ylab <- ggplot2::ylab(NULL)
     xlab <- ggplot2::xlab(NULL)
   }
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["descriptivesBarPlotsZeroFix"]]) c(0, ciPos) else ciPos)
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["barPlotYAxisFixedToZero"]]) c(0, ciPos) else ciPos)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 

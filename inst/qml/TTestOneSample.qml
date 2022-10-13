@@ -30,17 +30,17 @@ Form
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); suggestedColumns: ["scale"] }
+		AssignedVariablesList { name: "dependent"; title: qsTr("Variables"); suggestedColumns: ["scale"] }
 	}
 
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "students";		label: qsTr("Student"); checked: true	}
-		CheckBox { name: "mannWhitneyU";	label: qsTr("Wilcoxon signed-rank")		}
+		CheckBox { name: "student";		label: qsTr("Student"); checked: true	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")		}
 		CheckBox { name: "zTest";			label: qsTr("Z Test"); id: zTest		}
 		DoubleField { name: "testValue";	label: qsTr("Test value:");		defaultValue: 0;	negativeValues: true	}
-		DoubleField { name: "stddev";		label: qsTr("Std. deviation:");	defaultValue: 1.0;	enabled: zTest.checked	}
+		DoubleField { name: "zTestSd";		label: qsTr("Std. deviation:");	defaultValue: 1.0;	enabled: zTest.checked	}
 	}
 
 	Group
@@ -52,9 +52,9 @@ Form
             name: "meanDifference";			label: qsTr("Location estimate")
 			CheckBox
 			{
-				name: "meanDiffConfidenceIntervalCheckbox";	label: qsTr("Confidence interval")
+				name: "meanDifferenceCi";	label: qsTr("Confidence interval")
 				childrenOnSameRow: true
-				CIField { name: "meanDiffConfidenceIntervalPercent" }
+				CIField { name: "meanDifferenceCiLevel" }
 			}
 		}
 
@@ -63,51 +63,51 @@ Form
 			name: "effectSize";				label: qsTr("Effect size")
 			CheckBox
 			{
-				name: "effSizeConfidenceIntervalCheckbox"; label: qsTr("Confidence interval")
+				name: "effectSizeCi"; label: qsTr("Confidence interval")
 				childrenOnSameRow: true
-				CIField { name: "effSizeConfidenceIntervalPercent" }
+				CIField { name: "effectSizeCiLevel" }
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") }
 		CheckBox
 		{
-			name: "descriptivesPlots";		label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotsConfidenceInterval";	label: qsTr("Confidence interval") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
+			CIField { name: "descriptivesPlotCi";	label: qsTr("Confidence interval") }
 		}
-		
+
 		Common.BarPlots
 		{
 			framework:	form.framework
 		}
-		
+
 		CheckBox
 		{
-			name: "descriptivesPlotsRainCloud"; label: qsTr("Raincloud plots")
-			CheckBox { name: "descriptivesPlotsRainCloudHorizontalDisplay"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
-		CheckBox { name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}
 
 	RadioButtonGroup
 	{
-		name: "hypothesis"
-		title: qsTr("Alt. Hypothesis")
-		RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true	}
-		RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value")					}
-		RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value")					}
+		name: "alternative"
+		title: qsTr("Alternative Hypothesis")
+		RadioButton { value: "twoSided";		label: qsTr("≠ Test value"); checked: true	}
+		RadioButton { value: "greater";	label: qsTr("> Test value")					}
+		RadioButton { value: "less";		label: qsTr("< Test value")					}
 	}
 
 	Group
 	{
 		title: qsTr("Assumption checks")
-		CheckBox { name: "normalityTests"; label: qsTr("Normality") }
+		CheckBox { name: "normalityTest"; label: qsTr("Normality") }
 	}
 
 	RadioButtonGroup
 	{
-		name: "missingValues"
+		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "excludeAnalysisByAnalysis";	label: qsTr("Exclude cases per dependent variable"); checked: true	}
-		RadioButton { value: "excludeListwise";				label: qsTr("Exclude cases listwise")								}
+		RadioButton { value: "perVariable";	label: qsTr("Exclude cases per variable"); checked: true }
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")							}
 	}
 }
