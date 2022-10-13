@@ -61,15 +61,15 @@ Form {
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bayesFactorRobustnessPlot";	label: qsTr("Bayes factor robustness check")
-			CheckBox { name: "bayesFactorRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); checked: true }
+			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check")
+			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); checked: true }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "sequentialAnalysisPlot";		label: qsTr("Sequential analysis")
-			CheckBox { name: "sequentialAnalysisPlotRobustness";		label: qsTr("Robustness check") }
+			name: "bfSequentialPlot";		label: qsTr("Sequential analysis")
+			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check") }
 		}
 
 		CheckBox

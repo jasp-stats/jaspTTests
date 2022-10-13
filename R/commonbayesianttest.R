@@ -39,10 +39,10 @@
   #            |-dependOn("priorAndPosteriorPlotAdditionalInfo", optionContainsValue = var)
   #
   #          |-robustnessPlots
-  #            |-dependOn("bayesFactorRobustnessPlotAdditionalInfo", optionContainsValue = var)
+  #            |-dependOn("bfRobustnessPlotAdditionalInfo", optionContainsValue = var)
   #
   #          |-sequentialPlots
-  #            |-dependOn("sequentialAnalysisPlotRobustness", optionContainsValue = var)
+  #            |-dependOn("bfSequentialPlotRobustness", optionContainsValue = var)
   #
   #     |-delta
   #       |-dependOn(c("priorWidth", "group", "naAction", "wilcoxonSamples"))
@@ -321,9 +321,9 @@
 
     # when a user requests robustness/ sequential plots first and then selects wilcoxTest
     # jasp will still provide these as TRUE, but they shouldn't be.
-    AtTheEndResetPlotRobustnessSequential <- options[c("bayesFactorRobustnessPlot", "sequentialAnalysisPlot")]
-    derivedOptions[["bayesFactorRobustnessPlot"]] <- FALSE
-    derivedOptions[["sequentialAnalysisPlot"]] <- FALSE
+    AtTheEndResetPlotRobustnessSequential <- options[c("bfRobustnessPlot", "bfSequentialPlot")]
+    derivedOptions[["bfRobustnessPlot"]] <- FALSE
+    derivedOptions[["bfSequentialPlot"]] <- FALSE
 
   }
 
@@ -870,7 +870,7 @@
   # for default priors, we can do prior & posterior, robustness, and sequantial plots
   # we cannot do robustness and sequential plots for informed priors, hence do only prior & posterior plot:
   if(options[["effectSizeStandardized"]] == "default")
-    opts <- c("priorAndPosteriorPlot", "bayesFactorRobustnessPlot", "sequentialAnalysisPlot")
+    opts <- c("priorAndPosteriorPlot", "bfRobustnessPlot", "bfSequentialPlot")
   else
     opts <- c("priorAndPosteriorPlot")
 
@@ -910,8 +910,8 @@
   # create all empty plots and containers before filling them in one-by-one, to avoid the screen from flashing
   dependencies <- list(
     c("priorAndPosteriorPlot",     "priorAndPosteriorPlotAdditionalInfo", "priorAndPosteriorPlotCiLevel"),
-    c("bayesFactorRobustnessPlot", "bayesFactorRobustnessPlotAdditionalInfo", "bayesFactorType"),
-    c("sequentialAnalysisPlot",    "sequentialAnalysisPlotRobustness",        "bayesFactorType")
+    c("bfRobustnessPlot", "bfRobustnessPlotAdditionalInfo", "bayesFactorType"),
+    c("bfSequentialPlot",    "bfSequentialPlotRobustness",        "bayesFactorType")
   )
 
   plotTitles <- c(
@@ -974,7 +974,7 @@
   if (options[["test"]] == "wilcoxon")
     return()
 
-  if (options[["bayesFactorRobustnessPlot"]] && options[["effectSizeStandardized"]] == "default") {
+  if (options[["bfRobustnessPlot"]] && options[["effectSizeStandardized"]] == "default") {
     .ttestBayesianPlotRobustness(
       collection             = inferentialPlotsCollection,
       dependents             = dependents,
@@ -989,13 +989,13 @@
       oneSided               = ttestResults[["derivedOptions"]][["oneSided"]],
       nullInterval           = ttestResults[["derivedOptions"]][["nullInterval"]],
       rscale                 = options[["priorWidth"]],
-      additionalInformation  = options[["bayesFactorRobustnessPlotAdditionalInfo"]],
+      additionalInformation  = options[["bfRobustnessPlotAdditionalInfo"]],
       effectSizeStandardized = options[["effectSizeStandardized"]],
       options                = options
     )
   }
 
-  if (options[["sequentialAnalysisPlot"]] && options[["effectSizeStandardized"]] == "default") {
+  if (options[["bfSequentialPlot"]] && options[["effectSizeStandardized"]] == "default") {
     .ttestBayesianPlotSequential(
       collection             = inferentialPlotsCollection,
       dependents             = dependents,
@@ -1011,7 +1011,7 @@
       nullInterval           = ttestResults[["derivedOptions"]][["nullInterval"]],
       rscale                 = options[["priorWidth"]],
       effectSizeStandardized = options[["effectSizeStandardized"]],
-      plotDifferentPriors    = options[["sequentialAnalysisPlotRobustness"]],
+      plotDifferentPriors    = options[["bfSequentialPlotRobustness"]],
       options                = options
     )
   }

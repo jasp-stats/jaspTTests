@@ -253,10 +253,10 @@ Upgrades
 				ChangeRename { from:	"plotPriorAndPosterior";						to:		"priorAndPosteriorPlot"						}
 				ChangeRename { from:	"plotPriorAndPosteriorAdditionalInfo";			to:		"priorAndPosteriorPlotAdditionalInfo"		}
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";		to:		"priorAndPosteriorPlotCiLevel"				}
-				ChangeRename { from:	"plotBayesFactorRobustness";					to:		"bayesFactorRobustnessPlot"					}
-				ChangeRename { form:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bayesFactorRobustnessPlotAdditionalInfo"	}
-				ChangeRename { from:	"plotSequentialAnalysis";						to:		"sequentialAnalysisPlot"					}
-				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"sequentialAnalysisPlotRobustness"			}
+				ChangeRename { from:	"plotBayesFactorRobustness";					to:		"bfRobustnessPlot"							}
+				ChangeRename { from:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bfRobustnessPlotAdditionalInfo"			}
+				ChangeRename { from:	"plotSequentialAnalysis";						to:		"bfSequentialPlot"							}
+				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"bfSequentialPlotRobustness"				}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"							}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";			to:		"descriptivesPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"									}
@@ -334,10 +334,10 @@ Upgrades
 				ChangeRename { from:	"plotPriorAndPosterior";						to:		"priorAndPosteriorPlot"						}
 				ChangeRename { from:	"plotPriorAndPosteriorAdditionalInfo";			to:		"priorAndPosteriorPlotAdditionalInfo"		}
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";		to:		"priorAndPosteriorPlotCiLevel"				}
-				ChangeRename { from:	"plotBayesFactorRobustness";					to: 	"bayesFactorRobustnessPlot"					}
-				ChangeRename { from:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bayesFactorRobustnessPlotAdditionalInfo"	}
-				ChangeRename { from:	"plotSequentialAnalysis";						to:		"sequentialAnalysisPlot"					}
-				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"sequentialAnalysisPlotRobustness"			}
+				ChangeRename { from:	"plotBayesFactorRobustness";					to: 	"bfRobustnessPlot"							}
+				ChangeRename { from:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bfRobustnessPlotAdditionalInfo"			}
+				ChangeRename { from:	"plotSequentialAnalysis";						to:		"bfSequentialPlot"							}
+				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"bfSequentialPlotRobustness"				}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"							}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";			to:		"descriptivesPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"									}
@@ -401,10 +401,10 @@ Upgrades
 				ChangeRename { from:	"plotPriorAndPosterior";						to:		"priorAndPosteriorPlot"						}
 				ChangeRename { from:	"plotPriorAndPosteriorAdditionalInfo";			to:		"priorAndPosteriorPlotAdditionalInfo"		}
 				ChangeRename { from:	"priorAndPosteriorPlotsCredibleInterval";		to:		"priorAndPosteriorPlotCiLevel"				}
-				ChangeRename { from:	"plotBayesFactorRobustness";					to: 	"bayesFactorRobustnessPlot"					}
-				ChangeRename { from:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bayesFactorRobustnessPlotAdditionalInfo"	}
-				ChangeRename { from:	"plotSequentialAnalysis";						to:		"sequentialAnalysisPlot"					}
-				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"sequentialAnalysisPlotRobustness"			}
+				ChangeRename { from:	"plotBayesFactorRobustness";					to: 	"bfRobustnessPlot"							}
+				ChangeRename { from:	"plotBayesFactorRobustnessAdditionalInfo";		to:		"bfRobustnessPlotAdditionalInfo"			}
+				ChangeRename { from:	"plotSequentialAnalysis";						to:		"bfSequentialPlot"							}
+				ChangeRename { from:	"plotSequentialAnalysisRobustness";				to:		"bfSequentialPlotRobustness"				}
 				ChangeRename { from:	"descriptivesPlots";							to:		"descriptivesPlot"							}
 				ChangeRename { from:	"descriptivesPlotsCredibleInterval";			to:		"descriptivesPlotCiLevel"					}
 				ChangeRename { from:	"descriptivesBarPlots";							to:		"barPlot"									}

@@ -30,11 +30,11 @@ test_that("Inferential and descriptives plots match", {
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- FALSE
 
-  options$bayesFactorRobustnessPlot <- TRUE
-  options$bayesFactorRobustnessPlotAdditionalInfo <- FALSE
+  options$bfRobustnessPlot <- TRUE
+  options$bfRobustnessPlotAdditionalInfo <- FALSE
 
-  options$sequentialAnalysisPlot <- TRUE
-  options$sequentialAnalysisPlotRobustness <- FALSE
+  options$bfSequentialPlot <- TRUE
+  options$bfSequentialPlotRobustness <- FALSE
 
   options$descriptives <- TRUE
   options$descriptivesPlot <- TRUE
@@ -72,11 +72,11 @@ test_that("Inferential plots with additional info match", {
   options$priorAndPosteriorPlot <- TRUE
   options$priorAndPosteriorPlotAdditionalInfo <- TRUE
 
-  options$bayesFactorRobustnessPlot <- TRUE
-  options$bayesFactorRobustnessPlotAdditionalInfo <- TRUE
+  options$bfRobustnessPlot <- TRUE
+  options$bfRobustnessPlotAdditionalInfo <- TRUE
 
-  options$sequentialAnalysisPlot <- TRUE
-  options$sequentialAnalysisPlotRobustness <- TRUE
+  options$bfSequentialPlot <- TRUE
+  options$bfSequentialPlotRobustness <- TRUE
 
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
 
