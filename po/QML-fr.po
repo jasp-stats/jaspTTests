@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-12 19:54+0000\n"
-"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/fr/>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
@@ -56,10 +50,6 @@ msgstr "Variables dépendantes"
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
 msgstr "Variable de regroupement"
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -178,10 +168,6 @@ msgid "Descriptives"
 msgstr "Descriptifs"
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
-
-msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Valeur de test"
 
@@ -224,10 +210,6 @@ msgstr "Exclure les observations par variable dépendante"
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "Exclure les observations par liste"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -322,10 +304,6 @@ msgid "Welch"
 msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "Statistiques supplémentaires"
 
@@ -364,10 +342,6 @@ msgstr "Graphiques descriptifs"
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Ratio p maximal de Vovk-Sellke"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -458,10 +432,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
-
-msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Valeur de test"
 
@@ -484,10 +454,6 @@ msgstr "Normalité"
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Valeurs manquantes"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -534,10 +500,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hypothèse alt."
-
-msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr "Mesure 1 ≠ Mesure 2"
 
@@ -560,10 +522,6 @@ msgstr "Normalité"
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "Valeurs manquantes"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr "Exclure les observations par variable dépendante"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -672,3 +630,40 @@ msgstr "Erreur standard"
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
 msgstr "Fixer l'axe horizontal à 0"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Rangs signés de Wilcoxon"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""

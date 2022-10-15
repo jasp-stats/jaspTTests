@@ -56,10 +56,6 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
 msgstr "Información adicional"
 
-msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
-
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "Grupo 1 ≠ Grupo 2"
@@ -111,10 +107,6 @@ msgstr "Variable de Agrupamento"
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
 msgstr "Análise secuencial"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr "Excluír casos segundo a variable dependente"
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
@@ -200,10 +192,6 @@ msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
 msgstr "Rango con signo de Wilcoxon"
 
-msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
-
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
 msgstr "Parámetro de posición"
@@ -227,10 +215,6 @@ msgstr "Avaliar a diferenza entre dúas medias"
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
 msgstr "Variable de Agrupamento"
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -361,10 +345,6 @@ msgid "Horizontal display"
 msgstr "Presentación horizontal"
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
-
-msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "Probas"
 
@@ -399,10 +379,6 @@ msgstr "Excluír casos segundo a lista"
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
 msgstr "Parellas de Variables"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -513,10 +489,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Cociente p máximo de Vovk-Sellke"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
 msgstr "Comprobacións de Supostos"
 
@@ -589,10 +561,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Cociente p máximo de Vovk-Sellke"
 
 msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
-
-msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Valor a probar"
 
@@ -611,10 +579,6 @@ msgstr "Normalidade"
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Valores Ausentes"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr "Excluír casos segundo a variable dependente"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -667,3 +631,40 @@ msgstr "Erro padrón"
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
 msgstr "Fixar o eixe horizontal en 0"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Rango con signo de Wilcoxon"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""

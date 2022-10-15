@@ -53,10 +53,6 @@ msgid "Grouping Variable"
 msgstr "Gruppen"
 
 msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
-
-msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "Gruppe 1 ≠ Gruppe 2"
 
@@ -173,10 +169,6 @@ msgid "Descriptives"
 msgstr "Deskriptive Statistik"
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
-
-msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Testwert"
 
@@ -219,10 +211,6 @@ msgstr "Fälle pro abhängige Variable ausschließen"
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "Fälle listenweise ausschließen"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -317,10 +305,6 @@ msgid "Welch"
 msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "Weitere Statistiken"
 
@@ -359,10 +343,6 @@ msgstr "Deskriptive Abbildungen"
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke-Maximum-p-Quotient"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -453,10 +433,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
-
-msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Testwert"
 
@@ -479,10 +455,6 @@ msgstr "Normalverteilung"
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Fehlende Werte"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr "Fälle pro abhängige Variable ausschließen"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -529,10 +501,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
-
-msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr "Messung 1 ≠ Messung 2"
 
@@ -555,10 +523,6 @@ msgstr "Normalverteilung"
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "Fehlende Werte"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr "Fälle pro abhängige Variable ausschließen"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -667,3 +631,39 @@ msgstr "Standardfehler"
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
 msgstr "Horizontale Achse auf 0 fixieren"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""

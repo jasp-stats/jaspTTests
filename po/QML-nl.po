@@ -53,10 +53,6 @@ msgid "Grouping Variable"
 msgstr "Groepen"
 
 msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
-
-msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "Groep 1 ≠ groep 2"
 
@@ -173,10 +169,6 @@ msgid "Descriptives"
 msgstr "Beschrijvende statistiek"
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
-
-msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Toetswaarde"
 
@@ -219,10 +211,6 @@ msgstr "Sluit waarnemingen uit per afhankelijke variable"
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "Sluit waarnemingen uit per rij"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -317,10 +305,6 @@ msgid "Welch"
 msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "Aanvullende statistieken"
 
@@ -359,10 +343,6 @@ msgstr "Beschrijvende diagrammen"
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -453,10 +433,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
-
-msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Toetswaarde"
 
@@ -479,10 +455,6 @@ msgstr "Normaliteit"
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Ontbrekende waarden"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr "Sluit waarnemingen uit per afhankelijke variable"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -529,10 +501,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "Alt. hypothese"
-
-msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr "Maat 1 ≠ maat 2"
 
@@ -555,10 +523,6 @@ msgstr "Normaliteit"
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "Ontbrekende waarden"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr "Sluit waarnemingen uit per afhankelijke variable"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -667,3 +631,40 @@ msgstr "Standaardfout"
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
 msgstr "Zet horizontale as op 0"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon rangtekentoets"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""

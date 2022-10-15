@@ -56,10 +56,6 @@ msgid "Grouping Variable"
 msgstr "分组变量"
 
 msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "组1 ≠ 组2"
 
@@ -192,10 +188,6 @@ msgid "Horizontal display"
 msgstr "水平显示"
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
 msgstr "≠ 检验值"
 
@@ -242,10 +234,6 @@ msgstr "按列表排除个案"
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
 msgstr "变量对"
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -356,10 +344,6 @@ msgid "Welch"
 msgstr "Welch 检验"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr "Mann-Whitney 检验"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "附加统计"
 
@@ -406,10 +390,6 @@ msgstr "水平显示"
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -512,10 +492,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ 检验值"
 
@@ -538,10 +514,6 @@ msgstr "正态性"
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "缺失值处理方式"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -604,10 +576,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr "测量值1 ≠ 测量值2"
 
@@ -630,10 +598,6 @@ msgstr "正态性"
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "缺失值处理方式"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr "排除每个因变量的个案"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -666,3 +630,40 @@ msgstr "标准误差"
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
 msgstr "将水平轴固定为 0"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr "Wilcoxon 符号秩检验"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""

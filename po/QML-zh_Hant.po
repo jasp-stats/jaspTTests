@@ -52,10 +52,6 @@ msgid "Grouping Variable"
 msgstr "分群變項"
 
 msgctxt "TTestBayesianIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
-
-msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "組1 ≠ 組1"
 
@@ -174,10 +170,6 @@ msgid "Descriptives"
 msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
-
-msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
 msgstr ""
 
@@ -223,11 +215,6 @@ msgstr ""
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
-
-#, fuzzy
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -327,10 +314,6 @@ msgctxt "TTestIndependentSamples|"
 msgid "Welch"
 msgstr ""
 
-msgctxt "TTestIndependentSamples|"
-msgid "Mann-Whitney"
-msgstr ""
-
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
@@ -371,11 +354,6 @@ msgstr ""
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
-
-#, fuzzy
-msgctxt "TTestIndependentSamples|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -471,11 +449,6 @@ msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
-msgctxt "TTestOneSample|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
-
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr ""
@@ -500,10 +473,6 @@ msgstr ""
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "遺漏值"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per dependent variable"
-msgstr ""
 
 #, fuzzy
 msgctxt "TTestOneSample|"
@@ -551,11 +520,6 @@ msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
-msgctxt "TTestPairedSamples|"
-msgid "Alt. Hypothesis"
-msgstr "對立假設"
-
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr ""
@@ -580,10 +544,6 @@ msgstr ""
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "遺漏值"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per dependent variable"
-msgstr ""
 
 #, fuzzy
 msgctxt "TTestPairedSamples|"
@@ -693,4 +653,40 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
 msgstr ""
