@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-09-28 10:01\n"
-"PO-Revision-Date: 2022-09-28 09:58+0000\n"
-"Last-Translator: Cécile Mazon <cecile.mazon@inria.fr>\n"
+"PO-Revision-Date: 2022-10-12 19:54+0000\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
 "Language: fr\n"
@@ -11,11 +11,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
-"Test z pour les échantillons dépendants et indépendants pas encore implémenté"
+msgstr "Le test z apparié à deux échantillons n'est pas encore implémenté."
 
 msgid "not enough x observations"
 msgstr "Pas assez d'observations x"
@@ -32,15 +31,21 @@ msgstr "Vérifications des présupposés"
 msgid "Descriptives"
 msgstr "Descriptives"
 
+#, fuzzy
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
 "the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Sur la base d'une valeur bilatérale "
+"<em>p</em>-, les chances maximales en faveur de H%1$s sur H%2$s égalent 1/(-"
+"e <em>p</em> log(<em>p</em>)) pour <em>p</em> %3$s .37 (Sellke, Bayarri, & "
+"Berger, 2001)."
 
+#, fuzzy
 msgid "nDistinctObservations got an object of type"
-msgstr ""
+msgstr "nDistinctObservations a reçu un objet de type"
 
 msgid ","
 msgstr ","
@@ -55,7 +60,7 @@ msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Graphiques descriptifs"
 
 msgid "Group"
 msgstr "Groupe"
@@ -76,7 +81,7 @@ msgid "Coefficient of variation"
 msgstr "Coefficient de variation"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.de%% Intervalle de crédibilité"
 
 msgid "Lower"
 msgstr "Inférieur"
@@ -85,13 +90,14 @@ msgid "Upper"
 msgstr "Supérieur"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Graphiques inférentiels"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Antérieur et postérieur"
 
+#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Vérification de robustesse du facteur Bayes"
 
 msgid "Sequential Analysis"
 msgstr "Analyse séquentielle"
@@ -106,8 +112,11 @@ msgid ""
 "informed prior."
 msgstr ""
 
+#, fuzzy
 msgid "Expected numeric or character rscale but got %s."
 msgstr ""
+"On s'attendait à une échelle numérique ou de caractères, mais on a obtenu "
+"des %s."
 
 msgid "Running robustness check %d / %d"
 msgstr ""
@@ -130,8 +139,9 @@ msgstr "BF%s"
 msgid "%s at r==%s"
 msgstr "%s à r==%s"
 
+#, fuzzy
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Certains facteurs Bayes sont infinis."
 
 msgid "Cauchy prior width"
 msgstr ""
@@ -143,16 +153,16 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Postérieur"
 
 msgid "Prior"
-msgstr ""
+msgstr "Précédent"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "IC de %s%% :"
 
 msgid "Effect size"
-msgstr "Taille d'effet"
+msgstr "Taille de l'effet"
 
 msgid "Raincloud Plots"
 msgstr ""
@@ -161,89 +171,108 @@ msgid "Raincloud Difference Plots"
 msgstr ""
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "Facteur Bayes ne pouvait pas être calculé"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "Facteur Bayes est infini"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Le facteur Bayes est trop petit"
 
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
+"Le postérieur ne peut pas être représenté (peut-être trop concentré près de "
+"0)."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
 msgstr ""
 
+#, fuzzy
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "L'estimation de l'erreur n'est pas disponible pour les prieurs normaux."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Test Mann-Whitney U Bayésien"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Test t d'échantillons indépendants Bayésien"
 
+#, fuzzy
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"Résultat basé sur l'algorithme d'augmentation des données avec 5 chaînes de "
+"%. d'itérations."
 
 msgid "error %"
-msgstr "% erreur"
+msgstr "% d'erreur"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que l'emplacement du "
+"groupe <em>%1$s</em> est plus grand que l'emplacement du groupe "
+"<em>%2$s</em>."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que l'emplacement du "
+"groupe <em>%1$s</em> est plus petit que l'emplacement du groupe "
+"<em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr ""
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Test t Bayésien à un échantillon"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is greater than %s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que la moyenne de la "
+"population est supérieure à %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is less than %s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que la moyenne de la "
+"population est inférieure à %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "differs from %s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que la moyenne de la "
+"population est différente de %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Test t Bayésien d'échantillons pairés"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Test t d'échantillons indépendants"
 
 msgid "Mann-Whitney U test."
 msgstr "Test U Mann-Whitney."
 
+#, fuzzy
 msgid "W"
 msgstr "W"
 
 msgid "Welch's t-test."
-msgstr "T-test de Welch."
+msgstr "Test t de Welch."
 
 msgid "t"
 msgstr "t"
 
 msgid "Student's t-test."
-msgstr "T-test de Student."
+msgstr "Test t de Student."
 
 msgid "Statistic"
 msgstr "Statistique"
@@ -279,98 +308,106 @@ msgid "Location Parameter"
 msgstr ""
 
 msgid "Effect Size"
-msgstr ""
+msgstr "Taille de l'effet"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "test t de Student et test t de Welch"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "Test t de Student"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "Test t de Welch"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "Différence d'erreur standard"
 
 msgid ""
 "For the %s, location parameter is given by mean difference. For the Mann-"
 "Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"Pour le %s, le paramètre de localisation est donné par la différence "
+"moyenne. Pour le test de Mann-Whitney, le paramètre de localisation est "
+"donné par l'estimation de Hodges-Lehmann."
 
+#, fuzzy
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "IC %1$s%% pour %2$s"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "ES %1$s"
 
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
 msgstr ""
+"Pour le test de Mann-Whitney, la taille de l'effet est donnée par la "
+"corrélation bisériale de rang."
 
+#, fuzzy
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "Pour %1$s, la taille de l'effet est donnée par %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "Test de Normalité (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "Des résultats significatifs suggèrent une déviation de la normalité."
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgid "Levene's"
-msgstr ""
+msgstr "de Levene"
 
 msgid "Test of Equality of Variances (%1$s)"
-msgstr ""
+msgstr "Test d'Égalité des Variances (%1$s)"
 
 msgid "F"
 msgstr "F"
 
 msgid "%s<sub>1</sub>"
-msgstr ""
+msgstr "%s<sub>1</sub>"
 
 msgid "%s<sub>2</sub>"
-msgstr ""
+msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr ""
+msgstr "plus grand"
 
 msgid "less"
-msgstr ""
+msgstr "inférieur"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que le groupe %1$s est "
+"%2$s que le groupe %3$s."
 
-#, fuzzy
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
 "equal variance assumption"
 msgstr ""
-"Le test de Levene est significatif (p < .05), suggérant une violation de "
-"l'hypothèse de variance égale"
+"Le test Brown-Forsythe est significatif (p < .05), suggérant une violation "
+"de l'hypothèse d'égalité des variances"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "
 "variance assumption"
 msgstr ""
 "Le test de Levene est significatif (p < .05), suggérant une violation de "
-"l'hypothèse de variance égale"
+"l'hypothèse d'égalité des variances"
 
 msgid ""
 "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "La statistique F n'a pas pu être calculée"
 
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Test t à Un Échantillon"
 
 msgid "Wilcoxon signed-rank test."
 msgstr ""
@@ -379,24 +416,26 @@ msgid "V"
 msgstr ""
 
 msgid "Z test."
-msgstr ""
+msgstr "Test z."
 
 msgid "Z"
-msgstr ""
+msgstr "z"
 
 msgid "Location Difference"
-msgstr ""
+msgstr "Emplacement différent"
 
 msgid "Student t-test and Z-test"
-msgstr ""
+msgstr "Test t de Student et test z"
 
 msgid "Z-test"
-msgstr ""
+msgstr "Test z"
 
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>."
 msgstr ""
+"Pour les %s, l'estimation de la différence de localisation est donnée par la "
+"différence moyenne de l'échantillon <em>d</em>."
 
 msgid ""
 "For the Wilcoxon test, location difference estimate is given by the Hodges-"
@@ -405,6 +444,8 @@ msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
+"Pour le test t de Student, la taille de l'effet est donnée par le <em>d</em> "
+"de Cohen."
 
 msgid ""
 "For the Wilcoxon test, effect size is given by the matched rank biserial "
@@ -415,34 +456,39 @@ msgid ""
 "For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
 "provided population standard deviation)."
 msgstr ""
+"Pour le test z, la taille de l'effet est donnée par le <em>d</em> de Cohen ("
+"basé sur l'écart type fourni par la population)."
 
 msgid "greater than"
-msgstr ""
+msgstr "plus grand que"
 
 msgid "less than"
-msgstr ""
+msgstr "plus petit que"
 
 msgid "different from"
-msgstr ""
+msgstr "différent de"
 
 msgid ""
 "For the %1$s, the alternative hypothesis specifies that the mean is %2$s "
 "%3$s."
 msgstr ""
+"Pour %1$s, l'hypothèse alternative précise que la moyenne est %2$s %3$s."
 
 msgid ""
 "For the Wilcoxon test, the alternative hypothesis specifies that the median "
 "is %1$s %2$s."
 msgstr ""
+"Pour le test Wilcoxon, l'hypothèse alternative précise que la médian est %1$"
+"s %2$s."
 
 msgid "data are essentially constant"
-msgstr ""
+msgstr "les données sont essentiellement constantes"
 
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "Test t à deux échantillons appariés"
 
 msgid "z"
-msgstr ""
+msgstr "z"
 
 msgid ""
 "For the Student t-test, location parameter is given by mean difference "
@@ -459,33 +505,45 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que Mesure 1 est moins "
+"que Mesure 2."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que Mesure 1 est plus "
+"grande que Mesure 2."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that %1s is less than "
 "%2s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que %1s est moins que "
+"%2s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that %1s is greater than "
 "%2s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que %1s est plus grand "
+"que %2s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2. For example, %1s is less than %2s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que Mesure 1 est moins "
+"que Mesure 2. Par exemple, %1s est moins que %2s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2. For example, %1s is greater than %2s."
 msgstr ""
+"Pour tous les tests, l'hypothèse alternative précise que Mesure 1 est plus "
+"grand que Mesure 2. Par exemple, %1s est plus grand que %2s."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "La paire suivante est dupliquée : %s"
+msgstr[1] "Les paires suivantes sont dupliquées : %s"
