@@ -2,97 +2,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-10-08 03:12\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-10-25 08:08+0000\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
+msgstr "Парный и двухвыборочный z.test еще не реализован"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "недостаточно х наблюдений"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Еще не реализовано"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "недостаточно Y наблюдений"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Проверка допущений"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Описательные статистики"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Максимальный <em>p</em> коэффициент Вовка-Селлке: основанный на двустороннем "
+"<em>p</em>-значении, максимально возможные шансы в пользу H%1$s над H%2$s "
+"равно 1/(-e <em>p</em> log(<em>p</em>)) для <em>p</em> %3$s 0,37 (Sellke, "
+"Bayarri, & Berger, 2001 )."
 
 msgid "nDistinctObservations got an object of type"
-msgstr ""
+msgstr "nDistinctObservations получил тип объекта"
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Укажите другую переменную."
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "Переменные %s и %s одинаковы!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Описательные графики"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Столбчатые диаграммы"
 
 msgid "Group"
-msgstr ""
+msgstr "Группа"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Среднее"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Коэффициент изменчивости"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Достоверный интервал"
 
 msgid "Lower"
-msgstr ""
+msgstr "Нижний"
 
 msgid "Upper"
-msgstr ""
+msgstr "Верхний"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Выводные графики"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Априорный и апостериорный"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Проверка робастности коэффициента Байеса"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Последовательный анализ"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
+"График проверки надежности коэффициента Байеса в настоящее время не "
+"поддерживается для информированного априорного анализа."
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
 msgstr ""
+"График проверки надежности последовательного анализа в настоящее время не "
+"поддерживается для информированного априорного анализа."
 
 msgid "Expected numeric or character rscale but got %s."
 msgstr ""
