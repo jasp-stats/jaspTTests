@@ -1,0 +1,500 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspTTests 0.17.0\n"
+"POT-Creation-Date: 2022-10-08 03:12\n"
+"PO-Revision-Date: 2022-10-28 15:03+0000\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2-dev\n"
+
+msgid "Paired and two-sample z.test not yet implemented"
+msgstr "Парный и двухвыборочный z.test еще не реализован"
+
+msgid "not enough x observations"
+msgstr "недостаточно х наблюдений"
+
+msgid "Not yet implemented"
+msgstr "Еще не реализовано"
+
+msgid "not enough y observations"
+msgstr "недостаточно Y наблюдений"
+
+msgid "Assumption Checks"
+msgstr "Проверка допущений"
+
+msgid "Descriptives"
+msgstr "Описательные статистики"
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Максимальный <em>p</em> коэффициент Вовка-Селлке: основанный на двустороннем "
+"<em>p</em>-значении, максимально возможные шансы в пользу H%1$s над H%2$s "
+"равно 1/(-e <em>p</em> log(<em>p</em>)) для <em>p</em> %3$s 0,37 (Sellke, "
+"Bayarri, & Berger, 2001 )."
+
+msgid "nDistinctObservations got an object of type"
+msgstr "nDistinctObservations получил тип объекта"
+
+msgid ","
+msgstr ","
+
+msgid "Please provide another variable."
+msgstr "Укажите другую переменную."
+
+msgid "Variables %s and %s are the same!"
+msgstr "Переменные %s и %s одинаковы!"
+
+msgid "Descriptives Plots"
+msgstr "Описательные графики"
+
+msgid "Bar Plots"
+msgstr "Столбчатые диаграммы"
+
+msgid "Group"
+msgstr "Группа"
+
+msgid "N"
+msgstr "N"
+
+msgid "Mean"
+msgstr "Среднее"
+
+msgid "SD"
+msgstr "SD"
+
+msgid "SE"
+msgstr "SE"
+
+msgid "Coefficient of variation"
+msgstr "Коэффициент изменчивости"
+
+msgid "%.0f%% Credible Interval"
+msgstr "%.0f%% Достоверный интервал"
+
+msgid "Lower"
+msgstr "Нижний"
+
+msgid "Upper"
+msgstr "Верхний"
+
+msgid "Inferential Plots"
+msgstr "Выводные графики"
+
+msgid "Prior and Posterior"
+msgstr "Априорный и апостериорный"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "Проверка робастности коэффициента Байеса"
+
+msgid "Sequential Analysis"
+msgstr "Последовательный анализ"
+
+msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgstr ""
+"График проверки надежности коэффициента Байеса в настоящее время не "
+"поддерживается для информированного априорного анализа."
+
+msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgstr ""
+"График проверки надежности последовательного анализа в настоящее время не "
+"поддерживается для информированного априорного анализа."
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr "Ожидалась числовая или символьная шкала, но получена %s."
+
+msgid "Running robustness check %d / %d"
+msgstr "Выполнение проверки надежности %d / %d"
+
+msgid "max BF%s"
+msgstr "макс. BF%s"
+
+#, fuzzy
+msgid "user prior"
+msgstr "пользовательский приор"
+
+#, fuzzy
+msgid "wide prior"
+msgstr "широкий приор"
+
+#, fuzzy
+msgid "ultrawide prior"
+msgstr "сверхширокий приор"
+
+msgid "BF%s"
+msgstr "BF%s"
+
+msgid "%s at r==%s"
+msgstr "%s при r==%s"
+
+msgid "Some Bayes factors were infinite"
+msgstr "Некоторые факторы Байеса оказались бесконечными"
+
+msgid "Cauchy prior width"
+msgstr "Предварительная ширина Коши"
+
+msgid "Running sequential analysis %d / %d"
+msgstr "Выполнение последовательного анализа %d / %d"
+
+msgid "n"
+msgstr "n"
+
+#, fuzzy
+msgid "Posterior"
+msgstr "Постериор"
+
+#, fuzzy
+msgid "Prior"
+msgstr "Приор"
+
+msgid "%s%% CI:"
+msgstr "%s%% CI:"
+
+msgid "Effect size"
+msgstr "Размер эффекта"
+
+msgid "Raincloud Plots"
+msgstr "Облачные графики"
+
+msgid "Raincloud Difference Plots"
+msgstr "Облачные графики различий"
+
+msgid "Bayes factor could not be calculated"
+msgstr "Фактор Байеса не может быть рассчитан"
+
+msgid "Bayes factor is infinite"
+msgstr "Фактор Байеса бесконечен"
+
+msgid "The Bayes factor is too small"
+msgstr "Фактор Байеса слишком мал"
+
+msgid "Cannot plot the posterior - possibly too concentrated near 0."
+msgstr ""
+"Не удается построить график апостериорного значения - возможно, оно слишком "
+"сконцентрировано около нуля."
+
+msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
+msgstr ""
+"t-значение велико. Для вычисления коэффициента Байеса было использовано "
+"приближение Сэвиджа-Дики, но оценка погрешности не может быть дана."
+
+msgid "No error estimate is available for normal priors."
+msgstr "Для обычных априорных оценок оценка ошибки недоступна."
+
+msgid "Bayesian Mann-Whitney U Test"
+msgstr "Байесовский U-критерий Манна-Уитни"
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Байесовский Т-критерий для независимых групп"
+
+msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+"Результат основан на алгоритме увеличения данных с 5 цепочками итераций %.0f."
+
+msgid "error %"
+msgstr "погрешность %"
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
+msgstr ""
+"Для всех тестов альтернативная гипотеза указывает, что расположение группы "
+"<em>%1$s</em> больше, чем расположение группы <em>%2$s</em>."
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
+msgstr ""
+"Для всех тестов альтернативная гипотеза указывает, что расположение группы "
+"<em>%1$s</em> меньше, чем расположение группы <em>%2$s</em>."
+
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr "Байесовский тест Уилкоксона"
+
+msgid "Bayesian One Sample T-Test"
+msgstr "Байесовский одновыборочный Т-критерий"
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgstr ""
+"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"генеральной совокупности больше %s."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgstr ""
+"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"генеральной совокупности меньше %s."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgstr ""
+"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"генеральной совокупности отличается от %s."
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Байесовский Т-критерий для зависимых групп"
+
+msgid "Independent Samples T-Test"
+msgstr "Т-критерий для независимых групп"
+
+msgid "Mann-Whitney U test."
+msgstr "U-критерий Манна-Уитни."
+
+msgid "W"
+msgstr "W"
+
+msgid "Welch's t-test."
+msgstr "T-критерий Уэлча."
+
+msgid "t"
+msgstr "t"
+
+msgid "Student's t-test."
+msgstr "T-критерий Стьюдента."
+
+msgid "Statistic"
+msgstr "Статистика"
+
+msgid "Test"
+msgstr "Критерий"
+
+msgid "df"
+msgstr "df"
+
+msgid "p"
+msgstr "p"
+
+msgid "Cohen's d"
+msgstr "d Коэна"
+
+msgid "Glass' delta"
+msgstr "Дельта Гласса"
+
+msgid "Hedges' g"
+msgstr "g Хеджеса"
+
+msgid "Mean Difference"
+msgstr "Разница средних"
+
+msgid "Hodges-Lehmann Estimate"
+msgstr "Оценка Ходжеса-Леманна"
+
+msgid "Rank-Biserial Correlation"
+msgstr "Ранговая бисериальная корреляция"
+
+msgid "Location Parameter"
+msgstr "Коэффициент сдвига"
+
+msgid "Effect Size"
+msgstr "Размер эффекта"
+
+msgid "Student t-test and Welch t-test"
+msgstr "t-критерий Стьюдента и t-критерий Уэлча"
+
+msgid "Student t-test"
+msgstr "T-критерий Стьюдента"
+
+msgid "Welch t-test"
+msgstr "T-критерий Уэлча"
+
+msgid "SE Difference"
+msgstr "Разница SE"
+
+msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"Для %s параметр местоположения задается разницей средних значений. Для "
+"критерия Манна-Уитни параметр местоположения определяется оценкой "
+"Ходжеса-Лемана."
+
+msgid "%1$s%% CI for %2$s"
+msgstr "%1$s%% CI для %2$s"
+
+msgid "SE %1$s"
+msgstr "SE %1$s"
+
+msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgstr ""
+"Для критерия Манна-Уитни величина эффекта определяется ранговой бисериальной "
+"корреляцией."
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr "Для %1$s размер эффекта равен %2$s."
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr ""
+"Проверка на соответствие нормальному распределению (критерий Шапиро-Уилка)"
+
+msgid "Significant results suggest a deviation from normality."
+msgstr ""
+"Статистически достоверные результаты предполагают ненормальное распределение."
+
+msgid "Brown-Forsythe"
+msgstr "Браун-Форсайт"
+
+msgid "Levene's"
+msgstr "Критерий Ливиня"
+
+msgid "Test of Equality of Variances (%1$s)"
+msgstr "Проверка однородности выборок (%1$s)"
+
+msgid "F"
+msgstr "F"
+
+msgid "%s<sub>1</sub>"
+msgstr "%s<sub>1</sub>"
+
+msgid "%s<sub>2</sub>"
+msgstr "%s<sub>2</sub>"
+
+msgid "greater"
+msgstr "больше"
+
+msgid "less"
+msgstr "меньше"
+
+msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что группа %1$s "
+"является %2$s, чем группа %3$s."
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Значение критерия Брауна-Форсайта статистически значимо (p < 0,05), что "
+"свидетельствует о нарушении предположения об однородности (гомогенности)"
+
+msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Значение критерия Ливиня статистически значимо (p < 0,05), что "
+"свидетельствует о нарушении предположения об однородности (гомогенности)"
+
+msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+"При расчете критерия Дельта Гласса используется стандартное отклонение "
+"группы %1$s переменной %2$s."
+
+msgid "F-statistic could not be calculated"
+msgstr "F-критерий не может быть рассчитан"
+
+msgid "One Sample T-Test"
+msgstr "Одновыборочный Т-критерий"
+
+msgid "Wilcoxon signed-rank test."
+msgstr "Критерий Уилкоксона."
+
+msgid "V"
+msgstr "V"
+
+msgid "Z test."
+msgstr "Z-критерий."
+
+msgid "Z"
+msgstr "Z"
+
+msgid "Location Difference"
+msgstr "Разница коэффициентов сдвига"
+
+msgid "Student t-test and Z-test"
+msgstr "T-критерий Стьюдента и Z-критерий"
+
+msgid "Z-test"
+msgstr "Z-критерий"
+
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>."
+msgstr ""
+"Для %s, оценка разницы коэффициентов сдвига получена с помощью расчета "
+"разницы выборочных средних значений <em>d</em>."
+
+msgid "For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgstr ""
+"Для критерия Уилкоксона оценка разности коэффициентов сдвига получена с "
+"помощью значения критерия Ходжеса-Лемана."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr ""
+"Для t-критерия Стьюдента размер эффекта определяется мерой <em>d</em> Коэна."
+
+msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"Для критерия Уилкоксона размер эффекта определяется ранговой бисериальной "
+"корреляцией."
+
+msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgstr ""
+"Для Z-критерия размер эффекта определяется мерой <em>d</em> Коэна (на основе "
+"стандартного отклонения генеральной совокупности)."
+
+msgid "greater than"
+msgstr "больше чем"
+
+msgid "less than"
+msgstr "меньше чем"
+
+msgid "different from"
+msgstr "отличается от"
+
+msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgstr ""
+"Для %1$s альтернативная гипотеза указывает, что среднее значение равно %2$s "
+"%3$s."
+
+msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgstr ""
+"Для критерия Уилкоксона альтернативная гипотеза указывает, что медиана "
+"составляет %1$s %2$s."
+
+msgid "data are essentially constant"
+msgstr "данные действительно постоянны"
+
+msgid "Paired Samples T-Test"
+msgstr "T-критерий для зависимых групп"
+
+msgid "z"
+msgstr "z"
+
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"Для t-критерия Стьюдента коэффициент сдвига определяется разницей средних "
+"значений <em>d</em>. Для критерия Уилкоксона коэффициент сдвига определяется "
+"значением критерия Ходжеса-Лемана."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"Для t-критерия Стьюдента размер эффекта определяется мерой <em>d</em> Коэна. "
+"Для критерия Уилкоксона размер эффекта определяется ранговой бисериальной "
+"корреляцией."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что мера 1 меньше, чем "
+"мера 2."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что мера 1 больше, чем "
+"мера 2."
+
+msgid "For all tests, the alternative hypothesis specifies that %1s is less than %2s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что %1s меньше, чем "
+"%2s."
+
+msgid "For all tests, the alternative hypothesis specifies that %1s is greater than %2s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что %1s больше, чем "
+"%2s."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1s is less than %2s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что показатель 1 "
+"меньше показателя 2. Например, %1s меньше, чем %2s."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1s is greater than %2s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что мера 1 больше, чем "
+"мера 2. Например, %1s больше, чем %2s."
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] "Дублируется следующая пара: %s"
+msgstr[1] "Дублируются следующие пары: %s"
+msgstr[2] "Дублируются следующие пары: %s"
