@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-08 09:33+0000\n"
+"PO-Revision-Date: 2022-11-09 04:41+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-qml/zh_Hant/>\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
@@ -161,7 +161,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
@@ -254,7 +254,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
