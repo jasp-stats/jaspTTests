@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-01 15:27+0000\n"
+"PO-Revision-Date: 2022-11-08 09:33+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-qml/zh_Hant/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -17,7 +17,6 @@ msgctxt "Description|"
 msgid "T-Tests"
 msgstr "T-檢定"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Classical"
 msgstr "古典"
@@ -34,7 +33,6 @@ msgctxt "Description|"
 msgid "One Sample T-Test"
 msgstr "單一樣本 t 檢定"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian"
 msgstr "貝氏"
@@ -137,7 +135,7 @@ msgstr "其他統計數"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
@@ -305,10 +303,9 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "分群變項"
+msgstr "分組變數"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
@@ -380,7 +377,7 @@ msgstr "組1 < 組2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "檢查統計技術假設"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
@@ -406,7 +403,7 @@ msgstr "完全排除法"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "變數"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
@@ -542,7 +539,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "檢查統計技術假設"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
