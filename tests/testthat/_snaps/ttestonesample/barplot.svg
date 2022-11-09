@@ -28,7 +28,7 @@
 <g clip-path='url(#cpMzkuMTF8NzIwLjAwfDIwLjcxfDU0NS4yOQ==)'>
 <rect x='39.11' y='20.71' width='680.89' height='524.59' style='stroke-width: 10.67; stroke: none;' />
 <line x1='39.11' y1='521.45' x2='720.00' y2='521.45' style='stroke-width: 0.64; stroke: #858585; stroke-linecap: butt;' />
-<rect x='209.33' y='133.64' width='340.44' height='387.80' style='stroke-width: 1.07; stroke-linecap: square; stroke-linejoin: miter; fill: #BEBEBE;' />
+<rect x='209.33' y='133.64' width='340.44' height='387.80' style='stroke-width: 1.07; stroke-linecap: butt; stroke-linejoin: miter; fill: #BEBEBE;' />
 <polyline points='322.81,104.41 436.30,104.41 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <polyline points='379.56,104.41 379.56,162.88 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <polyline points='322.81,162.88 436.30,162.88 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
