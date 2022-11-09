@@ -2,31 +2,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-10-08 03:12\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-11-09 17:29+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
+"pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
+msgstr "Testy z dla prób zależnych nie zostały jeszcze zaimplementowane"
 
 msgid "not enough x observations"
-msgstr ""
+msgstr "zbyt mało obserwacji x"
 
 msgid "Not yet implemented"
-msgstr ""
+msgstr "Ta funkcja nie została jeszcze zaimplementowana"
 
 msgid "not enough y observations"
-msgstr ""
+msgstr "zbyt mało obserwacji y"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Weryfikacja założeń"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Statystyki opisowe"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -35,55 +39,55 @@ msgid "nDistinctObservations got an object of type"
 msgstr ""
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Proszę podać inną zmienną."
 
 msgid "Variables %s and %s are the same!"
-msgstr ""
+msgstr "Zmienne %s i %s są takie same!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Wykresy opisowe"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Wykresy słupkowe"
 
 msgid "Group"
-msgstr ""
+msgstr "Grupa"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Średnia"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Współczynnik wariancji"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% przedział wiarygodności"
 
 msgid "Lower"
-msgstr ""
+msgstr "Dolny"
 
 msgid "Upper"
-msgstr ""
+msgstr "Górny"
 
 msgid "Inferential Plots"
 msgstr ""
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Prior i Posterior"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgid "Sequential Analysis"
 msgstr ""
@@ -95,31 +99,31 @@ msgid "Sequential analysis robustness check plot currently not supported for inf
 msgstr ""
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "Oczekiwano rscale liczbowego lub znakowego, ale otrzymano %s."
 
 msgid "Running robustness check %d / %d"
 msgstr ""
 
 msgid "max BF%s"
-msgstr ""
+msgstr "maks. BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "użyj prioru"
 
 msgid "wide prior"
-msgstr ""
+msgstr "szeroki prior"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "ultraszeroki prior"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%s at r==%s"
-msgstr ""
+msgstr "%s przy r==%s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Niektóre współczynniki Bayesa były nieskończone"
 
 msgid "Cauchy prior width"
 msgstr ""
@@ -128,19 +132,19 @@ msgid "Running sequential analysis %d / %d"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% CI:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "Wielkość efektu"
 
 msgid "Raincloud Plots"
 msgstr ""
@@ -149,34 +153,39 @@ msgid "Raincloud Difference Plots"
 msgstr ""
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "Nie można obliczyć współczynnika Bayesa"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "Współczynnik Bayesa jest nieskończony"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Współczynnik Bayesa jest zbyt mały"
 
 msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
+"Nie można stworzyć wykresu posterioru - prawdopodobnie jest zbyt "
+"skoncentrowany w pobliżu 0."
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
 msgstr ""
+"Wartość t jest duża. Do obliczenia współczynnika Bayesa zastosowano "
+"przybliżenie Savage'a-Dickeya, ale nie można podać szacunkowej wartości "
+"błędu."
 
 msgid "No error estimate is available for normal priors."
 msgstr ""
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Bayesowski test U Manna-Whitneya"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Bayesowski test t dla prób niezależnych"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "błąd %"
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
@@ -185,64 +194,70 @@ msgid "For all tests, the alternative hypothesis specifies that the location of 
 msgstr ""
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Bayesowski test rang Wilcoxona"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Bayesowski test t dla jednej próby"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
+"Hipoteza alternatywna dla każdego testu wskazuje, że średnia w populacji "
+"jest większa niż %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
 msgstr ""
+"Hipoteza alternatywna dla każdego testu wskazuje, że średnia w populacji "
+"jest mniejsza niż %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
 msgstr ""
+"Hipoteza alternatywna dla każdego testu wskazuje, że średnia w populacji "
+"różni się od %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Bayesowski test t dla prób zależnych"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Test t dla prób niezależnych"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "Test U Manna-Whitneya."
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "Test t Welcha."
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "Test t Studenta."
 
 msgid "Statistic"
-msgstr ""
+msgstr "Statystyka"
 
 msgid "Test"
-msgstr ""
+msgstr "Test"
 
 msgid "df"
-msgstr ""
+msgstr "df"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "d Cohena"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "Delta Glassa"
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "g Hedgesa"
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "Różnica średnich"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr ""
@@ -254,16 +269,16 @@ msgid "Location Parameter"
 msgstr ""
 
 msgid "Effect Size"
-msgstr ""
+msgstr "Wielkość efektu"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "Test t Studenta i test t Welcha"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "Test t Studenta"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "Test t Welcha"
 
 msgid "SE Difference"
 msgstr ""
@@ -290,7 +305,7 @@ msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgid "Levene's"
 msgstr ""
