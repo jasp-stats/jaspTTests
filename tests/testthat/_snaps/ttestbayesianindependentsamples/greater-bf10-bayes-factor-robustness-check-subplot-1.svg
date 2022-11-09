@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' data-engine-version='2.0' width='720.00pt' height='576.00pt' viewBox='0 0 720.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='576.00' style='stroke-width: 10.67; stroke: none;' />
+</g>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MTcuMzB8NTc2LjAw'>
+    <rect x='0.00' y='17.30' width='720.00' height='558.70' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MTcuMzB8NTc2LjAw)'>
+<rect x='0.00' y='17.30' width='720.00' height='558.70' style='stroke-width: 10.67; stroke: none;' />
+<circle cx='98.18' cy='496.19' r='4.04' style='stroke-width: 0.71; fill: #FFFFFF;' />
+<circle cx='98.18' cy='363.16' r='4.04' style='stroke-width: 0.71; fill: #000000;' />
+<circle cx='98.18' cy='230.14' r='4.04' style='stroke-width: 0.71; fill: #BEBEBE;' />
+<circle cx='98.18' cy='97.12' r='4.04' style='stroke-width: 0.71; fill: #FF0000;' />
+<text x='107.59' y='500.56' style='font-size: 16.93px; font-family: sans;' textLength='106.32px' lengthAdjust='spacingAndGlyphs'>ultrawide prior</text>
+<text x='213.91' y='500.56' style='font-size: 16.93px; font-family: sans;' textLength='4.70px' lengthAdjust='spacingAndGlyphs'>:</text>
+<text x='107.59' y='367.54' style='font-size: 16.93px; font-family: sans;' textLength='73.39px' lengthAdjust='spacingAndGlyphs'>wide prior</text>
+<text x='180.98' y='367.54' style='font-size: 16.93px; font-family: sans;' textLength='4.70px' lengthAdjust='spacingAndGlyphs'>:</text>
+<text x='107.59' y='234.52' style='font-size: 16.93px; font-family: sans;' textLength='71.51px' lengthAdjust='spacingAndGlyphs'>user prior</text>
+<text x='179.10' y='234.52' style='font-size: 16.93px; font-family: sans;' textLength='4.70px' lengthAdjust='spacingAndGlyphs'>:</text>
+<text x='107.59' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='14.11px' lengthAdjust='spacingAndGlyphs'>m</text>
+<text x='121.70' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='9.42px' lengthAdjust='spacingAndGlyphs'>a</text>
+<text x='131.11' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='8.47px' lengthAdjust='spacingAndGlyphs'>x</text>
+<text x='139.58' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='4.24px' lengthAdjust='spacingAndGlyphs'> </text>
+<text x='143.82' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='11.30px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text x='155.12' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='10.34px' lengthAdjust='spacingAndGlyphs'>F</text>
+<text x='165.46' y='104.45' style='font-size: 11.85px; font-family: sans;' textLength='6.93px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='172.38' y='104.45' style='font-size: 11.85px; font-family: sans;' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='178.97' y='101.32' style='font-size: 16.93px; font-family: sans;' textLength='4.70px' lengthAdjust='spacingAndGlyphs'>:</text>
+<text x='223.31' y='500.48' style='font-size: 16.93px; font-family: sans;' textLength='11.30px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text x='234.61' y='500.48' style='font-size: 16.93px; font-family: sans;' textLength='10.34px' lengthAdjust='spacingAndGlyphs'>F</text>
+<text x='244.95' y='503.61' style='font-size: 11.85px; font-family: sans;' textLength='6.93px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='251.87' y='503.61' style='font-size: 11.85px; font-family: sans;' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='262.39' y='500.48' style='font-size: 16.93px; font-family: sans;' textLength='13.14px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='279.45' y='500.48' style='font-size: 16.93px; font-family: sans;' textLength='61.20px' lengthAdjust='spacingAndGlyphs'>0.06635</text>
+<text x='223.31' y='367.45' style='font-size: 16.93px; font-family: sans;' textLength='11.30px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text x='234.61' y='367.45' style='font-size: 16.93px; font-family: sans;' textLength='10.34px' lengthAdjust='spacingAndGlyphs'>F</text>
+<text x='244.95' y='370.58' style='font-size: 11.85px; font-family: sans;' textLength='6.93px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='251.87' y='370.58' style='font-size: 11.85px; font-family: sans;' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='262.39' y='367.45' style='font-size: 16.93px; font-family: sans;' textLength='13.14px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='279.45' y='367.45' style='font-size: 16.93px; font-family: sans;' textLength='61.20px' lengthAdjust='spacingAndGlyphs'>0.09284</text>
+<text x='223.31' y='234.43' style='font-size: 16.93px; font-family: sans;' textLength='11.30px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text x='234.61' y='234.43' style='font-size: 16.93px; font-family: sans;' textLength='10.34px' lengthAdjust='spacingAndGlyphs'>F</text>
+<text x='244.95' y='237.56' style='font-size: 11.85px; font-family: sans;' textLength='6.93px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='251.87' y='237.56' style='font-size: 11.85px; font-family: sans;' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='262.39' y='234.43' style='font-size: 16.93px; font-family: sans;' textLength='13.14px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='279.45' y='234.43' style='font-size: 16.93px; font-family: sans;' textLength='51.78px' lengthAdjust='spacingAndGlyphs'>0.1291</text>
+<text x='223.31' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='51.78px' lengthAdjust='spacingAndGlyphs'>0.9905</text>
+<text x='275.10' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='4.24px' lengthAdjust='spacingAndGlyphs'> </text>
+<text x='279.33' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='9.42px' lengthAdjust='spacingAndGlyphs'>a</text>
+<text x='288.75' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='4.70px' lengthAdjust='spacingAndGlyphs'>t</text>
+<text x='293.45' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='4.24px' lengthAdjust='spacingAndGlyphs'> </text>
+<text x='297.69' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='5.64px' lengthAdjust='spacingAndGlyphs'>r</text>
+<text x='307.24' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='13.14px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='324.31' y='102.95' style='font-size: 16.93px; font-family: sans;' textLength='43.30px' lengthAdjust='spacingAndGlyphs'>5e-04</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<text x='0.00' y='9.08' style='font-size: 13.20px; font-family: sans;' textLength='321.40px' lengthAdjust='spacingAndGlyphs'>greater-BF10-bayes-factor-robustness-check-subplot-1</text>
+</g>
+</svg>
