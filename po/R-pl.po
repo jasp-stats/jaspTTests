@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-10-08 03:12\n"
-"PO-Revision-Date: 2022-11-09 17:29+0000\n"
+"PO-Revision-Date: 2022-11-10 20:50+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "pl/>\n"
@@ -287,85 +287,92 @@ msgid "For the %s, location parameter is given by mean difference. For the Mann-
 msgstr ""
 
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "%1$s% CI dla %2$s"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "%1$s SE"
 
 msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
 msgstr ""
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "Dla %1$s wielkość efektu jest określona przez %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "Test normalności (Shapiro-Wilk)"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "Wyniki istotne sugerują odchylenie od rozkładu normalnego."
 
 msgid "Brown-Forsythe"
 msgstr "Brown-Forsythe"
 
 msgid "Levene's"
-msgstr ""
+msgstr "Levene'a"
 
 msgid "Test of Equality of Variances (%1$s)"
-msgstr ""
+msgstr "Test równości wariancji (%1$s)"
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "%s<sub>1</sub>"
-msgstr ""
+msgstr "%s<sub>1</sub>"
 
 msgid "%s<sub>2</sub>"
-msgstr ""
+msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr ""
+msgstr "większy"
 
 msgid "less"
-msgstr ""
+msgstr "mniejszy"
 
 msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
 msgstr ""
+"Dla każdego testu hipoteza alternatywna wskazuje, że grupa %1$s jest %2$s "
+"niż grupa %3$s."
 
 msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"Test Browna-Forsythe'a jest istotny statystycznie (p < .05), co sugeruje "
+"naruszenie założenia o równości wariancji"
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"Test Levene'a jest istotny statystycznie (p < .05), co sugeruje naruszenie "
+"założenia o równości wariancji"
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
+"Delta Glassa wykorzystuje odchylenie standardowe grupy %1$s zmiennej %2$s."
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "Nie można obliczyć statystyki F"
 
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Test t dla jednej próby"
 
 msgid "Wilcoxon signed-rank test."
-msgstr ""
+msgstr "Test rang Wilcoxona."
 
 msgid "V"
-msgstr ""
+msgstr "V"
 
 msgid "Z test."
-msgstr ""
+msgstr "Test Z."
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "Location Difference"
 msgstr ""
 
 msgid "Student t-test and Z-test"
-msgstr ""
+msgstr "Test t Studenta i test Z"
 
 msgid "Z-test"
-msgstr ""
+msgstr "Test Z"
 
 msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>."
 msgstr ""
@@ -375,36 +382,42 @@ msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
+"Dla testu t Studenta wielkość efektu jest określona przy pomocy <em>d</em> "
+"Cohena."
 
 msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
 
 msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
 msgstr ""
+"Wielkość efektu dla testu Z jest określona poprzez <em>d</em> Cohena (w "
+"oparciu o podane odchylenie standardowe populacji)."
 
 msgid "greater than"
-msgstr ""
+msgstr "większe niż"
 
 msgid "less than"
-msgstr ""
+msgstr "mniejsze niż"
 
 msgid "different from"
-msgstr ""
+msgstr "różny od"
 
 msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
-msgstr ""
+msgstr "Dla %1$s hipoteza alternatywna wskazuje, że średnia wynosi %2$s %3$s."
 
 msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
 msgstr ""
+"W przypadku testu Wilcoxona hipoteza alternatywna wskazuje, że mediana "
+"wynosi %1$s %2$s."
 
 msgid "data are essentially constant"
 msgstr ""
 
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "Test t dla prób zależnych"
 
 msgid "z"
-msgstr ""
+msgstr "z"
 
 msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
@@ -414,23 +427,36 @@ msgstr ""
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że Miara 1 jest "
+"mniejsza niż Miara 2."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że Miara 1 jest większa "
+"niż Miara 2."
 
 msgid "For all tests, the alternative hypothesis specifies that %1s is less than %2s."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że %1s jest mniejsze "
+"niż %2s."
 
 msgid "For all tests, the alternative hypothesis specifies that %1s is greater than %2s."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że %1s jest większe niż "
+"%2s."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1s is less than %2s."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że Miara 1 jest "
+"mniejsza niż Miara 2. Np. %1s jest mniejsze niż %2s."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1s is greater than %2s."
 msgstr ""
+"Dla każdego z testów hipoteza alternatywna wskazuje, że Miara 1 jest większa "
+"niż Miara 2. Np. %1s jest większe niż %2s."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Następująca para jest zdublowana: %s"
+msgstr[1] "Następujące pary są zdublowane: %s"
+msgstr[2] "Następujące pary są zdublowane: %s"
