@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-09-28 10:01\n"
-"PO-Revision-Date: 2022-11-14 06:44+0000\n"
+"PO-Revision-Date: 2022-11-25 17:48+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -28,6 +28,7 @@ msgstr "Y 觀察值不足"
 msgid "Assumption Checks"
 msgstr "統計技術假設檢查"
 
+#, fuzzy
 msgid "Descriptives"
 msgstr "描述統計"
 
@@ -71,8 +72,9 @@ msgstr "標準差"
 msgid "SE"
 msgstr "標準誤"
 
+#, fuzzy
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "變異係數"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
@@ -87,13 +89,13 @@ msgid "Inferential Plots"
 msgstr ""
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "先驗與後驗"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "貝氏因子穩健性檢查"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "順序分析"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
@@ -191,7 +193,7 @@ msgid ""
 msgstr ""
 
 msgid "error %"
-msgstr ""
+msgstr "錯誤%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -249,7 +251,7 @@ msgid "Statistic"
 msgstr "統計數"
 
 msgid "Test"
-msgstr ""
+msgstr "考驗"
 
 msgid "df"
 msgstr "自由度"
