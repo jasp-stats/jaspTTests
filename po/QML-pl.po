@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-14 06:44+0000\n"
+"PO-Revision-Date: 2022-11-26 00:43+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/pl/>\n"
@@ -20,7 +20,7 @@ msgstr "Testy t"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "Klasyczne"
+msgstr "Klasyczna"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
@@ -36,7 +36,7 @@ msgstr "Test t dla jednej próby"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesowski"
+msgstr "Bayesowska"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
@@ -88,7 +88,7 @@ msgstr "Przedział wiarygodności"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Sprawdzenie odporności współczynnika Bayesa"
+msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
@@ -96,7 +96,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr "Sprawdzenie odporności"
+msgstr "Weryfikacja odporności"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
@@ -160,7 +160,7 @@ msgstr "Przedział wiarygodności"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr "Sprawdzenie odporności współczynnika Bayesa"
+msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
@@ -168,7 +168,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr "Sprawdzanie odporności"
+msgstr "Weryfikacja odporności"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
@@ -248,7 +248,7 @@ msgstr "Przedział wiarygodności"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Sprawdzenie odporności współczynnika Bayesa"
+msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
@@ -256,7 +256,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr "Sprawdzenie odporności"
+msgstr "Weryfikacja odporności"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
