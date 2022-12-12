@@ -17,7 +17,7 @@
 
 # abbreviation:
 # ttestBPS = ttestBayesianPairedSamples
-TTestBayesianPairedSamples <- function(jaspResults, dataset, options) {
+TTestBayesianPairedSamplesInternal <- function(jaspResults, dataset, options) {
 
   .ttestBayesianRunAnalysis(jaspResults, dataset, options, "paired")
 

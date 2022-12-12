@@ -17,7 +17,7 @@
 
 # abbreviation:
 # ttestBIS = ttestBayesianIndependentSamples
-TTestBayesianIndependentSamples <- function(jaspResults, dataset, options) {
+TTestBayesianIndependentSamplesInternal <- function(jaspResults, dataset, options) {
 
   .ttestBayesianRunAnalysis(jaspResults, dataset, options, "independent")
 

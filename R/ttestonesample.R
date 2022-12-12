@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-TTestOneSample <- function(jaspResults, dataset = NULL, options, ...) {
+TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$dependent) > 0
   type  <- "one-sample"
   if(ready) {

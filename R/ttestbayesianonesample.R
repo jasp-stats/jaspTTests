@@ -17,7 +17,7 @@
 
 # abbreviation:
 # ttestBOS = ttestBayesianOneSample
-TTestBayesianOneSample <- function(jaspResults, dataset, options, state = NULL) {
+TTestBayesianOneSampleInternal <- function(jaspResults, dataset, options, state = NULL) {
 
   .ttestBayesianRunAnalysis(jaspResults, dataset, options, "one-sample")
 
