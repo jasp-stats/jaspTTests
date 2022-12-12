@@ -16,7 +16,7 @@
 // <http://www.gnu.org/licenses/>.
 //
 
-import QtQuick	2.15
+import QtQuick
 Item
 {
 	enum Framework
