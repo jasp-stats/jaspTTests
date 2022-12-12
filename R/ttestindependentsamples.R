@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-TTestIndependentSamples <- function(jaspResults, dataset = NULL, options, ...) {
+TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options, ...) {
   #at least one variable and one grouping variable
   ready <- length(options$dependent) > 0 && options$group != ""
   type  <- "independent"

@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-TTestPairedSamples <- function(jaspResults, dataset = NULL, options, ...) {
+TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$pairs) > 0  #at least one variable pair
   type  <- "paired"
   if(ready) {
