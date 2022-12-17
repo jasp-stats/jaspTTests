@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-10-08 03:12\n"
-"PO-Revision-Date: 2022-11-25 17:48+0000\n"
+"PO-Revision-Date: 2022-12-15 17:32+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "pl/>\n"
@@ -141,7 +141,7 @@ msgid "Prior"
 msgstr "Prior"
 
 msgid "%s%% CI:"
-msgstr "%s%% CI:"
+msgstr "%s%% PU:"
 
 msgid "Effect size"
 msgstr "Wielkość efektu"
@@ -287,7 +287,7 @@ msgid "For the %s, location parameter is given by mean difference. For the Mann-
 msgstr ""
 
 msgid "%1$s%% CI for %2$s"
-msgstr "%1$s% CI dla %2$s"
+msgstr "%1$s% PU dla %2$s"
 
 msgid "SE %1$s"
 msgstr "%1$s SE"

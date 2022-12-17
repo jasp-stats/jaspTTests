@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-09-28 10:01\n"
-"PO-Revision-Date: 2022-11-01 11:29+0000\n"
-"Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
+"PO-Revision-Date: 2022-12-15 17:32+0000\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
 "Language: fr\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 msgid "Paired and two-sample z.test not yet implemented"
 msgstr "Le test z apparié à deux échantillons n'est pas encore implémenté."
@@ -31,19 +31,17 @@ msgstr "Vérifications des présupposés"
 msgid "Descriptives"
 msgstr "Descriptives"
 
-#, fuzzy
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
 "the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
-"Vovk-Sellke Maximum <em>p</em>-Ratio: Sur la base d'une valeur bilatérale "
-"<em>p</em>-, les chances maximales en faveur de H%1$s sur H%2$s égalent 1/(-"
-"e <em>p</em> log(<em>p</em>)) pour <em>p</em> %3$s .37 (Sellke, Bayarri, & "
+"Vovk-Sellke Maximum <em>p</em>-Ratio : Sur la base d'une valeur <em>p</em>- "
+"bilatérale, les chances maximales en faveur de H%1$s sur H%2$s égalent 1/(-e "
+"<em>p</em> log(<em>p</em>)) pour <em>p</em> %3$s .37 (Sellke, Bayarri, & "
 "Berger, 2001)."
 
-#, fuzzy
 msgid "nDistinctObservations got an object of type"
 msgstr "nDistinctObservations a reçu un objet de type"
 
@@ -57,7 +55,7 @@ msgid "Variables %s and %s are the same!"
 msgstr "Les variables %s et %s sont identiques !"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Graphiques descriptifs"
 
 msgid "Bar Plots"
 msgstr "Graphiques descriptifs"
@@ -95,9 +93,8 @@ msgstr "Graphiques inférentiels"
 msgid "Prior and Posterior"
 msgstr "Antérieur et postérieur"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr "Vérification de robustesse du facteur Bayes"
+msgstr "Vérification de la robustesse du facteur de Bayes"
 
 msgid "Sequential Analysis"
 msgstr "Analyse séquentielle"
@@ -106,20 +103,23 @@ msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
 msgstr ""
+"Vérification graphique de la robustesse du facteur de Bayes n'est pas "
+"disponible pour les distributions de probabilités et priori spécifiques."
 
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
 "informed prior."
 msgstr ""
+"Vérification graphique de la robustesse de l'analyse séquentielle n'est pas "
+"disponible pour les distributions de probabilités et priori spécifiques."
 
-#, fuzzy
 msgid "Expected numeric or character rscale but got %s."
 msgstr ""
 "On s'attendait à une échelle numérique ou de caractères, mais on a obtenu "
 "des %s."
 
 msgid "Running robustness check %d / %d"
-msgstr ""
+msgstr "Vérification de la robustesse %d / %d"
 
 msgid "max BF%s"
 msgstr "max BF%s"
@@ -128,10 +128,10 @@ msgid "user prior"
 msgstr "utilisateur précédent"
 
 msgid "wide prior"
-msgstr ""
+msgstr "Priori étendu"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "Priori ultra étendu"
 
 msgid "BF%s"
 msgstr "BF%s"
@@ -139,12 +139,11 @@ msgstr "BF%s"
 msgid "%s at r==%s"
 msgstr "%s à r==%s"
 
-#, fuzzy
 msgid "Some Bayes factors were infinite"
-msgstr "Certains facteurs Bayes sont infinis."
+msgstr "Certains facteurs Bayes sont infinis"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "Distribution à priori Cauchy"
 
 msgid "Running sequential analysis %d / %d"
 msgstr "Analyse séquentielle en cours %d / %d"
@@ -165,10 +164,10 @@ msgid "Effect size"
 msgstr "Taille de l'effet"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Graphiques Raincloud"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Graphique Raincloud des différences"
 
 msgid "Bayes factor could not be calculated"
 msgstr "Facteur Bayes ne pouvait pas être calculé"
@@ -188,10 +187,14 @@ msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
 msgstr ""
+"La valeur t est large. Une approximation de Savage-Dickey a été utilisée "
+"pour calculer le facteur de Bayes mais aucune estimation d'erreur ne peut "
+"être donnée."
 
-#, fuzzy
 msgid "No error estimate is available for normal priors."
-msgstr "L'estimation de l'erreur n'est pas disponible pour les prieurs normaux."
+msgstr ""
+"L'estimation de l'erreur n'est pas disponible pour les distributions à "
+"priori normaux."
 
 msgid "Bayesian Mann-Whitney U Test"
 msgstr "Test Mann-Whitney U Bayésien"
@@ -204,7 +207,7 @@ msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
 "Résultat basé sur l'algorithme d'augmentation des données avec 5 chaînes de "
-"%. d'itérations."
+"%.0f itérations."
 
 msgid "error %"
 msgstr "% d'erreur"
@@ -226,7 +229,7 @@ msgstr ""
 "<em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Test Bayésien de rangs signés de Wilcoxon"
 
 msgid "Bayesian One Sample T-Test"
 msgstr "Test t Bayésien à un échantillon"
@@ -261,7 +264,6 @@ msgstr "Test t d'échantillons indépendants"
 msgid "Mann-Whitney U test."
 msgstr "Test U Mann-Whitney."
 
-#, fuzzy
 msgid "W"
 msgstr "W"
 
@@ -290,22 +292,23 @@ msgid "Cohen's d"
 msgstr "d de Cohen"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "delta de Glass"
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "g de Hedges"
 
 msgid "Mean Difference"
 msgstr "Différence de moyenne"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "Estimé de Hodges-Lehmann"
 
+#, fuzzy
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "Corrélation Rank-Biserial"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "Paramètre de Position"
 
 msgid "Effect Size"
 msgstr "Taille de l'effet"
@@ -330,7 +333,6 @@ msgstr ""
 "moyenne. Pour le test de Mann-Whitney, le paramètre de localisation est "
 "donné par l'estimation de Hodges-Lehmann."
 
-#, fuzzy
 msgid "%1$s%% CI for %2$s"
 msgstr "IC %1$s%% pour %2$s"
 
@@ -344,7 +346,6 @@ msgstr ""
 "Pour le test de Mann-Whitney, la taille de l'effet est donnée par la "
 "corrélation bisériale de rang."
 
-#, fuzzy
 msgid "For the %1$s, effect size is given by %2$s."
 msgstr "Pour %1$s, la taille de l'effet est donnée par %2$s."
 
@@ -401,7 +402,7 @@ msgstr ""
 
 msgid ""
 "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
-msgstr ""
+msgstr "delta de Glass utilise l'écart-type du groupe %1$s de la variable %2$s."
 
 msgid "F-statistic could not be calculated"
 msgstr "La statistique F n'a pas pu être calculée"
@@ -410,10 +411,10 @@ msgid "One Sample T-Test"
 msgstr "Test t à Un Échantillon"
 
 msgid "Wilcoxon signed-rank test."
-msgstr ""
+msgstr "Test de rangs signés de Wilcoxon."
 
 msgid "V"
-msgstr ""
+msgstr "V"
 
 msgid "Z test."
 msgstr "Test z."
@@ -441,6 +442,8 @@ msgid ""
 "For the Wilcoxon test, location difference estimate is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
+"Pour le test Wilcoxon, l'estimé des différences de position est fourni par "
+"l'estimé de Hodges-Lehmann."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
@@ -451,6 +454,8 @@ msgid ""
 "For the Wilcoxon test, effect size is given by the matched rank biserial "
 "correlation."
 msgstr ""
+"Pour le test Wilcoxon, la taille de l'effet est donnée par la corrélation "
+"matched rank biserial."
 
 msgid ""
 "For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
@@ -495,11 +500,18 @@ msgid ""
 "<em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
+"Pour le test t de Student, le paramètre de position est fourni par la "
+"différence de moyenne <em>d</em>. Pour le test Wilcoxon, l'estimé de "
+"position est fourni par l'estimé de Hodges-Lehmann."
 
+#, fuzzy
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
 "Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"Pour le test t de Student, la taille de l'effet est fourni par le <em>d</em> "
+"de Cohen. Pour le test Wilcoxon, la taille de l'effet est fourni par la "
+"corrélation matched rank biserial."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
