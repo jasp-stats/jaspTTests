@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2021-11-10 04:46+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -12,18 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.9-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr "対応のあるz検定と2標本のz検定はまだ実装されていません"
-
-msgid "not enough x observations"
-msgstr "十分な観測値xがありません"
-
-msgid "Not yet implemented"
-msgstr "まだ実装されていません"
-
-msgid "not enough y observations"
-msgstr "十分な観測値yがありません"
 
 msgid "Assumption Checks"
 msgstr "仮定のチェック"
@@ -40,12 +28,6 @@ msgstr ""
 "Vovk-Sellke の最大 <em>p</em> 比: <em>p</em>-値に基づいたH%2$sよりもH%1$sを支"
 "持する最大の可能なオッズは、<em>p</em> %3$s .37に対して1/(-e <em>p</em> "
 "log(<em>p</em>))に等しくなります(Sellke, Bayarri, & Berger, 2001)。"
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nDistinctObservationsは型のオブジェクトを取得しました"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "別の変数を用意してください."
@@ -175,10 +157,6 @@ msgstr "ベイズファクターは無限大です"
 msgid "The Bayes factor is too small"
 msgstr "ベイズファクターが小さすぎる"
 
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr ""
-"事後分布をプロットすることはできません - おそらく0の近くに集中しすぎている."
-
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
@@ -208,15 +186,15 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
-"すべての検定において、対立仮説は、グループ<em>%1$s</em>の位置がグループ<em>"
-"%2$s</em>の位置よりも大きいとしています。"
+"すべての検定において、対立仮説は、グループ<em>%1$s</em>の位置がグループ"
+"<em>%2$s</em>の位置よりも大きいとしています。"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
-"すべての検定において、対立仮説は、グループ<em>%1$s</em>の位置がグループ<em>"
-"%2$s</em>の位置よりも小さいとしています。"
+"すべての検定において、対立仮説は、グループ<em>%1$s</em>の位置がグループ"
+"<em>%2$s</em>の位置よりも小さいとしています。"
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "ベイジアン・ウィルコクソンの符号つき順位検定"
@@ -470,9 +448,6 @@ msgid ""
 "is %1$s %2$s."
 msgstr "Wilcoxon 検定では、対立仮説は中央値が %1$s %2$s であるとしています。"
 
-msgid "data are essentially constant"
-msgstr "データは基本的に一定です"
-
 msgid "Paired Samples T-Test"
 msgstr "対応のあるサンプルのt検定"
 
@@ -538,6 +513,32 @@ msgstr ""
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "次のペアは重複しています: %s"
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr "対応のあるz検定と2標本のz検定はまだ実装されていません"
+
+#~ msgid "not enough x observations"
+#~ msgstr "十分な観測値xがありません"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "まだ実装されていません"
+
+#~ msgid "not enough y observations"
+#~ msgstr "十分な観測値yがありません"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nDistinctObservationsは型のオブジェクトを取得しました"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Cannot plot the posterior - possibly too concentrated near 0."
+#~ msgstr ""
+#~ "事後分布をプロットすることはできません - おそらく0の近くに集中しすぎてい"
+#~ "る."
+
+#~ msgid "data are essentially constant"
+#~ msgstr "データは基本的に一定です"
 
 #~ msgid "Evidence for H1"
 #~ msgstr "H1のエビデンス"

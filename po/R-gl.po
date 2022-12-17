@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-09-28 12:22+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/gl/>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,18 +20,6 @@ msgstr ""
 "X-Virgin-Header: remove this line if you change anything in the header.\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr "Aínda sen implementar a proba z de parellas e dúas mostras"
-
-msgid "not enough x observations"
-msgstr "observacións x insuficientes"
-
-msgid "Not yet implemented"
-msgstr "Aínda sen implementar"
-
-msgid "not enough y observations"
-msgstr "observacións y insuficientes"
 
 msgid "Assumption Checks"
 msgstr "Comprobacións de Supostos"
@@ -49,12 +37,6 @@ msgstr ""
 "bilateral, a máxima probabilidade posible favorable a H%1$s sobre H%2$s "
 "igual a 1/(-e <em>p</em> log(<em>p</em>)) para <em>p</em> %3$s .37 (Sellke, "
 "Bayarri & Berger, 2001)."
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nDistinctObservations recibiu un obxecto de tipo"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "Por favor, proporciona outra variable."
@@ -183,11 +165,6 @@ msgstr "O factor de Bayes é infinito"
 
 msgid "The Bayes factor is too small"
 msgstr "O factor de Bayes é demasiado pequeno"
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr ""
-"Non pode representarse o posterior (posiblemente está demasiado concentrado "
-"preto do 0)."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -486,9 +463,6 @@ msgstr ""
 "Para a proba de Wilcoxon, a hipótese alternativa indica que a mediana é %1$s "
 "%2$s."
 
-msgid "data are essentially constant"
-msgstr "os datos son practicamente constantes"
-
 msgid "Paired Samples T-Test"
 msgstr "Proba T para Mostras Emparelladas"
 
@@ -556,6 +530,32 @@ msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "A seguinte parella está duplicada: %s"
 msgstr[1] "As seguintes parellas están duplicadas: %s"
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr "Aínda sen implementar a proba z de parellas e dúas mostras"
+
+#~ msgid "not enough x observations"
+#~ msgstr "observacións x insuficientes"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "Aínda sen implementar"
+
+#~ msgid "not enough y observations"
+#~ msgstr "observacións y insuficientes"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nDistinctObservations recibiu un obxecto de tipo"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Cannot plot the posterior - possibly too concentrated near 0."
+#~ msgstr ""
+#~ "Non pode representarse o posterior (posiblemente está demasiado "
+#~ "concentrado preto do 0)."
+
+#~ msgid "data are essentially constant"
+#~ msgstr "os datos son practicamente constantes"
 
 #~ msgid "Evidence for H1"
 #~ msgstr "Evidencia para H1"

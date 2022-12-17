@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-11-25 17:48+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -12,18 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.15-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
-
-msgid "not enough x observations"
-msgstr "X 觀察值不足"
-
-msgid "Not yet implemented"
-msgstr ""
-
-msgid "not enough y observations"
-msgstr "Y 觀察值不足"
 
 msgid "Assumption Checks"
 msgstr "統計技術假設檢查"
@@ -38,12 +26,6 @@ msgid ""
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
-
-msgid "nDistinctObservations got an object of type"
-msgstr ""
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "請提供另一個變項"
@@ -169,9 +151,6 @@ msgid "Bayes factor is infinite"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
 
 msgid ""
@@ -434,9 +413,6 @@ msgid ""
 "is %1$s %2$s."
 msgstr ""
 
-msgid "data are essentially constant"
-msgstr ""
-
 msgid "Paired Samples T-Test"
 msgstr ""
 
@@ -487,3 +463,12 @@ msgstr ""
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] ""
+
+#~ msgid "not enough x observations"
+#~ msgstr "X 觀察值不足"
+
+#~ msgid "not enough y observations"
+#~ msgstr "Y 觀察值不足"
+
+#~ msgid ","
+#~ msgstr ","

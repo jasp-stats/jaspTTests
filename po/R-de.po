@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-12-10 12:02+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -13,19 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
 "X-Generator: Weblate 4.15-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
-"Z.test für abhängige und unabhängige Stichproben noch nicht implementiert"
-
-msgid "not enough x observations"
-msgstr "nicht genügend x-Beobachtungen"
-
-msgid "Not yet implemented"
-msgstr "Noch nicht implementiert"
-
-msgid "not enough y observations"
-msgstr "nicht genügend y-Beobachtungen"
 
 msgid "Assumption Checks"
 msgstr "Annahmeprüfungen"
@@ -43,12 +30,6 @@ msgstr ""
 "<em>p</em>-Wert ist der maximale Quotient zugunsten H%1$s gegenüber H%2$s "
 "gegeben durch 1/(-e <em>p</em> log(<em>p</em>)) für <em>p</em> %3$s .37 "
 "(Sellke, Bayarri, & Berger, 2001)."
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nDistinctObservations hat ein Objekt vom Typ"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "Bitte gib eine andere Variable ein."
@@ -177,9 +158,6 @@ msgstr "Bayesfaktor ist unendlich"
 
 msgid "The Bayes factor is too small"
 msgstr "Der Bayesfaktor ist zu klein"
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr "Kann Posterior nicht plotten - möglicherweise zu konzentriert um 0."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -482,9 +460,6 @@ msgstr ""
 "Beim Wilcoxon-Test gibt die Alternativhypothese an, dass der Median %1$s "
 "%2$s ist."
 
-msgid "data are essentially constant"
-msgstr "Daten sind im Prinzip konstant"
-
 msgid "Paired Samples T-Test"
 msgstr "T-Test für abhängige Stichproben"
 
@@ -553,6 +528,31 @@ msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "Das folgende Datenpaar ist dupliziert: %s"
 msgstr[1] "Die folgenden Datenpaare sind dupliziert: %s"
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr ""
+#~ "Z.test für abhängige und unabhängige Stichproben noch nicht implementiert"
+
+#~ msgid "not enough x observations"
+#~ msgstr "nicht genügend x-Beobachtungen"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "Noch nicht implementiert"
+
+#~ msgid "not enough y observations"
+#~ msgstr "nicht genügend y-Beobachtungen"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nDistinctObservations hat ein Objekt vom Typ"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Cannot plot the posterior - possibly too concentrated near 0."
+#~ msgstr "Kann Posterior nicht plotten - möglicherweise zu konzentriert um 0."
+
+#~ msgid "data are essentially constant"
+#~ msgstr "Daten sind im Prinzip konstant"
 
 #~ msgid "Evidence for H1"
 #~ msgstr "Evidenz für H1"

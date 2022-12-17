@@ -1,29 +1,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-12-10 12:02+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.15-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr "Aún sin implementar el contraste z de pares y dos muestras"
-
-msgid "not enough x observations"
-msgstr "No hay suficientes observaciones de X"
-
-msgid "Not yet implemented"
-msgstr "Todavía no se ha aplicado"
-
-msgid "not enough y observations"
-msgstr "no hay suficientes observaciones y"
 
 msgid "Assumption Checks"
 msgstr "Verificaciones de Supuestos"
@@ -41,12 +29,6 @@ msgstr ""
 "bilateral, la máxima probabilidad posible favorable a H%1$s sobre H%2$s "
 "igual a 1/(-e <em>p</em> log(<em>p</em>)) para <em>p</em> %3$s .37 (Sellke, "
 "Bayarri & Berger, 2001)."
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nDistinctObservations recibió un objeto de tipo"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "Proporcionar otra variable, por favor."
@@ -175,11 +157,6 @@ msgstr "El factor de Bayes es infinito"
 
 msgid "The Bayes factor is too small"
 msgstr "El factor de Bayes es demasiado pequeño"
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr ""
-"No se puede representar el posterior (posiblemente está demasiado "
-"concentrado cerca del 0)."
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -481,9 +458,6 @@ msgstr ""
 "Para el contraste de Wilcoxon, la hipótesis alternativa indica que la "
 "mediana es %1$s %2$s."
 
-msgid "data are essentially constant"
-msgstr "los datos son prácticamente constantes"
-
 msgid "Paired Samples T-Test"
 msgstr "Contraste T para Muestras Emparejadas"
 
@@ -553,3 +527,29 @@ msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "La siguiente pareja está duplicada: %s"
 msgstr[1] "Las siguientes parejas están duplicadas: %s"
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr "Aún sin implementar el contraste z de pares y dos muestras"
+
+#~ msgid "not enough x observations"
+#~ msgstr "No hay suficientes observaciones de X"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "Todavía no se ha aplicado"
+
+#~ msgid "not enough y observations"
+#~ msgstr "no hay suficientes observaciones y"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nDistinctObservations recibió un objeto de tipo"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Cannot plot the posterior - possibly too concentrated near 0."
+#~ msgstr ""
+#~ "No se puede representar el posterior (posiblemente está demasiado "
+#~ "concentrado cerca del 0)."
+
+#~ msgid "data are essentially constant"
+#~ msgstr "los datos son prácticamente constantes"

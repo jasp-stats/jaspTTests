@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2022-12-03 02:44\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,18 +11,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
-
-msgid "not enough x observations"
-msgstr ""
-
-msgid "Not yet implemented"
-msgstr ""
-
-msgid "not enough y observations"
-msgstr ""
-
 msgid "Assumption Checks"
 msgstr ""
 
@@ -30,12 +18,6 @@ msgid "Descriptives"
 msgstr ""
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
-msgstr ""
-
-msgid "nDistinctObservations got an object of type"
-msgstr ""
-
-msgid ","
 msgstr ""
 
 msgid "Please provide another variable."
@@ -156,9 +138,6 @@ msgid "Bayes factor is infinite"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
@@ -381,9 +360,6 @@ msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s 
 msgstr ""
 
 msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
-msgstr ""
-
-msgid "data are essentially constant"
 msgstr ""
 
 msgid "Paired Samples T-Test"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-11-03 13:06+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -13,18 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.14.2-dev\n"
 "X-Language: zh_Hans\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr "配对和双样本z检验尚未实现"
-
-msgid "not enough x observations"
-msgstr "没有足够的 x 观测"
-
-msgid "Not yet implemented"
-msgstr "尚未实现"
-
-msgid "not enough y observations"
-msgstr "没有足够的 y 观测"
 
 msgid "Assumption Checks"
 msgstr "假设检验"
@@ -42,12 +30,6 @@ msgstr ""
 "the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nDistinctObservations 得到了一个类型的对象"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "请提供其他变量。"
@@ -172,9 +154,6 @@ msgstr "贝叶斯因子是无限的"
 
 msgid "The Bayes factor is too small"
 msgstr "贝叶斯因子太小"
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
-msgstr "无法绘制后验图--可能是在0附近过于集中了。"
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -442,9 +421,6 @@ msgid ""
 "is %1$s %2$s."
 msgstr "对于 Wilcoxon 检验，备择假设指定中位数为 %1$s %2$s。"
 
-msgid "data are essentially constant"
-msgstr "数据基本上是恒定的"
-
 msgid "Paired Samples T-Test"
 msgstr "配对样本T检验"
 
@@ -456,8 +432,8 @@ msgid ""
 "<em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，"
-"效应大小由 Hodges-Lehmann 估计值给出。"
+"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，效应大"
+"小由 Hodges-Lehmann 估计值给出。"
 
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
@@ -499,3 +475,27 @@ msgstr "对于所有检验，备择假设指定度量 1 大于度量 2。例如�
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "以下配对是重复的: %s"
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr "配对和双样本z检验尚未实现"
+
+#~ msgid "not enough x observations"
+#~ msgstr "没有足够的 x 观测"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "尚未实现"
+
+#~ msgid "not enough y observations"
+#~ msgstr "没有足够的 y 观测"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nDistinctObservations 得到了一个类型的对象"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Cannot plot the posterior - possibly too concentrated near 0."
+#~ msgstr "无法绘制后验图--可能是在0附近过于集中了。"
+
+#~ msgid "data are essentially constant"
+#~ msgstr "数据基本上是恒定的"

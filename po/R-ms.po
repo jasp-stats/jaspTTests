@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-06-09 14:52+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Malay <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -12,18 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.13-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr "Ujian.z berpasangan dan dua sampel belum dilaksanakan"
-
-msgid "not enough x observations"
-msgstr "tidak cukup pemerhatian x"
-
-msgid "Not yet implemented"
-msgstr "Belum dilaksanakan"
-
-msgid "not enough y observations"
-msgstr "tidak cukup pemerhatian y"
 
 msgid "Assumption Checks"
 msgstr "Semakan Andaian"
@@ -41,12 +29,6 @@ msgstr ""
 "em>dua sisi,kemungkinan maksimum yang menyokong H%1$s berbanding H%2$s "
 "bersamaan 1/(-e <em>p</em> log(<em>p</em>)) untuk <em>p</em> %3$s .37 "
 "(Sellke, Bayarri, & Berger, 2001)."
-
-msgid "nDistinctObservations got an object of type"
-msgstr "nPemerhatianBerlainan ada objek iaitu jenis"
-
-msgid ","
-msgstr ","
 
 msgid "Please provide another variable."
 msgstr "Sila beri pemboleh ubah lain."
@@ -175,9 +157,6 @@ msgid "Bayes factor is infinite"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
 
 msgid ""
@@ -438,9 +417,6 @@ msgid ""
 "is %1$s %2$s."
 msgstr ""
 
-msgid "data are essentially constant"
-msgstr ""
-
 msgid "Paired Samples T-Test"
 msgstr ""
 
@@ -491,3 +467,21 @@ msgstr ""
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] ""
+
+#~ msgid "Paired and two-sample z.test not yet implemented"
+#~ msgstr "Ujian.z berpasangan dan dua sampel belum dilaksanakan"
+
+#~ msgid "not enough x observations"
+#~ msgstr "tidak cukup pemerhatian x"
+
+#~ msgid "Not yet implemented"
+#~ msgstr "Belum dilaksanakan"
+
+#~ msgid "not enough y observations"
+#~ msgstr "tidak cukup pemerhatian y"
+
+#~ msgid "nDistinctObservations got an object of type"
+#~ msgstr "nPemerhatianBerlainan ada objek iaitu jenis"
+
+#~ msgid ","
+#~ msgstr ","

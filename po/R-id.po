@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-09-28 10:01\n"
+"POT-Creation-Date: 2022-12-17 02:41\n"
 "PO-Revision-Date: 2022-02-17 15:13+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
@@ -12,18 +12,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.11-dev\n"
-
-msgid "Paired and two-sample z.test not yet implemented"
-msgstr ""
-
-msgid "not enough x observations"
-msgstr ""
-
-msgid "Not yet implemented"
-msgstr ""
-
-msgid "not enough y observations"
-msgstr ""
 
 msgid "Assumption Checks"
 msgstr ""
@@ -36,12 +24,6 @@ msgid ""
 "the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
-msgstr ""
-
-msgid "nDistinctObservations got an object of type"
-msgstr ""
-
-msgid ","
 msgstr ""
 
 msgid "Please provide another variable."
@@ -166,9 +148,6 @@ msgid "Bayes factor is infinite"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
-
-msgid "Cannot plot the posterior - possibly too concentrated near 0."
 msgstr ""
 
 msgid ""
@@ -427,9 +406,6 @@ msgstr ""
 msgid ""
 "For the Wilcoxon test, the alternative hypothesis specifies that the median "
 "is %1$s %2$s."
-msgstr ""
-
-msgid "data are essentially constant"
 msgstr ""
 
 msgid "Paired Samples T-Test"
