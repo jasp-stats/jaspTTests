@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2022-11-25 17:48+0000\n"
+"PO-Revision-Date: 2022-12-20 20:17+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid "Assumption Checks"
 msgstr "統計技術假設檢查"
@@ -61,11 +61,13 @@ msgstr "變異係數"
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
+#, fuzzy
 msgid "Lower"
-msgstr "下限"
+msgstr "下界"
 
+#, fuzzy
 msgid "Upper"
-msgstr "上限"
+msgstr "上界"
 
 msgid "Inferential Plots"
 msgstr ""
@@ -122,7 +124,6 @@ msgstr ""
 msgid "Running sequential analysis %d / %d"
 msgstr ""
 
-#, fuzzy
 msgid "n"
 msgstr "樣本數"
 
