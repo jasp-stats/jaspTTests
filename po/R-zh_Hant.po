@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2022-12-20 20:17+0000\n"
+"PO-Revision-Date: 2022-12-24 02:39+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -101,7 +101,7 @@ msgid "max BF%s"
 msgstr ""
 
 msgid "user prior"
-msgstr ""
+msgstr "使用者先驗"
 
 msgid "wide prior"
 msgstr ""
@@ -128,13 +128,13 @@ msgid "n"
 msgstr "樣本數"
 
 msgid "Posterior"
-msgstr "事後"
+msgstr "後驗"
 
 msgid "Prior"
 msgstr "先驗"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% 信賴區間："
 
 msgid "Effect size"
 msgstr ""
@@ -222,13 +222,13 @@ msgid "Welch's t-test."
 msgstr ""
 
 msgid "t"
-msgstr "t 值"
+msgstr "t"
 
 msgid "Student's t-test."
 msgstr "Student's t-考驗"
 
 msgid "Statistic"
-msgstr "統計數"
+msgstr "統計"
 
 msgid "Test"
 msgstr "考驗"
@@ -237,7 +237,7 @@ msgid "df"
 msgstr "自由度"
 
 msgid "p"
-msgstr "p"
+msgstr "p值"
 
 msgid "Cohen's d"
 msgstr "Cohen's d 效果量"
