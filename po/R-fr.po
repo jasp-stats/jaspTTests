@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2022-12-15 17:32+0000\n"
+"PO-Revision-Date: 2022-12-30 10:51+0000\n"
 "Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 msgid "Assumption Checks"
 msgstr "Vérifications des présupposés"
 
 msgid "Descriptives"
-msgstr "Descriptives"
+msgstr "Descriptifs"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -179,7 +179,6 @@ msgstr "Test Mann-Whitney U Bayésien"
 msgid "Bayesian Independent Samples T-Test"
 msgstr "Test t d'échantillons indépendants Bayésien"
 
-#, fuzzy
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
@@ -254,13 +253,13 @@ msgid "Student's t-test."
 msgstr "Test t de Student."
 
 msgid "Statistic"
-msgstr "Statistique"
+msgstr "Statistiques"
 
 msgid "Test"
 msgstr "Test"
 
 msgid "df"
-msgstr "ddl"
+msgstr "dl"
 
 msgid "p"
 msgstr "p"
@@ -275,12 +274,11 @@ msgid "Hedges' g"
 msgstr "g de Hedges"
 
 msgid "Mean Difference"
-msgstr "Différence de moyenne"
+msgstr "Différence moyenne"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr "Estimé de Hodges-Lehmann"
 
-#, fuzzy
 msgid "Rank-Biserial Correlation"
 msgstr "Corrélation Rank-Biserial"
 
@@ -479,7 +477,6 @@ msgstr ""
 "différence de moyenne <em>d</em>. Pour le test Wilcoxon, l'estimé de "
 "position est fourni par l'estimé de Hodges-Lehmann."
 
-#, fuzzy
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
 "Wilcoxon test, effect size is given by the matched rank biserial correlation."
