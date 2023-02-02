@@ -45,7 +45,7 @@ Form
 		title: qsTr("Tests")
     	CheckBox { name: "student";		label: qsTr("Student"); checked: true	}
 		CheckBox { name: "welch";			label: qsTr("Welch")					}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")				}
+		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney")				}
 	}
 
 	Group

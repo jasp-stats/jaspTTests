@@ -9,7 +9,7 @@ test_that("Main table results match", {
   options$dependent <- "contNormal"
   options$group <- "contBinom"
   options$welch <- TRUE
-  options$wilcoxon <- TRUE
+  options$mannWhitneyU  <- TRUE
   options$meanDifference <- TRUE
   options$effectSize <- TRUE
   options$vovkSellke <- TRUE
@@ -160,7 +160,7 @@ test_that("Analysis works with unicode", {
                             Mischief = c(3L, 1L, 5L, 4L, 6L, 4L, 6L, 2L, 0L, 5L, 4L, 5L, 4L, 3L, 6L, 6L, 8L, 5L, 5L, 4L, 2L, 5L, 7L, 5L)),
                        row.names = c(NA, -24L), class = "data.frame")
 
-  results <- runAnalysis("TTestIndependentSamples", dataset, options)
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dataset, options)
 
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]

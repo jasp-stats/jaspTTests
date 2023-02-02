@@ -10,7 +10,7 @@ options$dependent <- "Score"
 options$group <- "Group"
 options$student <- TRUE
 options$welch <- TRUE
-options$wilcoxon <- FALSE
+options$mannWhitneyU <- FALSE
 options$meanDifference <- TRUE
 options$meanDifferenceCi <- TRUE
 options$descriptives <- TRUE
@@ -49,7 +49,7 @@ test_that("Mann-Whitney U table results match R, SPSS, SAS and MiniTab", {
   options$group <- "Group"
   options$student <- FALSE
   options$welch <- FALSE
-  options$wilcoxon <- TRUE
+  options$mannWhitneyU <- TRUE
 
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "MannWhitney.csv", options)
 

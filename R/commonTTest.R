@@ -95,7 +95,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     optionsList$percentConfidenceMeanDiff <- options$meanDifferenceCiLevel
   } else if(type == "independent") {
     optionsList$wantsWelchs <- options$welch
-    optionsList$wantsWilcox <- options$wilcoxon
+    optionsList$wantsWilcox <- options$mannWhitneyU
     optionsList$whichTests  <- c("Student", "Welch", "Mann-Whitney")[c(optionsList$wantsStudents, optionsList$wantsWelchs, optionsList$wantsWilcox)]
     optionsList$percentConfidenceEffSize  <- options$effectSizeCiLevel
     optionsList$percentConfidenceMeanDiff <- options$meanDifferenceCiLevel

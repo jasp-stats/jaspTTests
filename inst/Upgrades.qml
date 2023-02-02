@@ -13,7 +13,6 @@ Upgrades
 				ChangeRename { from:	"groupingVariable";									to:		"group"									}
 				ChangeRename { from:	"students";											to:		"student"								}
 				ChangeRename { from:	"welchs";											to:		"welch"									}
-				ChangeRename { from:	"mannWhitneyU";										to:		"wilcoxon"								}
 				ChangeRename { from:	"meanDiffConfidenceIntervalCheckbox";				to:		"meanDifferenceCi"						}
 				ChangeRename { from:	"descriptivesMeanDiffConfidenceIntervalPercent";	to:		"meanDifferenceCiLevel"					}
 				ChangeRename { from:	"effectSizesType";									to:		"effectSizeType"						}
