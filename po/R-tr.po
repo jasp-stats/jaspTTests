@@ -2,19 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-01 03:03+0000\n"
+"Last-Translator: Ünal Halit ÖZDEN <uozden@ticaret.edu.tr>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Varsayılan Kontroller"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Tanımsal"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -24,22 +27,22 @@ msgid ""
 msgstr ""
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Lütfen başka bir değişken sağlayın."
 
 msgid "Variables %s and %s are the same!"
 msgstr ""
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Tanımlayıcı Grafikler"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Çubuk Grafikleri"
 
 msgid "Group"
-msgstr ""
+msgstr "Grup"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
 msgstr ""
@@ -60,13 +63,13 @@ msgid "Lower"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Üst"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Çıkarımsal Grafikler"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Önceki ve Sonraki"
 
 msgid "Bayes Factor Robustness Check"
 msgstr ""
@@ -118,13 +121,13 @@ msgid "Running sequential analysis %d / %d"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
 msgstr ""
 
 msgid "Prior"
-msgstr ""
+msgstr "Önceki"
 
 msgid "%s%% CI:"
 msgstr ""
@@ -230,16 +233,16 @@ msgid "df"
 msgstr ""
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen d"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "Cam deltası"
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "Hedges' g"
 
 msgid "Mean Difference"
 msgstr ""
@@ -294,7 +297,7 @@ msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgid "Levene's"
 msgstr ""
