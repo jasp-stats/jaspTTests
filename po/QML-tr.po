@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-31 20:49+0000\n"
-"Last-Translator: Ünal Halit ÖZDEN <uozden@ticaret.edu.tr>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/tr/>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -153,17 +147,20 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikler"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Önceki ve sonraki"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "ilave bilgi"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
@@ -185,9 +182,10 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "yağmur bulutu grafikleri"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
@@ -205,9 +203,10 @@ msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Testler"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
@@ -253,17 +252,20 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikler"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Önceki ve sonraki"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "ilave bilgi"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
@@ -285,9 +287,10 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "yağmur bulutu grafikleri"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
@@ -297,9 +300,10 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Testler"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
@@ -329,17 +333,19 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Bağımlı değişkenler"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Testler"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
@@ -385,9 +391,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "yağmur bulutu grafikleri"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
@@ -401,13 +408,15 @@ msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Grup 1 > Grup 2"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Grup 1 < Grup 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -437,9 +446,10 @@ msgctxt "TTestOneSample|"
 msgid "Variables"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Testler"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
@@ -485,9 +495,10 @@ msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "yağmur bulutu grafikleri"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
@@ -529,9 +540,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Testler"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
@@ -565,9 +577,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "yağmur bulutu grafikleri"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
