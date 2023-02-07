@@ -49,7 +49,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
                    "meanDifference", "meanDifferenceCi",
                    "meanDifferenceCiLevel", "alternative",
                    "vovkSellke", "naAction", "group", "effectSizeType",
-                   "welch", "wilcoxon", "equalityOfVariancesTest", "equalityOfVariancesTestType"))
+                   "welch", "mannWhitneyU", "equalityOfVariancesTest", "equalityOfVariancesTestType"))
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
