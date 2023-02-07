@@ -3,16 +3,26 @@ import JASP.Module      1.0
 
 Upgrades
 {
-        Upgrade
-        {
-	            functionName: "TTestIndependentSamples"
+	Upgrade
+	{
+				functionName: "TTestIndependentSamples"
+				fromVersion:	"0.17.0"
+				toVersion:		"0.17.1"
+
+				ChangeRename { from:	"wilcoxon";										to:		"mannWhitneyU"								}
+	}
+
+	Upgrade
+		{
+				functionName: "TTestIndependentSamples"
 				fromVersion: "0.16.4"
 				toVersion: "0.17.0"
 
-	            ChangeRename { from:	"variables";										to:		"dependent"								}
+				ChangeRename { from:	"variables";										to:		"dependent"								}
 				ChangeRename { from:	"groupingVariable";									to:		"group"									}
 				ChangeRename { from:	"students";											to:		"student"								}
 				ChangeRename { from:	"welchs";											to:		"welch"									}
+				ChangeRename { from:	"mannWhitneyU";										to:		"wilcoxon"								}
 				ChangeRename { from:	"meanDiffConfidenceIntervalCheckbox";				to:		"meanDifferenceCi"						}
 				ChangeRename { from:	"descriptivesMeanDiffConfidenceIntervalPercent";	to:		"meanDifferenceCiLevel"					}
 				ChangeRename { from:	"effectSizesType";									to:		"effectSizeType"						}
