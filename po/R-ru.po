@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2023-02-01 03:03+0000\n"
+"PO-Revision-Date: 2023-02-09 18:36+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ru/>\n"
@@ -64,43 +64,53 @@ msgstr "Коэффициент изменчивости"
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Достоверный интервал"
 
+#, fuzzy
 msgid "Lower"
-msgstr "Нижний"
+msgstr "Нижняя граница"
 
+#, fuzzy
 msgid "Upper"
-msgstr "Верхний"
+msgstr "Верхняя граница"
 
+#, fuzzy
 msgid "Inferential Plots"
-msgstr "Выводные графики"
+msgstr "Графики"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Априорный и апостериорный"
+msgstr "Приор и Постериор"
 
+#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr "Проверка робастности коэффициента Байеса"
+msgstr "Проверка робастности фактора Байеса"
 
+#, fuzzy
 msgid "Sequential Analysis"
-msgstr "Последовательный анализ"
+msgstr "Последовательная проверка гипотез"
 
+#, fuzzy
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
 msgstr ""
-"График проверки надежности коэффициента Байеса в настоящее время не "
-"поддерживается для информированного априорного анализа."
+"График проверки надежности фактора Байеса в настоящее время не "
+"поддерживается для информированного приора."
 
+#, fuzzy
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
 "informed prior."
 msgstr ""
-"График проверки надежности последовательного анализа в настоящее время не "
-"поддерживается для информированного априорного анализа."
+"График проверки надежности последовательной проверки гипотез в настоящее "
+"время не поддерживается для информированного приора."
 
+#, fuzzy
 msgid "Expected numeric or character rscale but got %s."
-msgstr "Ожидалась числовая или символьная шкала, но получена %s."
+msgstr "Ожидались числовые или символьные значения, но получена %s."
 
+#, fuzzy
 msgid "Running robustness check %d / %d"
-msgstr "Выполнение проверки надежности %d / %d"
+msgstr "Выполнение проверки робастности %d / %d"
 
 msgid "max BF%s"
 msgstr "макс. BF%s"
@@ -126,23 +136,27 @@ msgstr "%s при r==%s"
 msgid "Some Bayes factors were infinite"
 msgstr "Некоторые факторы Байеса оказались бесконечными"
 
+#, fuzzy
 msgid "Cauchy prior width"
-msgstr "Предварительная ширина Коши"
+msgstr "Ширина приора Коши"
 
+#, fuzzy
 msgid "Running sequential analysis %d / %d"
-msgstr "Выполнение последовательного анализа %d / %d"
+msgstr "Выполнение последовательной проверки гипотез %d / %d"
 
 msgid "n"
 msgstr "n"
 
+#, fuzzy
 msgid "Posterior"
-msgstr "Апостериорный"
+msgstr "Постериор"
 
+#, fuzzy
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
 msgid "%s%% CI:"
-msgstr "%s%% CI:"
+msgstr "%s%% ДИ:"
 
 msgid "Effect size"
 msgstr "Размер эффекта"
@@ -160,7 +174,7 @@ msgid "Bayes factor is infinite"
 msgstr "Фактор Байеса бесконечен"
 
 msgid "The Bayes factor is too small"
-msgstr "Коэффициент Байеса слишком мал"
+msgstr "Фактор Байеса слишком мал"
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
