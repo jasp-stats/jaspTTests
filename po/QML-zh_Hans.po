@@ -644,25 +644,26 @@ msgid "Alternative Hypothesis"
 msgstr "备择假设"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon 符号秩检验"
+msgid "Alternative Hypothesis"
+msgstr "备择假设"
 
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr "备择假设"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr "按每个变量排除个案"
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr "备择假设"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr "按每个变量排除个案"
+
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
-msgid "Alternative Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestOneSample|"
-msgid "Alternative Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per variable"
-msgstr "按每个变量排除个案"
-
-msgctxt "TTestPairedSamples|"
-msgid "Alternative Hypothesis"
-msgstr "备择假设"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per variable"
-msgstr "按每个变量排除个案"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney 检验"

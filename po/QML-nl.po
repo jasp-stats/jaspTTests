@@ -644,27 +644,27 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Alternative Hypothesis"
 msgstr ""
 
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""
+
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
-msgid "Wilcoxon signed-rank"
-msgstr "Wilcoxon rangtekentoets"
-
-msgctxt "TTestIndependentSamples|"
-msgid "Alternative Hypothesis"
-msgstr ""
-
-msgctxt "TTestOneSample|"
-msgid "Alternative Hypothesis"
-msgstr ""
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per variable"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Alternative Hypothesis"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per variable"
-msgstr ""
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"

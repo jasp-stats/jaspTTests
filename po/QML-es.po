@@ -644,25 +644,26 @@ msgid "Alternative Hypothesis"
 msgstr "Hipótesis Alternativa"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Wilcoxon signed-rank"
-msgstr "Rango con signo de Wilcoxon"
+msgid "Alternative Hypothesis"
+msgstr "Hipótesis Alternativa"
 
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr "Hipótesis Alternativa"
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr "Excluir casos según variable"
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr "Hipótesis Alternativa"
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr "Excluir casos según variable"
+
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
-msgid "Alternative Hypothesis"
-msgstr "Hipótesis Alternativa"
-
-msgctxt "TTestOneSample|"
-msgid "Alternative Hypothesis"
-msgstr "Hipótesis Alternativa"
-
-msgctxt "TTestOneSample|"
-msgid "Exclude cases per variable"
-msgstr "Excluir casos según variable"
-
-msgctxt "TTestPairedSamples|"
-msgid "Alternative Hypothesis"
-msgstr "Hipótesis Alternativa"
-
-msgctxt "TTestPairedSamples|"
-msgid "Exclude cases per variable"
-msgstr "Excluir casos según variable"
+msgid "Mann-Whitney"
+msgstr "Mann-Whitney"
