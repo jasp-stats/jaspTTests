@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2023-02-16 13:03+0000\n"
+"PO-Revision-Date: 2023-02-18 02:45+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ru/>\n"
@@ -56,7 +56,7 @@ msgid "SD"
 msgstr "SD"
 
 msgid "SE"
-msgstr "СО"
+msgstr "SE"
 
 msgid "Coefficient of variation"
 msgstr "Коэффициент изменчивости"
@@ -171,6 +171,7 @@ msgstr "Фактор Байеса не может быть рассчитан"
 msgid "Bayes factor is infinite"
 msgstr "Фактор Байеса бесконечен"
 
+#, fuzzy
 msgid "The Bayes factor is too small"
 msgstr "Фактор Байеса слишком мал"
 
