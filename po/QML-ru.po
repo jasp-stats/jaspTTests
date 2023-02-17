@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-16 13:03+0000\n"
+"PO-Revision-Date: 2023-02-18 02:45+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/ru/>\n"
@@ -208,10 +208,9 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
 msgstr "Критерий Уилкоксона"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr "№ выборок"
+msgstr "Кол-во выборок"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
@@ -292,10 +291,9 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
 msgstr "Уилкоксона"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr "№ выборок"
+msgstr "Кол-во выборок"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
