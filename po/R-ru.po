@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2023-02-09 18:36+0000\n"
+"PO-Revision-Date: 2023-02-18 02:45+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ru/>\n"
@@ -64,11 +64,9 @@ msgstr "Коэффициент изменчивости"
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Достоверный интервал"
 
-#, fuzzy
 msgid "Lower"
 msgstr "Нижняя граница"
 
-#, fuzzy
 msgid "Upper"
 msgstr "Верхняя граница"
 
@@ -173,6 +171,7 @@ msgstr "Фактор Байеса не может быть рассчитан"
 msgid "Bayes factor is infinite"
 msgstr "Фактор Байеса бесконечен"
 
+#, fuzzy
 msgid "The Bayes factor is too small"
 msgstr "Фактор Байеса слишком мал"
 
@@ -183,8 +182,9 @@ msgstr ""
 "t-значение велико. Для вычисления коэффициента Байеса было использовано "
 "приближение Сэвиджа-Дики, но оценка погрешности не может быть дана."
 
+#, fuzzy
 msgid "No error estimate is available for normal priors."
-msgstr "Для обычных априорных оценок оценка ошибки недоступна."
+msgstr "Для нормальных приоров оценка ошибки недоступна."
 
 msgid "Bayesian Mann-Whitney U Test"
 msgstr "Байесовский U-критерий Манна-Уитни"
@@ -197,25 +197,29 @@ msgid ""
 msgstr ""
 "Результат основан на алгоритме увеличения данных с 5 цепочками итераций %.0f."
 
+#, fuzzy
 msgid "error %"
-msgstr "погрешность %"
+msgstr "ошибка %"
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что расположение группы "
-"<em>%1$s</em> больше, чем расположение группы <em>%2$s</em>."
+"Для всех критериев альтернативная гипотеза указывает, что параметры "
+"распределения группы <em>%1$s</em> больше, чем группы <em>%2$s</em>."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что расположение группы "
-"<em>%1$s</em> меньше, чем расположение группы <em>%2$s</em>."
+"Для всех критериев альтернативная гипотеза указывает, что параметры "
+"распределения группы <em>%1$s</em> меньше, чем группы <em>%2$s</em>."
 
+#, fuzzy
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr "Байесовский тест Уилкоксона"
+msgstr "Байесовский критерий Уилкоксона"
 
 msgid "Bayesian One Sample T-Test"
 msgstr "Байесовский одновыборочный Т-критерий"
@@ -224,21 +228,21 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is greater than %s."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"Для всех критериев альтернативная гипотеза указывает, что среднее значение "
 "генеральной совокупности больше %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is less than %s."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"Для всех критериев альтернативная гипотеза указывает, что среднее значение "
 "генеральной совокупности меньше %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "differs from %s."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что среднее значение "
+"Для всех критериев альтернативная гипотеза указывает, что среднее значение "
 "генеральной совокупности отличается от %s."
 
 msgid "Bayesian Paired Samples T-Test"
@@ -292,8 +296,9 @@ msgstr "Оценка Ходжеса-Леманна"
 msgid "Rank-Biserial Correlation"
 msgstr "Ранговая бисериальная корреляция"
 
+#, fuzzy
 msgid "Location Parameter"
-msgstr "Коэффициент сдвига"
+msgstr "Параметр распределения"
 
 msgid "Effect Size"
 msgstr "Размер эффекта"
@@ -308,21 +313,21 @@ msgid "Welch t-test"
 msgstr "T-критерий Уэлча"
 
 msgid "SE Difference"
-msgstr "Разница SE"
+msgstr "Разница СО"
 
 msgid ""
 "For the %s, location parameter is given by mean difference. For the Mann-"
 "Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
-"Для %s параметр местоположения задается разницей средних значений. Для "
-"критерия Манна-Уитни параметр местоположения определяется оценкой Ходжеса-"
-"Лемана."
+"Для %s параметр распределения задается разницей средних значений. Для "
+"критерия Манна-Уитни параметр распределения определяется оценкой "
+"Ходжеса-Лемана."
 
 msgid "%1$s%% CI for %2$s"
-msgstr "%1$s%% CI для %2$s"
+msgstr "%1$s%% ДИ для %2$s"
 
 msgid "SE %1$s"
-msgstr "SE %1$s"
+msgstr "СО %1$s"
 
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
@@ -394,7 +399,7 @@ msgstr ""
 "группы %1$s переменной %2$s."
 
 msgid "F-statistic could not be calculated"
-msgstr "F-критерий не может быть рассчитан"
+msgstr "Значение F-критерия не может быть рассчитано"
 
 msgid "One Sample T-Test"
 msgstr "Одновыборочный Т-критерий"
@@ -411,8 +416,9 @@ msgstr "Z-критерий."
 msgid "Z"
 msgstr "Z"
 
+#, fuzzy
 msgid "Location Difference"
-msgstr "Разница коэффициентов сдвига"
+msgstr "Разница распределений"
 
 msgid "Student t-test and Z-test"
 msgstr "T-критерий Стьюдента и Z-критерий"
@@ -420,19 +426,21 @@ msgstr "T-критерий Стьюдента и Z-критерий"
 msgid "Z-test"
 msgstr "Z-критерий"
 
+#, fuzzy
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>."
 msgstr ""
-"Для %s, оценка разницы коэффициентов сдвига получена с помощью расчета "
-"разницы выборочных средних значений <em>d</em>."
+"Для %s, оценка разницы распределений получена с помощью расчета разницы "
+"выборочных средних значений <em>d</em>."
 
+#, fuzzy
 msgid ""
 "For the Wilcoxon test, location difference estimate is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"Для критерия Уилкоксона оценка разности коэффициентов сдвига получена с "
-"помощью значения критерия Ходжеса-Лемана."
+"Для критерия Уилкоксона оценка разницы распределений получена с помощью "
+"значения критерия Ходжеса-Лемана."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr ""
@@ -481,14 +489,15 @@ msgstr "T-критерий для зависимых групп"
 msgid "z"
 msgstr "z"
 
+#, fuzzy
 msgid ""
 "For the Student t-test, location parameter is given by mean difference "
 "<em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"Для t-критерия Стьюдента коэффициент сдвига определяется разницей средних "
-"значений <em>d</em>. Для критерия Уилкоксона коэффициент сдвига определяется "
-"значением критерия Ходжеса-Лемана."
+"Для t-критерия Стьюдента параметр распределения определяется разницей "
+"средних значений <em>d</em>. Для критерия Уилкоксона коэффициент сдвига "
+"определяется значением критерия Ходжеса-Лемана."
 
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
@@ -498,19 +507,21 @@ msgstr ""
 "Для критерия Уилкоксона размер эффекта определяется ранговой бисериальной "
 "корреляцией."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2."
 msgstr ""
-"Для всех критериев альтернативная гипотеза указывает, что мера 1 меньше, чем "
-"мера 2."
+"Для всех критериев альтернативная гипотеза указывает, что измерение 1 "
+"меньше, чем измерение 2."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2."
 msgstr ""
-"Для всех критериев альтернативная гипотеза указывает, что мера 1 больше, чем "
-"мера 2."
+"Для всех критериев альтернативная гипотеза указывает, что измерение 1 "
+"больше, чем измерение 2."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that %1s is less than "
@@ -526,19 +537,21 @@ msgstr ""
 "Для всех критериев альтернативная гипотеза указывает, что %1s больше, чем "
 "%2s."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2. For example, %1s is less than %2s."
 msgstr ""
-"Для всех критериев альтернативная гипотеза указывает, что показатель 1 "
-"меньше показателя 2. Например, %1s меньше, чем %2s."
+"Для всех критериев альтернативная гипотеза указывает, что измерение 1 меньше "
+"измерения 2. Например, %1s меньше, чем %2s."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2. For example, %1s is greater than %2s."
 msgstr ""
-"Для всех критериев альтернативная гипотеза указывает, что мера 1 больше, чем "
-"мера 2. Например, %1s больше, чем %2s."
+"Для всех критериев альтернативная гипотеза указывает, что измерение 1 "
+"больше, чем измерение 2. Например, %1s больше, чем %2s."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
