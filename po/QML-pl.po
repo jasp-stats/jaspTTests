@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-05 18:49+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.17-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -85,7 +91,7 @@ msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analiza sekwencyjna"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
@@ -117,7 +123,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -157,7 +163,7 @@ msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analiza sekwencyjna"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
@@ -205,7 +211,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
@@ -245,7 +251,7 @@ msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analiza sekwencyjna"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
@@ -281,7 +287,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
@@ -309,7 +315,7 @@ msgstr "Dodatkowe statystyki"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Parametr położenia"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
@@ -337,7 +343,7 @@ msgstr "Wykresy opisowe"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Maksymalna wartość p Vovka-Sellkego"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -369,7 +375,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Wyklucz obserwacje tylko dla danej pary zmiennych"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -421,7 +427,7 @@ msgstr "Wykresy opisowe"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Maksymalna wartość p Vovka-Sellkego"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -469,7 +475,7 @@ msgstr "Dodatkowe statystyki"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Parametr położenia"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
@@ -485,7 +491,7 @@ msgstr "Wykresy opisowe"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Maksymalna wartość p Vovka-Sellkego"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -521,19 +527,19 @@ msgstr "Oceń różnicę między dwoma średnimi"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
@@ -541,15 +547,15 @@ msgstr "Pary zmiennych"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej dla różnic"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
@@ -557,23 +563,23 @@ msgstr "Zmienne zależne"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "Estymator położenia"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
@@ -581,15 +587,15 @@ msgstr "Pary zmiennych"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "Wykresy chmury deszczowej dla różnic"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Wyświetl poziomo"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect size"
@@ -653,7 +659,7 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "Wyklucz obserwacje niezależnie dla każdej zmiennej"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
@@ -661,9 +667,8 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "Wyklucz obserwacje niezależnie dla każdej zmiennej"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
