@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-29 02:37+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -101,11 +107,11 @@ msgstr "Testy"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
+msgstr "U Manna-Whitney'a"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
@@ -117,7 +123,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -133,7 +139,7 @@ msgstr "Zmienne"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr "Wartość testu:"
+msgstr "Wartość testowana:"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
@@ -169,15 +175,15 @@ msgstr "Statystyki opisowe"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr "≠ Wartość testu"
+msgstr "≠ Wartość testowana"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr "> Wartość testu"
+msgstr "> Wartość testowana"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr "< Wartość testu"
+msgstr "< Wartość testowana"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
@@ -185,7 +191,7 @@ msgstr "Testy"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -205,7 +211,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
@@ -261,7 +267,7 @@ msgstr "Testy"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -281,7 +287,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje niezależnie dla każdej pary"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
@@ -297,7 +303,7 @@ msgstr "Testy"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
@@ -369,7 +375,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje tylko dla danej pary zmiennych"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -385,7 +391,7 @@ msgstr "Testy"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -397,7 +403,7 @@ msgstr "Test Z"
 
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr "Wartość testu:"
+msgstr "Wartość testowana:"
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
@@ -425,15 +431,15 @@ msgstr "Maksymalna wartość p Vovka-Sellkego"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr "≠ Wartość testu"
+msgstr "≠ Wartość testowana"
 
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr "> Wartość testu"
+msgstr "> Wartość testowana"
 
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr "< Wartość testu"
+msgstr "< Wartość testowana"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
@@ -457,7 +463,7 @@ msgstr "Testy"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "t Studenta"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -609,7 +615,7 @@ msgstr "Brown-Forsythe"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr "Levene'a"
+msgstr "Levene"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
@@ -653,7 +659,7 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr "Wyklucz obserwacje niezależnie dla każdej zmiennej"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
@@ -661,8 +667,8 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr "Wyklucz obserwacje niezależnie dla każdej zmiennej"
+msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
+msgstr "U Manna-Whitney'a"
