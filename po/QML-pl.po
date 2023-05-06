@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-05-04 19:40+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -117,7 +123,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -205,7 +211,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
@@ -281,7 +287,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
@@ -301,7 +307,7 @@ msgstr "t Studenta"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr "Welch"
+msgstr "t Welcha"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
@@ -369,7 +375,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -517,7 +523,7 @@ msgstr "Wyklucz obserwacje ze wszystkich analiz"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr "Oceń różnicę między dwoma średnimi"
+msgstr "Oceń różnicę między dwiema średnimi"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
@@ -653,7 +659,7 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
@@ -661,7 +667,7 @@ msgstr "Hipoteza alternatywna"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr "Wyklucz obserwacje dla każdej pary niezależnie"
+msgstr "Sprawdzaj oddzielnie dla każdej analizy"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
