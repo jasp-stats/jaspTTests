@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2022-12-17 02:41\n"
-"PO-Revision-Date: 2023-05-05 22:07+0000\n"
+"PO-Revision-Date: 2023-05-08 08:39+0000\n"
 "Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
@@ -72,8 +72,9 @@ msgstr "Supérieur"
 msgid "Inferential Plots"
 msgstr "Graphiques inférentiels"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Antérieur et postérieur"
+msgstr "Prior and Postérieur"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "Vérification de la robustesse du facteur de Bayes"
@@ -116,7 +117,7 @@ msgid "ultrawide prior"
 msgstr "Priori ultra étendu"
 
 msgid "BF%s"
-msgstr "BF%s"
+msgstr "FB%s"
 
 msgid "%s at r==%s"
 msgstr "%s à r==%s"
@@ -124,18 +125,20 @@ msgstr "%s à r==%s"
 msgid "Some Bayes factors were infinite"
 msgstr "Certains facteurs Bayes sont infinis"
 
+#, fuzzy
 msgid "Cauchy prior width"
-msgstr "Distribution à priori Cauchy"
+msgstr "Distribution a priori Cauchy"
 
 msgid "Running sequential analysis %d / %d"
 msgstr "Analyse séquentielle en cours %d / %d"
 
 msgid "n"
-msgstr "n"
+msgstr ""
 
 msgid "Posterior"
 msgstr "Postérieur"
 
+#, fuzzy
 msgid "Prior"
 msgstr "Précédent"
 
@@ -143,13 +146,13 @@ msgid "%s%% CI:"
 msgstr "IC de %s%% :"
 
 msgid "Effect size"
-msgstr "Taille de l'effet"
+msgstr "Taille d'effet"
 
 msgid "Raincloud Plots"
 msgstr "Graphiques Raincloud"
 
 msgid "Raincloud Difference Plots"
-msgstr "Graphique Raincloud des différences"
+msgstr "Graphiques Raincloud des différences"
 
 msgid "Bayes factor could not be calculated"
 msgstr "Le facteur Bayes ne pouvait pas être calculé"
@@ -177,7 +180,7 @@ msgid "Bayesian Mann-Whitney U Test"
 msgstr "Test Mann-Whitney U Bayésien"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr "Test t d'échantillons indépendants Bayésien"
+msgstr "Test t bayésien pour échantillons indépendants"
 
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
@@ -208,7 +211,7 @@ msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "Test Bayésien de rangs signés de Wilcoxon"
 
 msgid "Bayesian One Sample T-Test"
-msgstr "Test t Bayésien à un échantillon"
+msgstr "Test t bayésien pour échantillon unique"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
@@ -232,7 +235,7 @@ msgstr ""
 "population est différente de %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Test t Bayésien d'échantillons pairés"
+msgstr "Test t bayésien pour échantillons appariés"
 
 msgid "Independent Samples T-Test"
 msgstr "Test t d'échantillons indépendants"
@@ -279,8 +282,9 @@ msgstr "Différence moyenne"
 msgid "Hodges-Lehmann Estimate"
 msgstr "Estimé de Hodges-Lehmann"
 
+#, fuzzy
 msgid "Rank-Biserial Correlation"
-msgstr "Corrélation bisériale de rang"
+msgstr "Corrélation Rank-Biserial"
 
 msgid "Location Parameter"
 msgstr "Paramètre de Position"
@@ -396,7 +400,7 @@ msgid "Z test."
 msgstr "Test z."
 
 msgid "Z"
-msgstr "z"
+msgstr "Z"
 
 msgid "Location Difference"
 msgstr "Emplacement différent"
