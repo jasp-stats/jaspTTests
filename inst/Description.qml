@@ -60,4 +60,10 @@ Description
 		title:	qsTr("Bayesian One Sample T-Test")
 		func:	"TTestBayesianOneSample"
 	}
+	Analysis
+	{
+		menu:	qsTr("Model-Averaged T-Test")
+		title:	qsTr("Bayesian Model-Averaged T-Test")
+		func:	"TTestBayesianModelAveraged"
+	}
 }
