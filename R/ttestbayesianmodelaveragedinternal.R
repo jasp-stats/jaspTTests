@@ -31,9 +31,8 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
   .robttGetPriors(jaspResults, options)
 
   # show the model preview
-  # TODO: once new package on CRAN
-  # if (is.null(jaspResults[["model"]]))
-  #   .robttModelPreviewTable(jaspResults, options)
+  if (is.null(jaspResults[["model"]]))
+   .robttModelPreviewTable(jaspResults, options)
 
   # priors plot
   if (options[["priorDistributionPlot"]])
@@ -189,15 +188,23 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
 
     for (i in seq_along(priorElements)) {
 
-      tmpPrior <- try(.robttExtractPriorsFromOptions(options[[priorElements[i]]][[1]]))
-      if (jaspBase::isTryError(tmpPrior))
-        .quitAnalysis(tmpPrior)
+      if(length(options[[priorElements[i]]]) == 0){
+        # remove component if prior is unspecified
+        tmpPrior <- NULL
+      }else if(options[[priorElements[i]]][[1]][["type"]] == "none"){
+        # use default null hypothesis prior if prior is none
+        tmpPrior <- RoBTT::prior_none()
+      }else{
+        tmpPrior <- try(.robttExtractPriorsFromOptions(options[[priorElements[i]]][[1]]))
+        if (jaspBase::isTryError(tmpPrior))
+          .quitAnalysis(tmpPrior)
+      }
 
       object[[priorElements[i]]] <- tmpPrior
     }
   }
 
-
+  saveRDS(object, file = "C:/JASP/priors.RDS")
   priors[["object"]] <- object
 
   return()
@@ -442,7 +449,7 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
 
     overallSummary$addRows(tempRow)
   }
-  overallSummary$addFootnote(gettext("The analysis will estimate multiple models using MCMC and might require a prolonged time to complete."), symbol = "\u26A0")
+  overallSummary$addFootnote(gettext("This analysis uses MCMC and might require a prolonged time to complete."), symbol = "\u26A0")
   modelPreview[["overallSummary"]] <- overallSummary
 
 
@@ -463,9 +470,9 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
     tempRow <- list(
       number             = fitSummary[["summary"]][i, "Model"],
       distribution       = fitSummary[["summary"]][i, "Distribution"],
-      priorEffect        = fitSummary[["summary"]][i, "Effect"],
-      priorHeterogeneity = fitSummary[["summary"]][i, "Heterogeneity"],
-      priorOutliers      = fitSummary[["summary"]][i, "Outliers"],
+      priorEffect        = fitSummary[["summary"]][i, "delta"],
+      priorHeterogeneity = fitSummary[["summary"]][i, "rho"],
+      priorOutliers      = fitSummary[["summary"]][i, "nu"],
       priorProb          = fitSummary[["summary"]][i, "prior_prob"]
     )
 
@@ -872,7 +879,7 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
     parameter,
     "delta" = "plotsPooledEstimatesEffect",
     "rho"   = "plotsPooledEstimatesHeterogeneity",
-    "nu"    = "plotsPooledEstimatesOutliers"
+    "nu"    = c("plotsPooledEstimatesOutliers", "inferenceHeterogeneityAsStandardDeviationRatio")
   ))
   estimatesPlots[[parameter]] <- tempPlot
 
@@ -885,10 +892,11 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
   # plot
   p <- try(plot(
     fit,
-    parameter    = parameter,
-    prior        = options[["plotsPooledEstimatesPriorDistribution"]],
-    conditional  = options[["plotsPooledEstimatesType"]] == "conditional",
-    plot_type    = "ggplot"
+    parameter     = parameter,
+    prior         = options[["plotsPooledEstimatesPriorDistribution"]],
+    conditional   = options[["plotsPooledEstimatesType"]] == "conditional",
+    transform_rho = options[["inferenceHeterogeneityAsStandardDeviationRatio"]],
+    plot_type     = "ggplot"
   ))
 
   if (jaspBase::isTryError(p)) {

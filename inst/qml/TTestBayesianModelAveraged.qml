@@ -22,7 +22,7 @@ import JASP
 import JASP.Controls
 import "./common" as Common
 
-Form {
+Form { 
 	id: form
 	property int framework:	Common.Type.Framework.Bayesian
 
@@ -85,7 +85,7 @@ Form {
 				RadioButtonGroup
 				{
 					name: "inferenceModelsOverviewBfComparison"
-					title: qsTr("BF comparison")
+					title: qsTr("BF Comparison")
 
 					RadioButton
 					{
@@ -97,13 +97,13 @@ Form {
 					RadioButton
 					{
 						name: 		"best"
-						label: 		qsTr("vs. Best")
+						label: 		qsTr("vs. best")
 					}
 
 					RadioButton
 					{
 						name: 		"previous"
-						label: 		qsTr("vs. Previous")
+						label: 		qsTr("vs. previous")
 						enabled:	inferenceModelsOverviewOrderMarglik.checked
 					}
 				}

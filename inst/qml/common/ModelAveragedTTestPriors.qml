@@ -58,6 +58,10 @@ ColumnLayout
 	{
 		name:					componentType
 		optionKey:				"name"
+		minimumItems:			0
+		maximumItems:			1
+		//showAddIcon:			false
+
 		defaultValues:				
 		{
 			if (componentType == "modelsEffect")
@@ -127,8 +131,20 @@ ColumnLayout
 					name:				"x0"
 					visible:			typeItem.currentValue === "cauchy"	||
 										typeItem.currentValue === "spike"
-					value:				"0"
-					inclusive:			JASP.None
+					value:				if((componentType == "modelsHeterogeneity" || componentType == "modelsHeterogeneityNull") && typeItem.currentValue === "spike")
+											"0.5"
+										else if((componentType == "modelsOutliers" || componentType == "modelsOutliersNull") && typeItem.currentValue === "spike")
+											"Inf"
+										else
+											"0"
+					inclusive:			if((componentType == "modelsOutliers" || componentType == "modelsOutliersNull") && typeItem.currentValue === "spike")
+											JASP.MinMax
+										else
+											JASP.None
+					min:				if((componentType == "modelsHeterogeneity" || componentType == "modelsHeterogeneityNull" || componentType == "modelsOutliers" || componentType == "modelsOutliersNull") && typeItem.currentValue === "spike")
+											0
+										else
+											"-Inf"
 					fieldWidth: 		40 * preferencesModel.uiScale
 					useExternalBorder:	false
 					showBorder: 		true
