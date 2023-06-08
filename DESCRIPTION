@@ -21,5 +21,4 @@ Imports:
   plyr
 Remotes:
   jasp-stats/jaspBase,
-  jasp-stats/jaspGraphs,
-  FBartos/RoBTT@JASP-updates
+  jasp-stats/jaspGraphs
