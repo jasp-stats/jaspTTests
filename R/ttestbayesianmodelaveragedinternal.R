@@ -17,9 +17,6 @@
 
 TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
 
-  saveRDS(options, file = "C:/JASP/options.RDS")
-  saveRDS(dataset, file = "C:/JASP/dataset.RDS")
-
   # load & check data (re-using .ttestBayesian functions)
   if (.robttCheckReady(options)) {
     options[["naAction"]] <- "listwise"
