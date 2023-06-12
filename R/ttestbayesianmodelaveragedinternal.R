@@ -700,7 +700,7 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
       priorProb          = fitSummary[["summary"]][i, "prior_prob"],
       postProb           = fitSummary[["summary"]][i, "post_prob"],
       marglik            = fitSummary[["summary"]][i, "marglik"],
-      BF                 = BayesTools::format_BF(bf[i], logBF = options[["bayesFactorType"]] == "LogBF10", BF01 = options[["bayesFactorType"]] == "BF01")
+      BF                 = .robttFormatBf(bf[i], bayesFactorType = options[["bayesFactorType"]])
     ))
   }
 
@@ -816,7 +816,7 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
       priorProb    = fit[["models"]][[i]][["inference"]][["prior_prob"]],
       postProb     = fit[["models"]][[i]][["inference"]][["post_prob"]],
       marglik      = fit[["models"]][[i]][["inference"]][["marglik"]],
-      BF           = BayesTools::format_BF(fit[["models"]][[i]][["inference"]][["inclusion_BF"]], logBF = options[["bayesFactorType"]] == "LogBF10", BF01 = options[["bayesFactorType"]] == "BF01")
+      BF           = .robttFormatBf(fit[["models"]][[i]][["inference"]][["inclusion_BF"]], bayesFactorType = options[["bayesFactorType"]])
     ))
 
     tempModel[["tempInfo"]] <- tempInfo
@@ -1174,4 +1174,12 @@ TTestBayesianModelAveragedInternal <- function(jaspResults, dataset, options) {
   }
 
   return()
+}
+.robttFormatBf                 <- function(BF, bayesFactorType){
+  return(switch(
+    bayesFactorType,
+    "BF10"    = BF,
+    "BF01"    = 1/BF,
+    "LogBF10" = log(BF)
+  ))
 }

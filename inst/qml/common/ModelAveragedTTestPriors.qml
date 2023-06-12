@@ -28,20 +28,14 @@ ColumnLayout
 
 	Label
 	{
-		text:					
+		text:	switch (componentType) 
 		{
-			if (componentType == "modelsEffect")
-				qsTr("Effect")
-			else if (componentType == "modelsEffectNull")
-				qsTr("Effect (null)")
-			else if (componentType == "modelsHeterogeneity")
-				qsTr("Heterogeneity (precision allocation)")
-			else if (componentType == "modelsHeterogeneityNull")
-				qsTr("Heterogeneity (null)")
-			else if (componentType == "modelsOutliers")
-				qsTr("Outliers (degrees of freedom + 2)")
-			else if (componentType == "modelsOutliersNull")
-				qsTr("Outliers (null)")
+		  case "modelsEffect":				qsTr("Effect"); break;
+		  case "modelsEffectNull":			qsTr("Effect (null)"); break;
+		  case "modelsHeterogeneity":		qsTr("Heterogeneity (precision allocation)"); break;
+		  case "modelsHeterogeneityNull":   qsTr("Heterogeneity (null)"); break;
+		  case "modelsOutliers":		    qsTr("Outliers (degrees of freedom + 2)"); break;
+		  case "modelsOutliersNull":	    qsTr("Outliers (null)"); break;
 		}
 		Layout.preferredHeight:	20 * preferencesModel.uiScale
 	}
