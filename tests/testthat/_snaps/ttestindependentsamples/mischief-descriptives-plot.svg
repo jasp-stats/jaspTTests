@@ -51,8 +51,8 @@
 <polyline points='58.15,507.09 720.00,507.09 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt;' />
 <polyline points='238.66,515.60 238.66,507.09 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <polyline points='539.50,515.60 539.50,507.09 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<text x='238.66' y='534.27' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='246.32px' lengthAdjust='spacingAndGlyphs'>&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D&gt;</text>
-<text x='539.50' y='534.27' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='164.53px' lengthAdjust='spacingAndGlyphs'>&lt;U+9009&gt;&lt;U+4E2D&gt;</text>
+<text x='238.66' y='534.27' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='38.25px' lengthAdjust='spacingAndGlyphs'>未选中</text>
+<text x='539.50' y='534.27' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='25.50px' lengthAdjust='spacingAndGlyphs'>选中</text>
 <text x='389.08' y='566.78' text-anchor='middle' style='font-size: 20.40px; font-family: sans;' textLength='52.17px' lengthAdjust='spacingAndGlyphs'>Cloak</text>
 <text transform='translate(19.02,263.90) rotate(-90)' text-anchor='middle' style='font-size: 20.40px; font-family: sans;' textLength='74.84px' lengthAdjust='spacingAndGlyphs'>Mischief</text>
 <text x='389.08' y='11.70' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='193.70px' lengthAdjust='spacingAndGlyphs'>mischief-Descriptives-plot</text>
