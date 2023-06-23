@@ -156,7 +156,7 @@ test_that("Analysis works with unicode", {
   set.seed(1)
   dataset <- structure(list(Participant = 1:24,
                             Cloak = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),
-                                              .Label = c("<U+672A><U+9009><U+4E2D>", "<U+9009><U+4E2D>"), class = "factor"),
+                                              .Label = c("\U672A\U9009\U4E2D", "\U9009\U4E2D"), class = "factor"),
                             Mischief = c(3L, 1L, 5L, 4L, 6L, 4L, 6L, 2L, 0L, 5L, 4L, 5L, 4L, 3L, 6L, 6L, 8L, 5L, 5L, 4L, 2L, 5L, 7L, 5L)),
                        row.names = c(NA, -24L), class = "data.frame")
 
@@ -199,9 +199,9 @@ test_that("Analysis works with unicode", {
 
   table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("TRUE", 12, 0.51010001000002, "&lt;U+672A&gt;&lt;U+9009&gt;&lt;U+4E2D>",
-         3.75, 1.91287503750007, 0.552199458913392, "Mischief", "FALSE",
-         12, 0.330289129537908, "&lt;U+9009&gt;&lt;U+4E2D>", 5, 1.65144564768954,
+    list("TRUE", 12, 0.51010001000002, "<unicode><unicode><unicode>", 3.75,
+         1.91287503750007, 0.552199458913392, "Mischief", "FALSE", 12,
+         0.330289129537908, "<unicode><unicode>", 5, 1.65144564768954,
          0.476731294622796, "Mischief"),
     label = "Group Descriptives table results match"
   )
