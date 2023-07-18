@@ -518,7 +518,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if (!options$descriptives || !is.null(container[["table"]]))
     return()
   # Create table
-  ttestDescriptivesTable <- createJaspTable(title = "Group Descriptives", dependencies = "descriptives")
+  ttestDescriptivesTable <- createJaspTable(title = gettext("Group Descriptives"), dependencies = "descriptives")
   ttestDescriptivesTable$showSpecifiedColumnsOnly <- TRUE
   ttestDescriptivesTable$position <- 4
   ttestDescriptivesTable$addColumnInfo(name = "variable", type = "string",  title = "", combine = TRUE)

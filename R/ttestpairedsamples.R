@@ -52,9 +52,9 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   ttest$showSpecifiedColumnsOnly <- TRUE
   ttest$position <- 1
 
-  ttest$addColumnInfo(name = "v1",  type = "string",    title = "Measure 1")
+  ttest$addColumnInfo(name = "v1",  type = "string",    title = gettext("Measure 1"))
   ttest$addColumnInfo(name = "sep", type = "separator", title = "")
-  ttest$addColumnInfo(name = "v2",  type = "string",    title = "Measure 2")
+  ttest$addColumnInfo(name = "v2",  type = "string",    title = gettext("Measure 2"))
 
   if (optionsList$wantsWilcox && optionsList$onlyTest) {
     ttest$addFootnote(gettext("Wilcoxon signed-rank test."))
