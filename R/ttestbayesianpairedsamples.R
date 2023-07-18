@@ -219,10 +219,10 @@ TTestBayesianPairedSamplesInternal <- function(jaspResults, dataset, options) {
   )
   bfTitle <- .ttestBayesianGetBFTitle(bfType, hypothesis)
 
-  jaspTable$addColumnInfo(name = "variable1", title = "Measure 1", type = "string")
-  jaspTable$addColumnInfo(name = "separator", title = "",          type = "separator")
-  jaspTable$addColumnInfo(name = "variable2", title = "Measure 2", type = "string")
-  jaspTable$addColumnInfo(name = "BF",        title = bfTitle,     type = "number")
+  jaspTable$addColumnInfo(name = "variable1", title = gettext("Measure 1"), type = "string")
+  jaspTable$addColumnInfo(name = "separator", title = "",                   type = "separator")
+  jaspTable$addColumnInfo(name = "variable2", title = gettext("Measure 2"), type = "string")
+  jaspTable$addColumnInfo(name = "BF",        title = bfTitle,              type = "number")
 
   if (derivedOptions[["wilcoxTest"]]) {
     jaspTable$addColumnInfo(name = "error", type = "number", title = "W")

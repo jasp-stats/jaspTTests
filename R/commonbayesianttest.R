@@ -517,7 +517,7 @@
 
   if (options[["descriptives"]]) {
     if (is.null(descriptivesContainer[["table"]])) {
-      descriptivesTable <- createJaspTable(title = "Descriptives")
+      descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
       descriptivesTable$dependOn(c("descriptives", "dependent", "pairs", "descriptivesPlotCiLevel"))
       descriptivesTable$position <- 1L
 
