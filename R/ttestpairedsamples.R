@@ -619,15 +619,15 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     pair2 <- pairs[[idx]][[2L]]
     if (onePair) { # one pair, only give example
       ans <- if (isLess) {
-        gettextf("For all tests, the alternative hypothesis specifies that %1s is less than %2s.", pair1, pair2)
+        gettextf("For all tests, the alternative hypothesis specifies that %1$s is less than %2$s.", pair1, pair2)
       } else {
-        gettextf("For all tests, the alternative hypothesis specifies that %1s is greater than %2s.", pair1, pair2)
+        gettextf("For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s.", pair1, pair2)
       }
     } else { # multiple pairs, general + example
       ans <- if (isLess) {
-        gettextf("For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1s is less than %2s.", pair1, pair2)
+        gettextf("For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s.", pair1, pair2)
       } else {
-        gettextf("For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1s is greater than %2s.", pair1, pair2)
+        gettextf("For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s.", pair1, pair2)
       }
     }
   }
