@@ -29,7 +29,7 @@ msgstr ""
 msgid "Please provide another variable."
 msgstr ""
 
-msgid "Variables %s and %s are the same!"
+msgid "Variables %1$s and %2$s are the same!"
 msgstr ""
 
 msgid "Descriptives Plots"
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Expected numeric or character rscale but got %s."
 msgstr ""
 
-msgid "Running robustness check %d / %d"
+msgid "Running robustness check %1$d / %2$d"
 msgstr ""
 
 msgid "max BF%s"
@@ -108,7 +108,7 @@ msgstr ""
 msgid "BF%s"
 msgstr ""
 
-msgid "%s at r==%s"
+msgid "%1$s at r==%2$s"
 msgstr ""
 
 msgid "Some Bayes factors were infinite"
@@ -117,7 +117,7 @@ msgstr ""
 msgid "Cauchy prior width"
 msgstr ""
 
-msgid "Running sequential analysis %d / %d"
+msgid "Running sequential analysis %1$d / %2$d"
 msgstr ""
 
 msgid "n"
@@ -436,23 +436,23 @@ msgid ""
 msgstr ""
 
 msgid ""
-"For all tests, the alternative hypothesis specifies that %1s is less than "
-"%2s."
+"For all tests, the alternative hypothesis specifies that %1$s is less than "
+"%2$s."
 msgstr ""
 
 msgid ""
-"For all tests, the alternative hypothesis specifies that %1s is greater than "
-"%2s."
+"For all tests, the alternative hypothesis specifies that %1$s is greater than "
+"%2$s."
 msgstr ""
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
-"than Measure 2. For example, %1s is less than %2s."
+"than Measure 2. For example, %1$s is less than %2$s."
 msgstr ""
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
-"greater than Measure 2. For example, %1s is greater than %2s."
+"greater than Measure 2. For example, %1$s is greater than %2$s."
 msgstr ""
 
 msgid "The following pair is duplicated: %s"

@@ -213,7 +213,7 @@
 
       } else if (identical(pair[[1L]], pair[[2L]])) {
 
-        errors[[var]] <- list(message = gettextf("Variables %s and %s are the same!",
+        errors[[var]] <- list(message = gettextf("Variables %1$s and %2$s are the same!",
                                                 pair[[1L]], pair[[2L]]))
 
       } else {
@@ -1405,7 +1405,7 @@
     rValues <- seq(0.0005, 1.5, length.out = 400)
   }
 
-  startProgressbar(length(rValues), gettextf("Running robustness check %d / %d",currentPlot, totalPlots))
+  startProgressbar(length(rValues), gettextf("Running robustness check %1$d / %2$d",currentPlot, totalPlots))
 
   # BF10
   BF10 <- vector("numeric", length(rValues))
@@ -1483,7 +1483,7 @@
   BFandSubscript <- gettextf("BF%s", BFsubscript)
   BFandSubscript <- gsub(pattern = "\\s+", "~", BFandSubscript)
   label2 <- c(
-    gettextf("%s at r==%s",      format(maxBF10,  digits = 4), format(maxBFrVal, digits = 4)),
+    gettextf("%1$s at r==%2$s",      format(maxBF10,  digits = 4), format(maxBFrVal, digits = 4)),
     paste0(BFandSubscript, "==", format(BF10user, digits = 4)),
     paste0(BFandSubscript, "==", format(BF10w,    digits = 4)),
     paste0(BFandSubscript, "==", format(BF10ultra,digits = 4))
@@ -1601,7 +1601,7 @@
     nTicks <- length(BF10) - i
     if (plotDifferentPriors)
       nTicks <- 3L * nTicks
-    startProgressbar(nTicks, gettextf(totalPlots,"Running sequential analysis  %d / %d", currentPlot, totalPlots))
+    startProgressbar(nTicks, gettextf(totalPlots,"Running sequential analysis  %1$d / %2$d", currentPlot, totalPlots))
 
     while ((i <= length(x) || j <= length(y)) && k <= length(BF10)) {
 
@@ -1805,7 +1805,7 @@
     nTicks <- nrow(subDataSet)
     if (plotDifferentPriors)
       nTicks <- 3L * nTicks
-    startProgressbar(nTicks, gettextf("Running sequential analysis %d / %d", currentPlot, totalPlots))
+    startProgressbar(nTicks, gettextf("Running sequential analysis %1$d / %2$d", currentPlot, totalPlots))
 
     for (i in seq_len(nrow(subDataSet))) {
 
