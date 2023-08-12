@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-08-03 04:53+0000\n"
+"Last-Translator: Raydel Pérez Castillo <raydelp77@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.0-dev\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -69,7 +75,7 @@ msgstr "Gráficos"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr "Previo y posterior"
+msgstr "Previa y Posterior"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
@@ -105,7 +111,7 @@ msgstr "Student"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "Mann-Whitney"
+msgstr "U-Mann-Whitney"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
@@ -141,7 +147,7 @@ msgstr "Gráficos"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr "Previo y posterior"
+msgstr "Previa y Posterior"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
