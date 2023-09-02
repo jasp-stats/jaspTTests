@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2022-12-17 02:41\n"
+"POT-Creation-Date: 2023-09-02 02:34\n"
 "PO-Revision-Date: 2023-07-19 04:07+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -215,6 +215,12 @@ msgstr "对于所有检验，备择假设指定总体均值与 %s 不同。"
 msgid "Bayesian Paired Samples T-Test"
 msgstr "贝叶斯配对样本T检验"
 
+msgid "Measure 1"
+msgstr ""
+
+msgid "Measure 2"
+msgstr ""
+
 msgid "Independent Samples T-Test"
 msgstr "独立样本T检验"
 
@@ -354,6 +360,10 @@ msgstr "Glass' delta 使用变量 %2$s 的组 %1$s 的标准差。"
 msgid "F-statistic could not be calculated"
 msgstr "F统计量无法计算"
 
+#, fuzzy
+msgid "Group Descriptives"
+msgstr "描述统计"
+
 msgid "One Sample T-Test"
 msgstr "单样本T检验"
 
@@ -399,7 +409,8 @@ msgstr "对于 Wilcoxon 检验，效应量由匹配的秩双列相关给出。"
 msgid ""
 "For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
 "provided population standard deviation)."
-msgstr "对于 Z 检验，效果大小由 Cohen's <em>d</em> 给出（基于提供的总体标准差）。"
+msgstr ""
+"对于 Z 检验，效果大小由 Cohen's <em>d</em> 给出（基于提供的总体标准差）。"
 
 msgid "greater than"
 msgstr "大于"
@@ -431,14 +442,15 @@ msgid ""
 "<em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
-"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，"
-"效应量由 Hodges-Lehmann 估计值给出。"
+"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，效应量"
+"由 Hodges-Lehmann 估计值给出。"
 
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
 "Wilcoxon test, effect size is given by the matched rank biserial correlation."
-msgstr "对于学生 t 检验，效应量由 Cohen's <em>d</em> 给出。对于 Wilcoxon "
-"检验，效应量由匹配的秩双列相关给出。"
+msgstr ""
+"对于学生 t 检验，效应量由 Cohen's <em>d</em> 给出。对于 Wilcoxon 检验，效应量"
+"由匹配的秩双列相关给出。"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
@@ -456,8 +468,8 @@ msgid ""
 msgstr "对于所有检验，备择假设指定为 %1$s 小于 %2$s。"
 
 msgid ""
-"For all tests, the alternative hypothesis specifies that %1$s is greater than "
-"%2$s."
+"For all tests, the alternative hypothesis specifies that %1$s is greater "
+"than %2$s."
 msgstr "对于所有检验，备择假设指定 %1$s 大于 %2$s。"
 
 msgid ""

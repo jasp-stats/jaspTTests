@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2022-12-17 02:41\n"
+"POT-Creation-Date: 2023-09-02 02:34\n"
 "PO-Revision-Date: 2023-04-23 23:04+0000\n"
 "Last-Translator: Vaitsa Giannouli <giannouli.vaitsa@ac.eap.gr>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -205,6 +205,12 @@ msgstr ""
 msgid "Bayesian Paired Samples T-Test"
 msgstr ""
 
+msgid "Measure 1"
+msgstr ""
+
+msgid "Measure 2"
+msgstr ""
+
 msgid "Independent Samples T-Test"
 msgstr ""
 
@@ -342,6 +348,9 @@ msgstr ""
 msgid "F-statistic could not be calculated"
 msgstr ""
 
+msgid "Group Descriptives"
+msgstr ""
+
 msgid "One Sample T-Test"
 msgstr ""
 
@@ -441,8 +450,8 @@ msgid ""
 msgstr ""
 
 msgid ""
-"For all tests, the alternative hypothesis specifies that %1$s is greater than "
-"%2$s."
+"For all tests, the alternative hypothesis specifies that %1$s is greater "
+"than %2$s."
 msgstr ""
 
 msgid ""

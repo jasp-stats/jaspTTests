@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.18.0\n"
-"POT-Creation-Date: 2023-07-27 11:44\n"
+"POT-Creation-Date: 2023-09-02 02:34\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,6 +182,12 @@ msgstr ""
 msgid "Bayesian Paired Samples T-Test"
 msgstr ""
 
+msgid "Measure 1"
+msgstr ""
+
+msgid "Measure 2"
+msgstr ""
+
 msgid "Independent Samples T-Test"
 msgstr ""
 
@@ -306,6 +312,9 @@ msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
 msgstr ""
 
 msgid "F-statistic could not be calculated"
+msgstr ""
+
+msgid "Group Descriptives"
 msgstr ""
 
 msgid "One Sample T-Test"
