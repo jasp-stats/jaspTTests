@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-09-30 02:32+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"jasp/jaspttests-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.1-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -17,7 +23,7 @@ msgstr "古典"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "獨立樣本 t 檢定"
+msgstr "獨立樣本t檢定"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
@@ -113,7 +119,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方式"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -123,9 +129,10 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其他統計量"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
@@ -369,9 +376,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
 msgstr "組1 < 組2"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr "檢查統計技術假設"
+msgstr "前提假設的檢驗"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
@@ -395,9 +403,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr "變數"
+msgstr "變量"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
@@ -533,7 +542,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr "檢查統計技術假設"
+msgstr "前提假設的檢驗"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
