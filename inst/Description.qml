@@ -6,7 +6,7 @@ Description
 	name		: "jaspTTests"
 	title		: qsTr("T-Tests")
 	description	: qsTr("Evaluate the difference between two means")
-	version			: "0.18.1"
+	version			: "0.18.2"
 	author		: "JASP Team"
 	maintainer	: "JASP Team <info@jasp-stats.org>"
 	website		: "jasp-stats.org"
