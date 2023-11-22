@@ -19,7 +19,7 @@
 
 TTestIndependentSamples <- function(
           data = NULL,
-          version = "0.17.1",
+          version = "0.18.2",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -37,6 +37,7 @@ TTestIndependentSamples <- function(
           equalityOfVariancesTest = FALSE,
           equalityOfVariancesTestType = "brownForsythe",
           group = "",
+          mannWhitneyU = FALSE,
           meanDifference = FALSE,
           meanDifferenceCi = FALSE,
           meanDifferenceCiLevel = 0.95,
@@ -48,8 +49,7 @@ TTestIndependentSamples <- function(
           raincloudPlotHorizontal = FALSE,
           student = TRUE,
           vovkSellke = FALSE,
-          welch = FALSE,
-          wilcoxon = FALSE) {
+          welch = FALSE) {
 
    defaultArgCalls <- formals(jaspTTests::TTestIndependentSamples)
    defaultArgs <- lapply(defaultArgCalls, eval)
