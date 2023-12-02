@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-12-02 02:33+0000\n"
+"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.3-dev\n"
 "X-Language: ja\n"
 "X-Qt-Contexts: true\n"
 
@@ -605,67 +611,64 @@ msgstr "水平方向の表示"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "ブラウン・フォーサイス(Brown-Forsythe)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr ""
+msgstr "Leveneの"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "棒グラフ"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
 msgstr "信頼区間"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
 msgstr "信用区間"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "標準誤差"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "水平軸を0に固定"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "変数ごとにケースを除外"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "対立仮説"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "変数ごとにケースを除外"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "マン・ホイットニー"
