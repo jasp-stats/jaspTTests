@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2023-09-02 02:34\n"
-"PO-Revision-Date: 2023-12-15 00:11+0000\n"
+"PO-Revision-Date: 2023-12-16 02:35+0000\n"
 "Last-Translator: Ginger Shu-Ying Yeh <gingershuying@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hant/>\n"
@@ -14,11 +14,10 @@ msgstr ""
 "X-Generator: Weblate 5.3\n"
 
 msgid "Assumption Checks"
-msgstr "統計技術假設檢查"
+msgstr "前提假設檢查"
 
-#, fuzzy
 msgid "Descriptives"
-msgstr "描述統計"
+msgstr "敘述統計量"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -28,10 +27,10 @@ msgid ""
 msgstr ""
 
 msgid "Please provide another variable."
-msgstr "請提供另一個變項"
+msgstr "請提供其他變數。"
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr "%1$s 變項與 %2$s 變項相同!"
+msgstr "變數 %1$s 和 %2$s 相同!"
 
 msgid "Descriptives Plots"
 msgstr "描述統計圖"
@@ -40,10 +39,10 @@ msgid "Bar Plots"
 msgstr ""
 
 msgid "Group"
-msgstr "組別"
+msgstr "群"
 
 msgid "N"
-msgstr "樣本數"
+msgstr "N"
 
 msgid "Mean"
 msgstr "平均數"
@@ -54,18 +53,15 @@ msgstr "標準差"
 msgid "SE"
 msgstr "標準誤"
 
-#, fuzzy
 msgid "Coefficient of variation"
 msgstr "變異係數"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
 
-#, fuzzy
 msgid "Lower"
 msgstr "下界"
 
-#, fuzzy
 msgid "Upper"
 msgstr "上界"
 
@@ -110,7 +106,7 @@ msgid "ultrawide prior"
 msgstr ""
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
 msgstr ""
@@ -125,7 +121,7 @@ msgid "Running sequential analysis %1$d / %2$d"
 msgstr ""
 
 msgid "n"
-msgstr "樣本數"
+msgstr "n"
 
 msgid "Posterior"
 msgstr "後驗"
@@ -173,7 +169,7 @@ msgid ""
 msgstr ""
 
 msgid "error %"
-msgstr "錯誤%"
+msgstr "誤差 %"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -243,7 +239,7 @@ msgid "df"
 msgstr "自由度"
 
 msgid "p"
-msgstr "p值"
+msgstr "p"
 
 msgid "Cohen's d"
 msgstr "Cohen's d"
