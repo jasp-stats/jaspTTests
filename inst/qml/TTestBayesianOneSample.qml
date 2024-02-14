@@ -90,16 +90,17 @@ Form
 
 	RadioButtonGroup
 	{
-		name: "alternative"
-		title: qsTr("Alternative Hypothesis")
+		id:		hypothesis
+		name:	"alternative"
+		title:	qsTr("Alternative Hypothesis")
 		RadioButton { value: "twoSided";		label: qsTr("≠ Test value"); checked: true		}
 		RadioButton { value: "greater";	label: qsTr("> Test value");					}
 		RadioButton { value: "less";		label: qsTr("< Test value");					}
 	}
 
-	BayesFactorType { }
+	BayesFactorType { correlated: hypothesis.value }
 
-		RadioButtonGroup
+	RadioButtonGroup
 	{
 		name: "test"
 		id: testStatistic
