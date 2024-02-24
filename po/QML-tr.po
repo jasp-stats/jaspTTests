@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-02-19 16:02+0000\n"
+"Last-Translator: Utku Berberoğlu <utku.berber@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/tr/>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -53,11 +59,11 @@ msgstr "Bağımlı değişkenler"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Gruplama Değişkeni"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Grup 1 ≠ Grup 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
@@ -83,37 +89,42 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Sağlamlık  kontrolü için Bayes faktörü"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Sağlamlık kontrolü"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Tanımlayıcılar"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
 msgstr "yağmur bulutu grafikleri"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Yatay görünüm"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
 msgstr "Testler"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
@@ -137,15 +148,15 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Ek İstatistikler"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "Değişkenler"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "Test değeri:"
 
 #, fuzzy
 msgctxt "TTestBayesianOneSample|"
@@ -160,7 +171,7 @@ msgstr "Önceki ve sonraki"
 #, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr "ilave bilgi"
+msgstr "Ek bilgi"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
