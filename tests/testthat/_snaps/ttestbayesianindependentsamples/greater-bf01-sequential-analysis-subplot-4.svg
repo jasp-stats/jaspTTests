@@ -18,7 +18,7 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
-<rect x='0.00' y='0.00' width='720.00' height='576.00' style='stroke-width: 10.67; stroke: none;' />
+<rect x='-0.000000000000064' y='0.00' width='720.00' height='576.00' style='stroke-width: 10.67; stroke: none;' />
 </g>
 <defs>
   <clipPath id='cpODAuNTB8NjA5Ljg4fDIwLjcxfDUwNy4wOQ=='>
@@ -83,15 +83,15 @@
 <polyline points='72.00,150.77 80.50,150.77 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <polyline points='72.00,42.82 80.50,42.82 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <polyline points='609.88,507.09 609.88,20.71 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt;' />
-<polyline points='609.88,484.99 618.38,484.99 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<polyline points='609.88,431.01 618.38,431.01 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
-<polyline points='609.88,377.03 618.38,377.03 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<polyline points='609.88,323.05 618.38,323.05 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
-<polyline points='609.88,269.08 618.38,269.08 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<polyline points='609.88,209.92 618.38,209.92 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
-<polyline points='609.88,150.77 618.38,150.77 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<polyline points='609.88,96.79 618.38,96.79 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
-<polyline points='609.88,42.82 618.38,42.82 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='618.38,484.99 609.88,484.99 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='618.38,431.01 609.88,431.01 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
+<polyline points='618.38,377.03 609.88,377.03 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='618.38,323.05 609.88,323.05 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
+<polyline points='618.38,269.08 609.88,269.08 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='618.38,209.92 609.88,209.92 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
+<polyline points='618.38,150.77 609.88,150.77 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
+<polyline points='618.38,96.79 609.88,96.79 ' style='stroke-width: 0.64; stroke: none; stroke-linecap: butt;' />
+<polyline points='618.38,42.82 609.88,42.82 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <text x='618.38' y='436.86' style='font-size: 17.00px; font-family: sans;' textLength='75.62px' lengthAdjust='spacingAndGlyphs'>Anecdotal</text>
 <text x='618.38' y='328.90' style='font-size: 17.00px; font-family: sans;' textLength='75.62px' lengthAdjust='spacingAndGlyphs'>Anecdotal</text>
 <text x='618.38' y='215.77' style='font-size: 17.00px; font-family: sans;' textLength='71.83px' lengthAdjust='spacingAndGlyphs'>Moderate</text>
@@ -116,7 +116,7 @@
 <text transform='translate(19.02,271.47) rotate(-90)' style='font-size: 20.40px; font-family: sans;' textLength='12.46px' lengthAdjust='spacingAndGlyphs'>F</text>
 <text transform='translate(22.79,259.01) rotate(-90)' style='font-size: 14.28px; font-family: sans;' textLength='7.94px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text transform='translate(22.79,251.07) rotate(-90)' style='font-size: 14.28px; font-family: sans;' textLength='8.35px' lengthAdjust='spacingAndGlyphs'>+</text>
-<text transform='translate(701.73,263.90) rotate(90)' text-anchor='middle' style='font-size: 20.40px; font-family: sans;' textLength='83.94px' lengthAdjust='spacingAndGlyphs'>Evidence</text>
+<text transform='translate(705.96,263.90) rotate(90)' text-anchor='middle' style='font-size: 20.40px; font-family: sans;' textLength='83.94px' lengthAdjust='spacingAndGlyphs'>Evidence</text>
 <text x='345.19' y='11.70' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='326.03px' lengthAdjust='spacingAndGlyphs'>greater-BF01-sequential-analysis-subplot-4</text>
 </g>
 </svg>

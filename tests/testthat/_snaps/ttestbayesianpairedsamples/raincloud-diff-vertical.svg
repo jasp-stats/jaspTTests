@@ -150,7 +150,6 @@
 <polyline points='64.76,279.25 73.27,279.25 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <polyline points='64.76,161.73 73.27,161.73 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <polyline points='64.76,44.21 73.27,44.21 ' style='stroke-width: 0.64; stroke-linecap: butt;' />
-<polyline points='73.27,537.80 720.00,537.80 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt;' />
 <text transform='translate(19.02,279.25) rotate(-90)' text-anchor='middle' style='font-size: 20.40px; font-family: sans;' textLength='233.59px' lengthAdjust='spacingAndGlyphs'>contNormal - contGamma</text>
 <text x='396.63' y='11.70' text-anchor='middle' style='font-size: 17.00px; font-family: sans;' textLength='156.85px' lengthAdjust='spacingAndGlyphs'>raincloud-diff-vertical</text>
 </g>
