@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2023-09-02 02:34\n"
-"PO-Revision-Date: 2024-02-23 12:02+0000\n"
-"Last-Translator: Fatih Aktaş <besyofatih10@gmail.com>\n"
+"PO-Revision-Date: 2024-03-09 02:32+0000\n"
+"Last-Translator: Fikret Er <fikret.alara@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/tr/>\n"
 "Language: tr\n"
@@ -50,7 +50,6 @@ msgstr ""
 msgid "SD"
 msgstr "SS"
 
-#, fuzzy
 msgid "SE"
 msgstr "SH"
 
@@ -237,7 +236,7 @@ msgid "Test"
 msgstr ""
 
 msgid "df"
-msgstr "df"
+msgstr "sd (serbestlik derecesi)df"
 
 msgid "p"
 msgstr "p"
@@ -246,7 +245,7 @@ msgid "Cohen's d"
 msgstr "Cohen d"
 
 msgid "Glass' delta"
-msgstr "Cam deltası"
+msgstr "Glass'ın deltası"
 
 msgid "Hedges' g"
 msgstr "Hedges' g"
