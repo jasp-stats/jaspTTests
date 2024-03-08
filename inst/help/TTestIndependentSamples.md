@@ -19,7 +19,7 @@ The independent samples t-test allows the user to estimate the effect size and t
 #### Tests 
 - Student: Student's t-test. This option is selected by default. 
 - Welch: Welch's t-test. 
-- Mann-Whitney: Mann-Whitney test. 
+- Mann-Whitney: Mann-Whitney U test. 
 
 #### Alt. Hypothesis 
 - Group 1 &ne; Group 2: Two-sided alternative hypothesis that the population means are equal. This options is selected by default. 
@@ -60,7 +60,7 @@ The independent samples t-test allows the user to estimate the effect size and t
 - The first column contains the dependent variable. 
 - Test: The type of t-test that is selected. If only one test is selected, this column will not be displayed. In this scenario, the table only displays the results for the selected test. 
 - t: The value of the t-value. 
-- W: The test statistic of the Wilcoxon test. The two most common definitions correspond to the sum of the ranks of the first sample with the minimum value subtracted or not. JASP uses the definition with the subtraction (also used by R).
+- U: The test statistic of the Mann-Whitney U test. The two most common definitions correspond to the sum of the ranks of the first sample with the minimum value subtracted or not. JASP uses the definition with the subtraction (also used by R). The mean and sum of the ranks for each group can be found in the descriptives table. 
 - df: Degrees of freedom. 
 - p: The p-value. 
 - Mean difference: Difference in sample means. This column is only named 'Mean difference' when the tests `Student` or `Welch` are selected. When the test `Mann-Whitney` is selected, this column is called 'Location parameter'. 
