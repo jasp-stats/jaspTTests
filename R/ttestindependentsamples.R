@@ -81,10 +81,6 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   ttest$addColumnInfo(name = "df",     type = dfType,    title = gettext("df"))
   ttest$addColumnInfo(name = "p",      type = "pvalue",  title = gettext("p"))
   
-  if (optionsList$wantsWilcox) 
-    ttest$addColumnInfo(name = "wilcoxZ", type = "number",  title = gettext("z"))
-
-
   .ttestVovkSellke(ttest, options)
 
   if (options$effectSizeType == "cohen")
@@ -296,8 +292,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ns  <- tapply(variableData, groupingData, function(x) length(na.omit(x)))
 
   direction <- .ttestMainGetDirection(options$alternative)
-  wilcoxZ <- NULL # initiate
-  
+
   if (test == "Mann-Whitney") {
     r <- stats::wilcox.test(f, data = dataset,
                             alternative = direction,
@@ -306,14 +301,11 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     sed  <- ""
     stat <- as.numeric(r$statistic)
     m    <- as.numeric(r$estimate)
-    d    <- abs(as.numeric(1-(2*stat)/(ns[1]*ns[2]))) * sign(m)
-    # rankBis <- 1 - (2*stat)/(ns[1]*ns[2])
+    d    <- abs(as.numeric(1-(2*stat)/(ns[1]*ns[2]))) * sign(m) # rankBis
     wSE <- sqrt((ns[1]*ns[2] * (ns[1]+ns[2] + 1))/12)
     rankBisSE <- sqrt(4 * 1/(ns[1]*ns[2])^2 * wSE^2)
     zRankBis  <- atanh(d)
-    wilcoxU <- stat + (ns[1] * (ns[1] + 1) * 0.5)
-    wilcoxZ <- (wilcoxU - ((ns[1] * (ns[1] + ns[2] + 1)) / 2)) / wSE
-    
+ 
     if(direction == "two.sided")
       confIntEffSize <- sort(c(tanh(zRankBis + qnorm((1-ciEffSize)/2)*rankBisSE),
                                tanh(zRankBis + qnorm((1+ciEffSize)/2)*rankBisSE)))
@@ -405,7 +397,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   upperCIeffectSize <- as.numeric(confIntEffSize[2])
 
   # this will be the results object
-  row <- list(df = df, p = p, md = m, d = d, wilcoxZ = wilcoxZ,
+  row <- list(df = df, p = p, md = m, d = d, 
               lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
               lowerCIeffectSize = lowerCIeffectSize, upperCIeffectSize = upperCIeffectSize,
               effectSizeSe = effectSizeSe, sed = sed)
