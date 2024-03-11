@@ -42,6 +42,7 @@ Form
 		CheckBox { name: "student";		label: qsTr("Student"); checked: true	}
 		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")		}
 		CheckBox { name: "zTest";			label: qsTr("Z Test"); id: zTest		}
+		CheckBox { name: "mediantest";	label: qsTr("tests")		}
 		DoubleField { name: "testValue";	label: qsTr("Test value:");		defaultValue: 0;	negativeValues: true	}
 		DoubleField { name: "zTestSd";		label: qsTr("Std. deviation:");	defaultValue: 1.0;	enabled: zTest.checked	}
 	}
