@@ -296,7 +296,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ns  <- tapply(variableData, groupingData, function(x) length(na.omit(x)))
 
   direction <- .ttestMainGetDirection(options$alternative)
-  wilcoxZ <- NULL # placeholder
+  wilcoxZ <- NULL # initiate
   
   if (test == "Mann-Whitney") {
     r <- stats::wilcox.test(f, data = dataset,
