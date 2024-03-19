@@ -27,7 +27,7 @@ msgid "Please provide another variable."
 msgstr "Te rog alege o altă variabilă."
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr "Variabilele %1$ și %2$ sunt aceleași!"
+msgstr "Variabilele %1$s și %2$s sunt aceleași!"
 
 msgid "Descriptives Plots"
 msgstr ""
