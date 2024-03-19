@@ -177,7 +177,7 @@ msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
 
-msgid "error %"
+msgid "error %%"
 msgstr ""
 
 msgid ""

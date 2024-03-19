@@ -168,8 +168,8 @@ msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
 
-msgid "error %"
-msgstr "誤差 %"
+msgid "error %%"
+msgstr "誤差 %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
