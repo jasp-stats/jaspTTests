@@ -55,8 +55,8 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
 
   if (optionsList$wantsWilcox && optionsList$onlyTest) {
     ttest$addFootnote(gettext("Mann-Whitney U test."))
-    testStat <- "W"
-    testStatName <- gettext("W")
+    testStat <- "U"
+    testStatName <- gettext("U")
   } else if (optionsList$wantsWelchs && optionsList$onlyTest) {
     ttest$addFootnote(gettext("Welch's t-test."))
     testStat <- "t"
@@ -80,7 +80,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   ttest$addColumnInfo(name = testStat, type = "number",  title = testStatName)
   ttest$addColumnInfo(name = "df",     type = dfType,    title = gettext("df"))
   ttest$addColumnInfo(name = "p",      type = "pvalue",  title = gettext("p"))
-
+  
   .ttestVovkSellke(ttest, options)
 
   if (options$effectSizeType == "cohen")
@@ -301,11 +301,11 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     sed  <- ""
     stat <- as.numeric(r$statistic)
     m    <- as.numeric(r$estimate)
-    d    <- abs(as.numeric(1-(2*stat)/(ns[1]*ns[2]))) * sign(m)
-    # rankBis <- 1 - (2*stat)/(ns[1]*ns[2])
+    d    <- abs(as.numeric(1-(2*stat)/(ns[1]*ns[2]))) * sign(m) # rankBis
     wSE <- sqrt((ns[1]*ns[2] * (ns[1]+ns[2] + 1))/12)
     rankBisSE <- sqrt(4 * 1/(ns[1]*ns[2])^2 * wSE^2)
     zRankBis  <- atanh(d)
+ 
     if(direction == "two.sided")
       confIntEffSize <- sort(c(tanh(zRankBis + qnorm((1-ciEffSize)/2)*rankBisSE),
                                tanh(zRankBis + qnorm((1+ciEffSize)/2)*rankBisSE)))
@@ -397,7 +397,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   upperCIeffectSize <- as.numeric(confIntEffSize[2])
 
   # this will be the results object
-  row <- list(df = df, p = p, md = m, d = d,
+  row <- list(df = df, p = p, md = m, d = d, 
               lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
               lowerCIeffectSize = lowerCIeffectSize, upperCIeffectSize = upperCIeffectSize,
               effectSizeSe = effectSizeSe, sed = sed)
@@ -529,9 +529,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ttestDescriptivesTable$addColumnInfo(name = "se",       type = "number",  title = gettext("SE"))
   ttestDescriptivesTable$addColumnInfo(name = "coefOfVariation",
                                                           type = "number",  title = gettext("Coefficient of variation"))
-
+  if (options[["mannWhitneyU"]]) {
+    ttestDescriptivesTable$addColumnInfo(name = "meanRank", type = "number",  title = gettext("Mean Rank"))
+    ttestDescriptivesTable$addColumnInfo(name = "sumRank",  type = "number",  title = gettext("Sum Rank"))
+  }
+  ttestDescriptivesTable$dependOn("mannWhitneyU")
+  
   container[["table"]] <- ttestDescriptivesTable
-
+  
   if(ready)
     .ttestIndependentDescriptivesFill(ttestDescriptivesTable, dataset, options)
 }
@@ -552,6 +557,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       groupData   <- variableData[groupingData == level]
       groupDataOm <- na.omit(groupData)
 
+      dataRank <- rank((dataset[[variable]]), na.last = "keep")
+      groupDataRank <- dataRank[groupingData == level]
+      groupDataRankOm <- na.omit(groupDataRank)
+      
       if (class(groupDataOm) != "factor") {
 
         n    <- length(groupDataOm)
@@ -559,9 +568,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         std  <- sd(groupDataOm)
         sem  <- std / sqrt(n)
         coefOfVariation <- std / mean
-
+        
+        meanRank <- mean(groupDataRankOm)
+        sumRank <- sum(groupDataRankOm)
+        
         row <- c(row, list(N = n, mean = mean, sd = std, se = sem,
-                           coefOfVariation = coefOfVariation))
+                           coefOfVariation = coefOfVariation,
+                           meanRank = meanRank,
+                           sumRank = sumRank))
 
       } else {
         n   <- length(groupDataOm)

@@ -182,8 +182,8 @@ msgstr ""
 "Wynik oparty na algorytmie augmentacji danych z 5 łańcuchami o %.0f "
 "iteracjach."
 
-msgid "error %"
-msgstr "błąd %"
+msgid "error %%"
+msgstr "błąd %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "

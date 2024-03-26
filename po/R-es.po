@@ -180,8 +180,8 @@ msgstr ""
 "Resultado basado en el algoritmo del incremento de datos con 5 cadenas de "
 "%.0f iteraciones."
 
-msgid "error %"
-msgstr "fallo %"
+msgid "error %%"
+msgstr "fallo %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "

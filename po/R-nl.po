@@ -181,8 +181,8 @@ msgstr ""
 "Resultaat gebaseerd op data augmentatie algoritme met 5 ketens van %.0f "
 "iteraties."
 
-msgid "error %"
-msgstr "fout %"
+msgid "error %%"
+msgstr "fout %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "

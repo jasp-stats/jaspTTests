@@ -174,8 +174,8 @@ msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr "结果基于具有 5 个 %.0f 迭代链的数据增强算法。"
 
-msgid "error %"
-msgstr "误差 %"
+msgid "error %%"
+msgstr "误差 %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "

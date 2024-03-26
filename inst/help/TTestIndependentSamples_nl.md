@@ -19,7 +19,7 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
 #### Toetsen
 - Student: De student t-toets. Dit is de standaardoptie. 
 - Welch: Welch's t-toets. 
-- Mann-Whitney: Mann-Whitney test. 
+- Mann-Whitney: Mann-Whitney U test. 
 
 #### Alt. Hypothese 
 - Groep 1 &ne; Groep 2: Tweezijdige alternatieve hypothese dat de populatiegemiddelden gelijk zijn. Dit is de standaardoptie. 
@@ -58,7 +58,7 @@ Met de t-toets voor onafhankelijke steekproeven kan de gebruiker de effectgroott
 - De eerste kolom bevat de variabelen waarvoor de analyse is uitgevoerd.
 - Toets: Het type toets dat is geselecteerd. Als er maar een toets is geselecteerd wordt deze kolom niet weergegeven. In dit geval geeft de tabel alleen de resultaten van de geselecteerde toets weer. 
 - t: De waarde van de t-waarde. 
-- W: De toets statistiek van de Wilcoxon toets. Deze wordt berekend door de rangordes van de eerste groep op te tellen (dezelfde procedure als door R wordt gebruikt). 
+- U: De toets statistiek van de Mann-Whitney U toets. Deze wordt berekend door de rangordes van de eerste groep op te tellen (dezelfde procedure als door R wordt gebruikt), en de minimumscore (n1 * (n1 + 1) * 0.5) wordt daar vanaf getrokken. Som en gemiddelde van de rankscores staan in de beschrijvende statistiektabel.  
 - vg: Vrijheidsgraden.
 - p: De p-waarde.
 - Gemiddelde verschil: Gemiddeld verschil tussen de steekproefgemiddelden. Deze kolom heet alleen 'Gemiddelde verschil' wanneer de toets `Student` of `Welch` is geselecteerd. Wanneer de toets `Mann-Whitney` is geselecteerd, heet deze kolom 'Locatieparameter'. 

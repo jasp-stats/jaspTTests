@@ -234,7 +234,7 @@ TTestBayesianPairedSamplesInternal <- function(jaspResults, dataset, options) {
     } else {
       fmt <- "sf:4;dp:3;~"
     }
-    jaspTable$addColumnInfo(name = "error", type = "number", format = fmt, title = gettext("error %"))
+    jaspTable$addColumnInfo(name = "error", type = "number", format = fmt, title = gettextf("error %%"))
   }
 
   if (options[["alternative"]] == "greater" || options[["alternative"]] == "less")

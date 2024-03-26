@@ -198,8 +198,8 @@ msgstr ""
 "Результат основан на алгоритме увеличения данных с 5 цепочками итераций %.0f."
 
 #, fuzzy
-msgid "error %"
-msgstr "ошибка %"
+msgid "error %%"
+msgstr "ошибка %%"
 
 #, fuzzy
 msgid ""

@@ -179,8 +179,8 @@ msgstr ""
 "データ拡張(data augmentation)アルゴリズムを用いて、%.0fの反復回数(iteration)"
 "を5連鎖(chain)繰り返した場合の結果."
 
-msgid "error %"
-msgstr "エラー %"
+msgid "error %%"
+msgstr "エラー %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
