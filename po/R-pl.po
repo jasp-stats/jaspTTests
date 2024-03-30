@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-09-20 11:21+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -189,15 +189,15 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
-"Dla wszystkich testów hipoteza alternatywna zakłada, że położenie grupy <em>"
-"%1$s</em> jest większe niż położenie grupy <em>%2$s</em>."
+"Dla wszystkich testów hipoteza alternatywna zakłada, że położenie grupy "
+"<em>%1$s</em> jest większe niż położenie grupy <em>%2$s</em>."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
-"Dla wszystkich testów hipoteza alternatywna zakłada, że położenie grupy <em>"
-"%1$s</em> jest mniejsze niż położenie grupy <em>%2$s</em>."
+"Dla wszystkich testów hipoteza alternatywna zakłada, że położenie grupy "
+"<em>%1$s</em> jest mniejsze niż położenie grupy <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "Bayesowski test rang Wilcoxona"
@@ -241,8 +241,8 @@ msgstr "Test t dla prób niezależnych"
 msgid "Mann-Whitney U test."
 msgstr "Test U Manna-Whitneya."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Test t Welcha."
@@ -328,6 +328,9 @@ msgstr "Dla %1$s wielkość efektu jest określona przez %2$s."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Test normalności (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr "Wyniki istotne sugerują odchylenie od rozkładu normalnego."
 
@@ -386,6 +389,13 @@ msgstr "Nie można obliczyć statystyki F"
 
 msgid "Group Descriptives"
 msgstr "Statystyki opisowe dla grup"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Średnia"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "Test t dla jednej próby"

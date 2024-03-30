@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-09-02 09:39+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/es/>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -239,8 +239,8 @@ msgstr "Contraste T para Muestras Independientes"
 msgid "Mann-Whitney U test."
 msgstr "Contraste U de Mann-Whitney."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Contraste T de Welch."
@@ -326,6 +326,9 @@ msgstr "Para el %1$s, la magnitud del efecto viene dada por %2$s."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Contraste de Normalidad (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 "Los resultados significativos sugieren una desviación respecto a la "
@@ -387,6 +390,13 @@ msgstr "No se puede calcular el estatístico F"
 
 msgid "Group Descriptives"
 msgstr "Descriptivos de Grupo"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Media"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "Contraste T para Una Muestra"

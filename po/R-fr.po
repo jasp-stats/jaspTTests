@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2024-02-19 17:02+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -247,8 +247,8 @@ msgstr "Test t d'échantillons indépendants"
 msgid "Mann-Whitney U test."
 msgstr "Test U Mann-Whitney."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Test t de Welch."
@@ -336,6 +336,9 @@ msgstr "Pour %1$s, la taille de l'effet est donnée par %2$s."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Test de Normalité (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr "Des résultats significatifs suggèrent une déviation de la normalité."
 
@@ -395,6 +398,13 @@ msgstr "La statistique F n'a pas pu être calculée"
 #, fuzzy
 msgid "Group Descriptives"
 msgstr "Statistiques descriptives"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Moyenne"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "Test t à Un Échantillon"

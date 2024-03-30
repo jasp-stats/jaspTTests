@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-06-24 02:51+0000\n"
 "Last-Translator: Borisov Igor Borisovich <borisov_i@pimunn.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -260,8 +260,8 @@ msgstr "Т-критерий для независимых групп"
 msgid "Mann-Whitney U test."
 msgstr "U-критерий Манна-Уитни."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "T-критерий Уэлча."
@@ -350,6 +350,9 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr ""
 "Проверка на соответствие нормальному распределению (критерий Шапиро-Уилка)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 "Статистически достоверные результаты предполагают ненормальное распределение."
@@ -411,6 +414,13 @@ msgstr "Значение F-критерия не может быть рассч�
 #, fuzzy
 msgid "Group Descriptives"
 msgstr "Описательные статистики"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Среднее"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "Одновыборочный Т-критерий"

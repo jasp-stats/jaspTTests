@@ -6,11 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-09-02 09:39+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-r/gl/>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"r/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -247,8 +247,8 @@ msgstr "Proba T para Mostras Independentes"
 msgid "Mann-Whitney U test."
 msgstr "Proba U de Mann-Whitney."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Proba T de Welch."
@@ -334,6 +334,9 @@ msgstr "Para a %1$s, a magnitude do efecto ven dada por %2$s."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Proba de Normalidade (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 "Os resultados significativos suxiren unha desviación respecto á Normalidade."
@@ -393,6 +396,13 @@ msgstr "Non se pode calcular o estatístico F"
 
 msgid "Group Descriptives"
 msgstr "Descritivos de Grupo"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Media"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "Proba T para Unha Mostra"

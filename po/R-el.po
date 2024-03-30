@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-04-23 23:04+0000\n"
 "Last-Translator: Vaitsa Giannouli <giannouli.vaitsa@ac.eap.gr>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Mann-Whitney U test."
 msgstr ""
 
-msgid "W"
+msgid "U"
 msgstr ""
 
 msgid "Welch's t-test."
@@ -299,6 +299,9 @@ msgstr ""
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr ""
 
+msgid "W"
+msgstr ""
+
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 
@@ -349,6 +352,12 @@ msgid "F-statistic could not be calculated"
 msgstr ""
 
 msgid "Group Descriptives"
+msgstr ""
+
+msgid "Mean Rank"
+msgstr ""
+
+msgid "Sum Rank"
 msgstr ""
 
 msgid "One Sample T-Test"

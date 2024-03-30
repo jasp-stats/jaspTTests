@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-09-23 01:59+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -227,8 +227,8 @@ msgstr "独立样本T检验"
 msgid "Mann-Whitney U test."
 msgstr "曼-惠特尼U检验。"
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Welch t检验"
@@ -311,6 +311,9 @@ msgstr "对于 %1$s，效应量大小由 %2$s 给出。"
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "正态性检验 (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr "显著性结果表明偏离正态性。"
 
@@ -362,6 +365,13 @@ msgstr "F统计量无法计算"
 
 msgid "Group Descriptives"
 msgstr "分组描述统计"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "均值"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "单样本T检验"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2023-09-02 02:34\n"
+"POT-Creation-Date: 2024-03-30 02:33\n"
 "PO-Revision-Date: 2023-09-02 09:39+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -243,8 +243,8 @@ msgstr "T-Test für unabhängige Stichproben"
 msgid "Mann-Whitney U test."
 msgstr "Mann-Whitney-U-Test."
 
-msgid "W"
-msgstr "W"
+msgid "U"
+msgstr ""
 
 msgid "Welch's t-test."
 msgstr "Welchs T-Test."
@@ -330,6 +330,9 @@ msgstr "Beim %1$s wird die Effektstärke mit %2$s angegeben."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Prüfung auf Normalverteilung (Shapiro-Wilk)"
 
+msgid "W"
+msgstr "W"
+
 msgid "Significant results suggest a deviation from normality."
 msgstr ""
 "Ein signifikantes Ergebnis deutet auf Abweichung von einer Normalverteilung "
@@ -390,6 +393,13 @@ msgstr "F-Statistik konnte nicht berechnet werden"
 
 msgid "Group Descriptives"
 msgstr "Gruppen, Deskriptiv"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Mittelwert"
+
+msgid "Sum Rank"
+msgstr ""
 
 msgid "One Sample T-Test"
 msgstr "T-Test für eine Stichprobe"
