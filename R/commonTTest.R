@@ -438,7 +438,8 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     # Apply correction from Morey (2008) to the standard error and confidence interval
     # Get the product of the number of conditions of within-S variables
     nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
-    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )    ndatac$sd <- ndatac$sd * correctionFactor
+    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
+    ndatac$sd <- ndatac$sd * correctionFactor
     ndatac$se <- ndatac$se * correctionFactor
     ndatac$ci <- ndatac$ci * correctionFactor
   }
