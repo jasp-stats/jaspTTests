@@ -399,7 +399,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.i
 }
 
 summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                            conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE,
+                            conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, useMoreyCorrection=TRUE,
                             dependentName = .BANOVAdependentName,
                             subjectName = .BANOVAsubjectName) {
 
@@ -434,16 +434,15 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
       stop("nDistinctObservations got an object of type", paste(class(x), collapse = ", "))
   }
 
-  # Apply correction from Morey (2008) to the standard error and confidence interval
-  # Get the product of the number of conditions of within-S variables
-  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
-  correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
-
-  # Apply the correction factor
-  ndatac$sd <- ndatac$sd * correctionFactor
-  ndatac$se <- ndatac$se * correctionFactor
-  ndatac$ci <- ndatac$ci * correctionFactor
-
+  if (useMoreyCorrection) {
+    # Apply correction from Morey (2008) to the standard error and confidence interval
+    # Get the product of the number of conditions of within-S variables
+    nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
+    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )    ndatac$sd <- ndatac$sd * correctionFactor
+    ndatac$se <- ndatac$se * correctionFactor
+    ndatac$ci <- ndatac$ci * correctionFactor
+  }
+  
   if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
