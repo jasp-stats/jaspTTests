@@ -26,6 +26,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   # Output tables (each calls its own results function)
   .ttestIndependentMainTable(  jaspResults, dataset, options, ready, type)
   .ttestIndependentNormalTable(jaspResults, dataset, options, ready, type)
+  .ttestQQPlot(                jaspResults, dataset, options, ready, type)
   .ttestIndependentEqVarTable( jaspResults, dataset, options, ready, type)
   # Descriptives
   .ttestIndependentDescriptivesTable(        jaspResults, dataset, options, ready)

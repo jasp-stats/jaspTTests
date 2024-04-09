@@ -116,15 +116,15 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 .ttestAssumptionCheckContainer <- function(jaspResults, options, type) {
   if(type == "independent")
-    if(!options$normalityTest && !options$equalityOfVariancesTest)
+    if(!options$normalityTest && !options$equalityOfVariancesTest && !options$qqPlot)
       return()
   else if (type %in% c("paired", "one-sample"))
-    if(!options$normalityTest)
+    if(!options$normalityTest && !options$qqPlot)
       return()
   if (is.null(jaspResults[["AssumptionChecks"]])) {
     container <- createJaspContainer(gettext("Assumption Checks"))
     dependList <- c("dependent", "group", "pairs", "naAction",
-                    "normalityTest", "equalityOfVariancesTest")
+                    "normalityTest", "equalityOfVariancesTest", "qqPlot")
     container$dependOn(dependList)
     container$position <- 2
     jaspResults[["AssumptionChecks"]] <- container
@@ -598,7 +598,8 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                                    conf.interval = options[["barPlotCiLevel"]],
                                    na.rm = TRUE,
                                    .drop = FALSE,
-                                   errorBarType = if (errorType == "ci") errorType else "se")
+                                   errorBarType = errorType,
+                                   useMoreyCorrection = options[["applyMoreyCorrectionErrorBarsBarplot"]])
   } else {
     data <- data.frame(dependent = dataset[[variable]],
                        groupingVariable = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))
@@ -609,7 +610,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                              conf.interval = options[["barPlotCiLevel"]],
                              na.rm = TRUE,
                              .drop = FALSE,
-                             errorBarType = if (errorType == "ci") errorType else "se")
+                             errorBarType = errorType)
   }
   ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
 
@@ -643,4 +644,40 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     jaspGraphs::themeJaspRaw()
 
   return(p)
+}
+
+
+
+.ttestQQPlot <- function(jaspResults, dataset, options, ready, type) {
+  
+  .ttestAssumptionCheckContainer(jaspResults, options, type)
+  container <- jaspResults[["AssumptionChecks"]]
+  if (!options$qqPlot || !is.null(container[["ttestQQPlot"]]) || !ready)
+    return()
+  
+  container[["QQPlots"]] <- createJaspContainer(gettext("Q-Q Plots"))
+  if (type == "independent") { 
+    for (thisVar in options$dependent) {
+      groupMeans <- tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean)
+      resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]      
+      qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
+      container[["QQPlots"]][[thisVar]] <- qqPlot
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+    }
+  } else if (type == "paired") {
+    for (pair in options$pairs) {
+      resid <- dataset[[pair[[1]]]] - dataset[[pair[[2]]]]
+      title <-  paste(pair, collapse = " - ")
+      qqPlot <- createJaspPlot(title = title, width = 480, height = 320)
+      container[["QQPlots"]][[title]] <- qqPlot
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+    }
+  } else if (type == "one-sample") {
+    for (thisVar in options$dependent) {
+      resid <- dataset[[thisVar]] - options[["testValue"]]
+      qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
+      container[["QQPlots"]][[thisVar]] <- qqPlot
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+    }
+  }
 }

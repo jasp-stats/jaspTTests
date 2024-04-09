@@ -25,6 +25,8 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Output tables (each calls its own results function)
   .ttestOneSampleMainTable(  jaspResults, dataset, options, ready, type)
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
+  .ttestQQPlot(              jaspResults, dataset, options, ready, type)
+  
   # Descriptives
   vars <- unique(unlist(options$dependent))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)

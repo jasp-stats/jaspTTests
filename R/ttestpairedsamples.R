@@ -25,6 +25,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   # Output tables (each calls its own results function)
   .ttestPairedMainTable(  jaspResults, dataset, options, ready, type)
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
+  .ttestQQPlot(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$pairs))
   .ttestDescriptivesTable(                        jaspResults, dataset, options, ready, vars)
@@ -412,7 +413,10 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlot", "descriptivesPlotCiLevel"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), 
+                                        dependencies = c("descriptivesPlot", 
+                                                         "descriptivesPlotCiLevel",
+                                                         "applyMoreyCorrectionErrorBars"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -449,15 +453,8 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   c1 <- dataset[[pair[[1]]]]
   c2 <- dataset[[pair[[2]]]]
 
-  data <- data.frame(
-    id = c(1:length(c1), 1:length(c2)),
-    dependent = c(c1, c2),
-    group = factor(c(rep(paste0(pair[[1]]), length(c1)),
-                                rep(paste0(pair[[2]]), length(c2))), levels = pair)
-  )
-
-  summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "group",
-                                 idvar = "id", conf.interval = options[["descriptivesPlotCiLevel"]],
+  summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
+                                 idvar = "id", conf.interval = options$descriptivesPlotCiLevel,
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
@@ -484,7 +481,8 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
                                                                                "barPlotCiLevel",
                                                                                "barPlotErrorType",
-                                                                               "barPlotYAxisFixedToZero"))
+                                                                               "barPlotYAxisFixedToZero",
+                                                                               "applyMoreyCorrectionErrorBarsBarplot"))
     subcontainer$position <- 6
     container[["barPlots"]] <- subcontainer
   } else {
@@ -629,10 +627,11 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 }
 
 .summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE) {
+                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, 
+                             useMoreyCorrection=TRUE) {
 
   # Get the means from the un-normed data
-  datac <- .summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
+  datac <- summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
                       conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType, usePooledSE=usePooledSE)
   # Drop all the unused columns (these will be calculated with normed data)
   datac$sd <- NULL
@@ -651,16 +650,16 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   ndatac <- .summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
                        usePooledSE=usePooledSE)
 
-  # Apply correction from Morey (2008) to the standard error and confidence interval
-  # Get the product of the number of conditions of within-S variables
-  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
-  correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
-
-  # Apply the correction factor
-  ndatac$sd <- ndatac$sd * correctionFactor
-  ndatac$se <- ndatac$se * correctionFactor
-  ndatac$ci <- ndatac$ci * correctionFactor
-
+  if (useMoreyCorrection) {
+    # Apply correction from Morey (2008) to the standard error and confidence interval
+    # Get the product of the number of conditions of within-S variables
+    nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
+    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
+    ndatac$sd <- ndatac$sd * correctionFactor
+    ndatac$se <- ndatac$se * correctionFactor
+    ndatac$ci <- ndatac$ci * correctionFactor
+  }
+  
   if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
@@ -677,91 +676,3 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   merge(datac, ndatac)
 }
 
-.summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
-                       errorBarType="ci", usePooledSE=FALSE) {
-
-  # New version of length which can handle NA's: if na.rm==T, don't count them
-  length2 <- function (x, na.rm=FALSE) {
-    if (na.rm) {
-      sum(!is.na(x))
-    } else {
-      length(x)
-    }
-  }
-
-  # This does the summary. For each group's data frame, return a vector with
-  # N, mean, and sd
-  # First aggregate over unused RM factors, if desired:
-  if (usePooledSE && measurevar == .BANOVAdependentName) {
-
-    data <- plyr::ddply(data, c(.BANOVAsubjectName, groupvars), plyr::summarise, dependent = mean(JaspColumn_.dependent._Encoded))
-    names(data)[which(names(data) == "dependent")] <- measurevar
-
-  } else if (usePooledSE && measurevar == paste0(.BANOVAdependentName, "_norm")) {
-
-    data <- plyr::ddply(data, c(.BANOVAsubjectName, groupvars), plyr::summarise, dependent = mean(JaspColumn_.dependent._Encoded_norm))
-    names(data)[which(names(data) == "dependent")] <- measurevar
-  }
-
-  datac <- plyr::ddply(data, groupvars, .drop=.drop,
-                       .fun = function(xx, col) {
-                         c(N    = length2(xx[[col]], na.rm=na.rm),
-                           mean = mean   (xx[[col]], na.rm=na.rm),
-                           sd   = sd     (xx[[col]], na.rm=na.rm)
-                         )
-                       },
-                       measurevar
-  )
-
-  # Rename the "mean" column
-  datac <- plyr::rename(datac, c("mean" = measurevar))
-
-  datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
-
-  # Confidence interval multiplier for standard error
-  # Calculate t-statistic for confidence interval:
-  # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
-  ciMult <- qt(conf.interval/2 + .5, datac$N-1)
-  datac$ci <- datac$se * ciMult
-
-  if (errorBarType == "ci") {
-
-    datac$ciLower <- datac[,measurevar] - datac[,"ci"]
-    datac$ciUpper <- datac[,measurevar] + datac[,"ci"]
-
-  } else {
-
-    datac$ciLower <- datac[,measurevar] - datac[,"se"]
-    datac$ciUpper <- datac[,measurevar] + datac[,"se"]
-
-  }
-
-  return(datac)
-}
-
-.normDataWithin <- function(data=NULL, idvar, measurevar, betweenvars=NULL, na.rm=FALSE, .drop=TRUE) {
-
-  # Measure var on left, idvar + between vars on right of formula.
-  data.subjMean <- plyr::ddply(data, c(idvar, betweenvars), .drop=.drop,
-                               .fun = function(xx, col, na.rm) {
-                                 c(subjMean = mean(xx[,col], na.rm=na.rm))
-                               },
-                               measurevar,
-                               na.rm
-  )
-
-
-
-  # Put the subject means with original data
-  data <- base::merge(data, data.subjMean)
-
-  # Get the normalized data in a new column
-  measureNormedVar <- paste(measurevar, "_norm", sep="")
-  data[,measureNormedVar] <- data[,measurevar] - data[,"subjMean"] +
-    mean(data[,measurevar], na.rm=na.rm)
-
-  # Remove this subject mean column
-  data$subjMean <- NULL
-
-  return(data)
-}
