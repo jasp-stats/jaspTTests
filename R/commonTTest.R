@@ -662,7 +662,11 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
       resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]      
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
+                                                  yName = "Standardized residuals",
+                                                  ablineColor = "darkred", 
+                                                  ablineOrigin = TRUE, 
+                                                  identicalAxes = TRUE)
     }
   } else if (type == "paired") {
     for (pair in options$pairs) {
@@ -670,14 +674,22 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
       title <-  paste(pair, collapse = " - ")
       qqPlot <- createJaspPlot(title = title, width = 480, height = 320)
       container[["QQPlots"]][[title]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
+                                                  yName = "Standardized residuals",
+                                                  ablineColor = "darkred", 
+                                                  ablineOrigin = TRUE, 
+                                                  identicalAxes = TRUE)
     }
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
       resid <- dataset[[thisVar]] - options[["testValue"]]
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(resid)
+      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
+                                                  yName = "Standardized residuals",
+                                                  ablineColor = "darkred", 
+                                                  ablineOrigin = TRUE, 
+                                                  identicalAxes = TRUE)
     }
   }
 }
