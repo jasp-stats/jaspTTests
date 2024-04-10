@@ -452,16 +452,16 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   data <- data.frame(
     id = c(1:length(c1), 1:length(c2)),
     dependent = c(c1, c2),
-    groupingVariable = factor(c(rep(paste0(pair[[1]]), length(c1)),
+    group = factor(c(rep(paste0(pair[[1]]), length(c1)),
                                 rep(paste0(pair[[2]]), length(c2))), levels = pair)
   )
 
-  summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
-                                 idvar = "id", conf.interval = options[["descriptivesPlotsConfidenceInterval"]],
+  summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "group",
+                                 idvar = "id", conf.interval = options[["descriptivesPlotCiLevel"]],
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["groupingVariable"]],
+    x                      = summaryStat[["group"]],
     y                      = summaryStat[["dependent"]],
     ciLower                = summaryStat[["ciLower"]],
     ciUpper                = summaryStat[["ciUpper"]],
@@ -628,7 +628,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 }
 
 .summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                             conf.interval=.95, .drop=TRUE, errorBarType="confidenceInterval", usePooledSE=FALSE) {
+                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE) {
 
   # Get the means from the un-normed data
   datac <- .summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
@@ -660,7 +660,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   ndatac$se <- ndatac$se * correctionFactor
   ndatac$ci <- ndatac$ci * correctionFactor
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
     ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
@@ -677,7 +677,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 }
 
 .summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
-                       errorBarType="confidenceInterval", usePooledSE=FALSE) {
+                       errorBarType="ci", usePooledSE=FALSE) {
 
   # New version of length which can handle NA's: if na.rm==T, don't count them
   length2 <- function (x, na.rm=FALSE) {
@@ -723,7 +723,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   ciMult <- qt(conf.interval/2 + .5, datac$N-1)
   datac$ci <- datac$se * ciMult
 
-  if (errorBarType == "confidenceInterval") {
+  if (errorBarType == "ci") {
 
     datac$ciLower <- datac[,measurevar] - datac[,"ci"]
     datac$ciUpper <- datac[,measurevar] + datac[,"ci"]

@@ -75,7 +75,7 @@ Form
 		CheckBox
 		{
 			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCi";	label: qsTr("Confidence interval") }
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
 		}
 
 		Common.BarPlots

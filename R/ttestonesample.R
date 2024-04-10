@@ -410,21 +410,21 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
     stop(errors$message)
 
   dataSubset <- data.frame(
-    dependent        = dataset[[variable]],
-    groupingVariable = rep(variable, nrow(dataset))
+    dependent = dataset[[variable]],
+    group = rep(variable, nrow(dataset))
   )
 
   summaryStat <- summarySE(
     dataSubset,
     measurevar    = "dependent",
-    groupvars     = "groupingVariable",
-    conf.interval = options[["descriptivesPlotsConfidenceInterval"]],
+    groupvars     = "group",
+    conf.interval = options[["descriptivesPlotCiLevel"]],
     na.rm         = TRUE,
     .drop         = FALSE
   )
 
   p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["groupingVariable"]],
+    x                      = summaryStat[["group"]],
     y                      = summaryStat[["dependent"]],
     ciLower                = summaryStat[["ciLower"]],
     ciUpper                = summaryStat[["ciUpper"]],

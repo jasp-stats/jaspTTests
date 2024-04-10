@@ -619,7 +619,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
 .ttestIndependentDescriptivesPlotFill <- function(dataset, options, variable) {
 
-  groups <- options$groupingVariable
+  groups <- options$group
   errors <- .hasErrors(dataset,
                        message = 'short',
                        type = c('observations', 'variance', 'infinity'),
@@ -635,16 +635,16 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     dataset,
     measurevar    = variable,
     groupvars     = groups,
-    conf.interval = options[["descriptivesPlotsConfidenceInterval"]],
+    conf.interval = options[["descriptivesPlotCiLevel"]],
     na.rm         = TRUE,
     .drop         = FALSE
   )
 
   colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
-  colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "groupingVariable"
+  colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "group"
 
   p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["groupingVariable"]],
+    x                      = summaryStat[["group"]],
     y                      = summaryStat[["dependent"]],
     ciLower                = summaryStat[["ciLower"]],
     ciUpper                = summaryStat[["ciUpper"]],
