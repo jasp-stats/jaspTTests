@@ -632,7 +632,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     stop(errors$message)
 
   dataset <- na.omit(dataset[, c(groups, variable)])
-  summaryStat <- summarySE(
+  summaryStat <- .summarySE(
     dataset,
     measurevar    = variable,
     groupvars     = groups,

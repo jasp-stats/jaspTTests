@@ -22,6 +22,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     dataset <- .ttestReadData(dataset, options, type)
     .ttestCheckErrors(        dataset, options, type)
   }
+
   # Output tables (each calls its own results function)
   .ttestPairedMainTable(  jaspResults, dataset, options, ready, type)
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
@@ -453,8 +454,15 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   c1 <- dataset[[pair[[1]]]]
   c2 <- dataset[[pair[[2]]]]
 
-  summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "groupingVariable",
-                                 idvar = "id", conf.interval = options$descriptivesPlotCiLevel,
+  data <- data.frame(
+    id = c(1:length(c1), 1:length(c2)),
+    dependent = c(c1, c2),
+    group = factor(c(rep(paste0(pair[[1]]), length(c1)),
+                     rep(paste0(pair[[2]]), length(c2))), levels = pair)
+  )
+                                 
+  summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "group",
+                                 idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
@@ -626,53 +634,53 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   return(0L)
 }
 
-.summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, 
-                             useMoreyCorrection=TRUE) {
-
-  # Get the means from the un-normed data
-  datac <- summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
-                      conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType, usePooledSE=usePooledSE)
-  # Drop all the unused columns (these will be calculated with normed data)
-  datac$sd <- NULL
-  datac$se <- NULL
-  datac$ci <- NULL
-  datac$ciLower <- NULL
-  datac$ciUpper <- NULL
-
-  # Norm each subject's data
-  ndata <- .normDataWithin(data, idvar, measurevar, betweenvars, na.rm, .drop=.drop)
-
-  # This is the name of the new column
-  measurevar_n <- paste(measurevar, "_norm", sep="")
-
-  # Collapse the normed data - now we can treat between and within vars the same
-  ndatac <- .summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
-                       usePooledSE=usePooledSE)
-
-  if (useMoreyCorrection) {
-    # Apply correction from Morey (2008) to the standard error and confidence interval
-    # Get the product of the number of conditions of within-S variables
-    nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
-    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
-    ndatac$sd <- ndatac$sd * correctionFactor
-    ndatac$se <- ndatac$se * correctionFactor
-    ndatac$ci <- ndatac$ci * correctionFactor
-  }
-  
-  if (errorBarType == "ci") {
-
-    ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
-    ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
-
-  } else {
-
-    ndatac$ciLower <- datac[,measurevar] - ndatac[,"se"]
-    ndatac$ciUpper <- datac[,measurevar] + ndatac[,"se"]
-
-  }
-
-  # Combine the un-normed means with the normed results
-  merge(datac, ndatac)
-}
+# .summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
+#                              conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, 
+#                              useMoreyCorrection=TRUE) {
+# 
+#   # Get the means from the un-normed data
+#   datac <- summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
+#                       conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType, usePooledSE=usePooledSE)
+#   # Drop all the unused columns (these will be calculated with normed data)
+#   datac$sd <- NULL
+#   datac$se <- NULL
+#   datac$ci <- NULL
+#   datac$ciLower <- NULL
+#   datac$ciUpper <- NULL
+# 
+#   # Norm each subject's data
+#   ndata <- .normDataWithin(data, idvar, measurevar, betweenvars, na.rm, .drop=.drop)
+# 
+#   # This is the name of the new column
+#   measurevar_n <- paste(measurevar, "_norm", sep="")
+# 
+#   # Collapse the normed data - now we can treat between and within vars the same
+#   ndatac <- .summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
+#                        usePooledSE=usePooledSE)
+# 
+#   if (useMoreyCorrection) {
+#     # Apply correction from Morey (2008) to the standard error and confidence interval
+#     # Get the product of the number of conditions of within-S variables
+#     nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
+#     correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
+#     ndatac$sd <- ndatac$sd * correctionFactor
+#     ndatac$se <- ndatac$se * correctionFactor
+#     ndatac$ci <- ndatac$ci * correctionFactor
+#   }
+#   
+#   if (errorBarType == "ci") {
+# 
+#     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
+#     ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
+# 
+#   } else {
+# 
+#     ndatac$ciLower <- datac[,measurevar] - ndatac[,"se"]
+#     ndatac$ciUpper <- datac[,measurevar] + ndatac[,"se"]
+# 
+#   }
+# 
+#   # Combine the un-normed means with the normed results
+#   merge(datac, ndatac)
+# }
 

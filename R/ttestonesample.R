@@ -416,7 +416,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
     group = rep(variable, nrow(dataset))
   )
 
-  summaryStat <- summarySE(
+  summaryStat <- .summarySE(
     dataSubset,
     measurevar    = "dependent",
     groupvars     = "group",

@@ -310,7 +310,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   return(Result)
 }
 
-summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
+.summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
                       errorBarType="ci", usePooledSE=FALSE,
                       dependentName = "", subjectName = "") {
 
@@ -398,13 +398,13 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.i
   return(data)
 }
 
-summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
+.summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, useMoreyCorrection=TRUE,
                             dependentName = .BANOVAdependentName,
                             subjectName = .BANOVAsubjectName) {
 
   # Get the means from the un-normed data
-  datac <- summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
+  datac <- .summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
                      conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType, usePooledSE=usePooledSE,
                      dependentName = dependentName, subjectName = subjectName)
   # Drop all the unused columns (these will be calculated with normed data)
@@ -421,7 +421,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   measurevar_n <- paste(measurevar, "_norm", sep="")
 
   # Collapse the normed data - now we can treat between and within vars the same
-  ndatac <- summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
+  ndatac <- .summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
                       usePooledSE=usePooledSE, dependentName = dependentName, subjectName = subjectName)
 
   # get distinct observations in a way that works for both character and factor/ ordered data
@@ -588,12 +588,12 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
     pair <- ggplot2::scale_x_discrete(labels = c(variable[[1]], variable[[2]]))
     data <- data.frame(id = rep(1:length(dataset[[variable[[1]]]]), 2),
                        dependent = c(dataset[[variable[[1]]]], dataset[[variable[[2]]]]),
-                       groupingVariable = c(rep(paste("1.", variable[[1]], sep = ""), length(dataset[[variable[[1]]]])),
+                       group = c(rep(paste("1.", variable[[1]], sep = ""), length(dataset[[variable[[1]]]])),
                                             rep(paste("2.", variable[[2]], sep = ""), length(dataset[[variable[[2]]]]))),
                        stringsAsFactors = TRUE)
-    summaryStat <- summarySEwithin(data,
+    summaryStat <- .summarySEwithin(data,
                                    measurevar = "dependent",
-                                   withinvars = "groupingVariable",
+                                   withinvars = "group",
                                    idvar = "id",
                                    conf.interval = options[["barPlotCiLevel"]],
                                    na.rm = TRUE,
@@ -602,11 +602,11 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
                                    useMoreyCorrection = options[["applyMoreyCorrectionErrorBarsBarplot"]])
   } else {
     data <- data.frame(dependent = dataset[[variable]],
-                       groupingVariable = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))
+                       group = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))
     data <- na.omit(data)
-    summaryStat <- summarySE(data,
+    summaryStat <- .summarySE(data,
                              measurevar = "dependent",
-                             groupvars = "groupingVariable",
+                             groupvars = "group",
                              conf.interval = options[["barPlotCiLevel"]],
                              na.rm = TRUE,
                              .drop = FALSE,
@@ -631,7 +631,7 @@ summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) +
+  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = group, y = dependent, group = 1)) +
     ggplot2::geom_hline(yintercept = 0, color = "#858585", size = 0.3) +
     ggplot2::geom_bar(stat = "identity", fill = "grey", col = "black", width = .6, position = pd2) +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper), colour = "black", width = 0.2, position = pd) +
