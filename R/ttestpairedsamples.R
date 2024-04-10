@@ -466,6 +466,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     ciLower                = summaryStat[["ciLower"]],
     ciUpper                = summaryStat[["ciUpper"]],
     group                  = summaryStat[["group"]],
+    connectedPoints        = TRUE,
     noXLevelNames          = FALSE
   ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 

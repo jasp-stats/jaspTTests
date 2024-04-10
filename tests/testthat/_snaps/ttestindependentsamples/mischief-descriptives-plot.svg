@@ -33,8 +33,7 @@
 <polyline points='509.41,126.89 569.58,126.89 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <polyline points='539.50,126.89 539.50,312.48 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <polyline points='509.41,312.48 569.58,312.48 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
-<polyline points='238.66,330.23 539.50,219.68 ' style='stroke-width: 1.49; stroke-linecap: butt;' />
-<circle cx='238.66' cy='330.23' r='4.62' style='stroke-width: 0.71; fill: #000000;' />
+<circle cx='238.66' cy='330.23' r='4.62' style='stroke-width: 0.71; fill: #FFFFFF;' />
 <circle cx='539.50' cy='219.68' r='4.62' style='stroke-width: 0.71; fill: #000000;' />
 <line x1='238.34' y1='507.09' x2='539.81' y2='507.09' style='stroke-width: 0.64; stroke-linecap: butt;' />
 <line x1='58.15' y1='485.30' x2='58.15' y2='42.50' style='stroke-width: 0.64; stroke-linecap: butt;' />
