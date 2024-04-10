@@ -406,41 +406,33 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
                        type = c('observations', 'variance', 'infinity'),
                        all.target = variable,
                        observations.amount = c('< 2'))
-  if(!identical(errors, FALSE))
+  if (!isFALSE(errors))
     stop(errors$message)
 
+  dataSubset <- data.frame(
+    dependent = dataset[[variable]],
+    group = rep(variable, nrow(dataset))
+  )
 
-  base_breaks_y <- function(x, options) {
+  summaryStat <- summarySE(
+    dataSubset,
+    measurevar    = "dependent",
+    groupvars     = "group",
+    conf.interval = options[["descriptivesPlotCiLevel"]],
+    na.rm         = TRUE,
+    .drop         = FALSE
+  )
 
-    values <- c(options$testValue, x[, "dependent"] - x[, "ci"],
-                x[, "dependent"] + x[, "ci"])
-    ci.pos <- c(min(values), max(values))
-    b <- pretty(ci.pos)
-    d <- data.frame(x = -Inf, xend = -Inf, y = min(b), yend = max(b))
-    list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend,
-                                                      yend = yend), inherit.aes = FALSE, size = 1),
-         ggplot2::scale_y_continuous(breaks = c(min(b),  options$testValue, max(b))))
-  }
-
-  dataSubset <- data.frame(dependent = dataset[[.v(variable)]],
-                           groupingVariable = rep(variable, length(dataset[[.v(variable)]])))
-
-  ci <- options$descriptivesPlotCi
-  summaryStat <- summarySE(dataSubset, measurevar = "dependent",
-                           groupvars = "groupingVariable",
-                           conf.interval = ci, na.rm = TRUE, .drop = FALSE)
-  testValue <- data.frame(testValue = options$testValue)
-  pd <- ggplot2::position_dodge(0.2)
-  p <- ggplot2::ggplot(summaryStat, ggplot2::aes(x = groupingVariable, y = dependent, group = 1)) +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciLower,  ymax = ciUpper),
-                           colour = "black", width = 0.2, position = pd) +
-    ggplot2::geom_line(position = pd, size = 0.7) +#gives geom_path warning+
-    ggplot2::geom_point(position = pd, size = 4)  +
-    ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed") +
-    ggplot2::ylab(NULL) + ggplot2::xlab(NULL) + base_breaks_y(summaryStat, options)
-  p <- jaspGraphs::themeJasp(p) +
-    ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                   axis.ticks.x = ggplot2::element_blank())
+  p <- jaspGraphs::descriptivesPlot(
+    x                      = summaryStat[["group"]],
+    y                      = summaryStat[["dependent"]],
+    ciLower                = summaryStat[["ciLower"]],
+    ciUpper                = summaryStat[["ciUpper"]],
+    group                  = summaryStat[["group"]],
+    noXLevelNames          = FALSE,
+    horizontalLine         = options[["testValue"]],
+    horizontalLineLineType = "dashed"
+  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
   return(p)
 }
