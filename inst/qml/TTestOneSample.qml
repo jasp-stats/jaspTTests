@@ -100,17 +100,17 @@ Form
 			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
 		}
-
-		Common.BarPlots
-		{
-			framework:	form.framework
-		}
-
 		CheckBox
 		{
 			name: "raincloudPlot"; label: qsTr("Raincloud plots")
 			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
 		}
+		Common.BarPlots
+		{
+			framework:	form.framework
+		}
+
+
 	}
 	RadioButtonGroup
 	{

@@ -104,18 +104,16 @@ Form
 				checked:			true
 			}
 		}
-
-		Common.BarPlots
-		{
-			framework:	form.framework
-			CheckBox	{ name: "applyMoreyCorrectionErrorBarsBarplot";	label: qsTr("Normalize error bars"); checked: true}
-		}
-
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
 		CheckBox
 		{
 			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots")
 			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display")		}
+		}
+		Common.BarPlots
+		{
+			framework:	form.framework
+			CheckBox	{ name: "applyMoreyCorrectionErrorBarsBarplot";	label: qsTr("Normalize error bars"); checked: true}
 		}
 	}
 
