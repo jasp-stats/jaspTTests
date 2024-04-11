@@ -22,15 +22,17 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     dataset <- .ttestReadData(dataset, options, type)
     .ttestCheckErrors(        dataset, options, type)
   }
+
   # Output tables (each calls its own results function)
   .ttestPairedMainTable(  jaspResults, dataset, options, ready, type)
   .ttestPairedNormalTable(jaspResults, dataset, options, ready, type)
+  .ttestQQPlot(jaspResults, dataset, options, ready, type)
   # Descriptives
   vars <- unique(unlist(options$pairs))
   .ttestDescriptivesTable(                        jaspResults, dataset, options, ready, vars)
   .ttestPairedDescriptivesPlot(                   jaspResults, dataset, options, ready)
-  .ttestPairedDescriptivesBarPlot(                jaspResults, dataset, options, ready)
   .ttestPairedDescriptivesRainCloudPlot(          jaspResults, dataset, options, ready)
+  .ttestPairedDescriptivesBarPlot(                jaspResults, dataset, options, ready)
   .ttestPairedDescriptivesRainCloudDifferencePlot(jaspResults, dataset, options, ready)
 
   return()
@@ -412,7 +414,10 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), dependencies = c("descriptivesPlot", "descriptivesPlotCiLevel"))
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), 
+                                        dependencies = c("descriptivesPlot", 
+                                                         "descriptivesPlotCiLevel",
+                                                         "applyMoreyCorrectionErrorBars"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -453,11 +458,11 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     id = c(1:length(c1), 1:length(c2)),
     dependent = c(c1, c2),
     group = factor(c(rep(paste0(pair[[1]]), length(c1)),
-                                rep(paste0(pair[[2]]), length(c2))), levels = pair)
+                     rep(paste0(pair[[2]]), length(c2))), levels = pair)
   )
-
-  summaryStat <- summarySEwithin(data, measurevar = "dependent", withinvars = "group",
-                                 idvar = "id", conf.interval = options[["descriptivesPlotCiLevel"]],
+                                 
+  summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "group",
+                                 idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
@@ -465,87 +470,11 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     y                      = summaryStat[["dependent"]],
     ciLower                = summaryStat[["ciLower"]],
     ciUpper                = summaryStat[["ciUpper"]],
-    group                  = summaryStat[["group"]],
-    connectedPoints        = TRUE,
     noXLevelNames          = FALSE
   ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
   jaspGraphs::themeJasp
   return(p)
-}
-
-.ttestPairedDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["barPlot"]])
-    return()
-  .ttestDescriptivesContainer(jaspResults, options)
-  container <- jaspResults[["ttestDescriptives"]]
-
-  if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
-                                                                               "barPlotCiLevel",
-                                                                               "barPlotErrorType",
-                                                                               "barPlotYAxisFixedToZero"))
-    subcontainer$position <- 6
-    container[["barPlots"]] <- subcontainer
-  } else {
-    subcontainer <- container[["barPlots"]]
-  }
-
-  for (pair in options[["pairs"]]) {
-    title <- paste(pair, collapse = " - ")
-    if (!is.null(subcontainer[[title]]))
-      next
-    descriptivesBarPlot <- createJaspPlot(title = title, width = 480, height = 320)
-    descriptivesBarPlot$dependOn(optionContainsValue = list(pairs = pair))
-    subcontainer[[title]] <- descriptivesBarPlot
-    if (ready) {
-      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, pair))
-      if (isTryError(p))
-        descriptivesBarPlot$setError(.extractErrorMessage(p))
-      else
-        descriptivesBarPlot$plotObject <- p
-    }
-  }
-  return()
-}
-
-.ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$raincloudPlot)
-    return()
-  .ttestDescriptivesContainer(jaspResults, options)
-  container <- jaspResults[["ttestDescriptives"]]
-
-  if (is.null(container[["plotsRainCloud"]])) {
-    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "raincloudPlot")
-    subcontainer$position <- 7
-    container[["plotsRainCloud"]] <- subcontainer
-  } else {
-    subcontainer <- container[["plotsRainCloud"]]
-  }
-
-  if(ready){
-    errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
-    for(pair in options$pairs) {
-      title <- paste(pair, collapse = " - ")
-      if(!is.null(subcontainer[[title]]))
-        next
-      descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
-      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
-      subcontainer[[title]] <- descriptivesPlotRainCloud
-      if(!isFALSE(errors[[title]])) {
-        descriptivesPlotRainCloud$setError(errors[[title]]$message)
-        next
-      }
-      groups  <- rep(pair, each = nrow(dataset))
-      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
-      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
-      if(isTryError(p))
-        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
-      else
-        descriptivesPlotRainCloud$plotObject <- p
-    }
-  }
-  return()
 }
 
 .ttestPairedDescriptivesRainCloudDifferencePlot <- function(jaspResults, dataset, options, ready) {
@@ -556,7 +485,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 
   if (is.null(container[["plotsRainCloudDifference"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Difference Plots"), dependencies = c("differenceRaincloudPlot", "differenceRaincloudPlotHorizontal"))
-    subcontainer$position <- 8
+    subcontainer$position <- 7
     container[["plotsRainCloudDifference"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloudDifference"]]
@@ -621,147 +550,84 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   return(ans)
 }
 
+.ttestPairedDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
+  if(!options$raincloudPlot)
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  
+  if (is.null(container[["plotsRainCloud"]])) {
+    subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "raincloudPlot")
+    subcontainer$position <- 6
+    container[["plotsRainCloud"]] <- subcontainer
+  } else {
+    subcontainer <- container[["plotsRainCloud"]]
+  }
+  
+  if(ready){
+    errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
+    for(pair in options$pairs) {
+      title <- paste(pair, collapse = " - ")
+      if(!is.null(subcontainer[[title]]))
+        next
+      descriptivesPlotRainCloud <- createJaspPlot(title = title, width = 480, height = 320)
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(pairs = pair))
+      subcontainer[[title]] <- descriptivesPlotRainCloud
+      if(!isFALSE(errors[[title]])) {
+        descriptivesPlotRainCloud$setError(errors[[title]]$message)
+        next
+      }
+      groups  <- rep(pair, each = nrow(dataset))
+      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
+      p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
+      if(isTryError(p))
+        descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
+      else
+        descriptivesPlotRainCloud$plotObject <- p
+    }
+  }
+  return()
+}
+
+.ttestPairedDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
+  if (!options[["barPlot"]])
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  
+  if (is.null(container[["barPlots"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
+                                                                               "barPlotCiLevel",
+                                                                               "barPlotErrorType",
+                                                                               "barPlotYAxisFixedToZero",
+                                                                               "applyMoreyCorrectionErrorBarsBarplot"))
+    subcontainer$position <- 8
+    container[["barPlots"]] <- subcontainer
+  } else {
+    subcontainer <- container[["barPlots"]]
+  }
+  
+  for (pair in options[["pairs"]]) {
+    title <- paste(pair, collapse = " - ")
+    if (!is.null(subcontainer[[title]]))
+      next
+    descriptivesBarPlot <- createJaspPlot(title = title, width = 480, height = 320)
+    descriptivesBarPlot$dependOn(optionContainsValue = list(pairs = pair))
+    subcontainer[[title]] <- descriptivesBarPlot
+    if (ready) {
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, pair))
+      if (isTryError(p))
+        descriptivesBarPlot$setError(.extractErrorMessage(p))
+      else
+        descriptivesBarPlot$plotObject <- p
+    }
+  }
+  return()
+}
+
 .ttestPairedGetIndexOfFirstNonEmptyPair <- function(pairs) {
   for (i in seq_along(pairs))
     if (pairs[[i]][1L] != "" && pairs[[i]][[2L]] != "")
       return(i)
   return(0L)
-}
-
-.summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                             conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE) {
-
-  # Get the means from the un-normed data
-  datac <- .summarySE(data, measurevar, groupvars=c(betweenvars, withinvars), na.rm=na.rm,
-                      conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType, usePooledSE=usePooledSE)
-  # Drop all the unused columns (these will be calculated with normed data)
-  datac$sd <- NULL
-  datac$se <- NULL
-  datac$ci <- NULL
-  datac$ciLower <- NULL
-  datac$ciUpper <- NULL
-
-  # Norm each subject's data
-  ndata <- .normDataWithin(data, idvar, measurevar, betweenvars, na.rm, .drop=.drop)
-
-  # This is the name of the new column
-  measurevar_n <- paste(measurevar, "_norm", sep="")
-
-  # Collapse the normed data - now we can treat between and within vars the same
-  ndatac <- .summarySE(ndata, measurevar_n, groupvars=c(betweenvars, withinvars), na.rm=na.rm, conf.interval=conf.interval, .drop=.drop, errorBarType=errorBarType,
-                       usePooledSE=usePooledSE)
-
-  # Apply correction from Morey (2008) to the standard error and confidence interval
-  # Get the product of the number of conditions of within-S variables
-  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=nlevels, FUN.VALUE=numeric(1)))
-  correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
-
-  # Apply the correction factor
-  ndatac$sd <- ndatac$sd * correctionFactor
-  ndatac$se <- ndatac$se * correctionFactor
-  ndatac$ci <- ndatac$ci * correctionFactor
-
-  if (errorBarType == "ci") {
-
-    ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
-    ndatac$ciUpper <- datac[,measurevar] + ndatac[,"ci"]
-
-  } else {
-
-    ndatac$ciLower <- datac[,measurevar] - ndatac[,"se"]
-    ndatac$ciUpper <- datac[,measurevar] + ndatac[,"se"]
-
-  }
-
-  # Combine the un-normed means with the normed results
-  merge(datac, ndatac)
-}
-
-.summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE, conf.interval=.95, .drop=TRUE,
-                       errorBarType="ci", usePooledSE=FALSE) {
-
-  # New version of length which can handle NA's: if na.rm==T, don't count them
-  length2 <- function (x, na.rm=FALSE) {
-    if (na.rm) {
-      sum(!is.na(x))
-    } else {
-      length(x)
-    }
-  }
-
-  # This does the summary. For each group's data frame, return a vector with
-  # N, mean, and sd
-  # First aggregate over unused RM factors, if desired:
-  if (usePooledSE && measurevar == .BANOVAdependentName) {
-
-    data <- plyr::ddply(data, c(.BANOVAsubjectName, groupvars), plyr::summarise, dependent = mean(JaspColumn_.dependent._Encoded))
-    names(data)[which(names(data) == "dependent")] <- measurevar
-
-  } else if (usePooledSE && measurevar == paste0(.BANOVAdependentName, "_norm")) {
-
-    data <- plyr::ddply(data, c(.BANOVAsubjectName, groupvars), plyr::summarise, dependent = mean(JaspColumn_.dependent._Encoded_norm))
-    names(data)[which(names(data) == "dependent")] <- measurevar
-  }
-
-  datac <- plyr::ddply(data, groupvars, .drop=.drop,
-                       .fun = function(xx, col) {
-                         c(N    = length2(xx[[col]], na.rm=na.rm),
-                           mean = mean   (xx[[col]], na.rm=na.rm),
-                           sd   = sd     (xx[[col]], na.rm=na.rm)
-                         )
-                       },
-                       measurevar
-  )
-
-  # Rename the "mean" column
-  datac <- plyr::rename(datac, c("mean" = measurevar))
-
-  datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
-
-  # Confidence interval multiplier for standard error
-  # Calculate t-statistic for confidence interval:
-  # e.g., if conf.interval is .95, use .975 (above/below), and use df=N-1
-  ciMult <- qt(conf.interval/2 + .5, datac$N-1)
-  datac$ci <- datac$se * ciMult
-
-  if (errorBarType == "ci") {
-
-    datac$ciLower <- datac[,measurevar] - datac[,"ci"]
-    datac$ciUpper <- datac[,measurevar] + datac[,"ci"]
-
-  } else {
-
-    datac$ciLower <- datac[,measurevar] - datac[,"se"]
-    datac$ciUpper <- datac[,measurevar] + datac[,"se"]
-
-  }
-
-  return(datac)
-}
-
-.normDataWithin <- function(data=NULL, idvar, measurevar, betweenvars=NULL, na.rm=FALSE, .drop=TRUE) {
-
-  # Measure var on left, idvar + between vars on right of formula.
-  data.subjMean <- plyr::ddply(data, c(idvar, betweenvars), .drop=.drop,
-                               .fun = function(xx, col, na.rm) {
-                                 c(subjMean = mean(xx[,col], na.rm=na.rm))
-                               },
-                               measurevar,
-                               na.rm
-  )
-
-
-
-  # Put the subject means with original data
-  data <- base::merge(data, data.subjMean)
-
-  # Get the normalized data in a new column
-  measureNormedVar <- paste(measurevar, "_norm", sep="")
-  data[,measureNormedVar] <- data[,measurevar] - data[,"subjMean"] +
-    mean(data[,measurevar], na.rm=na.rm)
-
-  # Remove this subject mean column
-  data$subjMean <- NULL
-
-  return(data)
 }

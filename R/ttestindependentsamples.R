@@ -26,12 +26,13 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   # Output tables (each calls its own results function)
   .ttestIndependentMainTable(  jaspResults, dataset, options, ready, type)
   .ttestIndependentNormalTable(jaspResults, dataset, options, ready, type)
+  .ttestQQPlot(                jaspResults, dataset, options, ready, type)
   .ttestIndependentEqVarTable( jaspResults, dataset, options, ready, type)
   # Descriptives
   .ttestIndependentDescriptivesTable(        jaspResults, dataset, options, ready)
   .ttestIndependentDescriptivesPlot(         jaspResults, dataset, options, ready)
-  .ttestIndependentDescriptivesBarPlot(      jaspResults, dataset, options, ready)
   .ttestIndependentDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
+  .ttestIndependentDescriptivesBarPlot(      jaspResults, dataset, options, ready)
 
   return()
 }
@@ -631,7 +632,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     stop(errors$message)
 
   dataset <- na.omit(dataset[, c(groups, variable)])
-  summaryStat <- summarySE(
+  summaryStat <- .summarySE(
     dataset,
     measurevar    = variable,
     groupvars     = groups,
@@ -657,39 +658,6 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   return(p)
 }
 
-.ttestIndependentDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
-  if (!options[["barPlot"]])
-    return()
-  .ttestDescriptivesContainer(jaspResults, options)
-  container <- jaspResults[["ttestDescriptives"]]
-  if (is.null(container[["barPlots"]])) {
-    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
-                                                                               "barPlotCiLevel",
-                                                                               "barPlotErrorType",
-                                                                               "barPlotYAxisFixedToZero"))
-    subcontainer$position <- 6
-    container[["barPlots"]] <- subcontainer
-  } else {
-    subcontainer <- container[["barPlots"]]
-  }
-
-  for (variable in options[["dependent"]]) {
-    if (!is.null(subcontainer[[variable]]))
-      next
-    descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
-    descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
-    subcontainer[[variable]] <- descriptivesBarPlot
-    if (ready) {
-      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
-      if (isTryError(p))
-        descriptivesBarPlot$setError(.extractErrorMessage(p))
-      else
-        descriptivesBarPlot$plotObject <- p
-    }
-  }
-  return()
-}
-
 .ttestIndependentDescriptivesRainCloudPlot <- function(jaspResults, dataset, options, ready) {
   if(!options$raincloudPlot)
     return()
@@ -698,7 +666,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = c("raincloudPlot", "raincloudPlotHorizontal"))
-    subcontainer$position <- 7
+    subcontainer$position <- 6
     container[["plotsRainCloud"]] <- subcontainer
   } else {
     subcontainer <- container[["plotsRainCloud"]]
@@ -726,3 +694,37 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   }
   return()
 }
+
+.ttestIndependentDescriptivesBarPlot <- function(jaspResults, dataset, options, ready) {
+  if (!options[["barPlot"]])
+    return()
+  .ttestDescriptivesContainer(jaspResults, options)
+  container <- jaspResults[["ttestDescriptives"]]
+  if (is.null(container[["barPlots"]])) {
+    subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
+                                                                               "barPlotCiLevel",
+                                                                               "barPlotErrorType",
+                                                                               "barPlotYAxisFixedToZero"))
+    subcontainer$position <- 7
+    container[["barPlots"]] <- subcontainer
+  } else {
+    subcontainer <- container[["barPlots"]]
+  }
+  
+  for (variable in options[["dependent"]]) {
+    if (!is.null(subcontainer[[variable]]))
+      next
+    descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
+    descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
+    subcontainer[[variable]] <- descriptivesBarPlot
+    if (ready) {
+      p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
+      if (isTryError(p))
+        descriptivesBarPlot$setError(.extractErrorMessage(p))
+      else
+        descriptivesBarPlot$plotObject <- p
+    }
+  }
+  return()
+}
+

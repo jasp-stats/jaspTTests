@@ -70,23 +70,6 @@ Form
 			}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
-		CheckBox
-		{
-			name: "descriptivesPlot";						label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
-		}
-
-		Common.BarPlots
-		{
-			framework:	form.framework
-		}
-
-		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
-		CheckBox
-		{
-			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots")
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display")		}
-		}
 		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
 	}
 
@@ -102,7 +85,36 @@ Form
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTest";		label: qsTr("Normality") }
+		CheckBox { name: "normalityTest";	label: qsTr("Normality") }
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot") }
+
+	}
+	
+	Group
+	{
+		title: qsTr("Plots")
+		CheckBox
+		{
+			name: "descriptivesPlot";						label: qsTr("Descriptives plots")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
+			CheckBox 
+			{ 
+				name: "applyMoreyCorrectionErrorBars"
+				label: qsTr("Normalize error bars")
+				checked:			true
+			}
+		}
+		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
+		CheckBox
+		{
+			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots")
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display")		}
+		}
+		Common.BarPlots
+		{
+			framework:	form.framework
+			CheckBox	{ name: "applyMoreyCorrectionErrorBarsBarplot";	label: qsTr("Normalize error bars"); checked: true}
+		}
 	}
 
 	RadioButtonGroup

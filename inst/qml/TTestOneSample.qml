@@ -72,22 +72,6 @@ Form
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") }
-		CheckBox
-		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
-		}
-
-		Common.BarPlots
-		{
-			framework:	form.framework
-		}
-
-		CheckBox
-		{
-			name: "raincloudPlot"; label: qsTr("Raincloud plots")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
-		}
 		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}
 
@@ -104,8 +88,30 @@ Form
 	{
 		title: qsTr("Assumption checks")
 		CheckBox { name: "normalityTest"; label: qsTr("Normality") }
-	}
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot") }
 
+	}
+	Group
+	{
+		title: qsTr("Plots")
+		Layout.rowSpan: 2
+		CheckBox
+		{
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
+		}
+		CheckBox
+		{
+			name: "raincloudPlot"; label: qsTr("Raincloud plots")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
+		}
+		Common.BarPlots
+		{
+			framework:	form.framework
+		}
+
+
+	}
 	RadioButtonGroup
 	{
 		name: "naAction"

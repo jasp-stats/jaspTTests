@@ -33,10 +33,12 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 - Descriptives: Sample size, sample mean, sample standard deviation, standard error of the mean for each measure. 
 - Descriptive plots: Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs).
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.
+  - Normalize error bars: In order to get accurate confidence intervals and standard errors, the data are normalized by subtracting the appropriate participantʹs mean performance from each observation, and then adding the grand mean score to every observation. The variances of the resulting normalized values in each condition, and thus the size of the bars, no longer depend on the participant effects and are therefore a more accurate representation of the experimental manipulation. See Morey (2008) for a thorough discussion of this procedure.
 - Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs). 
   - Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
   - Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.
   - Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.
+  - Normalize error bars: Same as for descriptive plots. 
 - Raincloud plots: Displays the individual cases (colored dots), box plots, and densities for each measure. 
 - Raincloud difference plots: Displays a raincloud plot of the differences between the two measures.
   - Horizontal display: Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.
