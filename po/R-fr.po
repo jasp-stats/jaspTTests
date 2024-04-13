@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2024-03-30 02:33\n"
-"PO-Revision-Date: 2024-02-19 17:02+0000\n"
+"PO-Revision-Date: 2024-04-07 21:01+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "fr/>\n"
@@ -104,7 +104,7 @@ msgid "Running robustness check %1$d / %2$d"
 msgstr "Vérification de la robustesse %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr "max BF%s"
+msgstr "max FB%s"
 
 msgid "user prior"
 msgstr "utilisateur précédent"
@@ -187,7 +187,7 @@ msgstr ""
 "%.0f itérations."
 
 msgid "error %%"
-msgstr "%% d'erreur"
+msgstr "erreur %%"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
@@ -265,7 +265,6 @@ msgstr "Statistiques"
 msgid "Test"
 msgstr "Test"
 
-#, fuzzy
 msgid "df"
 msgstr "ddl"
 
