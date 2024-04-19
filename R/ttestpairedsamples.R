@@ -122,6 +122,9 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   if (options$alternative == "greater" || options$alternative == "less")
     ttest$addFootnote(.ttestPairedGetHypothesisFootnote(options[["alternative"]], options[["pairs"]]))
 
+  if (options[["effectSizeCorrection"]]) {
+    ttest$addFootnote(gettext("Cohen's d corrected for correlation between observations."))
+  }
   jaspResults[["ttest"]] <- ttest
 
   if (ready)
@@ -251,7 +254,13 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     res <- stats::t.test(c1, c2, paired = TRUE, conf.level = optionsList$percentConfidenceMeanDiff,
                          alternative = direction)
     df  <- ifelse(is.null(res$parameter), "", as.numeric(res$parameter))
-    d   <- mean(c1 - c2) / sd(c1 - c2)
+    
+    if (options[["effectSizeCorrection"]]) {
+      thisCor <- cor(c1, c2)
+      d <- sqrt(2 * (1-thisCor) / n) * res[["statistic"]]
+    } else {
+      d   <- mean(c1 - c2) / sd(c1 - c2)
+    }
 
     #compute effect size SE
     effectSizeVar <- ((1/n)+(as.numeric(d)^2 / (2*n))) * (2*(1-cor(c1,c2)))

@@ -68,6 +68,10 @@ Form
 				childrenOnSameRow: true
 				CIField { name: "effectSizeCiLevel" }
 			}
+			CheckBox
+			{				
+				name: "effectSizeCorrection";	label: qsTr("Correct for correlation"); checked: true
+			}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
 		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
