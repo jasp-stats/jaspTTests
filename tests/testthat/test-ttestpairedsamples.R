@@ -13,7 +13,6 @@ test_that("Main table results match for one pair * multiple tests", {
   options$effectSize <- TRUE
   options$effectSizeCi <- TRUE
   options$vovkSellke <- TRUE
-  options$effectSizeCorrection <- FALSE
   results <- jaspTools::runAnalysis("TTestPairedSamples", "test.csv", options)
   table <- results[["results"]][["ttest"]][["data"]]
   jaspTools::expect_equal_tables(table,

@@ -70,7 +70,7 @@ Form
 			}
 			CheckBox
 			{				
-				name: "effectSizeCorrection";	label: qsTr("Correct for correlation"); checked: true
+				name: "effectSizeCorrection";	label: qsTr("Correct for correlation")
 			}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
