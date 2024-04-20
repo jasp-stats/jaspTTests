@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-03-30 02:33\n"
+"POT-Creation-Date: 2024-04-20 02:34\n"
 "PO-Revision-Date: 2023-12-16 02:35+0000\n"
 "Last-Translator: Ginger Shu-Ying Yeh <gingershuying@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -24,6 +24,9 @@ msgid ""
 "the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</"
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
+msgstr ""
+
+msgid "Q-Q Plots"
 msgstr ""
 
 msgid "Please provide another variable."

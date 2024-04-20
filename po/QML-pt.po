@@ -669,3 +669,34 @@ msgstr ""
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr "Diagramas"
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "Diagramas"
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr "Diagramas"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normalize error bars"
+msgstr ""

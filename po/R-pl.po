@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-03-30 02:33\n"
+"POT-Creation-Date: 2024-04-20 02:34\n"
 "PO-Revision-Date: 2024-04-09 13:34+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -30,6 +30,10 @@ msgstr ""
 "wartości <em>p</em> maksymalne możliwe szanse na korzyść H%1$s nad H%2$s "
 "wynoszą 1/(-e <em>p</em> log(<em>p</em>)) dla <em>p</em> %3$s .37 (Sellke, "
 "Bayarri i Berger, 2001)."
+
+#, fuzzy
+msgid "Q-Q Plots"
+msgstr "Wykresy słupkowe"
 
 msgid "Please provide another variable."
 msgstr "Proszę podać kolejną zmienną."

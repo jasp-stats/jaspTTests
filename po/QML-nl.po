@@ -667,3 +667,34 @@ msgstr "Gevallen per variabele uitsluiten"
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normalize error bars"
+msgstr ""

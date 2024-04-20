@@ -666,3 +666,34 @@ msgstr "変数ごとにケースを除外"
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "マン・ホイットニー"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr "プロット"
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "プロット"
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr "プロット"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normalize error bars"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-03-30 02:33\n"
+"POT-Creation-Date: 2024-04-20 02:34\n"
 "PO-Revision-Date: 2024-04-07 21:01+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -29,6 +29,10 @@ msgstr ""
 "bilatérale, les chances maximales en faveur de H%1$s sur H%2$s égalent 1/(-e "
 "<em>p</em> log(<em>p</em>)) pour <em>p</em> %3$s .37 (Sellke, Bayarri, & "
 "Berger, 2001)."
+
+#, fuzzy
+msgid "Q-Q Plots"
+msgstr "Graphiques descriptifs"
 
 msgid "Please provide another variable."
 msgstr "Veuillez fournir une autre variable."

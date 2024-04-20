@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2024-03-30 02:33\n"
+"POT-Creation-Date: 2024-04-20 02:34\n"
 "PO-Revision-Date: 2024-03-09 02:32+0000\n"
 "Last-Translator: Fikret Er <fikret.alara@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -25,6 +25,10 @@ msgid ""
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
+
+#, fuzzy
+msgid "Q-Q Plots"
+msgstr "Çubuk Grafikleri"
 
 msgid "Please provide another variable."
 msgstr "Lütfen başka bir değişken sağlayın."

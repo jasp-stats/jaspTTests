@@ -666,3 +666,34 @@ msgstr "按每个变量排除个案"
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney 检验"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr "绘图"
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "绘图"
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr "绘图"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normalize error bars"
+msgstr ""

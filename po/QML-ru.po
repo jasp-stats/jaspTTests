@@ -708,3 +708,34 @@ msgstr "Исключить случаи для каждой переменной
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Манна-Уитни"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr "Графики"
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "Графики"
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr "Графики"
+
+msgctxt "TTestPairedSamples|"
+msgid "Normalize error bars"
+msgstr ""

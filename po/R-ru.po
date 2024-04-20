@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-03-30 02:33\n"
+"POT-Creation-Date: 2024-04-20 02:34\n"
 "PO-Revision-Date: 2023-06-24 02:51+0000\n"
 "Last-Translator: Borisov Igor Borisovich <borisov_i@pimunn.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -30,6 +30,10 @@ msgstr ""
 "<em>p</em>-значении, максимально возможные шансы в пользу H%1$s над H%2$s "
 "равно 1/(-e <em>p</em> log(<em>p</em>)) для <em>p</em> %3$s 0,37 (Sellke, "
 "Bayarri, & Berger, 2001 )."
+
+#, fuzzy
+msgid "Q-Q Plots"
+msgstr "Столбчатые диаграммы"
 
 msgid "Please provide another variable."
 msgstr "Укажите другую переменную."
