@@ -235,10 +235,11 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
         row[[testStat]] <- NaN
         table$addFootnote(errorMessage, colNames = testStat, rowNames = rowName)
       }
-
+      if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["lowerCIeffectSize"]]))))
+        table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
+      
       if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
         table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
-      
       table$addRows(row, rowNames = rowName)
     }
   }
@@ -274,7 +275,8 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
 
     effectSizeSe <- tanh(mrSE)
-
+    if (confIntEffSize[1] == confIntEffSize[2]) confIntEffSize <- c(NA, NA)
+    
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
                           "mu" = options[["testValue"]], "sigma.x" = options[["zTestSd"]],
