@@ -104,13 +104,13 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   if (optionsList$wantsDifference) {
     ttest$addColumnInfo(name = "m", title = nameOfLocationParameter, type = "number")
 
-    if (optionsList$wantsStudents || optionsList$wantsZtest || optionsList$wantsWilcox) {
+    if (sum(optionsList$wantsStudents, optionsList$wantsZtest, optionsList$wantsWilcox) > 1) {
       tzNote <- wNote <- NULL
 
-      if (optionsList$wantsStudents || optionsList$wantsZtest)
+      if ((optionsList$wantsStudents || optionsList$wantsZtest) && optionsList$wantsWilcox)
         tzNote <- gettextf("For the %s, location difference estimate is given by the sample mean difference <em>d</em>.", testInNote)
 
-      if (optionsList$wantsWilcox)
+      if (optionsList$wantsWilcox && (optionsList$wantsStudents || optionsList$wantsZtest))
         wNote <- gettext("For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate.")
 
       ttest$addFootnote(paste(tzNote, wNote))
@@ -126,16 +126,16 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   if (optionsList$wantsEffect) {
     ttest$addColumnInfo(name = "d",            title = nameOfEffectSize,                      type = "number")
     ttest$addColumnInfo(name = "effectSizeSe", title = gettextf("SE %1$s", nameOfEffectSize), type = "number")
-    if (optionsList$wantsStudents || optionsList$wantsWilcox || optionsList$wantsZtest) {
+    if (sum(optionsList$wantsStudents, optionsList$wantsWilcox, optionsList$wantsZtest) > 1) {
       tNote <- wNote <- zNote <- NULL
 
-      if (optionsList$wantsStudents)
+      if (optionsList$wantsStudents && (optionsList$wantsZtest || optionsList$wantsWilcox))
         tNote <- gettext("For the Student t-test, effect size is given by Cohen's <em>d</em>.")
 
-      if (optionsList$wantsWilcox)
+      if (optionsList$wantsWilcox && (optionsList$wantsZtest || optionsList$wantsStudents))
         wNote <- gettext("For the Wilcoxon test, effect size is given by the matched rank biserial correlation.")
 
-      if (optionsList$wantsZtest)
+      if (optionsList$wantsZtest && (optionsList$wantsStudents || optionsList$wantsWilcox))
         zNote <- gettext("For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation).")
 
       ttest$addFootnote(paste(tNote, wNote, zNote))
@@ -235,7 +235,11 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
         row[[testStat]] <- NaN
         table$addFootnote(errorMessage, colNames = testStat, rowNames = rowName)
       }
-
+      if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["lowerCIeffectSize"]]))))
+        table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
+      
+      if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
+        table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
       table$addRows(row, rowNames = rowName)
     }
   }
@@ -248,9 +252,11 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
                       "less"    ="less")
   dat <- na.omit(dataset[[ .v(variable) ]])
   n   <- length(dat)
+  usedConfLevel <- options[["meanDifferenceCiLevel"]]
   if (test == "Wilcoxon") {
     tempResult <- stats::wilcox.test(dat, alternative = direction, mu = options[["testValue"]],
                                      conf.level = optionsList[["percentConfidenceMeanDiff"]], conf.int = TRUE)
+    usedConfLevel <- attr(tempResult$conf.int, "conf.level")
     df   <- ifelse(is.null(tempResult[["parameter"]]), "", as.numeric(tempResult[["parameter"]]))
     nd   <- sum(dat != options[["testValue"]])
     maxw <- (nd * (nd + 1)) / 2
@@ -269,12 +275,13 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       confIntEffSize <- sort(c(tanh(zmbiss + qnorm((1-optionsList[["percentConfidenceEffSize"]]))*mrSE), Inf))
 
     effectSizeSe <- tanh(mrSE)
-
+    if (confIntEffSize[1] == confIntEffSize[2]) confIntEffSize <- c(NA, NA)
+    
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
                           "mu" = options[["testValue"]], "sigma.x" = options[["zTestSd"]],
                           "ciValueMeanDiff"=optionsList[["percentConfidenceMeanDiff"]],
-                          "ciValueESMeanDiff"=options[["effectSizeCiLevel"]])
+                          "ciValueESMeanDiff"=optionsList[["percentConfidenceEffSize"]])
 
     df <- ""
     d  <- tempResult[["d"]]
@@ -337,7 +344,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   result <- list(df = df, p = p, m = m, d = d,
                  lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
                  lowerCIeffectSize = ciLowEffSize, upperCIeffectSize = ciUpEffSize,
-                 effectSizeSe = effectSizeSe)
+                 effectSizeSe = effectSizeSe, usedConfLevel = usedConfLevel)
   result[[testStat]] <- stat
 
   if (options[["vovkSellke"]])
