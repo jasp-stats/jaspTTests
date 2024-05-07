@@ -2359,6 +2359,9 @@
       }
       groups  <- rep(pair, each = nrow(dataset))
       subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+      missingIndex <- tapply(subData[["dependent"]], subData[["groups"]], is.na) # apply listwise deletion
+      missingIndex <- apply(do.call(cbind, missingIndex), 1, any)
+      subData <- subData[rep(!missingIndex, 2), ]
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", "", "", addLines = TRUE, horiz = FALSE, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
