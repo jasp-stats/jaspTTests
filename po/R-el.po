@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2024-04-20 02:34\n"
-"PO-Revision-Date: 2023-04-23 23:04+0000\n"
-"Last-Translator: Vaitsa Giannouli <giannouli.vaitsa@ac.eap.gr>\n"
+"PO-Revision-Date: 2024-05-04 13:38+0000\n"
+"Last-Translator: Γιώργος Καβρός <gior.k79@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "el/>\n"
 "Language: el\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Έλεγχοι υποθέσεων"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Περιγραφές"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -27,28 +27,28 @@ msgid ""
 msgstr ""
 
 msgid "Q-Q Plots"
-msgstr ""
+msgstr "Οικόπεδα Q-Q"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Δώστε μια άλλη μεταβλητή."
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr ""
+msgstr "Οι μεταβλητές %1$s και %2$s είναι ίδιες!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Περιγραφικά Οικόπεδα"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Οικόπεδα μπαρ"
 
 msgid "Group"
-msgstr ""
+msgstr "ομάδα"
 
 msgid "N"
-msgstr ""
+msgstr "Ν"
 
 msgid "Mean"
-msgstr ""
+msgstr "μέσος"
 
 msgid "SD"
 msgstr "Τυπική απόκλιση (SD)"
@@ -57,41 +57,45 @@ msgid "SE"
 msgstr "Τυπικό Σφάλμα (SE)"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Συντελεστής διακύμανσης"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Αξιόπιστο διάστημα"
 
 msgid "Lower"
-msgstr ""
+msgstr "Πιο χαμηλα"
 
 msgid "Upper"
-msgstr ""
+msgstr "Ανώτερος"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Συμπερασματικά Οικόπεδα"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Προηγούμενα και Μεταγενέστερα"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Έλεγχος ευρωστίας παράγοντα Bayes"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Διαδοχική Ανάλυση"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
 msgstr ""
+"Τα οικόπεδα ελέγχου ευρωστίας του παράγοντα Bayes δεν υποστηρίζονται προς το "
+"παρόν για ενημερωμένη συγκατάθεση."
 
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
 "informed prior."
 msgstr ""
+"Επί του παρόντος, δεν υποστηρίζεται γραφική παράσταση ελέγχου ευρωστίας "
+"διαδοχικής ανάλυσης για προηγούμενη ενημέρωση."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "Αναμενόταν αριθμητική ή χαρακτήρων rscale, αλλά έλαβε %s."
 
 msgid "Running robustness check %1$d / %2$d"
 msgstr ""
@@ -124,7 +128,7 @@ msgid "Running sequential analysis %1$d / %2$d"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "ν"
 
 msgid "Posterior"
 msgstr ""

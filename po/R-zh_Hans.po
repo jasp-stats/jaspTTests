@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2024-04-20 02:34\n"
-"PO-Revision-Date: 2023-09-23 01:59+0000\n"
-"Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
+"PO-Revision-Date: 2024-05-06 03:07+0000\n"
+"Last-Translator: Cochrane <cunyikang@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 "X-Language: zh_Hans\n"
 
 msgid "Assumption Checks"
@@ -31,9 +31,8 @@ msgstr ""
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 
-#, fuzzy
 msgid "Q-Q Plots"
-msgstr "条形图"
+msgstr "Q-Q 图"
 
 msgid "Please provide another variable."
 msgstr "请提供其他变量。"
@@ -60,7 +59,7 @@ msgid "SD"
 msgstr "标准差"
 
 msgid "SE"
-msgstr "SE"
+msgstr "标准误"
 
 msgid "Coefficient of variation"
 msgstr "变异系数"
@@ -232,7 +231,7 @@ msgid "Mann-Whitney U test."
 msgstr "曼-惠特尼U检验。"
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
 msgstr "Welch t检验"
@@ -370,12 +369,11 @@ msgstr "F统计量无法计算"
 msgid "Group Descriptives"
 msgstr "分组描述统计"
 
-#, fuzzy
 msgid "Mean Rank"
-msgstr "均值"
+msgstr "平均秩"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "求和秩"
 
 msgid "One Sample T-Test"
 msgstr "单样本T检验"
