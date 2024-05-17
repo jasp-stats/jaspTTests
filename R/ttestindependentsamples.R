@@ -297,7 +297,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   if (test == "Mann-Whitney") {
     r <- stats::wilcox.test(f, data = dataset,
                             alternative = direction,
-                            conf.int = TRUE, conf.level = ciMeanDiff, paired = FALSE)
+                            conf.int = TRUE, conf.level = ciMeanDiff)
     df   <- ""
     sed  <- ""
     stat <- as.numeric(r$statistic)
@@ -318,7 +318,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     effectSizeSe <- tanh(rankBisSE)
   } else {
     r <- stats::t.test(f, data = dataset, alternative = direction,
-                       var.equal = test != "Welch", conf.level = ciMeanDiff, paired = FALSE)
+                       var.equal = test != "Welch", conf.level = ciMeanDiff)
 
     df   <- as.numeric(r$parameter)
     m    <- as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])
