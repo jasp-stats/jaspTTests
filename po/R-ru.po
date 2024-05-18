@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-04-20 02:34\n"
+"POT-Creation-Date: 2024-05-18 02:37\n"
 "PO-Revision-Date: 2023-06-24 02:51+0000\n"
 "Last-Translator: Borisov Igor Borisovich <borisov_i@pimunn.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -508,6 +508,15 @@ msgstr ""
 "Для критерия Уилкоксона альтернативная гипотеза указывает, что медиана "
 "составляет %1$s %2$s."
 
+msgid ""
+"CI could not be computed for effect size, due to low sample size and/or "
+"extreme effect size."
+msgstr ""
+
+msgid ""
+"Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
 msgid "Paired Samples T-Test"
 msgstr "T-критерий для зависимых групп"
 
@@ -531,6 +540,9 @@ msgstr ""
 "Для t-критерия Стьюдента размер эффекта определяется мерой <em>d</em> Коэна. "
 "Для критерия Уилкоксона размер эффекта определяется ранговой бисериальной "
 "корреляцией."
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr ""
 
 #, fuzzy
 msgid ""

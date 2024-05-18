@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
-"POT-Creation-Date: 2024-04-20 02:34\n"
+"POT-Creation-Date: 2024-05-18 02:37\n"
 "PO-Revision-Date: 2024-04-11 15:17+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -467,6 +467,15 @@ msgid ""
 "is %1$s %2$s."
 msgstr "Wilcoxon 検定では、対立仮説は中央値が %1$s %2$s であるとしています。"
 
+msgid ""
+"CI could not be computed for effect size, due to low sample size and/or "
+"extreme effect size."
+msgstr ""
+
+msgid ""
+"Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
 msgid "Paired Samples T-Test"
 msgstr "対応のあるサンプルのt検定"
 
@@ -489,6 +498,9 @@ msgstr ""
 "スチューデントのt検定の場合、効果量はコーエンの<em> d </em>によって与えられま"
 "す。ウィルコクソン検定の場合、効果量は、一致したランクのバイシリアル相関に"
 "よって与えられます。"
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr ""
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "

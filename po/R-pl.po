@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-04-20 02:34\n"
+"POT-Creation-Date: 2024-05-18 02:37\n"
 "PO-Revision-Date: 2024-05-07 10:00+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -477,6 +477,15 @@ msgstr ""
 "W przypadku testu Wilcoxona hipoteza alternatywna wskazuje, że mediana jest "
 "%1$s %2$s."
 
+msgid ""
+"CI could not be computed for effect size, due to low sample size and/or "
+"extreme effect size."
+msgstr ""
+
+msgid ""
+"Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
 msgid "Paired Samples T-Test"
 msgstr "Test t dla prób zależnych"
 
@@ -499,6 +508,9 @@ msgstr ""
 "Dla testu t Studenta wielkość efektu jest określona przez <em>d</em> Cohena. "
 "Dla testu Wilcoxona wielkość efektu jest określona przez dopasowaną "
 "korelację rangowo-dwuseryjną."
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr ""
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "

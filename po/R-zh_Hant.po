@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-04-20 02:34\n"
+"POT-Creation-Date: 2024-05-18 02:37\n"
 "PO-Revision-Date: 2023-12-16 02:35+0000\n"
 "Last-Translator: Ginger Shu-Ying Yeh <gingershuying@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -433,6 +433,15 @@ msgid ""
 "is %1$s %2$s."
 msgstr ""
 
+msgid ""
+"CI could not be computed for effect size, due to low sample size and/or "
+"extreme effect size."
+msgstr ""
+
+msgid ""
+"Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
 msgid "Paired Samples T-Test"
 msgstr ""
 
@@ -448,6 +457,9 @@ msgstr ""
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
 "Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+
+msgid "Cohen's d corrected for correlation between observations."
 msgstr ""
 
 msgid ""

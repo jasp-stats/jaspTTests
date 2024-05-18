@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-04-20 02:34\n"
+"POT-Creation-Date: 2024-05-18 02:37\n"
 "PO-Revision-Date: 2024-05-06 03:07+0000\n"
 "Last-Translator: Cochrane <cunyikang@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -442,6 +442,15 @@ msgid ""
 "is %1$s %2$s."
 msgstr "对于 Wilcoxon 检验，备择假设指定中位数为 %1$s %2$s。"
 
+msgid ""
+"CI could not be computed for effect size, due to low sample size and/or "
+"extreme effect size."
+msgstr ""
+
+msgid ""
+"Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
 msgid "Paired Samples T-Test"
 msgstr "配对样本T检验"
 
@@ -462,6 +471,9 @@ msgid ""
 msgstr ""
 "对于学生 t 检验，效应量由 Cohen's <em>d</em> 给出。对于 Wilcoxon 检验，效应量"
 "由匹配的秩双列相关给出。"
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr ""
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "

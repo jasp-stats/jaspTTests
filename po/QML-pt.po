@@ -700,3 +700,7 @@ msgstr "Diagramas"
 msgctxt "TTestPairedSamples|"
 msgid "Normalize error bars"
 msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Correct for correlation"
+msgstr ""
