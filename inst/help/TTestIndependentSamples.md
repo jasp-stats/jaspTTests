@@ -29,6 +29,7 @@ The independent samples t-test allows the user to estimate the effect size and t
 #### Assumption Checks 
 - Normality: Shapiro-Wilk test of normality. 
 - Equality of variances: Levene's test for homogeneity of variances. 
+- Q-Q plot residuals: Q-Q plot of the standardized residuals.
 
 #### Additional Statistics
 - Location parameter: For the Student's t-test and Welch's t-test, the location parameter is given by mean difference; for the Mann-Whitney test, the location parameter is given by the Hodges-Lehmann estimate.

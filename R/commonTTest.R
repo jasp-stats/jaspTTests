@@ -659,7 +659,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   if (type == "independent") { 
     for (thisVar in options$dependent) {
       groupMeans <- tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean)
-      resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]      
+      resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]
+      resid <- na.omit(resid)
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
@@ -671,6 +672,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   } else if (type == "paired") {
     for (pair in options$pairs) {
       resid <- dataset[[pair[[1]]]] - dataset[[pair[[2]]]]
+      resid <- na.omit(resid)
       title <-  paste(pair, collapse = " - ")
       qqPlot <- createJaspPlot(title = title, width = 480, height = 320)
       container[["QQPlots"]][[title]] <- qqPlot
@@ -683,6 +685,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
       resid <- dataset[[thisVar]] - options[["testValue"]]
+      resid <- na.omit(resid)
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),

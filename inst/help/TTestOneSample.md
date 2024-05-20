@@ -27,6 +27,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
 
 #### Assumption Checks
 - Normality tests: Shapiro-Wilk test of normality.
+- Q-Q plot residuals: Q-Q plot of the standardized residuals.
 
 #### Additional Statistics
 - Location difference: Average difference between the data points and the test value. For the Student's t-test and the Z test the location difference estimate is given by mean difference divided by the (hypothesized) standard deviation d; for the Wilcoxon signed-rank test, the location difference estimate is given by the Hodges-Lehmann estimate.

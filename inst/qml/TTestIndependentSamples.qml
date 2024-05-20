@@ -105,7 +105,7 @@ Form
 				RadioButton { value: "levene";			label: qsTr("Levene's") }
 			}
 		}
-		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot") }
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals") }
 	}
 	Group
 	{
