@@ -24,6 +24,7 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 
 #### Assumption Checks 
 - Normality: Shapiro-Wilk test of normality. 
+- Q-Q plot residuals: Q-Q plot of the standardized residuals.
 
 #### Additional Statistics 
 - Location parameter: For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.

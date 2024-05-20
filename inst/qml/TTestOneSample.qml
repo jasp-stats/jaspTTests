@@ -88,7 +88,7 @@ Form
 	{
 		title: qsTr("Assumption checks")
 		CheckBox { name: "normalityTest"; label: qsTr("Normality") }
-		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot") }
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals") }
 
 	}
 	Group
