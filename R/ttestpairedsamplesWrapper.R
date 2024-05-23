@@ -19,8 +19,10 @@
 
 TTestPairedSamples <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           alternative = "twoSided",
+          applyMoreyCorrectionErrorBars = TRUE,
+          applyMoreyCorrectionErrorBarsBarplot = TRUE,
           barPlot = FALSE,
           barPlotCiLevel = 0.95,
           barPlotErrorType = "ci",
@@ -33,6 +35,7 @@ TTestPairedSamples <- function(
           effectSize = FALSE,
           effectSizeCi = FALSE,
           effectSizeCiLevel = 0.95,
+          effectSizeCorrection = FALSE,
           meanDifference = FALSE,
           meanDifferenceCi = FALSE,
           meanDifferenceCiLevel = 0.95,
@@ -41,6 +44,7 @@ TTestPairedSamples <- function(
           pairs = list(),
           plotHeight = 300,
           plotWidth = 350,
+          qqPlot = FALSE,
           raincloudPlot = FALSE,
           student = TRUE,
           vovkSellke = FALSE,
