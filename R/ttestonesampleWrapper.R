@@ -19,7 +19,7 @@
 
 TTestOneSample <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -29,7 +29,7 @@ TTestOneSample <- function(
           dependent = list(),
           descriptives = FALSE,
           descriptivesPlot = FALSE,
-          descriptivesPlotCi = 0.95,
+          descriptivesPlotCiLevel = 0.95,
           effectSize = FALSE,
           effectSizeCi = FALSE,
           effectSizeCiLevel = 0.95,
@@ -40,6 +40,7 @@ TTestOneSample <- function(
           normalityTest = FALSE,
           plotHeight = 320,
           plotWidth = 480,
+          qqPlot = FALSE,
           raincloudPlot = FALSE,
           raincloudPlotHorizontal = FALSE,
           student = TRUE,

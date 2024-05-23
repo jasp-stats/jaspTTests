@@ -19,7 +19,7 @@
 
 TTestIndependentSamples <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -45,6 +45,7 @@ TTestIndependentSamples <- function(
           normalityTest = FALSE,
           plotHeight = 300,
           plotWidth = 350,
+          qqPlot = FALSE,
           raincloudPlot = FALSE,
           raincloudPlotHorizontal = FALSE,
           student = TRUE,
