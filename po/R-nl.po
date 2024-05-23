@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-05-18 02:37\n"
-"PO-Revision-Date: 2023-05-08 08:48+0000\n"
-"Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
+"PO-Revision-Date: 2024-05-23 16:45+0000\n"
+"Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "nl/>\n"
 "Language: nl\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 msgid "Assumption Checks"
 msgstr "Verificatie van aannames"
@@ -31,9 +31,8 @@ msgstr ""
 "H%2$s is gelijk aan 1/(-e <em>p</em> log(<em>p</em>)) voor <em>p</em> "
 "%3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 
-#, fuzzy
 msgid "Q-Q Plots"
-msgstr "Staafgrafieken"
+msgstr "Q-Q Figuren"
 
 msgid "Please provide another variable."
 msgstr "Geef a.u.b. een andere variable."
@@ -233,10 +232,10 @@ msgid "Bayesian Paired Samples T-Test"
 msgstr "Bayesiaanse Gepaarde T-Toets"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "Meting 1"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "Meting 2"
 
 msgid "Independent Samples T-Test"
 msgstr "Onafhankelijke steekproeven t-toets"
@@ -245,7 +244,7 @@ msgid "Mann-Whitney U test."
 msgstr "Mann-Whitney U toets."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
 msgstr "Welch's t-toets."
@@ -284,7 +283,7 @@ msgid "Hodges-Lehmann Estimate"
 msgstr "Hodges-Lehmann Schatting"
 
 msgid "Rank-Biserial Correlation"
-msgstr "Rank-Biseriële Correlatie"
+msgstr "Rang-Biseriële Correlatie"
 
 msgid "Location Parameter"
 msgstr "Locatieparameter"
@@ -391,16 +390,14 @@ msgstr ""
 msgid "F-statistic could not be calculated"
 msgstr "F-statistiek kon niet worden berekend"
 
-#, fuzzy
 msgid "Group Descriptives"
-msgstr "Beschrijvende statistiek"
+msgstr "Beschrijvende Statistieken voor Groepen"
 
-#, fuzzy
 msgid "Mean Rank"
-msgstr "Gemiddelde"
+msgstr "Gemiddelde Rang"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "Som Rang"
 
 msgid "One Sample T-Test"
 msgstr "T-Toets voor één gemiddelde"
@@ -486,10 +483,14 @@ msgid ""
 "CI could not be computed for effect size, due to low sample size and/or "
 "extreme effect size."
 msgstr ""
+"Er kon geen BI worden berekend voor de effectgrootte vanwege een lage "
+"steekproefomvang en/of extreme effectgrootte."
 
 msgid ""
 "Sample size too small for desired confidence level. Using %.1f%% instead"
 msgstr ""
+"Steekproefgrootte te klein voor het gewenste betrouwbaarheidsniveau. In "
+"plaats daarvan is %.1f%% gebruikt"
 
 msgid "Paired Samples T-Test"
 msgstr "Gepaarde t-toets"
@@ -515,7 +516,7 @@ msgstr ""
 "overeenkomende rank-biseriële correlatie."
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "Cohen's d gecorrigeerd voor correlatie tussen waarnemingen."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
