@@ -670,27 +670,15 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
 
-msgctxt "TTestIndependentSamples|"
-msgid "Q-Q plot"
-msgstr ""
-
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "Diagramas"
 
-msgctxt "TTestOneSample|"
-msgid "Q-Q plot"
-msgstr ""
-
 #, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "Diagramas"
-
-msgctxt "TTestPairedSamples|"
-msgid "Q-Q plot"
-msgstr ""
 
 #, fuzzy
 msgctxt "TTestPairedSamples|"
@@ -703,4 +691,16 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot residuals"
 msgstr ""

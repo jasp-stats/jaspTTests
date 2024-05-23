@@ -668,24 +668,12 @@ msgid "Mann-Whitney"
 msgstr "U Manna-Whitney'a"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Q-Q plot"
-msgstr "Wykres K-K"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "Wykresy"
 
 msgctxt "TTestOneSample|"
-msgid "Q-Q plot"
-msgstr "Wykres K-K"
-
-msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "Wykresy"
-
-msgctxt "TTestPairedSamples|"
-msgid "Q-Q plot"
-msgstr "Wykres K-K"
 
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
@@ -697,4 +685,16 @@ msgstr "Znormalizuj paski błędów"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot residuals"
 msgstr ""

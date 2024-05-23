@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-05-19 20:46+0000\n"
-"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/es/>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -674,24 +668,12 @@ msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
 
 msgctxt "TTestIndependentSamples|"
-msgid "Q-Q plot"
-msgstr "Gráfico Q-Q"
-
-msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "Gráficos"
 
 msgctxt "TTestOneSample|"
-msgid "Q-Q plot"
-msgstr "Gráfico Q-Q"
-
-msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "Gráficos"
-
-msgctxt "TTestPairedSamples|"
-msgid "Q-Q plot"
-msgstr "Gráfico Q-Q"
 
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
@@ -704,3 +686,15 @@ msgstr "Normalizar las barras de error"
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
 msgstr "Corregir la correlación"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
