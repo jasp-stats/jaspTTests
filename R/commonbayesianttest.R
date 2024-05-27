@@ -52,7 +52,7 @@
   #
 
   analysis <- match.arg(analysis)
-  dataset <- .ttestBayesianReadData(dataset, options)
+  dataset <- .ttestReadData(dataset, options, analysis)
   errors  <- .ttestBayesianGetErrorsPerVariable(dataset, options, analysis)
 
   # Main analysis
@@ -128,40 +128,6 @@
 
   return(ttestResults)
 
-}
-
-.ttestBayesianReadData <- function(dataset = NULL, options) {
-
-  if (is.null(dataset)) {
-    missing <- options[["naAction"]]
-    if (is.null(options[["dependent"]])) {
-      dependents <- unique(unlist(options[["pairs"]] ))
-      dependents <- dependents[dependents != ""]
-    } else {
-      dependents <- unlist(options[["dependent"]])
-    }
-    grouping <- options[["group"]]
-    if (identical(grouping, ""))
-      grouping <- NULL
-
-    excl <- grouping
-    if (missing == "listwise")
-      excl <- c(excl, dependents)
-
-    if (length(dependents)) {
-      dataset <- .readDataSetToEnd(columns = c(dependents, grouping), exclude.na.listwise = excl)
-      if (!is.null(grouping))
-        dataset[[.v(grouping)]] <- as.factor(dataset[[.v(grouping)]])
-
-      # 100% required if we fully switch to columns = ... , but also allow the QML interface to be not strict in terms of input,
-      # so factors can be entered in scale boxes. Joris probably has more ideas about this
-      for (var in .v(dependents)) {
-        if (is.factor(dataset[[var]]))
-          dataset[[var]] <- as.numeric(levels(dataset[[var]]))[dataset[[var]]]
-      }
-    }
-  }
-  return(dataset)
 }
 
 .ttestBayesianGetErrorsPerVariable <- function(dataset, options, analysis) {
