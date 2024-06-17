@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-06-18 15:09+0000\n"
+"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Language: ja\n"
 "X-Qt-Contexts: true\n"
 
@@ -667,37 +673,34 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "マン・ホイットニー"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "プロット"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "プロット"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
 msgstr "プロット"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normalize error bars"
-msgstr ""
+msgstr "エラーバーを正規化"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
-msgstr ""
+msgstr "相関の補正"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q プロット残差"
 
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q plot residuals"
 
 msgctxt "TTestPairedSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q plot residuals"
