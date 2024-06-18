@@ -168,6 +168,9 @@ test_that("Analysis handles errors", {
 
 test_that("Analysis handles integer overflow", {
 
+  # started failing inexplicably in https://github.com/jasp-stats/jaspTTests/pull/258
+  testthat::skip_on_os("mac")
+
   set.seed(4491)
   dat <- data.frame(dependent_var = rnorm(2e5),
                     grouping      = rep(c(1, 2), each = 1e5))
