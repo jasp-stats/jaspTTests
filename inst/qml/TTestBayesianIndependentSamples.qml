@@ -35,8 +35,8 @@ Form {
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "dependent"; title: qsTr("Dependent Variables"); suggestedColumns: ["scale"] }
-		AssignedVariablesList { name: "group"; title: qsTr("Grouping Variable"); suggestedColumns: ["ordinal", "nominal"]; singleVariable: true }
+		AssignedVariablesList { name: "dependent";	title: qsTr("Dependent Variables"); allowedColumns: ["scale"];	minNumericLevels: 2 }
+		AssignedVariablesList { name: "group";		title: qsTr("Grouping Variable");	allowedColumns: ["nominal"];	minLevels: 2; maxLevels: 2; singleVariable: true }
 	}
 
 	RadioButtonGroup
