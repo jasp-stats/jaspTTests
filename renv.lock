@@ -14,9 +14,19 @@
       "Version": "0.9.12-4.7",
       "Source": "Repository"
     },
+    "Deriv": {
+      "Package": "Deriv",
+      "Version": "4.1.3",
+      "Source": "Repository"
+    },
     "Formula": {
       "Package": "Formula",
       "Version": "1.2-5",
+      "Source": "Repository"
+    },
+    "GPArotation": {
+      "Package": "GPArotation",
+      "Version": "2024.3-1",
       "Source": "Repository"
     },
     "Hmisc": {
@@ -51,7 +61,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.83",
+      "Version": "1.84",
       "Source": "Repository"
     },
     "abind": {
@@ -139,6 +149,11 @@
       "Version": "1.6.10",
       "Source": "Repository"
     },
+    "cowplot": {
+      "Package": "cowplot",
+      "Version": "1.1.3",
+      "Source": "Repository"
+    },
     "cpp11": {
       "Package": "cpp11",
       "Version": "0.4.7",
@@ -176,7 +191,12 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.35",
+      "Version": "0.6.36",
+      "Source": "Repository"
+    },
+    "doBy": {
+      "Package": "doBy",
+      "Version": "4.6.22",
       "Source": "Repository"
     },
     "dplyr": {
@@ -343,7 +363,7 @@
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
       "RemoteRef": "HEAD",
-      "RemoteSha": "c5936d63c775841d2ebc6fc097fe96ff2b06d21b"
+      "RemoteSha": "e7b21a684768ac8853057a935ff21bcba3314212"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -354,7 +374,7 @@
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
       "RemoteRef": "HEAD",
-      "RemoteSha": "09e2fecf1b921a00a203a442207591ecd3db2821"
+      "RemoteSha": "5c6cb6a4723197ca3befd3d0a5fab5b8291c08a2"
     },
     "jpeg": {
       "Package": "jpeg",
@@ -373,7 +393,7 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.47",
+      "Version": "1.48",
       "Source": "Repository"
     },
     "labeling": {
@@ -398,7 +418,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.4",
+      "Version": "1.1-35.5",
       "Source": "Repository"
     },
     "logspline": {
@@ -416,6 +436,11 @@
       "Version": "2.0.1",
       "Source": "Repository"
     },
+    "microbenchmark": {
+      "Package": "microbenchmark",
+      "Version": "1.4.10",
+      "Source": "Repository"
+    },
     "mime": {
       "Package": "mime",
       "Version": "0.12",
@@ -429,6 +454,11 @@
     "mnormt": {
       "Package": "mnormt",
       "Version": "2.1.1",
+      "Source": "Repository"
+    },
+    "modelr": {
+      "Package": "modelr",
+      "Version": "0.1.11",
       "Source": "Repository"
     },
     "modules": {
@@ -448,7 +478,7 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository"
     },
     "numDeriv": {
@@ -478,7 +508,7 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.2",
+      "Version": "0.5.3",
       "Source": "Repository"
     },
     "pillar": {
@@ -523,12 +553,12 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.7.6",
+      "Version": "1.7.7",
       "Source": "Repository"
     },
     "psych": {
       "Package": "psych",
-      "Version": "2.4.3",
+      "Version": "2.4.6.26",
       "Source": "Repository"
     },
     "purrr": {
@@ -723,7 +753,7 @@
     },
     "yaml": {
       "Package": "yaml",
-      "Version": "2.3.8",
+      "Version": "2.3.9",
       "Source": "Repository"
     },
     "zip": {
