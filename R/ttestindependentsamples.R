@@ -81,7 +81,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   ttest$addColumnInfo(name = testStat, type = "number",  title = testStatName)
   ttest$addColumnInfo(name = "df",     type = dfType,    title = gettext("df"))
   ttest$addColumnInfo(name = "p",      type = "pvalue",  title = gettext("p"))
-  
+
   .ttestVovkSellke(ttest, options)
 
   if (options$effectSizeType == "cohen")
@@ -171,8 +171,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   ttestNormalTable$showSpecifiedColumnsOnly <- TRUE
   ttestNormalTable$position <- 2
 
-  ttestNormalTable$addColumnInfo(name = "dep", type = "string", title = "", combine = TRUE)
-  ttestNormalTable$addColumnInfo(name = "lev", type = "string", title = "")
+  ttestNormalTable$addColumnInfo(name = "dep", type = "string", title = gettext("Residuals"))
   ttestNormalTable$addColumnInfo(name = "W",   type = "number", title = gettext("W"))
   ttestNormalTable$addColumnInfo(name = "p",   type = "pvalue", title = gettext("p"))
 
@@ -306,7 +305,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     wSE <- sqrt((ns[1]*ns[2] * (ns[1]+ns[2] + 1))/12)
     rankBisSE <- sqrt(4 * 1/(ns[1]*ns[2])^2 * wSE^2)
     zRankBis  <- atanh(d)
- 
+
     if(direction == "two.sided")
       confIntEffSize <- sort(c(tanh(zRankBis + qnorm((1-ciEffSize)/2)*rankBisSE),
                                tanh(zRankBis + qnorm((1+ciEffSize)/2)*rankBisSE)))
@@ -398,7 +397,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   upperCIeffectSize <- as.numeric(confIntEffSize[2])
 
   # this will be the results object
-  row <- list(df = df, p = p, md = m, d = d, 
+  row <- list(df = df, p = p, md = m, d = d,
               lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
               lowerCIeffectSize = lowerCIeffectSize, upperCIeffectSize = upperCIeffectSize,
               effectSizeSe = effectSizeSe, sed = sed)
@@ -482,33 +481,34 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   levels    <- levels(dataset[[factor]])
 
   for (variable in variables) {
-    ## there will be two levels, otherwise .hasErrors will quit
-    for (level in levels) {
 
-      row     <- list(dep = variable, lev = level, .isNewGroup = (level == levels[1]))
-      rowName <- paste(variable, level, sep = "-")
+    row <- list(dep = variable)
+    rowName <- variable
 
-      errors <- .hasErrors(dataset,
-                           message = 'short',
-                           type = c('observations', 'variance', 'infinity'),
-                           all.target = variable,
-                           observations.amount = c('< 3', '> 5000'),
-                           all.grouping = factor,
-                           all.groupingLevel = level)
+    errors <- .hasErrors(dataset,
+                         message = 'short',
+                         type = c('observations', 'variance', 'infinity'),
+                         all.target = variable,
+                         observations.amount = c('< 3', '> 5000'),
+                         all.grouping = factor,
+                         all.groupingLevel = levels)
 
-      if (!identical(errors, FALSE)) {
-        row[["W"]] <- NaN
-        table$addFootnote(errors$message, colNames = "W", rowNames = rowName)
-      } else {
-        ## get the dependent variable at a certain factor level
-        data <- na.omit(dataset[[variable]][dataset[[factor]] == level])
-        r <- stats::shapiro.test(data)
-        row[["W"]] <- as.numeric(r$statistic)
-        row[["p"]] <- r$p.value
-      }
+    if (!identical(errors, FALSE)) {
+      row[["W"]] <- NaN
+      table$addFootnote(errors$message, colNames = "W", rowNames = rowName)
+    } else {
 
-      table$addRows(row, rowNames = rowName)
+      # NOTE: this is only valid because the Student and Welch t-test have identical residuals.
+      # centering the groups individually is equivalent to subtracting the mean, which is the point estimate.
+      # what remains is thus the residual.
+      data <- na.omit(unlist(tapply(dataset[[variable]], dataset[[factor]], scale, center = TRUE, scale = FALSE)))
+      r <- stats::shapiro.test(data)
+      row[["W"]] <- as.numeric(r$statistic)
+      row[["p"]] <- r$p.value
     }
+
+    table$addRows(row, rowNames = rowName)
+
   }
 }
 
@@ -535,9 +535,9 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     ttestDescriptivesTable$addColumnInfo(name = "sumRank",  type = "number",  title = gettext("Sum Rank"))
   }
   ttestDescriptivesTable$dependOn("mannWhitneyU")
-  
+
   container[["table"]] <- ttestDescriptivesTable
-  
+
   if(ready)
     .ttestIndependentDescriptivesFill(ttestDescriptivesTable, dataset, options)
 }
@@ -561,7 +561,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       dataRank <- rank((dataset[[variable]]), na.last = "keep")
       groupDataRank <- dataRank[groupingData == level]
       groupDataRankOm <- na.omit(groupDataRank)
-      
+
       if (class(groupDataOm) != "factor") {
 
         n    <- length(groupDataOm)
@@ -569,10 +569,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         std  <- sd(groupDataOm)
         sem  <- std / sqrt(n)
         coefOfVariation <- std / mean
-        
+
         meanRank <- mean(groupDataRankOm)
         sumRank <- sum(groupDataRankOm)
-        
+
         row <- c(row, list(N = n, mean = mean, sd = std, se = sem,
                            coefOfVariation = coefOfVariation,
                            meanRank = meanRank,
@@ -710,7 +710,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   } else {
     subcontainer <- container[["barPlots"]]
   }
-  
+
   for (variable in options[["dependent"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
