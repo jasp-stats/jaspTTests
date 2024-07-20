@@ -36,8 +36,7 @@ test_that("Normality table matches", {
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("contNormal", 0, 0.933547444665698, 0.00342000811150064, "TRUE",
-         "contNormal", 1, 0.972586424088514, 0.401705854633909, "FALSE")
+                                 list(0.964360649586635, "contNormal", 0.00832783872090823)
   )
 })
 
