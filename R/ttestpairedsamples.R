@@ -472,6 +472,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
                                  
   summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "group",
                                  idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
+                                 useMoreyCorrection = options[["applyMoreyCorrectionErrorBars"]],
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
