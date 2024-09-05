@@ -101,12 +101,6 @@ Form
 		{
 			name: "descriptivesPlot";						label: qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
-			CheckBox 
-			{ 
-				name: "applyMoreyCorrectionErrorBars"
-				label: qsTr("Normalize error bars")
-				checked:			true
-			}
 		}
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
 		CheckBox
@@ -117,7 +111,6 @@ Form
 		Common.BarPlots
 		{
 			framework:	form.framework
-			CheckBox	{ name: "applyMoreyCorrectionErrorBarsBarplot";	label: qsTr("Normalize error bars"); checked: true}
 		}
 	}
 

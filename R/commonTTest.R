@@ -399,7 +399,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .summarySEwithin <- function(data=NULL, measurevar, betweenvars=NULL, withinvars=NULL, idvar=NULL, na.rm=FALSE,
-                            conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE, useMoreyCorrection=TRUE,
+                            conf.interval=.95, .drop=TRUE, errorBarType="ci", usePooledSE=FALSE,
                             dependentName = .BANOVAdependentName,
                             subjectName = .BANOVAsubjectName) {
 
@@ -434,15 +434,14 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       stop("nDistinctObservations got an object of type", paste(class(x), collapse = ", "))
   }
 
-  if (useMoreyCorrection) {
-    # Apply correction from Morey (2008) to the standard error and confidence interval
-    # Get the product of the number of conditions of within-S variables
-    nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
-    correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
-    ndatac$sd <- ndatac$sd * correctionFactor
-    ndatac$se <- ndatac$se * correctionFactor
-    ndatac$ci <- ndatac$ci * correctionFactor
-  }
+  # Apply correction from Morey (2008) to the standard error and confidence interval
+  # Get the product of the number of conditions of within-S variables
+  nWithinGroups    <- prod(vapply(ndatac[,withinvars, drop=FALSE], FUN=.nDistinctObservations, FUN.VALUE=numeric(1)))
+  correctionFactor <- sqrt( nWithinGroups / (nWithinGroups-1) )
+  ndatac$sd <- ndatac$sd * correctionFactor
+  ndatac$se <- ndatac$se * correctionFactor
+  ndatac$ci <- ndatac$ci * correctionFactor
+
   
   if (errorBarType == "ci") {
 
@@ -598,8 +597,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                    conf.interval = options[["barPlotCiLevel"]],
                                    na.rm = TRUE,
                                    .drop = FALSE,
-                                   errorBarType = errorType,
-                                   useMoreyCorrection = options[["applyMoreyCorrectionErrorBarsBarplot"]])
+                                   errorBarType = errorType)
   } else {
     data <- data.frame(dependent = dataset[[variable]],
                        group = if (!is.null(groups)) dataset[[groups]] else rep(variable, length(dataset[[variable]])))

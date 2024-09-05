@@ -425,8 +425,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   if (is.null(container[["plots"]])) {
     subcontainer <- createJaspContainer(gettext("Descriptives Plots"), 
                                         dependencies = c("descriptivesPlot", 
-                                                         "descriptivesPlotCiLevel",
-                                                         "applyMoreyCorrectionErrorBars"))
+                                                         "descriptivesPlotCiLevel"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
   } else {
@@ -472,7 +471,6 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
                                  
   summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "group",
                                  idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
-                                 useMoreyCorrection = options[["applyMoreyCorrectionErrorBars"]],
                                  na.rm = TRUE, .drop = FALSE)
 
   p <- jaspGraphs::descriptivesPlot(
@@ -612,8 +610,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
                                                                                "barPlotCiLevel",
                                                                                "barPlotErrorType",
-                                                                               "barPlotYAxisFixedToZero",
-                                                                               "applyMoreyCorrectionErrorBarsBarplot"))
+                                                                               "barPlotYAxisFixedToZero"))
     subcontainer$position <- 8
     container[["barPlots"]] <- subcontainer
   } else {
