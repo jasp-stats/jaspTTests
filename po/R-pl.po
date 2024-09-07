@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-05-18 02:37\n"
+"POT-Creation-Date: 2024-09-07 02:45\n"
 "PO-Revision-Date: 2024-06-10 08:30+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -330,6 +330,9 @@ msgstr "Dla %1$s wielkość efektu jest określona przez %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Test normalności (Shapiro-Wilk)"
+
+msgid "Residuals"
+msgstr ""
 
 msgid "W"
 msgstr "W"

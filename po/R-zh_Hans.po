@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-05-18 02:37\n"
+"POT-Creation-Date: 2024-09-07 02:45\n"
 "PO-Revision-Date: 2024-05-06 03:07+0000\n"
 "Last-Translator: Cochrane <cunyikang@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -313,6 +313,9 @@ msgstr "对于 %1$s，效应量大小由 %2$s 给出。"
 
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "正态性检验 (Shapiro-Wilk)"
+
+msgid "Residuals"
+msgstr ""
 
 msgid "W"
 msgstr "W"

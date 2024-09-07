@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
-"POT-Creation-Date: 2024-05-18 02:37\n"
+"POT-Creation-Date: 2024-09-07 02:45\n"
 "PO-Revision-Date: 2023-06-24 02:51+0000\n"
 "Last-Translator: Borisov Igor Borisovich <borisov_i@pimunn.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -353,6 +353,9 @@ msgstr "Для %1$s размер эффекта равен %2$s."
 msgid "Test of Normality (Shapiro-Wilk)"
 msgstr ""
 "Проверка на соответствие нормальному распределению (критерий Шапиро-Уилка)"
+
+msgid "Residuals"
+msgstr ""
 
 msgid "W"
 msgstr "W"

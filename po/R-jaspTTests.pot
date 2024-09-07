@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.19.0\n"
-"POT-Creation-Date: 2024-06-29 02:39\n"
+"POT-Creation-Date: 2024-09-07 02:45\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,6 +273,9 @@ msgid "For the %1$s, effect size is given by %2$s."
 msgstr ""
 
 msgid "Test of Normality (Shapiro-Wilk)"
+msgstr ""
+
+msgid "Residuals"
 msgstr ""
 
 msgid "W"

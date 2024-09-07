@@ -681,10 +681,6 @@ msgid "Plots"
 msgstr "Diagramme"
 
 msgctxt "TTestPairedSamples|"
-msgid "Normalize error bars"
-msgstr "Fehlerbalken normalisieren"
-
-msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
 msgstr "für Korrelation korrigieren"
 

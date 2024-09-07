@@ -670,10 +670,6 @@ msgid "Descriptives plots"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
-msgid "Normalize error bars"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
 msgstr ""
 

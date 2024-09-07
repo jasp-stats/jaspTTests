@@ -680,10 +680,6 @@ msgid "Plots"
 msgstr "プロット"
 
 msgctxt "TTestPairedSamples|"
-msgid "Normalize error bars"
-msgstr "エラーバーを正規化"
-
-msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
 msgstr "相関の補正"
 
