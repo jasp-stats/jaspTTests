@@ -16,7 +16,7 @@
     },
     "Deriv": {
       "Package": "Deriv",
-      "Version": "4.1.3",
+      "Version": "4.1.6",
       "Source": "Repository"
     },
     "Formula": {
@@ -76,7 +76,7 @@
     },
     "abind": {
       "Package": "abind",
-      "Version": "1.4-5",
+      "Version": "1.4-8",
       "Source": "Repository"
     },
     "askpass": {
@@ -357,7 +357,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "7de02c442478e028fe2036e3b906059bf504c13e"
+      "RemoteSha": "f12f1ffb8b2310c249fbe674596f5a08b3aac606"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -367,7 +367,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "e439c080e3841e0719c00ce35c376b34c833b546"
+      "RemoteSha": "17b7eeaf2e0c589aa182f0db807054ca37cc2d51"
     },
     "jpeg": {
       "Package": "jpeg",
@@ -436,7 +436,7 @@
     },
     "microbenchmark": {
       "Package": "microbenchmark",
-      "Version": "1.4.10",
+      "Version": "1.5.0",
       "Source": "Repository"
     },
     "mime": {
@@ -471,7 +471,7 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.3-0",
+      "Version": "1.3-1",
       "Source": "Repository"
     },
     "nlme": {
@@ -556,7 +556,7 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.7.7",
+      "Version": "1.8.0",
       "Source": "Repository"
     },
     "psych": {
@@ -586,7 +586,7 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Source": "Repository"
     },
     "rappdirs": {
@@ -696,7 +696,7 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.52",
+      "Version": "0.53",
       "Source": "Repository"
     },
     "utf8": {
