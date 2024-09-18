@@ -26,25 +26,12 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestReadData <- function(dataset, options, type) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
-    groups  <- options$group
-    if (!is.null(groups) && groups == "")
-      groups <- NULL
-    if(type %in% c("one-sample", "independent"))
-      depvars <- unlist(options$dependent)
-    else if (type == 'paired') {
-      depvars <- unlist(options$pairs)
-      depvars <- depvars[depvars != ""]
-    }
-    exclude <- NULL
-    if (options$naAction == "listwise")
-      exclude <- depvars
-    return(.readDataSetToEnd(columns.as.numeric  = depvars,
-                             columns.as.factor   = groups,
-                             exclude.na.listwise = exclude))
-  }
+
+  if (options[["naAction"]] == "listwise")
+    return(jaspBase::excludeNaListwise(dataset, options[["dependent"]]))
+
+  return(dataset)
+
 }
 
 .ttestCheckErrors <- function(dataset, options, type) {
@@ -442,7 +429,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   ndatac$se <- ndatac$se * correctionFactor
   ndatac$ci <- ndatac$ci * correctionFactor
 
-  
+
   if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
@@ -647,14 +634,14 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 
 .ttestQQPlot <- function(jaspResults, dataset, options, ready, type) {
-  
+
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
   if (!options$qqPlot || !is.null(container[["ttestQQPlot"]]) || !ready)
     return()
-  
+
   container[["QQPlots"]] <- createJaspContainer(gettext("Q-Q Plots"))
-  if (type == "independent") { 
+  if (type == "independent") {
     for (thisVar in options$dependent) {
       groupMeans <- tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean)
       resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]
@@ -663,8 +650,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   } else if (type == "paired") {
@@ -676,8 +663,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       container[["QQPlots"]][[title]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   } else if (type == "one-sample") {
@@ -688,8 +675,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   }
