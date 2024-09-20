@@ -66,7 +66,7 @@ TTestBayesianOneSampleInternal <- function(jaspResults, dataset, options, state 
       bf.raw <- NaN
       error  <- NaN
 
-      x <- dataset[[.v(var)]]
+      x <- dataset[[var]]
       x <- x[!is.na(x)]  - options[["testValue"]]
 
       if (!derivedOptions[["wilcoxTest"]]) {

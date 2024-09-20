@@ -43,8 +43,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       p2 <- pair[[2]]
       if(is.null(p1) || is.null(p2))
         return()
-      datasetErrorCheck <- data.frame(dataset[[.v(p1)]] - dataset[[.v(p2)]])
-      colnames(datasetErrorCheck) <- .v(paste0("Difference between ", p1, " and ", p2))
+      datasetErrorCheck <- data.frame(dataset[[p1]] - dataset[[p2]])
+      colnames(datasetErrorCheck) <- paste0("Difference between ", p1, " and ", p2)
       .hasErrors(datasetErrorCheck,
                  type = "variance",
                  exitAnalysisIfErrors = TRUE)

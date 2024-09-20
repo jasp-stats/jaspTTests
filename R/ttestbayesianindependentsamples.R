@@ -28,7 +28,7 @@ TTestBayesianIndependentSamplesInternal <- function(jaspResults, dataset, option
 
 	# this function is the main workhorse, and also makes a table
 	grouping   <- options[["group"]]
-	levels     <- levels(dataset[[.v(grouping)]])
+	levels     <- levels(dataset[[grouping]])
 	g1 <- levels[1L]
 	g2 <- levels[2L]
 
@@ -58,9 +58,9 @@ TTestBayesianIndependentSamplesInternal <- function(jaspResults, dataset, option
   if (derivedOptions[["wilcoxTest"]])
     .ttestBayesianSetupWilcoxProgressBar(nvar, ttestState, options[["wilcoxonSamples"]])
 
-  idxg1 <- dataset[[.v(options[["group"]])]] == g1
-  idxg2 <- dataset[[.v(options[["group"]])]] == g2
-  idxNAg <- is.na(dataset[[.v(grouping)]])
+  idxg1 <- dataset[[options[["group"]]]] == g1
+  idxg2 <- dataset[[options[["group"]]]] == g2
+  idxNAg <- is.na(dataset[[grouping]])
 
   for (var in dependents[!alreadyComputed]) {
 
@@ -80,8 +80,8 @@ TTestBayesianIndependentSamplesInternal <- function(jaspResults, dataset, option
       error  <- NaN
 
       # BayesFactor package doesn't handle NAs, so it is necessary to exclude them
-      idxNA <- is.na(dataset[[.v(var)]]) | idxNAg
-      subDataSet <- dataset[!idxNA, .v(var)]
+      idxNA <- is.na(dataset[[var]]) | idxNAg
+      subDataSet <- dataset[!idxNA, var]
 
       group1 <- subDataSet[idxg1[!idxNA]]
       group2 <- subDataSet[idxg2[!idxNA]]
