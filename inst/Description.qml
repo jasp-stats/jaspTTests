@@ -13,6 +13,7 @@ Description
 	license		: "GPL (>= 2)"
 	icon		: "analysis-classical-ttest.svg"
 	hasWrappers	: true
+	preloadData	: true
 
 	GroupTitle
 	{
