@@ -27,8 +27,17 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 .ttestReadData <- function(dataset, options, type) {
 
-  if (options[["naAction"]] == "listwise")
-    return(jaspBase::excludeNaListwise(dataset, options[["dependent"]]))
+  if (options[["naAction"]] == "listwise") {
+
+    if (type %in% c("one-sample", "independent"))
+      exclude <- unlist(options[["dependent"]])
+    else if (type == "paired") {
+      exclude <- unlist(options[["pairs"]])
+      exclude <- exclude[exclude != ""]
+    }
+
+    return(jaspBase::excludeNaListwise(dataset, exclude))
+  }
 
   return(dataset)
 
