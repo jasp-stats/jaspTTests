@@ -26,14 +26,14 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestOneSampleMainTable(  jaspResults, dataset, options, ready, type)
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
   .ttestQQPlot(              jaspResults, dataset, options, ready, type)
-  
+
   # Descriptives
   vars <- unique(unlist(options$dependent))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
-  
+
 
   return()
 }
@@ -237,7 +237,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       }
       if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["lowerCIeffectSize"]]))))
         table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
-      
+
       if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
         table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
       table$addRows(row, rowNames = rowName)
@@ -250,7 +250,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
                       "twoSided"  ="two.sided",
                       "greater" ="greater",
                       "less"    ="less")
-  dat <- na.omit(dataset[[ .v(variable) ]])
+  dat <- na.omit(dataset[[ variable ]])
   n   <- length(dat)
   usedConfLevel <- options[["meanDifferenceCiLevel"]]
   if (test == "Wilcoxon") {
@@ -276,7 +276,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
     effectSizeSe <- tanh(mrSE)
     if (confIntEffSize[1] == confIntEffSize[2]) confIntEffSize <- c(NA, NA)
-    
+
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
                           "mu" = options[["testValue"]], "sigma.x" = options[["zTestSd"]],
@@ -368,7 +368,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       row[["W"]] <- NaN
       table$addFootnote(errors$message, colNames = "W", rowNames = variable)
     } else {
-      data <- na.omit(dataset[[.v(variable)]])
+      data <- na.omit(dataset[[variable]])
 
       tempResult <- stats::shapiro.test(data)
       row[["W"]] <- as.numeric(tempResult[["statistic"]])
@@ -475,7 +475,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
           next
       }
       groups  <- rep("1", nrow(dataset))
-      subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
+      subData <- data.frame(dependent = dataset[, variable], groups = groups)
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
@@ -491,7 +491,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  
+
   if (is.null(container[["barPlots"]])) {
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
                                                                                "barPlotCiLevel",
@@ -503,7 +503,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   } else {
     subcontainer <- container[["barPlots"]]
   }
-  
+
   for (variable in options[["dependent"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
