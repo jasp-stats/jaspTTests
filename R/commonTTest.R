@@ -442,7 +442,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   ndatac$se <- ndatac$se * correctionFactor
   ndatac$ci <- ndatac$ci * correctionFactor
 
-  
+
   if (errorBarType == "ci") {
 
     ndatac$ciLower <- datac[,measurevar] - ndatac[,"ci"]
@@ -647,24 +647,24 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 
 .ttestQQPlot <- function(jaspResults, dataset, options, ready, type) {
-  
+
   .ttestAssumptionCheckContainer(jaspResults, options, type)
   container <- jaspResults[["AssumptionChecks"]]
   if (!options$qqPlot || !is.null(container[["ttestQQPlot"]]) || !ready)
     return()
-  
+
   container[["QQPlots"]] <- createJaspContainer(gettext("Q-Q Plots"))
-  if (type == "independent") { 
+  if (type == "independent") {
     for (thisVar in options$dependent) {
-      groupMeans <- tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean)
+      groupMeans <- c(unname(tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean, na.rm = TRUE)))
       resid <- dataset[[thisVar]] - groupMeans[dataset[[options[["group"]]]]]
       resid <- na.omit(resid)
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   } else if (type == "paired") {
@@ -676,8 +676,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       container[["QQPlots"]][[title]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   } else if (type == "one-sample") {
@@ -688,8 +688,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       container[["QQPlots"]][[thisVar]] <- qqPlot
       qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
                                                   yName = "Standardized residuals",
-                                                  ablineColor = "darkred", 
-                                                  ablineOrigin = TRUE, 
+                                                  ablineColor = "darkred",
+                                                  ablineOrigin = TRUE,
                                                   identicalAxes = TRUE)
     }
   }
