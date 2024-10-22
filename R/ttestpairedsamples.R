@@ -47,7 +47,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   # Create table
   ttest <- createJaspTable(title = gettext("Paired Samples T-Test"))
   ttest$dependOn(c("effectSize", "variables", "effectSizeCi", "effectSizeCiLevel",
-                   "student", "wilcoxon",
+                   "student", "wilcoxon", "effectSizeCorrection",
                    "meanDifference", "meanDifferenceCi",
                    "meanDifferenceCiLevel", "alternative",
                    "vovkSellke", "naAction", "pairs"))
