@@ -26,14 +26,14 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   .ttestOneSampleMainTable(  jaspResults, dataset, options, ready, type)
   .ttestOneSampleNormalTable(jaspResults, dataset, options, ready, type)
   .ttestQQPlot(              jaspResults, dataset, options, ready, type)
-  
+
   # Descriptives
   vars <- unique(unlist(options$dependent))
   .ttestDescriptivesTable(                 jaspResults, dataset, options, ready, vars)
   .ttestOneSampleDescriptivesPlot(         jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesRainCloudPlot(jaspResults, dataset, options, ready)
   .ttestOneSampleDescriptivesBarPlot(      jaspResults, dataset, options, ready)
-  
+
 
   return()
 }
@@ -104,16 +104,10 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   if (optionsList$wantsDifference) {
     ttest$addColumnInfo(name = "m", title = nameOfLocationParameter, type = "number")
 
-    if (sum(optionsList$wantsStudents, optionsList$wantsZtest, optionsList$wantsWilcox) > 1) {
-      tzNote <- wNote <- NULL
-
-      if ((optionsList$wantsStudents || optionsList$wantsZtest) && optionsList$wantsWilcox)
-        tzNote <- gettextf("For the %s, location difference estimate is given by the sample mean difference <em>d</em>.", testInNote)
-
-      if (optionsList$wantsWilcox && (optionsList$wantsStudents || optionsList$wantsZtest))
-        wNote <- gettext("For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate.")
-
-      ttest$addFootnote(paste(tzNote, wNote))
+    if ((optionsList$wantsStudents || optionsList$wantsZtest) && optionsList$wantsWilcox) {
+      ttest$addFootnote(gettextf(
+        "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate.", testInNote
+      ))
     }
   }
 
@@ -237,7 +231,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       }
       if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["lowerCIeffectSize"]]))))
         table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
-      
+
       if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
         table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
       table$addRows(row, rowNames = rowName)
@@ -276,7 +270,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
     effectSizeSe <- tanh(mrSE)
     if (confIntEffSize[1] == confIntEffSize[2]) confIntEffSize <- c(NA, NA)
-    
+
   } else if (test == "Z"){
     tempResult <- .z.test("x"=dat, "alternative" = direction,
                           "mu" = options[["testValue"]], "sigma.x" = options[["zTestSd"]],
@@ -491,7 +485,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  
+
   if (is.null(container[["barPlots"]])) {
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
                                                                                "barPlotCiLevel",
@@ -503,7 +497,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
   } else {
     subcontainer <- container[["barPlots"]]
   }
-  
+
   for (variable in options[["dependent"]]) {
     if (!is.null(subcontainer[[variable]]))
       next
