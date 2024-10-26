@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-09-07 02:45\n"
+"POT-Creation-Date: 2024-10-26 02:47\n"
 "PO-Revision-Date: 2024-05-06 03:07+0000\n"
 "Last-Translator: Cochrane <cunyikang@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -402,15 +402,14 @@ msgstr "t检验和Z检验"
 msgid "Z-test"
 msgstr "Z检验"
 
+#, fuzzy
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
-"difference <em>d</em>."
-msgstr "对于 %s，位置差异估计由样本平均差异 <em>d</em> 给出。"
-
-msgid ""
-"For the Wilcoxon test, location difference estimate is given by the Hodges-"
-"Lehmann estimate."
-msgstr "对于 Wilcoxon 检验，位置差异估计由 Hodges-Lehmann 估计给出。"
+"difference <em>d</em>. For the Wilcoxon test, location difference estimate "
+"is given by the Hodges-Lehmann estimate."
+msgstr ""
+"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，效应量"
+"由 Hodges-Lehmann 估计值给出。"
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr "对于学生 t 检验，效应量由 Cohen's <em>d</em> 给出。"
@@ -511,6 +510,16 @@ msgstr "对于所有检验，备择假设指定度量 1 大于度量 2。例如�
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
 msgstr[0] "以下配对是重复的: %s"
+
+#~ msgid ""
+#~ "For the %s, location difference estimate is given by the sample mean "
+#~ "difference <em>d</em>."
+#~ msgstr "对于 %s，位置差异估计由样本平均差异 <em>d</em> 给出。"
+
+#~ msgid ""
+#~ "For the Wilcoxon test, location difference estimate is given by the "
+#~ "Hodges-Lehmann estimate."
+#~ msgstr "对于 Wilcoxon 检验，位置差异估计由 Hodges-Lehmann 估计给出。"
 
 #~ msgid "Paired and two-sample z.test not yet implemented"
 #~ msgstr "配对和双样本z检验尚未实现"

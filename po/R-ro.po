@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.18.2\n"
-"POT-Creation-Date: 2024-09-07 02:45\n"
+"POT-Creation-Date: 2024-10-26 02:47\n"
 "PO-Revision-Date: 2024-01-11 18:06+0000\n"
 "Last-Translator: fiscuteancom <vladfiscutean@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -395,12 +395,8 @@ msgstr ""
 
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
-"difference <em>d</em>."
-msgstr ""
-
-msgid ""
-"For the Wilcoxon test, location difference estimate is given by the Hodges-"
-"Lehmann estimate."
+"difference <em>d</em>. For the Wilcoxon test, location difference estimate "
+"is given by the Hodges-Lehmann estimate."
 msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."

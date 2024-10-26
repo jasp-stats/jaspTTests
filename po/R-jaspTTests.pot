@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.19.2\n"
-"POT-Creation-Date: 2024-10-19 02:47\n"
+"POT-Creation-Date: 2024-10-26 02:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -356,10 +356,7 @@ msgstr ""
 msgid "Z-test"
 msgstr ""
 
-msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>."
-msgstr ""
-
-msgid "For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
 msgstr ""
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
