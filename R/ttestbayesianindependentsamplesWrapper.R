@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 TTestBayesianIndependentSamples <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -32,14 +32,14 @@ TTestBayesianIndependentSamples <- function(
           bfSequentialPlot = FALSE,
           bfSequentialPlotRobustness = FALSE,
           defaultStandardizedEffectSize = "cauchy",
-          dependent = list(),
+          dependent = list(types = list(), value = NULL),
           descriptives = FALSE,
           descriptivesPlot = FALSE,
           descriptivesPlotCiLevel = 0.95,
           dienesEffectSize = "uniform",
           effectSize = "standardized",
           effectSizeStandardized = "default",
-          group = "",
+          group = list(types = list(), value = ""),
           halfNormalDienesStd = 0.707,
           informativeCauchyLocation = 0,
           informativeCauchyScale = 0.707,

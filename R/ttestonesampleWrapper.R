@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,14 +19,14 @@
 
 TTestOneSample <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
           barPlotCiLevel = 0.95,
           barPlotErrorType = "ci",
           barPlotYAxisFixedToZero = TRUE,
-          dependent = list(),
+          dependent = list(types = list(), value = NULL),
           descriptives = FALSE,
           descriptivesPlot = FALSE,
           descriptivesPlotCiLevel = 0.95,
