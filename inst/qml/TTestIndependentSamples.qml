@@ -24,6 +24,7 @@ import "./common" as Common
 
 Form
 {
+	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.")
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
