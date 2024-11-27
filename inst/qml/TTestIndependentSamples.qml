@@ -44,9 +44,9 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-    	CheckBox { name: "student";		label: qsTr("Student"); checked: true	}
-		CheckBox { name: "welch";			label: qsTr("Welch")					}
-		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney")				}
+    	CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selecetd by default".);	 checked: true	}
+		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Use when variances are not equally distributed accross groups");					}
+		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent T-test. Use when data is not normally distributed");				}
 	}
 
 	Group
