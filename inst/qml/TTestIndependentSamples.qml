@@ -37,8 +37,8 @@ Form
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");			allowedColumns: ["scale"];			minNumericLevels: 2}
-		AssignedVariablesList { name: "group";				title: qsTr("Grouping Variable");			allowedColumns: ["nominal"];		minLevels: 2; maxLevels: 2; singleVariable: true }
+		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");	info: qsTr("In this box the dependent variable is selected"); 												allowedColumns: ["scale"];			minNumericLevels: 2}
+		AssignedVariablesList { name: "group";				title: qsTr("Grouping Variable"); info: qsTr("In this box the variable defining the groups is selected. e.g experimental condition");			allowedColumns: ["nominal"];		minLevels: 2; maxLevels: 2; singleVariable: true }
 	}
 
 	Group
