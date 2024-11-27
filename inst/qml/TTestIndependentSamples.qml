@@ -95,10 +95,10 @@ Form
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTest";	label: qsTr("Normality") }
+		CheckBox { name: "normalityTest";	label: qsTr("Normality"); info: qsTr("Shapiro-Wilk test of normality."); }
 		CheckBox
 		{
-			name: "equalityOfVariancesTest";	label: qsTr("Equality of variances")
+			name: "equalityOfVariancesTest";	label: qsTr("Equality of variances"); info: qsTr("BrownForsythe or Levene's tests to check if variances are qually distributed accross groups")
 			RadioButtonGroup
 			{
 				name: "equalityOfVariancesTestType"
@@ -106,7 +106,7 @@ Form
 				RadioButton { value: "levene";			label: qsTr("Levene's") }
 			}
 		}
-		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals") }
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals"); info: qsTr("Displays Q-Q plot of the standardized residuals.") }
 	}
 	Group
 	{
