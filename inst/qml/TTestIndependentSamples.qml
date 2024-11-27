@@ -87,9 +87,9 @@ Form
 	{
 		name: "alternative"
 		title: qsTr("Alternative Hypothesis")
-		RadioButton { value: "twoSided";	label: qsTr("Group 1 ≠ Group 2"); checked: true	}
-		RadioButton { value: "greater";	label: qsTr("Group 1 > Group 2")					}
-		RadioButton { value: "less"; label: qsTr("Group 1 < Group 2")					}
+		RadioButton { value: "twoSided";	label: qsTr("Group 1 ≠ Group 2"); info: qsTr("Two-sided alternative hypothesis that the population means are not equal. Selected by default."); checked: true	}
+		RadioButton { value: "greater";	label: qsTr("Group 1 > Group 2"); info: qsTr("One-sided alternative hypothesis that the population mean of Group 1 is larger than the population mean of Group 2.");					}
+		RadioButton { value: "less"; label: qsTr("Group 1 < Group 2"); info: qsTr("One-sided alternative hypothesis that the population mean of Group 1 is smaller than the population mean of Group 2.");				}
 	}
 
 	Group
