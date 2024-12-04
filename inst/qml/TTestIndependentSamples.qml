@@ -114,13 +114,13 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.")
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ; info: qsTr(" Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.") }
 		}
 		CheckBox
 		{
-			name: "raincloudPlot"; label: qsTr("Raincloud plots")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
 		}
 		Common.BarPlots
 		{
@@ -131,7 +131,7 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); checked: true	}
-		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")							}
+		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("Exclude cases per dependent variable: In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the tests. This options is selected by default.") ; checked: true	}
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise") ; info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the tests.")							}
 	}
 }
