@@ -80,7 +80,7 @@ Form
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") ; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each group.")							}
-		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under the alternative hypothesis vs the likelihood of the obtained p value under the null hypothesis") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.") }
 	}
 
 	RadioButtonGroup
