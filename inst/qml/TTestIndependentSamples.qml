@@ -44,7 +44,7 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-    	CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selecetd by default".);	 checked: true	}
+    	CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selected by default");	 checked: true	}
 		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Use when variances are not equally distributed accross groups");					}
 		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent T-test. Use when data is not normally distributed");				}
 	}
@@ -55,10 +55,10 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "meanDifference"; label: qsTr("Location parameter")
+			name: "meanDifference"; label: qsTr("Location parameter"); info: qsTr(" For the Student's t-test and Welch's t-test, the location parameter is given by mean difference; for the Mann-Whitney test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
-				name: "meanDifferenceCi"; label: qsTr("Confidence interval")
+				name: "meanDifferenceCi"; label: qsTr("Confidence interval"); info: qsTr(" Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 				childrenOnSameRow: true
 				CIField { name: "meanDifferenceCiLevel" }
 			}
