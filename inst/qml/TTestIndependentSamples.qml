@@ -65,15 +65,15 @@ Form
 		}
 		CheckBox
 		{
-			name: "effectSize"; label: qsTr("Effect size")
+			name: "effectSize"; label: qsTr("Effect size"); info: qsTr(" For the Student t-test and Welch t-test, the effect size can be selected below; for the Mann-Whitney test, the effect size is given by the rank biserial correlation.")
 			RadioButtonGroup {
-				name: "effectSizeType";
-				RadioButton { value: "cohen"; label: qsTr("Cohen's d") ; checked: true }
-				RadioButton { value: "glass"; label: qsTr("Glass' delta") }
-				RadioButton { value: "hedges"; label: qsTr("Hedges' g") }
+				name: "effectSizeType"
+				RadioButton { value: "cohen"; label: qsTr("Cohen's d") ; checked: true ; info: qsTr("For the Student's t-test, uses the pooled standard deviation to standardize the mean difference. For the Welch's t-test, uses the square-root of the average variance to standardize the mean difference.")}
+				RadioButton { value: "glass"; label: qsTr("Glass' delta") ; info: qsTr("Uses the standard deviation of group 2 to standardize the mean difference. In order to change which group is used as group 2, you can change the order of the levels by clicking on the name of the grouping variable in the data window, click on one of the levels and then click the arrow buttons to switch the order.")}
+				RadioButton { value: "hedges"; label: qsTr("Hedges' g") ; info: qsTr("Applies a correction factor to Cohen's d to make it unbiased.") }
 				CheckBox
 				{
-					name: "effectSizeCi"; label: qsTr("Confidence interval")
+					name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.")
 					childrenOnSameRow: true
 					PercentField { name: "effectSizeCiLevel"; defaultValue: 95 }
 				}
