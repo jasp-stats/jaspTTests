@@ -24,6 +24,7 @@ import "./common" as Common
 
 Form
 {
+	info: qsTr("The paired samples t-test allows the user to estimate the effect size and test the null hypothesis that the population mean of the difference between observations equals 0 in dependent groups.")
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -33,15 +34,15 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }
-		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); allowedColumns: ["scale"];	minNumericLevels: 2 }
+		AvailableVariablesList { name: "allVariablesList"; info: qsTr("All variables are displayed here. Drag the relevant variables for the analysis to the variable pairs box.") }
+		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score."); allowedColumns: ["scale"];	minNumericLevels: 2 }
 	}
 
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "student";			label: qsTr("Student"); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank")		}
+		CheckBox { name: "student";			label: qsTr("Student"); info: qsTr("Student's paired sample t-test.This option is selected by default"); checked: true	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: ("Non-parametric version of paired samples t-test. Use when data is not normally distributed.")	}
 	}
 
 	Group
@@ -61,7 +62,7 @@ Form
 
 		CheckBox
 		{
-			name: "effectSize";	label: qsTr("Effect size")
+			name: "effectSize";	label: qsTr("Effect size"); info: qsTr ("For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation.")
 			CheckBox
 			{
 				name: "effectSizeCi";	label: qsTr("Confidence interval")
@@ -81,16 +82,16 @@ Form
 	{
 		name: "alternative"
 		title: qsTr("Alternative Hypothesis")
-		RadioButton { value: "twoSided";	label: qsTr("Measure 1 ≠ Measure 2"); checked: true	}
-		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2");				}
-		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2");				}
+		RadioButton { value: "twoSided";	label: qsTr("Measure 1 ≠ Measure 2"); info: qsTr("Two-sided alternative hypothesis that the population mean of the difference is not equal to 0. This option is selected by default."); checked: true	}
+		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr(" One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
+		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One sided alternative hypothesis that the population mean of the difference is smaller than 0.")				}
 	}
 
 	Group
 	{
 		title: qsTr("Assumption Checks")
-		CheckBox { name: "normalityTest";	label: qsTr("Normality") }
-		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals") }
+		CheckBox { name: "normalityTest";	label: qsTr("Normality"); info: qsTr("Shapiro-Wilk test of normality.") }
+		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals"); info: qsTr("Q-Q plot of the standardized residuals.") }
 
 	}
 	

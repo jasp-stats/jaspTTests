@@ -123,7 +123,8 @@ Form
 			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
 		}
 		Common.BarPlots
-		{
+		{	
+		
 			framework:	form.framework
 		}
 	}
