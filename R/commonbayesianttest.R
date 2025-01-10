@@ -749,7 +749,7 @@
       if (paired) {
         plot$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
-        plot$dependOn(optionContainsValue = list(variables = var))
+        plot$dependOn(optionContainsValue = list(dependent = var))
       }
       descriptivePlots[[var]] <- plot
     }
@@ -822,7 +822,7 @@
       if (paired) {
         barPlot$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
-        barPlot$dependOn(optionContainsValue = list(variables = var))
+        barPlot$dependOn(optionContainsValue = list(dependent = var))
       }
       descriptivePlots[[var]] <- barPlot
     }
@@ -893,7 +893,7 @@
       if (ttestResults[["paired"]]) {
         container$dependOn(optionContainsValue = list(pairs = unname(pairs[[var]])))
       } else {
-        container$dependOn(optionContainsValue = list(variables = var))
+        container$dependOn(optionContainsValue = list(dependent = var))
       }
     } else {
       container <- inferentialPlotsCollection[[var]]
@@ -2279,7 +2279,7 @@
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
-      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(dependent = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
       if(!isFALSE(errors[[variable]])) {
         descriptivesPlotRainCloud$setError(errors[[variable]]$message)
@@ -2299,7 +2299,7 @@
         next
       groups <- options$group
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
-      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(dependent = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
       if(!isFALSE(errors[[variable]])) {
         descriptivesPlotRainCloud$setError(errors[[variable]]$message)

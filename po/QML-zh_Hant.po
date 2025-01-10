@@ -29,19 +29,19 @@ msgstr "單一樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "貝氏"
+msgstr "Bayesian"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "貝氏獨立樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "貝氏配對樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "貝氏單一樣本 t 檢定"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
@@ -53,7 +53,7 @@ msgstr "分群變項"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "組1 ≠ 組1"
+msgstr "組1 ≠ 組2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
@@ -69,7 +69,7 @@ msgstr "圖"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "先驗和後驗"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
@@ -77,7 +77,7 @@ msgstr "其他資訊"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
@@ -85,31 +85,31 @@ msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "穩健性檢定"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定方法"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student t檢定"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney檢定"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "樣本數"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
@@ -117,16 +117,15 @@ msgstr "遺漏值處理方式"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "依依變量排除個案"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "其他統計量"
+msgstr "其它統計量"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
@@ -134,25 +133,23 @@ msgstr "變數"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "檢定值"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr "圖"
+msgstr "繪圖"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "先驗和後驗"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr "其他資訊"
+msgstr "其它資訊"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
@@ -160,92 +157,87 @@ msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr ""
+msgstr "穩健性檢驗"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ 檢定值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "＞ 檢定值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< 檢定值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon 符號等級檢定"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr ""
+msgstr "樣本數"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其他統計量"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方法"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "依照依變數值排除個案"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "測量值 1 ≠ 測量值 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "測量值 1 > 測量值 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "測量值 1 < 測量值 2"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr "圖"
+msgstr "繪圖"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "先驗和後驗"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr "其他資訊"
+msgstr "其它資訊"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
@@ -253,45 +245,43 @@ msgstr "貝氏因子穩健性檢查"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "穩健型檢定"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon 符號等級檢定"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "樣本數"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其他統計量"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方式"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "依照依變數值排除個案"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
@@ -304,61 +294,59 @@ msgstr "分組變數"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr ""
+msgstr "Welch 檢定"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其他統計量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "位置參數"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect size"
-msgstr ""
+msgstr "效果量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen's d 效果量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr ""
+msgstr "Glass' delta 效果量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr ""
+msgstr "Hedges' g 效果量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "敘述統計圖"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximum p-ratio"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr "組1 ≠ 組1"
+msgstr "組 1 ≠ 組 2"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -370,27 +358,25 @@ msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
 msgstr "組1 < 組2"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
 msgstr "前提假設的檢驗"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "常態性"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
-msgstr ""
+msgstr "變異數同質性"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方式"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "依照依變數值排除個案"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -404,77 +390,75 @@ msgstr "變量"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon 符號等級檢定"
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "Z 檢定"
 
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "檢定值:"
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr ""
+msgstr "標準差:"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其它統計量"
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestOneSample|"
 msgid "Effect size"
-msgstr ""
+msgstr "效果量"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "敘述統計圖"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ 檢定值"
 
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> 檢定值"
 
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< 檢定值"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "前提假設的檢驗"
 
 msgctxt "TTestOneSample|"
 msgid "Normality"
-msgstr ""
+msgstr "常態性"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方式"
 
 #, fuzzy
 msgctxt "TTestOneSample|"
@@ -483,56 +467,55 @@ msgstr "完全排除法"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon 符號等級檢定"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr "其他統計數"
+msgstr "其他統計量"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "位置參數"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "TTestPairedSamples|"
 msgid "Effect size"
-msgstr ""
+msgstr "效果量"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "敘述統計"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "敘述統計圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "觀測值 1 ≠ 觀測值 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "觀測值 1 > 觀測值 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "觀測值 1 < 觀測值 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
@@ -540,12 +523,11 @@ msgstr "前提假設的檢驗"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "常態性"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr "遺漏值"
+msgstr "遺漏值處理方式"
 
 #, fuzzy
 msgctxt "TTestPairedSamples|"
@@ -554,144 +536,143 @@ msgstr "完全排除法"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "評估兩個平均數之間的差異"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "成對變量"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "雨雲差異圖"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "依變項"
+msgstr "依變量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "位置估計"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "成對變量"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "雨雲圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "雨雲差異圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "橫向顯示"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "長條圖"
 
 msgctxt "BarPlots|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "貝氏可信區間"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "標準誤"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "將橫軸固定在0"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr ""
+msgstr "Levene's"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "依每個變量排除個案"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "依每個變量排除個案"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney 檢定"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -710,16 +691,16 @@ msgstr "圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
-msgstr ""
+msgstr "相關修正"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q 圖"
 
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q 圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q 圖"
