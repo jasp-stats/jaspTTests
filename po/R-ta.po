@@ -1,0 +1,491 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspTTests 0.19.2\n"
+"POT-Creation-Date: 2024-10-26 02:47\n"
+"PO-Revision-Date: 2025-01-04 21:55+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
+"ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+msgid "Assumption Checks"
+msgstr "அனுமானம் காசோலைகள்"
+
+msgid "Descriptives"
+msgstr "விளக்கமான"
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Vovk -sellke அதிகபட்சம் <em> ப </em> -ரேடியோ: இரு பக்க <em> ப </em> -மதிப்பு "
+"அடிப்படையில், h%2$s க்கு மேல் h%1$s க்கு ஆதரவாக அதிகபட்ச முரண்பாடுகள் 1/(-மற்றும் <em> "
+"ப </em> பதிவு (<em> ப </em>)) <em> ப </em> %3$s .37 (SELLKE, Bayarri, & பெர்கர்"
+", 2001 )."
+
+msgid "Q-Q Plots"
+msgstr "Q-Q அடுக்கு"
+
+msgid "Please provide another variable."
+msgstr "மற்றொரு மாறியை வழங்கவும்."
+
+msgid "Variables %1$s and %2$s are the same!"
+msgstr "மாறிகள் %1$s மற்றும் %2$s ஆகியவை ஒன்றே!"
+
+msgid "Descriptives Plots"
+msgstr "விளக்கங்கள் அடுக்கு"
+
+msgid "Bar Plots"
+msgstr "பார் அடுக்கு"
+
+msgid "Group"
+msgstr "குழு"
+
+msgid "N"
+msgstr "N"
+
+msgid "Mean"
+msgstr "இடை, சராசரி"
+
+msgid "SD"
+msgstr "எச்.டி."
+
+msgid "SE"
+msgstr "உடன்"
+
+msgid "Coefficient of variation"
+msgstr "மாறுபாட்டின் குணகம்"
+
+msgid "%.0f%% Credible Interval"
+msgstr "%.0f %% நம்பகமான இடைவெளி"
+
+msgid "Lower"
+msgstr "கீழ்"
+
+msgid "Upper"
+msgstr "மேல்"
+
+msgid "Inferential Plots"
+msgstr "அனுமான அடுக்கு"
+
+msgid "Prior and Posterior"
+msgstr "முன் மற்றும் பின்புறம்"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "பேயச் காரணி வலுவான சோதனை"
+
+msgid "Sequential Analysis"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
+
+msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgstr ""
+"பேயச் காரணி வலுவான தன்மை காசோலை சூழ்ச்சி தற்போது தகவலறிந்த முன் ஆதரிக்கப்படவில்லை."
+
+msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgstr ""
+"தொடர்ச்சியான பகுப்பாய்வு வலுவான சோதனை சூழ்ச்சி தற்போது தகவலறிந்த முன் ஆதரிக்கப்படவில்லை."
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr "எதிர்பார்க்கப்படும் எண் அல்லது எழுத்து rscale ஆனால் %s கிடைத்தன."
+
+msgid "Running robustness check %1$d / %2$d"
+msgstr "வலுவான வலுவான சோதனை %1$d / %2$d"
+
+msgid "max BF%s"
+msgstr "அதிகபட்சம் BF%s"
+
+msgid "user prior"
+msgstr "பயனர் முன்"
+
+msgid "wide prior"
+msgstr "பரந்த முன்"
+
+msgid "ultrawide prior"
+msgstr "அல்ட்ராவைட் முன்"
+
+msgid "BF%s"
+msgstr "பி.எஃப்%s"
+
+msgid "%1$s at r==%2$s"
+msgstr "R ==%2$s இல்%1$s"
+
+msgid "Some Bayes factors were infinite"
+msgstr "சில பேயச் காரணிகள் எல்லையற்றவை"
+
+msgid "Cauchy prior width"
+msgstr "க uch சி முன் அகலம்"
+
+msgid "Running sequential analysis %1$d / %2$d"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு %1$d / %2$d"
+
+msgid "n"
+msgstr "n"
+
+msgid "Posterior"
+msgstr "பின்புறம்"
+
+msgid "Prior"
+msgstr "முன்"
+
+msgid "%s%% CI:"
+msgstr "%s %% CI:"
+
+msgid "Effect size"
+msgstr "விளைவு அளவு"
+
+msgid "Raincloud Plots"
+msgstr "ரெயின்க்ளூட் அடுக்கு"
+
+msgid "Raincloud Difference Plots"
+msgstr "ரெயின்க்ளூட் வேறுபாடு அடுக்குகள்"
+
+msgid "Bayes factor could not be calculated"
+msgstr "பேயச் காரணி கணக்கிட முடியவில்லை"
+
+msgid "Bayes factor is infinite"
+msgstr "பேயச் காரணி எல்லையற்றது"
+
+msgid "The Bayes factor is too small"
+msgstr "பேயச் காரணி மிகவும் சிறியது"
+
+msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
+msgstr ""
+"டி-மதிப்பு பெரியது. பேயச் காரணியைக் கணக்கிட ஒரு சாவேச்-டிக்கி தோராயமாக "
+"பயன்படுத்தப்பட்டது, ஆனால் பிழை மதிப்பீடு எதுவும் கொடுக்க முடியாது."
+
+msgid "No error estimate is available for normal priors."
+msgstr "சாதாரண முன்னோடிகளுக்கு பிழை மதிப்பீடு எதுவும் கிடைக்கவில்லை."
+
+msgid "Bayesian Mann-Whitney U Test"
+msgstr "பேய்சியன் மான்-விட்னி யு சோதனை"
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr "பேய்சியன் சுயாதீன மாதிரிகள் டி-சோதனை"
+
+msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+"%.0f மறு செய்கைகளின் 5 சங்கிலிகளுடன் தரவு பெருக்குதல் வழிமுறையின் அடிப்படையில் முடிவு."
+
+msgid "error %%"
+msgstr "பிழை %%"
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், குழு <em>%1$s </em> இன் இருப்பிடம் குழு <em>%2$s </em> இன் "
+"இருப்பிடத்தை விட அதிகமாக உள்ளது என்பதைக் குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், குழு <em>%1$s </em> இன் இருப்பிடம் குழு <em>%2$s </em> இன் "
+"இருப்பிடத்தை விட சிறியது என்று மாற்று கருதுகோள் குறிப்பிடுகிறது."
+
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr "பேய்சியன் வில்காக்சன் கையெழுத்திட்ட தரவரிசை சோதனை"
+
+msgid "Bayesian One Sample T-Test"
+msgstr "பேய்சியன் ஒரு மாதிரி டி-சோதனை"
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் மக்கள் தொகை சராசரி %s ஐ விட அதிகமாக உள்ளது "
+"என்பதைக் குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் மக்கள் தொகை சராசரி %s க்கும் குறைவாக இருப்பதைக்"
+" குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் மக்கள் தொகை என்பது %s இலிருந்து வேறுபடுகிறது "
+"என்பதைக் குறிப்பிடுகிறது."
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr "பேய்சியன் இணை மாதிரிகள் டி-சோதனை"
+
+msgid "Measure 1"
+msgstr "அளவீடு 1"
+
+msgid "Measure 2"
+msgstr "அளவீட்டு 2"
+
+msgid "Independent Samples T-Test"
+msgstr "சுயாதீன மாதிரிகள் டி-சோதனை"
+
+msgid "Mann-Whitney U test."
+msgstr "மான்-விட்னி யு சோதனை."
+
+msgid "U"
+msgstr "உ"
+
+msgid "Welch's t-test."
+msgstr "வெல்ச்சின் டி-சோதனை."
+
+msgid "t"
+msgstr "டி"
+
+msgid "Student's t-test."
+msgstr "மாணவர்களின் டி-சோதனை."
+
+msgid "Statistic"
+msgstr "புள்ளிவிவரம்"
+
+msgid "Test"
+msgstr "தேர்வு"
+
+msgid "df"
+msgstr "டி.எஃப்"
+
+msgid "p"
+msgstr "ப"
+
+msgid "Cohen's d"
+msgstr "கோஅனின் டி"
+
+msgid "Glass' delta"
+msgstr "கண்ணாடி 'டெல்டா"
+
+msgid "Hedges' g"
+msgstr "எட்சச் ஐயா"
+
+msgid "Mean Difference"
+msgstr "சராசரி வேறுபாடு"
+
+msgid "Hodges-Lehmann Estimate"
+msgstr "ஓட்சச்-லெஅ்மன் மதிப்பீடு"
+
+msgid "Rank-Biserial Correlation"
+msgstr "தரவரிசை-குழந்தை தொடர்பு"
+
+msgid "Location Parameter"
+msgstr "இருப்பிட அளவுரு"
+
+msgid "Effect Size"
+msgstr "விளைவு அளவு"
+
+msgid "Student t-test and Welch t-test"
+msgstr "மாணவர் டி-டெச்ட் மற்றும் வெல்ச் டி-டெச்ட்"
+
+msgid "Student t-test"
+msgstr "மாணவர் டி-சோதனை"
+
+msgid "Welch t-test"
+msgstr "வெல்ச் டி-சோதனை"
+
+msgid "SE Difference"
+msgstr "SE வேறுபாடு"
+
+msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"%s க்கு, இருப்பிட அளவுரு சராசரி வேறுபாட்டால் வழங்கப்படுகிறது. மான்-விட்னி சோதனைக்கு, "
+"இருப்பிட அளவுரு ஓட்சச்-லெஅ்மன் மதிப்பீட்டால் வழங்கப்படுகிறது."
+
+msgid "%1$s%% CI for %2$s"
+msgstr "%2$s க்கு%1$s %% தொஒ"
+
+msgid "SE %1$s"
+msgstr "%1 $ உடன்"
+
+msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgstr ""
+"மான்-விட்னி சோதனைக்கு, விளைவு அளவு தரவரிசை இருசக்கர தொடர்பு மூலம் வழங்கப்படுகிறது."
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr "%1$s க்கு, விளைவு அளவு %2$s ஆல் வழங்கப்படுகிறது."
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr "இயல்பான சோதனை (சாபிரோ-வில்க்)"
+
+msgid "Residuals"
+msgstr "எஞ்சியவர்கள்"
+
+msgid "W"
+msgstr "W"
+
+msgid "Significant results suggest a deviation from normality."
+msgstr "குறிப்பிடத்தக்க முடிவுகள் இயல்புநிலையிலிருந்து விலகுவதைக் குறிக்கின்றன."
+
+msgid "Brown-Forsythe"
+msgstr "பிரவுன்-ஃபோர்ச்டே"
+
+msgid "Levene's"
+msgstr "லெவனின்"
+
+msgid "Test of Equality of Variances (%1$s)"
+msgstr "மாறுபாடுகளின் சமத்துவத்தின் சோதனை (%1$s)"
+
+msgid "F"
+msgstr "F"
+
+msgid "%s<sub>1</sub>"
+msgstr "%s <துணை> 1 </sub>"
+
+msgid "%s<sub>2</sub>"
+msgstr "%s <துணை> 2 </sub>"
+
+msgid "greater"
+msgstr "பெரிய"
+
+msgid "less"
+msgstr "குறைவாக"
+
+msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் குழு %1$s குழு %3$s ஐ விட %2$s என்று "
+"குறிப்பிடுகிறது."
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"பிரவுன்-ஃபோர்ச் சிப் குறிப்பிடத்தக்கது (ப <.05), இது சம மாறுபாடு அனுமானத்தை மீறுவதைக் "
+"குறிக்கிறது"
+
+msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"லெவனின் சோதனை குறிப்பிடத்தக்கது (ப <.05), இது சம மாறுபாடு அனுமானத்தை மீறுவதைக் "
+"குறிக்கிறது"
+
+msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+"கண்ணாடி 'டெல்டா குழு %1$s இன் மாறி %2$s இன் நிலையான விலகலைப் பயன்படுத்துகிறது."
+
+msgid "F-statistic could not be calculated"
+msgstr "எஃப்-புள்ளிவிவரத்தை கணக்கிட முடியவில்லை"
+
+msgid "Group Descriptives"
+msgstr "குழு விளக்கங்கள்"
+
+msgid "Mean Rank"
+msgstr "சராசரி தரவரிசை"
+
+msgid "Sum Rank"
+msgstr "தொகை தரவரிசை"
+
+msgid "One Sample T-Test"
+msgstr "ஒரு மாதிரி டி-சோதனை"
+
+msgid "Wilcoxon signed-rank test."
+msgstr "வில்காக்சன் கையெழுத்திட்ட தரவரிசை சோதனை."
+
+msgid "V"
+msgstr "V"
+
+msgid "Z test."
+msgstr "சோதனையுடன்."
+
+msgid "Z"
+msgstr "சட்"
+
+msgid "Location Difference"
+msgstr "இருப்பிட வேறுபாடு"
+
+msgid "Student t-test and Z-test"
+msgstr "மாணவர் டி-சோதனை மற்றும் இசட்-சோதனை"
+
+msgid "Z-test"
+msgstr "Z- சோதனை"
+
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgstr ""
+"%s க்கு, இருப்பிட வேறுபாடு மதிப்பீடு மாதிரி சராசரி வேறுபாடு <em> டி </em> ஆல் "
+"வழங்கப்படுகிறது. வில்காக்சன் சோதனைக்கு, இருப்பிட வேறுபாடு மதிப்பீடு ஓட்சச்-லெஅ்மன் "
+"மதிப்பீட்டால் வழங்கப்படுகிறது."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr ""
+"மாணவர் டி-சோதனைக்கு, விளைவு அளவு கோஅனின் <em> டி </em> ஆல் வழங்கப்படுகிறது."
+
+msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"வில்காக்சன் சோதனைக்கு, பொருந்திய தரவரிசை இருசக்கர தொடர்பு மூலம் விளைவு அளவு "
+"வழங்கப்படுகிறது."
+
+msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgstr ""
+"சட் சோதனைக்கு, விளைவு அளவு கோஅனின் <em> டி </em> ஆல் வழங்கப்படுகிறது (வழங்கப்பட்ட மக்கள்"
+" தொகை தர விலகலின் அடிப்படையில்)."
+
+msgid "greater than"
+msgstr "விட பெரியது"
+
+msgid "less than"
+msgstr "குறைவாக"
+
+msgid "different from"
+msgstr "வேறுபட்டது"
+
+msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgstr "%1$s க்கு, மாற்று கருதுகோள் சராசரி %2$s %3$s என்று குறிப்பிடுகிறது."
+
+msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgstr ""
+"வில்காக்சன் சோதனையைப் பொறுத்தவரை, மாற்று கருதுகோள் சராசரி %1$s %2$s என்று "
+"குறிப்பிடுகிறது."
+
+msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
+msgstr ""
+"குறைந்த மாதிரி அளவு மற்றும்/அல்லது தீவிர விளைவு அளவு காரணமாக, விளைவு அளவிற்கு தொஒ "
+"ஐ கணக்கிட முடியவில்லை."
+
+msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+"விரும்பிய நம்பிக்கை நிலைக்கு மாதிரி அளவு மிகச் சிறியது. அதற்கு பதிலாக%.1f %% ஐப் "
+"பயன்படுத்துகிறது"
+
+msgid "Paired Samples T-Test"
+msgstr "இணை மாதிரிகள் டி-சோதனை"
+
+msgid "z"
+msgstr "சட்"
+
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"மாணவர் டி-சோதனைக்கு, இருப்பிட அளவுரு சராசரி வேறுபாடு <em> டி </em> ஆல் "
+"வழங்கப்படுகிறது. வில்காக்சன் சோதனைக்கு, இருப்பிட அளவுரு ஓட்சச்-லெஅ்மன் மதிப்பீட்டால் "
+"வழங்கப்படுகிறது."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"மாணவர் டி-சோதனைக்கு, விளைவு அளவு கோஅனின் <em> டி </em> ஆல் வழங்கப்படுகிறது. "
+"வில்காக்சன் சோதனைக்கு, பொருந்திய தரவரிசை இருசக்கர தொடர்பு மூலம் விளைவு அளவு "
+"வழங்கப்படுகிறது."
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr "கோஅனின் டி அவதானிப்புகளுக்கிடையேயான தொடர்புக்கு சரி செய்யப்பட்டது."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் அளவீட்டு 2 ஐ விட குறைவாக இருப்பதைக் "
+"குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் அளவீட்டு 2 ஐ விட 1 அதிகமாக உள்ளது என்பதைக் "
+"குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் %1$s %2$s க்கும் குறைவாக இருப்பதைக் "
+"குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் %1$s %2$s ஐ விட அதிகமாக உள்ளது என்பதைக் "
+"குறிப்பிடுகிறது."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் அளவீட்டு 1 ஐ விட குறைவாக இருப்பதைக் "
+"குறிப்பிடுகிறது. எடுத்துக்காட்டாக, %1$s %2$s க்கும் குறைவாக உள்ளது."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
+msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் அளவீட்டு 1 ஐ விட அதிகமாக இருப்பதைக் "
+"குறிப்பிடுகிறது. எடுத்துக்காட்டாக, %1$s %2$s ஐ விட அதிகமாக உள்ளது."
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] "பின்வரும் இணை நகல்: %s"
+msgstr[1] "பின்வரும் சோடிகள் நகல்: %s"
