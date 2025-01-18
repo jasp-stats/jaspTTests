@@ -53,7 +53,6 @@ Form
 		{
 			name: "meanDifference";	label: qsTr("Location parameter"); info: qsTr ("For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
-			CheckBox
 			{
 				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 				childrenOnSameRow: true
