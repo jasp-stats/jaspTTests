@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-01-22 11:01+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspttests-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.10-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -77,7 +83,7 @@ msgstr "其他資訊"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr "信賴區間"
+msgstr "可信區間"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
@@ -149,7 +155,7 @@ msgstr "其它資訊"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr "信賴區間"
+msgstr "可信區間"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
@@ -237,7 +243,7 @@ msgstr "其它資訊"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr "信賴區間"
+msgstr "可信區間"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
@@ -342,7 +348,7 @@ msgstr "描述性統計圖"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke 最大 p 比率"
+msgstr "Vovk-Sellke 最大p-比率"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -433,7 +439,7 @@ msgstr "描述性統計圖"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke 最大 p 比率"
+msgstr "Vovk-Sellke 最大p-比率"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
@@ -502,7 +508,7 @@ msgstr "描述性統計圖"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke 最大 p 比率"
+msgstr "Vovk-Sellke 最大p-比率"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -571,7 +577,7 @@ msgstr "橫向顯示"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "依變量"
+msgstr "依變項"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
@@ -619,7 +625,7 @@ msgstr "信賴區間"
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr "貝氏可信區間"
+msgstr "可信區間"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
