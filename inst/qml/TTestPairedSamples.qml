@@ -34,7 +34,7 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList"; }
+		AvailableVariablesList { name: "allVariablesList" ;  }
 		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score."); allowedColumns: ["scale"];	minNumericLevels: 2 }
 	}
 
@@ -54,7 +54,7 @@ Form
 			name: "meanDifference";	label: qsTr("Location parameter"); info: qsTr ("For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
-				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
+				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr ("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 				childrenOnSameRow: true
 				CIField { name: "meanDifferenceCiLevel" }
 			}
@@ -74,16 +74,15 @@ Form
 				name: "effectSizeCorrection";	label: qsTr("Correct for correlation"); info: qsTr("Correct the effect size for the correlation between the observed values, to prevent overestimating the effect (Dunlap et al., 1996).")
 			}
 		}
-		CheckBox { name: "descriptives";					label: qsTr("Descriptives"); info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.")										}
-		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0")						}
+		CheckBox { name: "descriptives";					label: qsTr("Descriptives")	; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.")									}
+		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")		; info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.")				}
 	}
-
 	RadioButtonGroup
 	{
 		name: "alternative"
 		title: qsTr("Alternative Hypothesis")
 		RadioButton { value: "twoSided";	label: qsTr("Measure 1 ≠ Measure 2"); info: qsTr("Two-sided alternative hypothesis that the population mean of the difference is not equal to 0. This option is selected by default."); checked: true	}
-		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr("One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
+		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr(" One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
 		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One sided alternative hypothesis that the population mean of the difference is smaller than 0.")				}
 	}
 
@@ -101,13 +100,13 @@ Form
 		CheckBox
 		{
 			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs).")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.")					}
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")	; info: qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.")					}
 		}
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots"); info:qsTr("Displays the individual cases (colored dots), box plots, and densities for each measure.")									}
 		CheckBox
 		{
-			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr(" Displays a raincloud plot of the differences between the two measures.")
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display")	; info:qsTr("Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.")	}
+			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.")
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info:qsTr("Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.")		}
 		}
 		Common.BarPlots
 		{
@@ -119,8 +118,10 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the difference score for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default."); checked: true		}
-		RadioButton { value: "listwise";						label: qsTr("Exclude cases listwise")	; info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all difference scores. Sample size is therefore constant across the tests.")							}
+		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); info: qsTr("In case of multiple T-tests within a single analysis, each test will be conducted using all cases with valid data for the difference score for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default.") ; checked: true		}
+		RadioButton { value: "listwise";						label: qsTr("Exclude cases listwise"); info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all difference scores. Sample size is therefore constant across the tests.")								}
 	}
 
 }
+
+
