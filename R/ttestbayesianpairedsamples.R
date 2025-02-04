@@ -72,7 +72,7 @@ TTestBayesianPairedSamplesInternal <- function(jaspResults, dataset, options) {
         bf.raw <- NaN
         error  <- NaN
 
-        subDataSet <- dataset[, .v(c(pair[[1L]], pair[[2L]]))]
+        subDataSet <- dataset[, c(pair[[1L]], pair[[2L]])]
         subDataSet <- subDataSet[complete.cases(subDataSet), ]
 
         x <- subDataSet[[1L]]

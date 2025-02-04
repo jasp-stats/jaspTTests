@@ -26,25 +26,21 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 }
 
 .ttestReadData <- function(dataset, options, type) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
-    groups  <- options$group
-    if (!is.null(groups) && groups == "")
-      groups <- NULL
-    if(type %in% c("one-sample", "independent"))
-      depvars <- unlist(options$dependent)
-    else if (type == 'paired') {
-      depvars <- unlist(options$pairs)
-      depvars <- depvars[depvars != ""]
+
+  if (options[["naAction"]] == "listwise") {
+
+    if (type %in% c("one-sample", "independent"))
+      exclude <- unlist(options[["dependent"]])
+    else if (type == "paired") {
+      exclude <- unlist(options[["pairs"]])
+      exclude <- exclude[exclude != ""]
     }
-    exclude <- NULL
-    if (options$naAction == "listwise")
-      exclude <- depvars
-    return(.readDataSetToEnd(columns.as.numeric  = depvars,
-                             columns.as.factor   = groups,
-                             exclude.na.listwise = exclude))
+
+    return(jaspBase::excludeNaListwise(dataset, exclude))
   }
+
+  return(dataset)
+
 }
 
 .ttestCheckErrors <- function(dataset, options, type) {
@@ -56,8 +52,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       p2 <- pair[[2]]
       if(is.null(p1) || is.null(p2))
         return()
-      datasetErrorCheck <- data.frame(dataset[[.v(p1)]] - dataset[[.v(p2)]])
-      colnames(datasetErrorCheck) <- .v(paste0("Difference between ", p1, " and ", p2))
+      datasetErrorCheck <- data.frame(dataset[[p1]] - dataset[[p2]])
+      colnames(datasetErrorCheck) <- paste0("Difference between ", p1, " and ", p2)
       .hasErrors(datasetErrorCheck,
                  type = "variance",
                  exitAnalysisIfErrors = TRUE)
