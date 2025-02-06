@@ -39,10 +39,10 @@ CheckBox
 				checked: 			true
 				childrenOnSameRow: 	true
 
-				CIField { name: 	"barPlotCiLevel" }
+				CIField { name: 	"barPlotCiLevel"}
 			}
-			RadioButton { value: 	"se";	label: qsTr("Standard error") }
+			RadioButton { value: 	"se";	label: qsTr("Standard error"); }
 		}
 
-	CheckBox { name: "barPlotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0");	checked: true }
+	CheckBox { name: "barPlotYAxisFixedToZero";		label: qsTr("Fix horizontal axis to 0"); checked: true }
 }
