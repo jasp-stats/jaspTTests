@@ -25,6 +25,7 @@ import "./common" as Common
 Form
 {
 	info: qsTr("The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.")
+	infoBottom: "## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
