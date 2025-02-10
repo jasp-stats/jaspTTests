@@ -24,7 +24,8 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The paired samples t-test allows the user to estimate the effect size and test the null hypothesis that the population mean of the difference between observations equals 0 in dependent groups.")
+	info: qsTr("The paired samples t-test allows the user to estimate the effect size and test the null hypothesis that the population mean of the difference between observations equals 0 in dependent groups.\n") +
+	"## " + qsTr("Assumptions") + "\n" + "- The difference score is continuous.\n" + "- The difference scores are a random sample from the population.\n" + "- The difference scores are normally distributed in the population."
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -99,8 +100,8 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs).")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")	; info: qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.")					}
+			name: "descriptivesPlot";					label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs.)\n") + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage."
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")	;					}
 		}
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots"); info:qsTr("Displays the individual cases (colored dots), box plots, and densities for each measure.")									}
 		CheckBox

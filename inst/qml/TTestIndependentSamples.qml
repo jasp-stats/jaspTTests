@@ -24,7 +24,8 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.")
+	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.\n") +
+	"## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous.\n" + "- The observations in both groups are a random sample from the population.\n" + "- The dependent variable is normally distributed in each group of the independent variable.\n" + "- The population variances in the two groups are homogeneous."
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -114,8 +115,9 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.")
-			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ; info: qsTr(" Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.\n") + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage."
+
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ;  }
 		}
 		CheckBox
 		{

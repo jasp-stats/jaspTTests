@@ -24,8 +24,8 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.")
-	infoBottom: "## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
+	info: qsTr("The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.\n") +
+    "## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -65,10 +65,11 @@ Form
 
 		CheckBox
 		{
-			name: "effectSize";				label: qsTr("Effect size"); info: qsTr("For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).")
+			name: "effectSize";				label: qsTr("Effect size"); info: qsTr("For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).\n") + "\t" + "- Confidence interval: Confidence interval for the effect size."
+
 			CheckBox
 			{
-				name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the effect size.")
+				name: "effectSizeCi"; label: qsTr("Confidence interval"); 
 				childrenOnSameRow: true
 				CIField { name: "effectSizeCiLevel" }
 			}
