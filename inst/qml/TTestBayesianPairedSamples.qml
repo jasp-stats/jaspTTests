@@ -116,7 +116,7 @@ Form {
 		RadioButton
 		{
 			value: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of paired samples t-test. Use when data is not normally distributed.\n") +
-			"\t" + "- Number of MCMC samples to use"; id: testWilcoxon
+			"\t" + "- No.samples: Number of MCMC samples to use"; id: testWilcoxon
 			IntegerField { name: "wilcoxonSamples"; label: qsTr("No. samples"); defaultValue: 1000; min: 100; max: 10000; fieldWidth: 60 }
 		}
 	}
