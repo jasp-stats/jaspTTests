@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-02-25 01:24+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspttests-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.10.2-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -117,7 +123,7 @@ msgstr "遺漏值處理方式"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "依依變量排除個案"
+msgstr "成對排除法"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
@@ -205,7 +211,7 @@ msgstr "遺漏值處理方法"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr "依照依變數值排除個案"
+msgstr "成對排除法"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
@@ -281,7 +287,7 @@ msgstr "遺漏值處理方式"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "依照依變數值排除個案"
+msgstr "成對排除法"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
@@ -376,7 +382,7 @@ msgstr "遺漏值處理方式"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr "依照依變數值排除個案"
+msgstr "成對排除法"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
@@ -659,7 +665,7 @@ msgstr "對立假設"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr "依每個變量排除個案"
+msgstr "成對排除法"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
@@ -667,7 +673,7 @@ msgstr "對立假設"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr "依每個變量排除個案"
+msgstr "成對排除法"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
