@@ -106,8 +106,10 @@ Form
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots"); info:qsTr("Displays the individual cases (colored dots), box plots, and densities for each measure.")									}
 		CheckBox
 		{
-			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.")
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info:qsTr("Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.")		}
+			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.\n") + "\t" + "- Horizontal display: Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.\n" 
+			+ "- Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure.\n" + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.\n" +
+			"\t" + "- Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.\n" + "\t" + "- Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.\n" + "\t" + "- Normalize error bars: Same as for descriptive plots."
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); 		}
 		}
 		Common.BarPlots
 		{

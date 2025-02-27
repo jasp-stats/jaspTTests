@@ -83,8 +83,10 @@ Form {
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("\n") + "\t" + "- Credible interval: Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%."
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
+		name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("\n") + "\t" + "- Credible interval: Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.\n" +
+		"- Bar plots: Displays the sample means as bars and the credible intervals or standard errors as error bars for each measure.\n" + "\t" + "- Credible interval: Displays the central credible intervals. By default, the credible interval is set to 95%. This can be changed into the desired percentage.\n" +
+		"\t" + "- Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.\n" + "\t" + "- Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0."
+		CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
 		Common.BarPlots
