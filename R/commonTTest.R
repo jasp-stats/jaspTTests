@@ -63,13 +63,21 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                  exitAnalysisIfErrors = TRUE)
     }
   else if(type == "independent") {
-    if (length(options$dependent) != 0 && options$group != '')
+    if (length(options$dependent) != 0 && options$group != '') {
+
       .hasErrors(dataset,
                  type = 'factorLevels',
                  factorLevels.target  = options$group,
                  factorLevels.amount  = '!= 2',
                  exitAnalysisIfErrors = TRUE)
-      }
+
+      .hasErrors(dataset,
+                 type = c("variance"),
+                 all.target = options$dependent,
+                 variance.grouping = options$group,
+                 exitAnalysisIfErrors = TRUE)
+    }
+  }
 }
 
 .ttestOptionsList <- function(options, type){
