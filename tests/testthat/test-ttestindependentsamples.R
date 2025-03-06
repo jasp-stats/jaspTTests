@@ -134,6 +134,21 @@ test_that("Analysis handles errors", {
   results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError", label = "1-level factor check")
+
+  # per https://github.com/jasp-stats/jaspTTests/pull/301
+  # shapiro test fails gracefully
+  options$dependent <- c("drp", "g")
+  options$group <- "group"
+  options$normalityTest <- TRUE
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", "Directed Reading Activities.csv", options)
+  status <- results[["status"]]
+  expect_identical(status, "complete", label = "Shapiro-Wilk fails gracefully")
+  table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
+  jaspTools::expect_equal_tables(table, list(0.973383660123721, "drp", 0.396069316406016, 1, "NaN", "g"))
+  footnote <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]]$footnotes[[2]]
+  expect_identical(footnote$cols[[1]], "W")
+  expect_identical(footnote$rows[[1]], "g")
+  expect_true(grepl("variance", footnote$text, fixed = TRUE), label = "Shapiro-Wilk has footnote when variance check fails")
 })
 
 
