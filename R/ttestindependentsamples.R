@@ -490,8 +490,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
                          type = c('observations', 'variance', 'infinity'),
                          all.target = variable,
                          observations.amount = c('< 3', '> 5000'),
-                         all.grouping = factor,
-                         all.groupingLevel = levels)
+                         all.grouping = factor)
 
     if (!identical(errors, FALSE)) {
       row[["W"]] <- NaN
