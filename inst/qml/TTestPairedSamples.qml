@@ -24,7 +24,9 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The paired samples t-test allows the user to estimate the effect size and test the null hypothesis that the population mean of the difference between observations equals 0 in dependent groups.")
+	info: qsTr("The paired samples t-test allows the user to estimate the effect size and test the null hypothesis that the population mean of the difference between observations equals 0 in dependent groups.\n") +
+	"## " + qsTr("Assumptions") + "\n" + "- The difference score is continuous.\n" + "- The difference scores are a random sample from the population.\n" + "- The difference scores are normally distributed in the population."
+
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -33,8 +35,9 @@ Form
 
 	VariablesForm
 	{
+		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList"; info: qsTr("All variables are displayed here. Drag the relevant variables for the analysis to the variable pairs box.") }
+		AvailableVariablesList { name: "allVariablesList" ;  }
 		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score."); allowedColumns: ["scale"];	minNumericLevels: 2 }
 	}
 
@@ -42,7 +45,7 @@ Form
 	{
 		title: qsTr("Tests")
 		CheckBox { name: "student";			label: qsTr("Student"); info: qsTr("Student's paired sample t-test.This option is selected by default"); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: ("Non-parametric version of paired samples t-test. Use when data is not normally distributed.")	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of paired samples t-test. Use when data is not normally distributed.")	}
 	}
 
 	Group
@@ -51,10 +54,10 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "meanDifference";	label: qsTr("Location parameter")
+			name: "meanDifference";	label: qsTr("Location parameter"); info: qsTr ("For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
-				name: "meanDifferenceCi";	label: qsTr("Confidence interval")
+				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr ("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 				childrenOnSameRow: true
 				CIField { name: "meanDifferenceCiLevel" }
 			}
@@ -62,22 +65,21 @@ Form
 
 		CheckBox
 		{
-			name: "effectSize";	label: qsTr("Effect size")
+			name: "effectSize";	label: qsTr("Effect size"); info: qsTr("For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation.")
 			CheckBox
 			{
-				name: "effectSizeCi";	label: qsTr("Confidence interval")
+				name: "effectSizeCi";	label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the effect size.")
 				childrenOnSameRow: true
 				CIField { name: "effectSizeCiLevel" }
 			}
 			CheckBox
 			{				
-				name: "effectSizeCorrection";	label: qsTr("Correct for correlation")
+				name: "effectSizeCorrection";	label: qsTr("Correct for correlation"); info: qsTr("Correct the effect size for the correlation between the observed values, to prevent overestimating the effect (Dunlap et al., 1996).")
 			}
 		}
-		CheckBox { name: "descriptives";					label: qsTr("Descriptives")										}
-		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")						}
+		CheckBox { name: "descriptives";					label: qsTr("Descriptives")	; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.")									}
+		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")		; info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.")				}
 	}
-
 	RadioButtonGroup
 	{
 		name: "alternative"
@@ -100,14 +102,16 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "descriptivesPlot";						label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
+			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs.)\n") + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage."
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")	;					}
 		}
-		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")									}
+		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots"); info:qsTr("Displays the individual cases (colored dots), box plots, and densities for each measure.")									}
 		CheckBox
 		{
-			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots")
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display")		}
+			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.\n") + "\t" + "- Horizontal display: Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.\n" 
+			+ "- Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure.\n" + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.\n" +
+			"\t" + "- Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.\n" + "\t" + "- Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.\n" + "\t" + "- Normalize error bars: Same as for descriptive plots."
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); 		}
 		}
 		Common.BarPlots
 		{
@@ -119,8 +123,8 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); checked: true		}
-		RadioButton { value: "listwise";						label: qsTr("Exclude cases listwise")								}
+		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); info: qsTr("In case of multiple T-tests within a single analysis, each test will be conducted using all cases with valid data for the difference score for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default.") ; checked: true		}
+		RadioButton { value: "listwise";						label: qsTr("Exclude cases listwise"); info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all difference scores. Sample size is therefore constant across the tests.")								}
 	}
 
 }

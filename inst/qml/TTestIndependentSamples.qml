@@ -24,7 +24,8 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.")
+	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.\n") +
+	"## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous.\n" + "- The observations in both groups are a random sample from the population.\n" + "- The dependent variable is normally distributed in each group of the independent variable.\n" + "- The population variances in the two groups are homogeneous." 
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -35,6 +36,7 @@ Form
 
 	VariablesForm
 	{
+		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");	info: qsTr("In this box the dependent variable is selected"); 												allowedColumns: ["scale"];			minNumericLevels: 2}
@@ -114,13 +116,15 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.")
-			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ; info: qsTr(" Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.\n") + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage."
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ;  }
 		}
 		CheckBox
 		{
-			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.\n" + "\t" + "- Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.\n") +
+			"- Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure.\n" + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.\n" +
+			"\t" + "- Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.\n" + "\t" + "- Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.\n" + "\t" + "- Normalize error bars: Same as for descriptive plots."
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; }
 		}
 		Common.BarPlots
 		{	
