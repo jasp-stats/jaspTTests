@@ -173,7 +173,7 @@ test_that("Analysis handles integer overflow", {
 
   set.seed(4491)
   dat <- data.frame(dependent_var = rnorm(2e5),
-                    grouping      = rep(c(1, 2), each = 1e5))
+                    grouping      = factor(rep(c(1, 2), each = 1e5)))
 
   options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$dependent <- "dependent_var"
