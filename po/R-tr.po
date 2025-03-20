@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2024-10-26 02:47\n"
-"PO-Revision-Date: 2025-03-19 23:04+0000\n"
+"PO-Revision-Date: 2025-03-20 03:45+0000\n"
 "Last-Translator: Uğur ÇELİK <prof_ugur@hotmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/tr/>\n"
@@ -227,16 +227,16 @@ msgid "Welch's t-test."
 msgstr ""
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
 msgstr ""
 
 msgid "Statistic"
-msgstr ""
+msgstr "İstatistik"
 
 msgid "Test"
-msgstr ""
+msgstr "Test/ Test Et"
 
 msgid "df"
 msgstr "sd (serbestlik derecesi)df"
