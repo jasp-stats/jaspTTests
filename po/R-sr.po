@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.19.2\n"
 "POT-Creation-Date: 2024-10-26 02:47\n"
-"PO-Revision-Date: 2025-03-24 17:05+0000\n"
+"PO-Revision-Date: 2025-03-24 23:56+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/sr/>\n"
@@ -33,136 +33,144 @@ msgid "Variables %1$s and %2$s are the same!"
 msgstr "Варијабле %1$s и %2$s су исте!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Дескриптивни графикони"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Графикони трака"
 
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Аритметичка средина"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Коефицијент варијације"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Веродостојан интервал"
 
 msgid "Lower"
-msgstr ""
+msgstr "Ниже"
 
 msgid "Upper"
-msgstr ""
+msgstr "Горњи"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Инференцијални графикони"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
+"Графикон провере робусности Бајесовог фактора тренутно није подржан за "
+"постављен претходни услов."
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
 msgstr ""
+"Графикон провере робусности секвенцијалне анализе тренутно није подржан за "
+"постављени претходни услов."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "Очекиван је нумерички или карактер rscale, али је добијен %s."
 
 msgid "Running robustness check %1$d / %2$d"
-msgstr ""
+msgstr "Провера робусности у току %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "максимум BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "претходни корисник"
 
 msgid "wide prior"
-msgstr ""
+msgstr "широки претходни"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "ултрашироки претходни"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
-msgstr ""
+msgstr "%1$s на r==%2$s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Неки Бајесови фактори су бесконачни"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "Ширина Кошијевог претходног услова"
 
 msgid "Running sequential analysis %1$d / %2$d"
-msgstr ""
+msgstr "Покретање секвенцијалне анализе %1$d / %2$d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Задњи"
 
 msgid "Prior"
-msgstr ""
+msgstr "Претходно"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% CI:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "Величина ефекта"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Графикони кишног облака"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Графикони разлика у облику кишног облака"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "Бајесов фактор није могао бити израчунат"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "Бајесов фактор је бесконачан"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Бајесов фактор је премали"
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
 msgstr ""
+"t-вредност је велика. За израчунавање Бајесовог фактора коришћена је Savage-"
+"Dickey апроксимација, али процена грешке није могућа."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "Процена грешке није доступна за нормалне претходне услове."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Бајесов Mann-Whitney U тест"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Бајесов t-тест за независне узорке"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"Резултат заснован на алгоритму проширења података са 5 ланаца од %.0f "
+"итерација."
 
 msgid "error %%"
-msgstr ""
+msgstr "грешка %%"
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
@@ -171,13 +179,15 @@ msgid "For all tests, the alternative hypothesis specifies that the location of 
 msgstr ""
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Бајесов Wilcoxon Signed-Rank тест"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Бајесов t-тест за један узорак"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је средња вредност "
+"популације већа од %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
 msgstr ""
@@ -201,7 +211,7 @@ msgid "Mann-Whitney U test."
 msgstr ""
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
 msgstr ""
@@ -246,7 +256,7 @@ msgid "Location Parameter"
 msgstr ""
 
 msgid "Effect Size"
-msgstr ""
+msgstr "Величина ефекта"
 
 msgid "Student t-test and Welch t-test"
 msgstr ""
