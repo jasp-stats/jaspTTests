@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-24 23:56+0000\n"
+"PO-Revision-Date: 2025-03-25 01:47+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/sr/>\n"
@@ -76,7 +76,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
@@ -88,11 +88,11 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
@@ -100,7 +100,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
@@ -148,7 +148,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
@@ -160,11 +160,11 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
@@ -172,7 +172,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -236,7 +236,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
@@ -248,11 +248,11 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
@@ -260,7 +260,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
@@ -336,7 +336,7 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
@@ -420,7 +420,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
@@ -484,7 +484,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
