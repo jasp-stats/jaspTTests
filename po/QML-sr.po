@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 01:47+0000\n"
+"PO-Revision-Date: 2025-03-26 01:12+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/sr/>\n"
@@ -16,27 +16,27 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr ""
+msgstr "T-тестови"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "Класичан"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "T-тест за независне узорке"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "T-тест за упарене узорке"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Тест за један узорак"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "Бајесов"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
@@ -44,7 +44,7 @@ msgstr "Бајесов t-тест за независне узорке"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Бајесов T-тест за упарене узорке"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
@@ -52,27 +52,27 @@ msgstr "Бајесов t-тест за један узорак"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Зависне варијабле"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Групишуће варијабле"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Група 1 ≠ Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Група 1 > Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Група 1 < Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
@@ -80,11 +80,11 @@ msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
@@ -144,7 +144,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
@@ -152,11 +152,11 @@ msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
@@ -232,7 +232,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
@@ -240,11 +240,11 @@ msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
@@ -296,7 +296,7 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Групишуће варијабле"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
@@ -316,7 +316,7 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Параметар локације"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
@@ -324,15 +324,15 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen's d"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr ""
+msgstr "Glass' delta"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr ""
+msgstr "Hedges' g"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
@@ -348,15 +348,15 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Група 1 ≠ Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Група 1 > Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Група 1 < Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -476,7 +476,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Параметар локације"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
@@ -560,7 +560,7 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Зависне варијабле"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
@@ -612,11 +612,11 @@ msgstr "Величина ефекта"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Браун-Форсајт"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr ""
+msgstr "Левенов"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
@@ -628,15 +628,15 @@ msgstr ""
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "Стандардна грешка"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "Фиксирај хоризонталну осу на 0"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
@@ -676,15 +676,15 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикон „Plots“"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
