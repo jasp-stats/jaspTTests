@@ -1,93 +1,98 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-03-28 12:20+0000\n"
+"Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/sr/>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.11-dev\n"
+"X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr ""
-
-msgctxt "Description|"
-msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "T-тестови"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "Класичан"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "T-тест за независне узорке"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "T-тест за упарене узорке"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Тест за један узорак"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "Бајесов"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Бајесов t-тест за независне узорке"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Бајесов T-тест за упарене узорке"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Бајесов t-тест за један узорак"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Зависне варијабле"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Групишуће варијабле"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Група 1 ≠ Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Група 1 > Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Група 1 < Група 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
@@ -95,15 +100,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestBayesianIndependentSamples|"
-msgid "Horizontal display"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
@@ -147,27 +144,27 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
@@ -175,15 +172,7 @@ msgstr ""
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
-
-msgctxt "TTestBayesianOneSample|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestBayesianOneSample|"
-msgid "Horizontal display"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -230,10 +219,6 @@ msgid "Exclude cases listwise"
 msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
-msgid "Variable Pairs"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr ""
 
@@ -247,27 +232,27 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Претходни и постериорни"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Додатне информације"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
@@ -275,19 +260,7 @@ msgstr ""
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Raincloud difference plots"
-msgstr ""
-
-msgctxt "TTestBayesianPairedSamples|"
-msgid "Horizontal display"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
@@ -322,12 +295,8 @@ msgid "Exclude cases listwise"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
-msgid "Dependent Variables"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Групишуће варијабле"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
@@ -347,42 +316,30 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Параметар локације"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
-msgid "Effect size"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr ""
+msgstr "Cohen's d"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr ""
+msgstr "Glass' delta"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr ""
+msgstr "Hedges' g"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
-msgid "Horizontal display"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
@@ -391,15 +348,15 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Група 1 ≠ Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Група 1 > Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Група 1 < Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -458,31 +415,15 @@ msgid "Additional Statistics"
 msgstr ""
 
 msgctxt "TTestOneSample|"
-msgid "Location estimate"
-msgstr ""
-
-msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr ""
 
 msgctxt "TTestOneSample|"
-msgid "Effect size"
-msgstr ""
-
-msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr ""
-
-msgctxt "TTestOneSample|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestOneSample|"
-msgid "Horizontal display"
 msgstr ""
 
 msgctxt "TTestOneSample|"
@@ -518,10 +459,6 @@ msgid "Exclude cases listwise"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
-msgid "Variable Pairs"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
 msgid "Tests"
 msgstr ""
 
@@ -539,34 +476,18 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "Параметар локације"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
-msgid "Effect size"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Дескриптивна статистика"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Raincloud plots"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Raincloud difference plots"
-msgstr ""
-
-msgctxt "TTestPairedSamples|"
-msgid "Horizontal display"
 msgstr ""
 
 msgctxt "TTestPairedSamples|"
@@ -601,13 +522,101 @@ msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
-msgctxt "TTestIndependentSamples|"
-msgid "Brown-Forsythe"
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr "Графикони разлика у облику кишног облака"
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
-msgid "Levene's"
+msgid "Dependent Variables"
+msgstr "Зависне варијабле"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
 msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr "Графикони кишног облака"
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr "Графикони разлика у облику кишног облака"
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Effect size"
+msgstr "Величина ефекта"
+
+msgctxt "TTestOneSample|"
+msgid "Effect size"
+msgstr "Величина ефекта"
+
+msgctxt "TTestPairedSamples|"
+msgid "Effect size"
+msgstr "Величина ефекта"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr "Браун-Форсајт"
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr "Левенов"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
@@ -619,15 +628,15 @@ msgstr ""
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Интервал веродостојности"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "Стандардна грешка"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "Фиксирај хоризонталну осу на 0"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
@@ -667,15 +676,15 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Графикони"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
