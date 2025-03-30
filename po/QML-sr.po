@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-28 12:20+0000\n"
+"PO-Revision-Date: 2025-03-31 00:01+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/sr/>\n"
@@ -96,7 +96,7 @@ msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Провера робусности"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
@@ -104,43 +104,43 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "Бр. узорака"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Изузми случајеве по зависној варијабли"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "Варијабле"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "Вредност теста:"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
@@ -168,7 +168,7 @@ msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Провера робусности"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
@@ -176,59 +176,59 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ вредност теста"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> вредност теста"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< вредност теста"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon-ов тест знакова са ранговима"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr ""
+msgstr "Бр. узорака"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Изузми случајеве по зависној варијабли"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "Мера 1 ≠ Мера 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "Мера 1 > Мера 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "Мера 1 < Мера 2"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
@@ -256,7 +256,7 @@ msgstr "Секвенцијална анализа"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "Провера робусности"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
@@ -264,35 +264,35 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon-ов тест знакова са ранговима"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "Бр. узорака"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Изузми случајеве по зависној варијабли"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
@@ -300,19 +300,19 @@ msgstr "Групишуће варијабле"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr ""
+msgstr "Welch"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
@@ -320,7 +320,7 @@ msgstr "Параметар локације"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Интервал поверења"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
@@ -340,11 +340,11 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Дескриптивни графикони"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke максималан p-однос"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -360,63 +360,63 @@ msgstr "Група 1 < Група 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Провере претпоставке"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "Нормалност"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
-msgstr ""
+msgstr "Једнакост варијанси"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Изузми случајеве по зависној варијабли"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "Варијабле"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon-ов тест знакова са ранговима"
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "Z тест"
 
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "Вредност теста:"
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr ""
+msgstr "Станд. девијација:"
 
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Интервал поверења"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
@@ -424,55 +424,55 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Дескриптивни графикони"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke максималан p-однос"
 
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ вредност теста"
 
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> вредност теста"
 
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< вредност теста"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "Провере претпоставке"
 
 msgctxt "TTestOneSample|"
 msgid "Normality"
-msgstr ""
+msgstr "Нормалност"
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "Тестови"
 
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "Wilcoxon-ов тест знакова са ранговима"
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Додатна статистика"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
@@ -480,7 +480,7 @@ msgstr "Параметар локације"
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Интервал поверења"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
@@ -488,43 +488,43 @@ msgstr "Дескриптивна статистика"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "Дескриптивни графикони"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke максималан p-однос"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "Мера 1 ≠ Мера 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "Мера 1 > Мера 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "Мера 1 < Мера 2"
 
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Провере претпоставке"
 
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "Нормалност"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Недостајуће вредности"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Искључите случајеве на листи"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "Процена разлике између две средине"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
@@ -532,7 +532,7 @@ msgstr "Графикони кишног облака"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
@@ -540,11 +540,11 @@ msgstr "Графикони кишног облака"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Варијабилни парови"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
@@ -556,7 +556,7 @@ msgstr "Графикони разлика у облику кишног обла�
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
@@ -568,11 +568,11 @@ msgstr "Графикони кишног облака"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "Процена локације"
 
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
@@ -580,11 +580,11 @@ msgstr "Графикони кишног облака"
 
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "Варијабилни парови"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
@@ -596,7 +596,7 @@ msgstr "Графикони разлика у облику кишног обла�
 
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Хоризонтални приказ"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect size"
@@ -620,11 +620,11 @@ msgstr "Левенов"
 
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "Графикони трака"
 
 msgctxt "BarPlots|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Интервал поверења"
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
@@ -640,39 +640,39 @@ msgstr "Фиксирај хоризонталну осу на 0"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "Изузми случајеве по варијабли"
 
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "Алтернативна хипотеза"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "Изузми случајеве по варијабли"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "Mann-Whitney"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
@@ -688,16 +688,16 @@ msgstr "Графикони"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
-msgstr ""
+msgstr "Исправан за корелацију"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q графикон остатака"
 
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q графикон остатака"
 
 msgctxt "TTestPairedSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "Q-Q графикон остатака"
