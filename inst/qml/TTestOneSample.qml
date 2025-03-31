@@ -36,7 +36,7 @@ Form
 		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "dependent"; title: qsTr("Variables"); allowedColumns: ["scale"]; minNumericLevels: 2 }
+		AssignedVariablesList { name: "dependent"; title: qsTr("Variables"); info: qsTr("In this box the dependent variable is selected.\n"); allowedColumns: ["scale"]; minNumericLevels: 2 }
 	}
 
 	Group
