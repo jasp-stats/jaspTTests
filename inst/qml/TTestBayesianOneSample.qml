@@ -136,9 +136,12 @@ Form
 		name: "naAction"
 		title: qsTr("Missing Values")
 		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the multiple t-tests.; checked: true") }
-		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise"); info: qsTr(" In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.\n") +
-		"## " + "prior" + "\n" + "\t" + "Standardized effect size\n" + "\t" + "\t" + "Default\n" + "\t" + "\t" + "\t" + "- Cauchy: Scale of the Cauchy prior distribution on effect size under the alternative hypothesis; the default is 0.707.\n" +
- "\t" + "\t" + "Informed\n" + "\t" + "\t" + "\t" + "- Cauchy: Scale and location.\n" + "\t" + "\t" + "\t" + "- Normal: Mean and standard deviation." + "\t" + "\t" + "\t" + "- Student's t: Scale, location and degrees of freedom (df)."							}
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise"); 
+		info: qsTr(" In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.\n") +
+		"## " + "Prior" + "\n" + "\t" + "Standardized effect size\n" +  "\n" + "\t" + "\t" + "Default\n" + "\n" + "\t" + "\t" + "\t" + 
+		"- Cauchy: Scale of the Cauchy prior distribution on effect size under the alternative hypothesis; the default is 0.707.\n" + 
+		"\n" + "\t" + "\t" + "Informed\n" + "\n" + "\t" + "\t" + "\t" + "- Cauchy: Scale and location.\n" + "\t" + "\t" + "\t" + 
+		"- Normal: Mean and standard deviation." + "\t" + "\t" + "\t" + "- Student's t: Scale, location and degrees of freedom (df)."  }
 	}
 
 
