@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.17.0\n"
 "POT-Creation-Date: 2024-10-26 02:47\n"
-"PO-Revision-Date: 2025-04-02 18:57+0000\n"
-"Last-Translator: Иван Рудаков <riv@polygene.ru>\n"
+"PO-Revision-Date: 2025-04-10 05:00+0000\n"
+"Last-Translator: MikeWinny <winny63@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/ru/>\n"
 "Language: ru\n"
@@ -86,9 +86,8 @@ msgstr "Приор и Постериор"
 msgid "Bayes Factor Robustness Check"
 msgstr "Проверка робастности фактора Байеса"
 
-#, fuzzy
 msgid "Sequential Analysis"
-msgstr "Последовательная проверка гипотез"
+msgstr "Последовательный анализ"
 
 #, fuzzy
 msgid ""
