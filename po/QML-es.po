@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-04-12 02:51+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -81,7 +87,7 @@ msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Comprobación de la robustez del Factor de Bayes"
+msgstr "Comprobación de robustez del Factor de Bayes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
@@ -153,7 +159,7 @@ msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr "Comprobación de la robustez del Factor de Bayes"
+msgstr "Comprobación de robustez del Factor de Bayes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
@@ -241,7 +247,7 @@ msgstr "Intervalo de credibilidad"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Comprobación de la robustez del Factor de Bayes"
+msgstr "Comprobación de robustez del Factor de Bayes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
