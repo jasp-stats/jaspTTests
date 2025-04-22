@@ -9,7 +9,7 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr "t-Testleri"
+msgstr "T-Testleri"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
@@ -17,11 +17,11 @@ msgstr "İki ortalama arasındaki farkı değerlendirin"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "Classical"
+msgstr "Klasik"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "Bağımsız Örneklem t-Testi"
+msgstr "Bağımsız Örneklemler T-Testi"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
@@ -29,23 +29,23 @@ msgstr "Eşlenik Örnekler t-Testi (Bağımlı Örneklem t-Testi"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Tek Örneklem t-Testi"
+msgstr "Tek Örneklem T-Testi"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesçi"
+msgstr "Bayes"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "Bayesçi Bağımsız Örnekler t-Testi"
+msgstr "Bayes Bağımsız Örnekler T-Testi"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Bayesçi Eşlenik Örneklem t-Testi"
+msgstr "Bayes Eşleştirilmiş Örnekler T-Testi"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "Bayesçi Tek Örneklem T-Testi"
+msgstr "Bayes Tek Örneklem T-Testi"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"

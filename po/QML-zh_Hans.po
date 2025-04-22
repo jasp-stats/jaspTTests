@@ -667,17 +667,14 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney 检验"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "绘图"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "绘图"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
 msgstr "绘图"

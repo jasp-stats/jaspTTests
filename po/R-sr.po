@@ -1,0 +1,486 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspTTests 0.19.2\n"
+"POT-Creation-Date: 2024-10-26 02:47\n"
+"PO-Revision-Date: 2025-03-31 01:03+0000\n"
+"Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.11-dev\n"
+
+msgid "Assumption Checks"
+msgstr "Провере претпоставке"
+
+msgid "Descriptives"
+msgstr "Дескриптивна статистика"
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Vovk-Sellke максимум <em>p</em>-однос: Заснован на двостраној <em>p</em>-"
+"вредности, максимални могући однос у корист H%1$s у односу на H%2$s износи 1/"
+"(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & "
+"Berger, 2001)."
+
+msgid "Q-Q Plots"
+msgstr "Q-Q дијаграм"
+
+msgid "Please provide another variable."
+msgstr "Наведите другу варијаблу."
+
+msgid "Variables %1$s and %2$s are the same!"
+msgstr "Варијабле %1$s и %2$s су исте!"
+
+msgid "Descriptives Plots"
+msgstr "Дескриптивни графикони"
+
+msgid "Bar Plots"
+msgstr "Графикони трака"
+
+msgid "Group"
+msgstr "Група"
+
+msgid "N"
+msgstr "N"
+
+msgid "Mean"
+msgstr "Аритметичка средина"
+
+msgid "SD"
+msgstr "SD"
+
+msgid "SE"
+msgstr "SE"
+
+msgid "Coefficient of variation"
+msgstr "Коефицијент варијације"
+
+msgid "%.0f%% Credible Interval"
+msgstr "%.0f%% Веродостојан интервал"
+
+msgid "Lower"
+msgstr "Ниже"
+
+msgid "Upper"
+msgstr "Горњи"
+
+msgid "Inferential Plots"
+msgstr "Инференцијални графикони"
+
+msgid "Prior and Posterior"
+msgstr "Претходни и постериорни"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "Провера робусности Бајесовог фактора"
+
+msgid "Sequential Analysis"
+msgstr "Секвенцијална анализа"
+
+msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgstr ""
+"Графикон провере робусности Бајесовог фактора тренутно није подржан за "
+"постављен претходни услов."
+
+msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgstr ""
+"Графикон провере робусности секвенцијалне анализе тренутно није подржан за "
+"постављени претходни услов."
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr "Очекиван је нумерички или карактер rscale, али је добијен %s."
+
+msgid "Running robustness check %1$d / %2$d"
+msgstr "Провера робусности у току %1$d / %2$d"
+
+msgid "max BF%s"
+msgstr "максимум BF%s"
+
+msgid "user prior"
+msgstr "претходни корисник"
+
+msgid "wide prior"
+msgstr "широки претходни"
+
+msgid "ultrawide prior"
+msgstr "ултрашироки претходни"
+
+msgid "BF%s"
+msgstr "BF%s"
+
+msgid "%1$s at r==%2$s"
+msgstr "%1$s на r==%2$s"
+
+msgid "Some Bayes factors were infinite"
+msgstr "Неки Бајесови фактори су бесконачни"
+
+msgid "Cauchy prior width"
+msgstr "Ширина Кошијевог претходног услова"
+
+msgid "Running sequential analysis %1$d / %2$d"
+msgstr "Покретање секвенцијалне анализе %1$d / %2$d"
+
+msgid "n"
+msgstr "n"
+
+msgid "Posterior"
+msgstr "Задњи"
+
+msgid "Prior"
+msgstr "Претходно"
+
+msgid "%s%% CI:"
+msgstr "%s%% CI:"
+
+msgid "Effect size"
+msgstr "Величина ефекта"
+
+msgid "Raincloud Plots"
+msgstr "Графикони кишног облака"
+
+msgid "Raincloud Difference Plots"
+msgstr "Графикони разлика у облику кишног облака"
+
+msgid "Bayes factor could not be calculated"
+msgstr "Бајесов фактор није могао бити израчунат"
+
+msgid "Bayes factor is infinite"
+msgstr "Бајесов фактор је бесконачан"
+
+msgid "The Bayes factor is too small"
+msgstr "Бајесов фактор је премали"
+
+msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
+msgstr ""
+"t-вредност је велика. За израчунавање Бајесовог фактора коришћена је Savage-"
+"Dickey апроксимација, али процена грешке није могућа."
+
+msgid "No error estimate is available for normal priors."
+msgstr "Процена грешке није доступна за нормалне претходне услове."
+
+msgid "Bayesian Mann-Whitney U Test"
+msgstr "Бајесов Mann-Whitney U тест"
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Бајесов t-тест за независне узорке"
+
+msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+"Резултат заснован на алгоритму проширења података са 5 ланаца од %.0f "
+"итерација."
+
+msgid "error %%"
+msgstr "грешка %%"
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је локација групе "
+"<em>%1$s</em> већа од локације групе <em>%2$s</em>."
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је локација групе "
+"<em>%1$s</em> je мања од локације групе <em>%2$s</em>."
+
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr "Бајесов Wilcoxon Signed-Rank тест"
+
+msgid "Bayesian One Sample T-Test"
+msgstr "Бајесов t-тест за један узорак"
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је средња вредност "
+"популације већа од %s."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је средња вредност "
+"популације мања од %s."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да се средња вредност "
+"популације разликује од %s."
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Бајесов T-тест за упарене узорке"
+
+msgid "Measure 1"
+msgstr "Мера 1"
+
+msgid "Measure 2"
+msgstr "Мера 2"
+
+msgid "Independent Samples T-Test"
+msgstr "T-тест за независне узорке"
+
+msgid "Mann-Whitney U test."
+msgstr "Mann-Whitney U тест."
+
+msgid "U"
+msgstr "U"
+
+msgid "Welch's t-test."
+msgstr "Welch's t-тест."
+
+msgid "t"
+msgstr "t"
+
+msgid "Student's t-test."
+msgstr "Студентов t-тест."
+
+msgid "Statistic"
+msgstr "Статистика"
+
+msgid "Test"
+msgstr "Тест"
+
+msgid "df"
+msgstr "df"
+
+msgid "p"
+msgstr "p"
+
+msgid "Cohen's d"
+msgstr "Cohen's d"
+
+msgid "Glass' delta"
+msgstr "Glass' delta"
+
+msgid "Hedges' g"
+msgstr "Hedges' g"
+
+msgid "Mean Difference"
+msgstr "Средња разлика"
+
+msgid "Hodges-Lehmann Estimate"
+msgstr "Ходџис-Леманова проценка"
+
+msgid "Rank-Biserial Correlation"
+msgstr "Ранг-Бисеријална корелација"
+
+msgid "Location Parameter"
+msgstr "Параметар локације"
+
+msgid "Effect Size"
+msgstr "Величина ефекта"
+
+msgid "Student t-test and Welch t-test"
+msgstr "Студент t-тест и Welch t-тест"
+
+msgid "Student t-test"
+msgstr "Студент t-тест"
+
+msgid "Welch t-test"
+msgstr "Welch t-тест"
+
+msgid "SE Difference"
+msgstr "SE разлика"
+
+msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"За %s, параметар локације је дат средњом разликом. За Mann-Whitney test, "
+"параметар локације је дат Ходџис-Лемановом проценком."
+
+msgid "%1$s%% CI for %2$s"
+msgstr "%1$s%% CI за %2$s"
+
+msgid "SE %1$s"
+msgstr "SE %1$s"
+
+msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgstr ""
+"За Mann-Whitney test, величина ефекта је дата рангираном бисеријалном "
+"корелацијом."
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr "За %1$s, величина ефекта је дата по %2$s."
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr "Тест нормалности (Shapiro-Wilk)"
+
+msgid "Residuals"
+msgstr "Остаци"
+
+msgid "W"
+msgstr "W"
+
+msgid "Significant results suggest a deviation from normality."
+msgstr "Значајни резултати указују на одступање од нормалности."
+
+msgid "Brown-Forsythe"
+msgstr "Браун-Форсајт"
+
+msgid "Levene's"
+msgstr "Левенов"
+
+msgid "Test of Equality of Variances (%1$s)"
+msgstr "Тест једнакости варијанси (%1$s)"
+
+msgid "F"
+msgstr "F"
+
+msgid "%s<sub>1</sub>"
+msgstr "%s<sub>1</sub>"
+
+msgid "%s<sub>2</sub>"
+msgstr "%s<sub>2</sub>"
+
+msgid "greater"
+msgstr "веће"
+
+msgid "less"
+msgstr "мањe"
+
+msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је група %1$s is %2$s од "
+"групе %3$s."
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Браун-Форсајтов тест је значајан (p < .05), што указује на кршење "
+"претпоставке једнаких варијанси"
+
+msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Левенов тест је значајан (p < .05), што указује на кршење претпоставке "
+"једнаких варијанси"
+
+msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+"Glass' delta користи стандардну девијацију групе %1$s од променљивих %2$s."
+
+msgid "F-statistic could not be calculated"
+msgstr "F-статистика није могла бити израчуната"
+
+msgid "Group Descriptives"
+msgstr "Дескриптивне статистике групе"
+
+msgid "Mean Rank"
+msgstr "Средњи ранг"
+
+msgid "Sum Rank"
+msgstr "Укупан ранг"
+
+msgid "One Sample T-Test"
+msgstr "Тест за један узорак"
+
+msgid "Wilcoxon signed-rank test."
+msgstr "Вилцокон тест рангирања са потписом"
+
+msgid "V"
+msgstr "V"
+
+msgid "Z test."
+msgstr "Z тест."
+
+msgid "Z"
+msgstr "Z"
+
+msgid "Location Difference"
+msgstr "Разлика локације"
+
+msgid "Student t-test and Z-test"
+msgstr "Студент t-тест и Z-тест"
+
+msgid "Z-test"
+msgstr "Z-тест"
+
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgstr ""
+"За %s, роцена разлике локације дата је средњом разликом узорка <em>d</em>. "
+"За Wilcoxon тест, процена разлике локације дата је Ходџис-Лемановом "
+"проценком."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr "За Студент t-test, величина ефекта је дата по Cohen's <em>d</em>."
+
+msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"За Wilcoxon тест, величина ефекта је дата рангираном бисеријалном "
+"корелацијом за упарене узорке."
+
+msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgstr ""
+"За Z тест, величина ефекта је дата Cohen-овом <em>d</em> (засновано на датој "
+"стандардној девијацији популације)."
+
+msgid "greater than"
+msgstr "већи од"
+
+msgid "less than"
+msgstr "мање од"
+
+msgid "different from"
+msgstr "различит од"
+
+msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgstr "За %1$s, алтернативна хипотеза одређује да је средња вреднос %2$s %3$s."
+
+msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgstr ""
+"За Wilcoxon тест, алтернативна хипотеза одређује да је медијана %1$s %2$s."
+
+msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
+msgstr ""
+"Интервал поверења (CI) није могао бити израчунат за величину ефекта, због "
+"малог узорка и/или екстремне величине ефекта."
+
+msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr "Узор је премали за жељени ниво поверења. Користи %.1f%% уместо тога"
+
+msgid "Paired Samples T-Test"
+msgstr "T-тест за упарене узорке"
+
+msgid "z"
+msgstr "z"
+
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"За Student t-тест, параметар локације је дат средњом разликом <em>d</em>. За "
+"Wilcoxon тест, параметар локације је дат Ходџис-Лемановом проценком."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"За Student t-тест, величина ефекта је дата Cohen-овим <em>d</em>. За "
+"Wilcoxon тест, величина ефекта је дата рангираном бисеријалном корелацијом "
+"за упарене узорке."
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr "Cohen's d кориговано за корелацију између опажања."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је Мера 1 мања од Мере 2."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је Мера 1 већа од Мере 2."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
+msgstr "За све тестове, алтернативна хипотеза одређује да је %1$s мања од %2$s."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
+msgstr "За све тестове, алтернативна хипотеза одређује да је %1$s већа од %2$s."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је Мера 1 мања од Мере 2. "
+"На пример %1$s је мање од %2$s."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
+msgstr ""
+"За све тестове, алтернативна хипотеза одређује да је Мера 1 мања од Мере 2. "
+"На пример %1$s је веће од %2$s."
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] "Следећи пар је дуплиран: %s"
+msgstr[1] "Понеки парови су дуплирани: %s"
+msgstr[2] "Следећи парови су дуплирани: %s"
