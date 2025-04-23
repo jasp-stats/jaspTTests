@@ -125,7 +125,7 @@ TTestBayesianIndependentSamplesInternal <- function(jaspResults, dataset, option
 
         # If the samples can be reused, don't call the Gibbs sampler again, but recalculate the
         # Bayes factor with new settings and take the samples from state.
-        if (!is.null(ttestResults[["delta"]][[var]]) && !is.na(ttestResults[["delta"]][[var]])) {
+        if (!is.null(ttestResults[["delta"]][[var]]) && !anyNA(ttestResults[["delta"]][[var]])) {
 
           bf.raw <- try(.computeBayesFactorWilcoxon(
             deltaSamples         = ttestResults[["delta"]][[var]],
