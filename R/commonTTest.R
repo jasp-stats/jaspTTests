@@ -558,8 +558,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     geomHline +
     ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
     ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
-    ggplot2::scale_fill_brewer(palette = "Dark2") +
-    ggplot2::scale_color_brewer(palette = "Dark2")
+    jaspGraphs::scale_JASPcolor_discrete(  palette = "colorblind")
 
   p <- jaspGraphs::themeJasp(p)
 
