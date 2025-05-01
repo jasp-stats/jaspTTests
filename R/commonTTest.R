@@ -561,6 +561,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
     ggplot2::scale_fill_brewer(palette = rainCols) +
     ggplot2::scale_color_brewer(palette = rainCols) +
+    jaspGraphs::geom_rangeframe() +
     jaspGraphs::themeJaspRaw()
 
   return(p)
