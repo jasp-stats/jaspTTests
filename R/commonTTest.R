@@ -560,9 +560,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
     ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
     ggplot2::scale_fill_brewer(palette = rainCols) +
-    ggplot2::scale_color_brewer(palette = rainCols)
-
-  p <- jaspGraphs::themeJaspRaw(p)
+    ggplot2::scale_color_brewer(palette = rainCols) +
+    jaspGraphs::themeJaspRaw()
 
   return(p)
 }
