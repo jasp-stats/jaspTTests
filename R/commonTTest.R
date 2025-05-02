@@ -538,6 +538,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   }
 
   coordFlip <- if (horiz) ggplot2::coord_flip() else NULL
+  rainCols <- if (length(xBreaks) < 9) "Dark2" else "Set3"
 
   geomHline <- NULL
   if (length(levels(grp)) == 1) {
@@ -558,10 +559,10 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     geomHline +
     ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
     ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
-    ggplot2::scale_fill_brewer(palette = "Dark2") +
-    ggplot2::scale_color_brewer(palette = "Dark2")
-
-  p <- jaspGraphs::themeJasp(p)
+    ggplot2::scale_fill_brewer(palette = rainCols) +
+    ggplot2::scale_color_brewer(palette = rainCols) +
+    jaspGraphs::geom_rangeframe() +
+    jaspGraphs::themeJaspRaw()
 
   return(p)
 }
