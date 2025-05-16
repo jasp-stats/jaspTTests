@@ -24,8 +24,12 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.\n") +
-	"## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous.\n" + "- The observations in both groups are a random sample from the population.\n" + "- The dependent variable is normally distributed in each group of the independent variable.\n" + "- The population variances in the two groups are homogeneous." 
+	info: qsTr("The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.") + "\n" +
+		"## " + qsTr("Assumptions") + "\n" +
+		"- " + qsTr("The dependent variable is continuous.") + "\n" +
+		"- " + qsTr("The observations in both groups are a random sample from the population.") + "\n" +
+		"- " + qsTr("The dependent variable is normally distributed in each group of the independent variable.") + "\n" +
+		"- " + qsTr("The population variances in the two groups are homogeneous.")
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -46,7 +50,7 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-    	CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selected by default");	 checked: true	}
+		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selected by default");	 checked: true	}
 		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Use when variances are not equally distributed accross groups");					}
 		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent T-test. Use when data is not normally distributed");				}
 	}
@@ -57,17 +61,18 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "meanDifference"; label: qsTr("Location parameter"); info: qsTr(" For the Student's t-test and Welch's t-test, the location parameter is given by mean difference; for the Mann-Whitney test, the location parameter is given by the Hodges-Lehmann estimate.")
+			name: "meanDifference"; label: qsTr("Location parameter"); info: qsTr("For the Student's t-test and Welch's t-test, the location parameter is given by mean difference; for the Mann-Whitney test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
-				name: "meanDifferenceCi"; label: qsTr("Confidence interval"); info: qsTr(" Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
+				name: "meanDifferenceCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 				childrenOnSameRow: true
 				CIField { name: "meanDifferenceCiLevel" }
 			}
 		}
 		CheckBox
-		{
-			name: "effectSize"; label: qsTr("Effect size"); info: qsTr(" For the Student t-test and Welch t-test, the effect size can be selected below; for the Mann-Whitney test, the effect size is given by the rank biserial correlation.")
+
+			name: "effectSize"; label: qsTr("Effect size"); info: qsTr("For the Student t-test and Welch t-test, the effect size can be selected below; for the Mann-Whitney test, the effect size is given by the rank biserial correlation.")
+
 			RadioButtonGroup {
 				name: "effectSizeType"
 				RadioButton { value: "cohen"; label: qsTr("Cohen's d") ; checked: true ; info: qsTr("For the Student's t-test, uses the pooled standard deviation to standardize the mean difference. For the Welch's t-test, uses the square-root of the average variance to standardize the mean difference.")}
@@ -116,15 +121,13 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.\n") + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage."
-			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ;  }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.\n")
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ; info: qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.") }
 		}
 		CheckBox
 		{
-			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.\n" + "\t" + "- Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.\n") +
-			"- Bar plots: Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure.\n" + "\t" + "- Confidence interval: Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.\n" +
-			"\t" + "- Standard error: By selecting this option, the error bars will represent standard errors of the mean of each condition.\n" + "\t" + "- Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0.\n" + "\t" + "- Normalize error bars: Same as for descriptive plots."
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.")}
 		}
 		Common.BarPlots
 		{	

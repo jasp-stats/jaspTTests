@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "http://cloud.r-project.org"
+        "URL": "https://cloud.r-project.org"
       }
     ]
   },
@@ -252,7 +252,7 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.6.4",
+      "Version": "3.6.5",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -274,18 +274,6 @@
       "Source": "Repository",
       "Requirements": [
         "R"
-      ]
-    },
-    "colorspace": {
-      "Package": "colorspace",
-      "Version": "2.1-1",
-      "Source": "Repository",
-      "Requirements": [
-        "R",
-        "methods",
-        "graphics",
-        "grDevices",
-        "stats"
       ]
     },
     "contfrac": {
@@ -575,7 +563,7 @@
     },
     "jaspBase": {
       "Package": "jaspBase",
-      "Version": "0.19.2",
+      "Version": "0.20.0",
       "Source": "GitHub",
       "Requirements": [
         "cli",
@@ -602,11 +590,11 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "d3c6d19feaa94dcd5c636345adb76a9f2e8bdac1"
+      "RemoteSha": "82b4b3fd094ac3b43e4c92bc6857da7efb7530d1"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
-      "Version": "0.19.2",
+      "Version": "0.20.0",
       "Source": "GitHub",
       "Requirements": [
         "testthat",
@@ -625,7 +613,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "cb357cc60fa30e106a87d3d99f9fe31312010f7e"
+      "RemoteSha": "78cc4121563962922e48513d1f27e10510263e8a"
     },
     "jsonlite": {
       "Package": "jsonlite",
@@ -646,7 +634,7 @@
     },
     "lattice": {
       "Package": "lattice",
-      "Version": "0.22-6",
+      "Version": "0.22-7",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -712,7 +700,7 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.9-1",
+      "Version": "1.9-3",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -757,15 +745,6 @@
         "tidyr",
         "tidyselect",
         "vctrs"
-      ]
-    },
-    "munsell": {
-      "Package": "munsell",
-      "Version": "0.5.1",
-      "Source": "Repository",
-      "Requirements": [
-        "colorspace",
-        "methods"
       ]
     },
     "mvtnorm": {
@@ -850,7 +829,7 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.3",
+      "Version": "0.5.4",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -1024,7 +1003,7 @@
     },
     "scales": {
       "Package": "scales",
-      "Version": "1.3.0",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -1033,7 +1012,6 @@
         "glue",
         "labeling",
         "lifecycle",
-        "munsell",
         "R6",
         "RColorBrewer",
         "rlang",
