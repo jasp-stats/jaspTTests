@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-05-16 20:03+0000\n"
-"Last-Translator: Ertuğrul Uyar <ertugruluyar.academic@gmail.com>\n"
+"Last-Translator: Utku Berberoğlu <utku.berber@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/tr/>\n"
 "Language: tr\n"
@@ -134,11 +134,11 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Kayıp Değerler"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Olguları her bir bağımlı değişken için kendi içinde dışla"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
