@@ -36,6 +36,8 @@ CheckBox
 
 		RadioButton
 		{
+
+
 			value: 				"ci"
 			label: 				framework === Common.Type.Framework.Classical ? qsTr("Confidence interval") : qsTr("Credible interval")
 			checked: 			true
@@ -46,6 +48,7 @@ CheckBox
 		}
 		RadioButton { value: 	"se";	label: qsTr("Standard error"); info: qsTr("By selecting this option, the error bars will represent standard errors of the mean of each condition." )}
 	}
+
 
 	CheckBox
 	{
