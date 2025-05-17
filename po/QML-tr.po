@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-16 23:05+0000\n"
-"Last-Translator: Ertuğrul Uyar <ertugruluyar.academic@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/tr/>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -231,13 +225,15 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
 msgstr "Eksik Değerler"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Her bir bağımlı değişken için durumları hariç tutun"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
@@ -275,9 +271,10 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
 msgstr "Bayes faktörü sağlamlık kontrolü"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Sıralı analiz"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
@@ -324,13 +321,15 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
 msgstr "Eksik Değerler"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Her bir bağımlı değişken için durumları hariç tutun"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
@@ -428,13 +427,15 @@ msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
 msgstr "Eksik Değerler"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Her bir bağımlı değişken için durumları hariç tutun"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
@@ -500,17 +501,20 @@ msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Test değeri"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Test değeri"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Test değeri"
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
@@ -524,9 +528,10 @@ msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Eksik Değerler"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
@@ -608,9 +613,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "Eksik Değerler"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
