@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-05-16 23:05+0000\n"
+"Last-Translator: Ertuğrul Uyar <ertugruluyar.academic@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/tr/>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.12-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -25,7 +31,7 @@ msgstr "Bağımsız Örneklemler T-Testi"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Eşlenik Örnekler t-Testi (Bağımlı Örneklem t-Testi"
+msgstr "Eşlenik Örnekler T-Testi (Bağımlı Örneklem T-Testi)"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
@@ -81,32 +87,28 @@ msgstr "ilave bilgi"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Güvenilir aralık"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Sağlamlık  kontrolü için Bayes faktörü"
+msgstr "Bayes faktörü sağlamlık kontrolü"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Sıralı analiz"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
 msgstr "Sağlamlık kontrolü"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
 msgstr "yağmur bulutu grafikleri"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
@@ -115,30 +117,30 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "Örnek yok"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "Her bir bağımlı değişken için durumları hariç tutun"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "Durumları liste boyunca hariç tutun"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
@@ -152,92 +154,82 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr "Test değeri:"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
 msgstr "Grafikler"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
 msgstr "Önceki ve sonraki"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
 msgstr "Ek bilgi"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Güvenilir aralık"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr "Sağlamlık  kontrolü için Bayes faktörü"
+msgstr "Bayes faktörü sağlamlık kontrolü"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Sıralı analiz"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
 msgstr "Sağlamlık kontrolü"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr "yağmur bulutu grafikleri"
+msgstr "Yağmur Bulutu grafikleri"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Test değeri"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Test değeri"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Test değeri"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr ""
+msgstr "Örnek yok"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
 msgstr "Ek İstatistikler"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
@@ -263,84 +255,74 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
 msgstr "Grafikler"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
 msgstr "Önceki ve sonraki"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr "ilave bilgi"
+msgstr "Ek bilgi"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Güvenilir aralık"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr "Sağlamlık  kontrolü için Bayes faktörü"
+msgstr "Bayes faktörü sağlamlık kontrolü"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
 msgstr "Sağlamlık kontrolü"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr "yağmur bulutu grafikleri"
+msgstr "Yağmur Bulutu grafikleri"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "Örnek yok"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
 msgstr "Ek İstatistikler"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
@@ -350,31 +332,26 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "Bağımlı değişkenler"
+msgstr "Bağımlı Değişkenler"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr "Gruplama Değişkeni"
+msgstr "Gruplandırma Değişkeni"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "Ek İstatistikler"
@@ -403,21 +380,18 @@ msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr "yağmur bulutu grafikleri"
+msgstr "Yağmur Bulutu grafikleri"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
@@ -426,17 +400,14 @@ msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "Grup 1 ≠ Grup 2"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
 msgstr "Grup 1 > Grup 2"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
 msgstr "Grup 1 < Grup 2"
@@ -455,7 +426,7 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -465,20 +436,17 @@ msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
 msgstr "Değişkenler"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -488,7 +456,6 @@ msgctxt "TTestOneSample|"
 msgid "Z Test"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Test value:"
 msgstr "Test değeri:"
@@ -497,7 +464,6 @@ msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
 msgstr "Ek İstatistikler"
@@ -514,21 +480,18 @@ msgctxt "TTestOneSample|"
 msgid "Effect size"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr "yağmur bulutu grafikleri"
+msgstr "Yağmur Bulutu grafikleri"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
@@ -559,7 +522,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
@@ -569,21 +532,18 @@ msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
 msgstr "Testler"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr "Student"
+msgstr "Öğrenci"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
 msgstr "Ek İstatistikler"
@@ -600,25 +560,22 @@ msgctxt "TTestPairedSamples|"
 msgid "Effect size"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr "Tanımlayıcılar"
+msgstr "Tanımlayıcılar (Açıklayıcılar)"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr "yağmur bulutu grafikleri"
+msgstr "Yağmur Bulutu grafikleri"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
 msgstr "Yatay görünüm"
@@ -649,7 +606,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "Eksik Değerler"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -673,7 +630,7 @@ msgstr ""
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Güvenilir aralık"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
@@ -715,22 +672,18 @@ msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
 msgstr "Grafikler"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "Grafikler"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
 msgstr "Grafikler"
