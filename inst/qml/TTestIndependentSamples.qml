@@ -70,8 +70,9 @@ Form
 			}
 		}
 		CheckBox
-		{
+
 			name: "effectSize"; label: qsTr("Effect size"); info: qsTr("For the Student t-test and Welch t-test, the effect size can be selected below; for the Mann-Whitney test, the effect size is given by the rank biserial correlation.")
+
 			RadioButtonGroup {
 				name: "effectSizeType"
 				RadioButton { value: "cohen"; label: qsTr("Cohen's d") ; checked: true ; info: qsTr("For the Student's t-test, uses the pooled standard deviation to standardize the mean difference. For the Welch's t-test, uses the square-root of the average variance to standardize the mean difference.")}
@@ -129,7 +130,8 @@ Form
 			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.")}
 		}
 		Common.BarPlots
-		{
+		{	
+		
 			framework:	form.framework
 		}
 	}
