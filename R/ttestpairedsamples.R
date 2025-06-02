@@ -586,7 +586,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
         next
       }
       groups  <- rep(pair, each = nrow(dataset))
-      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
+      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = factor(groups, levels = pair))
       missingIndex <- tapply(subData[["dependent"]], subData[["groups"]], is.na) # apply listwise deletion
       missingIndex <- apply(do.call(cbind, missingIndex), 1, any)
       subData <- subData[rep(!missingIndex, 2), ]
