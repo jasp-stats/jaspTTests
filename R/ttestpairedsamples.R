@@ -254,7 +254,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     res <- stats::t.test(c1, c2, paired = TRUE, conf.level = optionsList$percentConfidenceMeanDiff,
                          alternative = direction)
     df  <- ifelse(is.null(res$parameter), "", as.numeric(res$parameter))
-    
+
     if (options[["effectSizeCorrection"]]) {
       thisCor <- cor(c1, c2)
       d <- sqrt(2 * (1-thisCor) / n) * res[["statistic"]]
@@ -423,8 +423,8 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   container <- jaspResults[["ttestDescriptives"]]
 
   if (is.null(container[["plots"]])) {
-    subcontainer <- createJaspContainer(gettext("Descriptives Plots"), 
-                                        dependencies = c("descriptivesPlot", 
+    subcontainer <- createJaspContainer(gettext("Descriptives Plots"),
+                                        dependencies = c("descriptivesPlot",
                                                          "descriptivesPlotCiLevel"))
     subcontainer$position <- 5
     container[["plots"]] <- subcontainer
@@ -468,7 +468,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     group = factor(c(rep(paste0(pair[[1]]), length(c1)),
                      rep(paste0(pair[[2]]), length(c2))), levels = pair)
   )
-                                 
+
   summaryStat <- .summarySEwithin(data, measurevar = "dependent", withinvars = "group",
                                  idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
                                  na.rm = TRUE, .drop = FALSE)
@@ -563,7 +563,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  
+
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"), dependencies = "raincloudPlot")
     subcontainer$position <- 6
@@ -571,7 +571,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   } else {
     subcontainer <- container[["plotsRainCloud"]]
   }
-  
+
   if(ready){
     errors <- .ttestBayesianGetErrorsPerVariable(dataset, options, "paired")
     for(pair in options$pairs) {
@@ -605,7 +605,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     return()
   .ttestDescriptivesContainer(jaspResults, options)
   container <- jaspResults[["ttestDescriptives"]]
-  
+
   if (is.null(container[["barPlots"]])) {
     subcontainer <- createJaspContainer(gettext("Bar Plots"), dependencies = c("barPlot",
                                                                                "barPlotCiLevel",
@@ -616,7 +616,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   } else {
     subcontainer <- container[["barPlots"]]
   }
-  
+
   for (pair in options[["pairs"]]) {
     title <- paste(pair, collapse = " - ")
     if (!is.null(subcontainer[[title]]))
