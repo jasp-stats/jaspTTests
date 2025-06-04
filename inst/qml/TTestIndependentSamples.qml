@@ -120,13 +120,13 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group.\n")
-			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval") ; info: qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changeed into the desired percentage.") }
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots") ; info: qsTr("Displays the sample means and the confidence intervals for each group. By default it is set at 95%. This can be changed into the desired percentage.")
+			CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval")  }
 		}
 		CheckBox
 		{
 			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Horizontal display: Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.")}
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.")}
 		}
 		Common.BarPlots
 		{

@@ -28,7 +28,6 @@ CheckBox
 	label: 						qsTr("Bar plots")
 	property int framework:		Common.Type.Framework.Classical
 
-	info: qsTr("Displays the sample means as bars and the confidence intervals or standard errors as error bars for each measure.")
 
 	RadioButtonGroup
 	{
