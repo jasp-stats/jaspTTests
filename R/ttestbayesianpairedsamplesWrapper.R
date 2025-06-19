@@ -17,9 +17,40 @@
 
 # This is a generated file. Don't change it!
 
+#' Bayesian Paired Samples T-Test
+#'
+#' The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired(dependent) observations equals 0.
+## Assumptions
+- Continuous difference score.
+- The difference scores are a random sample from the population.
+- The difference scores are normally distributed in the population.
+#'
+#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#'    Defaults to \code{TRUE}.
+#' @param bfRobustnessPlot, Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
+#'    Defaults to \code{FALSE}.
+#' @param bfRobustnessPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.
+#'    Defaults to \code{TRUE}.
+#' @param bfSequentialPlot, Displays the development of the Bayes factor as the data come in using the user-defined prior.
+#'    Defaults to \code{FALSE}.
+#' @param bfSequentialPlotRobustness, Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
+#'    Defaults to \code{FALSE}.
+#' @param descriptivesPlot, Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
+#'    Defaults to \code{FALSE}.
+#' @param differenceRaincloudPlot, Displays a raincloud plot of the differences between the two measures.
+#'    Defaults to \code{FALSE}.
+#' @param differenceRaincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.
+#'    Defaults to \code{FALSE}.
+#' @param pairs, In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents other difference scores.
+#' @param priorAndPosteriorPlot, Displays the prior and posterior distribution of the effect size after the data is seen.
+#'    Defaults to \code{FALSE}.
+#' @param priorAndPosteriorPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.
+#'    Defaults to \code{TRUE}.
+#' @param raincloudPlot, Displays the individual cases (colored dots), box plots, and densities for each group.
+#'    Defaults to \code{FALSE}.
 TTestBayesianPairedSamples <- function(
           data = NULL,
-          version = "0.19.3",
+          version = "0.95",
           alternative = "twoSided",
           barPlot = FALSE,
           barPlotCiLevel = 0.95,
@@ -82,5 +113,5 @@ TTestBayesianPairedSamples <- function(
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspTTests", "TTestBayesianPairedSamples", "TTestBayesianPairedSamples.qml", options, version, FALSE))
+   return(jaspBase::runWrappedAnalysis("jaspTTests", "TTestBayesianPairedSamples", "TTestBayesianPairedSamples.qml", options, version, TRUE))
 }

@@ -17,9 +17,41 @@
 
 # This is a generated file. Don't change it!
 
+#' Bayesian One Sample T-Test
+#'
+#' The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean equals a specific constant,i.e., the test value.
+## Assumptions
+- Continuous dependent variable.
+- The data are a random sample from the population.
+- The dependent variable is normally distributed in the population.
+#'
+#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#'    Defaults to \code{TRUE}.
+#' @param bfRobustnessPlot, Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
+#'    Defaults to \code{FALSE}.
+#' @param bfRobustnessPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis
+#'    Defaults to \code{TRUE}.
+#' @param bfSequentialPlot, Displays the development of the Bayes factor as the data come in using the user-defined prior.
+#'    Defaults to \code{FALSE}.
+#' @param bfSequentialPlotRobustness, Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
+#'    Defaults to \code{FALSE}.
+#' @param dependent, In this box the dependent variable is selected.
+#' @param descriptivesPlot, Display descriptives plots
+#'    Defaults to \code{FALSE}.
+#' @param descriptivesPlotCiLevel, Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
+#' @param priorAndPosteriorPlot, Displays the prior and posterior distribution of the effect size after the data is seen.
+#'    Defaults to \code{FALSE}.
+#' @param priorAndPosteriorPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis
+#'    Defaults to \code{TRUE}.
+#' @param priorAndPosteriorPlotCiLevel, adds the median and the 95% credible interval of the posterior distribution of the effect size.
+#' @param raincloudPlot, Displays the individual cases (colored dots), box plots, and densities for each group.
+#'    Defaults to \code{FALSE}.
+#' @param raincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
+#'    Defaults to \code{FALSE}.
+#' @param testValue, Test value specified in the null hypothesis. The mean of the data is compared to this value.
 TTestBayesianOneSample <- function(
           data = NULL,
-          version = "0.19.3",
+          version = "0.95",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -48,7 +80,7 @@ TTestBayesianOneSample <- function(
           informativeTDf = 1,
           informativeTLocation = 0,
           informativeTScale = 0.707,
-          naAction = "perDependent",
+          naAction = "listwise",
           normalDienesMean = 0.707,
           normalDienesStd = 0.707,
           plotHeight = 240,
@@ -90,5 +122,5 @@ TTestBayesianOneSample <- function(
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspTTests", "TTestBayesianOneSample", "TTestBayesianOneSample.qml", options, version, FALSE))
+   return(jaspBase::runWrappedAnalysis("jaspTTests", "TTestBayesianOneSample", "TTestBayesianOneSample.qml", options, version, TRUE))
 }
