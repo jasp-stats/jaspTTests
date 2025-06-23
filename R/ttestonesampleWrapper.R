@@ -20,10 +20,10 @@
 #' Bayesian
 #'
 #' The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.
-## Assumptions
-- The dependent variable is continuous
-- The data are a random sample from the population.
-- The dependent variable is normally distributed in the population.
+#' ## Assumptions
+#' - The dependent variable is continuous
+#' - The data are a random sample from the population.
+#' - The dependent variable is normally distributed in the population.
 #'
 #' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
 #'    Defaults to \code{TRUE}.

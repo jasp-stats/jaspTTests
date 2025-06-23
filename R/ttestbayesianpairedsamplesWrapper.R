@@ -20,10 +20,10 @@
 #' Bayesian Paired Samples T-Test
 #'
 #' The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired(dependent) observations equals 0.
-## Assumptions
-- Continuous difference score.
-- The difference scores are a random sample from the population.
-- The difference scores are normally distributed in the population.
+#' ## Assumptions
+#' - Continuous difference score.
+#' - The difference scores are a random sample from the population.
+#' - The difference scores are normally distributed in the population.
 #'
 #' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
 #'    Defaults to \code{TRUE}.

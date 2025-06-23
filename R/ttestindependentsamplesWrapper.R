@@ -20,11 +20,11 @@
 #' Independent Samples T-Test
 #'
 #' The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.
-## Assumptions
-- The dependent variable is continuous.
-- The observations in both groups are a random sample from the population.
-- The dependent variable is normally distributed in each group of the independent variable.
-- The population variances in the two groups are homogeneous.
+#' ## Assumptions
+#' - The dependent variable is continuous.
+#' - The observations in both groups are a random sample from the population.
+#' - The dependent variable is normally distributed in each group of the independent variable.
+#' - The population variances in the two groups are homogeneous.
 #'
 #' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
 #'    Defaults to \code{TRUE}.

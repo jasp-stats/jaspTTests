@@ -20,11 +20,11 @@
 #' Bayesian Independent Samples T-Test
 #'
 #' The Bayesian independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.
-## Assumptions
-- Continuous dependent variable.
-- The observations in both groups are a random sample from the population.
-- The dependent variable is normally distributed in both populations.
-- The population variances in the two groups are homogeneous.
+#' ## Assumptions
+#' - Continuous dependent variable.
+#' - The observations in both groups are a random sample from the population.
+#' - The dependent variable is normally distributed in both populations.
+#' - The population variances in the two groups are homogeneous.
 #'
 #' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
 #'    Defaults to \code{TRUE}.
