@@ -340,6 +340,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
         a <- sum(ns) - 2
         logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
         d <- as.numeric((ms[1] - ms[2]) / sdPooled) * exp(logCorrection) # less biased / corrected version
+        d <- d+1
       }
     }
     sed <- (as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])) / stat
