@@ -127,7 +127,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
@@ -215,7 +215,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -291,7 +291,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
@@ -379,7 +379,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
@@ -455,7 +455,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
@@ -519,7 +519,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje"
+msgstr "Wyklucz przypadki"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
