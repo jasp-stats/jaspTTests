@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-07-02 07:01+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -121,7 +127,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
@@ -209,7 +215,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -285,7 +291,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
@@ -373,7 +379,7 @@ msgstr "Wyklucz oddzielnie dla każdej analizy"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestOneSample|"
 msgid "Variables"
@@ -449,7 +455,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
@@ -513,7 +519,7 @@ msgstr "Braki danych"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "Wyklucz obserwacje ze wszystkich analiz"
+msgstr "Wyklucz przypadki"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
