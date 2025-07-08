@@ -24,7 +24,7 @@ import "./common" as Common
 
 Form
 {
-	info: qsTr("The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean equals a specific constant,i.e., the test value.\n") +
+	info: qsTr("The one sample t-test allows you to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.\n") +
 	"## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
 
 	id: form
@@ -45,7 +45,7 @@ Form
 		AssignedVariablesList { name: "dependent"; title: qsTr("Variables"); info: qsTr("In this box the dependent variable is selected.") ;allowedColumns: ["scale"]; minNumericLevels: 2 }
 	}
 
-	DoubleField { name: "testValue"; label: qsTr("Test value:"); info: qsTr("Test value specified in the null hypothesis. The mean of the data is compared to this value.") ; defaultValue: 0; negativeValues: true }
+	DoubleField { name: "testValue"; label: qsTr("Test value:"); defaultValue: 0; negativeValues: true }
 
 	Group
 	{
@@ -55,28 +55,28 @@ Form
 		CheckBox
 		{
 			name: "priorAndPosteriorPlot";		label: qsTr("Prior and posterior"); info: qsTr("Displays the prior and posterior distribution of the effect size after the data is seen.") 
-			CheckBox { name: "priorAndPosteriorPlotAdditionalInfo";		label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis"); checked: true }
-			CIField  { name: "priorAndPosteriorPlotCiLevel";	label: qsTr("Credible interval"); info: qsTr("adds the median and the 95% credible interval of the posterior distribution of the effect size.") }
+			CheckBox { name: "priorAndPosteriorPlotAdditionalInfo";		label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis. Adds the 95% credible interval of the posterior distribution of the effect size."); checked: true }
+			CIField  { name: "priorAndPosteriorPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
-			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis")  ; checked: true }
+			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor across different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
+			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis.")  ; checked: true }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data come in using the user-defined prior.")
+			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data comes in using the user-defined prior.")
 			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check"); info: qsTr("Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).") }
 		}
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots") 
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval"); info: qsTr("Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.") }
+			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval. A credible interval shows the probability that the true effect size lies within certain values.") 
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
 		Common.BarPlots
@@ -99,7 +99,7 @@ Form
 		title:	qsTr("Alternative Hypothesis")
 		RadioButton { value: "twoSided";		label: qsTr("≠ Test value"); info: qsTr("Two-sided alternative hypothesis that the population mean is not equal to the test value. Selected by default."); checked: true		}
 		RadioButton { value: "greater";	label: qsTr("> Test value"); info: qsTr("One-sided alternative hypothesis that the population mean is larger than the test value.")	}
-		RadioButton { value: "less";		label: qsTr("< Test value"); info: qsTr("One sided alternative hypothesis that the population mean is smaller than the test value.")					}
+		RadioButton { value: "less";		label: qsTr("< Test value"); info: qsTr("One-sided alternative hypothesis that the population mean is smaller than the test value.")					}
 	}
 
 	BayesFactorType { correlated: hypothesis.value }
@@ -130,8 +130,8 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the multiple t-tests.; checked: true") }
-		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise"); 	info: qsTr(" In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.")  }
+		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the multiple t-tests."); checked: true }
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise"); 	info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.")  }
 	}
 
 

@@ -50,6 +50,6 @@ CheckBox
 	{
 		name: "barPlotYAxisFixedToZero";
 		label: qsTr("Fix horizontal axis to 0"); checked: true;
-		info: qsTr("Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0")
+		info: qsTr("Forces the graph to show the default x-axis at y = 0.")
 	}
 }

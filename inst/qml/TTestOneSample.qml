@@ -25,7 +25,7 @@ import "./common" as Common
 Form
 {
 	info: qsTr("The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.\n") + 
-    "## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
+    "## " + qsTr("Assumptions") + "\n" + "- The dependent variable is continuous.\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
 	id: form
 	property int framework:	Common.Type.Framework.Classical
 
@@ -42,9 +42,9 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "student";		label: qsTr("Student"); info: qsTr("The student's t-test. This options is selected by default."); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Wilcoxon signed-rank test. Use when data is not normally distributed.")		}
-		CheckBox { name: "zTest";			label: qsTr("Z Test"); info: qsTr("The Z test. Use for testing whether two population means are different. The test value is set to 0 by default and the standard deviation is set to 1");  id: zTest		}
+		CheckBox { name: "student";		label: qsTr("Student"); info: qsTr("The Student's t-test. This option is selected by default."); checked: true	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Wilcoxon signed-rank test. Use when the data is not normally distributed.")		}
+		CheckBox { name: "zTest";			label: qsTr("Z Test"); info: qsTr("The Z test. Use for testing whether two population means are different. The test value is set to 0 by default and the standard deviation is set to 1.");  id: zTest		}
 		DoubleField { name: "testValue";	label: qsTr("Test value:");	defaultValue: 0;	negativeValues: true	}
 		DoubleField { name: "zTestSd";		label: qsTr("Std. deviation:"); defaultValue: 1.0;	enabled: zTest.checked	}
 	}
@@ -55,7 +55,7 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-            name: "meanDifference";			label: qsTr("Location estimate"); info: qsTr("Average difference between the data points and the test value. For the Student's t-test and the Z test the location difference estimate is given by mean difference divided by the (hypothesized) standard deviation d; for the Wilcoxon signed-rank test, the location difference estimate is given by the Hodges-Lehmann estimate.")
+            name: "meanDifference";			label: qsTr("Location estimate"); info: qsTr("Average difference between the data points and the test value. For the Student's t-test and the Z test the location difference estimate is given by the mean difference divided by the (hypothesized) standard deviation d; for the Wilcoxon signed-rank test, the location difference estimate is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
 				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
@@ -75,7 +75,7 @@ Form
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives"); info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.") }
-		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.") }
 	}
 
 	RadioButtonGroup
@@ -100,13 +100,13 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "descriptivesPlot";		label: qsTr("Descriptives plots"); info: qsTr("Displays the sample mean and the confidence interval. The CI is set at 95% by default and can be changed.")
+			name: "descriptivesPlot";		label: qsTr("Descriptives plots"); info: qsTr("Displays the sample mean and the confidence interval. The confidence interval is set at 95% by default and can be changed.")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
 		}
 		CheckBox
 		{
-			name: "raincloudPlot"; label: qsTr("Raincloud plots"); info: qsTr("Displays the individual cases, box plot, and density.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable") }
+			name: "raincloudPlot"; label: qsTr("Raincloud plots"); info: qsTr("Displays the individual data points, box plot, and density.")
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.") }
 		}
 		Common.BarPlots
 		{
