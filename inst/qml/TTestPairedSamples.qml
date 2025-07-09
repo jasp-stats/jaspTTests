@@ -43,8 +43,8 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "student";			label: qsTr("Student"); info: qsTr("Student's paired sample t-test.This option is selected by default"); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of paired samples t-test. Use when data is not normally distributed.")	}
+		CheckBox { name: "student";			label: qsTr("Student"); info: qsTr("Student's paired sample t-test.This option is selected by default."); checked: true	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of the paired samples t-test. Use when model residuals (i.e., group differences) are not normally distributed.")	}
 	}
 
 	Group
@@ -53,7 +53,7 @@ Form
 		Layout.rowSpan: 2
 		CheckBox
 		{
-			name: "meanDifference";	label: qsTr("Location parameter"); info: qsTr ("For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.")
+			name: "meanDifference";	label: qsTr("Location parameter"); info: qsTr ("For the Student's t-test the location parameter is given by the mean difference 'd'; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.")
 			CheckBox
 			{
 				name: "meanDifferenceCi";	label: qsTr("Confidence interval"); info: qsTr ("Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
@@ -77,7 +77,7 @@ Form
 			}
 		}
 		CheckBox { name: "descriptives";					label: qsTr("Descriptives")	; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.")									}
-		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")		; info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.")				}
+		CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio")		; info: qsTr("Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.")				}
 	}
 
 	RadioButtonGroup
@@ -85,8 +85,8 @@ Form
 		name: "alternative"
 		title: qsTr("Alternative Hypothesis")
 		RadioButton { value: "twoSided";	label: qsTr("Measure 1 ≠ Measure 2"); info: qsTr("Two-sided alternative hypothesis that the population mean of the difference is not equal to 0. This option is selected by default."); checked: true	}
-		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr(" One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
-		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One sided alternative hypothesis that the population mean of the difference is smaller than 0.")				}
+		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr("One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
+		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One-sided alternative hypothesis that the population mean of the difference is smaller than 0.")				}
 	}
 
 	Group
@@ -105,11 +105,11 @@ Form
 			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs.)") 
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
 		}
-		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")	; info:qsTr("Displays the individual cases (colored dots), box plots, and densities for each measure.")								}
+		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")	; info:qsTr("Displays the individual data points (colored dots), box plots, and densities for each measure.")								}
 		CheckBox
 		{
 			name: "differenceRaincloudPlot";	label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.") 
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.")		}
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable.")		}
 		}
 		Common.BarPlots
 		{
@@ -121,7 +121,7 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); info: qsTr("In case of multiple T-tests within a single analysis, each test will be conducted using all cases with valid data for the difference score for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default.") ; checked: true		}
+		RadioButton { value: "perDependent";			label: qsTr("Exclude cases per variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the difference score for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default.") ; checked: true		}
 		RadioButton { value: "listwise";						label: qsTr("Exclude cases listwise"); info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all difference scores. Sample size is therefore constant across the tests.")								}
 	}
 

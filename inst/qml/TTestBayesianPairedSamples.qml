@@ -23,7 +23,7 @@ import JASP.Controls
 import "./common" as Common
 
 Form {
-	info: qsTr("The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired(dependent) observations equals 0.\n") +
+	info: qsTr("The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired (dependent) observations equals 0.\n") +
 	"## " + "Assumptions" + "\n" + "- Continuous difference score.\n" + "- The difference scores are a random sample from the population.\n" + "- The difference scores are normally distributed in the population."
 	id: form
 	property int framework:	Common.Type.Framework.Bayesian
@@ -36,7 +36,7 @@ Form {
 		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents other difference scores.") ;allowedColumns: ["scale"]; minNumericLevels: 2 }
+		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents a separate set of difference scores.") ;allowedColumns: ["scale"]; minNumericLevels: 2 }
 	}
 
 	RadioButtonGroup
@@ -46,7 +46,7 @@ Form {
 		title:	qsTr("Alternative Hypothesis")
 		RadioButton { value: "twoSided";	label: qsTr("Measure 1 ≠ Measure 2"); info: qsTr("Two-sided alternative hypothesis that the population mean of the difference is not equal to 0. Selected by default.") ; checked: true	}
 		RadioButton { value: "greater";	label: qsTr("Measure 1 > Measure 2"); info: qsTr("One-sided alternative hypothesis that the population mean of the difference is larger than 0.")				}
-		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One sided alternative hypothesis that the population mean of the difference is smaller than 0.")			}
+		RadioButton { value: "less";	label: qsTr("Measure 1 < Measure 2"); info: qsTr("One-sided alternative hypothesis that the population mean of the difference is smaller than 0.")			}
 	}
 
 	Group
@@ -56,7 +56,7 @@ Form {
 
 		CheckBox
 		{
-			name: "priorAndPosteriorPlot";		label: qsTr("Prior and posterior"); info: qsTr("Displays the prior and posterior distribution of the effect size after the data is seen.")
+			name: "priorAndPosteriorPlot";		label: qsTr("Prior and posterior"); info: qsTr("Displays the prior and posterior distributions of the effect size after observing the data.")
 			CheckBox { name: "priorAndPosteriorPlotAdditionalInfo";		label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.") ; checked: true }
 			CIField  { name: "priorAndPosteriorPlotCiLevel";	label: qsTr("Credible interval") }
 		}
@@ -64,7 +64,7 @@ Form {
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
+			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor across different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
 			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.") ; checked: true }
 		}
 
@@ -77,7 +77,7 @@ Form {
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.")
+			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
@@ -94,7 +94,7 @@ Form {
 		CheckBox
 		{
 			name: "differenceRaincloudPlot"; label: qsTr("Raincloud difference plots"); info: qsTr("Displays a raincloud plot of the differences between the two measures.")
-			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
+			CheckBox { name: "differenceRaincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.") }
 		}
 	}
 

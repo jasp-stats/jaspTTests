@@ -47,7 +47,7 @@ Form {
 		id:	hypothesis
 		name: "alternative"
 		title: qsTr("Alternative Hypothesis")
-		RadioButton { value: "twoSided";	label: qsTr("Group 1 ≠ Group 2"); info: qsTr("Two-sided alternative hypothesis that the population means are equal. Selected by default"); checked: true	}
+		RadioButton { value: "twoSided";	label: qsTr("Group 1 ≠ Group 2"); info: qsTr("Two-sided alternative hypothesis that the population means are equal. Selected by default."); checked: true	}
 		RadioButton { value: "greater";	label: qsTr("Group 1 > Group 2"); info: qsTr("One-sided alternative hypothesis that the population mean of group one is larger than the population mean of group two.")					}
 		RadioButton { value: "less";	label: qsTr("Group 1 < Group 2"); info: qsTr("One-sided alternative hypothesis that the population mean of group one is smaller than the population mean of group two.")					}
 	}
@@ -67,20 +67,20 @@ Form {
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
+			name: "bfRobustnessPlot";	label: qsTr("Bayes factor robustness check"); info: qsTr("Displays the Bayes factor across different values of Cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.")
 			CheckBox { name: "bfRobustnessPlotAdditionalInfo";	label: qsTr("Additional info"); info: qsTr("Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.") ; checked: true }
 		}
 
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data come in using the user-defined prior.")
-			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check"); info: qsTr("Robustness check: Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).") }
+			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data comes in using the user-defined prior.")
+			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check"); info: qsTr("Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).") }
 		}
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.")
+			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
@@ -92,7 +92,7 @@ Form {
 		CheckBox
 		{
 			name: "raincloudPlot"; label: qsTr("Raincloud plots");  info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.") }
 		}
 	}
 
@@ -119,7 +119,7 @@ Form {
 		name: "naAction"
 		title: qsTr("Missing Values")
 		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the multiple t-tests.") ;checked: true }
-		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")	; info: qsTr(" In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.")						}
+		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise")	; info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the multiple t-tests.")						}
 	}
 
 	Group

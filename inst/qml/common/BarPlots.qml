@@ -39,7 +39,7 @@ CheckBox
 			label: 				framework === Common.Type.Framework.Classical ? qsTr("Confidence interval") : qsTr("Credible interval")
 			checked: 			true
 			childrenOnSameRow: 	true
-			info:				qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
+			info:				qsTr("Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 
 			CIField { name: 	"barPlotCiLevel"}
 		}
@@ -50,6 +50,6 @@ CheckBox
 	{
 		name: "barPlotYAxisFixedToZero";
 		label: qsTr("Fix horizontal axis to 0"); checked: true;
-		info: qsTr("Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0")
+		info: qsTr("Forces the graph to show the default x-axis at y = 0.")
 	}
 }

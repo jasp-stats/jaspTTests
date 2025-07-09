@@ -43,16 +43,16 @@ Form
 		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");	info: qsTr("In this box the dependent variable is selected"); 												allowedColumns: ["scale"];			minNumericLevels: 2}
-		AssignedVariablesList { name: "group";				title: qsTr("Grouping Variable"); info: qsTr("In this box the variable defining the groups is selected. e.g experimental condition");			allowedColumns: ["nominal"];		minLevels: 2; maxLevels: 2; singleVariable: true }
+		AssignedVariablesList { name: "dependent";			title: qsTr("Dependent Variables");	info: qsTr("In this box the dependent variable is selected."); 												allowedColumns: ["scale"];			minNumericLevels: 2}
+		AssignedVariablesList { name: "group";				title: qsTr("Grouping Variable"); info: qsTr("In this box the variable defining the groups is selected. e.g., experimental condition.");			allowedColumns: ["nominal"];		minLevels: 2; maxLevels: 2; singleVariable: true }
 	}
 
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned T-test. Selected by default");	 checked: true	}
-		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Use when variances are not equally distributed accross groups");					}
-		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent T-test. Use when data is not normally distributed");				}
+		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned t-test. Selected by default.");	 checked: true	}
+		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Welch's unequal variances test. Use when the group variances cannot be assumed to be equal.");					}
+		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent t-test. Use when the model residuals are not normally distributed.");				}
 	}
 
 	Group
@@ -79,14 +79,14 @@ Form
 				RadioButton { value: "hedges"; label: qsTr("Hedges' g") ; info: qsTr("Applies a correction factor to Cohen's d to make it unbiased.") }
 				CheckBox
 				{
-					name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the effect size based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.")
+					name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the chosen effect size, based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.")
 					childrenOnSameRow: true
 					PercentField { name: "effectSizeCiLevel"; defaultValue: 95 }
 				}
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") ; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each group.")							}
-		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.") }
 	}
 
 	RadioButtonGroup
@@ -104,7 +104,7 @@ Form
 		CheckBox { name: "normalityTest";	label: qsTr("Normality"); info: qsTr("Shapiro-Wilk test of normality."); }
 		CheckBox
 		{
-			name: "equalityOfVariancesTest";	label: qsTr("Equality of variances"); info: qsTr("BrownForsythe or Levene's tests to check if variances are qually distributed accross groups")
+			name: "equalityOfVariancesTest";	label: qsTr("Equality of variances"); info: qsTr("BrownForsythe or Levene's tests to check if variances are equally distributed across groups.")
 			RadioButtonGroup
 			{
 				name: "equalityOfVariancesTestType"
@@ -126,7 +126,7 @@ Form
 		CheckBox
 		{
 			name: "raincloudPlot"; label: qsTr("Raincloud plots") ; info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.")}
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display") ; info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.")}
 		}
 		Common.BarPlots
 		{
@@ -137,7 +137,7 @@ Form
 	{
 		name: "naAction"
 		title: qsTr("Missing Values")
-		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("Exclude cases per dependent variable: In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the tests. This options is selected by default.") ; checked: true	}
+		RadioButton { value: "perDependent";	label: qsTr("Exclude cases per dependent variable"); info: qsTr("Exclude cases per dependent variable: In case of multiple t-tests within a single analysis, each test will be conducted using all cases with valid data for the dependent variable for the particular t-test. Sample sizes may therefore vary across the tests. This option is selected by default.") ; checked: true	}
 		RadioButton { value: "listwise";				label: qsTr("Exclude cases listwise") ; info: qsTr("In case of multiple t-tests within a single analysis, each t-test will be conducted using only cases with valid data for all dependent variables. Sample size is therefore constant across the tests.")							}
 	}
 }
