@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-06 03:42+0000\n"
+"PO-Revision-Date: 2025-07-10 10:01+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/de/>\n"
@@ -1328,14 +1328,17 @@ msgid ""
 "One-sided alternative hypothesis that the population mean of the difference "
 "is larger than 0."
 msgstr ""
+"Einseitige Alternativhypothese, dass der Differenz-Mittelwert der "
+"Grundgesamtheit größer als 0 ist."
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "One sided alternative hypothesis that the population mean of the difference "
 "is smaller than 0."
 msgstr ""
+"Einseitige Alternativhypothese, dass der Differenz-Mittelwert der "
+"Grundgesamtheit kleiner als 0 ist."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the prior and posterior distribution of the effect size after the "
@@ -1344,7 +1347,6 @@ msgstr ""
 "Zeigt die Prior- und Posterior-Verteilung der Effektstärke an, nachdem die "
 "Daten gesehen wurden."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Adds the Bayes factor computed with the user-defined prior; adds a "
@@ -1358,7 +1360,6 @@ msgstr ""
 "Medians und des 95%-Glaubwürdigkeitsintervalls der Posteriorverteilung der "
 "Effektstärke."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the Bayes factor accross different values of cauchy prior width. "
@@ -1369,7 +1370,6 @@ msgstr ""
 "Skalenparameter des Cauchy-Priors wird zwischen 0 und 1,5 variiert, wodurch "
 "sich zunehmend uninformative Priors ergeben."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the development of the Bayes factor as the data come in using the "
@@ -1378,7 +1378,6 @@ msgstr ""
 "Zeigt den Verlauf des Bayesfaktors mit den eintreffenden Daten, mit dem "
 "benutzerdefinierten Prior."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Adds the results of the sequential analysis using the wide (scale=1) and "
@@ -1387,19 +1386,17 @@ msgstr ""
 "Hinzufügen der Ergebnisse der sequentiellen Analyse mit dem breiten "
 "(Skalenparameter=1) und ultrabreiten Prior (Skalenparameter=sqrt(2))."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Display central credible intervals. A credible interval shows the "
 "probability that the true effect size lies within certain values. The "
 "default credible interval is set at 95%."
 msgstr ""
-"Anzeige zentraler Glaubwürdigkeitsintervall. Ein Glaubwürdigkeitsintervall "
+"Anzeige zentraler Glaubwürdigkeitsintervalle. Ein Glaubwürdigkeitsintervall "
 "zeigt die Wahrscheinlichkeit, dass die wahre Effektstärke innerhalb "
 "bestimmter Werte liegt. Das Standard-Glaubwürdigkeitsintervall ist auf 95% "
 "eingestellt."
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the individual cases (colored dots), box plots, and densities for "
