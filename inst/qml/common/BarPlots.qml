@@ -39,7 +39,7 @@ CheckBox
 			label: 				framework === Common.Type.Framework.Classical ? qsTr("Confidence interval") : qsTr("Credible interval")
 			checked: 			true
 			childrenOnSameRow: 	true
-			info:				qsTr("Coverage of the confidence intervals in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
+			info:				qsTr("Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.")
 
 			CIField { name: 	"barPlotCiLevel"}
 		}

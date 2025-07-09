@@ -69,13 +69,13 @@ Form
 		CheckBox
 		{
 			enabled: student.checked && priors.defaultPriorsChecked
-			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data comes in using the user-defined prior.")
+			name: "bfSequentialPlot";		label: qsTr("Sequential analysis"); info: qsTr("Displays the development of the Bayes factor as the data come in using the user-defined prior.")
 			CheckBox { name: "bfSequentialPlotRobustness";		label: qsTr("Robustness check"); info: qsTr("Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).") }
 		}
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval. A credible interval shows the probability that the true effect size lies within certain values.") 
+			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.") 
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 

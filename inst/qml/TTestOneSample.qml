@@ -43,8 +43,8 @@ Form
 	{
 		title: qsTr("Tests")
 		CheckBox { name: "student";		label: qsTr("Student"); info: qsTr("The Student's t-test. This option is selected by default."); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Wilcoxon signed-rank test. Use when the data is not normally distributed.")		}
-		CheckBox { name: "zTest";			label: qsTr("Z Test"); info: qsTr("The Z test. Use for testing whether two population means are different. The test value is set to 0 by default and the standard deviation is set to 1.");  id: zTest		}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Wilcoxon signed-rank test. Use when the model residuals are not normally distributed.")		}
+		CheckBox { name: "zTest";			label: qsTr("Z Test"); info: qsTr("The Z test. Use for testing whether two population means are different. The test value is set to 0 by default and the standard deviation is set to 1. These can be changed by the user into the desired values.");  id: zTest		}
 		DoubleField { name: "testValue";	label: qsTr("Test value:");	defaultValue: 0;	negativeValues: true	}
 		DoubleField { name: "zTestSd";		label: qsTr("Std. deviation:"); defaultValue: 1.0;	enabled: zTest.checked	}
 	}

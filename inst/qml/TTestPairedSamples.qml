@@ -44,7 +44,7 @@ Form
 	{
 		title: qsTr("Tests")
 		CheckBox { name: "student";			label: qsTr("Student"); info: qsTr("Student's paired sample t-test.This option is selected by default."); checked: true	}
-		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of the paired samples t-test. Use when the data is not normally distributed.")	}
+		CheckBox { name: "wilcoxon";	label: qsTr("Wilcoxon signed-rank"); info: qsTr("Non-parametric version of the paired samples t-test. Use when model residuals (i.e., group differences) are not normally distributed.")	}
 	}
 
 	Group
@@ -102,7 +102,7 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure.") 
+			name: "descriptivesPlot";						label: qsTr("Descriptives plots"); info: qsTr("Displays the sample means and the confidence intervals for each measure (see Morey [2008] for the computation of the standard error of the mean in paired designs.)") 
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval")						}
 		}
 		CheckBox{ name: "raincloudPlot";		label: qsTr("Raincloud plots")	; info:qsTr("Displays the individual data points (colored dots), box plots, and densities for each measure.")								}

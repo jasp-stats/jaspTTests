@@ -80,7 +80,7 @@ Form {
 
 		CheckBox
 		{
-			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.")
+			name: "descriptivesPlot";			label: qsTr("Descriptives"); info: qsTr("Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 
@@ -92,7 +92,7 @@ Form {
 		CheckBox
 		{
 			name: "raincloudPlot"; label: qsTr("Raincloud plots");  info: qsTr("Displays the individual cases (colored dots), box plots, and densities for each group.")
-			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.") }
+			CheckBox { name: "raincloudPlotHorizontal"; label: qsTr("Horizontal display"); info: qsTr("Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.") }
 		}
 	}
 

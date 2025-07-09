@@ -51,8 +51,8 @@ Form
 	{
 		title: qsTr("Tests")
 		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned t-test. Selected by default.");	 checked: true	}
-		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Welch's unequal variances test. Use when the variances are not equally distributed across groups.");					}
-		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent t-test. Use when the data is not normally distributed.");				}
+		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Welch's unequal variances test. Use when the group variances cannot be assumed to be equal.");					}
+		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent t-test. Use when the model residuals are not normally distributed.");				}
 	}
 
 	Group
@@ -79,7 +79,7 @@ Form
 				RadioButton { value: "hedges"; label: qsTr("Hedges' g") ; info: qsTr("Applies a correction factor to Cohen's d to make it unbiased.") }
 				CheckBox
 				{
-					name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the chosen effect size.")
+					name: "effectSizeCi"; label: qsTr("Confidence interval"); info: qsTr("Confidence interval for the chosen effect size, based on the non-central t-distribution for Cohen's d, Glass' delta and Hedges' g, and normal approximation of the Fisher transformed rank biserial correlation.")
 					childrenOnSameRow: true
 					PercentField { name: "effectSizeCiLevel"; defaultValue: 95 }
 				}
