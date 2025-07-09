@@ -23,15 +23,15 @@ msgstr "Clásico"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "Prueba T para Muestras Independientes"
+msgstr "Contraste t para muestras independientes"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Contraste T para Muestras Emparejadas"
+msgstr "Contraste t para muestras emparejadas"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Prueba T para Una Muestra"
+msgstr "Contraste t para una muestra"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -39,15 +39,15 @@ msgstr "Bayesiano"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "Contraste T bayesiano para muestras independientes"
+msgstr "Contraste t bayesiano para muestras independientes"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "Prueba T bayesiana para Muestras Emparejadas"
+msgstr "Contraste t bayesiano para muestras emparejadas"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "Prueba T bayesiana para Una Muestra"
+msgstr "Contraste t bayesiano para una muestra"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
