@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-18 11:11+0000\n"
-"Last-Translator: Sunu Bagaskara <sunu.bagaskara@gmail.com>\n"
-"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/id/>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13-dev\n"
 "X-Language: id\n"
 "X-Qt-Contexts: true\n"
 
@@ -154,45 +148,53 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Prior dan posterior"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "Informasi tambahan"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Interval yang kredibel"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisis sekuensial"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
@@ -211,9 +213,10 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "Tes"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -255,58 +258,67 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Prior dan posterior"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Informasi tambahan"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Interval yang kredibel"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisis sekuensial"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
 msgstr "Tes"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -332,22 +344,25 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Variabel Terikat"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Variabel pengelompokan"
 
 #, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
 msgstr "Tes"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
@@ -381,37 +396,43 @@ msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Grup 2"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Grup 1 > Grup 2"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Grup 1 < Grup 2"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
@@ -445,9 +466,10 @@ msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "Tes"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
@@ -481,21 +503,24 @@ msgctxt "TTestOneSample|"
 msgid "Effect size"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -538,9 +563,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Tests"
 msgstr "Tes"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
@@ -562,25 +588,28 @@ msgctxt "TTestPairedSamples|"
 msgid "Effect size"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -630,9 +659,10 @@ msgctxt "BarPlots|"
 msgid "Confidence interval"
 msgstr ""
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Interval yang kredibel"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
@@ -678,17 +708,20 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
