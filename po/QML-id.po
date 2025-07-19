@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-07-18 11:11+0000\n"
+"Last-Translator: Sunu Bagaskara <sunu.bagaskara@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: id\n"
 "X-Qt-Contexts: true\n"
 
@@ -13,7 +19,7 @@ msgstr "Uji-T"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "Evaluasi perbedaan antara dua rata-rata"
 
 msgctxt "Description|"
 msgid "Classical"
@@ -21,15 +27,15 @@ msgstr "Klasik"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sampel Independen"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sampel Berpasangan"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Uji-T Satu Sampel"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -49,39 +55,39 @@ msgstr "Uji-T Satu Sampel Bayesian"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "Variabel Terikat"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "Variabel pengelompokan"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "Grup 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "Grup 1 > Grup 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "Grup 1 < Grup 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Prior dan posterior"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "Informasi tambahan"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Interval yang kredibel"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
@@ -89,7 +95,7 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisis sekuensial"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
@@ -97,15 +103,15 @@ msgstr ""
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "Plot Rainclouds"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "Tampilan horizontal"
 
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
@@ -114,7 +120,7 @@ msgstr "Tes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
