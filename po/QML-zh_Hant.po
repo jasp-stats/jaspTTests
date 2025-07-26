@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-07-27 11:03+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspttests-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -29,7 +35,7 @@ msgstr "單一樣本 t 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesian"
+msgstr "貝氏"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
@@ -133,7 +139,7 @@ msgstr "變項"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr "檢定值"
+msgstr "檢定值："
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
@@ -283,7 +289,6 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
 msgstr "成對排除法"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
@@ -348,12 +353,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "組 1 ≠ 組 2"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
 msgstr "組1 > 組2"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
 msgstr "組1 < 組2"
@@ -378,7 +381,6 @@ msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
 msgstr "成對排除法"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
@@ -459,7 +461,6 @@ msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "遺漏值處理方式"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
@@ -528,7 +529,6 @@ msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
 msgstr "遺漏值處理方式"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
