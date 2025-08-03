@@ -2,95 +2,105 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-08-04 17:02+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-r/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "Verificações de suposições"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Descritiva"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"O máximo Vovk-Sellke <em>p</em>-valor: baseado em <em>p</em>-valor, o máximo "
+"de chances possíveis em favor de H%1$s sobre H%2$s é igual a 1/(-e <em>p</"
+"em> log(<em>p</em>)) para <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
+"2001)."
 
 msgid "Q-Q Plots"
-msgstr ""
+msgstr "Gráfico Q-Q"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "Por favor, informe outra variável."
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr ""
+msgstr "As variáveis %1$s e %2$s são as mesmas!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Gráficos descritivos"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Gráfico de barras"
 
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "Média"
 
 msgid "SD"
-msgstr ""
+msgstr "DP"
 
 msgid "SE"
-msgstr ""
+msgstr "EP"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Coeficiente de variação"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% intervalo crível"
 
 msgid "Lower"
-msgstr ""
+msgstr "Inferior"
 
 msgid "Upper"
-msgstr ""
+msgstr "Superior"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Gráficos inferenciais"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Anterior e Posterior"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Verificação de Robustez do Fator de Bayes"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Análise sequencial"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
+"O gráfico de verificação do fator de robustez de Bayes não é atualmente "
+"suportado pelo informado anteriormente."
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
 msgstr ""
+"O gráfico de verificação da robustez da Análise Sequencial não é atualmente "
+"suportado pelo informado anteriormente."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "O número ou caractere esperado era rscale mas obteve %s."
 
 msgid "Running robustness check %1$d / %2$d"
-msgstr ""
+msgstr "Efetuando verificação de robustez %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "Máximo BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "Usuário anterior"
 
 msgid "wide prior"
 msgstr ""
@@ -105,145 +115,159 @@ msgid "%1$s at r==%2$s"
 msgstr ""
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Alguns fatores de Bayes eram infinitos"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "Largura anterior de Cauchy"
 
 msgid "Running sequential analysis %1$d / %2$d"
-msgstr ""
+msgstr "Efetuando análise sequencial %1$d / %2$d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "Prior"
-msgstr ""
+msgstr "Anterior"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% IC:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "Tamanho do efeito"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Gráficos de Nuvem de Chuva"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Gráficos de Nuvem de Chuva Diferenciais"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "O fator de Bayes não pode ser calculado"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "O fator de Bayes é infinito"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "O fator de Bayes é muito pequeno"
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
 msgstr ""
+"O valor-t é grande. A aproximação de Savage-Dickey foi usada para computar o "
+"fator de Bayes, mas uma estimativa do erro não pode ser dada."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "Não há estimativa de erro disponível para normais anteriores."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Teste Bayesiano Mann-Whitney"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Teste-T de Amostras Independentes Bayesiano"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"Resultado baseado em algoritmo de aumento de dados com 5 cadeias de %.0f "
+"iterações."
 
 msgid "error %%"
-msgstr ""
+msgstr "erro %%"
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"Para todos os testes, a hipótese alternativa especifica que a localização do "
+"grupo <em>%1$s</em> é maior do que a localização do grupo <em>%2$s</em>."
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"Para todos os testes, a hipótese alternativa especifica que a localização do "
+"grupo <em>%1$s</em> é menor do que a localização do grupo <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Teste dos postos sinalizados de Wilcoxon Bayesiano"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Teste-T para uma Amostra Bayesiano"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
+"Para todos os testes, a hipótese alternativa especifica que a média da "
+"população é maior do que %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
 msgstr ""
+"Para todos os testes, a hipótese alternativa especifica que a média da "
+"população é menor do que %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
 msgstr ""
+"Para todos os testes, a hipótese alternativa especifica que a média da "
+"população difere de %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Teste-T para Amostras Pareadas Bayesiano"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "Medição 1"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "Medição 2"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Teste-T para Amostras Independentes"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "Teste-U de Mann-Whitney."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "Teste-t de Welch."
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "Teste-t de Student."
 
 msgid "Statistic"
-msgstr ""
+msgstr "Estatística"
 
 msgid "Test"
-msgstr ""
+msgstr "Teste"
 
 msgid "df"
-msgstr ""
+msgstr "gl"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "d de Cohen"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "Delta de Glass"
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "g de Hedges"
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "Diferença média"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "Estimativa de Hodges-Lehmann"
 
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "Correlação ranque-bisserial"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "Parâmetro de localização"
 
 msgid "Effect Size"
-msgstr ""
+msgstr "Tamanho do Efeito"
 
 msgid "Student t-test and Welch t-test"
 msgstr ""
