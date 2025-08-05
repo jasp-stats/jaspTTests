@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-05 15:02+0000\n"
+"PO-Revision-Date: 2025-08-06 07:43+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/pt/>\n"
@@ -631,7 +631,7 @@ msgstr "Intervalo credível"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "Erro padrão"
 
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
@@ -673,20 +673,17 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr "Gráficos"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr "Gráficos"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr "Diagramas"
+msgstr "Gráficos"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
