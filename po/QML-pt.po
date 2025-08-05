@@ -1,15 +1,21 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-08-05 15:02+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: pt\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr "Testes T"
+msgstr "Teste t"
 
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
@@ -21,7 +27,7 @@ msgstr "Clássico"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "Teste T de Amostras Independentes"
+msgstr "Teste t de Amostras Independentes"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
@@ -29,7 +35,7 @@ msgstr "Teste T de Amostras Dependentes"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "Teste T de Amostra Única"
+msgstr "Teste t para uma amostra"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -615,15 +621,13 @@ msgctxt "BarPlots|"
 msgid "Bar plots"
 msgstr ""
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
-msgstr "Intervalo de Confiança"
+msgstr "Intervalo de confiança"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo credível"
 
 msgctxt "BarPlots|"
 msgid "Standard error"
@@ -665,7 +669,6 @@ msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr "Mann-Whitney"
