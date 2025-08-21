@@ -215,8 +215,8 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 }
 
 .ttestPairedComputeMainTableRow <- function(p1, p2, dataset, test, testStat, optionsList, options) {
-  c1 <- dataset[[ .v(p1) ]]
-  c2 <- dataset[[ .v(p2) ]]
+  c1 <- dataset[[ p1 ]]
+  c2 <- dataset[[ p2 ]]
   df <- na.omit(data.frame(c1 = c1, c2 = c2))
   c1 <- df$c1
   c2 <- df$c2
@@ -346,8 +346,8 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
         row[["W"]] <- NaN
         table$addFootnote(errors$message, colNames = "W", rowNames = rowName)
       } else {
-        c1   <- dataset[[ .v(p1) ]]
-        c2   <- dataset[[ .v(p2) ]]
+        c1   <- dataset[[ p1 ]]
+        c2   <- dataset[[ p2 ]]
         data <- na.omit(c1 - c2)
 
         r <- stats::shapiro.test(data)
@@ -392,7 +392,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
   for (var in desc.vars) {
     row <- list(v = var)
 
-    dat <- na.omit(dataset[[ .v(var) ]])
+    dat <- na.omit(dataset[[ var ]])
     n   <- as.numeric(length(dat))
     m   <- as.numeric(mean(dat, na.rm = TRUE))
     std <- as.numeric(sd(dat,   na.rm = TRUE))

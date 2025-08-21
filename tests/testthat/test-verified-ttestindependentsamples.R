@@ -8,6 +8,7 @@ context("Independent Samples TTest -- Verification project")
 options <- jaspTools::analysisOptions("TTestIndependentSamples")
 options$dependent <- "Score"
 options$group <- "Group"
+options$group.types <- "nominal"
 options$student <- TRUE
 options$welch <- TRUE
 options$mannWhitneyU <- FALSE

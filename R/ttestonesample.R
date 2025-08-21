@@ -244,7 +244,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
                       "twoSided"  ="two.sided",
                       "greater" ="greater",
                       "less"    ="less")
-  dat <- na.omit(dataset[[ .v(variable) ]])
+  dat <- na.omit(dataset[[ variable ]])
   n   <- length(dat)
   usedConfLevel <- options[["meanDifferenceCiLevel"]]
   if (test == "Wilcoxon") {
@@ -362,7 +362,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       row[["W"]] <- NaN
       table$addFootnote(errors$message, colNames = "W", rowNames = variable)
     } else {
-      data <- na.omit(dataset[[.v(variable)]])
+      data <- na.omit(dataset[[variable]])
 
       tempResult <- stats::shapiro.test(data)
       row[["W"]] <- as.numeric(tempResult[["statistic"]])
@@ -469,7 +469,7 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
           next
       }
       groups  <- rep("1", nrow(dataset))
-      subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
+      subData <- data.frame(dependent = dataset[, variable], groups = groups)
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))

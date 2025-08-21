@@ -610,9 +610,9 @@
   } else {
     if (hasGrouping) {
 
-      levels <- levels(dataset[[ .v(grouping) ]])
+      levels <- levels(dataset[[grouping]])
       nlevels <- length(levels)
-      groupingData <- dataset[[.v(grouping)]]
+      groupingData <- dataset[[grouping]]
     } else {
       levels <- NULL
       nlevels <- 1
@@ -626,9 +626,9 @@
 
           if (hasGrouping) {
             level <- levels[i]
-            groupData <- dataset[groupingData == level, .v(var)]
+            groupData <- dataset[groupingData == level, var]
           } else {
-            groupData <- dataset[[.v(var)]]
+            groupData <- dataset[[var]]
           }
           groupDataOm <- groupData[!is.na(groupData)]
 
@@ -693,8 +693,8 @@
   paired <- !is.null(pairs)
 
   if (hasGrouping) {
-    groupingData <- dataset[[.v(grouping)]]
-    levels   <- base::levels(dataset[[.v(grouping)]])
+    groupingData <- dataset[[grouping]]
+    levels   <- base::levels(dataset[[grouping]])
     canDoDescriptives <- length(dependents) >= 1 && !(is.null(grouping) || grouping == "")
   } else if (paired) {
     grouping <- "group"
@@ -716,7 +716,7 @@
             pair <- pairs[[var]]
             levels <- c(pair[[1]], pair[[2]])
 
-            dat <- c(dataset[[.v(pair[[1]])]], dataset[[.v(pair[[2]])]])
+            dat <- c(dataset[[pair[[1]]]], dataset[[pair[[2]]]])
             dat <- data.frame(
               value = dat,
               group = groupingData
@@ -724,8 +724,8 @@
             dat <- dat[!is.na(dat[[1]]), ]
 
           } else {
-            idxC <- !is.na(dataset[[.v(var)]])
-            dat <- dataset[idxC, .v(c(var, grouping))]
+            idxC <- !is.na(dataset[[var]])
+            dat <- dataset[idxC, c(var, grouping)]
           }
 
           obj <- try(.ttestBayesianPlotKGroupMeans(
@@ -1045,11 +1045,11 @@
                                          options, ...) {
   hasGrouping <- !is.null(grouping)
   if (hasGrouping) {
-    levels <- levels(dataset[[.v(grouping)]])
+    levels <- levels(dataset[[grouping]])
     g1 <- levels[1]
     g2 <- levels[2]
-    idxG1 <- dataset[[.v(grouping)]] == g1
-    idxG2 <- dataset[[.v(grouping)]] == g2
+    idxG1 <- dataset[[grouping]] == g1
+    idxG2 <- dataset[[grouping]] == g2
   } else {
     g1 <- NULL
     g2 <- NULL
@@ -1068,18 +1068,18 @@
 
         if (paired) {
           pair <- pairs[[var]]
-          group1 <- dataset[, .v(pair[[1]])]
-          group2 <- dataset[, .v(pair[[2]])]
+          group1 <- dataset[, pair[[1]]]
+          group2 <- dataset[, pair[[2]]]
           idxC <- !(is.na(group1) | is.na(group2))
           group1 <- group1[idxC]
           group2 <- group2[idxC]
         } else {
-          idxC <- !is.na(dataset[[.v(var)]])
+          idxC <- !is.na(dataset[[var]])
           if (hasGrouping) {
-            group1 <- dataset[idxG1 & idxC, .v(var)]
-            group2 <- dataset[idxG2 & idxC, .v(var)]
+            group1 <- dataset[idxG1 & idxC, var]
+            group2 <- dataset[idxG2 & idxC, var]
           } else {
-            group1 <- dataset[idxC, .v(var)]
+            group1 <- dataset[idxC, var]
             group1 <- group1 - options[["testValue"]]
           }
         }
@@ -1127,11 +1127,11 @@
                                          options, ...) {
   hasGrouping <- !is.null(grouping)
   if (hasGrouping) {
-    levels <- levels(dataset[[.v(grouping)]])
+    levels <- levels(dataset[[grouping]])
     g1 <- levels[1L]
     g2 <- levels[2L]
-    idxG1 <- dataset[[.v(grouping)]] == g1
-    idxG2 <- dataset[[.v(grouping)]] == g2
+    idxG1 <- dataset[[grouping]] == g1
+    idxG2 <- dataset[[grouping]] == g2
   } else {
     g1 <- NULL
     g2 <- NULL
@@ -1152,19 +1152,19 @@
 
         if (paired) {
           pair <- pairs[[var]]
-          group1 <- dataset[, .v(pair[[1L]])]
-          group2 <- dataset[, .v(pair[[2L]])]
+          group1 <- dataset[, pair[[1L]]]
+          group2 <- dataset[, pair[[2L]]]
           idxC <- !(is.na(group1) | is.na(group2))
           group1 <- group1[idxC]
           group2 <- group2[idxC]
         } else {
-          idxC <- !is.na(dataset[[.v(var)]])
+          idxC <- !is.na(dataset[[var]])
           if (hasGrouping) {
-            group1 <- dataset[idxG1 & idxC, .v(var)]
-            group2 <- dataset[idxG2 & idxC, .v(var)]
-            subDataSet <- dataset[idxC, .v(c(var, grouping))]
+            group1 <- dataset[idxG1 & idxC, var]
+            group2 <- dataset[idxG2 & idxC, var]
+            subDataSet <- dataset[idxC, c(var, grouping)]
           } else {
-            group1 <- dataset[idxC, .v(var)]
+            group1 <- dataset[idxC, var]
             group1 <- group1 - options$testValue
           }
         }
@@ -2286,7 +2286,7 @@
         next
       }
       groups  <- rep("1", nrow(dataset))
-      subData <- data.frame(dependent = dataset[, .v(variable)], groups = groups)
+      subData <- data.frame(dependent = dataset[, variable], groups = groups)
       p <- try(.descriptivesPlotsRainCloudFill(subData, "dependent", "groups", variable, NULL, addLines = FALSE, horiz, options$testValue))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
@@ -2324,7 +2324,7 @@
         next
       }
       groups  <- rep(pair, each = nrow(dataset))
-      subData <- data.frame(dependent = unlist(dataset[, .v(pair)]), groups = groups)
+      subData <- data.frame(dependent = unlist(dataset[, pair]), groups = groups)
       missingIndex <- tapply(subData[["dependent"]], subData[["groups"]], is.na) # apply listwise deletion
       missingIndex <- apply(do.call(cbind, missingIndex), 1, any)
       subData <- subData[rep(!missingIndex, 2), ]
