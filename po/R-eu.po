@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-09-16 18:01+0000\n"
+"PO-Revision-Date: 2025-09-18 07:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
@@ -14,10 +14,10 @@ msgstr ""
 "X-Generator: Weblate 5.14-dev\n"
 
 msgid "Assumption Checks"
-msgstr "Suposizioen egiaztapenak"
+msgstr "Suposizioen Egiaztapenak"
 
 msgid "Descriptives"
-msgstr "Deskribapenak"
+msgstr "Deskribatzaileak"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -50,10 +50,10 @@ msgid "Mean"
 msgstr "Batez bestekoa"
 
 msgid "SD"
-msgstr "Desbideratze estandarra"
+msgstr "DE"
 
 msgid "SE"
-msgstr "Errore estandarra"
+msgstr "EE"
 
 msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
@@ -227,6 +227,7 @@ msgstr "U"
 msgid "Welch's t-test."
 msgstr "Welch-en t-testa."
 
+#, fuzzy
 msgid "t"
 msgstr "t"
 
@@ -246,7 +247,7 @@ msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr "Cohen-en d"
+msgstr "Cohen's d"
 
 msgid "Glass' delta"
 msgstr "Glass-en delta"
@@ -255,7 +256,7 @@ msgid "Hedges' g"
 msgstr "Hedges-en g"
 
 msgid "Mean Difference"
-msgstr "Batez besteko diferentzia"
+msgstr "Batez bestekoen Aldea"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr "Hodges-Lehmann Estimazioa"
