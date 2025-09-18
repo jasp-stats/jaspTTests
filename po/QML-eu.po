@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-16 16:01+0000\n"
+"PO-Revision-Date: 2025-09-19 07:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/eu/>\n"
@@ -625,7 +625,7 @@ msgstr "Barra grafikoak"
 
 msgctxt "BarPlots|"
 msgid "Confidence interval"
-msgstr "Konfiantza-tartea"
+msgstr "Konfiantza tartea"
 
 msgctxt "BarPlots|"
 msgid "Credible interval"
