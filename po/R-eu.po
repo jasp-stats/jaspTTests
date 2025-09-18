@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-09-18 07:01+0000\n"
+"PO-Revision-Date: 2025-09-19 15:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
@@ -16,8 +16,9 @@ msgstr ""
 msgid "Assumption Checks"
 msgstr "Suposizioen Egiaztapenak"
 
+#, fuzzy
 msgid "Descriptives"
-msgstr "Deskribatzaileak"
+msgstr "Deskriptiboak"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -26,7 +27,7 @@ msgstr ""
 "(-e p log(p)) da, p %3$s-rako .37 (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Q-Q Plots"
-msgstr "Q-Q grafikoak"
+msgstr "Q-Q Grafikoak"
 
 msgid "Please provide another variable."
 msgstr "Mesedez, eman beste aldagai bat."
@@ -70,8 +71,9 @@ msgstr "Goikoa"
 msgid "Inferential Plots"
 msgstr "Inferentziazko grafikoak"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Aurrekoa eta ondorengoa"
+msgstr "Aurreko eta ondorengo"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "Bayes faktorearen sendotasun egiaztapena"
@@ -98,8 +100,9 @@ msgstr "Sendotasun-egiaztapena %1$d / %2$d exekutatzen"
 msgid "max BF%s"
 msgstr "gehienezko BF%ak"
 
+#, fuzzy
 msgid "user prior"
-msgstr "erabiltzailearen aurrekoa"
+msgstr "Erabiltzailearen aurrekoa"
 
 msgid "wide prior"
 msgstr "aurreko zabala"
@@ -126,13 +129,13 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior"
-msgstr "Atzekoa"
+msgstr "Atzekoa  ¿edo ondorengoa?"
 
 msgid "Prior"
 msgstr "Aurrekoa"
 
 msgid "%s%% CI:"
-msgstr "%s%% CI:"
+msgstr "%s%% KT:"
 
 msgid "Effect size"
 msgstr "Efektuaren tamaina"
@@ -227,7 +230,6 @@ msgstr "U"
 msgid "Welch's t-test."
 msgstr "Welch-en t-testa."
 
-#, fuzzy
 msgid "t"
 msgstr "t"
 
@@ -240,8 +242,9 @@ msgstr "Estatistikoa"
 msgid "Test"
 msgstr "Proba"
 
+#, fuzzy
 msgid "df"
-msgstr "ag askatasun graduak"
+msgstr "ag (df)"
 
 msgid "p"
 msgstr "p"
@@ -306,7 +309,7 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Normaltasun Testa (Shapiro-Wilk)"
 
 msgid "Residuals"
-msgstr "Hondakinak"
+msgstr "Hondarrak"
 
 msgid "W"
 msgstr "W"
@@ -323,6 +326,7 @@ msgstr "Levene-ren"
 msgid "Test of Equality of Variances (%1$s)"
 msgstr "Bariantzen Berdintasun Testa (%1$s)"
 
+#, fuzzy
 msgid "F"
 msgstr "F"
 
