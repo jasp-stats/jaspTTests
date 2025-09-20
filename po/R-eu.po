@@ -60,7 +60,7 @@ msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%0f%% Sinesgarritasun tartea"
+msgstr ".0f%% Sinesgarritasun tartea"
 
 msgid "Lower"
 msgstr "Behekoa"
@@ -98,7 +98,7 @@ msgid "Running robustness check %1$d / %2$d"
 msgstr "Sendotasun-egiaztapena %1$d / %2$d exekutatzen"
 
 msgid "max BF%s"
-msgstr "gehienezko BF%ak"
+msgstr "gehienezko BF%s"
 
 #, fuzzy
 msgid "user prior"
@@ -503,5 +503,5 @@ msgstr ""
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] "Singularra"
-msgstr[1] "Plurala"
+msgstr[0] ""
+msgstr[1] ""
