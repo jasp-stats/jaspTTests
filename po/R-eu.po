@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-09-19 15:01+0000\n"
+"PO-Revision-Date: 2025-09-21 06:54+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
@@ -242,21 +242,20 @@ msgstr "Estatistikoa"
 msgid "Test"
 msgstr "Proba"
 
-#, fuzzy
 msgid "df"
-msgstr "ag (df)"
+msgstr "ag"
 
 msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr "Cohen's d"
+msgstr "Cohenen d"
 
 msgid "Glass' delta"
-msgstr "Glass-en delta"
+msgstr "Glassen delta"
 
 msgid "Hedges' g"
-msgstr "Hedges-en g"
+msgstr "Hedgesen g"
 
 msgid "Mean Difference"
 msgstr "Batez bestekoen Aldea"
@@ -326,7 +325,6 @@ msgstr "Levene-ren"
 msgid "Test of Equality of Variances (%1$s)"
 msgstr "Bariantzen Berdintasun Testa (%1$s)"
 
-#, fuzzy
 msgid "F"
 msgstr "F"
 
