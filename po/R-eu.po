@@ -1,0 +1,507 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspTTests 0.95.0\n"
+"POT-Creation-Date: 2025-06-28 03:02\n"
+"PO-Revision-Date: 2025-09-19 15:01+0000\n"
+"Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
+"eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14-dev\n"
+
+msgid "Assumption Checks"
+msgstr "Suposizioen Egiaztapenak"
+
+#, fuzzy
+msgid "Descriptives"
+msgstr "Deskriptiboak"
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Vovk-Sellke gehienezko p-erlazioa: alde bikoitzeko p-balio batean "
+"oinarrituta, H%1$s-ren aldeko gehienezko probabilitatea H%2$s-ren gainetik 1/"
+"(-e p log(p)) da, p %3$s-rako .37 (Sellke, Bayarri, & Berger, 2001)."
+
+msgid "Q-Q Plots"
+msgstr "Q-Q Grafikoak"
+
+msgid "Please provide another variable."
+msgstr "Mesedez, eman beste aldagai bat."
+
+msgid "Variables %1$s and %2$s are the same!"
+msgstr "%1$s eta %2$s aldagaiak berdinak dira!"
+
+msgid "Descriptives Plots"
+msgstr "Deskribapen grafikoak"
+
+msgid "Bar Plots"
+msgstr "Barra grafikoak"
+
+msgid "Group"
+msgstr "Taldea"
+
+msgid "N"
+msgstr "N"
+
+msgid "Mean"
+msgstr "Batez bestekoa"
+
+msgid "SD"
+msgstr "DE"
+
+msgid "SE"
+msgstr "EE"
+
+msgid "Coefficient of variation"
+msgstr "Aldakortasun koefizientea"
+
+msgid "%.0f%% Credible Interval"
+msgstr "%0f%% Sinesgarritasun tartea"
+
+msgid "Lower"
+msgstr "Behekoa"
+
+msgid "Upper"
+msgstr "Goikoa"
+
+msgid "Inferential Plots"
+msgstr "Inferentziazko grafikoak"
+
+#, fuzzy
+msgid "Prior and Posterior"
+msgstr "Aurreko eta ondorengo"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "Bayes faktorearen sendotasun egiaztapena"
+
+msgid "Sequential Analysis"
+msgstr "Analisi Sekuentziala"
+
+msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgstr ""
+"Bayes faktorearen sendotasun-egiaztapenaren grafikoa ez da onartzen "
+"aurretiko informatuarentzat."
+
+msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgstr ""
+"Analisi sekuentzialaren sendotasun-egiaztapenaren grafikoa ez da onartzen "
+"aurretiko informatuarentzat."
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr "Zenbakizko edo karaktereko rskala espero zen, baina %s lortu da."
+
+msgid "Running robustness check %1$d / %2$d"
+msgstr "Sendotasun-egiaztapena %1$d / %2$d exekutatzen"
+
+msgid "max BF%s"
+msgstr "gehienezko BF%ak"
+
+#, fuzzy
+msgid "user prior"
+msgstr "Erabiltzailearen aurrekoa"
+
+msgid "wide prior"
+msgstr "aurreko zabala"
+
+msgid "ultrawide prior"
+msgstr "aurreko ultrazabala"
+
+msgid "BF%s"
+msgstr "BF%s"
+
+msgid "%1$s at r==%2$s"
+msgstr "%1$s r==%2$s-tan"
+
+msgid "Some Bayes factors were infinite"
+msgstr "Bayes faktore batzuk infinituak ziren"
+
+msgid "Cauchy prior width"
+msgstr "Cauchyren aurreko zabalera"
+
+msgid "Running sequential analysis %1$d / %2$d"
+msgstr "Analisi sekuentziala %1$d / %2$d exekutatzen"
+
+msgid "n"
+msgstr "n"
+
+msgid "Posterior"
+msgstr "Atzekoa  ¿edo ondorengoa?"
+
+msgid "Prior"
+msgstr "Aurrekoa"
+
+msgid "%s%% CI:"
+msgstr "%s%% KT:"
+
+msgid "Effect size"
+msgstr "Efektuaren tamaina"
+
+msgid "Raincloud Plots"
+msgstr "Euri-hodeien grafikoak"
+
+msgid "Raincloud Difference Plots"
+msgstr "Euri-hodeien diferentzia grafikoak"
+
+msgid "Bayes factor could not be calculated"
+msgstr "Bayes faktorea ezin izan da kalkulatu"
+
+msgid "Bayes factor is infinite"
+msgstr "Bayes faktorea infinitua da"
+
+msgid "The Bayes factor is too small"
+msgstr "Bayes faktorea txikiegia da"
+
+msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
+msgstr ""
+"t-balioa handia da. Savage-Dickey hurbilketa bat erabili da Bayes faktorea "
+"kalkulatzeko, baina ezin da errore-estimaziorik eman."
+
+msgid "No error estimate is available for normal priors."
+msgstr "Ez dago errore-estimaziorik eskuragarri aurrizko normaletarako."
+
+msgid "Bayesian Mann-Whitney U Test"
+msgstr "Mann-Whitney U proba bayesiarra"
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr "Lagin independenteen T-proba bayesiarra"
+
+msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+"Emaitza %.0f iterazioko 5 kate dituen datuak handitzeko algoritmoan "
+"oinarrituta."
+
+msgid "error %%"
+msgstr "errorea %%"
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du <em>%1$s</em> "
+"taldearen kokapena <em>%2$s</em> taldearen kokapena baino handiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du <em>%1$s</em> "
+"taldearen kokapena <em>%2$s</em> taldearen kokapena baino txikiagoa dela. "
+"Wilcoxon zeinu-mailako Bayesiar testa"
+
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr "Wilcoxon zeinu-mailako Bayesiar testa"
+
+msgid "Bayesian One Sample T-Test"
+msgstr "Lagin bakarreko Bayesiar T-testa"
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du populazioaren batez "
+"bestekoa %s baino handiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du populazioaren batez "
+"bestekoa %s baino txikiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du populazioaren batez "
+"bestekoa %s-tik desberdina dela."
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr "Lagin parekatuen Bayesiar T-testa"
+
+msgid "Measure 1"
+msgstr "1. Neurria"
+
+msgid "Measure 2"
+msgstr "2. Neurria"
+
+msgid "Independent Samples T-Test"
+msgstr "Lagin Independenteen T-Test"
+
+msgid "Mann-Whitney U test."
+msgstr "Mann-Whitney U proba."
+
+msgid "U"
+msgstr "U"
+
+msgid "Welch's t-test."
+msgstr "Welch-en t-testa."
+
+msgid "t"
+msgstr "t"
+
+msgid "Student's t-test."
+msgstr "Student-en t-testa."
+
+msgid "Statistic"
+msgstr "Estatistikoa"
+
+msgid "Test"
+msgstr "Proba"
+
+#, fuzzy
+msgid "df"
+msgstr "ag (df)"
+
+msgid "p"
+msgstr "p"
+
+msgid "Cohen's d"
+msgstr "Cohen's d"
+
+msgid "Glass' delta"
+msgstr "Glass-en delta"
+
+msgid "Hedges' g"
+msgstr "Hedges-en g"
+
+msgid "Mean Difference"
+msgstr "Batez bestekoen Aldea"
+
+msgid "Hodges-Lehmann Estimate"
+msgstr "Hodges-Lehmann Estimazioa"
+
+msgid "Rank-Biserial Correlation"
+msgstr "Sailkapen-Biserialeko Korrelazioa"
+
+msgid "Location Parameter"
+msgstr "Kokapen Parametroa"
+
+msgid "Effect Size"
+msgstr "Efektuaren Tamaina"
+
+msgid "Student t-test and Welch t-test"
+msgstr "Student t-testa eta Welch t-testa"
+
+msgid "Student t-test"
+msgstr "Student t-testa"
+
+msgid "Welch t-test"
+msgstr "Welch t-testa"
+
+msgid "SE Difference"
+msgstr "ES Errore Estandarren Diferentzia"
+
+msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"%s-rako, kokapen parametroa batez besteko diferentziak ematen du. Mann-"
+"Whitney testarentzat, kokapen parametroa Hodges-Lehmann estimazioak ematen "
+"du."
+
+msgid "%1$s%% CI for %2$s"
+msgstr "%1$s%% CI %2$s-rako"
+
+msgid "SE %1$s"
+msgstr "EE %1$s"
+
+msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgstr ""
+"Mann-Whitney testarentzat, efektuaren tamaina mailaren korrelazio biserialak "
+"ematen du."
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr "%1$s-rako, efektuaren tamaina %2$s-k ematen du."
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr "Normaltasun Testa (Shapiro-Wilk)"
+
+msgid "Residuals"
+msgstr "Hondarrak"
+
+msgid "W"
+msgstr "W"
+
+msgid "Significant results suggest a deviation from normality."
+msgstr "Emaitza esanguratsuek normaltasunetik desbideratzea iradokitzen dute."
+
+msgid "Brown-Forsythe"
+msgstr "Brown-Forsythe"
+
+msgid "Levene's"
+msgstr "Levene-ren"
+
+msgid "Test of Equality of Variances (%1$s)"
+msgstr "Bariantzen Berdintasun Testa (%1$s)"
+
+#, fuzzy
+msgid "F"
+msgstr "F"
+
+msgid "%s<sub>1</sub>"
+msgstr "%s<sub>1</sub>"
+
+msgid "%s<sub>2</sub>"
+msgstr "%s<sub>2</sub>"
+
+msgid "greater"
+msgstr "handiagoa"
+
+msgid "less"
+msgstr "gutxiago"
+
+msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du %1$s taldea %3$s "
+"taldea baino %2$s dela."
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Brown-Forsythe testa esanguratsua da (p < .05), bariantza berdinaren "
+"hipotesiaren urraketa iradokiz"
+
+msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+"Levene-ren testa esanguratsua da (p < .05), bariantza berdinaren "
+"hipotesiaren urraketa iradokiz"
+
+msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+"Glass-en deltak %2$s aldagaiko %1$s taldearen desbideratze estandarra "
+"erabiltzen du."
+
+msgid "F-statistic could not be calculated"
+msgstr "F-estatistikoa ezin izan da kalkulatu"
+
+msgid "Group Descriptives"
+msgstr "Taldeen Deskribapenak"
+
+#, fuzzy
+msgid "Mean Rank"
+msgstr "Batez besteko maila"
+
+#, fuzzy
+msgid "Sum Rank"
+msgstr "Batuketa maila"
+
+msgid "One Sample T-Test"
+msgstr "Lagin bakarreko T-testa"
+
+msgid "Wilcoxon signed-rank test."
+msgstr "Wilcoxon zeinudun mailaren testa."
+
+msgid "V"
+msgstr "V"
+
+msgid "Z test."
+msgstr "Z testa."
+
+msgid "Z"
+msgstr "Z"
+
+msgid "Location Difference"
+msgstr "Kokapenaren Desberdintasuna"
+
+msgid "Student t-test and Z-test"
+msgstr "Student t-testa eta Z-testa"
+
+msgid "Z-test"
+msgstr "Z-testa"
+
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgstr ""
+"%s-rentzat, kokapenaren aldearen estimazioa laginaren batez besteko aldearen "
+"<em>d</em> bidez ematen da. Wilcoxon testarentzat, kokapenaren aldearen "
+"estimazioa Hodges-Lehmann estimazioak ematen du."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr ""
+"Student t-testarentzat, efektuaren tamaina Cohen-en <em>d</em> bidez ematen "
+"da."
+
+msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"Wilcoxon probarako, efektuaren tamaina parekatutako mailaren korrelazio "
+"biserialak ematen du."
+
+msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgstr ""
+"Z probarako, efektuaren tamaina Cohen-en d-k ematen du (emandako "
+"populazioaren desbideratze estandarrean oinarrituta)."
+
+msgid "greater than"
+msgstr "baino handiagoa bada"
+
+msgid "less than"
+msgstr "gutxiago baino"
+
+msgid "different from"
+msgstr "desberdina"
+
+msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgstr ""
+"%1$s-rentzat, hipotesi alternatiboak zehazten du batez bestekoa %2$s %3$s "
+"dela."
+
+msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgstr ""
+"Wilcoxon probarentzat, hipotesi alternatiboak zehazten du mediana %1$s %2$s "
+"dela."
+
+msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
+msgstr ""
+"KT ezin izan da kalkulatu efektuaren tamainarako, laginaren tamaina txikia "
+"eta/edo efektuaren tamaina muturrekoa zelako."
+
+msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+"Laginaren tamaina txikiegia da nahi den konfiantza mailarako. %.1f%% "
+"erabiliz horren ordez"
+
+msgid "Paired Samples T-Test"
+msgstr "Lagin Bikotekatuen T-Proba"
+
+msgid "z"
+msgstr "z"
+
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+"Student t-probarentzat, kokapen parametroa batez besteko diferentzia "
+"<em>d</em>-k ematen du. Wilcoxon probarentzat, kokapen parametroa Hodges-"
+"Lehmann estimazioak ematen du."
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+"Student t-probarentzat, efektuaren tamaina Cohen-en <em>d</em>-k ematen du. "
+"Wilcoxon probarentzat, efektuaren tamaina parekatutako mailaren korrelazio "
+"biserialak ematen du."
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr "Cohen-en d behaketen arteko korrelaziorako zuzendua."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du 1. neurria 2. neurria "
+"baino txikiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du 1. neurria 2. neurria "
+"baino handiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du %1$s %2$s baino "
+"txikiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du %1$s %2$s baino "
+"handiagoa dela."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du 1. neurria 2. neurria "
+"baino txikiagoa dela. Adibidez, %1$s %2$s baino txikiagoa da."
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
+msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du 1. neurria 2. neurria "
+"baino handiagoa dela. Adibidez, %1$s %2$s baino handiagoa da."
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] "Singularra"
+msgstr[1] "Plurala"
