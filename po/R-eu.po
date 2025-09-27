@@ -59,7 +59,7 @@ msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%0f%% Tarte sinesgarria"
+msgstr "%.0f%% Tarte sinesgarria"
 
 msgid "Lower"
 msgstr "Behekoa"
@@ -96,7 +96,7 @@ msgid "Running robustness check %1$d / %2$d"
 msgstr "Sendotasun-egiaztapena %1$d / %2$d exekutatzen"
 
 msgid "max BF%s"
-msgstr "gehienezko BF%ak"
+msgstr "gehienezko BF%s"
 
 msgid "user prior"
 msgstr "Erabiltzailearen aurrekoa"
