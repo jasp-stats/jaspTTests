@@ -1,0 +1,428 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspTTests 0.95.0\n"
+"POT-Creation-Date: 2025-06-28 03:02\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Assumption Checks"
+msgstr ""
+
+msgid "Descriptives"
+msgstr ""
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+msgid "Q-Q Plots"
+msgstr ""
+
+msgid "Please provide another variable."
+msgstr ""
+
+msgid "Variables %1$s and %2$s are the same!"
+msgstr ""
+
+msgid "Descriptives Plots"
+msgstr ""
+
+msgid "Bar Plots"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "N"
+msgstr ""
+
+msgid "Mean"
+msgstr ""
+
+msgid "SD"
+msgstr ""
+
+msgid "SE"
+msgstr ""
+
+msgid "Coefficient of variation"
+msgstr ""
+
+msgid "%.0f%% Credible Interval"
+msgstr ""
+
+msgid "Lower"
+msgstr ""
+
+msgid "Upper"
+msgstr ""
+
+msgid "Inferential Plots"
+msgstr ""
+
+msgid "Prior and Posterior"
+msgstr ""
+
+msgid "Bayes Factor Robustness Check"
+msgstr ""
+
+msgid "Sequential Analysis"
+msgstr ""
+
+msgid "Bayes factor robustness check plot currently not supported for informed prior."
+msgstr ""
+
+msgid "Sequential analysis robustness check plot currently not supported for informed prior."
+msgstr ""
+
+msgid "Expected numeric or character rscale but got %s."
+msgstr ""
+
+msgid "Running robustness check %1$d / %2$d"
+msgstr ""
+
+msgid "max BF%s"
+msgstr ""
+
+msgid "user prior"
+msgstr ""
+
+msgid "wide prior"
+msgstr ""
+
+msgid "ultrawide prior"
+msgstr ""
+
+msgid "BF%s"
+msgstr ""
+
+msgid "%1$s at r==%2$s"
+msgstr ""
+
+msgid "Some Bayes factors were infinite"
+msgstr ""
+
+msgid "Cauchy prior width"
+msgstr ""
+
+msgid "Running sequential analysis %1$d / %2$d"
+msgstr ""
+
+msgid "n"
+msgstr ""
+
+msgid "Posterior"
+msgstr ""
+
+msgid "Prior"
+msgstr ""
+
+msgid "%s%% CI:"
+msgstr ""
+
+msgid "Effect size"
+msgstr ""
+
+msgid "Raincloud Plots"
+msgstr ""
+
+msgid "Raincloud Difference Plots"
+msgstr ""
+
+msgid "Bayes factor could not be calculated"
+msgstr ""
+
+msgid "Bayes factor is infinite"
+msgstr ""
+
+msgid "The Bayes factor is too small"
+msgstr ""
+
+msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
+msgstr ""
+
+msgid "No error estimate is available for normal priors."
+msgstr ""
+
+msgid "Bayesian Mann-Whitney U Test"
+msgstr ""
+
+msgid "Bayesian Independent Samples T-Test"
+msgstr ""
+
+msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
+msgstr ""
+
+msgid "error %%"
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
+msgstr ""
+
+msgid "Bayesian Wilcoxon Signed-Rank Test"
+msgstr ""
+
+msgid "Bayesian One Sample T-Test"
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
+msgstr ""
+
+msgid "Bayesian Paired Samples T-Test"
+msgstr ""
+
+msgid "Measure 1"
+msgstr ""
+
+msgid "Measure 2"
+msgstr ""
+
+msgid "Independent Samples T-Test"
+msgstr ""
+
+msgid "Mann-Whitney U test."
+msgstr ""
+
+msgid "U"
+msgstr ""
+
+msgid "Welch's t-test."
+msgstr ""
+
+msgid "t"
+msgstr ""
+
+msgid "Student's t-test."
+msgstr ""
+
+msgid "Statistic"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "df"
+msgstr ""
+
+msgid "p"
+msgstr ""
+
+msgid "Cohen's d"
+msgstr ""
+
+msgid "Glass' delta"
+msgstr ""
+
+msgid "Hedges' g"
+msgstr ""
+
+msgid "Mean Difference"
+msgstr ""
+
+msgid "Hodges-Lehmann Estimate"
+msgstr ""
+
+msgid "Rank-Biserial Correlation"
+msgstr ""
+
+msgid "Location Parameter"
+msgstr ""
+
+msgid "Effect Size"
+msgstr ""
+
+msgid "Student t-test and Welch t-test"
+msgstr ""
+
+msgid "Student t-test"
+msgstr ""
+
+msgid "Welch t-test"
+msgstr ""
+
+msgid "SE Difference"
+msgstr ""
+
+msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgid "%1$s%% CI for %2$s"
+msgstr ""
+
+msgid "SE %1$s"
+msgstr ""
+
+msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
+msgstr ""
+
+msgid "For the %1$s, effect size is given by %2$s."
+msgstr ""
+
+msgid "Test of Normality (Shapiro-Wilk)"
+msgstr ""
+
+msgid "Residuals"
+msgstr ""
+
+msgid "W"
+msgstr ""
+
+msgid "Significant results suggest a deviation from normality."
+msgstr ""
+
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgid "Levene's"
+msgstr ""
+
+msgid "Test of Equality of Variances (%1$s)"
+msgstr ""
+
+msgid "F"
+msgstr ""
+
+msgid "%s<sub>1</sub>"
+msgstr ""
+
+msgid "%s<sub>2</sub>"
+msgstr ""
+
+msgid "greater"
+msgstr ""
+
+msgid "less"
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+
+msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+
+msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
+msgstr ""
+
+msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
+msgstr ""
+
+msgid "F-statistic could not be calculated"
+msgstr ""
+
+msgid "Group Descriptives"
+msgstr ""
+
+msgid "Mean Rank"
+msgstr ""
+
+msgid "Sum Rank"
+msgstr ""
+
+msgid "One Sample T-Test"
+msgstr ""
+
+msgid "Wilcoxon signed-rank test."
+msgstr ""
+
+msgid "V"
+msgstr ""
+
+msgid "Z test."
+msgstr ""
+
+msgid "Z"
+msgstr ""
+
+msgid "Location Difference"
+msgstr ""
+
+msgid "Student t-test and Z-test"
+msgstr ""
+
+msgid "Z-test"
+msgstr ""
+
+msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
+msgstr ""
+
+msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+
+msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
+msgstr ""
+
+msgid "greater than"
+msgstr ""
+
+msgid "less than"
+msgstr ""
+
+msgid "different from"
+msgstr ""
+
+msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
+msgstr ""
+
+msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
+msgstr ""
+
+msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
+msgstr ""
+
+msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
+msgstr ""
+
+msgid "Paired Samples T-Test"
+msgstr ""
+
+msgid "z"
+msgstr ""
+
+msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
+msgstr ""
+
+msgid "Cohen's d corrected for correlation between observations."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
+msgstr ""
+
+msgid "The following pair is duplicated: %s"
+msgid_plural "The following pairs are duplicated: %s"
+msgstr[0] ""
+msgstr[1] ""

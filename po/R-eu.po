@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-09-19 15:01+0000\n"
+"PO-Revision-Date: 2025-09-22 15:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
@@ -16,7 +16,6 @@ msgstr ""
 msgid "Assumption Checks"
 msgstr "Suposizioen Egiaztapenak"
 
-#, fuzzy
 msgid "Descriptives"
 msgstr "Deskriptiboak"
 
@@ -60,7 +59,7 @@ msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%0f%% Sinesgarritasun tartea"
+msgstr "%0f%% Tarte sinesgarria"
 
 msgid "Lower"
 msgstr "Behekoa"
@@ -71,7 +70,6 @@ msgstr "Goikoa"
 msgid "Inferential Plots"
 msgstr "Inferentziazko grafikoak"
 
-#, fuzzy
 msgid "Prior and Posterior"
 msgstr "Aurreko eta ondorengo"
 
@@ -100,7 +98,6 @@ msgstr "Sendotasun-egiaztapena %1$d / %2$d exekutatzen"
 msgid "max BF%s"
 msgstr "gehienezko BF%ak"
 
-#, fuzzy
 msgid "user prior"
 msgstr "Erabiltzailearen aurrekoa"
 
@@ -129,7 +126,7 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior"
-msgstr "Atzekoa  ¿edo ondorengoa?"
+msgstr "Ondorengoa"
 
 msgid "Prior"
 msgstr "Aurrekoa"
@@ -186,7 +183,7 @@ msgid "For all tests, the alternative hypothesis specifies that the location of 
 msgstr ""
 "Proba guztietarako, hipotesi alternatiboak zehazten du <em>%1$s</em> "
 "taldearen kokapena <em>%2$s</em> taldearen kokapena baino txikiagoa dela. "
-"Wilcoxon zeinu-mailako Bayesiar testa"
+"Wilcoxon zeinu-mailako Bayesiar testa."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "Wilcoxon zeinu-mailako Bayesiar testa"
@@ -242,21 +239,20 @@ msgstr "Estatistikoa"
 msgid "Test"
 msgstr "Proba"
 
-#, fuzzy
 msgid "df"
-msgstr "ag (df)"
+msgstr "ag"
 
 msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr "Cohen's d"
+msgstr "Cohenen d"
 
 msgid "Glass' delta"
-msgstr "Glass-en delta"
+msgstr "Glassen delta"
 
 msgid "Hedges' g"
-msgstr "Hedges-en g"
+msgstr "Hedgesen g"
 
 msgid "Mean Difference"
 msgstr "Batez bestekoen Aldea"
@@ -326,7 +322,6 @@ msgstr "Levene-ren"
 msgid "Test of Equality of Variances (%1$s)"
 msgstr "Bariantzen Berdintasun Testa (%1$s)"
 
-#, fuzzy
 msgid "F"
 msgstr "F"
 
@@ -368,13 +363,11 @@ msgstr "F-estatistikoa ezin izan da kalkulatu"
 msgid "Group Descriptives"
 msgstr "Taldeen Deskribapenak"
 
-#, fuzzy
 msgid "Mean Rank"
-msgstr "Batez besteko maila"
+msgstr "Batez besteko hein"
 
-#, fuzzy
 msgid "Sum Rank"
-msgstr "Batuketa maila"
+msgstr "Hein Batuketa"
 
 msgid "One Sample T-Test"
 msgstr "Lagin bakarreko T-testa"
@@ -418,7 +411,7 @@ msgstr ""
 
 msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
 msgstr ""
-"Z probarako, efektuaren tamaina Cohen-en d-k ematen du (emandako "
+"Z probarako, efektuaren tamaina Cohen-en s <em>d</em> ematen du (emandako "
 "populazioaren desbideratze estandarrean oinarrituta)."
 
 msgid "greater than"
