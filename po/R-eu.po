@@ -496,5 +496,4 @@ msgstr ""
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] "Singularra"
-msgstr[1] "Plurala"
+msgstr[0] ""
