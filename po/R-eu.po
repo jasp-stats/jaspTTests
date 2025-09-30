@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-10-01 09:01+0000\n"
-"Last-Translator: Ángel Prieto <angel.prieto.fi@gmail.com>\n"
+"PO-Revision-Date: 2025-10-01 09:02+0000\n"
+"Last-Translator: Amaia Irizar <amaia.irizar@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
 "Language: eu\n"
@@ -58,6 +58,7 @@ msgstr "SE"
 msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
 
+#, fuzzy
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Tarte sinesgarria"
 
