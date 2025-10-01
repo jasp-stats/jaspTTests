@@ -1,0 +1,1559 @@
+msgid ""
+msgstr ""
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Language: zh_Hans\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "T-Tests"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Independent Samples T-Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Paired Samples T-Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "One Sample T-Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian Independent Samples T-Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian Paired Samples T-Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian One Sample T-Test"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Dependent Variables"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Grouping Variable"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Prior and posterior"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional info"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Bayes factor robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Sequential analysis"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "No. samples"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Variables"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Test value:"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Prior and posterior"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional info"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Bayes factor robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Sequential analysis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "≠ Test value"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "> Test value"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "< Test value"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "No. samples"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases per dependent variable"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Prior and posterior"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional info"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Bayes factor robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Sequential analysis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Robustness check"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "No. samples"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Grouping Variable"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Welch"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Location parameter"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Cohen's d"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Glass' delta"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Hedges' g"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Descriptives plots"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 ≠ Group 2"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 > Group 2"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Group 1 < Group 2"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Assumption Checks"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Normality"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Equality of variances"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases per dependent variable"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Variables"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Z Test"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Test value:"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Std. deviation:"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Descriptives plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "≠ Test value"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "> Test value"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "< Test value"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Assumption checks"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Normality"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Tests"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Student"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Wilcoxon signed-rank"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Additional Statistics"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Location parameter"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Descriptives plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 ≠ Measure 2"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 > Measure 2"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Measure 1 < Measure 2"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Assumption Checks"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Normality"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Missing Values"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases listwise"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Evaluate the difference between two means"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Dependent Variables"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Variable Pairs"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Raincloud difference plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Horizontal display"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Effect size"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Effect size"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Effect size"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Brown-Forsythe"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Levene's"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Bar plots"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Confidence interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Standard error"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Fix horizontal axis to 0"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Alternative Hypothesis"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Exclude cases per variable"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Mann-Whitney"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Correct for correlation"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot residuals"
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid ""
+"By selecting this option, the error bars will represent standard errors of "
+"the mean of each condition."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"The independent samples t-test allows the user to estimate the effect size "
+"and test the null hypothesis that the population means of two independent "
+"groups are equal."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Assumptions"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The dependent variable is continuous."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"The observations in both groups are a random sample from the population."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"The dependent variable is normally distributed in each group of the "
+"independent variable."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The population variances in the two groups are homogeneous."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Input"
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"For the Student's t-test and Welch's t-test, the location parameter is given "
+"by mean difference; for the Mann-Whitney test, the location parameter is "
+"given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Confidence interval for the location parameter. By default, the confidence "
+"interval is set to 95%. This can be changed into the desired percentage."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"For the Student t-test and Welch t-test, the effect size can be selected "
+"below; for the Mann-Whitney test, the effect size is given by the rank "
+"biserial correlation."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"For the Student's t-test, uses the pooled standard deviation to standardize "
+"the mean difference. For the Welch's t-test, uses the square-root of the "
+"average variance to standardize the mean difference."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Uses the standard deviation of group 2 to standardize the mean difference. "
+"In order to change which group is used as group 2, you can change the order "
+"of the levels by clicking on the name of the grouping variable in the data "
+"window, click on one of the levels and then click the arrow buttons to "
+"switch the order."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Applies a correction factor to Cohen's d to make it unbiased."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, standard error of the "
+"mean for each group."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Two-sided alternative hypothesis that the population means are not equal. "
+"Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of Group 1 is "
+"larger than the population mean of Group 2."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of Group 1 is "
+"smaller than the population mean of Group 2."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Shapiro-Wilk test of normality."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Displays Q-Q plot of the standardized residuals."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Displays the individual cases (colored dots), box plots, and densities for "
+"each group."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the tests."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"The Bayesian independent samples t-test allows the user to estimate the "
+"effect size and test the null hypothesis that the population means of two "
+"independent groups are equal.\n"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "In this box the dependent variable is selected."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "In this box the variable defining the groups is selected."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of group one is "
+"larger than the population mean of group two."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of group one is "
+"smaller than the population mean of group two."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Displays the prior and posterior distribution of the effect size after the "
+"data is seen."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Adds the Bayes factor computed with the user-defined prior; adds a "
+"probability wheel depicting how likely the data is under the null vs. "
+"alternative hypothesis; adds the median and the 95% credible interval of the "
+"posterior distribution of the effect size."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Displays the individual cases (colored dots), box plots, and densities for "
+"each group."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid "Student's t-test. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Mann-Whitney test. Use when data is not normally distributed. The number of "
+"MCMC samples is set at 1000 by default and can be adjusted"
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the multiple t-"
+"tests."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Descriptives: Sample size, sample mean, sample standard deviation, and "
+"standard error of the mean for each group."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Input"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "In this box the dependent variable is selected."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Displays the prior and posterior distribution of the effect size after the "
+"data is seen."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Displays the development of the Bayes factor as the data come in using the "
+"user-defined prior."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Adds the results of the sequential analysis using the wide (scale=1) and "
+"ultrawide prior (scale=sqrt(2))."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Displays the individual cases (colored dots), box plots, and densities for "
+"each group."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Two-sided alternative hypothesis that the population mean is not equal to "
+"the test value. Selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"One-sided alternative hypothesis that the population mean is larger than the "
+"test value."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid "Student's t-test. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Non-parametric version of one-sample t-test. Use when data is not normally "
+"distributed. The number of MCMC samples is set at 1000 by default and can be "
+"adjusted."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Descriptives: Sample size, sample mean, sample standard deviation, and "
+"standard error of the mean for each group."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Input"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Two-sided alternative hypothesis that the population mean of the difference "
+"is not equal to 0. Selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of the difference "
+"is larger than 0."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Adds the Bayes factor computed with the user-defined prior; adds a "
+"probability wheel depicting how likely the data is under the null vs. "
+"alternative hypothesis; adds the median and the 95% credible interval of the "
+"posterior distribution of the effect size."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Displays the development of the Bayes factor as the data come in using the "
+"user-defined prior."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Adds the results of the sequential analysis using the wide (scale=1) and "
+"ultrawide prior (scale=sqrt(2))."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Displays the individual cases (colored dots), box plots, and densities for "
+"each group."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Displays a raincloud plot of the differences between the two measures."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid "Student's t-test. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Non-parametric version of paired samples t-test. Use when data is not "
+"normally distributed. The number of MCMC samples is set at 1000 by default "
+"and can be changed."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, and standard error of "
+"the mean for each group."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the multiple t-"
+"tests."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the multiple t-tests."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Displays the sample means and the confidence intervals for each group. By "
+"default it is set at 95%. This can be changed into the desired percentage."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The one sample t-test allows the user to estimate the effect size and test "
+"the null hypothesis that the population mean equals a specific constant, i."
+"e., the test value.\n"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Assumptions"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Input"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "In this box the dependent variable is selected."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Confidence interval for the location parameter. By default, the confidence "
+"interval is set to 95%. This can be changed into the desired percentage."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"For the Student t-test, the effect size is given by Cohen's d; for the "
+"Wilcoxon test, the effect size is given by the matched rank biserial "
+"correlation; for the Z test, the effect size is given by Cohen's d (based on "
+"the provided population standard deviation)."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Confidence interval for the effect size."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, standard error of the "
+"mean for each measure."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Two sided alternative hypothesis that the sample mean is not equal to the "
+"test value. Selected by default."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is greater than the "
+"test value."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is less than the test "
+"value."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Shapiro-Wilk test of normality."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot of the standardized residuals."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the tests. This "
+"option is selected by default."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the tests."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"The paired samples t-test allows the user to estimate the effect size and "
+"test the null hypothesis that the population mean of the difference between "
+"observations equals 0 in dependent groups.\n"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Assumptions"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Input"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"The variables here have their difference computed. Multiple differences can "
+"be analysed at the same time by specifying different rows. In other words, "
+"each row represents a difference score."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Confidence interval for the location parameter. By default, the confidence "
+"interval is set to 95%. This can be changed into the desired percentage."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"For the Student t-test, the effect size is given by Cohen's d; for the "
+"Wilcoxon test, the effect size is given by the matched rank biserial "
+"correlation."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Confidence interval for the effect size."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Correct the effect size for the correlation between the observed values, to "
+"prevent overestimating the effect (Dunlap et al., 1996)."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, standard error of the "
+"mean for each measure."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Two-sided alternative hypothesis that the population mean of the difference "
+"is not equal to 0. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Shapiro-Wilk test of normality."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Q-Q plot of the standardized residuals."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Displays the sample means and the confidence intervals for each measure (see "
+"Morey [2008] for the computation of the standard error of the mean in paired "
+"designs.)"
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Displays a raincloud plot of the differences between the two measures."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all difference scores. Sample "
+"size is therefore constant across the tests."
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid ""
+"Coverage of the confidence intervals (Or credible intervals in case of a "
+"Bayesian analysis) in percentages. By default, the confidence interval is "
+"set to 95%. This can be changed into the desired percentage."
+msgstr ""
+
+msgctxt "BarPlots|"
+msgid "Forces the graph to show the default x-axis at y = 0."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Two-sided alternative hypothesis that the population means are equal. "
+"Selected by default."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Displays the Bayes factor across different values of Cauchy prior width. The "
+"scale of the Cauchy prior is varied between 0 and 1.5, creating "
+"progressively more uninformative priors."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Displays the development of the Bayes factor as the data comes in using the "
+"user-defined prior."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Adds the results of the sequential analysis using the wide (scale=1) and "
+"ultrawide prior (scale=sqrt(2))."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Display descriptives plots. Includes central credible interval, which shows "
+"the probability (conditional on the alternative model) that the true effect "
+"size lies within certain values. The default credible interval is set at 95% "
+"and can be changed by the user."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+
+msgctxt "TTestBayesianIndependentSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the multiple t-tests."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"The one sample t-test allows you to estimate the effect size and test the "
+"null hypothesis that the population mean equals a specific constant, i.e., "
+"the test value.\n"
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Adds the Bayes factor computed with the user-defined prior; adds a "
+"probability wheel depicting how likely the data is under the null vs. "
+"alternative hypothesis. Adds the 95% credible interval of the posterior "
+"distribution of the effect size."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Displays the Bayes factor across different values of cauchy prior width. The "
+"scale of the Cauchy prior is varied between 0 and 1.5, creating "
+"progressively more uninformative priors."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Adds the Bayes factor computed with the user-defined prior; adds a "
+"probability wheel depicting how likely the data is under the null vs. "
+"alternative hypothesis."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"Display descriptives plots. Includes central credible interval, which shows "
+"the probability (conditional on the alternative model) that the true effect "
+"size lies within certain values. The default credible interval is set at 95% "
+"and can be changed by the user."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"One-sided alternative hypothesis that the population mean is smaller than "
+"the test value."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the multiple t-"
+"tests."
+msgstr ""
+
+msgctxt "TTestBayesianOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the multiple t-tests."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"The paired samples t-test allows you to estimate the effect size and test "
+"the null hypothesis that the population mean of the difference between "
+"paired (dependent) observations equals 0.\n"
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"In this box the variables are selected for which the difference is computed. "
+"Multiple differences can be analysed at the same time by specifying "
+"different rows with two variables for which the difference is computed. In "
+"other words, each row represents a separate set of difference scores."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of the difference "
+"is smaller than 0."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Displays the prior and posterior distributions of the effect size after "
+"observing the data."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Displays the Bayes factor across different values of cauchy prior width. The "
+"scale of the Cauchy prior is varied between 0 and 1.5, creating "
+"progressively more uninformative priors."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Display descriptives plots. Includes central credible interval, which shows "
+"the probability (conditional on the alternative model) that the true effect "
+"size lies within certain values. The default credible interval is set at 95% "
+"and can be changed by the user."
+msgstr ""
+
+msgctxt "TTestBayesianPairedSamples|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "In this box the dependent variable is selected."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"In this box the variable defining the groups is selected. e.g., experimental "
+"condition."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Good old fashioned t-test. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Welch's unequal variances test. Use when the group variances cannot be "
+"assumed to be equal."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Non-parametric independent t-test. Use when the model residuals are not "
+"normally distributed."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Confidence interval for the chosen effect size, based on the non-central t-"
+"distribution for Cohen's d, Glass' delta and Hedges' g, and normal "
+"approximation of the Fisher transformed rank biserial correlation."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Shows the maximum ratio of the likelihood of the obtained p value under H1 "
+"vs the likelihood of the obtained p value under H0. For example, if the two-"
+"sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that "
+"this p-value is at most 2.46 times more likely to occur under H1 than under "
+"H0."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"BrownForsythe or Levene's tests to check if variances are equally "
+"distributed across groups."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid ""
+"Exclude cases per dependent variable: In case of multiple t-tests within a "
+"single analysis, each test will be conducted using all cases with valid data "
+"for the dependent variable for the particular t-test. Sample sizes may "
+"therefore vary across the tests. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "The Student's t-test. This option is selected by default."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Wilcoxon signed-rank test. Use when the model residuals are not normally "
+"distributed."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "The Z test. Use for testing whether two population means are different."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Test value specified in the null hypothesis. The mean of the data is "
+"compared to this value. Set to 0 by default, which can be changed by the "
+"user."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The standard deviation applied in the Z test. Set to 1 by default, which can "
+"be changed by the user."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Average difference between the data points and the test value. For the "
+"Student's t-test and the Z test the location difference estimate is given by "
+"the mean difference divided by the (hypothesized) standard deviation d; for "
+"the Wilcoxon signed-rank test, the location difference estimate is given by "
+"the Hodges-Lehmann estimate."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Shows the maximum ratio of the likelihood of the obtained p value under H1 "
+"vs the likelihood of the obtained p value under H0. For example, if the two-"
+"sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that "
+"this p-value is at most 2.46 times more likely to occur under H1 than under "
+"H0."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Displays the sample mean and the confidence interval. The confidence "
+"interval is set at 95% by default and can be changed."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Displays the individual data points, box plot, and density."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid "Student's paired sample t-test.This option is selected by default."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Non-parametric version of the paired samples t-test. Use when model "
+"residuals (i.e., group differences) are not normally distributed."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"For the Student's t-test the location parameter is given by the mean "
+"difference 'd'; for the Wilcoxon signed-rank test, the location parameter is "
+"given by the Hodges-Lehmann estimate."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Shows the maximum ratio of the likelihood of the obtained p value under H1 "
+"vs the likelihood of the obtained p value under H0. For example, if the two-"
+"sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that "
+"this p-value is at most 2.46 times more likely to occur under H1 than under "
+"H0."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of the difference "
+"is larger than 0."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"One-sided alternative hypothesis that the population mean of the difference "
+"is smaller than 0."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Displays the individual data points (colored dots), box plots, and densities "
+"for each measure."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"Changes the orientation of the raincloud difference plot so that the x-axis "
+"represents the dependent variable."
+msgstr ""
+
+msgctxt "TTestPairedSamples|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each test will be "
+"conducted using all cases with valid data for the difference score for the "
+"particular t-test. Sample sizes may therefore vary across the tests. This "
+"option is selected by default."
+msgstr ""
