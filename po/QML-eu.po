@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-23 10:01+0000\n"
-"Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
+"PO-Revision-Date: 2025-10-01 11:32+0000\n"
+"Last-Translator: Amaia Irizar <amaia.irizar@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-qml/eu/>\n"
 "Language: eu\n"
@@ -25,10 +25,9 @@ msgctxt "Description|"
 msgid "Independent Samples T-Test"
 msgstr "Lagin Independenteen T-Proba"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "Lagin Bikoitzen T-Proba"
+msgstr "Binakako laginen T-Proba"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
