@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.95.0\n"
 "POT-Creation-Date: 2025-06-28 03:02\n"
-"PO-Revision-Date: 2025-09-22 15:01+0000\n"
+"PO-Revision-Date: 2025-10-01 09:02+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
 "eu/>\n"
@@ -17,7 +17,7 @@ msgid "Assumption Checks"
 msgstr "Suposizioen Egiaztapenak"
 
 msgid "Descriptives"
-msgstr "Deskriptiboak"
+msgstr "Deskribapenak"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -50,22 +50,23 @@ msgid "Mean"
 msgstr "Batez bestekoa"
 
 msgid "SD"
-msgstr "DE"
+msgstr "SD"
 
 msgid "SE"
-msgstr "EE"
+msgstr "SE"
 
 msgid "Coefficient of variation"
 msgstr "Aldakortasun koefizientea"
 
+#, fuzzy
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Tarte sinesgarria"
 
 msgid "Lower"
-msgstr "Behekoa"
+msgstr "Beheko"
 
 msgid "Upper"
-msgstr "Goikoa"
+msgstr "Goiko"
 
 msgid "Inferential Plots"
 msgstr "Inferentziazko grafikoak"
@@ -77,7 +78,7 @@ msgid "Bayes Factor Robustness Check"
 msgstr "Bayes faktorearen sendotasun egiaztapena"
 
 msgid "Sequential Analysis"
-msgstr "Analisi Sekuentziala"
+msgstr "Analisi sekuentziala"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
@@ -126,7 +127,7 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior"
-msgstr "Ondorengoa"
+msgstr "Atzekoa"
 
 msgid "Prior"
 msgstr "Aurrekoa"
@@ -240,7 +241,7 @@ msgid "Test"
 msgstr "Proba"
 
 msgid "df"
-msgstr "ag"
+msgstr "df"
 
 msgid "p"
 msgstr "p"
@@ -267,7 +268,7 @@ msgid "Location Parameter"
 msgstr "Kokapen Parametroa"
 
 msgid "Effect Size"
-msgstr "Efektuaren Tamaina"
+msgstr "Efektuaren tamaina"
 
 msgid "Student t-test and Welch t-test"
 msgstr "Student t-testa eta Welch t-testa"
