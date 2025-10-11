@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-06 19:56+0000\n"
-"Last-Translator: Hamza Yalçin <h.yalcin08@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
-"jaspttests-qml/tr/>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -365,9 +359,10 @@ msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Güven aralığı"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Effect size"
@@ -479,9 +474,10 @@ msgctxt "TTestOneSample|"
 msgid "Location estimate"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Güven aralığı"
 
 msgctxt "TTestOneSample|"
 msgid "Effect size"
@@ -563,9 +559,10 @@ msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
 msgstr ""
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Güven aralığı"
 
 msgctxt "TTestPairedSamples|"
 msgid "Effect size"
