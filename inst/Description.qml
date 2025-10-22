@@ -3,17 +3,10 @@ import JASP.Module
 
 Description
 {
-	name		: "jaspTTests"
 	title		: qsTr("T-Tests")
 	description	: qsTr("Evaluate the difference between two means")
-	version			: "0.95.0"
-	author		: "JASP Team"
-	maintainer	: "JASP Team <info@jasp-stats.org>"
-	website		: "jasp-stats.org"
-	license		: "GPL (>= 2)"
 	icon		: "analysis-classical-ttest.svg"
 	hasWrappers	: true
-	preloadData	: true
 
 	GroupTitle
 	{
