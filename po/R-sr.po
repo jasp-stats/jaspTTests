@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.19.2\n"
 "POT-Creation-Date: 2024-10-26 02:47\n"
-"PO-Revision-Date: 2025-12-08 20:00+0000\n"
+"PO-Revision-Date: 2025-12-12 19:00+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/jaspttests-"
 "r/sr/>\n"
@@ -322,6 +322,7 @@ msgstr "Левенов"
 msgid "Test of Equality of Variances (%1$s)"
 msgstr "Тест једнакости варијанси (%1$s)"
 
+#, fuzzy
 msgid "F"
 msgstr "F"
 
