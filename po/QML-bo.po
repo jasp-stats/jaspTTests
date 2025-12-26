@@ -1,770 +1,971 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-26 11:35+0000\n"
+"Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
+"Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"qml/bo/>\n"
 "Language: bo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
-msgstr ""
+msgstr "ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "སྲོལ་རྒྱུན།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "བྷེ་ཡེ་སི།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "བྷེ་ཡེ་སིའི་རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "བྷེ་ཡེ་སིའི་ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "བྷེ་ཡེ་སིའི་མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "ཚོགས་སྒྲིག་འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ ≠ ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ > ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ < ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "སྔོན་དང་རྗེས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "གནས་ཚུལ་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "དད་རུང་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "བྷེ་ཡེ་སི་མཐུན་སྡུར་བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "རིམ་འགྲོས་དབྱེ་ཞིབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "མན་-ཝི་ཊི་ནི།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "མ་དཔེའི་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "སྔོན་དང་རྗེས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
-msgstr ""
+msgstr "གནས་ཚུལ་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr ""
+msgstr "དད་རུང་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "བྷེ་ཡེ་སི་མཐུན་སྡུར་བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "རིམ་འགྲོས་དབྱེ་ཞིབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Robustness check"
-msgstr ""
+msgstr "བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "No. samples"
-msgstr ""
+msgstr "མ་དཔེའི་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ ≠ འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ > འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ < འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "སྔོན་དང་རྗེས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
-msgstr ""
+msgstr "གནས་ཚུལ་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
-msgstr ""
+msgstr "དད་རུང་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "བྷེ་ཡེ་སི་མཐུན་སྡུར་བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "རིམ་འགྲོས་དབྱེ་ཞིབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Robustness check"
-msgstr ""
+msgstr "བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "No. samples"
-msgstr ""
+msgstr "མ་དཔེའི་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Grouping Variable"
-msgstr ""
+msgstr "ཚོགས་སྒྲིག་འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Welch"
-msgstr ""
+msgstr "ཝེལཅ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "གནས་ཡུལ་གྱི་ཚད་གཞི།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr ""
+msgstr "ཀོ་ཧེན་གྱི་ཌི།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
-msgstr ""
+msgstr "གྷི་ལཱ་སི་ཌེལ་ཊ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Hedges' g"
-msgstr ""
+msgstr "ཧེ་ཇེས་ཀྱི་ཇི།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "ཝོཀ་-སེལ་ཀེ་མང་ཤོས་ཀྱི་པི་-བསྡུར་ཚད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ ≠ ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 > Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ > ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 < Group 2"
-msgstr ""
+msgstr "ཚོགས་པ་ ༡ < ཚོགས་པ་ ༢"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "ཆ་འཇོག་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Equality of variances"
-msgstr ""
+msgstr "ཁྱད་འགྱུར་མཚུངས་པ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
-msgstr ""
+msgstr "འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "ཛེཌ་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Test value:"
-msgstr ""
+msgstr "ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr ""
+msgstr "ཚད་ལྡན་ཁྱད་འགྱུར།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "ཝོཀ་-སེལ་ཀེ་མང་ཤོས་ཀྱི་པི་-བསྡུར་ཚད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr ""
+msgstr "> ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
-msgstr ""
+msgstr "< ཚོད་ལྟའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "ཆ་འཇོག་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Normality"
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
-msgstr ""
+msgstr "ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Student"
-msgstr ""
+msgstr "སློབ་མ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Wilcoxon signed-rank"
-msgstr ""
+msgstr "ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
-msgstr ""
+msgstr "གནས་ཡུལ་གྱི་ཚད་གཞི།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr ""
+msgstr "འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "ཝོཀ་-སེལ་ཀེ་མང་ཤོས་ཀྱི་པི་-བསྡུར་ཚད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ ≠ འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 > Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ > འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 < Measure 2"
-msgstr ""
+msgstr "འཇལ་ཚད་ ༡ < འཇལ་ཚད་ ༢"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Assumption Checks"
-msgstr ""
+msgstr "ཆ་འཇོག་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Normality"
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr ""
+msgstr "ཆད་པའི་རིན་ཐང་།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr ""
+msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Evaluate the difference between two means"
-msgstr ""
+msgstr "ཆ་སྙོམས་གཉིས་ཀྱི་ཁྱད་པར་ལ་དཔྱད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "འགྱུར་གྲངས་ཆ་སྒྲིག"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་ཁྱད་པར་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "གནས་ཡུལ་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr ""
+msgstr "འགྱུར་གྲངས་ཆ་སྒྲིག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud difference plots"
-msgstr ""
+msgstr "ཆར་སྤྲིན་ཁྱད་པར་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Horizontal display"
-msgstr ""
+msgstr "འཕྲེད་བཀོད་འཆར་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Effect size"
-msgstr ""
+msgstr "ནུས་པའི་ཆེ་ཆུང་།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Effect size"
-msgstr ""
+msgstr "ནུས་པའི་ཆེ་ཆུང་།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Effect size"
-msgstr ""
+msgstr "ནུས་པའི་ཆེ་ཆུང་།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "བྷ་རོན་-ཕོར་སཡིད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Levene's"
-msgstr ""
+msgstr "ལེ་ཝེན་གྱི།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Bar plots"
-msgstr ""
+msgstr "ཀ་རིས་དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Credible interval"
-msgstr ""
+msgstr "དད་རུང་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Standard error"
-msgstr ""
+msgstr "ཚད་ལྡན་ནོར་འཁྲུལ།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Fix horizontal axis to 0"
-msgstr ""
+msgstr "འཕྲེད་མདའ་ ༠ ལ་སྦྱོར་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Alternative Hypothesis"
-msgstr ""
+msgstr "གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr ""
+msgstr "འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr ""
+msgstr "མན་-ཝི་ཊི་ནི།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr ""
+msgstr "དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
-msgstr ""
+msgstr "འབྲེལ་བའི་ཆེད་དུ་ཡོ་བསྲང་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Q-Q plot residuals"
-msgstr ""
+msgstr "ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid ""
 "By selecting this option, the error bars will represent standard errors of "
 "the mean of each condition."
 msgstr ""
+"འདེམས་ཀ་འདི་བདམས་ན་ནོར་འཁྲུལ་གྱི་རིས་ཐིག་གིས་ཆ་རྐྱེན་རེ་རེའི་ཆ་སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་འཁྲུལ་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "The independent samples t-test allows the user to estimate the effect size "
 "and test the null hypothesis that the population means of two independent "
 "groups are equal."
 msgstr ""
+"རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟས་བེད་སྤྱོད་པར་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། རང་དབང་ཅན་གྱི་ཚོགས"
+"་པ་གཉིས་ཀྱི་མི་འབོར་ཆ་སྙོམས་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་བྱེད་པའི་གོ་སྐབས་སྤྲོད་ཀྱི་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Assumptions"
-msgstr ""
+msgstr "ཆ་འཇོག"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "The dependent variable is continuous."
-msgstr ""
+msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་ནི་རྒྱུན་ཆགས་པ་ཞིག་ཡིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "The observations in both groups are a random sample from the population."
 msgstr ""
+"ཚོགས་པ་གཉིས་ཀའི་ནང་གི་ལྟ་ཞིབ་གྲངས་གནས་དག་ནི་མི་འབོར་ནས་བླངས་པའི་སྐབས་བསྟུན་མ་དཔེ་ཡིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "The dependent variable is normally distributed in each group of the "
 "independent variable."
 msgstr ""
+"ལྟོས་བཅས་འགྱུར་གྲངས་ནི་རང་དབང་ཅན་གྱི་འགྱུར་གྲངས་ཀྱི་ཚོགས་པ་རེ་རེའི་ནང་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་ཡིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
-msgstr ""
+msgstr "ཚོགས་པ་གཉིས་ཀྱི་མི་འབོར་ཁྱད་འགྱུར་དག་ནི་གཅིག་གྱུར་ཡིན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Input"
-msgstr ""
+msgstr "ནང་འཇུག"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "For the Student's t-test and Welch's t-test, the location parameter is given "
 "by mean difference; for the Mann-Whitney test, the location parameter is "
 "given by the Hodges-Lehmann estimate."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟ་དང་ཝེལཅ་གི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། གནས་ཡུལ་གྱི་ཚད་གཞི་ནི་ཆ་སྙོམས་ཁྱད་པར་གྱིས་སྟོན་པ་དང་"
+"། མན་-ཝི་ཊི་ནི་ཚོད་ལྟའི་ཆེད་དུ། གནས་ཡུལ་གྱི་ཚད་གཞི་ནི་ཧོ་ཇེས་-ལེ་མན་ཚོད་དཔག་གིས་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Confidence interval for the location parameter. By default, the confidence "
 "interval is set to 95%. This can be changed into the desired percentage."
 msgstr ""
+"གནས་ཡུལ་གྱི་ཚད་གཞིའི་ཡིད་རྟོན་བར་མཚམས། སོར་བཞག་བྱས་ན་ཡིད་རྟོན་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད། འདི་"
+"དགོས་མཁོའི་བརྒྱ་ཆ་ལ་བསྒྱུར་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "For the Student t-test and Welch t-test, the effect size can be selected "
 "below; for the Mann-Whitney test, the effect size is given by the rank "
 "biserial correlation."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟ་དང་ཝེལཅ་གི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། ནུས་པའི་ཆེ་ཆུང་འོག་ནས་འདེམས་ཐུབ། མན་-ཝི་ཊི་ནི་ཚོད་ལྟའི"
+"་ཆེད་དུ། ནུས་པའི་ཆེ་ཆུང་ནི་རིམ་པའི་ཟུང་རིམ་འབྲེལ་བས་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "For the Student's t-test, uses the pooled standard deviation to standardize "
 "the mean difference. For the Welch's t-test, uses the square-root of the "
 "average variance to standardize the mean difference."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། ཆ་སྙོམས་ཁྱད་པར་ཚད་ལྡན་བཟོ་བར་བསྡོམས་པའི་ཚད་ལྡན་ཁྱད་འགྱུར་བེད་སྤྱོད་བྱེད། "
+"ཝེལཅ་གི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། ཆ་སྙོམས་ཁྱད་པར་ཚད་ལྡན་བཟོ་བར་ཆ་སྙོམས་ཁྱད་འགྱུར་གྱི་རང་གཉིས་སྒྱུར་རྩ་བེད་སྤྱོད་"
+"བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Uses the standard deviation of group 2 to standardize the mean difference. "
@@ -773,89 +974,128 @@ msgid ""
 "window, click on one of the levels and then click the arrow buttons to "
 "switch the order."
 msgstr ""
+"ཆ་སྙོམས་ཁྱད་པར་ཚད་ལྡན་བཟོ་བར་ཚོགས་པ་ ༢ པའི་ཚད་ལྡན་ཁྱད་འགྱུར་བེད་སྤྱོད་བྱེད། ཚོགས་པ་ ༢ པ་བེད་སྤྱོད་"
+"བྱེད་པའི་ཚོགས་པ་བརྗེ་བར་དུ། གྲངས་གནས་སྒྲོམ་ནང་གི་ཚོགས་སྒྲིག་འགྱུར་གྲངས་ཀྱི་མིང་ལ་མནན་ནས། རིམ་པ་གཅིག་ལ"
+"་མནན་རྗེས་མདའ་རྟགས་མཐེབ་གནོན་བེད་སྤྱད་ནས་གོ་རིམ་བརྗེ་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Applies a correction factor to Cohen's d to make it unbiased."
 msgstr ""
+"ཀོ་ཧེན་གྱི་ཌི་ལ་ཕྱོགས་ལྷུང་མེད་པ་བཟོ་བར་ཡོ་བསྲང་གི་མཐུན་སྡུར་ཞིག་སྦྱོར་བ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Sample size, sample mean, sample standard deviation, standard error of the "
 "mean for each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་འཁྲུལ"
+"།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Two-sided alternative hypothesis that the population means are not equal. "
 "Selected by default."
 msgstr ""
+"མི་འབོར་གྱི་ཆ་སྙོམས་མི་མཚུངས་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of Group 1 is "
 "larger than the population mean of Group 2."
 msgstr ""
+"ཚོགས་པ་ ༡ གི་མི་འབོར་ཆ་སྙོམས་དེ་ཚོགས་པ་ ༢ གི་མི་འབོར་ཆ་སྙོམས་ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་"
+"ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of Group 1 is "
 "smaller than the population mean of Group 2."
 msgstr ""
+"ཚོགས་པ་ ༡ གི་མི་འབོར་ཆ་སྙོམས་དེ་ཚོགས་པ་ ༢ གི་མི་འབོར་ཆ་སྙོམས་ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་"
+"ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Shapiro-Wilk test of normality."
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན་གྱི་ཤ་པི་རོ་-ཝིལ་ཀ་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Displays Q-Q plot of the standardized residuals."
-msgstr ""
+msgstr "ཚད་ལྡན་ཅན་གྱི་ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Displays the individual cases (colored dots), box plots, and densities for "
 "each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་གནས་ཚུལ་རེ་རེ་བཞིན་(ཚོན་ལྡན་ཚེག་)དང་།སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all dependent variables. "
 "Sample size is therefore constant across the tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་རེ་རེ་བཞིན་ལྟོས་བཅས་འགྱུར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཡོངས་ལ་མ་དཔེའི་ཆེ་ཆུང་རྒྱུན་སྲུང་"
+"བྱེད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "The Bayesian independent samples t-test allows the user to estimate the "
 "effect size and test the null hypothesis that the population means of two "
 "independent groups are equal.\n"
 msgstr ""
+"བྷེ་ཡེ་སིའི་རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟས་བེད་སྤྱོད་པར་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། རང་དབང་"
+"ཅན་གྱི་ཚོགས་པ་གཉིས་ཀྱི་མི་འབོར་ཆ་སྙོམས་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་བྱེད་པའི་གོ་སྐབས་སྤྲོད་"
+"ཀྱི་ཡོད།\n"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "In this box the dependent variable is selected."
-msgstr ""
+msgstr "སྒྲོམ་འདིའི་ནང་ལྟོས་བཅས་འགྱུར་གྲངས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "In this box the variable defining the groups is selected."
-msgstr ""
+msgstr "སྒྲོམ་འདིའི་ནང་ཚོགས་པ་མཚན་འཇོག་བྱེད་པའི་འགྱུར་གྲངས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of group one is "
 "larger than the population mean of group two."
 msgstr ""
+"ཚོགས་པ་དང་པོའི་མི་འབོར་ཆ་སྙོམས་དེ་ཚོགས་པ་གཉིས་པའི་མི་འབོར་ཆ་སྙོམས་ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་"
+"པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of group one is "
 "smaller than the population mean of group two."
 msgstr ""
+"ཚོགས་པ་དང་པོའི་མི་འབོར་ཆ་སྙོམས་དེ་ཚོགས་པ་གཉིས་པའི་མི་འབོར་ཆ་སྙོམས་ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་"
+"པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Displays the prior and posterior distribution of the effect size after the "
 "data is seen."
 msgstr ""
+"གྲངས་གནས་མཐོང་རྗེས་ཀྱི་ནུས་པའི་ཆེ་ཆུང་གི་སྔོན་དང་རྗེས་ཀྱི་ཁྱབ་ཚུལ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Adds the Bayes factor computed with the user-defined prior; adds a "
@@ -863,23 +1103,33 @@ msgid ""
 "alternative hypothesis; adds the median and the 95% credible interval of the "
 "posterior distribution of the effect size."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་དང་བསྟུན་ནས་བརྩིས་པའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་ཁ་སྣོན་བྱེད་པ། མེད་པའི་"
+"ཚོད་དཔག་དང་གཞན་པའི་ཚོད་དཔག་འོག་གྲངས་གནས་ཇི་ཙམ་སྲིད་པའི་ཚུལ་སྟོན་པའི་སྲིད་ཕྱོད་འཁོར་ལོ་ཞིག་ཁ་སྣོན་བྱེད"
+"་པ། ནུས་པའི་ཆེ་ཆུང་གི་རྗེས་ཀྱི་ཁྱབ་ཚུལ་གྱི་ཆ་སྙོམས་གྲངས་དང་ ༩༥% ཡི་དད་རུང་བར་མཚམས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Displays the individual cases (colored dots), box plots, and densities for "
 "each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་གནས་ཚུལ་རེ་རེ་བཞིན་(ཚོན་ལྡན་ཚེག་)དང་།སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "སློབ་མའི་ཊི་ཚོད་ལྟ། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Mann-Whitney test. Use when data is not normally distributed. The number of "
 "MCMC samples is set at 1000 by default and can be adjusted"
 msgstr ""
+"མན་-ཝི་ཊི་ནི་ཚོད་ལྟ། གྲངས་གནས་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད་བྱེད། MCMC མ་དཔེའི་གྲངས་ནི་སོར་བཞག་"
+"གིས་ ༡༠༠༠ ལ་བཞག་ཡོད་པ་དང་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each test will be "
@@ -887,96 +1137,135 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the multiple t-"
 "tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ལྟོས་བཅས་འགྱུར་གྲངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་"
+"དཔེའི་ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Descriptives: Sample size, sample mean, sample standard deviation, and "
 "standard error of the mean for each group."
 msgstr ""
+"འགྲེལ་བརྗོད་རང་བཞིན། ཚོགས་པ་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་"
+"སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་འཁྲུལ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Input"
-msgstr ""
+msgstr "ནང་འཇུག"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "In this box the dependent variable is selected."
-msgstr ""
+msgstr "སྒྲོམ་འདིའི་ནང་ལྟོས་བཅས་འགྱུར་གྲངས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Displays the prior and posterior distribution of the effect size after the "
 "data is seen."
 msgstr ""
+"གྲངས་གནས་མཐོང་རྗེས་ཀྱི་ནུས་པའི་ཆེ་ཆུང་གི་སྔོན་དང་རྗེས་ཀྱི་ཁྱབ་ཚུལ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Displays the development of the Bayes factor as the data come in using the "
 "user-defined prior."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་བེད་སྤྱད་ནས་གྲངས་གནས་འབྱོར་བ་དང་བསྟུན་ནས་བྷེ་ཡེ་སི་མཐུན་སྡུར་གྱི་"
+"འཕེལ་རིམ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Adds the results of the sequential analysis using the wide (scale=1) and "
 "ultrawide prior (scale=sqrt(2))."
 msgstr ""
+"རྒྱ་ཆེ་བའི་(ཆ་ཚད་=༡)དང་ཧ་ཅང་རྒྱ་ཆེ་བའི་(ཆ་ཚད་=sqrt(༢))སྔོན་ཚུད་བེད་སྤྱད་ནས་རིམ་འགྲོས་དབྱེ་ཞིབ་ཀྱི་"
+"གྲུབ་འབྲས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Displays the individual cases (colored dots), box plots, and densities for "
 "each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་གནས་ཚུལ་རེ་རེ་བཞིན་(ཚོན་ལྡན་ཚེག་)དང་།སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
 "the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Two-sided alternative hypothesis that the population mean is not equal to "
 "the test value. Selected by default."
 msgstr ""
+"མི་འབོར་གྱི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་དང་མི་མཚུངས་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག སོར་བཞག་གིས"
+"་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "One-sided alternative hypothesis that the population mean is larger than the "
 "test value."
 msgstr ""
+"མི་འབོར་གྱི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "སློབ་མའི་ཊི་ཚོད་ལྟ། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Non-parametric version of one-sample t-test. Use when data is not normally "
 "distributed. The number of MCMC samples is set at 1000 by default and can be "
 "adjusted."
 msgstr ""
+"མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟའི་ཚད་གཞི་མེད་པའི་པར་གཞི། གྲངས་གནས་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད་བྱེད། "
+"MCMC མ་དཔེའི་གྲངས་ནི་སོར་བཞག་གིས་ ༡༠༠༠ ལ་བཞག་ཡོད་པ་དང་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Descriptives: Sample size, sample mean, sample standard deviation, and "
 "standard error of the mean for each group."
 msgstr ""
+"འགྲེལ་བརྗོད་རང་བཞིན། ཚོགས་པ་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་"
+"སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་འཁྲུལ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Input"
-msgstr ""
+msgstr "ནང་འཇུག"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Two-sided alternative hypothesis that the population mean of the difference "
 "is not equal to 0. Selected by default."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ དང་མི་མཚུངས་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག སོར་བཞག་གིས་"
+"བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of the difference "
 "is larger than 0."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Adds the Bayes factor computed with the user-defined prior; adds a "
@@ -984,46 +1273,66 @@ msgid ""
 "alternative hypothesis; adds the median and the 95% credible interval of the "
 "posterior distribution of the effect size."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་དང་བསྟུན་ནས་བརྩིས་པའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་ཁ་སྣོན་བྱེད་པ། མེད་པའི་"
+"ཚོད་དཔག་དང་གཞན་པའི་ཚོད་དཔག་འོག་གྲངས་གནས་ཇི་ཙམ་སྲིད་པའི་ཚུལ་སྟོན་པའི་སྲིད་ཕྱོད་འཁོར་ལོ་ཞིག་ཁ་སྣོན་བྱེད"
+"་པ། ནུས་པའི་ཆེ་ཆུང་གི་རྗེས་ཀྱི་ཁྱབ་ཚུལ་གྱི་ཆ་སྙོམས་གྲངས་དང་ ༩༥% ཡི་དད་རུང་བར་མཚམས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the development of the Bayes factor as the data come in using the "
 "user-defined prior."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་བེད་སྤྱད་ནས་གྲངས་གནས་འབྱོར་བ་དང་བསྟུན་ནས་བྷེ་ཡེ་སི་མཐུན་སྡུར་གྱི་"
+"འཕེལ་རིམ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Adds the results of the sequential analysis using the wide (scale=1) and "
 "ultrawide prior (scale=sqrt(2))."
 msgstr ""
+"རྒྱ་ཆེ་བའི་(ཆ་ཚད་=༡)དང་ཧ་ཅང་རྒྱ་ཆེ་བའི་(ཆ་ཚད་=sqrt(༢))སྔོན་ཚུད་བེད་སྤྱད་ནས་རིམ་འགྲོས་དབྱེ་ཞིབ་ཀྱི་"
+"གྲུབ་འབྲས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the individual cases (colored dots), box plots, and densities for "
 "each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་གནས་ཚུལ་རེ་རེ་བཞིན་(ཚོན་ལྡན་ཚེག་)དང་།སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Displays a raincloud plot of the differences between the two measures."
-msgstr ""
+msgstr "འཇལ་ཚད་གཉིས་ཀྱི་བར་གྱི་ཁྱད་པར་གྱི་ཆར་སྤྲིན་དཔེ་རིས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "སློབ་མའི་ཊི་ཚོད་ལྟ། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Non-parametric version of paired samples t-test. Use when data is not "
 "normally distributed. The number of MCMC samples is set at 1000 by default "
 "and can be changed."
 msgstr ""
+"ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟའི་ཚད་གཞི་མེད་པའི་པར་གཞི། གྲངས་གནས་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད་བྱེད། "
+"MCMC མ་དཔེའི་གྲངས་ནི་སོར་བཞག་གིས་ ༡༠༠༠ ལ་བཞག་ཡོད་པ་དང་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Sample size, sample mean, sample standard deviation, and standard error of "
 "the mean for each group."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་འཁྲུལ"
+"།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each test will be "
@@ -1031,45 +1340,66 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the multiple t-"
 "tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ལྟོས་བཅས་འགྱུར་གྲངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་"
+"དཔེའི་ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all dependent variables. "
 "Sample size is therefore constant across the multiple t-tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་རེ་རེ་བཞིན་ལྟོས་བཅས་འགྱུར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་དཔེའི་ཆེ་ཆུང་"
+"རྒྱུན་སྲུང་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Displays the sample means and the confidence intervals for each group. By "
 "default it is set at 95%. This can be changed into the desired percentage."
 msgstr ""
+"ཚོགས་པ་རེ་རེའི་མ་དཔེའི་ཆ་སྙོམས་དང་ཡིད་རྟོན་བར་མཚམས་སྟོན་པ། སོར་བཞག་བྱས་ན་དེ་ནི་ ༩༥% ལ་བཞག་ཡོད། "
+"འདི་དགོས་མཁོའི་བརྒྱ་ཆ་ལ་བསྒྱུར་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "The one sample t-test allows the user to estimate the effect size and test "
 "the null hypothesis that the population mean equals a specific constant, i."
 "e., the test value.\n"
 msgstr ""
+"མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟས་བེད་སྤྱོད་པར་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། མི་འབོར་གྱི་ཆ་སྙོམས་དེ་རྒྱུན་"
+"གྲངས་བྱེ་བྲག་པ་ཞིག་དང་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་བྱེད་པའི་གོ་སྐབས་སྤྲོད་ཀྱི་ཡོད། དཔེར་ན"
+"། ཚོད་ལྟའི་རིན་ཐང་།\n"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Assumptions"
-msgstr ""
+msgstr "ཆ་འཇོག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Input"
-msgstr ""
+msgstr "ནང་འཇུག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "In this box the dependent variable is selected."
-msgstr ""
+msgstr "སྒྲོམ་འདིའི་ནང་ལྟོས་བཅས་འགྱུར་གྲངས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Confidence interval for the location parameter. By default, the confidence "
 "interval is set to 95%. This can be changed into the desired percentage."
 msgstr ""
+"གནས་ཡུལ་གྱི་ཚད་གཞིའི་ཡིད་རྟོན་བར་མཚམས། སོར་བཞག་བྱས་ན་ཡིད་རྟོན་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད། འདི་"
+"དགོས་མཁོའི་བརྒྱ་ཆ་ལ་བསྒྱུར་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "For the Student t-test, the effect size is given by Cohen's d; for the "
@@ -1077,43 +1407,60 @@ msgid ""
 "correlation; for the Z test, the effect size is given by Cohen's d (based on "
 "the provided population standard deviation)."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། ནུས་པའི་ཆེ་ཆུང་ནི་ཀོ་ཧེན་གྱི་ཌི་ཡིས་སྟོན་པ་དང་། ཝིལ་ཀོག་སོན་ཚོད་ལྟའི་ཆེད་དུ། "
+"ནུས་པའི་ཆེ་ཆུང་ནི་མཐུན་པའི་རིམ་པའི་ཟུང་རིམ་འབྲེལ་བས་སྟོན། ཛེཌ་ཚོད་ལྟའི་ཆེད་དུ། ནུས་པའི་ཆེ་ཆུང་ནི་ཀོ་ཧེན་གྱི"
+"་ཌི་ཡིས་སྟོན། (མཁོ་སྤྲོད་བྱས་པའི་མི་འབོར་ཚད་ལྡན་ཁྱད་འགྱུར་ལ་གཞིགས་ནས།)"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval for the effect size."
-msgstr ""
+msgstr "ནུས་པའི་ཆེ་ཆུང་གི་ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Sample size, sample mean, sample standard deviation, standard error of the "
 "mean for each measure."
 msgstr ""
+"འཇལ་ཚད་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་"
+"འཁྲུལ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Two sided alternative hypothesis that the sample mean is not equal to the "
 "test value. Selected by default."
 msgstr ""
+"མ་དཔེའི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་དང་མི་མཚུངས་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག སོར་བཞག་གིས་"
+"བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "One sided alternative hypothesis that the sample mean is greater than the "
 "test value."
 msgstr ""
+"མ་དཔེའི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "One sided alternative hypothesis that the sample mean is less than the test "
 "value."
 msgstr ""
+"མ་དཔེའི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Shapiro-Wilk test of normality."
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན་གྱི་ཤ་པི་རོ་-ཝིལ་ཀ་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot of the standardized residuals."
-msgstr ""
+msgstr "ཚད་ལྡན་ཅན་གྱི་ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
@@ -1121,133 +1468,190 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the tests. This "
 "option is selected by default."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ལྟོས་བཅས་འགྱུར་གྲངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཁག་གི་ནང་མ་དཔེའི་"
+"ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all dependent variables. "
 "Sample size is therefore constant across the tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་རེ་རེ་བཞིན་ལྟོས་བཅས་འགྱུར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཡོངས་ལ་མ་དཔེའི་ཆེ་ཆུང་རྒྱུན་སྲུང་"
+"བྱེད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "The paired samples t-test allows the user to estimate the effect size and "
 "test the null hypothesis that the population mean of the difference between "
 "observations equals 0 in dependent groups.\n"
 msgstr ""
+"ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟས་བེད་སྤྱོད་པར་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། ལྟོས་བཅས་ཚོགས་པའི་ནང་གི་ལྟ་"
+"ཞིབ་གྲངས་གནས་བར་གྱི་ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ དང་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་"
+"བྱེད་པའི་གོ་སྐབས་སྤྲོད་ཀྱི་ཡོད།\n"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Assumptions"
-msgstr ""
+msgstr "ཆ་འཇོག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Input"
-msgstr ""
+msgstr "ནང་འཇུག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "The variables here have their difference computed. Multiple differences can "
 "be analysed at the same time by specifying different rows. In other words, "
 "each row represents a difference score."
 msgstr ""
+"འདིར་ཡོད་པའི་འགྱུར་གྲངས་དག་གི་ཁྱད་པར་བརྩིས་ཡོད། ଧାར་མི་འདྲ་བ་གསལ་བཀོད་བྱས་ནས་དུས་གཅིག་ཏུ་ཁྱད་པར་"
+"མང་པོ་དབྱེ་ཞིབ་བྱེད་ཐུབ། གཞན་དུ་ན། ଧར་རེ་རེས་ཁྱད་པར་གྱི་སྐར་གྲངས་མཚོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Confidence interval for the location parameter. By default, the confidence "
 "interval is set to 95%. This can be changed into the desired percentage."
 msgstr ""
+"གནས་ཡུལ་གྱི་ཚད་གཞིའི་ཡིད་རྟོན་བར་མཚམས། སོར་བཞག་བྱས་ན་ཡིད་རྟོན་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད། འདི་"
+"དགོས་མཁོའི་བརྒྱ་ཆ་ལ་བསྒྱུར་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "For the Student t-test, the effect size is given by Cohen's d; for the "
 "Wilcoxon test, the effect size is given by the matched rank biserial "
 "correlation."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། ནུས་པའི་ཆེ་ཆུང་ནི་ཀོ་ཧེན་གྱི་ཌི་ཡིས་སྟོན་པ་དང་། ཝིལ་ཀོག་སོན་ཚོད་ལྟའི་ཆེད་དུ། "
+"ནུས་པའི་ཆེ་ཆུང་ནི་མཐུན་པའི་རིམ་པའི་ཟུང་རིམ་འབྲེལ་བས་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval for the effect size."
-msgstr ""
+msgstr "ནུས་པའི་ཆེ་ཆུང་གི་ཡིད་རྟོན་བར་མཚམས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Correct the effect size for the correlation between the observed values, to "
 "prevent overestimating the effect (Dunlap et al., 1996)."
 msgstr ""
+"ནུས་པ་ཚོད་དཔག་མཐོ་དྲགས་པ་སྔོན་འགོག་བྱེད་པར། ལྟ་ཞིབ་བྱས་པའི་རིན་ཐང་བར་གྱི་འབྲེལ་བའི་ཆེད་དུ་ནུས་པའི་ཆེ་"
+"ཆུང་ཡོ་བསྲང་བྱེད་པ། (Dunlap et al., 1996)།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Sample size, sample mean, sample standard deviation, standard error of the "
 "mean for each measure."
 msgstr ""
+"འཇལ་ཚད་རེ་རེའི་མ་དཔེའི་ཆེ་ཆུང་། མ་དཔེའི་ཆ་སྙོམས། མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར། ཆ་སྙོམས་ཀྱི་ཚད་ལྡན་ནོར་"
+"འཁྲུལ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Two-sided alternative hypothesis that the population mean of the difference "
 "is not equal to 0. This option is selected by default."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ དང་མི་མཚུངས་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག འདེམས་ཀ་འདི་སོར"
+"་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Shapiro-Wilk test of normality."
-msgstr ""
+msgstr "རྒྱུན་ལྡན་རང་བཞིན་གྱི་ཤ་པི་རོ་-ཝིལ་ཀ་ཚོད་ལྟ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Q-Q plot of the standardized residuals."
-msgstr ""
+msgstr "ཚད་ལྡན་ཅན་གྱི་ལྷག་གྲངས་ཀྱི་ Q-Q དཔེ་རིས།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Displays the sample means and the confidence intervals for each measure (see "
 "Morey [2008] for the computation of the standard error of the mean in paired "
 "designs.)"
 msgstr ""
+"འཇལ་ཚད་རེ་རེའི་མ་དཔེའི་ཆ་སྙོམས་དང་ཡིད་རྟོན་བར་མཚམས་སྟོན་པ། (ཆ་སྒྲིག་ཇུས་འགོད་ནང་གི་ཆ་སྙོམས་ཀྱི་ཚད་"
+"ལྡན་ནོར་འཁྲུལ་བརྩི་ཚུལ་ལ་ Morey [2008] ལ་ལྟོས།)"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Displays a raincloud plot of the differences between the two measures."
-msgstr ""
+msgstr "འཇལ་ཚད་གཉིས་ཀྱི་བར་གྱི་ཁྱད་པར་གྱི་ཆར་སྤྲིན་དཔེ་རིས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all difference scores. Sample "
 "size is therefore constant across the tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཁྱད་པར་གྱི་སྐར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་གྲངས་གནས་ཡོད་པའི་"
+"གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཡོངས་ལ་མ་དཔེའི་ཆེ་ཆུང་རྒྱུན་སྲུང་བྱེད།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid ""
 "Coverage of the confidence intervals (Or credible intervals in case of a "
 "Bayesian analysis) in percentages. By default, the confidence interval is "
 "set to 95%. This can be changed into the desired percentage."
 msgstr ""
+"ཡིད་རྟོན་བར་མཚམས་ཀྱི་ཁྱབ་ཚད་(བྷེ་ཡེ་སིའི་དབྱེ་ཞིབ་ཀྱི་སྐབས་སུ་དད་རུང་བར་མཚམས་)བརྒྱ་ཆའི་ནང་། སོར་བཞག་"
+"བྱས་ན་ཡིད་རྟོན་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད། འདི་དགོས་མཁོའི་བརྒྱ་ཆ་ལ་བསྒྱུར་ཐུབ།"
 
+#, fuzzy
 msgctxt "BarPlots|"
 msgid "Forces the graph to show the default x-axis at y = 0."
-msgstr ""
+msgstr "དཔེ་རིས་ཀྱིས་སོར་བཞག་གི་ x-མདའ་ y = 0 སྟེང་སྟོན་པར་སྐུལ་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Two-sided alternative hypothesis that the population means are equal. "
 "Selected by default."
 msgstr ""
+"མི་འབོར་གྱི་ཆ་སྙོམས་མཚུངས་པ་ཡིན་པའི་ཕྱོགས་གཉིས་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Displays the Bayes factor across different values of Cauchy prior width. The "
 "scale of the Cauchy prior is varied between 0 and 1.5, creating "
 "progressively more uninformative priors."
 msgstr ""
+"ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཞེང་ཚད་ཀྱི་རིན་ཐང་མི་འདྲ་བའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་སྟོན་པ། ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཆ་ཚད་ནི་ ༠ ནས"
+"་ ༡.༥ བར་འགྱུར་བ་དང་། རིམ་བཞིན་གནས་ཚུལ་མི་མཁོ་བའི་སྔོན་ཚུད་མང་དུ་གཏོང་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Displays the development of the Bayes factor as the data comes in using the "
 "user-defined prior."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་བེད་སྤྱད་ནས་གྲངས་གནས་འབྱོར་བ་དང་བསྟུན་ནས་བྷེ་ཡེ་སི་མཐུན་སྡུར་གྱི་"
+"འཕེལ་རིམ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Adds the results of the sequential analysis using the wide (scale=1) and "
 "ultrawide prior (scale=sqrt(2))."
 msgstr ""
+"རྒྱ་ཆེ་བའི་(ཆ་ཚད་=༡)དང་ཧ་ཅང་རྒྱ་ཆེ་བའི་(ཆ་ཚད་=sqrt(༢))སྔོན་ཚུད་བེད་སྤྱད་ནས་རིམ་འགྲོས་དབྱེ་ཞིབ་ཀྱི་"
+"གྲུབ་འབྲས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Display descriptives plots. Includes central credible interval, which shows "
@@ -1255,27 +1659,41 @@ msgid ""
 "size lies within certain values. The default credible interval is set at 95% "
 "and can be changed by the user."
 msgstr ""
+"འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས་སྟོན་པ། དབུས་ཀྱི་དད་རུང་བར་མཚམས་འདུས་ཡོད་པ་དང་། དེས་ངོ་མའི་ནུས་པའི་"
+"ཆེ་ཆུང་དེ་རིན་ཐང་ངེས་ཅན་ཞིག་གི་ནང་དུ་གནས་པའི་སྲིད་ཕྱོད་(གཞན་པའི་དཔེ་དབྱིབས་ལ་བརྟེན་ནས་)སྟོན་པ། སོར་"
+"བཞག་གི་དད་རུང་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད་པ་དང་བེད་སྤྱོད་པས་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
 "the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all dependent variables. "
 "Sample size is therefore constant across the multiple t-tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་རེ་རེ་བཞིན་ལྟོས་བཅས་འགྱུར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་དཔེའི་ཆེ་ཆུང་"
+"རྒྱུན་སྲུང་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "The one sample t-test allows you to estimate the effect size and test the "
 "null hypothesis that the population mean equals a specific constant, i.e., "
 "the test value.\n"
 msgstr ""
+"མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟས་ཁྱེད་ལ་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། མི་འབོར་གྱི་ཆ་སྙོམས་དེ་རྒྱུན་གྲངས་བྱེ་"
+"བྲག་པ་ཞིག་དང་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་བྱེད་པའི་གོ་སྐབས་སྤྲོད་ཀྱི་ཡོད། དཔེར་ན། ཚོད་ལྟའི"
+"་རིན་ཐང་།\n"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Adds the Bayes factor computed with the user-defined prior; adds a "
@@ -1283,21 +1701,32 @@ msgid ""
 "alternative hypothesis. Adds the 95% credible interval of the posterior "
 "distribution of the effect size."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་དང་བསྟུན་ནས་བརྩིས་པའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་ཁ་སྣོན་བྱེད་པ། མེད་པའི་"
+"ཚོད་དཔག་དང་གཞན་པའི་ཚོད་དཔག་འོག་གྲངས་གནས་ཇི་ཙམ་སྲིད་པའི་ཚུལ་སྟོན་པའི་སྲིད་ཕྱོད་འཁོར་ལོ་ཞིག་ཁ་སྣོན་བྱེད"
+"་པ། ནུས་པའི་ཆེ་ཆུང་གི་རྗེས་ཀྱི་ཁྱབ་ཚུལ་གྱི་ ༩༥% ཡི་དད་རུང་བར་མཚམས་ཁ་སྣོན་བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Displays the Bayes factor across different values of cauchy prior width. The "
 "scale of the Cauchy prior is varied between 0 and 1.5, creating "
 "progressively more uninformative priors."
 msgstr ""
+"ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཞེང་ཚད་ཀྱི་རིན་ཐང་མི་འདྲ་བའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་སྟོན་པ། ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཆ་ཚད་ནི་ ༠ ནས"
+"་ ༡.༥ བར་འགྱུར་བ་དང་། རིམ་བཞིན་གནས་ཚུལ་མི་མཁོ་བའི་སྔོན་ཚུད་མང་དུ་གཏོང་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Adds the Bayes factor computed with the user-defined prior; adds a "
 "probability wheel depicting how likely the data is under the null vs. "
 "alternative hypothesis."
 msgstr ""
+"བེད་སྤྱོད་པས་མཚན་འཇོག་བྱས་པའི་སྔོན་ཚུད་དང་བསྟུན་ནས་བརྩིས་པའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་ཁ་སྣོན་བྱེད་པ། མེད་པའི་"
+"ཚོད་དཔག་དང་གཞན་པའི་ཚོད་དཔག་འོག་གྲངས་གནས་ཇི་ཙམ་སྲིད་པའི་ཚུལ་སྟོན་པའི་སྲིད་ཕྱོད་འཁོར་ལོ་ཞིག་ཁ་སྣོན་བྱེད"
+"་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "Display descriptives plots. Includes central credible interval, which shows "
@@ -1305,13 +1734,19 @@ msgid ""
 "size lies within certain values. The default credible interval is set at 95% "
 "and can be changed by the user."
 msgstr ""
+"འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས་སྟོན་པ། དབུས་ཀྱི་དད་རུང་བར་མཚམས་འདུས་ཡོད་པ་དང་། དེས་ངོ་མའི་ནུས་པའི་"
+"ཆེ་ཆུང་དེ་རིན་ཐང་ངེས་ཅན་ཞིག་གི་ནང་དུ་གནས་པའི་སྲིད་ཕྱོད་(གཞན་པའི་དཔེ་དབྱིབས་ལ་བརྟེན་ནས་)སྟོན་པ། སོར་"
+"བཞག་གི་དད་རུང་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད་པ་དང་བེད་སྤྱོད་པས་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "One-sided alternative hypothesis that the population mean is smaller than "
 "the test value."
 msgstr ""
+"མི་འབོར་གྱི་ཆ་སྙོམས་དེ་ཚོད་ལྟའི་རིན་ཐང་ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each test will be "
@@ -1319,21 +1754,33 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the multiple t-"
 "tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ལྟོས་བཅས་འགྱུར་གྲངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་"
+"དཔེའི་ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད།"
 
+#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
 "conducted using only cases with valid data for all dependent variables. "
 "Sample size is therefore constant across the multiple t-tests."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་རེ་རེ་བཞིན་ལྟོས་བཅས་འགྱུར་གྲངས་ཡོངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཁོ་ན་བེད་སྤྱད་ནས་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཊི་ཚོད་ལྟ་མང་པོའི་ནང་མ་དཔེའི་ཆེ་ཆུང་"
+"རྒྱུན་སྲུང་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "The paired samples t-test allows you to estimate the effect size and test "
 "the null hypothesis that the population mean of the difference between "
 "paired (dependent) observations equals 0.\n"
 msgstr ""
+"ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟས་ཁྱེད་ལ་ནུས་པའི་ཆེ་ཆུང་ཚོད་དཔག་བྱེད་པ་དང་། ཆ་སྒྲིག་(ལྟོས་བཅས་)ལྟ་ཞིབ་གྲངས་གནས"
+"་བར་གྱི་ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ དང་མཚུངས་པ་ཡིན་པའི་མེད་པའི་ཚོད་དཔག་ལ་ཚོད་ལྟ་བྱེད་པའི་གོ་"
+"སྐབས་སྤྲོད་ཀྱི་ཡོད།\n"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "In this box the variables are selected for which the difference is computed. "
@@ -1341,26 +1788,37 @@ msgid ""
 "different rows with two variables for which the difference is computed. In "
 "other words, each row represents a separate set of difference scores."
 msgstr ""
+"སྒྲོམ་འདིའི་ནང་ཁྱད་པར་བརྩི་རྒྱུའི་འགྱུར་གྲངས་དག་བདམས་ཡོད། ཁྱད་པར་བརྩི་རྒྱུའི་འགྱུར་གྲངས་གཉིས་ཡོད་པའི་ଧାར་མི་"
+"འདྲ་བ་གསལ་བཀོད་བྱས་ནས་དུས་གཅིག་ཏུ་ཁྱད་པར་མང་པོ་དབྱེ་ཞིབ་བྱེད་ཐུབ། གཞན་དུ་ན། ଧར་རེ་རེས་ཁྱད་པར་གྱི་"
+"སྐར་གྲངས་ཀྱི་ཚན་པ་རེ་རེ་མཚོན།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of the difference "
 "is smaller than 0."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the prior and posterior distributions of the effect size after "
 "observing the data."
 msgstr ""
+"གྲངས་གནས་ལྟ་ཞིབ་བྱས་རྗེས་ཀྱི་ནུས་པའི་ཆེ་ཆུང་གི་སྔོན་དང་རྗེས་ཀྱི་ཁྱབ་ཚུལ་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Displays the Bayes factor across different values of cauchy prior width. The "
 "scale of the Cauchy prior is varied between 0 and 1.5, creating "
 "progressively more uninformative priors."
 msgstr ""
+"ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཞེང་ཚད་ཀྱི་རིན་ཐང་མི་འདྲ་བའི་བྷེ་ཡེ་སི་མཐུན་སྡུར་སྟོན་པ། ཀོ་ཤི་སྔོན་ཚུད་ཀྱི་ཆ་ཚད་ནི་ ༠ ནས"
+"་ ༡.༥ བར་འགྱུར་བ་དང་། རིམ་བཞིན་གནས་ཚུལ་མི་མཁོ་བའི་སྔོན་ཚུད་མང་དུ་གཏོང་བ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Display descriptives plots. Includes central credible interval, which shows "
@@ -1368,46 +1826,65 @@ msgid ""
 "size lies within certain values. The default credible interval is set at 95% "
 "and can be changed by the user."
 msgstr ""
+"འགྲེལ་བརྗོད་རང་བཞིན་གྱི་དཔེ་རིས་སྟོན་པ། དབུས་ཀྱི་དད་རུང་བར་མཚམས་འདུས་ཡོད་པ་དང་། དེས་ངོ་མའི་ནུས་པའི་"
+"ཆེ་ཆུང་དེ་རིན་ཐང་ངེས་ཅན་ཞིག་གི་ནང་དུ་གནས་པའི་སྲིད་ཕྱོད་(གཞན་པའི་དཔེ་དབྱིབས་ལ་བརྟེན་ནས་)སྟོན་པ། སོར་"
+"བཞག་གི་དད་རུང་བར་མཚམས་ནི་ ༩༥% ལ་བཞག་ཡོད་པ་དང་བེད་སྤྱོད་པས་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
 "the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "In this box the dependent variable is selected."
-msgstr ""
+msgstr "སྒྲོམ་འདིའི་ནང་ལྟོས་བཅས་འགྱུར་གྲངས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "In this box the variable defining the groups is selected. e.g., experimental "
 "condition."
 msgstr ""
+"སྒྲོམ་འདིའི་ནང་ཚོགས་པ་མཚན་འཇོག་བྱེད་པའི་འགྱུར་གྲངས་བདམས་ཡོད། དཔེར་ན། ཚོད་ལྟའི་ཆ་རྐྱེན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Good old fashioned t-test. Selected by default."
-msgstr ""
+msgstr "སྔར་སྲོལ་གྱི་ཊི་ཚོད་ལྟ། སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Welch's unequal variances test. Use when the group variances cannot be "
 "assumed to be equal."
 msgstr ""
+"ཝེལཅ་གི་མི་མཚུངས་པའི་ཁྱད་འགྱུར་ཚོད་ལྟ། ཚོགས་པའི་ཁྱད་འགྱུར་དག་མཚུངས་པར་ཆ་འཇོག་བྱེད་མི་ཐུབ་དུས་བེད་སྤྱོད་"
+"བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Non-parametric independent t-test. Use when the model residuals are not "
 "normally distributed."
 msgstr ""
+"ཚད་གཞི་མེད་པའི་རང་དབང་ཅན་གྱི་ཊི་ཚོད་ལྟ། དཔེ་དབྱིབས་ཀྱི་ལྷག་གྲངས་དག་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད་"
+"བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Confidence interval for the chosen effect size, based on the non-central t-"
 "distribution for Cohen's d, Glass' delta and Hedges' g, and normal "
 "approximation of the Fisher transformed rank biserial correlation."
 msgstr ""
+"བདམས་པའི་ནུས་པའི་ཆེ་ཆུང་གི་ཡིད་རྟོན་བར་མཚམས། ཀོ་ཧེན་གྱི་ཌི། གྷི་ལཱ་སི་ཌེལ་ཊ། ཧེ་ཇེས་ཀྱི་ཇི་བཅས་ཀྱི་དབུས་"
+"མིན་ཊི་-ཁྱབ་ཚུལ་དང་། ཕི་ཤར་གྱིས་བསྒྱུར་བའི་རིམ་པའི་ཟུང་རིམ་འབྲེལ་བའི་རྒྱུན་ལྡན་ཉེ་མཚུངས་ལ་གཞིགས་ནས།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Shows the maximum ratio of the likelihood of the obtained p value under H1 "
@@ -1416,19 +1893,29 @@ msgid ""
 "this p-value is at most 2.46 times more likely to occur under H1 than under "
 "H0."
 msgstr ""
+"H1 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་དང་ H0 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་ཀྱི་མང་ཤོས་ཀྱི་བསྡུར་ཚད་"
+"སྟོན་པ། དཔེར་ན། ཕྱོགས་གཉིས་ཅན་གྱི་པི་-རིན་ཐང་དེ་ .05 དང་མཚུངས་ན། ཝོཀ་-སེལ་ཀེ་ MPR ནི་ 2.46 དང"
+"་མཚུངས་པ་དང་། དེས་པི་-རིན་ཐང་འདི་ H0 འོག་འབྱུང་བ་ལས་ H1 འོག་འབྱུང་བའི་སྲིད་ཕྱོད་ལྡབ་ 2.46 ཡོད་པ"
+"་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "BrownForsythe or Levene's tests to check if variances are equally "
 "distributed across groups."
 msgstr ""
+"བྷ་རོན་-ཕོར་སཡིད་དང་ལེ་ཝེན་གྱི་ཚོད་ལྟས་ཚོགས་པ་ཁག་གི་ནང་ཁྱད་འགྱུར་དག་མཚུངས་པར་ཁྱབ་ཡོད་མེད་ཞིབ་བཤེར་"
+"བྱེད་པ།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
 "the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid ""
 "Exclude cases per dependent variable: In case of multiple t-tests within a "
@@ -1436,34 +1923,51 @@ msgid ""
 "for the dependent variable for the particular t-test. Sample sizes may "
 "therefore vary across the tests. This option is selected by default."
 msgstr ""
+"ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ། དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། "
+"ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ལྟོས་བཅས་འགྱུར་གྲངས་ལ་ནུས་ལྡན་གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་"
+"ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཁག་གི་ནང་མ་དཔེའི་ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད། འདེམས་ཀ་འདི་སོར་བཞག་"
+"གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "The Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "སློབ་མའི་ཊི་ཚོད་ལྟ། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Wilcoxon signed-rank test. Use when the model residuals are not normally "
 "distributed."
 msgstr ""
+"ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པའི་ཚོད་ལྟ། དཔེ་དབྱིབས་ཀྱི་ལྷག་གྲངས་དག་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད"
+"་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "The Z test. Use for testing whether two population means are different."
 msgstr ""
+"ཛེཌ་ཚོད་ལྟ། མི་འབོར་གྱི་ཆ་སྙོམས་གཉིས་མི་འདྲ་བ་ཡོད་མེད་ཚོད་ལྟ་བྱེད་པར་བེད་སྤྱོད་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Test value specified in the null hypothesis. The mean of the data is "
 "compared to this value. Set to 0 by default, which can be changed by the "
 "user."
 msgstr ""
+"མེད་པའི་ཚོད་དཔག་ནང་གསལ་བཀོད་བྱས་པའི་ཚོད་ལྟའི་རིན་ཐང་། གྲངས་གནས་ཀྱི་ཆ་སྙོམས་དེ་རིན་ཐང་འདི་དང་བསྡུར"
+"་བ་ཡིན། སོར་བཞག་གིས་ ༠ ལ་བཞག་ཡོད་པ་དང་། བེད་སྤྱོད་པས་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "The standard deviation applied in the Z test. Set to 1 by default, which can "
 "be changed by the user."
 msgstr ""
+"ཛེཌ་ཚོད་ལྟའི་ནང་སྤྱོད་པའི་ཚད་ལྡན་ཁྱད་འགྱུར། སོར་བཞག་གིས་ ༡ ལ་བཞག་ཡོད་པ་དང་། བེད་སྤྱོད་པས་བཟོ་བཅོས་"
+"བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Average difference between the data points and the test value. For the "
@@ -1472,7 +1976,12 @@ msgid ""
 "the Wilcoxon signed-rank test, the location difference estimate is given by "
 "the Hodges-Lehmann estimate."
 msgstr ""
+"གྲངས་གནས་ཀྱི་ཚེག་དང་ཚོད་ལྟའི་རིན་ཐང་བར་གྱི་ཆ་སྙོམས་ཁྱད་པར། སློབ་མའི་ཊི་ཚོད་ལྟ་དང་ཛེཌ་ཚོད་ལྟའི་ཆེད་དུ། "
+"གནས་ཡུལ་ཁྱད་པར་གྱི་ཚོད་དཔག་ནི་ཆ་སྙོམས་ཁྱད་པར་དེ་(ཚོད་དཔག་བྱས་པའི་)ཚད་ལྡན་ཁྱད་འགྱུར་ d ཡིས་བགོས་"
+"ནས་སྟོན་པ་དང་། ཝིལ་ཀོག་སོན་མཚན་རྟགས་ཅན་གྱི་རིམ་པའི་ཚོད་ལྟའི་ཆེད་དུ། གནས་ཡུལ་ཁྱད་པར་གྱི་ཚོད་དཔག་ནི་"
+"ཧོ་ཇེས་-ལེ་མན་ཚོད་དཔག་གིས་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Shows the maximum ratio of the likelihood of the obtained p value under H1 "
@@ -1481,40 +1990,58 @@ msgid ""
 "this p-value is at most 2.46 times more likely to occur under H1 than under "
 "H0."
 msgstr ""
+"H1 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་དང་ H0 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་ཀྱི་མང་ཤོས་ཀྱི་བསྡུར་ཚད་"
+"སྟོན་པ། དཔེར་ན། ཕྱོགས་གཉིས་ཅན་གྱི་པི་-རིན་ཐང་དེ་ .05 དང་མཚུངས་ན། ཝོཀ་-སེལ་ཀེ་ MPR ནི་ 2.46 དང"
+"་མཚུངས་པ་དང་། དེས་པི་-རིན་ཐང་འདི་ H0 འོག་འབྱུང་བ་ལས་ H1 འོག་འབྱུང་བའི་སྲིད་ཕྱོད་ལྡབ་ 2.46 ཡོད་པ"
+"་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Displays the sample mean and the confidence interval. The confidence "
 "interval is set at 95% by default and can be changed."
 msgstr ""
+"མ་དཔེའི་ཆ་སྙོམས་དང་ཡིད་རྟོན་བར་མཚམས་སྟོན་པ། ཡིད་རྟོན་བར་མཚམས་ནི་སོར་བཞག་གིས་ ༩༥% ལ་བཞག་ཡོད་པ་"
+"དང་བཟོ་བཅོས་བྱེད་ཐུབ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Displays the individual data points, box plot, and density."
-msgstr ""
+msgstr "གྲངས་གནས་ཀྱི་ཚེག་རེ་རེ་དང་། སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
 "the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Student's paired sample t-test.This option is selected by default."
-msgstr ""
+msgstr "སློབ་མའི་ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟ། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Non-parametric version of the paired samples t-test. Use when model "
 "residuals (i.e., group differences) are not normally distributed."
 msgstr ""
+"ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟའི་ཚད་གཞི་མེད་པའི་པར་གཞི། དཔེ་དབྱིབས་ཀྱི་ལྷག་གྲངས་(དཔེར་ན་ཚོགས་པའི་ཁྱད་པར་)དག"
+"་རྒྱུན་ལྡན་ཁྱབ་ཚུལ་མེད་དུས་བེད་སྤྱོད་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "For the Student's t-test the location parameter is given by the mean "
 "difference 'd'; for the Wilcoxon signed-rank test, the location parameter is "
 "given by the Hodges-Lehmann estimate."
 msgstr ""
+"སློབ་མའི་ཊི་ཚོད་ལྟའི་ཆེད་དུ། གནས་ཡུལ་གྱི་ཚད་གཞི་ནི་ཆ་སྙོམས་ཁྱད་པར་ 'd' ཡིས་སྟོན་པ་དང་། ཝིལ་ཀོག་སོན་"
+"མཚན་རྟགས་ཅན་གྱི་རིམ་པའི་ཚོད་ལྟའི་ཆེད་དུ། གནས་ཡུལ་གྱི་ཚད་གཞི་ནི་ཧོ་ཇེས་-ལེ་མན་ཚོད་དཔག་གིས་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Shows the maximum ratio of the likelihood of the obtained p value under H1 "
@@ -1523,31 +2050,44 @@ msgid ""
 "this p-value is at most 2.46 times more likely to occur under H1 than under "
 "H0."
 msgstr ""
+"H1 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་དང་ H0 འོག་ཐོབ་པའི་པི་རིན་ཐང་གི་སྲིད་ཕྱོད་ཀྱི་མང་ཤོས་ཀྱི་བསྡུར་ཚད་"
+"སྟོན་པ། དཔེར་ན། ཕྱོགས་གཉིས་ཅན་གྱི་པི་-རིན་ཐང་དེ་ .05 དང་མཚུངས་ན། ཝོཀ་-སེལ་ཀེ་ MPR ནི་ 2.46 དང"
+"་མཚུངས་པ་དང་། དེས་པི་-རིན་ཐང་འདི་ H0 འོག་འབྱུང་བ་ལས་ H1 འོག་འབྱུང་བའི་སྲིད་ཕྱོད་ལྡབ་ 2.46 ཡོད་པ"
+"་སྟོན།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of the difference "
 "is larger than 0."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ ལས་ཆེ་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "One-sided alternative hypothesis that the population mean of the difference "
 "is smaller than 0."
 msgstr ""
+"ཁྱད་པར་གྱི་མི་འབོར་ཆ་སྙོམས་དེ་ ༠ ལས་ཆུང་བའི་ཕྱོགས་གཅིག་ཅན་གྱི་གཞན་པའི་ཚོད་དཔག"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Displays the individual data points (colored dots), box plots, and densities "
 "for each measure."
 msgstr ""
+"འཇལ་ཚད་རེ་རེའི་གྲངས་གནས་ཀྱི་ཚེག་རེ་རེ་(ཚོན་ལྡན་ཚེག་)དང་། སྒམ་རིས། སྟུག་ཚད་བཅས་སྟོན་པ།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "Changes the orientation of the raincloud difference plot so that the x-axis "
 "represents the dependent variable."
 msgstr ""
+"ཆར་སྤྲིན་ཁྱད་པར་དཔེ་རིས་ཀྱི་ཁ་ཕྱོགས་བསྒྱུར་ནས་ x-མདའ་ཡིས་ལྟོས་བཅས་འགྱུར་གྲངས་མཚོན་པར་བྱེད།"
 
+#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each test will be "
@@ -1555,3 +2095,6 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the tests. This "
 "option is selected by default."
 msgstr ""
+"དབྱེ་ཞིབ་གཅིག་གི་ནང་དུ་ཊི་ཚོད་ལྟ་མང་པོ་ཡོད་ཚེ། ཊི་ཚོད་ལྟ་བྱེ་བྲག་པ་དེའི་ཁྱད་པར་གྱི་སྐར་གྲངས་ལ་ནུས་ལྡན་"
+"གྲངས་གནས་ཡོད་པའི་གནས་ཚུལ་ཡོངས་བེད་སྤྱད་ནས་ཚོད་ལྟ་རེ་རེ་བྱ་རྒྱུ་ཡིན། དེར་བརྟེན་ཚོད་ལྟ་ཁག་གི་ནང་མ་དཔེའི་"
+"ཆེ་ཆུང་མི་འདྲ་བ་ཡོང་སྲིད། འདེམས་ཀ་འདི་སོར་བཞག་གིས་བདམས་ཡོད།"
