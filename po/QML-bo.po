@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-12-27 03:02+0000\n"
+"PO-Revision-Date: 2025-12-27 23:33+0000\n"
 "Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
 "Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/jaspttests-"
 "qml/bo/>\n"
@@ -59,7 +59,6 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Grouping Variable"
 msgstr "ཚོགས་སྒྲིག་འགྱུར་གྲངས།"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
 msgstr "ཚོགས་པ་ ༡ ≠ ཚོགས་པ་ ༢"
@@ -235,14 +234,12 @@ msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 #, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "ཆད་པའི་རིན་ཐང་།"
+msgstr "མེད་པའི་གྲངས།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
 msgstr "ལྟོས་བཅས་འགྱུར་གྲངས་རེ་རེར་གཞིགས་ནས་གནས་ཚུལ་འདོར་བ།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
 msgstr "ཐོ་གཞུང་ལྟར་གནས་ཚུལ་འདོར་བ།"
@@ -252,7 +249,6 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
 msgstr "འཇལ་ཚད་ ༡ ≠ འཇལ་ཚད་ ༢"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 > Measure 2"
 msgstr "འཇལ་ཚད་ ༡ > འཇལ་ཚད་ ༢"
@@ -262,22 +258,18 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr "འཇལ་ཚད་ ༡ < འཇལ་ཚད་ ༢"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
 msgstr "དཔེ་རིས།"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Prior and posterior"
 msgstr "སྔོན་དང་རྗེས།"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional info"
 msgstr "གནས་ཚུལ་ཁ་སྣོན།"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Credible interval"
 msgstr "དད་རུང་བར་མཚམས།"
@@ -287,7 +279,6 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Bayes factor robustness check"
 msgstr "བྷེ་ཡེ་སི་མཐུན་སྡུར་བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤེར།"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Sequential analysis"
 msgstr "རིམ་འགྲོས་དབྱེ་ཞིབ།"
