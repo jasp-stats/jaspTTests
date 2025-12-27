@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-12-26 11:35+0000\n"
+"PO-Revision-Date: 2025-12-27 03:02+0000\n"
 "Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
 "Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/jaspttests-"
 "qml/bo/>\n"
@@ -22,45 +22,37 @@ msgctxt "Description|"
 msgid "Classical"
 msgstr "སྲོལ་རྒྱུན།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟ།"
+msgstr "རང་དབང་ཅན་གྱི་དཔེ་ཚད་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
 msgstr "ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "One Sample T-Test"
 msgstr "མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "བྷེ་ཡེ་སི།"
+msgstr "བྷེ་ཡེ་སིའི།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
 msgstr "བྷེ་ཡེ་སིའི་རང་དབང་ཅན་གྱི་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
 msgstr "བྷེ་ཡེ་སིའི་ཆ་སྒྲིག་མ་དཔེ་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
 msgstr "བྷེ་ཡེ་སིའི་མ་དཔེ་གཅིག་གི་ཊི་ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
-msgstr "ལྟོས་བཅས་འགྱུར་གྲངས།"
+msgstr "ལྟོས་བཅས་འགྱུར་ཆོས།"
 
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
@@ -120,22 +112,19 @@ msgstr "བརྟན་པོའི་རང་བཞིན་ཞིབ་བཤ
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Descriptives"
-msgstr "འགྲེལ་བརྗོད་རང་བཞིན།"
+msgstr "འགྲེལ་བརྗོད་གྱི།"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Tests"
 msgstr "ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Student"
 msgstr "སློབ་མ།"
 
-#, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Mann-Whitney"
-msgstr "མན་-ཝི་ཊི་ནི།"
+msgstr "མན་ཝི་ཊི་ནི།"
 
 #, fuzzy
 msgctxt "TTestBayesianIndependentSamples|"
@@ -162,35 +151,29 @@ msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
 msgstr "སྡོམ་རྩིས་ཁ་སྣོན།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
 msgstr "འགྱུར་གྲངས།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Test value:"
 msgstr "ཚོད་ལྟའི་རིན་ཐང་།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Plots"
 msgstr "དཔེ་རིས།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Prior and posterior"
 msgstr "སྔོན་དང་རྗེས།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional info"
 msgstr "གནས་ཚུལ་ཁ་སྣོན།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Credible interval"
-msgstr "དད་རུང་བར་མཚམས།"
+msgstr "ཡིད་ཆེས་ཀྱི་བར་མཚམས།"
 
 #, fuzzy
 msgctxt "TTestBayesianOneSample|"
@@ -222,17 +205,14 @@ msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
 msgstr "> ཚོད་ལྟའི་རིན་ཐང་།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
 msgstr "< ཚོད་ལྟའི་རིན་ཐང་།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "ཚོད་ལྟ།"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
 msgstr "སློབ་མ།"
