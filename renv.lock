@@ -778,7 +778,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "8ea347b9ba06aa607c3c6ecea00bae24fe8cd7bf"
+      "RemoteSha": "2aaba080558d26571bb0454652a81fc8014525f3"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -802,7 +802,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "db2ef8b8a74c9ce63a11002f3dd32073d67b18ad"
+      "RemoteSha": "8be6081bc7b1719a70538e563be853e11c4aedbc"
     },
     "jquerylib": {
       "Package": "jquerylib",
@@ -1052,7 +1052,7 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.7.2",
+      "Version": "0.7.3",
       "Source": "Repository",
       "Requirements": [
         "cli",
@@ -1294,7 +1294,7 @@
     },
     "rappdirs": {
       "Package": "rappdirs",
-      "Version": "0.3.3",
+      "Version": "0.3.4",
       "Source": "Repository",
       "Requirements": [
         "R"
@@ -1423,16 +1423,16 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.8-3",
+      "Version": "3.8-6",
       "Source": "Repository",
       "Requirements": [
         "graphics",
         "Matrix",
         "methods",
+        "R",
         "splines",
         "stats",
-        "utils",
-        "R"
+        "utils"
       ]
     },
     "svglite": {
@@ -1602,7 +1602,7 @@
     },
     "vctrs": {
       "Package": "vctrs",
-      "Version": "0.6.5",
+      "Version": "0.7.0",
       "Source": "Repository",
       "Requirements": [
         "cli",
@@ -1632,7 +1632,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.55",
+      "Version": "0.56",
       "Source": "Repository",
       "Requirements": [
         "grDevices",
@@ -1643,7 +1643,7 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.5.1",
+      "Version": "1.5.2",
       "Source": "Repository",
       "Requirements": [
         "cli",
