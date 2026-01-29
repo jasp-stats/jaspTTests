@@ -120,7 +120,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   if (is.null(jaspResults[["AssumptionChecks"]])) {
     container <- createJaspContainer(gettext("Assumption Checks"))
     dependList <- c("dependent", "group", "pairs", "naAction",
-                    "normalityTest", "equalityOfVariancesTest", "qqPlot")
+                    "normalityTest", "equalityOfVariancesTest", "qqPlot",
+                    "qqPlotCi", "qqPlotCiLevel")
     container$dependOn(dependList)
     container$position <- 2
     jaspResults[["AssumptionChecks"]] <- container
