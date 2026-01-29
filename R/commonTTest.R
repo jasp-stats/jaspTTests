@@ -651,6 +651,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     return()
 
   container[["QQPlots"]] <- createJaspContainer(gettext("Q-Q Plots"))
+  ciLevel <- if (options[["qqPlotCi"]])  options[["qqPlotCiLevel"]] else NULL
   if (type == "independent") {
     for (thisVar in options$dependent) {
       groupMeans <- c(unname(tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean, na.rm = TRUE)))
@@ -663,7 +664,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
                                                   identicalAxes = TRUE,
-                                                  ciLevel = options[["qqPlotCiLevel"]])
+                                                  ciLevel = ciLevel)
     }
   } else if (type == "paired") {
     for (pair in options$pairs) {
@@ -677,7 +678,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
                                                   identicalAxes = TRUE,
-                                                  ciLevel = options[["qqPlotCiLevel"]])
+                                                  ciLevel = ciLevel)
     }
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
@@ -690,7 +691,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
                                                   identicalAxes = TRUE,
-                                                  ciLevel = options[["qqPlotCiLevel"]])
+                                                  ciLevel = ciLevel)
     }
   }
 }
