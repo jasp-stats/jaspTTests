@@ -32,6 +32,7 @@ CheckBox
 	RadioButtonGroup
 	{
 		name: "barPlotErrorType"
+		info: qsTr("Displays a bar plot of the sample mean(s), including error bars.")
 
 		RadioButton
 		{

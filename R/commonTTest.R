@@ -662,7 +662,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = options[["qqPlotCiLevel"]])
     }
   } else if (type == "paired") {
     for (pair in options$pairs) {
@@ -675,7 +676,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = options[["qqPlotCiLevel"]])
     }
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
@@ -687,7 +689,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = options[["qqPlotCiLevel"]])
     }
   }
 }
