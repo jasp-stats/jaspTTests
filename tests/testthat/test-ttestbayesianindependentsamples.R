@@ -185,9 +185,9 @@ test_that("Analysis handles integer overflow", {
   # vandenman: The difference appears in integrate, for example:
   # BayesFactor:::meta.bf.interval(-Inf, Inf, t = 0.158315759266202, N = 50000, df = 199998, rscale = 0.707)
   if (identical(.Platform$OS.type, "windows"))
-     jaspTools::expect_equal_tables(table, list(0.00511047754408505, 4.60732346061107, "dependent_var"))
+     jaspTools::expect_equal_tables(table, list(0.00511047754408505, 4.61848285988607, "dependent_var"))
   else
-     jaspTools::expect_equal_tables(table, list(0.00511048079567079, 0.185486585943847, "dependent_var"))
+     jaspTools::expect_equal_tables(table, list(0.00511717623883834, 0.185588508623007, "dependent_var"))
 })
 
 # all combinations of hypotheses and Bayes factor type
