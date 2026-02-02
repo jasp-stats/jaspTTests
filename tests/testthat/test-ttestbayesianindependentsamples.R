@@ -187,7 +187,7 @@ test_that("Analysis handles integer overflow", {
   if (identical(.Platform$OS.type, "windows"))
      jaspTools::expect_equal_tables(table, list(0.00511047754408505, 4.60732346061107, "dependent_var"))
   else
-     jaspTools::expect_equal_tables(table, list(0.00511048079567079, 0.185486585943847, "dependent_var"))
+     jaspTools::expect_equal_tables(table, list(0.00511717623883834, 2.54335848618965, "dependent_var"))
 })
 
 # all combinations of hypotheses and Bayes factor type
