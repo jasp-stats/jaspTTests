@@ -93,8 +93,17 @@ Form
 	{
 		title: qsTr("Assumption Checks")
 		CheckBox { name: "normalityTest";	label: qsTr("Normality"); info: qsTr("Shapiro-Wilk test of normality.") }
-		CheckBox { name: "qqPlot";		 	label: qsTr("Q-Q plot residuals"); info: qsTr("Q-Q plot of the standardized residuals.") }
-
+		CheckBox 
+		{ 
+			name: "qqPlot";		 	label: qsTr("Q-Q plot residuals"); info: qsTr("Displays Q-Q plot of the standardized residuals. The confidence band shows the expected range of residuals under normality; points outside the band suggest deviations from normality.") 
+			CheckBox
+            {
+                name:               "qqPlotCi"
+                label:              qsTr("Confidence interval")
+                childrenOnSameRow:  true
+                CIField{ name: "qqPlotCiLevel" }
+            }		
+		}
 	}
 	
 	Group

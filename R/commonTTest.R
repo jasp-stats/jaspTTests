@@ -120,7 +120,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   if (is.null(jaspResults[["AssumptionChecks"]])) {
     container <- createJaspContainer(gettext("Assumption Checks"))
     dependList <- c("dependent", "group", "pairs", "naAction",
-                    "normalityTest", "equalityOfVariancesTest", "qqPlot")
+                    "normalityTest", "equalityOfVariancesTest", "qqPlot",
+                    "qqPlotCi", "qqPlotCiLevel")
     container$dependOn(dependList)
     container$position <- 2
     jaspResults[["AssumptionChecks"]] <- container
@@ -651,6 +652,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     return()
 
   container[["QQPlots"]] <- createJaspContainer(gettext("Q-Q Plots"))
+  ciLevel <- if (options[["qqPlotCi"]])  options[["qqPlotCiLevel"]] else NULL
   if (type == "independent") {
     for (thisVar in options$dependent) {
       groupMeans <- c(unname(tapply(dataset[[thisVar]], dataset[[options[["group"]]]], mean, na.rm = TRUE)))
@@ -662,7 +664,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = ciLevel)
     }
   } else if (type == "paired") {
     for (pair in options$pairs) {
@@ -675,7 +678,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = ciLevel)
     }
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
@@ -687,7 +691,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                                                   yName = "Standardized residuals",
                                                   ablineColor = "darkred",
                                                   ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE)
+                                                  identicalAxes = TRUE,
+                                                  ciLevel = ciLevel)
     }
   }
 }
