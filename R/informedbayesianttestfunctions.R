@@ -355,6 +355,7 @@
   gamma       <- prior.scale
   kappa       <- prior.df
 
+  # Compute two-sided BF10
   int         <- integrate(.integrand_t, lower = -Inf, upper = Inf, t = t, n = neff, nu = nu,
                            mu.delta = mu.delta, gamma = gamma, kappa = kappa, rel.tol = rel.tol)
   numerator   <- int$value
@@ -366,33 +367,34 @@
     return(list(bf = BF10, error = error))
   }
 
-  priorAreaSmaller0 <- pt(q = - mu.delta / gamma, df = kappa)
-  postAreaSmaller0  <- .cdf_t(x = 0, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
-                              prior.location = prior.location, prior.scale = prior.scale, prior.df = prior.df)
-
-  # This is required in case there are numerical issues.
-  if (postAreaSmaller0 > 1) {
-    postAreaSmaller0 <- 1
-  } else if(postAreaSmaller0 < 0) {
-    postAreaSmaller0 <- 0
-  }
-
+  # For one-sided tests with informed priors, compute BF directly by integrating
+  # over the appropriate half-space (positive delta for "right", negative for "left").
+  # This avoids numerical instability from computing BF10 * BFplus1 when both terms
+  # have extreme values due to conflict between prior and data.
   bf <- 'NA'
   if (oneSided == "left") {
-    BFmin1  <- postAreaSmaller0 / priorAreaSmaller0
-    BFmin0  <- BFmin1  * BF10
-
-    # TODO: Verify this
-    bf <- BFmin0
-  } else if (oneSided  == "right") {
-    BFplus1 <- (1 - postAreaSmaller0) / (1 - priorAreaSmaller0)
-
-    BFplus0 <- BFplus1 * BF10
-    # TODO: Verify this
-    bf <- BFplus0
+    # BF-0 = P(data | delta < 0, informed prior) / P(data | null)
+    int.oneSided <- integrate(.integrand_t, lower = -Inf, upper = 0, t = t, n = neff, nu = nu,
+                              mu.delta = mu.delta, gamma = gamma, kappa = kappa, rel.tol = rel.tol)
+    bf <- int.oneSided$value / denominator
+  } else if (oneSided == "right") {
+    # BF+0 = P(data | delta > 0, informed prior) / P(data | null)
+    int.oneSided <- integrate(.integrand_t, lower = 0, upper = Inf, t = t, n = neff, nu = nu,
+                              mu.delta = mu.delta, gamma = gamma, kappa = kappa, rel.tol = rel.tol)
+    bf <- int.oneSided$value / denominator
   }
 
   return(list(bf = bf, error = error))
+}
+
+.integrand_normal <- function(delta, t, n1, n2 = NULL, independentSamples = FALSE, prior.mean, prior.variance) {
+  neff <- ifelse(independentSamples, n1 * n2 / (n1 + n2), n1)
+  nu   <- ifelse(independentSamples, n1 + n2 - 2, n1 - 1)
+
+  suppressWarnings(
+    dt(x = t, df = nu, ncp = sqrt(neff) * delta) *
+    dnorm(x = delta, mean = prior.mean, sd = sqrt(prior.variance))
+  )
 }
 
 .bf10_normal <- function(t, n1, n2 = NULL, oneSided, independentSamples = FALSE, prior.mean, prior.variance) {
@@ -402,6 +404,8 @@
 
   mu.delta    <- prior.mean
   g           <- prior.variance
+
+  # Compute two-sided BF10
   numerator   <- 1 / sqrt(1 + neff * g) * dt(x = t / sqrt(1 + neff * g), df = nu,
                                              ncp = sqrt(neff / (1 + neff * g)) * mu.delta)
   denominator <- dt(x = t, df = nu)
@@ -411,23 +415,22 @@
       return (BF10)
   }
 
-  priorAreaSmaller0 <- pnorm(0, mean = prior.mean, sd = sqrt(prior.variance))
-  postAreaSmaller0  <- .cdf_normal(x = 0, t = t, n1 = n1, n2 = n2, independentSamples = independentSamples,
-                                   prior.mean = prior.mean, prior.variance = prior.variance)
-
-  BFmin1  <- postAreaSmaller0 / priorAreaSmaller0
-  BFplus1 <- (1 - postAreaSmaller0) / (1 - priorAreaSmaller0)
-  BFmin0  <- BFmin1  * BF10
-  BFplus0 <- BFplus1 * BF10
-
+  # For one-sided tests with informed priors, compute BF directly by integrating
+  # over the appropriate half-space. This avoids numerical instability from computing
+  # BF10 * BFplus1 when both terms have extreme values.
   bf <- 'NA'
   if (oneSided == "left") {
-    BFmin1  <- postAreaSmaller0 / priorAreaSmaller0
-    bf  <- BFmin1  * BF10
-  } else if (oneSided  == "right") {
-
-    BFplus1 <- (1 - postAreaSmaller0) / (1 - priorAreaSmaller0)
-    bf      <- BFplus1 * BF10
+    # BF-0 = P(data | delta < 0, informed prior) / P(data | null)
+    int.oneSided <- integrate(.integrand_normal, lower = -Inf, upper = 0, t = t, n1 = n1, n2 = n2,
+                              independentSamples = independentSamples, prior.mean = prior.mean,
+                              prior.variance = prior.variance)
+    bf <- int.oneSided$value / denominator
+  } else if (oneSided == "right") {
+    # BF+0 = P(data | delta > 0, informed prior) / P(data | null)
+    int.oneSided <- integrate(.integrand_normal, lower = 0, upper = Inf, t = t, n1 = n1, n2 = n2,
+                              independentSamples = independentSamples, prior.mean = prior.mean,
+                              prior.variance = prior.variance)
+    bf <- int.oneSided$value / denominator
   }
 
   return (bf)
