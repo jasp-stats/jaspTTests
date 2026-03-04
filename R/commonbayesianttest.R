@@ -2265,7 +2265,7 @@
 
   if (is.null(container[["plotsRainCloud"]])) {
     subcontainer <- createJaspContainer(gettext("Raincloud Plots"))
-    subcontainer$dependOn(c("raincloudPlot", "raincloudPlotHorizontal"))
+    subcontainer$dependOn(c("raincloudPlot", "raincloudPlotHorizontal", "testValue"))
     subcontainer$position <- 6
     container[["plotsRainCloud"]] <- subcontainer
   } else {
