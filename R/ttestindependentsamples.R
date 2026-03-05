@@ -431,14 +431,19 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       # Set seed [DELETE]
       set.seed(42)
 
-      # Bias-corrected accelerated bootstrap
-      alpha <-  1 - options$bcaLevel
-      pcts <- c(alpha / 2, 1 - (alpha / 2))
+      # Percentiles of interest either (alpha/2, 1 - alpha/2) for two sided or (-Inf, alpha) or (alpha, Inf) for one sided.
+      bcaAlpha = ifelse(direction == "two.sided", (1 - options$bcaLevel) / 2, (1 - options$bcaLevel))
+      bcaPercentiles <- c(bcaAlpha, 1 - bcaAlpha)
+
       .bcaEffectSizeFunc <- .factoryEffectSizeFunc(test, variable, options)
 
-      bcaResults <- bcaboot::bcajack(x = dataset, B = 5000, func = .bcaEffectSize, alpha = pcts)
+      bcaResults <- bcaboot::bcajack(x = dataset, B = 5000, func = .bcaEffectSizeFunc, alpha = bcaPercentiles)
       # bcaResults$lims is always c(lower percentile, median, upper percentile)
       bcaCi <- sort(c(bcaResults$lims[1, "bca"], bcaResults$lims[3, "bca"]))
+      if (direction == "greater")
+        bcaCi[2] <- Inf
+      else if (direction == "less")
+        bcaCi[1] <- -Inf
     }
 
   }
