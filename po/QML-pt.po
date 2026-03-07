@@ -1567,3 +1567,306 @@ msgid ""
 "the expected range of residuals under normality; points outside the band "
 "suggest deviations from normality."
 msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The one sample t-test allows the user to estimate the effect size and test "
+"the null hypothesis that the population mean equals a specific constant, i."
+"e., the test value.\n"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Assumptions"
+msgstr "Suposições"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Input"
+msgstr "Entrada"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Variables"
+msgstr "Variáveis"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "In this box the dependent variable is selected."
+msgstr "Nesta caixa a variável dependente é selecionada."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Tests"
+msgstr "Testes"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestOneSample|"
+msgid "The Student's t-test. This option is selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Teste dos postos sinalizados de Wilcoxon"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Wilcoxon signed-rank test. Use when the model residuals are not normally "
+"distributed."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Z Test"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "The Z test. Use for testing whether two population means are different."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Test value:"
+msgstr "Valor de teste:"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Test value specified in the null hypothesis. The mean of the data is "
+"compared to this value. Set to 0 by default, which can be changed by the "
+"user."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Std. deviation:"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The standard deviation applied in the Z test. Set to 1 by default, which can "
+"be changed by the user."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Additional Statistics"
+msgstr "Estatísticas adicionais"
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Average difference between the data points and the test value. For the "
+"Student's t-test and the Z test the location difference estimate is given by "
+"the mean difference divided by the (hypothesized) standard deviation d; for "
+"the Wilcoxon signed-rank test, the location difference estimate is given by "
+"the Hodges-Lehmann estimate."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Confidence interval"
+msgstr "Intervalo de confiança"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Confidence interval for the location parameter. By default, the confidence "
+"interval is set to 95%. This can be changed into the desired percentage."
+msgstr ""
+"Intervalo de confiança para o parâmetro de localização. Por padrão, o "
+"intervalo de confiança é definido em 95 %. Isso pode ser alterado para a "
+"porcentagem desejada."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Effect size"
+msgstr "Tamanho de efeito"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"For the Student t-test, the effect size is given by Cohen's d; for the "
+"Wilcoxon test, the effect size is given by the matched rank biserial "
+"correlation; for the Z test, the effect size is given by Cohen's d (based on "
+"the provided population standard deviation)."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Confidence interval for the effect size."
+msgstr "Intervalo de confiança para o tamanho de efeito."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Descriptives"
+msgstr "Descritivas"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, standard error of the "
+"mean for each measure."
+msgstr ""
+"Tamanho de amostra, média amostral, desvio-padsrão amostral e erro padrão da "
+"média para cada medição."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Razão p máxima de Vovk-Sellke"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Shows the maximum ratio of the likelihood of the obtained p value under H1 "
+"vs the likelihood of the obtained p value under H0. For example, if the two-"
+"sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that "
+"this p-value is at most 2.46 times more likely to occur under H1 than under "
+"H0."
+msgstr ""
+"Mostra a razão máxima entre a verossimilhança do valor de p obtido em H1 e a "
+"verossimilhança do valor de p obtido em H0. Por exemplo, se o valor de p "
+"bilateral for igual a 0,05, a MPR de Vovk-Sellke será igual a 2,46, "
+"indicando que esse valor de p tem, no máximo, 2,46 vezes mais probabilidade "
+"de ocorrer em H1 do que em H0."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr "Hipótese Alternativa"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Valor do teste"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Two sided alternative hypothesis that the sample mean is not equal to the "
+"test value. Selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "> Test value"
+msgstr "> valor de teste"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is greater than the "
+"test value."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "< Test value"
+msgstr "< Valor de teste"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is less than the test "
+"value."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Assumption checks"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Normality"
+msgstr "Normalidade"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Shapiro-Wilk test of normality."
+msgstr "Teste de normalidade de Shapiro-Wilk."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr "Gráfico Q-Q residual"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Displays Q-Q plot of the standardized residuals. The confidence band shows "
+"the expected range of residuals under normality; points outside the band "
+"suggest deviations from normality."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Descriptives plots"
+msgstr "Diagramas Descritivos"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Displays the sample mean and the confidence interval. The confidence "
+"interval is set at 95% by default and can be changed."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Displays the individual data points, box plot, and density."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr "Exibição horizontal"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+"Altera a orientação do gráfico nuvem de chuva de forma que o eixo x "
+"represente a variável dependente."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Missing Values"
+msgstr "Valores ausentes"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr "Excluir casos por variável"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the tests. This "
+"option is selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Excluir casos em lista"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the tests."
+msgstr ""
+"No caso de testes t múltiplos em uma única análise, cada teste t será "
+"conduzido usando apenas casos com dados válidos para todas as variáveis "
+"dependentes. O tamanho de amostra é, portanto, constante ao longo de todos "
+"os testes."

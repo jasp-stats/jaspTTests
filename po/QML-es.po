@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-01 06:09+0000\n"
-"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/jaspttests-"
-"qml/es/>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -1591,3 +1585,312 @@ msgstr ""
 "Presenta el gráfico Q-Q de los errores tipificados. La franja de confianza "
 "muestra el rango esperado de los errores bajo Normalidad; los puntos fuera "
 "de la franja sugieren desviaciones respecto a la Normalidad."
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The one sample t-test allows the user to estimate the effect size and test "
+"the null hypothesis that the population mean equals a specific constant, i."
+"e., the test value.\n"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Assumptions"
+msgstr "Supuestos"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Input"
+msgstr "Entrada"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Variables"
+msgstr "Variables"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "In this box the dependent variable is selected."
+msgstr "En este cuadradito se elije la variable dependiente."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Tests"
+msgstr "Contrastes"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Student"
+msgstr "Student"
+
+msgctxt "TTestOneSample|"
+msgid "The Student's t-test. This option is selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Wilcoxon signed-rank"
+msgstr "Rango con signo de Wilcoxon"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Wilcoxon signed-rank test. Use when the model residuals are not normally "
+"distributed."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Z Test"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "The Z test. Use for testing whether two population means are different."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Test value:"
+msgstr "Probar valor:"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Test value specified in the null hypothesis. The mean of the data is "
+"compared to this value. Set to 0 by default, which can be changed by the "
+"user."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Std. deviation:"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"The standard deviation applied in the Z test. Set to 1 by default, which can "
+"be changed by the user."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Additional Statistics"
+msgstr "Estadísticos Adicionales"
+
+msgctxt "TTestOneSample|"
+msgid "Location estimate"
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Average difference between the data points and the test value. For the "
+"Student's t-test and the Z test the location difference estimate is given by "
+"the mean difference divided by the (hypothesized) standard deviation d; for "
+"the Wilcoxon signed-rank test, the location difference estimate is given by "
+"the Hodges-Lehmann estimate."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Confidence interval"
+msgstr "Intervalo de confianza"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Confidence interval for the location parameter. By default, the confidence "
+"interval is set to 95%. This can be changed into the desired percentage."
+msgstr ""
+"Intervalo de confianza para el parámetro de posición. Por defecto, el "
+"intervalo de confianza se establece en 95%. Esto se puede cambiar al "
+"porcentaje deseado."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Effect size"
+msgstr "Magnitud del efecto"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"For the Student t-test, the effect size is given by Cohen's d; for the "
+"Wilcoxon test, the effect size is given by the matched rank biserial "
+"correlation; for the Z test, the effect size is given by Cohen's d (based on "
+"the provided population standard deviation)."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Confidence interval for the effect size."
+msgstr "Intervalo de confianza para la magnitud del efecto."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Descriptives"
+msgstr "Descriptivos"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Sample size, sample mean, sample standard deviation, standard error of the "
+"mean for each measure."
+msgstr ""
+"Tamaño muestral, media muestral, desviación típica muestral, y error típico "
+"de la media para cada medida."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Relación p máxima de Vovk-Sellke"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Shows the maximum ratio of the likelihood of the obtained p value under H1 "
+"vs the likelihood of the obtained p value under H0. For example, if the two-"
+"sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that "
+"this p-value is at most 2.46 times more likely to occur under H1 than under "
+"H0."
+msgstr ""
+"Muestra la proporción máxima de la verosimilitud del valor P obtenido bajo "
+"H1 frente a la verosimilitud del valor P obtenido bajo H0. Por ejemplo, si "
+"el valor P bilateral es igual a .05, el MPR de Vovk-Sellke es igual a 2.46, "
+"indicando que este valor P es como mucho 2.46 veces más probable que ocurra "
+"bajo H1 que bajo H0."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Alternative Hypothesis"
+msgstr "Hipótesis alternativa"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "≠ Test value"
+msgstr "≠ Valor de prueba"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Two sided alternative hypothesis that the sample mean is not equal to the "
+"test value. Selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "> Test value"
+msgstr "> Valor de prueba"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is greater than the "
+"test value."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "< Test value"
+msgstr "< Valor de prueba"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"One sided alternative hypothesis that the sample mean is less than the test "
+"value."
+msgstr ""
+
+msgctxt "TTestOneSample|"
+msgid "Assumption checks"
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Normality"
+msgstr "Normalidad"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Shapiro-Wilk test of normality."
+msgstr "Contraste de Normalidad de Shapiro-Wilk."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Q-Q plot residuals"
+msgstr "Gráfico Q-Q de los errores"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Displays Q-Q plot of the standardized residuals. The confidence band shows "
+"the expected range of residuals under normality; points outside the band "
+"suggest deviations from normality."
+msgstr ""
+"Presenta el gráfico Q-Q de los errores tipificados. La franja de confianza "
+"muestra el rango esperado de los errores bajo Normalidad; los puntos fuera "
+"de la franja sugieren desviaciones respecto a la Normalidad."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Plots"
+msgstr "Gráficos"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Descriptives plots"
+msgstr "Gráficos descriptivos"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"Displays the sample mean and the confidence interval. The confidence "
+"interval is set at 95% by default and can be changed."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Raincloud plots"
+msgstr "Gráficos de tipo nube con lluvia"
+
+msgctxt "TTestOneSample|"
+msgid "Displays the individual data points, box plot, and density."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Horizontal display"
+msgstr "Presentación horizontal"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"Changes the orientation of the raincloud plot so that the x-axis represents "
+"the dependent variable."
+msgstr ""
+"Cambia la orientación del gráfico de tipo nube con lluvia de modo que el eje "
+"X representa la variable dependiente."
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Missing Values"
+msgstr "Valores Ausentes"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Exclude cases per variable"
+msgstr "Excluir casos según variable"
+
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using all cases with valid data for the dependent variable for the "
+"particular t-test. Sample sizes may therefore vary across the tests. This "
+"option is selected by default."
+msgstr ""
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid "Exclude cases listwise"
+msgstr "Excluir casos según lista"
+
+#, fuzzy
+msgctxt "TTestOneSample|"
+msgid ""
+"In case of multiple t-tests within a single analysis, each t-test will be "
+"conducted using only cases with valid data for all dependent variables. "
+"Sample size is therefore constant across the tests."
+msgstr ""
+"En caso de múltiples contrastes t dentro de un único análisis, cada "
+"contraste t se va a hacer utilizando solo casos con datos válidos para todas "
+"las variables dependientes. Así, el tamaño muestral es constante entre los "
+"contrastes."
