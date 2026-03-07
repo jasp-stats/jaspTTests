@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-07 11:37+0000\n"
+"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"qml/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Language: de\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -1118,7 +1124,7 @@ msgid ""
 "mean for each measure."
 msgstr ""
 "Stichprobenumfang, Stichprobenmittelwert, Stichprobenstandardabweichung, "
-"Standardfehler des Mittelwerts für jedes Maß."
+"Standardfehler des Mittelwerts für jede Messung."
 
 msgctxt "TTestPairedSamples|"
 msgid ""
@@ -1595,42 +1601,38 @@ msgid ""
 "the null hypothesis that the population mean equals a specific constant, i."
 "e., the test value.\n"
 msgstr ""
+"Mit dem t-Test für eine Stichprobe können Sie die Effektstärke schätzen und "
+"die Nullhypothese testen, dass der Mittelwert der Grundgesamtheit einer "
+"bestimmten Konstante gleicht, d.h. dem Testwert.\n"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Assumptions"
 msgstr "Annahmen"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Input"
 msgstr "Eingabe"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
 msgstr "Variablen"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "In this box the dependent variable is selected."
 msgstr "In diesem Feld wird die abhängige Variable ausgewählt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "Tests"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
 msgstr "Student"
 
 msgctxt "TTestOneSample|"
 msgid "The Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "Der t-Test nach Student. Diese Option ist standardmäßig ausgewählt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
 msgstr "Wilcoxon-Vorzeichen-Rang"
@@ -1640,16 +1642,19 @@ msgid ""
 "Wilcoxon signed-rank test. Use when the model residuals are not normally "
 "distributed."
 msgstr ""
+"Wilcoxon-Vorzeichen-Rang-Test. Verwenden, wenn die Modell-Residuen nicht "
+"normalverteilt sind."
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "Z-Test"
 
 msgctxt "TTestOneSample|"
 msgid "The Z test. Use for testing whether two population means are different."
 msgstr ""
+"Der Z-Test. Verwendung zum Testen, ob zwei Populations-Mittelwerte "
+"unterschiedlich sind."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Test value:"
 msgstr "Testwert:"
@@ -1660,25 +1665,29 @@ msgid ""
 "compared to this value. Set to 0 by default, which can be changed by the "
 "user."
 msgstr ""
+"In der Nullhypothese angegebenr Testwert. Der Mittelwert der Daten wird mit "
+"diesem Wert verglichen. Standardmäßig auf 0 gesetzt, was vom Benutzer "
+"geändert werden kann."
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr ""
+msgstr "Std.-Abweichung:"
 
 msgctxt "TTestOneSample|"
 msgid ""
 "The standard deviation applied in the Z test. Set to 1 by default, which can "
 "be changed by the user."
 msgstr ""
+"Die im Z-Test angewandte Standardabweichung. Standardmäßig auf 1 gesetzt, "
+"was vom Benutzer geändert werden kann."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
 msgstr "Weitere Statistiken"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
-msgstr ""
+msgstr "Lageschätzung"
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1688,13 +1697,16 @@ msgid ""
 "the Wilcoxon signed-rank test, the location difference estimate is given by "
 "the Hodges-Lehmann estimate."
 msgstr ""
+"Durchschnittliche Differenz zwischen den Datenpunkten und dem Testwert. Für "
+"den t-Test nach Student und den Z-Test wird die Lagedifferenzschätzung durch "
+"die mittleren Differenz geteilt durch die (angenommene) Standardabweichung "
+"d; für den Wilcoxon-Vorzeichen-Rang-Test wird die Lagedifferenzschätzung "
+"durch die Hodges-Lehmann Schätzung gegeben."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr "Konfidenzintervall"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Confidence interval for the location parameter. By default, the confidence "
@@ -1704,7 +1716,6 @@ msgstr ""
 "Konfidenzintervall auf 95% eingestellt. Dies kann auf den gewünschten "
 "Prozentsatz geändert werden."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Effect size"
 msgstr "Effektstärke"
@@ -1716,32 +1727,32 @@ msgid ""
 "correlation; for the Z test, the effect size is given by Cohen's d (based on "
 "the provided population standard deviation)."
 msgstr ""
+"Für den t-Test nach Student wird die Effektstärke durch Cohens d angegeben; "
+"für den Wilcoxon-Test wird die Effektstärke durch die angepasste biseriale "
+"Korrelation angegeben; für den Z-Test wird die Effektstärke durch Cohens d "
+"angegeben (bezogen auf die angegebene Standardabweichung der Grundgesamtheit)"
+"."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval for the effect size."
 msgstr "Konfidenzintervall für die Effektstärke."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
-msgstr "Deskriptive Statistik"
+msgstr "Deskriptive Statistiken"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Sample size, sample mean, sample standard deviation, standard error of the "
 "mean for each measure."
 msgstr ""
 "Stichprobenumfang, Stichprobenmittelwert, Stichprobenstandardabweichung, "
-"Standardfehler des Mittelwerts für jedes Maß."
+"Standardfehler des Mittelwerts für jede Messung."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Shows the maximum ratio of the likelihood of the obtained p value under H1 "
@@ -1756,12 +1767,10 @@ msgstr ""
 "Sellke-MPV gleich 2,46, was bedeutet, dass dieser p-Wert höchstens 2,46 Mal "
 "wahrscheinlicher ist, dass er unter H1 als unter H0 auftritt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
 msgstr "Alternativhypothese"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ Testwert"
@@ -1771,8 +1780,9 @@ msgid ""
 "Two sided alternative hypothesis that the sample mean is not equal to the "
 "test value. Selected by default."
 msgstr ""
+"Zweiseitige Alternativhypothese dass der Stichprobenmittelwert nicht gleich "
+"dem Testwert ist. Standardmäßig ausgewählt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
 msgstr "> Testwert"
@@ -1782,8 +1792,9 @@ msgid ""
 "One sided alternative hypothesis that the sample mean is greater than the "
 "test value."
 msgstr ""
+"Einseitige Alternativhypothese dass der Stichprobenmittelwert größer als der "
+"Testwert ist."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
 msgstr "< Testwert"
@@ -1793,27 +1804,25 @@ msgid ""
 "One sided alternative hypothesis that the sample mean is less than the test "
 "value."
 msgstr ""
+"Einseitige Alternativhypothese dass der Stichprobenmittelwert kleiner als "
+"der Testwert ist."
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "Annahmeprüfungen"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Normality"
 msgstr "Normalverteilung"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Shapiro-Wilk test of normality."
 msgstr "Shapiro-Wilk-Test auf Normalverteilung."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
 msgstr "Q-Q-Diagramm Residuen"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Displays Q-Q plot of the standardized residuals. The confidence band shows "
@@ -1824,12 +1833,10 @@ msgstr ""
 "die erwartete Spannweite der Residuen unter Normalitätsannahme; Punkte "
 "außerhalb des Bandes suggerieren Abweichungen von Normalität."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "Diagramme"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
 msgstr "Deskriptive Diagramme"
@@ -1839,22 +1846,22 @@ msgid ""
 "Displays the sample mean and the confidence interval. The confidence "
 "interval is set at 95% by default and can be changed."
 msgstr ""
+"Zeigt den Stichproben-Mittelwert und das Konfidenzintervall. Das "
+"Konfidenzintervall wird standardmäßig auf 95% gesetzt und kann geändert "
+"werden."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
-msgstr "Regenwolken-Plots"
+msgstr "Regenwolken-Diagramme"
 
 msgctxt "TTestOneSample|"
 msgid "Displays the individual data points, box plot, and density."
-msgstr ""
+msgstr "Zeigt die einzelnen Datenpunkte, Boxplot, und Dichte."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
 msgstr "Horizontale Anzeige"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "Changes the orientation of the raincloud plot so that the x-axis represents "
@@ -1863,12 +1870,10 @@ msgstr ""
 "Ändert die Orientierung des Regenwolkendiagramms, sodass die x-Achse die "
 "abhängige Variable darstellt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
 msgstr "Fehlende Werte"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
 msgstr "Fälle per Variable ausschließen"
@@ -1880,13 +1885,15 @@ msgid ""
 "particular t-test. Sample sizes may therefore vary across the tests. This "
 "option is selected by default."
 msgstr ""
+"Bei mehreren t-Tests innerhalb einer einzelnen Analyse wird jeder t-Test mit "
+"allen Fällen durchgeführt, die gültige Daten der abhängigen Variable für den "
+"jeweiligen t-Test aufweisen. Die Stichprobenumfänge können daher über die "
+"Tests unterschiedlich sein. Diese Option ist standardmäßig ausgewählt."
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
 msgstr "Fälle listenweise ausschließen"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid ""
 "In case of multiple t-tests within a single analysis, each t-test will be "
