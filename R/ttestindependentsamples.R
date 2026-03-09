@@ -301,7 +301,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     sed  <- ""
     stat <- as.numeric(r$statistic)
     m    <- as.numeric(r$estimate)
-    d    <- as.numeric(1-(2*stat)/(ns[1]*ns[2])) # rankBis (Kerby, 2014)
+    d    <- as.numeric((2*stat)/(ns[1]*ns[2]) - 1) # rankBis (Kerby, 2014)
     wSE <- sqrt((ns[1]*ns[2] * (ns[1]+ns[2] + 1))/12)
     rankBisSE <- sqrt(4 * 1/(ns[1]*ns[2])^2 * wSE^2)
     zRankBis  <- atanh(d)
@@ -726,4 +726,3 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   }
   return()
 }
-
