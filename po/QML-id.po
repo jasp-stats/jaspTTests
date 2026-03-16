@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-16 21:51+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
+"jaspttests-qml/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Language: id\n"
 "X-Qt-Contexts: true\n"
 
@@ -17,7 +23,7 @@ msgstr "Evaluasi perbedaan antara dua rata-rata"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "Klasik"
+msgstr "Klasikal"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
@@ -33,7 +39,7 @@ msgstr "Uji-T Satu Sampel"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesian"
+msgstr "Bayes"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
@@ -69,7 +75,7 @@ msgstr "Grup 1 < Grup 2"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Plots"
-msgstr "Plots"
+msgstr "Diagram"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Prior and posterior"
@@ -211,7 +217,6 @@ msgctxt "TTestBayesianOneSample|"
 msgid "Tests"
 msgstr "Tes"
 
-#, fuzzy
 msgctxt "TTestBayesianOneSample|"
 msgid "Student"
 msgstr "Student"
@@ -256,10 +261,9 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Measure 1 < Measure 2"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Plots"
-msgstr "Plots"
+msgstr "Diagram"
 
 #, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
@@ -313,7 +317,6 @@ msgctxt "TTestBayesianPairedSamples|"
 msgid "Tests"
 msgstr "Tes"
 
-#, fuzzy
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Student"
 msgstr "Student"
@@ -357,7 +360,6 @@ msgctxt "TTestIndependentSamples|"
 msgid "Tests"
 msgstr "Tes"
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Student"
 msgstr "Student"
@@ -465,7 +467,6 @@ msgctxt "TTestPairedSamples|"
 msgid "Tests"
 msgstr "Tes"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Student"
 msgstr "Student"
@@ -602,15 +603,13 @@ msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestIndependentSamples|"
 msgid "Plots"
-msgstr "Plots"
+msgstr "Diagram"
 
-#, fuzzy
 msgctxt "TTestPairedSamples|"
 msgid "Plots"
-msgstr "Plots"
+msgstr "Diagram"
 
 msgctxt "TTestPairedSamples|"
 msgid "Correct for correlation"
@@ -1375,7 +1374,6 @@ msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "Tes"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
 msgstr "Student"
