@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2024-10-26 02:47\n"
-"PO-Revision-Date: 2026-02-25 21:09+0000\n"
-"Last-Translator: Kayla Simorangkir <tatacrea.k@gmail.com>\n"
+"PO-Revision-Date: 2026-03-18 03:09+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/id/>\n"
 "Language: id\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "Assumption Checks"
 msgstr "Pemeriksaan Asumsi"
@@ -25,6 +25,10 @@ msgid ""
 "em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
 "2001)."
 msgstr ""
+"Rasio-<em>p</em> Maksimum Vovk-Sellke: Berdasarkan nilai-<em>p</em> dua-"
+"sisi,rasio maksimum yang mungkin mendukung H%1$s dibandingkan H%2$s sama "
+"dengan 1/(-e <em>p</em>. log(<em>p</em>)) untuk <em>p</em> %3$s .37 (Sellke, "
+"Bayarri, & Berger, 2001)."
 
 msgid "Q-Q Plots"
 msgstr "Diagram Q-Q"
@@ -36,13 +40,13 @@ msgid "Variables %1$s and %2$s are the same!"
 msgstr "Variabel %1$s dan %2$s sama!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Diagram Deskriptif"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "Diagram Batang"
 
 msgid "Group"
-msgstr "Kelompok"
+msgstr "Grup"
 
 msgid "N"
 msgstr "N"
@@ -57,10 +61,10 @@ msgid "SE"
 msgstr "SE"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "Koefisien variasi"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Interval Kredibel"
 
 msgid "Lower"
 msgstr "Bawah"
@@ -69,107 +73,115 @@ msgid "Upper"
 msgstr "Atas"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Diagram Inferensial"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Priori dan Posterior"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Faktor Bayes dan Pemeriksaan Kekuatan"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Analisis Sekuensial"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
 "prior."
 msgstr ""
+"Diagram pemeriksaan kekuatan faktor Bayes saat ini tidak didukung untuk "
+"priori terinformasi."
 
 msgid ""
 "Sequential analysis robustness check plot currently not supported for "
 "informed prior."
 msgstr ""
+"Diagram pemeriksaan kekuatan analisis sekuensial saat ini tidak didukung "
+"untuk priori terinformasi."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "Diharapkan rscale numerik atau karakter tetapi terdapat %s."
 
 msgid "Running robustness check %1$d / %2$d"
-msgstr ""
+msgstr "Menjalankan pemeriksaan kekuatan %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "BF%s maks"
 
 msgid "user prior"
-msgstr ""
+msgstr "priori pengguna"
 
 msgid "wide prior"
-msgstr ""
+msgstr "priori lebar"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "priori ultralebar"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
-msgstr ""
+msgstr "%1$s di r==%2$s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "Beberapa faktor Bayes tidak terbatas"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "Lebar priori Cauchy"
 
 msgid "Running sequential analysis %1$d / %2$d"
-msgstr ""
+msgstr "Menjalankan analisis sekuensial %1$d / %2$d"
 
 msgid "n"
 msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "Prior"
-msgstr ""
+msgstr "Priori"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "%s%% CI:"
 
 msgid "Effect size"
-msgstr "Besaran efek"
+msgstr "Ukuran efek"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "Diagram Raincloud"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "Diagram Perbedaan Raincloud"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "Faktor Bayes tidak dapat dikalkulasi"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "Faktor Bayes tanpa batas"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Faktor Bayes terlalu kecil"
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
 "Bayes factor but no error estimate can be given."
 msgstr ""
+"nilai-t besar. Perkiraan Savage-Dickey digunakan untuk menghitung faktor "
+"Bayes tetapi tidak ada estimasi galat yang dapat diberikan."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "Tidak ada estimasi galat tersedia untuk priori normal."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "Uji U Mann-Whitney Bayes"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sampel Independen Bayes"
 
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"Hasil berdasarkan algoritma augmentasi data dengan 5 rantai dari %.0f "
+"iterasi."
 
 msgid "error %%"
 msgstr "galat %%"
@@ -178,65 +190,75 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa lokasi grup <em>%1$s</"
+"em> lebih besar dari lokasi grup <em>%2$s</em>."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the location of "
 "group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa lokasi grup <em>%1$s</"
+"em> lebih kecil dari lokasi grup <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "Uji Peringkat Tertanda Wilcoxon Bayes"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "Uji-T Satu Sampel Bayes"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is greater than %s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa rerata populasi lebih "
+"dari %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "is less than %s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa rerata populasi "
+"kurang dari %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
 "differs from %s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa rerata populasi "
+"berbeda dari %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sampel Terpasang Bayes"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "Pengukuran 1"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "Pengukuran 1"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sample Independen"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "Uji U Mann-Whitney."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "Uji-t Welch."
 
 msgid "t"
 msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "Uji-t Student."
 
 msgid "Statistic"
 msgstr "Statistik"
 
 msgid "Test"
-msgstr ""
+msgstr "Uji"
 
 msgid "df"
 msgstr "df"
@@ -248,245 +270,284 @@ msgid "Cohen's d"
 msgstr "d Cohen"
 
 msgid "Glass' delta"
-msgstr "Glass' delta"
+msgstr "Delta Glass"
 
 msgid "Hedges' g"
-msgstr "Hedges' g"
+msgstr "g Hedge"
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "Perbedaan Rerata"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "Estimasi Hodges-Lehmann"
 
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "Korelasi Rank-Biserial"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "Parameter Lokasi"
 
 msgid "Effect Size"
-msgstr ""
+msgstr "Ukuran Efek"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "Uji-t Student dan uji-t Welch"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "Uji-t Student"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "Uji-t Welch"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "Perbedaan SE"
 
 msgid ""
 "For the %s, location parameter is given by mean difference. For the Mann-"
 "Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"Untuk %s, parameter lokasi diberikan oleh perbedaan rerata. Untuk uji Mann-"
+"Whitney, parameter lokasi diberikan oleh estimasi Hodges-Lehmann."
 
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "%1$s%% CI untuk %2$s"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "SE %1$s"
 
 msgid ""
 "For the Mann-Whitney test, effect size is given by the rank biserial "
 "correlation."
 msgstr ""
+"Untuk uji Mann-Whitney, ukuran efek diberikan oleh korelasi biserial "
+"peringkat."
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "Untuk %1$s, ukuran efek diberikan oleh %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "Uji Normalitas (Shapiro-Wilk)"
 
 msgid "Residuals"
-msgstr ""
+msgstr "Residu"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "Hasil signifikan menyarankan deviasi dari normalitas."
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "Brown-Forsythe"
 
 msgid "Levene's"
-msgstr ""
+msgstr "Levene"
 
 msgid "Test of Equality of Variances (%1$s)"
-msgstr ""
+msgstr "Uji Kesetaraan Varians (%1$s)"
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "%s<sub>1</sub>"
-msgstr ""
+msgstr "%s<sub>1</sub>"
 
 msgid "%s<sub>2</sub>"
-msgstr ""
+msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr ""
+msgstr "lebih"
 
 msgid "less"
-msgstr ""
+msgstr "kurang"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa grup %1$s %2$s dari "
+"grup %3$s."
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
 "equal variance assumption"
 msgstr ""
+"Uji Brown-Forsythe signifikan (p < .05), menyarankan pelanggaran dari asumsi "
+"varians sama"
 
 msgid ""
 "Levene's test is significant (p < .05), suggesting a violation of the equal "
 "variance assumption"
 msgstr ""
+"Uji Levene signifikan (p < .05), menyarankan pelanggaran asumsi kesamaan "
+"varians"
 
 msgid ""
 "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
-msgstr ""
+msgstr "Delta Glass menggunakan deviasi standar grup %1$s variabel %2$s."
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "Statistik-F tidak dapat dikalkulasi"
 
 msgid "Group Descriptives"
 msgstr "Deskriptif Grup"
 
 msgid "Mean Rank"
-msgstr "Peringkat Rata-rata"
+msgstr "Peringkat Rerata"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "Peringkat Jumlah"
 
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "Uji-T Satu Sampel"
 
 msgid "Wilcoxon signed-rank test."
-msgstr ""
+msgstr "Uji peringkat tertanda Wilcoxon."
 
 msgid "V"
-msgstr ""
+msgstr "V"
 
 msgid "Z test."
-msgstr ""
+msgstr "Uji Z."
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "Location Difference"
-msgstr ""
+msgstr "Perbedaan Lokasi"
 
 msgid "Student t-test and Z-test"
-msgstr ""
+msgstr "Uji-t dan uji-Z Student"
 
 msgid "Z-test"
-msgstr ""
+msgstr "Uji-Z"
 
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>. For the Wilcoxon test, location difference estimate "
 "is given by the Hodges-Lehmann estimate."
 msgstr ""
+"Untuk %s, estimasi perbedaan lokasi diberikan oleh <em>d</em> perbedaan "
+"rerata sampel. Untuk uji Wilcoxon, estimasi perbedaan lokasi diberikan oleh "
+"estimasi Hodges-Lehmann."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
-msgstr ""
+msgstr "Untuk uji-t Student, ukuran efek diberikan oleh <em>d</em> Cohen."
 
 msgid ""
 "For the Wilcoxon test, effect size is given by the matched rank biserial "
 "correlation."
 msgstr ""
+"Untuk uji Wilcoxon, ukuran efek diberikan oleh korelasi biserial peringkat "
+"tercocok."
 
 msgid ""
 "For the Z test, effect size is given by Cohen's <em>d</em> (based on the "
 "provided population standard deviation)."
 msgstr ""
+"Untuk uji Z, ukuran efek diberikan oleh <em>d</em> Cohen (berdasarkan "
+"deviasi standar populasi tersedia)."
 
 msgid "greater than"
 msgstr "lebih besar dari"
 
 msgid "less than"
-msgstr ""
+msgstr "kurang dari"
 
 msgid "different from"
-msgstr ""
+msgstr "beda dari"
 
 msgid ""
 "For the %1$s, the alternative hypothesis specifies that the mean is %2$s "
 "%3$s."
 msgstr ""
+"Untuk %1$s, hipotesis alternatif menentukan bahwa rerata adalah %2$s %3$s."
 
 msgid ""
 "For the Wilcoxon test, the alternative hypothesis specifies that the median "
 "is %1$s %2$s."
 msgstr ""
+"Untuk uji Wilcoxon, hipotesis alternatif menentukan bahwa median adalah %1$s "
+"%2$s."
 
 msgid ""
 "CI could not be computed for effect size, due to low sample size and/or "
 "extreme effect size."
 msgstr ""
+"CI tidak dapat dihitung untuk ukuran efek, karena ukuran sampel rendah dan/"
+"atau ukuran efek ekstrim."
 
 msgid ""
 "Sample size too small for desired confidence level. Using %.1f%% instead"
 msgstr ""
+"Ukuran sampel terlalu kecil untuk tingkat kepercayaan yang diinginkan. "
+"Menggunakan %.1f%% sebagai gantinya"
 
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "Uji-T Sampel Terpasang"
 
 msgid "z"
-msgstr ""
+msgstr "z"
 
 msgid ""
 "For the Student t-test, location parameter is given by mean difference "
 "<em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-"
 "Lehmann estimate."
 msgstr ""
+"Untuk uji-t Student, parameter lokasi diberikan oleh <em>d</em> perbedaan "
+"rerata. Untuk uji Wilcoxon, parameter lokasi diberikan oleh estimasi Hodges-"
+"Lehmann."
 
 msgid ""
 "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the "
 "Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"Untuk uji-t Student, ukuran efek diberikan oleh <em>d</em> Cohen. Untuk uji "
+"Wilcoxon, ukuran efek diberikan oleh korelasi biserial peringkat tercocok."
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "d Cohen dikoreksikan untuk korelasi antara observasi."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa Pengukuran 1 kurang "
+"dari Pengukuran 2."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa Pengukuran 1 lebih "
+"dari Pengukuran 2."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that %1$s is less than "
 "%2$s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa %1$s kurang dari %2$s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that %1$s is greater "
 "than %2$s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa %1$s lebih dari %2$s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
 "than Measure 2. For example, %1$s is less than %2$s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa Pengukuran 1 kurang "
+"dari Pengukuran 2. Contohnya, %1$s kurang dari %2$s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is "
 "greater than Measure 2. For example, %1$s is greater than %2$s."
 msgstr ""
+"Untuk semua uji, hipotesis alternatif menentukan bahwa Pengukuran 1 lebih "
+"dari Pengukuran 2. Contohnya, %1$s lebih dari %2$s."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] ""
+msgstr[0] "Pasangan berikut digandakan: %s"
