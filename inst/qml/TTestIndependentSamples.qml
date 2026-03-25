@@ -50,8 +50,8 @@ Form
 	Group
 	{
 		title: qsTr("Tests")
-		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Good old fashioned t-test. Selected by default.");	 checked: true	}
-		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Welch's unequal variances test. Use when the group variances cannot be assumed to be equal.");					}
+		CheckBox { name: "student";	label: qsTr("Student"); info: qsTr("Student's t-test. Assumes equal variances.");	}
+		CheckBox { name: "welch";			label: qsTr("Welch"); info: qsTr("Welch's t-test. Does not assume equal variances. Selected by default.");	 checked: true	}
 		CheckBox { name: "mannWhitneyU";	label: qsTr("Mann-Whitney"); info:qsTr("Non-parametric independent t-test. Use when the model residuals are not normally distributed.");				}
 	}
 
