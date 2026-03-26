@@ -8,6 +8,7 @@ test_that("Main table results match", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
+  options$student <- TRUE
   options$welch <- TRUE
   options$mannWhitneyU  <- TRUE
   options$meanDifference <- TRUE
