@@ -1,19 +1,19 @@
 <div align="right">
 
-[![Unit Tests](https://github.com/jasp-stats/jaspFrequencies/actions/workflows/unittests.yml/badge.svg)](https://github.com/jasp-stats/jaspFrequencies/actions/workflows/unittests.yml)
-[![codecov](https://codecov.io/gh/jasp-stats/jaspFrequencies/branch/master/graph/badge.svg)](https://codecov.io/gh/jasp-stats/jaspFrequencies)
+[![Unit Tests](https://github.com/jasp-stats/jaspTTests/actions/workflows/unittests.yml/badge.svg)](https://github.com/jasp-stats/jaspTTests/actions/workflows/unittests.yml)
+[![codecov](https://codecov.io/gh/jasp-stats/jaspTTests/branch/master/graph/badge.svg)](https://codecov.io/gh/jasp-stats/jaspTTests)
 <br>
-<b>Maintainer:</b> <a href="https://github.com/JohnnyDoorn/">Johnny van Doorn</a>
+<b>Maintainer:</b> <a href="https://github.com/JohnnyDoorn/">Johnny van Doorn</a> (frequentist) and <a href="https://github.com/vandenman/">Don van den Bergh</a> (Bayesian)
 
 </div>
 
-# The Frequencies Module
+# The T-Tests Module
 
 ## Overview
 
-<img src='inst/icons/analysis-classical-crosstabs.svg' width='149' height='173' align='right'/>
+<img src='inst/icons/analysis-classical-ttest.svg' width='149' height='173' align='right'/>
 
-**JASP Frequencies module** is a core module for JASP that provides tools for analyses of count data. The Frequencies module offers a wide range of functionalities, including frequentist and Bayesian binomial tests, multinomial tests, contingency tables, A/B tests, and log-linear regression.
+**JASP T-Tests module** is a core module for JASP that provides tools for evaluating the difference between two means. The T-Tests module offers both frequentist and Bayesian versions of the independent samples, paired samples, and one sample t-tests.
 
 
 ## R Packages
@@ -22,8 +22,6 @@
 
 The functionality is served by several R packages
 
-- **abtest** — Bayesian A/B testing ([abtest on CRAN](https://cran.r-project.org/package=abtest))
 - **BayesFactor** — Bayesian hypothesis testing using Bayes factors ([BayesFactor on CRAN](https://cran.r-project.org/package=BayesFactor))
-- **conting** — Bayesian analysis of contingency tables ([conting on GitHub](https://github.com/vandenman/conting))
-- **multibridge** — Bayesian evaluation of multinomial order restrictions ([multibridge on CRAN](https://cran.r-project.org/package=multibridge))
-- **vcd** — Visualizing categorical data ([vcd on CRAN](https://cran.r-project.org/package=vcd))
+- **car** — Companion to Applied Regression ([car on CRAN](https://cran.r-project.org/package=car))
+- **logspline** — Logspline density estimation ([logspline on CRAN](https://cran.r-project.org/package=logspline))
