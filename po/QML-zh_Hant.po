@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-29 04:09+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspttests-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -969,7 +975,7 @@ msgstr ""
 
 msgctxt "TTestPairedSamples|"
 msgid "Confidence interval for the effect size."
-msgstr ""
+msgstr "效果量的信賴區間"
 
 msgctxt "TTestPairedSamples|"
 msgid ""
@@ -1323,34 +1329,32 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Assumptions"
-msgstr ""
+msgstr "假設"
 
 msgctxt "TTestOneSample|"
 msgid "Input"
-msgstr ""
+msgstr "輸入"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
 msgstr "變項"
 
 msgctxt "TTestOneSample|"
 msgid "In this box the dependent variable is selected."
-msgstr ""
+msgstr "在此選擇好依變數。"
 
 msgctxt "TTestOneSample|"
 msgid "Tests"
-msgstr ""
+msgstr "檢定"
 
 msgctxt "TTestOneSample|"
 msgid "Student"
-msgstr ""
+msgstr "Student t 檢定"
 
 msgctxt "TTestOneSample|"
 msgid "The Student's t-test. This option is selected by default."
-msgstr ""
+msgstr "預設狀態為Student's t檢定"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
 msgstr "Wilcoxon 符號等級檢定"
@@ -1363,13 +1367,12 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Z Test"
-msgstr ""
+msgstr "Z檢定"
 
 msgctxt "TTestOneSample|"
 msgid "The Z test. Use for testing whether two population means are different."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Test value:"
 msgstr "檢定值："
@@ -1383,7 +1386,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Std. deviation:"
-msgstr ""
+msgstr "標準差："
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1393,7 +1396,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計量"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
@@ -1411,7 +1414,6 @@ msgstr ""
 "平均數差除以（假設的）標準差 d；對於 Wilcoxon 符號等級檢定，位置差異估計為 "
 "Hodges–Lehmann 估計值。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr "信賴區間"
@@ -1422,7 +1424,6 @@ msgid ""
 "interval is set to 95%. This can be changed into the desired percentage."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Effect size"
 msgstr "效果量"
@@ -1437,9 +1438,8 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Confidence interval for the effect size."
-msgstr ""
+msgstr "設定效果量的信賴區間"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
 msgstr "描述性統計"
@@ -1450,7 +1450,6 @@ msgid ""
 "mean for each measure."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke 最大p-比率"
@@ -1464,12 +1463,10 @@ msgid ""
 "H0."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
 msgstr "對立假設"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ 檢定值"
@@ -1480,7 +1477,6 @@ msgid ""
 "test value. Selected by default."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
 msgstr "＞ 檢定值"
@@ -1491,7 +1487,6 @@ msgid ""
 "test value."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
 msgstr "< 檢定值"
@@ -1504,18 +1499,16 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Assumption checks"
-msgstr ""
+msgstr "前提條件的檢驗"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Normality"
 msgstr "常態性"
 
 msgctxt "TTestOneSample|"
 msgid "Shapiro-Wilk test of normality."
-msgstr ""
+msgstr "進行Shapiro-Wilk常態性檢定"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Q-Q plot residuals"
 msgstr "殘差常態 Q-Q 圖"
@@ -1527,12 +1520,10 @@ msgid ""
 "suggest deviations from normality."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "繪圖"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
 msgstr "描述性統計圖"
@@ -1543,7 +1534,6 @@ msgid ""
 "interval is set at 95% by default and can be changed."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
 msgstr "雨雲圖"
@@ -1552,7 +1542,6 @@ msgctxt "TTestOneSample|"
 msgid "Displays the individual data points, box plot, and density."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
 msgstr "橫向顯示"
@@ -1565,9 +1554,8 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr ""
+msgstr "遺漏值"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
 msgstr "成對排除法"
@@ -1580,7 +1568,6 @@ msgid ""
 "option is selected by default."
 msgstr ""
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
 msgstr "完全排除法"
