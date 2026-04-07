@@ -2305,7 +2305,8 @@
         descriptivesPlotRainCloud$setError(errors[[variable]]$message)
         next
       }
-      p <- try(.descriptivesPlotsRainCloudFill(dataset, variable, groups, variable, groups, addLines = FALSE, horiz, NULL))
+      subData <- dataset[, c(variable, groups)]
+      p <- try(.descriptivesPlotsRainCloudFill(subData, variable, groups, variable, groups, addLines = FALSE, horiz, NULL))
       if(isTryError(p))
         descriptivesPlotRainCloud$setError(.extractErrorMessage(p))
       else
