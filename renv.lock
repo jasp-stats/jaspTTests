@@ -3826,24 +3826,12 @@
     "plogr": {
       "Package": "plogr",
       "Version": "0.2.0",
-      "Source": "Repository",
-      "Title": "The 'plog' C++ Logging Library",
-      "Date": "2018-03-24",
-      "Authors@R": "c( person(\"Kirill\", \"Müller\", role = c(\"aut\", \"cre\"), email = \"krlmlr+r@mailbox.org\"), person(\"Sergey\", \"Podobry\", role = \"cph\", comment = \"Author of the bundled plog library\"))",
-      "Description": "A simple header-only logging library for C++. Add 'LinkingTo: plogr' to 'DESCRIPTION', and '#include <plogr.h>' in your C++ modules to use it.",
-      "Suggests": [
-        "Rcpp"
-      ],
-      "License": "MIT + file LICENSE",
-      "Encoding": "UTF-8",
-      "LazyData": "true",
-      "URL": "https://github.com/krlmlr/plogr#readme",
-      "BugReports": "https://github.com/krlmlr/plogr/issues",
-      "RoxygenNote": "6.0.1.9000",
-      "NeedsCompilation": "no",
-      "Author": "Kirill Müller [aut, cre], Sergey Podobry [cph] (Author of the bundled plog library)",
-      "Maintainer": "Kirill Müller <krlmlr+r@mailbox.org>",
-      "Repository": "CRAN"
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "plogr",
+      "RemoteUsername": "cran",
+      "RemoteRef": "HEAD"
     },
     "plotly": {
       "Package": "plotly",
