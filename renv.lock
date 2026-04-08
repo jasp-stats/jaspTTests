@@ -3830,8 +3830,9 @@
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "plogr",
-      "RemoteUsername": "cran",
-      "RemoteRef": "HEAD"
+      "RemoteUsername": "krlmlr",
+      "RemoteRef": "v0.2.0",
+      "RemoteSha": "bc2611c322ada9c3f356fdbb6c6a5ab9d7574614"
     },
     "plotly": {
       "Package": "plotly",
