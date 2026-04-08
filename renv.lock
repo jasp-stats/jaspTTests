@@ -347,7 +347,6 @@
         "xml2"
       ],
       "LinkingTo": [
-        "plogr (>= 0.2.0)",
         "cpp11 (>= 0.4.0)"
       ],
       "VignetteBuilder": "knitr",
@@ -3823,17 +3822,7 @@
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
-    "plogr": {
-      "Package": "plogr",
-      "Version": "0.2.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "plogr",
-      "RemoteUsername": "krlmlr",
-      "RemoteRef": "v0.2.0",
-      "RemoteSha": "bc2611c322ada9c3f356fdbb6c6a5ab9d7574614"
-    },
+
     "plotly": {
       "Package": "plotly",
       "Version": "4.12.0",
