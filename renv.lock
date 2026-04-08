@@ -309,7 +309,7 @@
     },
     "RSQLite": {
       "Package": "RSQLite",
-      "Version": "2.4.5",
+      "Version": "2.4.6",
       "Source": "Repository",
       "Title": "SQLite Interface for R",
       "Date": "2025-11-30",
