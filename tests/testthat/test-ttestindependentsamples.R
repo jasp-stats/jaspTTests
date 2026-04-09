@@ -8,6 +8,7 @@ test_that("Main table results match", {
   options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "contBinom"
+  options$student <- TRUE
   options$welch <- TRUE
   options$mannWhitneyU  <- TRUE
   options$meanDifference <- TRUE
@@ -170,6 +171,7 @@ test_that("Analysis works with unicode", {
   options$plotWidth <- 350
   options$dependent <- "Mischief"
   options$welch <- TRUE
+  options$student <- TRUE
   set.seed(1)
   dataset <- structure(list(Participant = 1:24,
                             Cloak = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),

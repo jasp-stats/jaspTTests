@@ -227,7 +227,10 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
   if (options$alternative == "greater" || options$alternative == "less") {
     directionNote <- ifelse(options$alternative == "greater", gettext("greater"), gettext("less"))
     table$addFootnote(gettextf("For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s.",
-                                                paste("<em>", levels[1], "</em>"), directionNote, paste("<em>", levels[2], "</em>")))
+                                paste("<em>", levels[1], "</em>"), directionNote, paste("<em>", levels[2], "</em>")))
+  } else {
+    table$addFootnote(gettextf("Group 1: %1$s, Group 2: %2$s.",
+                                paste("<em>", levels[1], "</em>"), paste("<em>", levels[2], "</em>")))
   }
 
   ## for each variable specified, run each test that the user wants
