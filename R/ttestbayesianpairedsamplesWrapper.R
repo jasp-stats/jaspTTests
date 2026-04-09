@@ -19,15 +19,20 @@
 
 #' Bayesian Paired Samples T-Test
 #'
-#' The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired(dependent) observations equals 0.
+#' The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired (dependent) observations equals 0.
 #' ## Assumptions
 #' - Continuous difference score.
 #' - The difference scores are a random sample from the population.
 #' - The difference scores are normally distributed in the population.
 #'
-#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
+#' \itemize{
+#'   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+#'   \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+#' }
+#' @param barPlotYAxisFixedToZero, Forces the graph to show the default x-axis at y = 0.
 #'    Defaults to \code{TRUE}.
-#' @param bfRobustnessPlot, Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
+#' @param bfRobustnessPlot, Displays the Bayes factor across different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
 #'    Defaults to \code{FALSE}.
 #' @param bfRobustnessPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.
 #'    Defaults to \code{TRUE}.
@@ -35,14 +40,14 @@
 #'    Defaults to \code{FALSE}.
 #' @param bfSequentialPlotRobustness, Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
 #'    Defaults to \code{FALSE}.
-#' @param descriptivesPlot, Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
+#' @param descriptivesPlot, Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.
 #'    Defaults to \code{FALSE}.
 #' @param differenceRaincloudPlot, Displays a raincloud plot of the differences between the two measures.
 #'    Defaults to \code{FALSE}.
-#' @param differenceRaincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.
+#' @param differenceRaincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 #'    Defaults to \code{FALSE}.
-#' @param pairs, In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents other difference scores.
-#' @param priorAndPosteriorPlot, Displays the prior and posterior distribution of the effect size after the data is seen.
+#' @param pairs, In this box the variables are selected for which the difference is computed. Multiple differences can be analysed at the same time by specifying different rows with two variables for which the difference is computed. In other words, each row represents a separate set of difference scores.
+#' @param priorAndPosteriorPlot, Displays the prior and posterior distributions of the effect size after observing the data.
 #'    Defaults to \code{FALSE}.
 #' @param priorAndPosteriorPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.
 #'    Defaults to \code{TRUE}.
@@ -50,7 +55,7 @@
 #'    Defaults to \code{FALSE}.
 TTestBayesianPairedSamples <- function(
           data = NULL,
-          version = "0.95",
+          version = "0.96.1",
           alternative = "twoSided",
           barPlot = FALSE,
           barPlotCiLevel = 0.95,

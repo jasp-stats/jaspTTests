@@ -25,7 +25,12 @@
 #' - The difference scores are a random sample from the population.
 #' - The difference scores are normally distributed in the population.
 #'
-#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
+#' \itemize{
+#'   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+#'   \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+#' }
+#' @param barPlotYAxisFixedToZero, Forces the graph to show the default x-axis at y = 0.
 #'    Defaults to \code{TRUE}.
 #' @param descriptives, Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.
 #'    Defaults to \code{FALSE}.
@@ -33,7 +38,7 @@
 #'    Defaults to \code{FALSE}.
 #' @param differenceRaincloudPlot, Displays a raincloud plot of the differences between the two measures.
 #'    Defaults to \code{FALSE}.
-#' @param differenceRaincloudPlotHorizontal, Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable and the y-axis the difference between measures.
+#' @param differenceRaincloudPlotHorizontal, Changes the orientation of the raincloud difference plot so that the x-axis represents the dependent variable.
 #'    Defaults to \code{FALSE}.
 #' @param effectSize, For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation.
 #'    Defaults to \code{FALSE}.
@@ -41,26 +46,26 @@
 #'    Defaults to \code{FALSE}.
 #' @param effectSizeCorrection, Correct the effect size for the correlation between the observed values, to prevent overestimating the effect (Dunlap et al., 1996).
 #'    Defaults to \code{FALSE}.
-#' @param meanDifference, For the Student's t-test the location parameter is given by mean difference d; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.
+#' @param meanDifference, For the Student's t-test the location parameter is given by the mean difference 'd'; for the Wilcoxon signed-rank test, the location parameter is given by the Hodges-Lehmann estimate.
 #'    Defaults to \code{FALSE}.
 #' @param meanDifferenceCi, Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 #'    Defaults to \code{FALSE}.
 #' @param normalityTest, Shapiro-Wilk test of normality.
 #'    Defaults to \code{FALSE}.
 #' @param pairs, The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score.
-#' @param qqPlot, Q-Q plot of the standardized residuals.
+#' @param qqPlot, Displays Q-Q plot of the standardized residuals. The confidence band shows the expected range of residuals under normality; points outside the band suggest deviations from normality.
 #'    Defaults to \code{FALSE}.
-#' @param raincloudPlot, Displays the individual cases (colored dots), box plots, and densities for each measure.
+#' @param raincloudPlot, Displays the individual data points (colored dots), box plots, and densities for each measure.
 #'    Defaults to \code{FALSE}.
-#' @param student, Student's paired sample t-test.This option is selected by default
+#' @param student, Student's paired sample t-test.This option is selected by default.
 #'    Defaults to \code{TRUE}.
-#' @param vovkSellke, Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.
+#' @param vovkSellke, Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.
 #'    Defaults to \code{FALSE}.
-#' @param wilcoxon, Non-parametric version of paired samples t-test. Use when data is not normally distributed.
+#' @param wilcoxon, Non-parametric version of the paired samples t-test. Use when model residuals (i.e., group differences) are not normally distributed.
 #'    Defaults to \code{FALSE}.
 TTestPairedSamples <- function(
           data = NULL,
-          version = "0.95",
+          version = "0.96.1",
           alternative = "twoSided",
           barPlot = FALSE,
           barPlotCiLevel = 0.95,
@@ -84,6 +89,8 @@ TTestPairedSamples <- function(
           plotHeight = 300,
           plotWidth = 350,
           qqPlot = FALSE,
+          qqPlotCi = FALSE,
+          qqPlotCiLevel = 0.95,
           raincloudPlot = FALSE,
           student = TRUE,
           vovkSellke = FALSE,
