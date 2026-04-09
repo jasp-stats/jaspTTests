@@ -21,3 +21,4 @@ Imports:
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs
+RoxygenNote: 7.3.2

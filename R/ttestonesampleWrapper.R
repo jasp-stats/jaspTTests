@@ -17,48 +17,55 @@
 
 # This is a generated file. Don't change it!
 
-#' Bayesian
+#' One Sample T-Test
 #'
 #' The one sample t-test allows the user to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.
 #' ## Assumptions
-#' - The dependent variable is continuous
+#' - The dependent variable is continuous.
 #' - The data are a random sample from the population.
 #' - The dependent variable is normally distributed in the population.
 #'
-#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
+#' \itemize{
+#'   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+#'   \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+#' }
+#' @param barPlotYAxisFixedToZero, Forces the graph to show the default x-axis at y = 0.
 #'    Defaults to \code{TRUE}.
 #' @param dependent, In this box the dependent variable is selected.
 #' @param descriptives, Sample size, sample mean, sample standard deviation, standard error of the mean for each measure.
 #'    Defaults to \code{FALSE}.
-#' @param descriptivesPlot, Displays the sample mean and the confidence interval. The CI is set at 95% by default and can be changed.
+#' @param descriptivesPlot, Displays the sample mean and the confidence interval. The confidence interval is set at 95% by default and can be changed.
 #'    Defaults to \code{FALSE}.
 #' @param effectSize, For the Student t-test, the effect size is given by Cohen's d; for the Wilcoxon test, the effect size is given by the matched rank biserial correlation; for the Z test, the effect size is given by Cohen's d (based on the provided population standard deviation).
 #'    Defaults to \code{FALSE}.
 #' @param effectSizeCi, Confidence interval for the effect size.
 #'    Defaults to \code{FALSE}.
-#' @param meanDifference, Average difference between the data points and the test value. For the Student's t-test and the Z test the location difference estimate is given by mean difference divided by the (hypothesized) standard deviation d; for the Wilcoxon signed-rank test, the location difference estimate is given by the Hodges-Lehmann estimate.
+#' @param meanDifference, Average difference between the data points and the test value. For the Student's t-test and the Z test the location difference estimate is given by the mean difference divided by the (hypothesized) standard deviation d; for the Wilcoxon signed-rank test, the location difference estimate is given by the Hodges-Lehmann estimate.
 #'    Defaults to \code{FALSE}.
 #' @param meanDifferenceCi, Confidence interval for the location parameter. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 #'    Defaults to \code{FALSE}.
 #' @param normalityTest, Shapiro-Wilk test of normality.
 #'    Defaults to \code{FALSE}.
-#' @param qqPlot, Q-Q plot of the standardized residuals.
+#' @param qqPlot, Displays Q-Q plot of the standardized residuals. The confidence band shows the expected range of residuals under normality; points outside the band suggest deviations from normality.
 #'    Defaults to \code{FALSE}.
-#' @param raincloudPlot, Displays the individual cases, box plot, and density.
+#' @param raincloudPlot, Displays the individual data points, box plot, and density.
 #'    Defaults to \code{FALSE}.
-#' @param raincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable
+#' @param raincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 #'    Defaults to \code{FALSE}.
-#' @param student, The student's t-test. This options is selected by default.
+#' @param student, The Student's t-test. This option is selected by default.
 #'    Defaults to \code{TRUE}.
-#' @param vovkSellke, Shows the maximum ratio of the lieklihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0
+#' @param testValue, Test value specified in the null hypothesis. The mean of the data is compared to this value. Set to 0 by default, which can be changed by the user.
+#' @param vovkSellke, Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.
 #'    Defaults to \code{FALSE}.
-#' @param wilcoxon, Wilcoxon signed-rank test. Use when data is not normally distributed.
+#' @param wilcoxon, Wilcoxon signed-rank test. Use when the model residuals are not normally distributed.
 #'    Defaults to \code{FALSE}.
-#' @param zTest, The Z test. Use for testing whether two population means are different. The test value is set to 0 by default and the standard deviation is set to 1
+#' @param zTest, The Z test. Use for testing whether two population means are different.
 #'    Defaults to \code{FALSE}.
+#' @param zTestSd, The standard deviation applied in the Z test. Set to 1 by default, which can be changed by the user.
 TTestOneSample <- function(
           data = NULL,
-          version = "0.95",
+          version = "0.96.1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
@@ -80,6 +87,8 @@ TTestOneSample <- function(
           plotHeight = 320,
           plotWidth = 480,
           qqPlot = FALSE,
+          qqPlotCi = FALSE,
+          qqPlotCiLevel = 0.95,
           raincloudPlot = FALSE,
           raincloudPlotHorizontal = FALSE,
           student = TRUE,

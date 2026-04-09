@@ -26,18 +26,23 @@
 #' - The dependent variable is normally distributed in both populations.
 #' - The population variances in the two groups are homogeneous.
 #'
-#' @param barPlotYAxisFixedToZero, Fix horizontal axis to 0: Forces the graph to show the default x-axis at y = 0
+#' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
+#' \itemize{
+#'   \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+#'   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+#' }
+#' @param barPlotYAxisFixedToZero, Forces the graph to show the default x-axis at y = 0.
 #'    Defaults to \code{TRUE}.
-#' @param bfRobustnessPlot, Displays the Bayes factor accross different values of cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
+#' @param bfRobustnessPlot, Displays the Bayes factor across different values of Cauchy prior width. The scale of the Cauchy prior is varied between 0 and 1.5, creating progressively more uninformative priors.
 #'    Defaults to \code{FALSE}.
 #' @param bfRobustnessPlotAdditionalInfo, Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting how likely the data is under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior distribution of the effect size.
 #'    Defaults to \code{TRUE}.
-#' @param bfSequentialPlot, Displays the development of the Bayes factor as the data come in using the user-defined prior.
+#' @param bfSequentialPlot, Displays the development of the Bayes factor as the data comes in using the user-defined prior.
 #'    Defaults to \code{FALSE}.
-#' @param bfSequentialPlotRobustness, Robustness check: Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
+#' @param bfSequentialPlotRobustness, Adds the results of the sequential analysis using the wide (scale=1) and ultrawide prior (scale=sqrt(2)).
 #'    Defaults to \code{FALSE}.
 #' @param dependent, In this box the dependent variable is selected.
-#' @param descriptivesPlot, Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
+#' @param descriptivesPlot, Display descriptives plots. Includes central credible interval, which shows the probability (conditional on the alternative model) that the true effect size lies within certain values. The default credible interval is set at 95% and can be changed by the user.
 #'    Defaults to \code{FALSE}.
 #' @param group, In this box the variable defining the groups is selected.
 #' @param priorAndPosteriorPlot, Displays the prior and posterior distribution of the effect size after the data is seen.
@@ -46,11 +51,11 @@
 #'    Defaults to \code{TRUE}.
 #' @param raincloudPlot, Displays the individual cases (colored dots), box plots, and densities for each group.
 #'    Defaults to \code{FALSE}.
-#' @param raincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable and the y-axis the grouping variable.
+#' @param raincloudPlotHorizontal, Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 #'    Defaults to \code{FALSE}.
 TTestBayesianIndependentSamples <- function(
           data = NULL,
-          version = "0.95",
+          version = "0.96.1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
