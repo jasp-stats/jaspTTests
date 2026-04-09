@@ -171,6 +171,7 @@ test_that("Analysis works with unicode", {
   options$plotWidth <- 350
   options$dependent <- "Mischief"
   options$welch <- TRUE
+  options$student <- TRUE
   set.seed(1)
   dataset <- structure(list(Participant = 1:24,
                             Cloak = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),
