@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspTTests 0.96.0\n"
-"POT-Creation-Date: 2026-04-04 03:25\n"
+"Project-Id-Version: jaspTTests 0.96.1\n"
+"POT-Creation-Date: 2026-04-11 03:28\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -309,6 +309,9 @@ msgid "less"
 msgstr ""
 
 msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
+msgstr ""
+
+msgid "Group 1: %1$s, Group 2: %2$s."
 msgstr ""
 
 msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"

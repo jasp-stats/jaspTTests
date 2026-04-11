@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-10-26 02:47\n"
+"POT-Creation-Date: 2026-04-11 03:28\n"
 "PO-Revision-Date: 2024-04-07 21:01+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
@@ -378,6 +378,9 @@ msgid ""
 msgstr ""
 "Pour tous les tests, l'hypothèse alternative précise que le groupe %1$s est "
 "%2$s que le groupe %3$s."
+
+msgid "Group 1: %1$s, Group 2: %2$s."
+msgstr ""
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "

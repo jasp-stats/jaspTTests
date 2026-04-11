@@ -1274,16 +1274,6 @@ msgid ""
 msgstr ""
 
 msgctxt "TTestIndependentSamples|"
-msgid "Good old fashioned t-test. Selected by default."
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
-msgid ""
-"Welch's unequal variances test. Use when the group variances cannot be "
-"assumed to be equal."
-msgstr ""
-
-msgctxt "TTestIndependentSamples|"
 msgid ""
 "Non-parametric independent t-test. Use when the model residuals are not "
 "normally distributed."
@@ -1691,3 +1681,11 @@ msgstr ""
 "uitgevoerd met enkel de waarnemingen die valide data voor alle afhankelijke "
 "variabelen bevatten. De steekproefgrootte is daardoor hetzelfde over alle "
 "toetsen."
+
+msgctxt "TTestIndependentSamples|"
+msgid "Student's t-test. Assumes equal variances."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""

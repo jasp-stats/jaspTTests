@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.18.2\n"
-"POT-Creation-Date: 2024-10-26 02:47\n"
+"POT-Creation-Date: 2026-04-11 03:28\n"
 "PO-Revision-Date: 2024-01-11 18:06+0000\n"
 "Last-Translator: fiscuteancom <vladfiscutean@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/jasp/jaspttests-"
@@ -340,6 +340,9 @@ msgstr ""
 msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
+msgstr ""
+
+msgid "Group 1: %1$s, Group 2: %2$s."
 msgstr ""
 
 msgid ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
-"POT-Creation-Date: 2024-10-26 02:47\n"
+"POT-Creation-Date: 2026-04-11 03:28\n"
 "PO-Revision-Date: 2024-05-06 03:07+0000\n"
 "Last-Translator: Cochrane <cunyikang@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -351,6 +351,9 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
 "than group %3$s."
 msgstr "对于所有检验，备择假设被定义为：组%1$s %2$s于 组%3$s."
+
+msgid "Group 1: %1$s, Group 2: %2$s."
+msgstr ""
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
