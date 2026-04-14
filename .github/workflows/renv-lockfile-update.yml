@@ -1,0 +1,16 @@
+name: Weekly renv Update
+
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: '0 4 * * 1' # Every Monday at 4:00 AM UTC
+
+jobs:
+  call-renv-updater:
+    # Points to your central repo
+    uses: jasp-stats/jasp-actions/.github/workflows/auto-update-renv-lockfile.yml@v1
+    secrets:
+      AUTO_MERGE_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
+    permissions:
+      contents: write
+      pull-requests: write
