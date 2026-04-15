@@ -2,7 +2,7 @@ Package: jaspTTests
 Type: Package
 Title: T-Tests Module for JASP
 Version: 0.96.2
-Date: 2022-10-05
+Date: 2022-10-05 
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
