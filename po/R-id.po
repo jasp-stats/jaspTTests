@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2026-04-11 03:28\n"
-"PO-Revision-Date: 2026-04-12 22:13+0000\n"
-"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
+"PO-Revision-Date: 2026-05-17 06:11+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspttests-r/id/>\n"
 "Language: id\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "Assumption Checks"
 msgstr "Pemeriksaan Asumsi"
@@ -31,7 +31,7 @@ msgstr ""
 "& Berger, 2001)."
 
 msgid "Q-Q Plots"
-msgstr "Diagram Q-Q"
+msgstr "Plot Q-Q"
 
 msgid "Please provide another variable."
 msgstr "Mohon tambahkan variabel lainnya."
@@ -46,13 +46,13 @@ msgid "Bar Plots"
 msgstr "Diagram Batang"
 
 msgid "Group"
-msgstr "Grup"
+msgstr "Kelompok"
 
 msgid "N"
 msgstr "N"
 
 msgid "Mean"
-msgstr "Rerata"
+msgstr "Rata-rata"
 
 msgid "SD"
 msgstr "SD"
@@ -61,16 +61,16 @@ msgid "SE"
 msgstr "SE"
 
 msgid "Coefficient of variation"
-msgstr "Koefisien dari variasi"
+msgstr "Koefisien variasi"
 
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Interval Kredibel"
 
 msgid "Lower"
-msgstr "Bawah"
+msgstr "Batas Bawah"
 
 msgid "Upper"
-msgstr "Atas"
+msgstr "Batas Atas"
 
 msgid "Inferential Plots"
 msgstr "Diagram Inferensial"
@@ -147,7 +147,7 @@ msgid "Effect size"
 msgstr "Ukuran efek"
 
 msgid "Raincloud Plots"
-msgstr "Diagram Raincloud"
+msgstr "Plot Raincloud"
 
 msgid "Raincloud Difference Plots"
 msgstr "Diagram Perbedaan Raincloud"
@@ -267,7 +267,7 @@ msgid "p"
 msgstr "p"
 
 msgid "Cohen's d"
-msgstr "d Cohen"
+msgstr "Cohen's d"
 
 msgid "Glass' delta"
 msgstr "Delta Glass"
