@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-05-24 07:11+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/jaspttests-"
+"qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -113,7 +119,7 @@ msgstr "Nº muestras"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -201,7 +207,7 @@ msgstr "Estadísticos Adicionales"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
@@ -277,7 +283,7 @@ msgstr "Estadísticos Adicionales"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
@@ -369,7 +375,7 @@ msgstr "Igualdad de varianzas"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -441,7 +447,7 @@ msgstr "Normalidad"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
@@ -1852,7 +1858,7 @@ msgstr ""
 
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr "Valores Ausentes"
+msgstr "Valores ausentes"
 
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
