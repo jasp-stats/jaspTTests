@@ -25,7 +25,7 @@ import "./common" as Common
 Form
 {
 	info: qsTr("The one sample t-test allows you to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.\n") +
-	"## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
+	"## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The data are a random sample from the population.\n" + "- The residuals are normally distributed."
 
 	id: form
 	property int framework:	Common.Type.Framework.Bayesian

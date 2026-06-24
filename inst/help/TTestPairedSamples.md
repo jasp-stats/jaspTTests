@@ -6,7 +6,7 @@ The paired samples t-test allows the user to estimate the effect size  and test 
 ### Assumptions
 - The difference score is continuous.
 - The difference scores are a random sample from the population.
-- The difference scores are normally distributed in the population.
+- The residuals (i.e., the difference scores) are normally distributed.
 
 ### Input 
 -------

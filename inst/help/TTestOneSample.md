@@ -6,7 +6,7 @@ The one sample t-test allows the user to estimate the effect size and test the n
 ### Assumptions
 - The dependent variable is continuous.
 - The data are a random sample from the population.
-- The dependent variable is normally distributed in the population.
+- The residuals are normally distributed.
 
 ### Input
 -------

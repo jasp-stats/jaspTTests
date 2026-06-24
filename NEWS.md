@@ -16,7 +16,8 @@
 
 # jaspTTests (development version)
 
-
+## Changed
+* Normality assumption in the help and info text now refers to the residuals being normally distributed (matching the residual-based Q-Q plots and Shapiro-Wilk test) instead of the dependent variable, across one-sample, independent-samples, and paired-samples t-tests (frequentist and Bayesian).
 
 ---
 

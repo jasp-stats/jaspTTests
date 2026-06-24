@@ -24,7 +24,7 @@ import "./common" as Common
 
 Form {
 	info: qsTr("The paired samples t-test allows you to estimate the effect size and test the null hypothesis that the population mean of the difference between paired (dependent) observations equals 0.\n") +
-	"## " + "Assumptions" + "\n" + "- Continuous difference score.\n" + "- The difference scores are a random sample from the population.\n" + "- The difference scores are normally distributed in the population."
+	"## " + "Assumptions" + "\n" + "- Continuous difference score.\n" + "- The difference scores are a random sample from the population.\n" + "- The residuals (i.e., the difference scores) are normally distributed."
 	id: form
 	property int framework:	Common.Type.Framework.Bayesian
 

@@ -28,7 +28,7 @@ Form
 		"## " + qsTr("Assumptions") + "\n" +
 		"- " + qsTr("The dependent variable is continuous.") + "\n" +
 		"- " + qsTr("The observations in both groups are a random sample from the population.") + "\n" +
-		"- " + qsTr("The dependent variable is normally distributed in each group of the independent variable.") + "\n" +
+		"- " + qsTr("The residuals are normally distributed.") + "\n" +
 		"- " + qsTr("The population variances in the two groups are homogeneous.")
 	id: form
 	property int framework:	Common.Type.Framework.Classical
