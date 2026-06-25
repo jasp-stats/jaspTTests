@@ -83,6 +83,12 @@ Form
 					childrenOnSameRow: true
 					PercentField { name: "effectSizeCiLevel"; defaultValue: 95 }
 				}
+				CheckBox
+				{
+					name: "bcaCi"; label: qsTr("Bias-corrected and accelerated bootstrap interval"); info:qsTr("Bca summary")
+					childrenOnSameRow: true
+					PercentField { name: "bcaLevel"; defaultValue: 95 }
+				}
 			}
 		}
 		CheckBox { name: "descriptives";	label: qsTr("Descriptives") ; info: qsTr("Sample size, sample mean, sample standard deviation, standard error of the mean for each group.")							}
