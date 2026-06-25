@@ -24,7 +24,7 @@ import "./common" as Common
 
 Form {
 	info: qsTr("The Bayesian independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.\n") +
-	"## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The observations in both groups are a random sample from the population.\n" + "- The dependent variable is normally distributed in both populations.\n" + "- The population variances in the two groups are homogeneous."
+	"## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The observations in both groups are a random sample from the population.\n" + "- The residuals are normally distributed.\n" + "- The population variances in the two groups are homogeneous."
 
 	id: form
 	property int framework:	Common.Type.Framework.Bayesian

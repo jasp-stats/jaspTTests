@@ -6,7 +6,7 @@ The independent samples t-test allows the user to estimate the effect size and t
 ### Assumptions
 - The dependent variable is continuous. 
 - The observations in both groups are a random sample from the population. 
-- The dependent variable is normally distributed in both populations. 
+- The residuals are normally distributed. 
 - The population variances in the two groups are homogeneous. 
 
 ### Input
