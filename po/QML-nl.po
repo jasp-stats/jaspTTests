@@ -621,12 +621,6 @@ msgstr ""
 "De data van beide groepen komen uit een aselecte steekproef uit de populatie."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr "De afhankelijke variabele is normaal verdeeld in beide populaties."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "De populatie varianties in beide groepen zijn homogeen."
 
@@ -1688,4 +1682,8 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
 msgstr ""

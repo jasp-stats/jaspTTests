@@ -619,14 +619,6 @@ msgid ""
 msgstr "Obserwacje w obu grupach to próby losowe z populacji."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"Zmienna zależna ma rozkład normalny w każdej grupie wydzielonej na podstawie "
-"zmiennej niezależnej."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "Wariancje w populacjach w obu grupach są homogeniczne."
 
@@ -1626,4 +1618,8 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
 msgstr ""

@@ -1114,13 +1114,6 @@ msgid ""
 msgstr "இரு குழுக்களிலும் உள்ள அவதானிப்புகள் மக்கள்தொகையில் இருந்து ஒரு சீரற்ற மாதிரி."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"சார்பு மாறி பொதுவாக ஒவ்வொரு தனித்தனி மாறியின் குழுவிலும் விநியோகிக்கப்படுகிறது."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "இரண்டு குழுக்களின் மக்கள்தொகை மாறுபாடுகள் ஒரே மாதிரியானவை."
 
@@ -1820,4 +1813,8 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
 msgstr ""

@@ -622,14 +622,6 @@ msgstr ""
 "Grundgesamtheit."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"Die abhängige Variable ist in jeder Gruppe der unabhängigen Variablen "
-"normalverteilt."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "Die Varianzen der Grundgesamtheiten in beiden Gruppen sind homogen."
 
@@ -1895,3 +1887,7 @@ msgid "Welch's t-test. Does not assume equal variances. Selected by default."
 msgstr ""
 "Welchscher t-Test. Nimmt nicht gleiche Varianzen an. Standardmäßig "
 "ausgewählt."
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
+msgstr ""

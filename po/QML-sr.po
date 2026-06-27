@@ -619,14 +619,6 @@ msgid ""
 msgstr "Запажања у обе групе су случајни узорак из популације."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"Зависна вааријабла је нормално распоређена у свакој групи независне "
-"варијабле."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "Варијансе популација у две групе су хомогене."
 
@@ -1844,4 +1836,8 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
 msgstr ""

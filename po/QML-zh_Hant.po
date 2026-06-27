@@ -616,12 +616,6 @@ msgid ""
 msgstr "兩組之觀測值均為來自母體之隨機樣本。"
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr "依變項在自變項之各組內呈常態分配。"
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "兩組之母體變異數同質。"
 
@@ -1674,3 +1668,7 @@ msgstr "Student t 檢定。假設變異數相等。"
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
 msgstr "Welch t 檢定。不假設變異數相等。為預設選項。"
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
+msgstr ""

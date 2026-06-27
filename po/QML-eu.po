@@ -619,14 +619,6 @@ msgid ""
 msgstr "Bi taldeetako behaketak populazioko ausazko lagin bat dira."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"Mendeko aldagaia normalki banatuta dago aldagai independentearen talde "
-"bakoitzean."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "Bi taldeetako populazio-bariantziak homogeneoak dira."
 
@@ -1841,4 +1833,8 @@ msgstr ""
 
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
+msgstr ""
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
 msgstr ""

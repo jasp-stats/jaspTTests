@@ -619,14 +619,6 @@ msgid ""
 msgstr "Observasi dalam kedua grup adalah sebuah sampel acak dari populasi."
 
 msgctxt "TTestIndependentSamples|"
-msgid ""
-"The dependent variable is normally distributed in each group of the "
-"independent variable."
-msgstr ""
-"Variabel dependen didistribusikan secara normal dalam setiap grup variabel "
-"independen."
-
-msgctxt "TTestIndependentSamples|"
 msgid "The population variances in the two groups are homogeneous."
 msgstr "Varians populasi dalam dua grup adalah homogen."
 
@@ -1854,3 +1846,7 @@ msgstr "Uji-t Student. Mengasumsikan varians sama."
 msgctxt "TTestIndependentSamples|"
 msgid "Welch's t-test. Does not assume equal variances. Selected by default."
 msgstr "Uji-t Welch. Tidak mengasumsikan varians sama. Dipilih secara bawaan."
+
+msgctxt "TTestIndependentSamples|"
+msgid "The residuals are normally distributed."
+msgstr ""
