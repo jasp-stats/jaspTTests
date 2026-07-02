@@ -9,7 +9,7 @@
       {
         "Name": "RPSM2",
         "URL": "https://packagemanager.posit.co/cran/2026-03-18"
-      },
+      },     
       {
         "Name": "CRAN",
         "URL": "https://cran.rstudio.com"
