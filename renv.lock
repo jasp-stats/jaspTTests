@@ -768,9 +768,8 @@
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
-      "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "1eb48e7e0fe9559bbd15da25f30703c7cca246bb"
-    },
+      "RemoteRepo": "jaspGraphs"
+},
     "jquerylib": {
       "Package": "jquerylib",
       "Version": "0.1.4",
