@@ -1,16 +1,16 @@
 {
   "R": {
-    "Version": "4.5.2",
+    "Version": "4.5.2", 
     "Repositories": [
       {
-        "Name": "RSPM",
-        "URL": "https://packagemanager.posit.co/cran/2026-04-22"
+        "Name": "RSPM", 
+        "URL": "https://packagemanager.posit.co/cran/2026-04-22" 
       },
-      {
-        "Name": "RPSM2",
+      {  
+        "Name": "RPSM2",   
         "URL": "https://packagemanager.posit.co/cran/2026-03-18"
-      },
-      {
+      },     
+      {   
         "Name": "CRAN",
         "URL": "https://cran.rstudio.com"
       }
@@ -768,9 +768,8 @@
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
-      "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "1eb48e7e0fe9559bbd15da25f30703c7cca246bb"
-    },
+      "RemoteRepo": "jaspGraphs"
+},
     "jquerylib": {
       "Package": "jquerylib",
       "Version": "0.1.4",
