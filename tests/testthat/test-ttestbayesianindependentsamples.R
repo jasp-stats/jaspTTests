@@ -142,6 +142,33 @@ test_that("Raincloud plot matches (horizontal)", {
   jaspTools::expect_equal_plots(testPlot, "raincloud-horizontal")
 })
 
+test_that("Raincloud plot handles list-valued axis labels", {
+  dataset <- data.frame(
+    dependent = c(1, 2, 3, 4),
+    group = factor(c("a", "a", "b", "b"))
+  )
+
+  plot <- NULL
+  expect_no_error(
+    plot <- jaspTTests:::.descriptivesPlotsRainCloudFill(
+      dataset = dataset,
+      variable = "dependent",
+      groups = "group",
+      yLabel = list("Dependent variable"),
+      xLabel = list("Group"),
+      addLines = FALSE,
+      horiz = FALSE,
+      testValue = NULL
+    )
+  )
+
+  labels <- ggplot2::get_labs(plot)
+  expect_identical(labels$x, "Group")
+  expect_identical(labels$y, "Dependent variable")
+  expect_type(labels$x, "character")
+  expect_type(labels$y, "character")
+})
+
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
 
