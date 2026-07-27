@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.11.0\n"
 "POT-Creation-Date: 2026-04-11 03:28\n"
-"PO-Revision-Date: 2026-07-09 02:01+0000\n"
-"Last-Translator: Akira Harada <momoldo@gmail.com>\n"
+"PO-Revision-Date: 2026-07-28 05:01+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/jaspttests-"
 "r/ja/>\n"
 "Language: ja\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "Assumption Checks"
 msgstr "仮定のチェック"
 
 msgid "Descriptives"
-msgstr "記述統計量"
+msgstr "記述統計"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,"
@@ -39,7 +39,7 @@ msgid "Variables %1$s and %2$s are the same!"
 msgstr "変数 %1$s と %2$s は同じです!"
 
 msgid "Descriptives Plots"
-msgstr "記述統計量プロット"
+msgstr "記述統計プロット"
 
 msgid "Bar Plots"
 msgstr "棒グラフ"
@@ -51,13 +51,13 @@ msgid "N"
 msgstr "N"
 
 msgid "Mean"
-msgstr "平均値"
+msgstr "平均"
 
 msgid "SD"
-msgstr "標準偏差"
+msgstr "SD"
 
 msgid "SE"
-msgstr "標準誤差"
+msgstr "SE"
 
 msgid "Coefficient of variation"
 msgstr "変動係数"
@@ -81,7 +81,7 @@ msgid "Bayes Factor Robustness Check"
 msgstr "ベイズファクターの頑健性チェック"
 
 msgid "Sequential Analysis"
-msgstr "逐次解析"
+msgstr "逐次分析"
 
 msgid ""
 "Bayes factor robustness check plot currently not supported for informed "
@@ -107,7 +107,7 @@ msgid "max BF%s"
 msgstr "最大 BF%s"
 
 msgid "user prior"
-msgstr "ユーザー事前分布"
+msgstr "ユーザ指定の事前分布"
 
 msgid "wide prior"
 msgstr "広い事前分布"
@@ -122,7 +122,7 @@ msgid "%1$s at r==%2$s"
 msgstr "%1$s at r==%2$s"
 
 msgid "Some Bayes factors were infinite"
-msgstr "ベイズファクターが無限大になるものがあります"
+msgstr "一部のベイズファクターが無限大になりました"
 
 msgid "Cauchy prior width"
 msgstr "コーシー事前分布の幅"
@@ -233,7 +233,7 @@ msgid "Measure 2"
 msgstr "測定2"
 
 msgid "Independent Samples T-Test"
-msgstr "独立したサンプルのt検定"
+msgstr "対応のないt検定"
 
 msgid "Mann-Whitney U test."
 msgstr "マン・ホイットニーのU検定"
@@ -272,7 +272,7 @@ msgid "Hedges' g"
 msgstr "ヘッジ(Hedges)のg"
 
 msgid "Mean Difference"
-msgstr "平均値差"
+msgstr "平均差"
 
 msgid "Hodges-Lehmann Estimate"
 msgstr "Hodges-Lehmann推定"
@@ -398,7 +398,7 @@ msgid "Sum Rank"
 msgstr "合計順位"
 
 msgid "One Sample T-Test"
-msgstr "1標本のt検定"
+msgstr "1標本t検定"
 
 msgid "Wilcoxon signed-rank test."
 msgstr "ウィルコクソンの符号付き順位検定"
@@ -479,7 +479,7 @@ msgstr ""
 "望まれた信頼水準にはサンプルサイズが小さすぎます。代わりに、%.1f%%を使います"
 
 msgid "Paired Samples T-Test"
-msgstr "対応のあるサンプルのt検定"
+msgstr "対応のあるt検定"
 
 msgid "z"
 msgstr "z"
