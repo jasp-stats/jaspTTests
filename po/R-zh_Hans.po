@@ -315,7 +315,7 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "正态性检验 (Shapiro-Wilk)"
 
 msgid "Residuals"
-msgstr ""
+msgstr "残差"
 
 msgid "W"
 msgstr "W"
@@ -353,7 +353,7 @@ msgid ""
 msgstr "对于所有检验，备择假设被定义为：组%1$s %2$s于 组%3$s."
 
 msgid "Group 1: %1$s, Group 2: %2$s."
-msgstr ""
+msgstr "组 1：%1$s，组 2：%2$s。"
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
@@ -451,10 +451,12 @@ msgid ""
 "CI could not be computed for effect size, due to low sample size and/or "
 "extreme effect size."
 msgstr ""
+"由于样本量过小和/或效应量过大，无法计算效应量的置信区间。"
 
 msgid ""
 "Sample size too small for desired confidence level. Using %.1f%% instead"
 msgstr ""
+"样本量过小，无法达到所需的置信水平。改用 %.1f%%"
 
 msgid "Paired Samples T-Test"
 msgstr "配对样本T检验"
@@ -478,7 +480,7 @@ msgstr ""
 "由匹配的秩双列相关给出。"
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "已针对观测值之间的相关对 Cohen's d 进行校正。"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "
