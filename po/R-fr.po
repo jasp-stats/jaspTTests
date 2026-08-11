@@ -240,10 +240,10 @@ msgid "Bayesian Paired Samples T-Test"
 msgstr "Test t bayésien pour échantillons appariés"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "Mesure 1"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "Mesure 2"
 
 msgid "Independent Samples T-Test"
 msgstr "Test t d'échantillons indépendants"
@@ -252,7 +252,7 @@ msgid "Mann-Whitney U test."
 msgstr "Test U Mann-Whitney."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
 msgstr "Test t de Welch."
@@ -340,7 +340,7 @@ msgid "Test of Normality (Shapiro-Wilk)"
 msgstr "Test de Normalité (Shapiro-Wilk)"
 
 msgid "Residuals"
-msgstr ""
+msgstr "Résidus"
 
 msgid "W"
 msgstr "W"
@@ -380,7 +380,7 @@ msgstr ""
 "%2$s que le groupe %3$s."
 
 msgid "Group 1: %1$s, Group 2: %2$s."
-msgstr ""
+msgstr "Groupe 1 : %1$s, Groupe 2 : %2$s."
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
@@ -413,7 +413,7 @@ msgid "Mean Rank"
 msgstr "Moyenne"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "Somme des rangs"
 
 msgid "One Sample T-Test"
 msgstr "Test t à Un Échantillon"
@@ -495,10 +495,14 @@ msgid ""
 "CI could not be computed for effect size, due to low sample size and/or "
 "extreme effect size."
 msgstr ""
+"L'IC n'a pas pu être calculé pour la taille de l'effet, en raison d'une "
+"taille d'échantillon faible et/ou d'une taille de l'effet extrême."
 
 msgid ""
 "Sample size too small for desired confidence level. Using %.1f%% instead"
 msgstr ""
+"Taille d'échantillon trop petite pour le niveau de confiance souhaité. "
+"Utilisation de %.1f%% à la place"
 
 msgid "Paired Samples T-Test"
 msgstr "Test t à deux échantillons appariés"
@@ -525,7 +529,7 @@ msgstr ""
 "corrélation rang-bisériel correspondante."
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "d de Cohen corrigé pour la corrélation entre les observations."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that Measure 1 is less "

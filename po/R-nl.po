@@ -371,7 +371,7 @@ msgstr ""
 "is dan groep %3$s."
 
 msgid "Group 1: %1$s, Group 2: %2$s."
-msgstr ""
+msgstr "Groep 1: %1$s, Groep 2: %2$s."
 
 msgid ""
 "Brown-Forsythe test is significant (p < .05), suggesting a violation of the "
