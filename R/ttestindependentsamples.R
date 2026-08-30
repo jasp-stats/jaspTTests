@@ -45,7 +45,7 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
 
   # Create table
   ttest <- createJaspTable(title = gettext("Independent Samples T-Test"))
-  ttest$dependOn(c("effectSize", "effectSizeCi", "dependent",
+  ttest$dependOn(c("bcaCi", "bcaLevel", "effectSize", "effectSizeCi", "dependent",
                    "effectSizeCiLevel", "student",
                    "meanDifference", "meanDifferenceCi",
                    "meanDifferenceCiLevel", "alternative",
@@ -151,6 +151,12 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
     title <- gettextf("%1$s%% CI for %2$s", 100 * optionsList$percentConfidenceEffSize, nameOfEffectSize)
     ttest$addColumnInfo(name = "lowerCIeffectSize", type = "number", title = gettext("Lower"), overtitle = title)
     ttest$addColumnInfo(name = "upperCIeffectSize", type = "number", title = gettext("Upper"), overtitle = title)
+  }
+
+  if (options$bcaCi) {
+    titleBoostrapCi <- gettextf("%1$s%% Bca CI for %2$s", 100 * options$bcaLevel, nameOfEffectSize)
+    ttest$addColumnInfo(name = "lowerCIBca", type = "number", title = gettext("Lower"), overtitle = titleBoostrapCi)
+    ttest$addColumnInfo(name = "upperCIBca", type = "number", title = gettext("Upper"), overtitle = titleBoostrapCi)
   }
 
   jaspResults[["ttest"]] <- ttest
@@ -282,6 +288,65 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
 }
 
 ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effSize, optionsList, options) {
+
+  # Refactored effect size and SDPooled computation
+  .effectSDPooled <- function(test, sds, ns) {
+      num <- (ns[1] - 1) * (sds[1]^2) + (ns[2] - 1) * sds[2]^2
+      if (test == "Welch") {
+        se <- sqrt(((sds[1]^2) + (sds[2]^2)) / 2)
+      }
+      else {
+        se <- sqrt(num / (ns[1] + ns[2] - 2))
+      }
+      return (se)
+    }
+
+  .effectSize <- function(ms, sds, ns, sdPooled, options) {
+      type = options$effectSizeType
+      logCorrection = "."
+      # Sources are https://en.wikipedia.org/wiki/Effect_size for now.
+      if (type == "cohen")
+        d <- as.numeric((ms[1] - ms[2]) / sdPooled)
+      else if (type == "glass")
+        d <- as.numeric((ms[1] - ms[2]) / sds[2])
+      # Should give feedback on which data is considered 2.
+      else if (type == "hedges") {
+        a <- sum(ns) - 2
+        logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
+        d <- as.numeric((ms[1] - ms[2]) / sdPooled) * exp(logCorrection) # less biased / corrected version
+      }
+      return (list(d = d, logCorrection = logCorrection))
+  }
+
+  # Extracts necessary dependencies for effect size and sdPooled from dataset
+  .effectSizeDependencies <- function(dataset, variable, options){
+    variableData <- dataset[[ variable ]]
+    groupingData <- dataset[[ options$group ]]
+
+    # These are needed
+    sds <- tapply(variableData, groupingData, sd, na.rm = TRUE)
+    ms  <- tapply(variableData, groupingData, mean, na.rm = TRUE)
+    ns  <- tapply(variableData, groupingData, function(x) length(na.omit(x)))
+
+    return (list(
+      sds = sds,
+      ms = ms,
+      ns = ns
+    ))
+
+  }
+
+  # Custom function factory for bcajack argument: function(dataset) -> effect size
+  .factoryEffectSizeFunc <- function(test, variable, options) {
+    function(x) {
+      dependencies <- .effectSizeDependencies(x, variable, options)
+      sdPooled <- .effectSDPooled(test, dependencies$sds, dependencies$ns)
+      dList <- .effectSize(dependencies$ms, dependencies$sds, dependencies$ns, sdPooled, options)
+      d <- dList$d
+      return (d)
+    }
+  }
+
   ciEffSize  <- optionsList$percentConfidenceEffSize
   ciMeanDiff <- optionsList$percentConfidenceMeanDiff
   f <- as.formula(paste(variable, "~",
@@ -290,6 +355,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   variableData <- dataset[[ variable ]]
   groupingData <- dataset[[ options$group ]]
 
+  # [Dan] These are needed to compute the pooled std for the effect size!
   sds <- tapply(variableData, groupingData, sd, na.rm = TRUE)
   ms  <- tapply(variableData, groupingData, mean, na.rm = TRUE)
   ns  <- tapply(variableData, groupingData, function(x) length(na.omit(x)))
@@ -326,24 +392,12 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     m    <- as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])
     stat <- as.numeric(r$statistic)
 
-    num <-  (ns[1] - 1) * sds[1]^2 + (ns[2] - 1) * sds[2]^2
-    sdPooled <- sqrt(num / (ns[1] + ns[2] - 2))
-    if (test == "Welch")  # Use different SE when using Welch T test!
-      sdPooled <- sqrt(((sds[1]^2) + (sds[2]^2)) / 2)
-
+    sdPooled <- .effectSDPooled(test, sds, ns)
     d <- "."
     if (optionsList$wantsEffect) {
-      # Sources are https://en.wikipedia.org/wiki/Effect_size for now.
-      if (options$effectSizeType == "cohen")
-        d <- as.numeric((ms[1] - ms[2]) / sdPooled)
-      else if (options$effectSizeType == "glass")
-        d <- as.numeric((ms[1] - ms[2]) / sds[2])
-      # Should give feedback on which data is considered 2.
-      else if (options$effectSizeType == "hedges") {
-        a <- sum(ns) - 2
-        logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
-        d <- as.numeric((ms[1] - ms[2]) / sdPooled) * exp(logCorrection) # less biased / corrected version
-      }
+      dList <- .effectSize(ms, sds, ns, sdPooled, options)
+      d <- dList$d
+      logCorrection <- dList$logCorrection # Only for hedges. If not, evaluates to "."
     }
     sed <- (as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])) / stat
 
@@ -356,8 +410,10 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     effectSizeSe <- sqrt(effectSizeVar)
 
     confIntEffSize <- c(0,0)
+    bcaCi <- c(0,0)
 
     if (optionsList$wantsConfidenceEffSize){
+
       # From MBESS package by Ken Kelley, v4.6
       dfEffSize  <-  ifelse(effSize == "glass", ns[2] - 1, df)
       alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
@@ -373,6 +429,26 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
       confIntEffSize <- sort(confIntEffSize)
     }
+    if (options$bcaCi) {
+
+      # Set seed [DELETE]
+      set.seed(42)
+
+      # Percentiles of interest either (alpha/2, 1 - alpha/2) for two sided or (-Inf, alpha) or (alpha, Inf) for one sided.
+      bcaAlpha = ifelse(direction == "two.sided", (1 - options$bcaLevel) / 2, (1 - options$bcaLevel))
+      bcaPercentiles <- c(bcaAlpha, 1 - bcaAlpha)
+
+      .bcaEffectSizeFunc <- .factoryEffectSizeFunc(test, variable, options)
+
+      bcaResults <- bcaboot::bcajack(x = dataset, B = 5000, func = .bcaEffectSizeFunc, alpha = bcaPercentiles)
+      # bcaResults$lims is always c(lower percentile, median, upper percentile)
+      bcaCi <- sort(c(bcaResults$lims[1, "bca"], bcaResults$lims[3, "bca"]))
+      if (direction == "greater")
+        bcaCi[2] <- Inf
+      else if (direction == "less")
+        bcaCi[1] <- -Inf
+    }
+
   }
   ## if the user doesn't want a Welch's t-test or Mann-Whitney,
   ## give a footnote indicating if the equality of variance
@@ -398,12 +474,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ciUp  <- r$conf.int[2]
   lowerCIeffectSize <- as.numeric(confIntEffSize[1])
   upperCIeffectSize <- as.numeric(confIntEffSize[2])
+  lowerCIBca <- as.numeric(bcaCi[1])
+  upperCIBca <- as.numeric(bcaCi[2])
 
   # this will be the results object
   row <- list(df = df, p = p, md = m, d = d,
               lowerCIlocationParameter = ciLow, upperCIlocationParameter = ciUp,
               lowerCIeffectSize = lowerCIeffectSize, upperCIeffectSize = upperCIeffectSize,
-              effectSizeSe = effectSizeSe, sed = sed)
+              effectSizeSe = effectSizeSe, sed = sed, lowerCIBca = lowerCIBca, upperCIBca = upperCIBca)
 
   row[[testStat]] <- stat
 
