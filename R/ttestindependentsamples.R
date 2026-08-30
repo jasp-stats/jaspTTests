@@ -71,6 +71,9 @@ TTestIndependentSamplesInternal <- function(jaspResults, dataset = NULL, options
     testStatName <- gettext("Statistic")
   }
 
+  if (optionsList$wantsStudents && optionsList$wantsWelchs)
+    ttest$addFootnote(gettext("Student's t-test assumes equal variances. Welch's t-test does not."))
+
   dfType <- ifelse(optionsList$wantsWelchs, "number", "integer")
 
   ttest$addColumnInfo(name = "v", title = " ", type = "string", combine = TRUE)
@@ -524,8 +527,12 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   ttestDescriptivesTable <- createJaspTable(title = gettext("Group Descriptives"), dependencies = "descriptives")
   ttestDescriptivesTable$showSpecifiedColumnsOnly <- TRUE
   ttestDescriptivesTable$position <- 4
+  groupColumnTitle <- if (options[["group"]] != "")
+    gettextf("Group (%1$s)", options[["group"]])
+  else
+    gettext("Group")
   ttestDescriptivesTable$addColumnInfo(name = "variable", type = "string",  title = "", combine = TRUE)
-  ttestDescriptivesTable$addColumnInfo(name = "group",    type = "string",  title = gettext("Group"))
+  ttestDescriptivesTable$addColumnInfo(name = "group",    type = "string",  title = groupColumnTitle)
   ttestDescriptivesTable$addColumnInfo(name = "N",        type = "integer", title = gettext("N"))
   ttestDescriptivesTable$addColumnInfo(name = "mean",     type = "number",  title = gettext("Mean"))
   ttestDescriptivesTable$addColumnInfo(name = "sd",       type = "number",  title = gettext("SD"))
@@ -730,4 +737,3 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   }
   return()
 }
-
