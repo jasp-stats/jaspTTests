@@ -1022,6 +1022,10 @@
           plot$setError(.extractErrorMessage(obj))
         } else {
           plot$plotObject <- obj
+          # Extract machine-readable context tagged by the plot function.
+          exportData <- attr(obj, "machineRead_export")
+          if (!is.null(exportData))
+            plot$export <- exportData
         }
       } else {
         if (!isFALSE(errors[[var]])) {
@@ -1102,6 +1106,10 @@
           plot$setError(.extractErrorMessage(obj))
         } else {
           plot$plotObject <- obj
+          # Extract machine-readable context tagged by the plot function.
+          exportData <- attr(obj, "machineRead_export")
+          if (!is.null(exportData))
+            plot$export <- exportData
         }
       } else {
         if (!isFALSE(errors[[var]])) {
@@ -1191,6 +1199,10 @@
           plot$setError(.extractErrorMessage(obj))
         } else {
           plot$plotObject <- obj
+          # Extract machine-readable context tagged by the plot function.
+          exportData <- attr(obj, "machineRead_export")
+          if (!is.null(exportData))
+            plot$export <- exportData
         }
       } else {
         if (!isFALSE(errors[[var]])) {
@@ -1478,6 +1490,19 @@
     xName        = gettext("Cauchy prior width"),
     hypothesis   = hypothesis,
     bfType       = bfType
+  )
+
+  # Tag machine-readable context for this plot.
+  attr(plot, "machineRead_export") <- list(
+    userPriorWidth   = r,
+    userPriorBF      = BF10user,
+    maxBF            = maxBF10,
+    maxBFPriorWidth  = maxBFrVal,
+    mediumPriorBF    = BF10m,
+    widePriorBF      = BF10w,
+    ultrawidePriorBF = BF10ultra,
+    priorWidths      = rValues,
+    bf10AcrossPriors = BF10
   )
 
   return(plot)
@@ -1921,6 +1946,17 @@
     bfType          = bftype,
     hypothesis      = hypothesis
   )
+
+  # Tag machine-readable context for this plot.
+  attr(plot, "machineRead_export") <- list(
+    priorWidth       = r,
+    finalBF          = BF,
+    bfType           = bftype,
+    bf10Sequential   = BF10,
+    ultrawidePriorBF = if (plotDifferentPriors) BF10u else NULL,
+    widePriorBF      = if (plotDifferentPriors) BF10w else NULL
+  )
+
   return(plot)
 }
 
@@ -2252,6 +2288,21 @@
     median     = median,
     xName      = bquote(paste(.(gettext("Effect size")), ~delta))
   )
+
+  # Tag machine-readable context for this plot.
+  attr(plot, "machineRead_export") <- list(
+    medianDelta  = medianPosterior,
+    ciLow        = CIlow,
+    ciHigh       = CIhigh,
+    ciLevel      = ciValue,
+    priorWidth   = r,
+    bf10         = BF10,
+    bf01         = BF01,
+    tValue       = t,
+    n1           = n1,
+    n2           = n2
+  )
+
   return(plot)
 
 }
