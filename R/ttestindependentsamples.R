@@ -604,7 +604,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     if(!is.null(subcontainer[[variable]]))
       next
     descriptivesPlot <- createJaspPlot(title = variable, width = 480, height = 320)
-    descriptivesPlot$dependOn(optionContainsValue = list(variables = variable))
+    descriptivesPlot$dependOn(optionContainsValue = list(dependent = variable))
     subcontainer[[variable]] <- descriptivesPlot
     if(ready){
       p <- try(.ttestIndependentDescriptivesPlotFill(dataset, options, variable))
@@ -678,7 +678,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       if(!is.null(subcontainer[[variable]]))
         next
       descriptivesPlotRainCloud <- createJaspPlot(title = variable, width = 480, height = 320)
-      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(variables = variable))
+      descriptivesPlotRainCloud$dependOn(optionContainsValue = list(dependent = variable))
       subcontainer[[variable]] <- descriptivesPlotRainCloud
       if(!isFALSE(errors[[variable]])) {
         descriptivesPlotRainCloud$setError(errors[[variable]]$message)
@@ -715,7 +715,7 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     if (!is.null(subcontainer[[variable]]))
       next
     descriptivesBarPlot <- createJaspPlot(title = variable, width = 480, height = 320)
-    descriptivesBarPlot$dependOn(optionContainsValue = list(variables = variable))
+    descriptivesBarPlot$dependOn(optionContainsValue = list(dependent = variable))
     subcontainer[[variable]] <- descriptivesBarPlot
     if (ready) {
       p <- try(.ttestDescriptivesBarPlotFill(dataset, options, variable))
