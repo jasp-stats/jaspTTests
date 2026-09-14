@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.96.5\n"
 "POT-Creation-Date: 2026-04-25 03:36\n"
-"PO-Revision-Date: 2026-09-14 02:33+0000\n"
+"PO-Revision-Date: 2026-09-15 04:02+0000\n"
 "Last-Translator: Sohrab Delshad <sdel4030@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/jasp/jaspttests-"
 "r/fa/>\n"
@@ -14,34 +14,37 @@ msgstr ""
 "X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "Assumption Checks"
-msgstr "بررسی پیش‌فرض‌ها"
+msgstr "بررسی مفروضات"
 
 msgid "Descriptives"
 msgstr "آماره‌های توصیفی"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"حداکثر نسبت <em>p</em> ووک-سلکه: بر اساس یک مقدار <em>p</em> دوطرفه، حداکثر "
+"شانس ممکن به نفع H%1$s در برابر H%2$s برابر با 1/(-e <em>p</em> log(<em>p</"
+"em>)) برای <em>p</em> %3$s .37 است (سلکه، بایاری و برگر، 2001)."
 
 msgid "Q-Q Plots"
-msgstr ""
+msgstr "نمودارهای Q-Q"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "لطفاً متغیر دیگری ارائه دهید."
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr ""
+msgstr "متغیرهای %1$s و %2$s یکسان هستند!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "نمودارهای توصیفی"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "نمودارهای میله‌ای"
 
 msgid "Group"
-msgstr ""
+msgstr "گروه"
 
 msgid "N"
-msgstr "N (تعداد)"
+msgstr "N"
 
 msgid "Mean"
 msgstr "میانگین"
@@ -50,13 +53,13 @@ msgid "SD"
 msgstr "انحراف معیار"
 
 msgid "SE"
-msgstr "خطای استاندارد (SE)"
+msgstr "خطای معیار"
 
 msgid "Coefficient of variation"
 msgstr "ضریب تغییرات"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "بازه باورپذیر %.0f%%"
 
 msgid "Lower"
 msgstr "پایین"
@@ -65,151 +68,164 @@ msgid "Upper"
 msgstr "بالا"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "نمودارهای استنباطی"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "پیشین و پسین"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "بررسی استواری فاکتور بیزی"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "تحلیل ترتیبی"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
+"نمودار بررسی استواری فاکتور بیزی در حال حاضر برای پیشین آگاهانه پشتیبانی "
+"نمی‌شود."
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
 msgstr ""
+"نمودار بررسی استواری تحلیل ترتیبی در حال حاضر برای پیشین آگاهانه پشتیبانی "
+"نمی‌شود."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "مقیاس r عددی یا کاراکتری انتظار می‌رفت، اما %s دریافت شد."
 
 msgid "Running robustness check %1$d / %2$d"
-msgstr ""
+msgstr "در حال اجرای بررسی استواری %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "حداکثر BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "پیشین کاربر"
 
 msgid "wide prior"
-msgstr ""
+msgstr "پیشین پهن"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "پیشین بسیار پهن"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
-msgstr ""
+msgstr "%1$s در r==%2$s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "برخی فاکتورهای بیزی بی‌نهایت بودند"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "پهنای پیشین کوشی"
 
 msgid "Running sequential analysis %1$d / %2$d"
-msgstr ""
+msgstr "در حال اجرای تحلیل ترتیبی %1$d / %2$d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "پسین"
 
 msgid "Prior"
-msgstr ""
+msgstr "پیشین"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "بازه اطمینان %s%%:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "اندازه اثر"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "نمودارهای ابر بارانی"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "نمودارهای تفاوت ابر بارانی"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "فاکتور بیزی قابل محاسبه نبود"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "فاکتور بیزی بی‌نهایت است"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "فاکتور بیزی بسیار کوچک است"
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
 msgstr ""
+"مقدار t بزرگ است. یک تقریب ساوج-دیکی برای محاسبه فاکتور بیزی استفاده شد، اما "
+"هیچ برآورد خطایی نمی‌تواند ارائه شود."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "هیچ برآورد خطایی برای پیشین‌های نرمال در دسترس نیست."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "آزمون U مان-ویتنی بیزی"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "آزمون t نمونه‌های مستقل بیزی"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
-msgstr ""
+msgstr "نتیجه بر اساس الگوریتم افزایش داده با ۵ زنجیره از %.0f تکرار است."
 
 msgid "error %%"
 msgstr "خطا %%"
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که مکان گروه <em>%1$s</em> بزرگ‌تر از "
+"مکان گروه <em>%2$s</em> است."
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که مکان گروه <em>%1$s</em> کوچک‌تر از "
+"مکان گروه <em>%2$s</em> است."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "آزمون رتبه‌بندی علامت‌دار ویلکاکسون بیزی"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "آزمون t تک‌نمونه‌ای بیزی"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که میانگین جامعه بزرگ‌تر از %s است."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که میانگین جامعه کمتر از %s است."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که میانگین جامعه با %s تفاوت دارد."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "آزمون t نمونه‌های جفتی بیزی"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "معیار ۱"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "معیار ۲"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "آزمون t نمونه‌های مستقل"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "آزمون U مان-ویتنی."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "آزمون t ولچ."
 
 msgid "t"
 msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "آزمون t استیودنت."
 
 msgid "Statistic"
 msgstr "آماره"
@@ -227,207 +243,232 @@ msgid "Cohen's d"
 msgstr "d کوهن"
 
 msgid "Glass' delta"
-msgstr "دلتا گلاس"
+msgstr "دلتای گلس"
 
 msgid "Hedges' g"
 msgstr "g هجز"
 
 msgid "Mean Difference"
-msgstr "اختلاف میانگین"
+msgstr "تفاوت میانگین"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "برآورد هاجز-لهمان"
 
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "همبستگی رتبه-دووجهی"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "پارامتر مکان"
 
 msgid "Effect Size"
-msgstr ""
+msgstr "اندازه اثر"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "آزمون t استیودنت و آزمون t ولچ"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "آزمون t استیودنت"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "آزمون t ولچ"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "تفاوت خطای معیار"
 
 msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"برای %s، پارامتر مکان با تفاوت میانگین داده می‌شود. برای آزمون مان-ویتنی، "
+"پارامتر مکان با برآورد هاجز-لهمان داده می‌شود."
 
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "بازه اطمینان %1$s%% برای %2$s"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "خطای معیار %1$s"
 
 msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
-msgstr ""
+msgstr "برای آزمون مان-ویتنی، اندازه اثر با همبستگی رتبه-دووجهی داده می‌شود."
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "برای %1$s، اندازه اثر با %2$s داده می‌شود."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "آزمون نرمال بودن (شاپیرو-ویلک)"
 
 msgid "Residuals"
-msgstr ""
+msgstr "باقی‌مانده‌ها"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "نتایج معنادار نشان‌دهنده انحراف از نرمال بودن است."
 
 msgid "Brown-Forsythe"
-msgstr "براون–فورسایت"
+msgstr "براون-فورسایت"
 
 msgid "Levene's"
-msgstr ""
+msgstr "لوین"
 
 msgid "Test of Equality of Variances (%1$s)"
-msgstr ""
+msgstr "آزمون برابری واریانس‌ها (%1$s)"
 
 msgid "F"
 msgstr "F"
 
 msgid "%s<sub>1</sub>"
-msgstr ""
+msgstr "%s<sub>1</sub>"
 
 msgid "%s<sub>2</sub>"
-msgstr ""
+msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr ""
+msgstr "بزرگ‌تر"
 
 msgid "less"
-msgstr ""
+msgstr "کمتر"
 
 msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که گروه %1$s %2$s از گروه %3$s است."
 
 msgid "Group 1: %1$s, Group 2: %2$s."
-msgstr ""
+msgstr "گروه ۱: %1$s، گروه ۲: %2$s."
 
 msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"آزمون براون-فورسایت معنادار است (p < .05)، که نشان‌دهنده نقض فرض برابری "
+"واریانس‌ها است."
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"آزمون لوین معنادار است (p < .05)، که نشان‌دهنده نقض فرض برابری واریانس‌ها است."
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
-msgstr ""
+msgstr "دلتای گلس از انحراف معیار گروه %1$s متغیر %2$s استفاده می‌کند."
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "آماره F قابل محاسبه نبود"
 
 msgid "Group Descriptives"
-msgstr ""
+msgstr "آماره‌های توصیفی گروه"
 
 msgid "Mean Rank"
-msgstr ""
+msgstr "رتبه میانگین"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "مجموع رتبه‌ها"
 
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "آزمون t تک‌نمونه‌ای"
 
 msgid "Wilcoxon signed-rank test."
-msgstr ""
+msgstr "آزمون رتبه‌بندی علامت‌دار ویلکاکسون."
 
 msgid "V"
-msgstr ""
+msgstr "V"
 
 msgid "Z test."
-msgstr ""
+msgstr "آزمون Z."
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "Location Difference"
-msgstr ""
+msgstr "تفاوت مکان"
 
 msgid "Student t-test and Z-test"
-msgstr ""
+msgstr "آزمون t استیودنت و آزمون Z"
 
 msgid "Z-test"
-msgstr ""
+msgstr "آزمون Z"
 
 msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
 msgstr ""
+"برای %s، برآورد تفاوت مکان با تفاوت میانگین نمونه <em>d</em> داده می‌شود. "
+"برای آزمون ویلکاکسون، برآورد تفاوت مکان با برآورد هاجز-لهمان داده می‌شود."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
-msgstr ""
+msgstr "برای آزمون t استیودنت، اندازه اثر با <em>d</em> کوهن داده می‌شود."
 
 msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"برای آزمون ویلکاکسون، اندازه اثر با همبستگی رتبه-دووجهی منطبق داده می‌شود."
 
 msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
 msgstr ""
+"برای آزمون Z، اندازه اثر با <em>d</em> کوهن (بر اساس انحراف معیار جامعه "
+"ارائه‌شده) داده می‌شود."
 
 msgid "greater than"
-msgstr ""
+msgstr "بزرگ‌تر از"
 
 msgid "less than"
-msgstr ""
+msgstr "کمتر از"
 
 msgid "different from"
-msgstr ""
+msgstr "متفاوت از"
 
 msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
-msgstr ""
+msgstr "برای %1$s، فرض مقابل مشخص می‌کند که میانگین %2$s %3$s است."
 
 msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
-msgstr ""
+msgstr "برای آزمون ویلکاکسون، فرض مقابل مشخص می‌کند که میانه %1$s %2$s است."
 
 msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
 msgstr ""
+"بازه اطمینان برای اندازه اثر به دلیل حجم نمونه کم و/یا اندازه اثر شدید قابل "
+"محاسبه نبود."
 
 msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
 msgstr ""
+"حجم نمونه برای سطح اطمینان مطلوب بسیار کوچک است. به جای آن از %.1f%% استفاده "
+"می‌شود."
 
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "آزمون t نمونه‌های جفتی"
 
 msgid "z"
-msgstr ""
+msgstr "z"
 
 msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"برای آزمون t استیودنت، پارامتر مکان با تفاوت میانگین <em>d</em> داده می‌شود. "
+"برای آزمون ویلکاکسون، پارامتر مکان با برآورد هاجز-لهمان داده می‌شود."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"برای آزمون t استیودنت، اندازه اثر با <em>d</em> کوهن داده می‌شود. برای آزمون "
+"ویلکاکسون، اندازه اثر با همبستگی رتبه-دووجهی منطبق داده می‌شود."
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "d کوهن اصلاح‌شده برای همبستگی بین مشاهدات."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که معیار ۱ کمتر از معیار ۲ است."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که معیار ۱ بزرگ‌تر از معیار ۲ است."
 
 msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
-msgstr ""
+msgstr "برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که %1$s کمتر از %2$s است."
 
 msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
-msgstr ""
+msgstr "برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که %1$s بزرگ‌تر از %2$s است."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که معیار ۱ کمتر از معیار ۲ است. به "
+"عنوان مثال، %1$s کمتر از %2$s است."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
 msgstr ""
+"برای همه آزمون‌ها، فرض مقابل مشخص می‌کند که معیار ۱ بزرگ‌تر از معیار ۲ است. به "
+"عنوان مثال، %1$s بزرگ‌تر از %2$s است."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "جفت‌های زیر تکراری هستند: %s"
+msgstr[1] "جفت‌های زیر تکراری هستند: %s"
