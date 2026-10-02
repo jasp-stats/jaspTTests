@@ -53,7 +53,7 @@
 #'    Defaults to \code{FALSE}.
 TTestBayesianOneSample <- function(
           data = NULL,
-          version = "0.97.1",
+          version = "1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,

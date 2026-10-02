@@ -65,7 +65,7 @@
 #' @param zTestSd, The standard deviation applied in the Z test. Set to 1 by default, which can be changed by the user.
 TTestOneSample <- function(
           data = NULL,
-          version = "0.97.1",
+          version = "1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,
