@@ -152,6 +152,28 @@ test_that("Analysis handles errors", {
   expect_true(grepl("variance", footnote$text, fixed = TRUE), label = "Shapiro-Wilk has footnote when variance check fails")
 })
 
+test_that("Shapiro-Wilk does not crash for large sample sizes", {
+  set.seed(1)
+  dataset <- data.frame(variable = rnorm(6000), group = factor(rep(c("a", "b"), each = 3000)))
+
+  options <- initTTestOptions("TTestIndependentSamples")
+  options$dependent <- "variable"
+  options$group <- "group"
+  options$normalityTest <- TRUE
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dataset, options)
+
+  normalTable <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]]
+  jaspTools::expect_equal_tables(
+    normalTable, 
+    list("FALSE", 1, "NaN", "variable", 0, "<em>Note.</em>", "Significant results suggest a deviation from normality.",
+    "W", 5, "variable", 0, "Number of observations is < 3 or > 5000 in variable",
+    "AssumptionChecks_ttestNormalTable", "FALSE", "dep", "Residuals",
+    "string", "sf:4;dp:3", "W", "W", "number", "dp:3;p:.001", "p",
+    "p", "pvalue", "complete", "Test of Normality (Shapiro-Wilk)"
+    )
+  )
+})
+
 
 test_that("Analysis works with unicode", {
 
