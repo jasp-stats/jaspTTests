@@ -6,7 +6,7 @@
 \usage{
 TTestBayesianIndependentSamples(
   data = NULL,
-  version = "0.96.1",
+  version = "0.97.1",
   formula = NULL,
   alternative = "twoSided",
   barPlot = FALSE,
@@ -58,8 +58,8 @@ TTestBayesianIndependentSamples(
 \arguments{
 \item{barPlotErrorType, }{Displays a bar plot of the sample mean(s), including error bars.
 \itemize{
-  \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+  \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 }}
 
 \item{barPlotYAxisFixedToZero, }{Forces the graph to show the default x-axis at y = 0.
@@ -101,6 +101,6 @@ The Bayesian independent samples t-test allows the user to estimate the effect s
 ## Assumptions
 - Continuous dependent variable.
 - The observations in both groups are a random sample from the population.
-- The dependent variable is normally distributed in both populations.
+- The residuals are normally distributed.
 - The population variances in the two groups are homogeneous.
 }

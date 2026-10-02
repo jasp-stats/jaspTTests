@@ -23,7 +23,7 @@
 #' ## Assumptions
 #' - Continuous dependent variable.
 #' - The data are a random sample from the population.
-#' - The dependent variable is normally distributed in the population.
+#' - The residuals are normally distributed.
 #'
 #' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
 #' \itemize{
@@ -53,7 +53,7 @@
 #'    Defaults to \code{FALSE}.
 TTestBayesianOneSample <- function(
           data = NULL,
-          version = "0.96.1",
+          version = "0.97.1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,

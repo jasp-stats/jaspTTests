@@ -23,7 +23,7 @@
 #' ## Assumptions
 #' - The difference score is continuous.
 #' - The difference scores are a random sample from the population.
-#' - The difference scores are normally distributed in the population.
+#' - The residuals (i.e., the difference scores) are normally distributed.
 #'
 #' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
 #' \itemize{
@@ -65,7 +65,7 @@
 #'    Defaults to \code{FALSE}.
 TTestPairedSamples <- function(
           data = NULL,
-          version = "0.96.1",
+          version = "0.97.1",
           alternative = "twoSided",
           barPlot = FALSE,
           barPlotCiLevel = 0.95,

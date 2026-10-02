@@ -6,7 +6,7 @@
 \usage{
 TTestIndependentSamples(
   data = NULL,
-  version = "0.96.1",
+  version = "0.97.1",
   formula = NULL,
   alternative = "twoSided",
   barPlot = FALSE,
@@ -37,16 +37,16 @@ TTestIndependentSamples(
   qqPlotCiLevel = 0.95,
   raincloudPlot = FALSE,
   raincloudPlotHorizontal = FALSE,
-  student = TRUE,
+  student = FALSE,
   vovkSellke = FALSE,
-  welch = FALSE
+  welch = TRUE
 )
 }
 \arguments{
 \item{barPlotErrorType, }{Displays a bar plot of the sample mean(s), including error bars.
 \itemize{
-  \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
   \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
+  \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
 }}
 
 \item{barPlotYAxisFixedToZero, }{Forces the graph to show the default x-axis at y = 0.
@@ -92,20 +92,20 @@ Defaults to \code{FALSE}.}
 \item{raincloudPlotHorizontal, }{Changes the orientation of the raincloud plot so that the x-axis represents the dependent variable.
 Defaults to \code{FALSE}.}
 
-\item{student, }{Good old fashioned t-test. Selected by default.
-Defaults to \code{TRUE}.}
+\item{student, }{Student's t-test. Assumes equal variances.
+Defaults to \code{FALSE}.}
 
 \item{vovkSellke, }{Shows the maximum ratio of the likelihood of the obtained p value under H1 vs the likelihood of the obtained p value under H0. For example, if the two-sided p-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this p-value is at most 2.46 times more likely to occur under H1 than under H0.
 Defaults to \code{FALSE}.}
 
-\item{welch, }{Welch's unequal variances test. Use when the group variances cannot be assumed to be equal.
-Defaults to \code{FALSE}.}
+\item{welch, }{Welch's t-test. Does not assume equal variances. Selected by default.
+Defaults to \code{TRUE}.}
 }
 \description{
 The independent samples t-test allows the user to estimate the effect size and test the null hypothesis that the population means of two independent groups are equal.
 ## Assumptions
 - The dependent variable is continuous.
 - The observations in both groups are a random sample from the population.
-- The dependent variable is normally distributed in each group of the independent variable.
+- The residuals are normally distributed.
 - The population variances in the two groups are homogeneous.
 }

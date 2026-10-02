@@ -6,7 +6,7 @@
 \usage{
 TTestBayesianOneSample(
   data = NULL,
-  version = "0.96.1",
+  version = "0.97.1",
   formula = NULL,
   alternative = "twoSided",
   barPlot = FALSE,
@@ -98,5 +98,5 @@ The one sample t-test allows you to estimate the effect size and test the null h
 ## Assumptions
 - Continuous dependent variable.
 - The data are a random sample from the population.
-- The dependent variable is normally distributed in the population.
+- The residuals are normally distributed.
 }

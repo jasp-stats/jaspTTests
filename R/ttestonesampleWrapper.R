@@ -23,7 +23,7 @@
 #' ## Assumptions
 #' - The dependent variable is continuous.
 #' - The data are a random sample from the population.
-#' - The dependent variable is normally distributed in the population.
+#' - The residuals are normally distributed.
 #'
 #' @param barPlotErrorType, Displays a bar plot of the sample mean(s), including error bars.
 #' \itemize{
@@ -65,7 +65,7 @@
 #' @param zTestSd, The standard deviation applied in the Z test. Set to 1 by default, which can be changed by the user.
 TTestOneSample <- function(
           data = NULL,
-          version = "0.96.1",
+          version = "0.97.1",
           formula = NULL,
           alternative = "twoSided",
           barPlot = FALSE,

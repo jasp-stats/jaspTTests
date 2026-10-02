@@ -6,7 +6,7 @@
 \usage{
 TTestBayesianPairedSamples(
   data = NULL,
-  version = "0.96.1",
+  version = "0.97.1",
   alternative = "twoSided",
   barPlot = FALSE,
   barPlotCiLevel = 0.95,
@@ -99,5 +99,5 @@ The paired samples t-test allows you to estimate the effect size and test the nu
 ## Assumptions
 - Continuous difference score.
 - The difference scores are a random sample from the population.
-- The difference scores are normally distributed in the population.
+- The residuals (i.e., the difference scores) are normally distributed.
 }
