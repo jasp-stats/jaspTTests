@@ -43,8 +43,8 @@ TTestOneSample(
 \arguments{
 \item{barPlotErrorType, }{Displays a bar plot of the sample mean(s), including error bars.
 \itemize{
-  \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
   \item \code{"ci"}: Coverage of the confidence intervals (Or credible intervals in case of a Bayesian analysis) in percentages. By default, the confidence interval is set to 95%. This can be changed into the desired percentage.
+  \item \code{"se"}: By selecting this option, the error bars will represent standard errors of the mean of each condition.
 }}
 
 \item{barPlotYAxisFixedToZero, }{Forces the graph to show the default x-axis at y = 0.
