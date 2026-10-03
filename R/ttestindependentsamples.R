@@ -490,10 +490,17 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
 
     errors <- .hasErrors(dataset,
                          message = 'short',
-                         type = c('observations', 'variance', 'infinity'),
+                         type = c('variance', 'infinity'),
                          all.target = variable,
-                         observations.amount = c('< 3', '> 5000'),
                          all.grouping = factor)
+
+    # shapiro.test is applied to the pooled residuals, so the sample size check must be checked across groups
+    if (identical(errors, FALSE))
+      errors <- .hasErrors(dataset,
+                           message = 'short',
+                           type = 'observations',
+                           all.target = variable,
+                           observations.amount = c('< 3', '> 5000'))
 
     if (!identical(errors, FALSE)) {
       row[["W"]] <- NaN
