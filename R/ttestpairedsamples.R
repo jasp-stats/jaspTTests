@@ -473,15 +473,17 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
                                  idvar = "id", conf.interval =  options[["descriptivesPlotCiLevel"]],
                                  na.rm = TRUE, .drop = FALSE)
 
-  p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["group"]],
-    y                      = summaryStat[["dependent"]],
-    ciLower                = summaryStat[["ciLower"]],
-    ciUpper                = summaryStat[["ciUpper"]],
-    noXLevelNames          = FALSE
-  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
+  p <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestDescriptivesPlot",
+    args = list(
+      x                      = summaryStat[["group"]],
+      y                      = summaryStat[["dependent"]],
+      ciLower                = summaryStat[["ciLower"]],
+      ciUpper                = summaryStat[["ciUpper"]],
+      noXLevelNames          = FALSE
+    )
+  )
 
-  jaspGraphs::themeJasp
   return(p)
 }
 

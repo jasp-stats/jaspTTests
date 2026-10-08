@@ -427,16 +427,19 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
     .drop         = FALSE
   )
 
-  p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["group"]],
-    y                      = summaryStat[["dependent"]],
-    ciLower                = summaryStat[["ciLower"]],
-    ciUpper                = summaryStat[["ciUpper"]],
-    group                  = summaryStat[["group"]],
-    noXLevelNames          = FALSE,
-    horizontalLine         = options[["testValue"]],
-    horizontalLineLineType = "dashed"
-  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
+  p <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestDescriptivesPlot",
+    args = list(
+      x                      = summaryStat[["group"]],
+      y                      = summaryStat[["dependent"]],
+      ciLower                = summaryStat[["ciLower"]],
+      ciUpper                = summaryStat[["ciUpper"]],
+      group                  = summaryStat[["group"]],
+      noXLevelNames          = FALSE,
+      horizontalLine         = options[["testValue"]],
+      horizontalLineLineType = "dashed"
+    )
+  )
 
   return(p)
 }

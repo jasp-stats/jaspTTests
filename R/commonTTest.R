@@ -523,6 +523,20 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   yBreaks <- pretty(range(xDens))
   xLabels <- as.character(unique(grp))
 
+  return(jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestRainCloudPlot",
+    args = list(
+      pointBoxDf = pointBoxDf, densDf = densDf, addLines = addLines,
+      horiz = horiz, testValue = testValue, xBreaks = xBreaks,
+      xLabels = xLabels, yBreaks = yBreaks, xLabel = xLabel, yLabel = yLabel
+    )
+  ))
+}
+
+.ttestRainCloudPlot <- function(pointBoxDf, densDf, addLines, horiz, testValue,
+                                xBreaks, xLabels, yBreaks, xLabel, yLabel) {
+  grp <- pointBoxDf$grp
+  n <- nrow(pointBoxDf)
   geomLine <- NULL
   if (addLines) {
     id <- numeric(n)
@@ -566,8 +580,6 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 .ttestDescriptivesBarPlotFill <- function(dataset, options, variable) {
 
-  pair <- NULL
-  test <- NULL
   errorType <- options[["barPlotErrorType"]]
   groups <- if (!is.null(options[["group"]])) options[["group"]] else NULL
 
@@ -582,7 +594,6 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
   # Creating data frames and summary data
   if (length(variable) != 1) {  # checks whether paired t-test is used
-    pair <- ggplot2::scale_x_discrete(labels = c(variable[[1]], variable[[2]]))
     data <- data.frame(id = rep(1:length(dataset[[variable[[1]]]]), 2),
                        dependent = c(dataset[[variable[[1]]]], dataset[[variable[[2]]]]),
                        group = c(rep(paste("1.", variable[[1]], sep = ""), length(dataset[[variable[[1]]]])),
@@ -608,13 +619,21 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                              .drop = FALSE,
                              errorBarType = errorType)
   }
-  ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
+  return(jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestBarPlot",
+    args = list(
+      summaryStat = summaryStat, variable = variable, groups = groups,
+      testValue = options[["testValue"]], zeroFix = options[["barPlotYAxisFixedToZero"]]
+    )
+  ))
+}
 
-  if (!is.null(options[["testValue"]])) {
-    ciPos <- c(options[["testValue"]], ciPos)
-    testValue <- data.frame(testValue = options[["testValue"]])
-    test <- ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed")
-  }
+.ttestBarPlot <- function(summaryStat, variable, groups, testValue, zeroFix) {
+  pair <- if (length(variable) != 1L) ggplot2::scale_x_discrete(labels = variable) else NULL
+  test <- if (!is.null(testValue)) {
+    ggplot2::geom_hline(data = data.frame(testValue), ggplot2::aes(yintercept = testValue), linetype = "dashed")
+  } else NULL
+  ciPos <- c(testValue, summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
 
   if (!is.null(groups)) {
     ylab <- ggplot2::ylab(unlist(variable))
@@ -623,7 +642,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     ylab <- ggplot2::ylab(NULL)
     xlab <- ggplot2::xlab(NULL)
   }
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (options[["barPlotYAxisFixedToZero"]]) c(0, ciPos) else ciPos)
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (zeroFix) c(0, ciPos) else ciPos)
   pd <- ggplot2::position_dodge(0.2)
   pd2 <- ggplot2::position_dodge2(preserve = "single")
 
@@ -660,12 +679,17 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       resid <- na.omit(resid)
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
-                                                  yName = "Standardized residuals",
-                                                  ablineColor = "darkred",
-                                                  ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE,
-                                                  ciLevel = ciLevel)
+      qqPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+        fun = "jaspGraphs::plotQQnorm",
+        args = list(
+          residuals = scale(resid),
+          yName = "Standardized residuals",
+          ablineColor = "darkred",
+          ablineOrigin = TRUE,
+          identicalAxes = TRUE,
+          ciLevel = ciLevel
+        )
+      )
     }
   } else if (type == "paired") {
     for (pair in options$pairs) {
@@ -674,12 +698,17 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       title <-  paste(pair, collapse = " - ")
       qqPlot <- createJaspPlot(title = title, width = 480, height = 320)
       container[["QQPlots"]][[title]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
-                                                  yName = "Standardized residuals",
-                                                  ablineColor = "darkred",
-                                                  ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE,
-                                                  ciLevel = ciLevel)
+      qqPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+        fun = "jaspGraphs::plotQQnorm",
+        args = list(
+          residuals = scale(resid),
+          yName = "Standardized residuals",
+          ablineColor = "darkred",
+          ablineOrigin = TRUE,
+          identicalAxes = TRUE,
+          ciLevel = ciLevel
+        )
+      )
     }
   } else if (type == "one-sample") {
     for (thisVar in options$dependent) {
@@ -687,12 +716,23 @@ gettextf <- function(fmt, ..., domain = NULL)  {
       resid <- na.omit(resid)
       qqPlot <- createJaspPlot(title = thisVar, width = 480, height = 320)
       container[["QQPlots"]][[thisVar]] <- qqPlot
-      qqPlot$plotObject <- jaspGraphs::plotQQnorm(scale(resid),
-                                                  yName = "Standardized residuals",
-                                                  ablineColor = "darkred",
-                                                  ablineOrigin = TRUE,
-                                                  identicalAxes = TRUE,
-                                                  ciLevel = ciLevel)
+      qqPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+        fun = "jaspGraphs::plotQQnorm",
+        args = list(
+          residuals = scale(resid),
+          yName = "Standardized residuals",
+          ablineColor = "darkred",
+          ablineOrigin = TRUE,
+          identicalAxes = TRUE,
+          ciLevel = ciLevel
+        )
+      )
     }
   }
+}
+
+# Match the descriptive plots' existing theme when materializing a recipe.
+.ttestDescriptivesPlot <- function(...) {
+  jaspGraphs::descriptivesPlot(...) +
+    jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 }
