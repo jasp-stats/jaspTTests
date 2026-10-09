@@ -653,16 +653,19 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
   colnames(summaryStat)[which(colnames(summaryStat) == variable)] <- "dependent"
   colnames(summaryStat)[which(colnames(summaryStat) == groups)]   <- "group"
 
-  p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["group"]],
-    y                      = summaryStat[["dependent"]],
-    ciLower                = summaryStat[["ciLower"]],
-    ciUpper                = summaryStat[["ciUpper"]],
-    group                  = summaryStat[["group"]],
-    noXLevelNames          = FALSE,
-    yName                  = variable,
-    xName                  = groups
-  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
+  p <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestDescriptivesPlot",
+    args = list(
+      x                      = summaryStat[["group"]],
+      y                      = summaryStat[["dependent"]],
+      ciLower                = summaryStat[["ciLower"]],
+      ciUpper                = summaryStat[["ciUpper"]],
+      group                  = summaryStat[["group"]],
+      noXLevelNames          = FALSE,
+      yName                  = variable,
+      xName                  = groups
+    )
+  )
 
   return(p)
 }
