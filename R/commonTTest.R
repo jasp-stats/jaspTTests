@@ -554,8 +554,8 @@ gettextf <- function(fmt, ..., domain = NULL)  {
     ggplot2::geom_boxplot(data = pointBoxDf, mapping = ggplot2::aes(x = xb, y = y, fill = grp ), outlier.shape = NA, width = 0.2, size = 1) +
     coordFlip +
     geomHline +
-    ggplot2::scale_y_continuous(name = yLabel, breaks = yBreaks, limits = range(yBreaks)) +
-    ggplot2::scale_x_continuous(name = xLabel, breaks = xBreaks, labels = xLabels) +
+    ggplot2::scale_y_continuous(name = if(is.null(yLabel)) NULL else as.character(yLabel), breaks = yBreaks, limits = range(yBreaks)) +
+    ggplot2::scale_x_continuous(name = if(is.null(xLabel)) NULL else as.character(xLabel), breaks = xBreaks, labels = xLabels) +
     ggplot2::scale_fill_brewer(palette = rainCols) +
     ggplot2::scale_color_brewer(palette = rainCols) +
     jaspGraphs::geom_rangeframe() +
