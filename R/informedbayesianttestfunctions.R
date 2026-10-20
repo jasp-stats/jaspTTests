@@ -358,12 +358,20 @@
   innerRelativeError <- 0
 
   integratePieces <- function(fun, cuts) {
-    pieces <- lapply(seq_len(length(cuts) - 1L), function(i) {
-      integrate(fun, cuts[i], cuts[i + 1L], abs.tol = 0, rel.tol = tolerance,
-                subdivisions = 1000L)
-    })
-    list(value = sum(vapply(pieces, function(x) x$value, numeric(1))),
-         abs.error = sum(vapply(pieces, function(x) x$abs.error, numeric(1))))
+    value <- abs.error <- 0
+    for (i in seq_len(length(cuts) - 1L)) {
+      # A purely relative tolerance is unattainable for subnormal tail
+      # integrals and can make QUADPACK report a divergent, positive integral.
+      # Once positive mass has been accumulated, allocate each remaining
+      # piece a small absolute error budget relative to that mass, so a
+      # negligible tail need not satisfy a separate relative error target.
+      piece <- integrate(fun, cuts[i], cuts[i + 1L],
+                         abs.tol = max(.Machine$double.xmin, tolerance * value/length(cuts)),
+                         rel.tol = tolerance, subdivisions = 1000L)
+      value <- value + piece$value
+      abs.error <- abs.error + piece$abs.error
+    }
+    list(value = value, abs.error = abs.error)
   }
 
   # Split at the concentration of Q and at the prior's location/scale, so
@@ -371,8 +379,12 @@
   qMode <- sqrt(nu/a)
   qWidth <- 1/sqrt(2*a)
   qCuts <- sort(unique(c(0, max(0, qMode - 8*qWidth), qMode, qMode + 8*qWidth, Inf)))
+  innerAbsoluteError <- (length(qCuts) - 1L) * .Machine$double.xmin
   location <- direction * prior.location
-  deltaCuts <- sort(unique(c(0, 1/(sqrt(neff)*(1 + abs(t))),
+  # The linear decay involves t*Q, not t alone. Bracket several likelihood
+  # widths before spanning a broad prior, or quadrature can miss most mass.
+  deltaWidth <- 1/(sqrt(neff)*(1 + abs(t)*qMode))
+  deltaCuts <- sort(unique(c(0, c(1, 8, 32)*deltaWidth,
                             max(0, location - 8*prior.scale), max(0, location),
                             max(0, location + 8*prior.scale), Inf)))
   integrand <- function(magnitudes) {
@@ -381,17 +393,22 @@
         exp(logQConstant + nu*log(q) - a*q^2/2 - neff*magnitude^2/2 +
               direction*t*sqrt(neff)*magnitude*q)
       }, qCuts)
+      # Separate the absolute underflow allowance from relative error:
+      # dividing a subnormal tail's error by its value is uninformative.
       if (likelihood$value > 0)
-        innerRelativeError <<- max(innerRelativeError, likelihood$abs.error/likelihood$value)
+        innerRelativeError <<- max(innerRelativeError,
+                                   (likelihood$abs.error - innerAbsoluteError)/likelihood$value)
       prior <- exp(dt((direction*magnitude - prior.location)/prior.scale,
                       df = prior.df, log = TRUE) - log(prior.scale) - logPriorMass)
       prior * likelihood$value
     }, numeric(1))
   }
   result <- integratePieces(integrand, deltaCuts)
-  # Positive weights propagate the maximum observed inner relative error.
+  # The normalized prior propagates the absolute allowance unchanged, and
+  # positive weights propagate the maximum observed inner relative error.
   # These are quadrature error estimates, not rigorous total error bounds.
-  error <- if (result$value > 0) result$abs.error/result$value + innerRelativeError else NA_real_
+  error <- if (result$value > 0)
+    (result$abs.error + innerAbsoluteError)/result$value + innerRelativeError else NA_real_
   list(bf = result$value, error = error)
 }
 
