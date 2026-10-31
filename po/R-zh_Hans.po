@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.15.0\n"
 "POT-Creation-Date: 2026-04-11 03:28\n"
-"PO-Revision-Date: 2026-07-10 05:01+0000\n"
-"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"PO-Revision-Date: 2026-10-25 12:51+0000\n"
+"Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspttests-r/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 "X-Language: zh_Hans\n"
 
 msgid "Assumption Checks"
@@ -41,7 +41,7 @@ msgid "Variables %1$s and %2$s are the same!"
 msgstr "变量 %1$s 和 %2$s 是相同的！"
 
 msgid "Descriptives Plots"
-msgstr "描述性绘图"
+msgstr "描述统计图"
 
 msgid "Bar Plots"
 msgstr "条形图"
@@ -65,19 +65,19 @@ msgid "Coefficient of variation"
 msgstr "变异系数"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%.0f%% 贝叶斯置信区间"
+msgstr "%.0f%% 可信区间"
 
 msgid "Lower"
-msgstr "下界"
+msgstr "下限"
 
 msgid "Upper"
-msgstr "上界"
+msgstr "上限"
 
 msgid "Inferential Plots"
 msgstr "推断图"
 
 msgid "Prior and Posterior"
-msgstr "先验和后验"
+msgstr "先验与后验"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "贝叶斯因子稳健性检验"
@@ -117,13 +117,13 @@ msgid "BF%s"
 msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
-msgstr "%1$s at r==%2$s"
+msgstr "%1$s（r==%2$s）"
 
 msgid "Some Bayes factors were infinite"
 msgstr "有一些贝叶斯因子是无限的"
 
 msgid "Cauchy prior width"
-msgstr "柯西先验宽度"
+msgstr "Cauchy 先验宽度"
 
 msgid "Running sequential analysis %1$d / %2$d"
 msgstr "正在进行序贯分析 %1$d / %2$d"
@@ -156,7 +156,7 @@ msgid "Bayes factor is infinite"
 msgstr "贝叶斯因子是无限的"
 
 msgid "The Bayes factor is too small"
-msgstr "贝叶斯因子太小"
+msgstr "贝叶斯因子过小"
 
 msgid ""
 "t-value is large. A Savage-Dickey approximation was used to compute the "
@@ -171,7 +171,7 @@ msgid "Bayesian Mann-Whitney U Test"
 msgstr "贝叶斯 曼惠特尼 U 检验"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr "贝叶斯独立样本T检验"
+msgstr "贝叶斯独立样本 t 检验"
 
 msgid ""
 "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
@@ -198,7 +198,7 @@ msgid "Bayesian Wilcoxon Signed-Rank Test"
 msgstr "Bayesian Wilcoxon 符号秩检验"
 
 msgid "Bayesian One Sample T-Test"
-msgstr "贝叶斯单样本T检验"
+msgstr "贝叶斯单样本 t 检验"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the population mean "
@@ -216,7 +216,7 @@ msgid ""
 msgstr "对于所有检验，备择假设指定总体均值与 %s 不同。"
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr "贝叶斯配对样本T检验"
+msgstr "贝叶斯配对样本 t 检验"
 
 msgid "Measure 1"
 msgstr "测量 1"
@@ -225,7 +225,7 @@ msgid "Measure 2"
 msgstr "测量 2"
 
 msgid "Independent Samples T-Test"
-msgstr "独立样本T检验"
+msgstr "独立样本 t 检验"
 
 msgid "Mann-Whitney U test."
 msgstr "曼-惠特尼U检验。"
@@ -249,7 +249,7 @@ msgid "Test"
 msgstr "检验"
 
 msgid "df"
-msgstr "自由度"
+msgstr "df"
 
 msgid "p"
 msgstr "p"
@@ -342,10 +342,10 @@ msgid "%s<sub>2</sub>"
 msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr "大"
+msgstr "大于"
 
 msgid "less"
-msgstr "小"
+msgstr "小于"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group %1$s is %2$s "
@@ -382,7 +382,7 @@ msgid "Sum Rank"
 msgstr "求和秩"
 
 msgid "One Sample T-Test"
-msgstr "单样本T检验"
+msgstr "单样本 t 检验"
 
 msgid "Wilcoxon signed-rank test."
 msgstr "Wilcoxon 符号秩检验。"
@@ -405,14 +405,13 @@ msgstr "t检验和Z检验"
 msgid "Z-test"
 msgstr "Z检验"
 
-#, fuzzy
 msgid ""
 "For the %s, location difference estimate is given by the sample mean "
 "difference <em>d</em>. For the Wilcoxon test, location difference estimate "
 "is given by the Hodges-Lehmann estimate."
 msgstr ""
-"对于学生 t 检验，位置参数由平均差 <em>d</em> 给出。对于 Wilcoxon 检验，效应量"
-"由 Hodges-Lehmann 估计值给出。"
+"对于 %s，位置差异估计由样本均值差 <em>d</em> 给出。对于 Wilcoxon 检验，位置差"
+"异估计由 Hodges-Lehmann 估计给出。"
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
 msgstr "对于学生 t 检验，效应量由 Cohen's <em>d</em> 给出。"
@@ -459,7 +458,7 @@ msgstr ""
 "样本量过小，无法达到所需的置信水平。改用 %.1f%%"
 
 msgid "Paired Samples T-Test"
-msgstr "配对样本T检验"
+msgstr "配对样本 t 检验"
 
 msgid "z"
 msgstr "z"
