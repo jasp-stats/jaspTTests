@@ -6,6 +6,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
+"PO-Revision-Date: 2026-10-25 12:51+0000\n"
+"Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspttests-qml/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgctxt "Description|"
 msgid "T-Tests"
@@ -21,15 +27,15 @@ msgstr "经典"
 
 msgctxt "Description|"
 msgid "Independent Samples T-Test"
-msgstr "独立样本 T 检验"
+msgstr "独立样本 t 检验"
 
 msgctxt "Description|"
 msgid "Paired Samples T-Test"
-msgstr "配对样本 T 检验"
+msgstr "配对样本 t 检验"
 
 msgctxt "Description|"
 msgid "One Sample T-Test"
-msgstr "单样本 T 检验"
+msgstr "单样本 t 检验"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -37,15 +43,15 @@ msgstr "贝叶斯"
 
 msgctxt "Description|"
 msgid "Bayesian Independent Samples T-Test"
-msgstr "贝叶斯独立样本T 检验"
+msgstr "贝叶斯独立样本 t 检验"
 
 msgctxt "Description|"
 msgid "Bayesian Paired Samples T-Test"
-msgstr "贝叶斯配对样本T检验"
+msgstr "贝叶斯配对样本 t 检验"
 
 msgctxt "Description|"
 msgid "Bayesian One Sample T-Test"
-msgstr "贝叶斯单样本 T 检验"
+msgstr "贝叶斯单样本 t 检验"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Dependent Variables"
@@ -125,7 +131,7 @@ msgstr "样本数量"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -133,11 +139,11 @@ msgstr "排除每个因变量的个案"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestBayesianIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Variables"
@@ -193,7 +199,7 @@ msgstr "≠ 检验值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "> Test value"
-msgstr "＞ 检验值"
+msgstr "> 检验值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "< Test value"
@@ -217,11 +223,11 @@ msgstr "样本数量"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases per dependent variable"
@@ -229,7 +235,7 @@ msgstr "排除每个因变量的个案"
 
 msgctxt "TTestBayesianOneSample|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Variable Pairs"
@@ -309,11 +315,11 @@ msgstr "样本数量"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases per dependent variable"
@@ -321,7 +327,7 @@ msgstr "排除每个因变量的个案"
 
 msgctxt "TTestBayesianPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Dependent Variables"
@@ -345,7 +351,7 @@ msgstr "Welch 检验"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Location parameter"
@@ -361,7 +367,7 @@ msgstr "效应量"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Cohen's d"
-msgstr "Cohen's d 检验"
+msgstr "Cohen's d"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Glass' delta"
@@ -377,7 +383,7 @@ msgstr "描述统计"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Descriptives plots"
-msgstr "描述图"
+msgstr "描述统计图"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Raincloud plots"
@@ -389,7 +395,7 @@ msgstr "水平显示"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke 最大 p 比值"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Group 1 ≠ Group 2"
@@ -417,7 +423,7 @@ msgstr "方差齐性"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases per dependent variable"
@@ -425,11 +431,11 @@ msgstr "排除每个因变量的个案"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestPairedSamples|"
 msgid "Variable Pairs"
-msgstr "变量配对"
+msgstr "变量对"
 
 msgctxt "TTestPairedSamples|"
 msgid "Tests"
@@ -445,7 +451,7 @@ msgstr "Wilcoxon 符号秩检验"
 
 msgctxt "TTestPairedSamples|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestPairedSamples|"
 msgid "Location parameter"
@@ -465,7 +471,7 @@ msgstr "描述统计"
 
 msgctxt "TTestPairedSamples|"
 msgid "Descriptives plots"
-msgstr "描述图"
+msgstr "描述统计图"
 
 msgctxt "TTestPairedSamples|"
 msgid "Raincloud plots"
@@ -481,7 +487,7 @@ msgstr "水平显示"
 
 msgctxt "TTestPairedSamples|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke 最大 p 比值"
 
 msgctxt "TTestPairedSamples|"
 msgid "Measure 1 ≠ Measure 2"
@@ -505,11 +511,11 @@ msgstr "正态性"
 
 msgctxt "TTestPairedSamples|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Brown-Forsythe"
@@ -523,7 +529,6 @@ msgctxt "BarPlots|"
 msgid "Bar plots"
 msgstr "条形图"
 
-#, fuzzy
 msgctxt "BarPlots|"
 msgid "Confidence interval"
 msgstr "置信区间"
@@ -562,7 +567,7 @@ msgstr "备择假设"
 
 msgctxt "TTestPairedSamples|"
 msgid "Exclude cases per variable"
-msgstr "按每个变量排除个案"
+msgstr "按变量排除个案"
 
 msgctxt "TTestIndependentSamples|"
 msgid "Mann-Whitney"
@@ -1403,7 +1408,6 @@ msgctxt "TTestOneSample|"
 msgid "Input"
 msgstr "输入"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Variables"
 msgstr "变量"
@@ -1412,12 +1416,10 @@ msgctxt "TTestOneSample|"
 msgid "In this box the dependent variable is selected."
 msgstr "在此框中选中因变量。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Tests"
 msgstr "检验"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Student"
 msgstr "Student 检验"
@@ -1426,7 +1428,6 @@ msgctxt "TTestOneSample|"
 msgid "The Student's t-test. This option is selected by default."
 msgstr "Student t 检验。默认选中此选项。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Wilcoxon signed-rank"
 msgstr "Wilcoxon 符号秩检验"
@@ -1445,7 +1446,6 @@ msgctxt "TTestOneSample|"
 msgid "The Z test. Use for testing whether two population means are different."
 msgstr "Z 检验。用于检验两个总体均值是否不同。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Test value:"
 msgstr "检验值："
@@ -1468,10 +1468,9 @@ msgid ""
 "be changed by the user."
 msgstr "Z 检验中应用的标准差。默认设置为 1，用户可更改。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Additional Statistics"
-msgstr "附加统计"
+msgstr "附加统计量"
 
 msgctxt "TTestOneSample|"
 msgid "Location estimate"
@@ -1489,7 +1488,6 @@ msgstr ""
 "值差除以（假定的）标准差 d 给出；对于 Wilcoxon 符号秩检验，位置差异估计由 "
 "Hodges-Lehmann 估计给出。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Confidence interval"
 msgstr "置信区间"
@@ -1501,7 +1499,6 @@ msgid ""
 msgstr ""
 "位置参数的置信区间。默认情况下，置信区间设定为 95%。可更改为所需的百分比。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Effect size"
 msgstr "效应量"
@@ -1521,7 +1518,6 @@ msgctxt "TTestOneSample|"
 msgid "Confidence interval for the effect size."
 msgstr "效应量的置信区间。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives"
 msgstr "描述统计"
@@ -1532,10 +1528,9 @@ msgid ""
 "mean for each measure."
 msgstr "每项测量的样本量、样本均值、样本标准差、均值标准误。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke 最大 p 比值"
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1549,12 +1544,10 @@ msgstr ""
 "等于 .05，则 Vovk-Sellke MPR 等于 2.46，表明该 p 值在 H1 下发生的可能性最多"
 "是 H0 下的 2.46 倍。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Alternative Hypothesis"
 msgstr "备择假设"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "≠ Test value"
 msgstr "≠ 检验值"
@@ -1565,10 +1558,9 @@ msgid ""
 "test value. Selected by default."
 msgstr "样本均值不等于检验值的双侧备择假设。默认选中。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "> Test value"
-msgstr "＞ 检验值"
+msgstr "> 检验值"
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1576,7 +1568,6 @@ msgid ""
 "test value."
 msgstr "样本均值大于检验值的单侧备择假设。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "< Test value"
 msgstr "< 检验值"
@@ -1591,7 +1582,6 @@ msgctxt "TTestOneSample|"
 msgid "Assumption checks"
 msgstr "假设检验"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Normality"
 msgstr "正态性"
@@ -1613,15 +1603,13 @@ msgstr ""
 "显示标准化残差的 Q-Q 图。置信带显示正态性下残差的预期范围；带外的点表明偏离正"
 "态。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Plots"
 msgstr "绘图"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Descriptives plots"
-msgstr "描述图"
+msgstr "描述统计图"
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1629,7 +1617,6 @@ msgid ""
 "interval is set at 95% by default and can be changed."
 msgstr "显示样本均值和置信区间。置信区间默认设置为 95%，可更改。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Raincloud plots"
 msgstr "雨云图"
@@ -1638,7 +1625,6 @@ msgctxt "TTestOneSample|"
 msgid "Displays the individual data points, box plot, and density."
 msgstr "显示各个数据点、箱线图和密度图。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Horizontal display"
 msgstr "水平显示"
@@ -1649,15 +1635,13 @@ msgid ""
 "the dependent variable."
 msgstr "更改雨云图的朝向，使 x 轴代表因变量。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Missing Values"
-msgstr "缺失值处理方式"
+msgstr "缺失值"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases per variable"
-msgstr "按每个变量排除个案"
+msgstr "按变量排除个案"
 
 msgctxt "TTestOneSample|"
 msgid ""
@@ -1669,10 +1653,9 @@ msgstr ""
 "在单个分析中进行多次 t 检验时，每次 t 检验将使用对该特定 t 检验的因变量具有有"
 "效数据的所有个案。因此各检验之间的样本量可能不同。默认选中此选项。"
 
-#, fuzzy
 msgctxt "TTestOneSample|"
 msgid "Exclude cases listwise"
-msgstr "按列表排除个案"
+msgstr "按整例排除个案"
 
 msgctxt "TTestOneSample|"
 msgid ""
