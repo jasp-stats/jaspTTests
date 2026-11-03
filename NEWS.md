@@ -16,6 +16,9 @@
 
 # jaspTTests (development version)
 
+## Fixed
+* Independent-samples t-test no longer returns NaN for the test statistic when the effect size type is Hedges' g but "Effect size" is unchecked.
+
 ## Changed
 * Normality assumption in the help and info text now refers to the residuals being normally distributed (matching the residual-based Q-Q plots and Shapiro-Wilk test) instead of the dependent variable, across one-sample, independent-samples, and paired-samples t-tests (frequentist and Bayesian).
 * Normality tests do not crash for sample sizes larger than 5000, but instead return an info message in a footnote.

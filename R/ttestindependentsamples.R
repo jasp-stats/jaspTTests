@@ -331,6 +331,14 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
     if (test == "Welch")  # Use different SE when using Welch T test!
       sdPooled <- sqrt(((sds[1]^2) + (sds[2]^2)) / 2)
 
+    # Hedges' small-sample correction; also needed for the SE of the effect size when only the effect size type
+    # is set to Hedges' g but the effect size itself is not requested.
+    logCorrection <- 0
+    if (effSize == "hedges") {
+      a <- sum(ns) - 2
+      logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
+    }
+
     d <- "."
     if (optionsList$wantsEffect) {
       # Sources are https://en.wikipedia.org/wiki/Effect_size for now.
@@ -339,16 +347,13 @@ ttestIndependentMainTableRow <- function(variable, dataset, test, testStat, effS
       else if (options$effectSizeType == "glass")
         d <- as.numeric((ms[1] - ms[2]) / sds[2])
       # Should give feedback on which data is considered 2.
-      else if (options$effectSizeType == "hedges") {
-        a <- sum(ns) - 2
-        logCorrection <- lgamma(a / 2) - (log(sqrt(a / 2)) + lgamma((a - 1) / 2))
+      else if (options$effectSizeType == "hedges")
         d <- as.numeric((ms[1] - ms[2]) / sdPooled) * exp(logCorrection) # less biased / corrected version
-      }
     }
     sed <- (as.numeric(r$estimate[1]) - as.numeric(r$estimate[2])) / stat
 
     #compute effect size SE
-    j <- ifelse(effSize == "hedges", exp(logCorrection), 1)
+    j <- exp(logCorrection)
     ni <- ifelse(effSize == "glass", ns[2], ns)
 
     effectSizeVar <- as.numeric(j)^2 * (sum(ns)/prod(ns) + (as.numeric(d)^2 / (2*sum(ni))))
