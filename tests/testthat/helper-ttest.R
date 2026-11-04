@@ -1,3 +1,8 @@
+# jaspBase 0.20.5 no longer switches to the legacy RNGkind(sample.kind = "Rounding") during an
+# analysis, so JASP now samples with R's default. Older jaspBase versions (e.g. the one in
+# renv.lock) still do it unless this option is FALSE, so set it to get the same results with both.
+options(jaspLegacyRngKind = FALSE)
+
 initTTestOptions <- function(analysis = c("TTestIndependentSamples", "TTestPairedSamples", "TTestOneSample",
                                           "TTestBayesianIndependentSamples", "TTestBayesianPairedSamples", "TTestBayesianOneSample")) {
   options <- jaspTools::analysisOptions(analysis)
