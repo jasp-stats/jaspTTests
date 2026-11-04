@@ -111,33 +111,33 @@ test_that("Raincloud plot matches (horizontal)", {
 
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestIndependentSamples")
+  dat <- errorCheckData()
+  options$group <- "group"
 
-  options$dependent <- "debInf"
-  options$group <- "contBinom"
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
+  options$dependent <- "withInf"
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dat, options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$dependent <- "debSame"
-  options$group <- "contBinom"
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
+  options$dependent <- "perGroup"
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dat, options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$dependent <- "debMiss99"
-  options$group <- "contBinom"
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
+  options$dependent <- "onePerGroup"
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dat, options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 
+  # a grouping variable with 1 level is rejected by the QML
+  options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "debSame"
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", "test.csv", options)
-  status <- results[["status"]]
-  expect_identical(status, "validationError", label = "1-level factor check")
+  expectRejectedByQml("TTestIndependentSamples", options, pattern = "Minimum number of levels")
 
   # per https://github.com/jasp-stats/jaspTTests/pull/301
   # shapiro test fails gracefully
+  options <- initTTestOptions("TTestIndependentSamples")
   options$dependent <- c("drp", "g")
   options$group <- "group"
   options$normalityTest <- TRUE

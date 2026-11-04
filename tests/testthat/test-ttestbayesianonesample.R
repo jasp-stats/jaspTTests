@@ -152,33 +152,32 @@ test_that("Wilcoxon results match", {
   options$effectSizeStandardized <- "default"
   options$defaultStandardizedEffectSize <- "cauchy"
   options$priorWidth <- 0.707
-  options$wilcoxonSamples <- 1e1
+  options$wilcoxonSamples <- 100 # the QML's minimum
   options$testValue <- 1
   options$test <- "wilcoxon"
   options$alternative <- "greater"
   results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
-  jaspTools::expect_equal_tables(table, list(0.0451492401700035, 351, 1.06493226208061, "contNormal", 42.1408097943746,
-                                             3339, 0.987641807418307, "contExpon")
+  jaspTools::expect_equal_tables(table, list(0.0496715739967757, 351, 1.13108146904465, "contNormal", 53.6333322903677,
+                                             3339, 1.00243133242785, "contExpon")
   )
 })
 
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianOneSample")
+  dat <- errorCheckData()
 
-  options$dependent <- "debInf"
-
-  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
+  options$dependent <- "withInf"
+  results <- jaspTools::runAnalysis("TTestBayesianOneSample", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
+  expect_identical(results[["status"]], "complete")
 
+  # a variable without variance, or with fewer than 2 observations, has fewer than 2 numeric
+  # values, which the QML already rejects
   options$dependent <- "debSame"
-  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
-  notes <- unlist(getTtestTable(results)[["footnotes"]])
-  expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
+  expectRejectedByQml("TTestBayesianOneSample", options)
 
   options$dependent <- "debMiss99"
-  results <- jaspTools::runAnalysis("TTestBayesianOneSample", "test.csv", options)
-  notes <- unlist(getTtestTable(results)[["footnotes"]])
-  expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
+  expectRejectedByQml("TTestBayesianOneSample", options)
 })

@@ -144,26 +144,29 @@ test_that("Raincloud plot matches (horizontal)", {
 
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianIndependentSamples")
+  dat <- errorCheckData()
+  options$group <- "group"
 
-  options$dependent <- c("debInf", "debSame")
-  options$group <- "contBinom"
-  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  options$dependent <- "withInf"
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
-  expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "variance check")
-  expect_null(results[["results"]][["errorMessage"]])
 
-  options$dependent <- "debMiss99"
-  options$group <- "contBinom"
-  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
+  options$dependent <- "perGroup"
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
+  notes <- unlist(getTtestTable(results)[["footnotes"]])
+  expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
+
+  options$dependent <- "onePerGroup"
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 
+  # a grouping variable with 1 level is rejected by the QML
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
   options$dependent <- "contNormal"
   options$group <- "debSame"
-  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", "test.csv", options)
-  msg <- results[["results"]][["errorMessage"]]
-  expect_true(any(grepl("levels", msg, ignore.case=TRUE)), label = "1-level factor check")
+  expectRejectedByQml("TTestBayesianIndependentSamples", options, pattern = "Minimum number of levels")
 })
 
 test_that("Analysis handles integer overflow", {
