@@ -216,10 +216,17 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
       if (identical(errors, FALSE)) {
         rowResults <- try(.ttestOneSampleComputeMainTableRow(variable, dataset, test, testStat, optionsList, options))
 
-          if (!isTryError(rowResults))
-            row <- c(row, rowResults)
-          else
-            errorMessage <- .extractErrorMessage(rowResults)
+        if (!isTryError(rowResults)) {
+          row <- c(row, rowResults)
+
+          if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["upperCIeffectSize"]]))))
+            table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
+
+          if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
+            table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
+        } else {
+          errorMessage <- .extractErrorMessage(rowResults)
+        }
 
       } else {
         errorMessage <- errors$message
@@ -229,11 +236,6 @@ TTestOneSampleInternal <- function(jaspResults, dataset = NULL, options, ...) {
         row[[testStat]] <- NaN
         table$addFootnote(errorMessage, colNames = testStat, rowNames = rowName)
       }
-      if (all(is.na(c(rowResults[["lowerCIeffectSize"]], rowResults[["lowerCIeffectSize"]]))))
-        table$addFootnote(gettext("CI could not be computed for effect size, due to low sample size and/or extreme effect size."))
-
-      if (!(rowResults[["usedConfLevel"]] == options[["meanDifferenceCiLevel"]]))
-        table$addFootnote(gettextf("Sample size too small for desired confidence level. Using %.1f%% instead", rowResults[["usedConfLevel"]]*100))
       table$addRows(row, rowNames = rowName)
     }
   }
