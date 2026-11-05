@@ -134,20 +134,20 @@ test_that("Raincloud difference plot matches (horizontal)", {
 
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestBayesianPairedSamples")
+  dat <- errorCheckData()
 
-  options$pairs <- list(c("contNormal", "debInf"))
-
-  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  options$pairs <- list(c("x", "withInf"))
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
 
-  options$pairs <- list(c("contNormal", "debSame"))
-  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  options$pairs <- list(c("x", "xPlus1"))
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
-  expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
+  expect_true(any(grepl("constant", notes, ignore.case=TRUE)), label = "No variance check")
 
-  options$pairs <- list(c("contNormal", "debMiss99"))
-  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
+  options$pairs <- list(c("x", "onePair"))
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dat, options)
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 })

@@ -20,6 +20,9 @@
 * Normality assumption in the help and info text now refers to the residuals being normally distributed (matching the residual-based Q-Q plots and Shapiro-Wilk test) instead of the dependent variable, across one-sample, independent-samples, and paired-samples t-tests (frequentist and Bayesian).
 * Normality tests do not crash for sample sizes larger than 5000, but instead return an info message in a footnote.
 
+## Fixed
+* The one-sample t-test no longer stops with "object 'rowResults' not found" when a variable contains infinite values; the table shows the footnote about it instead.
+
 ---
 
 # jaspModuleTemplate 0.2.0

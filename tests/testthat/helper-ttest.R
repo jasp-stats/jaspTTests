@@ -1,3 +1,8 @@
+# jaspBase 0.20.5 no longer switches to the legacy RNGkind(sample.kind = "Rounding") during an
+# analysis, so JASP now samples with R's default. Older jaspBase versions (e.g. the one in
+# renv.lock) still do it unless this option is FALSE, so set it to get the same results with both.
+options(jaspLegacyRngKind = FALSE)
+
 initTTestOptions <- function(analysis = c("TTestIndependentSamples", "TTestPairedSamples", "TTestOneSample",
                                           "TTestBayesianIndependentSamples", "TTestBayesianPairedSamples", "TTestBayesianOneSample")) {
   options <- jaspTools::analysisOptions(analysis)
@@ -21,4 +26,24 @@ addCommonQMLoptions <- function(options) {
     options,
     jaspTools:::readQML(file.path(root, "BarPlots.qml"))
   )
+}
+
+# Data for the "Analysis handles errors" tests. jaspSyntax checks the options against the QML
+# before the analysis runs, as JASP does, so a variable with fewer than 2 numeric values
+# (debInf, debSame, debMiss99 in test.csv) never reaches the R checks anymore. These columns
+# pass the QML checks and still trigger the R ones.
+errorCheckData <- function() {
+  data.frame(
+    group       = rep(c("a", "b"), each = 10),
+    withInf     = c(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, Inf),
+    perGroup    = rep(c(1, 2), each = 10),           # no variance within either group
+    onePerGroup = c(1, rep(NA, 9), 2, rep(NA, 9)),   # one observation in each group
+    x           = c(NA, 2:20),
+    xPlus1      = c(NA, 2:20) + 1,                   # x - xPlus1 has no variance
+    onePair     = c(5, 7, rep(NA, 18))               # only one complete pair with x
+  )
+}
+
+expectRejectedByQml <- function(name, options, dataset = "test.csv", pattern = "Minimum number of") {
+  testthat::expect_error(jaspTools::runAnalysis(name, dataset, options), pattern)
 }

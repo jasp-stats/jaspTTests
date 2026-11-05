@@ -156,19 +156,19 @@ test_that("Raincloud plot matches (missing data)", {
 
 test_that("Analysis handles errors", {
   options <- initTTestOptions("TTestOneSample")
+  dat <- errorCheckData()
 
-  options$dependent <- "debInf"
-  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
+  options$dependent <- "withInf"
+  results <- jaspTools::runAnalysis("TTestOneSample", dat, options)
   notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
   expect_true(any(grepl("infinity", notes, ignore.case=TRUE)), label = "Inf check")
+  expect_identical(results[["status"]], "complete")
 
+  # a variable without variance, or with fewer than 2 observations, has fewer than 2 numeric
+  # values, which the QML already rejects
   options$dependent <- "debSame"
-  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
-  notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
-  expect_true(any(grepl("variance", notes, ignore.case=TRUE)), label = "No variance check")
+  expectRejectedByQml("TTestOneSample", options)
 
   options$dependent <- "debMiss99"
-  results <- jaspTools::runAnalysis("TTestOneSample", "test.csv", options)
-  notes <- unlist(results[["results"]][["ttest"]][["footnotes"]])
-  expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
+  expectRejectedByQml("TTestOneSample", options)
 })
