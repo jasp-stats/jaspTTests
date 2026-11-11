@@ -2,431 +2,479 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspTTests 0.96.5\n"
 "POT-Creation-Date: 2026-04-25 03:36\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-11-11 18:40+0000\n"
+"Last-Translator: Fahad Mahfouz Al-Subhi "
+"<fahadalsubhi@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/jasp/jaspttests-r/"
+"ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2026.11.2.dev0\n"
 
 msgid "Assumption Checks"
-msgstr ""
+msgstr "فحص الافتراضات"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "الإحصاءات الوصفية"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based on a two-sided <em>p</em>-value,the maximum possible odds in favor of H%1$s over H%2$s equals 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"أقصى نسبة <em>p</em> لفوفك–سيلكي: استنادًا إلى قيمة <em>p</em> ثنائية الطرف، "
+"تساوي أقصى أرجحية ممكنة لصالح H%1$s مقابل H%2$s الصيغة 1/(-e <em>p</em> log"
+"(<em>p</em>)) عندما تكون <em>p</em> %3$s .37 (Sellke, Bayarri, & Berger, "
+"2001)."
 
 msgid "Q-Q Plots"
-msgstr ""
+msgstr "مخططات Q–Q"
 
 msgid "Please provide another variable."
-msgstr ""
+msgstr "الرجاء تقديم متغير آخر."
 
 msgid "Variables %1$s and %2$s are the same!"
-msgstr ""
+msgstr "المتغيران %1$s و%2$s هما المتغير نفسه!"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "المخططات الوصفية"
 
 msgid "Bar Plots"
-msgstr ""
+msgstr "مخططات الأعمدة"
 
 msgid "Group"
-msgstr ""
+msgstr "المجموعة"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "Mean"
-msgstr ""
+msgstr "المتوسط"
 
 msgid "SD"
-msgstr ""
+msgstr "الانحراف المعياري (SD)"
 
 msgid "SE"
-msgstr ""
+msgstr "الخطأ المعياري (SE)"
 
 msgid "Coefficient of variation"
-msgstr ""
+msgstr "معامل الاختلاف"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "فترة المصداقية %.0f%%"
 
 msgid "Lower"
-msgstr ""
+msgstr "الحد الأدنى"
 
 msgid "Upper"
-msgstr ""
+msgstr "الحد الأعلى"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "المخططات الاستدلالية"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "التوزيعان القبلي والبعدي"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "فحص حصانة عامل بايز"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "التحليل التتابعي"
 
 msgid "Bayes factor robustness check plot currently not supported for informed prior."
 msgstr ""
+"رسم فحص متانة عامل بايز غير مدعوم حاليًا للتوزيع القبلي المبني على معلومات."
 
 msgid "Sequential analysis robustness check plot currently not supported for informed prior."
 msgstr ""
+"مخطط التحقق من متانة التحليل المتتابع غير مدعوم حاليًا للتوزيع القبلي "
+"المستنير."
 
 msgid "Expected numeric or character rscale but got %s."
-msgstr ""
+msgstr "كان rscale عدديًا أو نصيًا متوقعًا، لكن القيمة المقدمة %s."
 
 msgid "Running robustness check %1$d / %2$d"
-msgstr ""
+msgstr "جارٍ إجراء فحص المتانة %1$d / %2$d"
 
 msgid "max BF%s"
-msgstr ""
+msgstr "الحد الأقصى لعامل بايز BF%s"
 
 msgid "user prior"
-msgstr ""
+msgstr "التوزيع القبلي للمستخدم"
 
 msgid "wide prior"
-msgstr ""
+msgstr "توزيع قبلي واسع"
 
 msgid "ultrawide prior"
-msgstr ""
+msgstr "توزيع قبلي بالغ الاتساع"
 
 msgid "BF%s"
-msgstr ""
+msgstr "BF%s"
 
 msgid "%1$s at r==%2$s"
-msgstr ""
+msgstr "%1$s عند r==%2$s"
 
 msgid "Some Bayes factors were infinite"
-msgstr ""
+msgstr "كانت بعض عوامل بايز لا نهائية"
 
 msgid "Cauchy prior width"
-msgstr ""
+msgstr "عرض توزيع كوشي القبلي"
 
 msgid "Running sequential analysis %1$d / %2$d"
-msgstr ""
+msgstr "جارٍ إجراء التحليل المتتابع %1$d / %2$d"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior"
-msgstr ""
+msgstr "بعدي"
 
 msgid "Prior"
-msgstr ""
+msgstr "قبلي"
 
 msgid "%s%% CI:"
-msgstr ""
+msgstr "فترة المصداقية %s%%:"
 
 msgid "Effect size"
-msgstr ""
+msgstr "حجم الأثر"
 
 msgid "Raincloud Plots"
-msgstr ""
+msgstr "مخططات سحابة المطر"
 
 msgid "Raincloud Difference Plots"
-msgstr ""
+msgstr "رسوم سحابة المطر للفروق"
 
 msgid "Bayes factor could not be calculated"
-msgstr ""
+msgstr "تعذر حساب عامل بايز"
 
 msgid "Bayes factor is infinite"
-msgstr ""
+msgstr "عامل بايز لانهائي"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "عامل بايز صغير جداً"
 
 msgid "t-value is large. A Savage-Dickey approximation was used to compute the Bayes factor but no error estimate can be given."
 msgstr ""
+"قيمة t كبيرة. استُخدم تقريب سافاج–ديكي لحساب عامل بايز، لكن لا يمكن تقديم "
+"تقدير للخطأ."
 
 msgid "No error estimate is available for normal priors."
-msgstr ""
+msgstr "لا يتوفر تقدير للخطأ عند استخدام توزيعات قبلية طبيعية."
 
 msgid "Bayesian Mann-Whitney U Test"
-msgstr ""
+msgstr "اختبار U البايزي لمان–ويتني"
 
 msgid "Bayesian Independent Samples T-Test"
-msgstr ""
+msgstr "اختبار t البايزي لعينتين مستقلتين"
 
 msgid "Result based on data augmentation algorithm with 5 chains of %.0f iterations."
 msgstr ""
+"تستند النتيجة إلى خوارزمية تعزيز البيانات باستخدام 5 سلاسل، كل منها %.0f "
+"تكرارًا."
 
 msgid "error %%"
-msgstr ""
+msgstr "الخطأ %%"
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is greater than the location of group <em>%2$s</em>."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن معلمة موقع المجموعة <em>%1$s</"
+"em> أكبر من معلمة موقع المجموعة <em>%2$s</em>."
 
 msgid "For all tests, the alternative hypothesis specifies that the location of group <em>%1$s</em> is smaller than the location of group <em>%2$s</em>."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن معلمة موقع المجموعة <em>%1$s</"
+"em> أصغر من معلمة موقع المجموعة <em>%2$s</em>."
 
 msgid "Bayesian Wilcoxon Signed-Rank Test"
-msgstr ""
+msgstr "اختبار الرتب الموقعة البايزي لويلكوكسون"
 
 msgid "Bayesian One Sample T-Test"
-msgstr ""
+msgstr "اختبار t البايزي لعينة واحدة"
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is greater than %s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن متوسط المجتمع أكبر من %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean is less than %s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن متوسط المجتمع أصغر من %s."
 
 msgid "For all tests, the alternative hypothesis specifies that the population mean differs from %s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن متوسط المجتمع يختلف عن %s."
 
 msgid "Bayesian Paired Samples T-Test"
-msgstr ""
+msgstr "اختبار t البايزي لعينتين مرتبطتين"
 
 msgid "Measure 1"
-msgstr ""
+msgstr "القياس 1"
 
 msgid "Measure 2"
-msgstr ""
+msgstr "القياس 2"
 
 msgid "Independent Samples T-Test"
-msgstr ""
+msgstr "اختبار t لعينتين مستقلتين"
 
 msgid "Mann-Whitney U test."
-msgstr ""
+msgstr "اختبار U لمان–ويتني."
 
 msgid "U"
-msgstr ""
+msgstr "U"
 
 msgid "Welch's t-test."
-msgstr ""
+msgstr "اختبار t لويلش."
 
 msgid "t"
-msgstr ""
+msgstr "t"
 
 msgid "Student's t-test."
-msgstr ""
+msgstr "اختبار t لستيودنت."
 
 msgid "Statistic"
-msgstr ""
+msgstr "الإحصاء"
 
 msgid "Test"
-msgstr ""
+msgstr "اختبار"
 
 msgid "df"
-msgstr ""
+msgstr "درجات الحرية"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "Cohen's d"
-msgstr ""
+msgstr "معامل d لكوهين"
 
 msgid "Glass' delta"
-msgstr ""
+msgstr "دلتا غلاس"
 
 msgid "Hedges' g"
-msgstr ""
+msgstr "معامل g لهيدجز"
 
 msgid "Mean Difference"
-msgstr ""
+msgstr "فرق المتوسطين"
 
 msgid "Hodges-Lehmann Estimate"
-msgstr ""
+msgstr "تقدير هودجز–ليمان"
 
 msgid "Rank-Biserial Correlation"
-msgstr ""
+msgstr "الارتباط الثنائي الرتبي"
 
 msgid "Location Parameter"
-msgstr ""
+msgstr "معلمة الموقع"
 
 msgid "Effect Size"
-msgstr ""
+msgstr "حجم الأثر"
 
 msgid "Student t-test and Welch t-test"
-msgstr ""
+msgstr "اختبار t لستيودنت واختبار t لويلش"
 
 msgid "Student t-test"
-msgstr ""
+msgstr "اختبار t لستيودنت"
 
 msgid "Welch t-test"
-msgstr ""
+msgstr "اختبار t لويلش"
 
 msgid "SE Difference"
-msgstr ""
+msgstr "الخطأ المعياري للفروق"
 
 msgid "For the %s, location parameter is given by mean difference. For the Mann-Whitney test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"في %s، تمثل فروق المتوسطات معلمة الموقع. وفي اختبار مان–ويتني، يمثلها تقدير "
+"هودجز–ليمان."
 
 msgid "%1$s%% CI for %2$s"
-msgstr ""
+msgstr "فترة ثقة %1$s%% لـ%2$s"
 
 msgid "SE %1$s"
-msgstr ""
+msgstr "SE %1$s"
 
 msgid "For the Mann-Whitney test, effect size is given by the rank biserial correlation."
-msgstr ""
+msgstr "في اختبار مان–ويتني، يُقاس حجم الأثر بالارتباط الثنائي الرتبي."
 
 msgid "For the %1$s, effect size is given by %2$s."
-msgstr ""
+msgstr "بالنسبة إلى %1$s، يُعطى حجم الأثر بواسطة %2$s."
 
 msgid "Test of Normality (Shapiro-Wilk)"
-msgstr ""
+msgstr "اختبار الاعتدالية (شابيرو–ويلك)"
 
 msgid "Residuals"
-msgstr ""
+msgstr "البواقي"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "Significant results suggest a deviation from normality."
-msgstr ""
+msgstr "تشير النتائج الدالة إحصائيًا إلى انحراف عن التوزيع الطبيعي."
 
 msgid "Brown-Forsythe"
-msgstr ""
+msgstr "براون–فورسايث"
 
 msgid "Levene's"
-msgstr ""
+msgstr "لليفين"
 
 msgid "Test of Equality of Variances (%1$s)"
-msgstr ""
+msgstr "اختبار تساوي التباينات (%1$s)"
 
 msgid "F"
-msgstr ""
+msgstr "F"
 
 msgid "%s<sub>1</sub>"
-msgstr ""
+msgstr "%s<sub>1</sub>"
 
 msgid "%s<sub>2</sub>"
-msgstr ""
+msgstr "%s<sub>2</sub>"
 
 msgid "greater"
-msgstr ""
+msgstr "أكبر"
 
 msgid "less"
-msgstr ""
+msgstr "أقل"
 
 msgid "For all tests, the alternative hypothesis specifies that group %1$s is %2$s than group %3$s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن المجموعة %1$s %2$s من المجموعة "
+"%3$s."
 
 msgid "Group 1: %1$s, Group 2: %2$s."
-msgstr ""
+msgstr "المجموعة 1: %1$s، المجموعة 2: %2$s."
 
 msgid "Brown-Forsythe test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"اختبار براون–فورسايث دال إحصائيًا (p < .05)، مما يشير إلى عدم تحقق افتراض "
+"تساوي التباينات"
 
 msgid "Levene's test is significant (p < .05), suggesting a violation of the equal variance assumption"
 msgstr ""
+"اختبار ليفين دال إحصائيًا (p < .05)، مما يشير إلى عدم تحقق افتراض تساوي "
+"التباينات"
 
 msgid "Glass' delta uses the standard deviation of group %1$s of variable %2$s."
-msgstr ""
+msgstr "تستخدم دلتا غلاس الانحراف المعياري للمجموعة %1$s من المتغير %2$s."
 
 msgid "F-statistic could not be calculated"
-msgstr ""
+msgstr "تعذّر حساب إحصاء F"
 
 msgid "Group Descriptives"
-msgstr ""
+msgstr "الإحصاءات الوصفية للمجموعات"
 
 msgid "Mean Rank"
-msgstr ""
+msgstr "متوسط الرتب"
 
 msgid "Sum Rank"
-msgstr ""
+msgstr "مجموع الرتب"
 
 msgid "One Sample T-Test"
-msgstr ""
+msgstr "اختبار t لعينة واحدة"
 
 msgid "Wilcoxon signed-rank test."
-msgstr ""
+msgstr "اختبار الرتب الموقّعة لويلكوكسون."
 
 msgid "V"
-msgstr ""
+msgstr "V"
 
 msgid "Z test."
-msgstr ""
+msgstr "اختبار Z."
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "Location Difference"
-msgstr ""
+msgstr "فرق الموقع"
 
 msgid "Student t-test and Z-test"
-msgstr ""
+msgstr "اختبار t لستيودنت واختبار Z"
 
 msgid "Z-test"
-msgstr ""
+msgstr "اختبار Z"
 
 msgid "For the %s, location difference estimate is given by the sample mean difference <em>d</em>. For the Wilcoxon test, location difference estimate is given by the Hodges-Lehmann estimate."
 msgstr ""
+"في %s، يُقدَّر فرق الموقع بفرق متوسط العينة عن قيمة الاختبار <em>d</em>. وفي "
+"اختبار ويلكوكسون، يُقدَّر بتقدير هودجز–ليمان."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>."
-msgstr ""
+msgstr "في اختبار t لستيودنت، يُقاس حجم الأثر بمعامل <em>d</em> لكوهين."
 
 msgid "For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"في اختبار ويلكوكسون، يُقاس حجم الأثر بالارتباط الثنائي الرتبي للأزواج المترابطة."
 
 msgid "For the Z test, effect size is given by Cohen's <em>d</em> (based on the provided population standard deviation)."
 msgstr ""
+"في اختبار Z، يمثل <em>d</em> لكوهين حجم الأثر (استنادًا إلى الانحراف المعياري "
+"المقدم للمجتمع)."
 
 msgid "greater than"
-msgstr ""
+msgstr "أكبر من"
 
 msgid "less than"
-msgstr ""
+msgstr "أقل من"
 
 msgid "different from"
-msgstr ""
+msgstr "مختلف عن"
 
 msgid "For the %1$s, the alternative hypothesis specifies that the mean is %2$s %3$s."
-msgstr ""
+msgstr "بالنسبة إلى %1$s، تنص الفرضية البديلة على أن المتوسط %2$s %3$s."
 
 msgid "For the Wilcoxon test, the alternative hypothesis specifies that the median is %1$s %2$s."
-msgstr ""
+msgstr "في اختبار ويلكوكسون، تنص الفرضية البديلة على أن الوسيط %1$s %2$s."
 
 msgid "CI could not be computed for effect size, due to low sample size and/or extreme effect size."
 msgstr ""
+"تعذر حساب فترة الثقة لحجم الأثر بسبب صغر حجم العينة و/أو تطرف حجم الأثر."
 
 msgid "Sample size too small for desired confidence level. Using %.1f%% instead"
-msgstr ""
+msgstr "حجم العينة صغير جدًا لمستوى الثقة المطلوب. يُستخدم %.1f%% بدلًا منه"
 
 msgid "Paired Samples T-Test"
-msgstr ""
+msgstr "اختبار t لعينتين مرتبطتين"
 
 msgid "z"
-msgstr ""
+msgstr "z"
 
 msgid "For the Student t-test, location parameter is given by mean difference <em>d</em>. For the Wilcoxon test, location parameter is given by the Hodges-Lehmann estimate."
 msgstr ""
+"لاختبار t لستيودنت، يمثل فرق المتوسطات <em>d</em> معلمة الموقع. ولاختبار "
+"ويلكوكسون، يمثلها تقدير هودجز–ليمان."
 
 msgid "For the Student t-test, effect size is given by Cohen's <em>d</em>. For the Wilcoxon test, effect size is given by the matched rank biserial correlation."
 msgstr ""
+"لاختبار t لستيودنت، يمثل <em>d</em> لكوهين حجم الأثر. ولاختبار ويلكوكسون، يمثله "
+"ارتباط الرتب الثنائي للعينات المتطابقة."
 
 msgid "Cohen's d corrected for correlation between observations."
-msgstr ""
+msgstr "حجم الأثر d لكوهين مصحَّح للارتباط بين المشاهدات."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2."
-msgstr ""
+msgstr "لجميع الاختبارات، تنص الفرضية البديلة على أن القياس 1 أقل من القياس 2."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن القياس 1 أكبر من القياس 2."
 
 msgid "For all tests, the alternative hypothesis specifies that %1$s is less than %2$s."
-msgstr ""
+msgstr "لجميع الاختبارات، تنص الفرضية البديلة على أن %1$s أقل من %2$s."
 
 msgid "For all tests, the alternative hypothesis specifies that %1$s is greater than %2$s."
-msgstr ""
+msgstr "لجميع الاختبارات، تنص الفرضية البديلة على أن %1$s أكبر من %2$s."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is less than Measure 2. For example, %1$s is less than %2$s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن القياس 1 أصغر من القياس 2. مثلًا"
+"، %1$s أصغر من %2$s."
 
 msgid "For all tests, the alternative hypothesis specifies that Measure 1 is greater than Measure 2. For example, %1$s is greater than %2$s."
 msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن القياس 1 أكبر من القياس 2. مثلًا"
+"، %1$s أكبر من %2$s."
 
 msgid "The following pair is duplicated: %s"
 msgid_plural "The following pairs are duplicated: %s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "الأزواج المكررة: %s"
+msgstr[1] "الزوج المكرر: %s"
+msgstr[2] "الزوجان المكرران: %s"
+msgstr[3] "الأزواج المكررة: %s"
+msgstr[4] "الأزواج المكررة: %s"
+msgstr[5] "الأزواج المكررة: %s"
