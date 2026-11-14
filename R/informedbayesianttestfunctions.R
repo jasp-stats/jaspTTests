@@ -345,11 +345,85 @@
   return(out)
 }
 
+.bf10_t_halfspace <- function(t, neff, nu, direction, prior.location, prior.scale,
+                              prior.df, rel.tol) {
+  # Conditional on T=t under H0, Q=sqrt(V/nu) has density proportional to
+  # q^nu exp(-(nu+t^2)q^2/2). The likelihood ratio at delta is therefore
+  # E[exp(-neff*delta^2/2 + t*sqrt(neff)*delta*Q)]. Integrating this positive
+  # quantity avoids subtracting a posterior probability close to one.
+  a <- nu + t^2
+  logQConstant <- log(2) + (nu + 1)/2 * log(a/2) - lgamma((nu + 1)/2)
+  logPriorMass <- pt(direction * prior.location/prior.scale, df = prior.df, log.p = TRUE)
+  tolerance <- max(100 * .Machine$double.eps, min(rel.tol, 1e-9))
+  innerRelativeError <- 0
+
+  integratePieces <- function(fun, cuts) {
+    value <- abs.error <- 0
+    for (i in seq_len(length(cuts) - 1L)) {
+      # A purely relative tolerance is unattainable for subnormal tail
+      # integrals and can make QUADPACK report a divergent, positive integral.
+      # Once positive mass has been accumulated, allocate each remaining
+      # piece a small absolute error budget relative to that mass, so a
+      # negligible tail need not satisfy a separate relative error target.
+      piece <- integrate(fun, cuts[i], cuts[i + 1L],
+                         abs.tol = max(.Machine$double.xmin, tolerance * value/length(cuts)),
+                         rel.tol = tolerance, subdivisions = 1000L)
+      value <- value + piece$value
+      abs.error <- abs.error + piece$abs.error
+    }
+    list(value = value, abs.error = abs.error)
+  }
+
+  # Split at the concentration of Q and at the prior's location/scale, so
+  # adaptive integration also sees narrow likelihoods and narrow priors.
+  qMode <- sqrt(nu/a)
+  qWidth <- 1/sqrt(2*a)
+  qCuts <- sort(unique(c(0, max(0, qMode - 8*qWidth), qMode, qMode + 8*qWidth, Inf)))
+  innerAbsoluteError <- (length(qCuts) - 1L) * .Machine$double.xmin
+  location <- direction * prior.location
+  # The linear decay involves t*Q, not t alone. Bracket several likelihood
+  # widths before spanning a broad prior, or quadrature can miss most mass.
+  deltaWidth <- 1/(sqrt(neff)*(1 + abs(t)*qMode))
+  deltaCuts <- sort(unique(c(0, c(1, 8, 32)*deltaWidth,
+                            max(0, location - 8*prior.scale), max(0, location),
+                            max(0, location + 8*prior.scale), Inf)))
+  integrand <- function(magnitudes) {
+    vapply(magnitudes, function(magnitude) {
+      likelihood <- integratePieces(function(q) {
+        exp(logQConstant + nu*log(q) - a*q^2/2 - neff*magnitude^2/2 +
+              direction*t*sqrt(neff)*magnitude*q)
+      }, qCuts)
+      # Separate the absolute underflow allowance from relative error:
+      # dividing a subnormal tail's error by its value is uninformative.
+      if (likelihood$value > 0)
+        innerRelativeError <<- max(innerRelativeError,
+                                   (likelihood$abs.error - innerAbsoluteError)/likelihood$value)
+      prior <- exp(dt((direction*magnitude - prior.location)/prior.scale,
+                      df = prior.df, log = TRUE) - log(prior.scale) - logPriorMass)
+      prior * likelihood$value
+    }, numeric(1))
+  }
+  result <- integratePieces(integrand, deltaCuts)
+  # The normalized prior propagates the absolute allowance unchanged, and
+  # positive weights propagate the maximum observed inner relative error.
+  # These are quadrature error estimates, not rigorous total error bounds.
+  error <- if (result$value > 0)
+    (result$abs.error + innerAbsoluteError)/result$value + innerRelativeError else NA_real_
+  list(bf = result$value, error = error)
+}
+
 .bf10_t <- function(t, n1, n2 = NULL, oneSided, independentSamples = FALSE, prior.location,
                     prior.scale, prior.df, rel.tol = .Machine$double.eps^0.25) {
 
   neff <- ifelse(independentSamples, n1 * n2 / (n1 + n2), n1)
   nu   <- ifelse(independentSamples, n1 + n2 - 2, n1 - 1)
+
+  oppositeDirection <- (oneSided == "right" && t < 0) || (oneSided == "left" && t > 0)
+  if (oppositeDirection) {
+    direction <- if (oneSided == "right") 1 else -1
+    return(.bf10_t_halfspace(t, neff, nu, direction, prior.location, prior.scale,
+                             prior.df, rel.tol))
+  }
 
   mu.delta    <- prior.location
   gamma       <- prior.scale
