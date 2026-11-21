@@ -174,6 +174,25 @@ test_that("Shapiro-Wilk does not crash for large sample sizes", {
   )
 })
 
+test_that("Mann-Whitney ranks in the descriptives table exclude rows without a group", {
+  # the last row has no group, so only the other 8 scores are ranked:
+  # group a gets ranks 1 to 4 (mean 2.5, sum 10) and group b gets ranks 5 to 8 (mean 6.5, sum 26)
+  dataset <- data.frame(y = c(3, 5, 6, 8, 10, 11, 12, 13, 1),
+                        g = factor(c("a", "a", "a", "a", "b", "b", "b", "b", NA)))
+
+  options <- initTTestOptions("TTestIndependentSamples")
+  options$dependent <- "y"
+  options$group <- "g"
+  options$mannWhitneyU <- TRUE
+  options$descriptives <- TRUE
+  results <- jaspTools::runAnalysis("TTestIndependentSamples", dataset, options)
+  table <- results[["results"]][["ttestDescriptives"]][["collection"]][["ttestDescriptives_table"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+                                 list("TRUE", 4, 0.37848472717566, "a", 5.5, 2.5, 2.08166599946613,
+                                      1.04083299973307, 10, "y", "FALSE", 4, 0.112260386846592, "b",
+                                      11.5, 6.5, 1.29099444873581, 0.645497224367903, 26, "y"))
+})
+
 
 test_that("Analysis works with unicode", {
 

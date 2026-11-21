@@ -22,6 +22,7 @@
 
 ## Fixed
 * The one-sample t-test no longer stops with "object 'rowResults' not found" when a variable contains infinite values; the table shows the footnote about it instead.
+* Independent samples t-test: rows with a score but no group no longer count towards the Mann-Whitney ranks in the descriptives table, and no longer make the Bayesian robustness and sequential analysis plots fail ([Issue #4719](https://github.com/jasp-stats/jasp-issues/issues/4719)).
 
 ---
 
