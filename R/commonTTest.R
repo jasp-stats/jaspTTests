@@ -27,6 +27,9 @@ gettextf <- function(fmt, ..., domain = NULL)  {
 
 .ttestReadData <- function(dataset, options, type) {
 
+  if (type == "independent" && options[["group"]] != "" && !is.null(dataset[[options[["group"]]]]))
+    dataset <- dataset[!is.na(dataset[[options[["group"]]]]), , drop = FALSE]
+
   if (options[["naAction"]] == "listwise") {
 
     if (type %in% c("one-sample", "independent"))

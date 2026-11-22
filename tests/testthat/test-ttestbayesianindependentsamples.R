@@ -193,6 +193,23 @@ test_that("Analysis handles integer overflow", {
      jaspTools::expect_equal_tables(table, list(0.00511717623883834, 0.185588508623007, "dependent_var"))
 })
 
+test_that("Robustness and sequential plots exclude rows without a group", {
+  dataset <- data.frame(y = c(3, 5, 6, 8, 10, 11, 12, 13, 1),
+                        g = factor(c("a", "a", "a", "a", "b", "b", "b", "b", NA)))
+
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
+  options$dependent <- "y"
+  options$group <- "g"
+  options$bfRobustnessPlot <- TRUE
+  options$bfSequentialPlot <- TRUE
+  options$bfSequentialPlotRobustness <- TRUE
+  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dataset, options)
+  inferentialPlots <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]]
+  plots <- inferentialPlots[["collection"]][["ttestContainer_inferentialPlots_y"]][["collection"]]
+  expect_identical(plots[["ttestContainer_inferentialPlots_y_robustnessPlot"]][["status"]], "complete")
+  expect_identical(plots[["ttestContainer_inferentialPlots_y_sequentialPlot"]][["status"]], "complete")
+})
+
 # all combinations of hypotheses and Bayes factor type
 options <- initTTestOptions("TTestBayesianIndependentSamples")
 options$group <- "Rotation"
