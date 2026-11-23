@@ -1234,18 +1234,21 @@
     xName <- yName <- NULL
   }
 
-  p <- jaspGraphs::descriptivesPlot(
-    x                      = summaryStat[["groupingVariable"]],
-    y                      = summaryStat[["median"]],
-    ciLower                = summaryStat[["ciLower"]],
-    ciUpper                = summaryStat[["ciUpper"]],
-    group                  = summaryStat[["group"]],
-    xName                  = xName,
-    yName                  = yName,
-    noXLevelNames          = FALSE,
-    horizontalLine         = testValueOpt,
-    horizontalLineLineType = "dashed"
-  ) + jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
+  p <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestDescriptivesPlot",
+    args = list(
+      x                      = summaryStat[["groupingVariable"]],
+      y                      = summaryStat[["median"]],
+      ciLower                = summaryStat[["ciLower"]],
+      ciUpper                = summaryStat[["ciUpper"]],
+      group                  = summaryStat[["group"]],
+      xName                  = xName,
+      yName                  = yName,
+      noXLevelNames          = FALSE,
+      horizontalLine         = testValueOpt,
+      horizontalLineLineType = "dashed"
+    )
+  )
 
   return(p)
 
@@ -1273,13 +1276,21 @@
   } else {
     summaryStat <- as.data.frame(.posteriorSummaryGroupMean(data, descriptivesPlotsCredibleInterval = CRI))
     summaryStat[["groupingVariable"]] <- var
-    testValue <- data.frame("testValue" = testValueOpt)
   }
 
   if (errorBarType == "se") {
     summaryStat[["ciLower"]] <- summaryStat[["ciLowerSe"]]
     summaryStat[["ciUpper"]] <- summaryStat[["ciUpperSe"]]
   }
+  return(jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestBayesianBarPlot",
+    args = list(summaryStat = summaryStat, var = var, grouping = grouping,
+                paired = paired, testValueOpt = testValueOpt, zeroFix = zeroFix)
+  ))
+}
+
+.ttestBayesianBarPlot <- function(summaryStat, var, grouping, paired, testValueOpt, zeroFix) {
+  hasGrouping <- !is.null(grouping)
   ciPos <- c(testValueOpt, summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
   yBreaks <- jaspGraphs::getPrettyAxisBreaks(if (zeroFix) c(0, ciPos) else ciPos)
 
@@ -1305,7 +1316,7 @@
     jaspGraphs::themeJaspRaw()
 
   if (!is.null(testValueOpt))
-    p <- p + ggplot2::geom_hline(data = testValue, ggplot2::aes(yintercept = testValue), linetype = "dashed")
+    p <- p + ggplot2::geom_hline(data = data.frame(testValue = testValueOpt), ggplot2::aes(yintercept = testValue), linetype = "dashed")
 
   return(p)
 
@@ -1471,13 +1482,16 @@
   if(any(is.infinite(dfLines[["y"]])))
     stop(gettext("Some Bayes factors were infinite"))
 
-  plot <- jaspGraphs::PlotRobustnessSequential(
-    dfLines      = dfLines,
-    dfPoints     = dfPoints,
-    pointLegend  = additionalInformation,
-    xName        = gettext("Cauchy prior width"),
-    hypothesis   = hypothesis,
-    bfType       = bfType
+  plot <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspGraphs::PlotRobustnessSequential",
+    args = list(
+      dfLines      = dfLines,
+      dfPoints     = dfPoints,
+      pointLegend  = additionalInformation,
+      xName        = gettext("Cauchy prior width"),
+      hypothesis   = hypothesis,
+      bfType       = bfType
+    )
   )
 
   return(plot)
@@ -1914,12 +1928,15 @@
   }
   dfLines$y <- log(dfLines$y)
 
-  plot <- jaspGraphs::PlotRobustnessSequential(
-    dfLines         = dfLines,
-    xName           = gettext("n"),
-    BF              = BF,
-    bfType          = bftype,
-    hypothesis      = hypothesis
+  plot <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspGraphs::PlotRobustnessSequential",
+    args = list(
+      dfLines         = dfLines,
+      xName           = gettext("n"),
+      BF              = BF,
+      bfType          = bftype,
+      hypothesis      = hypothesis
+    )
   )
   return(plot)
 }
@@ -2241,19 +2258,29 @@
     "equal"
   )
 
-  plot <- jaspGraphs::PlotPriorAndPosterior(
-    dfLines    = dfLines,
-    dfPoints   = dfPoints,
-    BF         = BF,
-    CRI        = CRI,
-    CRItxt     = gettextf("%s%% CI: ", 100*ciValue),
-    bfType     = bfType,
-    hypothesis = hypothesis,
-    median     = median,
-    xName      = bquote(paste(.(gettext("Effect size")), ~delta))
+  plot <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspTTests:::.ttestPriorAndPosteriorPlot",
+    args = list(
+      dfLines    = dfLines,
+      dfPoints   = dfPoints,
+      BF         = BF,
+      CRI        = CRI,
+      CRItxt     = gettextf("%s%% CI: ", 100*ciValue),
+      bfType     = bfType,
+      hypothesis = hypothesis,
+      median     = median,
+      effectSizeLabel = gettext("Effect size")
+    )
   )
   return(plot)
 
+}
+
+.ttestPriorAndPosteriorPlot <- function(..., effectSizeLabel) {
+  # Build plotmath here because do.call() evaluates language objects in recipe arguments.
+  jaspGraphs::PlotPriorAndPosterior(
+    ..., xName = bquote(paste(.(effectSizeLabel), ~delta))
+  )
 }
 
 .ttestBayesianRainCloudPlots <- function(jaspResults, dataset, options, analysis) {
