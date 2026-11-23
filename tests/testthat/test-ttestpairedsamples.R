@@ -134,3 +134,72 @@ test_that("Analysis handles errors", {
   status <- results[["status"]]
   expect_identical(status, "validationError")
 })
+
+test_that("Descriptives plot and bar plot use only the complete pairs", {
+  # pre is missing in rows 6 and 7, so the plots use the 6 complete pairs, as the raincloud plot does:
+  # means 10.5 and 71 / 6 = 11.833. The within-subject 95% CI for two conditions (Cousineau-Morey) has
+  # half-width qt(.975, 5) * sd(pre - post) / sqrt(2 * 6), with sd(pre - post) = sqrt(4 / 15), so 0.383
+  dataset <- data.frame(pre  = c(10, 11,  9, 12, 10, NA, NA, 11),
+                        post = c(12, 12, 11, 13, 11, 15, 16, 12))
+
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("pre", "post"))
+  options$descriptivesPlot <- TRUE
+  options$barPlot <- TRUE
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  halfWidth <- qt(.975, 5) * sqrt(4 / 15) / sqrt(12)
+  expect_length(results[["state"]][["figures"]], 2)
+  for (figure in results[["state"]][["figures"]]) {
+    plot <- figure[["obj"]]
+    isErrorBar <- vapply(plot[["layers"]], function(layer) inherits(layer[["geom"]], "GeomErrorbar"), logical(1))
+    errorBars <- ggplot2::layer_data(plot, which(isErrorBar))
+    errorBars <- errorBars[order(errorBars[["x"]]), ]
+    expect_equal(errorBars[["y"]], c(10.5, 71 / 6))
+    expect_equal(errorBars[["ymax"]] - errorBars[["y"]], rep(halfWidth, 2))
+    expect_equal(errorBars[["y"]] - errorBars[["ymin"]], rep(halfWidth, 2))
+  }
+})
+
+test_that("Descriptives plot and bar plot show an error without complete pairs", {
+  # no row has both pre and post, so there is no complete pair to plot
+  dataset <- data.frame(pre  = c(10, 11,  9, NA, NA, NA),
+                        post = c(NA, NA, NA, 12, 11, 13))
+
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("pre", "post"))
+  options$descriptivesPlot <- TRUE
+  options$barPlot <- TRUE
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  descriptives <- results[["results"]][["ttestDescriptives"]][["collection"]]
+  for (plots in c("ttestDescriptives_plots", "ttestDescriptives_barPlots")) {
+    plot <- descriptives[[plots]][["collection"]][[paste0(plots, "_pre - post")]]
+    expect_identical(plot[["status"]], "error")
+    expect_true(grepl("Number of observations is < 1", plot[["error"]][["errorMessage"]], fixed = TRUE))
+  }
+})
+
+test_that("Descriptives plot and bar plot draw a single complete pair", {
+  # only row 4 has both pre and post, so the plots draw that pair (pre 12, post 14) without error bars
+  dataset <- data.frame(pre  = c(10, 11, NA, 12),
+                        post = c(NA, NA, 12, 14))
+
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("pre", "post"))
+  options$descriptivesPlot <- TRUE
+  options$barPlot <- TRUE
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  descriptives <- results[["results"]][["ttestDescriptives"]][["collection"]]
+  for (plots in c("ttestDescriptives_plots", "ttestDescriptives_barPlots")) {
+    plot <- descriptives[[plots]][["collection"]][[paste0(plots, "_pre - post")]]
+    expect_identical(plot[["status"]], "complete")
+  }
+  expect_length(results[["state"]][["figures"]], 2)
+  for (figure in results[["state"]][["figures"]]) {
+    plot <- figure[["obj"]]
+    isMean <- vapply(plot[["layers"]], function(layer) inherits(layer[["geom"]], c("GeomPoint", "GeomBar")), logical(1))
+    means <- ggplot2::layer_data(plot, which(isMean)[1])
+    expect_equal(means[order(means[["x"]]), "y"], c(12, 14))
+    yLimits <- ggplot2::ggplot_build(plot)[["layout"]][["panel_scales_y"]][[1]]$get_limits()
+    expect_true(yLimits[1] <= 12 && yLimits[2] >= 14)
+  }
+})

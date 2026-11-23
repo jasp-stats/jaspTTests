@@ -710,6 +710,9 @@
 
       plot <- createJaspPlot(title = var, width = 530, height = 400)
       if (canDoDescriptives) {
+        if (paired && isFALSE(errors[[var]])) # the plot uses only complete pairs, so count those
+          errors[[var]] <- .hasErrors(na.omit(dataset[unlist(pairs[[var]])]), message = 'short', type = 'observations',
+                                      all.target = unlist(pairs[[var]]), observations.amount = "< 2")
         if (isFALSE(errors[[var]])) {
 
           if (paired) {
@@ -721,7 +724,8 @@
               value = dat,
               group = groupingData
             )
-            dat <- dat[!is.na(dat[[1]]), ]
+            idxC <- !(is.na(dataset[[pair[[1]]]]) | is.na(dataset[[pair[[2]]]])) # only complete pairs, as in the raincloud plot
+            dat <- dat[rep(idxC, 2), ]
 
           } else {
             idxC <- !is.na(dataset[[var]])
@@ -781,6 +785,9 @@
 
       barPlot <- createJaspPlot(title = var, width = 530, height = 400)
       if (canDoDescriptives) {
+        if (paired && isFALSE(errors[[var]])) # the plot uses only complete pairs, so count those
+          errors[[var]] <- .hasErrors(na.omit(dataset[unlist(pairs[[var]])]), message = 'short', type = 'observations',
+                                      all.target = unlist(pairs[[var]]), observations.amount = "< 2")
         if (isFALSE(errors[[var]])) {
 
           if (paired) {
@@ -792,7 +799,8 @@
               value = dat,
               group = groupingData
             )
-            dat <- dat[!is.na(dat[[1]]), ]
+            idxC <- !(is.na(dataset[[pair[[1]]]]) | is.na(dataset[[pair[[2]]]])) # only complete pairs, as in the raincloud plot
+            dat <- dat[rep(idxC, 2), ]
 
           } else {
             idxC <- !is.na(dataset[[var]])
