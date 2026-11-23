@@ -5,14 +5,17 @@ context("Library: Moon and Aggression")
 
 test_that("TTestPairedSamples results match", {
 
-  # Load from JASP example file
+  # Run the R syntax of analysis 1 of the JASP example file on the data of the file
   jaspFile <- testthat::test_path("jaspfiles", "library", "Moon and Aggression.jasp")
-  opts <- jaspTools::analysisOptions(jaspFile)
-  dataset <- jaspTools::extractDatasetFromJASPFile(jaspFile)
-
-  # Run analysis
   set.seed(1)
-  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, opts)
+  results <- jaspTools::runAnalysisSyntax(jaspFile = jaspFile, jaspTTests::TTestPairedSamples(
+          data = NULL,
+          version = "0.96.5",
+          descriptives = TRUE,
+          descriptivesPlot = TRUE,
+          meanDifference = TRUE,
+          normalityTest = TRUE,
+          pairs = list("Moon", "Other")))
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
   jaspTools::expect_equal_tables(table,

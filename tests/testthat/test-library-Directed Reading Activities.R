@@ -5,14 +5,23 @@ context("Library: Directed Reading Activities")
 
 test_that("TTestIndependentSamples (analysis 1) results match", {
 
-  # Load from JASP example file
+  # Run the R syntax of analysis 1 of the JASP example file on the data of the file
   jaspFile <- testthat::test_path("jaspfiles", "library", "Directed Reading Activities.jasp")
-  opts <- jaspTools::analysisOptions(jaspFile)[[1]]
-  dataset <- jaspTools::extractDatasetFromJASPFile(jaspFile)
-
-  # Run analysis
   set.seed(1)
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", dataset, opts)
+  results <- jaspTools::runAnalysisSyntax(jaspFile = jaspFile, jaspTTests::TTestIndependentSamples(
+          data = NULL,
+          version = "0.96.5",
+          formula =  ~ drp,
+          alternative = "less",
+          descriptives = TRUE,
+          descriptivesPlot = TRUE,
+          effectSize = TRUE,
+          equalityOfVariancesTest = TRUE,
+          group = ~ group,
+          meanDifference = TRUE,
+          normalityTest = TRUE,
+          student = TRUE,
+          vovkSellke = TRUE))
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
   jaspTools::expect_equal_tables(table,

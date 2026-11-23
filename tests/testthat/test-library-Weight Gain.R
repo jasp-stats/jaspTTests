@@ -5,14 +5,19 @@ context("Library: Weight Gain")
 
 test_that("TTestOneSample (analysis 2) results match", {
 
-  # Load from JASP example file
+  # Run the R syntax of analysis 2 of the JASP example file on the data of the file
   jaspFile <- testthat::test_path("jaspfiles", "library", "Weight Gain.jasp")
-  opts <- jaspTools::analysisOptions(jaspFile)[[2]]
-  dataset <- jaspTools::extractDatasetFromJASPFile(jaspFile)
-
-  # Run analysis
   set.seed(1)
-  results <- jaspTools::runAnalysis("TTestOneSample", dataset, opts)
+  results <- jaspTools::runAnalysisSyntax(jaspFile = jaspFile, jaspTTests::TTestOneSample(
+          data = NULL,
+          version = "0.96.5",
+          formula =  ~ Difference,
+          meanDifference = TRUE,
+          meanDifferenceCi = TRUE,
+          normalityTest = TRUE,
+          plotHeight = 300,
+          plotWidth = 160,
+          testValue = 16))
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
