@@ -5,14 +5,22 @@ context("Library: Eye Movements")
 
 test_that("TTestBayesianIndependentSamples results match", {
 
-  # Load from JASP example file
+  # Run the R syntax of analysis 1 of the JASP example file on the data of the file
   jaspFile <- testthat::test_path("jaspfiles", "library", "Eye Movements.jasp")
-  opts <- jaspTools::analysisOptions(jaspFile)
-  dataset <- jaspTools::extractDatasetFromJASPFile(jaspFile)
-
-  # Run analysis
   set.seed(1)
-  results <- jaspTools::runAnalysis("TTestBayesianIndependentSamples", dataset, opts)
+  results <- jaspTools::runAnalysisSyntax(jaspFile = jaspFile, jaspTTests::TTestBayesianIndependentSamples(
+          data = NULL,
+          version = "0.96.5",
+          formula =  ~ CriticalRecall,
+          alternative = "less",
+          bfRobustnessPlot = TRUE,
+          bfSequentialPlotRobustness = TRUE,
+          descriptives = TRUE,
+          descriptivesPlot = TRUE,
+          group = ~ Condition,
+          informativeNormalStd = 1,
+          informativeStandardizedEffectSize = "normal",
+          priorAndPosteriorPlot = TRUE))
 
   plotName <- results[["results"]][["descriptivesContainer"]][["collection"]][["descriptivesContainer_plots"]][["collection"]][["descriptivesContainer_plots_CriticalRecall"]][["data"]]
   testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]

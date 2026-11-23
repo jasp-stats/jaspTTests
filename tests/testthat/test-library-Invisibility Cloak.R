@@ -5,14 +5,21 @@ context("Library: Invisibility Cloak")
 
 test_that("TTestIndependentSamples results match", {
 
-  # Load from JASP example file
+  # Run the R syntax of analysis 1 of the JASP example file on the data of the file
   jaspFile <- testthat::test_path("jaspfiles", "library", "Invisibility Cloak.jasp")
-  opts <- jaspTools::analysisOptions(jaspFile)
-  dataset <- jaspTools::extractDatasetFromJASPFile(jaspFile)
-
-  # Run analysis
   set.seed(1)
-  results <- jaspTools::runAnalysis("TTestIndependentSamples", dataset, opts)
+  results <- jaspTools::runAnalysisSyntax(jaspFile = jaspFile, jaspTTests::TTestIndependentSamples(
+          data = NULL,
+          version = "0.96.5",
+          formula =  ~ Mischief,
+          descriptives = TRUE,
+          descriptivesPlot = TRUE,
+          effectSize = TRUE,
+          equalityOfVariancesTest = TRUE,
+          group = ~ Cloak,
+          meanDifference = TRUE,
+          normalityTest = TRUE,
+          student = TRUE))
 
   table <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_equalityVariance"]][["data"]]
   jaspTools::expect_equal_tables(table,
