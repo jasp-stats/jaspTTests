@@ -185,7 +185,7 @@
       } else {
 
         errors[[var]] <- .hasErrors(dataset, message = 'short',
-                                    type = c('infinity','observations','variance'),
+                                    type = c('infinity','observations'),
                                     all.target = c(pair[[1L]],pair[[2L]]), observations.amount = "< 2")
       }
     }

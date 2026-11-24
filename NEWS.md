@@ -24,6 +24,7 @@
 * The one-sample t-test no longer stops with "object 'rowResults' not found" when a variable contains infinite values; the table shows the footnote about it instead.
 * Independent samples t-test: rows with a score but no group no longer count towards the Mann-Whitney ranks in the descriptives table, and no longer make the Bayesian robustness and sequential analysis plots fail ([Issue #4719](https://github.com/jasp-stats/jasp-issues/issues/4719)).
 * Bayesian t-tests: with BF01 chosen, the Bayes factor robustness check now shows the maximum BF01 and its prior width; before, it showed the minimum ([Issue #4511](https://github.com/jasp-stats/jasp-issues/issues/4511)).
+* Paired samples t-test (classical and Bayesian): a pair where one measure is constant now gets its tests and Bayes factor, because only the difference between the measures needs variance ([INTERNAL-jasp#2871](https://github.com/jasp-stats/INTERNAL-jasp/issues/2871)).
 
 ---
 

@@ -37,7 +37,7 @@ Form
 		infoLabel: qsTr("Input")
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" ;  }
-		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score."); allowedColumns: ["scale"];	minNumericLevels: 2 }
+		AssignedPairsVariablesList { name: "pairs"; title: qsTr("Variable Pairs"); info: qsTr("The variables here have their difference computed. Multiple differences can be analysed at the same time by specifying different rows. In other words, each row represents a difference score."); allowedColumns: ["scale"];	minNumericLevels: 1 }
 	}
 
 	Group

@@ -134,3 +134,53 @@ test_that("Analysis handles errors", {
   status <- results[["status"]]
   expect_identical(status, "validationError")
 })
+
+test_that("Paired t-test runs when one measure is constant but the difference is not", {
+  # y has no variance, the difference x - y does; expected values from
+  # t.test(x, y, paired = TRUE), wilcox.test(x, y, paired = TRUE) and shapiro.test(x - y)
+  dataset <- data.frame(x = c(2, 4, 3, 3, 3, 4, 3), y = rep(4, 7))
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("x", "y"))
+  options$wilcoxon <- TRUE
+  options$meanDifference <- TRUE
+  options$normalityTest <- TRUE
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  table <- results[["results"]][["ttest"]][["data"]]
+  expect_equal(table[[1]][["Statistic"]], -3.28633535, tolerance = 1e-6)
+  expect_equal(table[[1]][["df"]], 6)
+  expect_equal(table[[1]][["p"]], 0.01668998, tolerance = 1e-6)
+  expect_equal(table[[1]][["md"]], -6 / 7, tolerance = 1e-6)
+  expect_equal(table[[2]][["Statistic"]], 0)
+  expect_equal(table[[2]][["p"]], 0.04771488, tolerance = 1e-6)
+  normalTable <- results[["results"]][["AssumptionChecks"]][["collection"]][["AssumptionChecks_ttestNormalTable"]][["data"]]
+  expect_equal(normalTable[[1]][["W"]], 0.8400438, tolerance = 1e-6)
+  expect_equal(normalTable[[1]][["p"]], 0.09945145, tolerance = 1e-6)
+})
+
+test_that("Paired t-test still stops when the difference is constant", {
+  # both measures are constant, so the difference x - y has no variance
+  dataset <- data.frame(x = rep(3, 7), y = rep(4, 7))
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("x", "y"))
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  expect_identical(results[["status"]], "validationError")
+  expect_true(grepl("variance", results[["results"]][["errorMessage"]], ignore.case = TRUE))
+})
+
+test_that("Paired t-test with a constant measure keeps the t-test when the effect size is corrected for correlation", {
+  # the correlation with a constant measure is undefined, so the corrected d and its interval are empty;
+  # t and p as in t.test(x, y, paired = TRUE)
+  dataset <- data.frame(x = c(2, 4, 3, 3, 3, 4, 3), y = rep(4, 7))
+  options <- initTTestOptions("TTestPairedSamples")
+  options$pairs <- list(c("x", "y"))
+  options$effectSize <- TRUE
+  options$effectSizeCi <- TRUE
+  options$effectSizeCorrection <- TRUE
+  results <- jaspTools::runAnalysis("TTestPairedSamples", dataset, options)
+  table <- results[["results"]][["ttest"]]
+  expect_equal(table[["data"]][[1]][["t"]], -3.28633535, tolerance = 1e-6)
+  expect_equal(table[["data"]][[1]][["p"]], 0.01668998, tolerance = 1e-6)
+  expect_identical(table[["data"]][[1]][["d"]], "")
+  expect_identical(table[["data"]][[1]][["lowerCIeffectSize"]], "")
+  expect_identical(table[["data"]][[1]][["upperCIeffectSize"]], "")
+})
