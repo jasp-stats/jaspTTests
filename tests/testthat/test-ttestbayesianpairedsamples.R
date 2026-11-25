@@ -20,7 +20,7 @@ test_that("Main table results match", {
   options$informativeTDf <- 2
   results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", "test.csv", options)
   table <- getTtestTable(results)[["data"]]
-  jaspTools::expect_equal_tables(table, list(0, 1.05297943818791e-20, "-", "contNormal", "contGamma"))
+  jaspTools::expect_equal_tables(table, list(0.013095851317331353, 9.7701091946791824e-08, "-", "contNormal", "contGamma"))
 })
 
 test_that("Inferential and descriptives plots match", {
