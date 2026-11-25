@@ -169,7 +169,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 
     errors <- .hasErrors(dataset,
                          message = 'short',
-                         type = c('observations', 'variance', 'infinity'),
+                         type = c('observations', 'infinity'),
                          all.target = c(p1, p2),
                          observations.amount  = c('< 2'))
 
@@ -270,7 +270,12 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     confIntEffSize <- c(0,0)
 
 
-    if (optionsList$wantsConfidenceEffSize) {
+    if (optionsList$wantsConfidenceEffSize && !is.finite(d)) {
+
+      # d is undefined with "Correct for correlation" when one measure is constant
+      confIntEffSize <- c(NA, NA)
+
+    } else if (optionsList$wantsConfidenceEffSize) {
 
       ciEffSize  <- options$effectSizeCiLevel
       alphaLevel <- ifelse(direction == "two.sided", 1 - (ciEffSize + 1) / 2, 1 - ciEffSize)
@@ -338,7 +343,7 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
     if (p1 != "" && p2 != "") {
       errors <- .hasErrors(dataset,
                            message = 'short',
-                           type = c('observations', 'variance', 'infinity'),
+                           type = c('observations', 'infinity'),
                            all.target = c(p1, p2),
                            observations.amount  = c('< 3', '> 5000'))
 

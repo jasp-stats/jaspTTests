@@ -151,3 +151,26 @@ test_that("Analysis handles errors", {
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 })
+
+test_that("Bayesian paired t-test runs when one measure is constant but the difference is not", {
+  # y has no variance, the difference x - y does; expected BF10 from
+  # BayesFactor::ttestBF(x - y, rscale = 0.707) = 4.530917
+  dataset <- data.frame(x = c(2, 4, 3, 3, 3, 4, 3), y = rep(4, 7))
+  options <- initTTestOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("x", "y"))
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dataset, options)
+  table <- getTtestTable(results)
+  expect_equal(table[["data"]][[1]][["BF"]], 4.530917, tolerance = 1e-5)
+  expect_length(table[["footnotes"]], 0)
+})
+
+test_that("Bayesian paired t-test still gives no Bayes factor when the difference is constant", {
+  # both measures are constant, so the difference x - y has no variance
+  dataset <- data.frame(x = rep(3, 7), y = rep(4, 7))
+  options <- initTTestOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("x", "y"))
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dataset, options)
+  table <- getTtestTable(results)
+  expect_true(is.nan(as.numeric(table[["data"]][[1]][["BF"]])))
+  expect_length(table[["footnotes"]], 1)
+})
