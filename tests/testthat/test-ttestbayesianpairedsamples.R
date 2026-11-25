@@ -151,3 +151,46 @@ test_that("Analysis handles errors", {
   notes <- unlist(getTtestTable(results)[["footnotes"]])
   expect_true(any(grepl("observations", notes, ignore.case=TRUE)), label = "Too few obs check")
 })
+
+test_that("Descriptives plot and bar plot use only the complete pairs", {
+  # pre is missing in rows 6 and 7, so the plots use the 6 complete pairs, as the raincloud plot does.
+  # With the Jeffreys prior the posterior of each mean is a t distribution with 5 df around the sample
+  # mean with scale sd / sqrt(6): medians 10.5 and 71 / 6 = 11.833, sample variances 1.1 and 17 / 30
+  dataset <- data.frame(pre  = c(10, 11,  9, 12, 10, NA, NA, 11),
+                        post = c(12, 12, 11, 13, 11, 15, 16, 12))
+
+  options <- initTTestOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("pre", "post"))
+  options$descriptivesPlot <- TRUE
+  options$barPlot <- TRUE
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dataset, options)
+  halfWidth <- qt(.975, 5) * sqrt(c(1.1, 17 / 30)) / sqrt(6)
+  expect_length(results[["state"]][["figures"]], 2)
+  for (figure in results[["state"]][["figures"]]) {
+    plot <- figure[["obj"]]
+    isErrorBar <- vapply(plot[["layers"]], function(layer) inherits(layer[["geom"]], "GeomErrorbar"), logical(1))
+    errorBars <- ggplot2::layer_data(plot, which(isErrorBar))
+    errorBars <- errorBars[order(errorBars[["x"]]), ]
+    expect_equal(errorBars[["y"]], c(10.5, 71 / 6))
+    expect_equal(errorBars[["ymax"]] - errorBars[["y"]], halfWidth)
+    expect_equal(errorBars[["y"]] - errorBars[["ymin"]], halfWidth)
+  }
+})
+
+test_that("Descriptives plot and bar plot show an error without complete pairs", {
+  # no row has both pre and post, so there is no complete pair to plot
+  dataset <- data.frame(pre  = c(10, 11,  9, NA, NA, NA),
+                        post = c(NA, NA, NA, 12, 11, 13))
+
+  options <- initTTestOptions("TTestBayesianPairedSamples")
+  options$pairs <- list(c("pre", "post"))
+  options$descriptivesPlot <- TRUE
+  options$barPlot <- TRUE
+  results <- jaspTools::runAnalysis("TTestBayesianPairedSamples", dataset, options)
+  descriptives <- results[["results"]][["descriptivesContainer"]][["collection"]]
+  for (plots in c("descriptivesContainer_plots", "descriptivesContainer_barPlots")) {
+    plot <- descriptives[[plots]][["collection"]][[paste0(plots, "_pre - post")]]
+    expect_identical(plot[["status"]], "error")
+    expect_true(grepl("Number of observations is < 2", plot[["error"]][["errorMessage"]], fixed = TRUE))
+  }
+})

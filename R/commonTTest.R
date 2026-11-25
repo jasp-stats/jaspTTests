@@ -586,6 +586,15 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   # Creating data frames and summary data
   if (length(variable) != 1) {  # checks whether paired t-test is used
     pair <- ggplot2::scale_x_discrete(labels = c(variable[[1]], variable[[2]]))
+    idxC <- !(is.na(dataset[[variable[[1]]]]) | is.na(dataset[[variable[[2]]]])) # only complete pairs, as in the raincloud plot
+    dataset <- dataset[idxC, , drop = FALSE]
+    errors <- .hasErrors(dataset,
+                         message = 'short',
+                         type = 'observations',
+                         all.target = variable,
+                         observations.amount = '< 1')
+    if (!identical(errors, FALSE))
+      stop(errors$message)
     data <- data.frame(id = rep(1:length(dataset[[variable[[1]]]]), 2),
                        dependent = c(dataset[[variable[[1]]]], dataset[[variable[[2]]]]),
                        group = c(rep(paste("1.", variable[[1]], sep = ""), length(dataset[[variable[[1]]]])),
@@ -611,7 +620,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
                              .drop = FALSE,
                              errorBarType = errorType)
   }
-  ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]])
+  ciPos <- c(summaryStat[["ciLower"]], summaryStat[["ciUpper"]], summaryStat[["dependent"]]) # the means too, for a pair without error bars
 
   if (!is.null(options[["testValue"]])) {
     ciPos <- c(options[["testValue"]], ciPos)

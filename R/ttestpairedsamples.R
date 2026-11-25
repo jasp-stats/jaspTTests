@@ -461,6 +461,16 @@ TTestPairedSamplesInternal <- function(jaspResults, dataset = NULL, options, ...
 
   c1 <- dataset[[pair[[1]]]]
   c2 <- dataset[[pair[[2]]]]
+  idxC <- !(is.na(c1) | is.na(c2)) # only complete pairs, as in the raincloud plot
+  c1 <- c1[idxC]
+  c2 <- c2[idxC]
+  errors <- .hasErrors(dataset[idxC, , drop = FALSE],
+                       message = 'short',
+                       type = 'observations',
+                       all.target = pair,
+                       observations.amount = '< 1')
+  if (!isFALSE(errors))
+    stop(errors$message)
 
   data <- data.frame(
     id = c(1:length(c1), 1:length(c2)),
