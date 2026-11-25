@@ -210,6 +210,42 @@ test_that("Robustness and sequential plots exclude rows without a group", {
   expect_identical(plots[["ttestContainer_inferentialPlots_y_sequentialPlot"]][["status"]], "complete")
 })
 
+test_that("Robustness check shows the maximum BF01 when BF01 is chosen", {
+  # expected values: BayesFactor::ttestBF() over the plot's 400 prior widths from 0.0005 to 1.5.
+  # Max BF10 (two-sided) is 0.9986 at r = 0.0005. Max BF01 = 1 / min BF10, at r = 1.5 for all three
+  # hypotheses: 7.307 (two-sided), 15.95 (greater) and 4.739 (less). One-sided BFs are sampled, so 1% tolerance.
+  getMaxPoint <- function(results) {
+    plotName <- results[["results"]][["ttestContainer"]][["collection"]][["ttestContainer_inferentialPlots"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO"]][["collection"]][["ttestContainer_inferentialPlots_mean_NEO_robustnessPlot"]][["data"]]
+    testPlot <- results[["state"]][["figures"]][[plotName]][["obj"]]
+    for (subplot in testPlot$subplots) for (layer in subplot$layers)
+      if (is.data.frame(layer$data) && "label2" %in% names(layer$data))
+        return(layer$data[1, ])
+  }
+  options <- initTTestOptions("TTestBayesianIndependentSamples")
+  options$dependent <- "mean_NEO"
+  options$group <- "Rotation"
+  options$bfRobustnessPlot <- TRUE
+
+  options$bayesFactorType <- "BF10"
+  set.seed(1)
+  point <- getMaxPoint(jaspTools::runAnalysis("TTestBayesianIndependentSamples", "Kitchen Rolls", options))
+  expect_identical(as.character(point$label2), "0.9986~at~r==5e-04")
+
+  options$bayesFactorType <- "BF01"
+  set.seed(1)
+  point <- getMaxPoint(jaspTools::runAnalysis("TTestBayesianIndependentSamples", "Kitchen Rolls", options))
+  expect_identical(as.character(point$label2), "7.307~at~r==1.5")
+  expect_equal(exp(point$y), 7.307, tolerance = 1e-3)
+
+  for (hypo in c("greater", "less")) {
+    options$alternative <- hypo
+    set.seed(1)
+    point <- getMaxPoint(jaspTools::runAnalysis("TTestBayesianIndependentSamples", "Kitchen Rolls", options))
+    expect_equal(point$x, 1.5, tolerance = 0.01)
+    expect_equal(exp(point$y), c(greater = 15.95, less = 4.739)[[hypo]], tolerance = 0.01)
+  }
+})
+
 # all combinations of hypotheses and Bayes factor type
 options <- initTTestOptions("TTestBayesianIndependentSamples")
 options$group <- "Rotation"

@@ -1421,7 +1421,9 @@
     bfType <- "BF01"
     dfLines$y <- -dfLines$y
     BF10user  <- 1 / BF10user
-    maxBF10   <- 1 / maxBF10
+    idx       <- which.min(BF10)
+    maxBF10   <- 1 / BF10[idx]
+    maxBFrVal <- rValues[idx]
     BF10w     <- 1 / BF10w
     BF10ultra <- 1 / BF10ultra
   }
